@@ -1,4 +1,4 @@
-Node:
+Nodes:
   case:
     Props:
       - show_node
@@ -142,9 +142,13 @@ Node:
     Props:
       - show_node
       - clinical_trial_id
-      - clinical_trial_name
+      - clinical_trial_short_name
       - clinical_trial_description
       - clinical_trial_designation
+      - clinical_trial_long_name
+      - clinical_trial_type
+      - lead_organization
+      - principal_investigators
 Relationships:
   of_case:
     Mul: many_to_one

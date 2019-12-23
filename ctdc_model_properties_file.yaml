@@ -71,7 +71,7 @@ PropDefinitions:
   current_step:
     Desc: A number that designates position of patient in the MATCH workflow.
     Src: currentStepNumber
-    Type: int
+    Type: integer
     Req: false
     Private: false
   disease:
@@ -154,13 +154,13 @@ PropDefinitions:
   nucleic_acid_concentration:
     Desc: Nucleic acid concentration of aliquot expressed in nanograms per microliter.
     Src: dnaConcentration
-    Type: float
+    Type: number
     Req: true
     Private: false
   nucleic_acid_volume:
     Desc: Aliquot volume expressed as microliters.
     Src: dnaVolume
-    Type: float
+    Type: number
     Req: true
     Private: false
 #ihc_assay_report properties
@@ -237,13 +237,13 @@ PropDefinitions:
   mapd:
     Desc: Median Absolute Percentage Deviation (MAPD) is a measure of the accuracy of the copy number calls made by the copy number variant pipeline.
     Src: mapd
-    Type: float
+    Type: number
     Req: false
     Private: false
   cellularity:
     Desc: The fraction of biopsy specimen estimated to be comprised of tumor cells.
     Src: cellularity
-    Type: float
+    Type: number
     Req: false
     Private: false
   torrent_variant_caller_version:
@@ -346,7 +346,7 @@ PropDefinitions:
     Req: false
     Private: false
   gene:
-    Desc: Gene symbol of gene that has been identified as having a variant nucleotide(s) as compared to the human reference genome. Source: Sequencing Center. Example: "TP53".
+    Desc: Gene symbol of gene that has been identified as having a variant nucleotide(s) as compared to the human reference genome.
     Src: gene
     Type: string
     Req: true
@@ -384,13 +384,13 @@ PropDefinitions:
   exon:
     Desc: The exon that encodes the variant nucleotide position.
     Src: exon
-    Type: float
+    Type: number
     Req: true
     Private: false
   position:
     Desc: The chromosomal location of nucleotide variant on the positive strand.
     Src: position
-    Type: float
+    Type: number
     Req: true
     Private: false
   reference:
@@ -508,13 +508,13 @@ PropDefinitions:
   exon:
     Desc: The exon that encodes the variant nucleotide position.
     Src: exon
-    Type: float
+    Type: number
     Req: true
     Private: false
   position:
     Desc: The chromosomal location of nucleotide variant on the positive strand.
     Src: position
-    Type: float
+    Type: number
     Req: true
     Private: false
   reference:
@@ -638,7 +638,7 @@ PropDefinitions:
   position:
     Desc: The chromosomal location of nucleotide variant on the positive strand.
     Src: position
-    Type: int
+    Type: integer
     Req: true
     Private: false
   reference:
@@ -834,7 +834,7 @@ PropDefinitions:
   step_at_assignment:
     Desc: The step in the MATCH workflow at which patient has been assigned to treatment arm.
     Src: patientAssignments->stepNumber
-    Type: int
+    Type: integer
     Req: false
     Private: false
   assignment_logic:
@@ -933,32 +933,57 @@ PropDefinitions:
     Private: false
 #clinical_trial properties
   show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
+    Desc: A settable node property that flags a node, and its children as queryable. TRUE = node queryable; FALSE = node not queryable; non-queryable nodes are "dark".
     Src: NA
-    Type: boolean
+    Type:
+      - None
     Req: true
     Private: true
   clinical_trial_id:
-    Desc: The Trial ID assigned to trial by ClinicalTrials.gov
+    Desc: The Trial ID assigned to trial by ClinicalTrials.gov.
     Src: study_id
     Type: string
     Req: true
     Private: false
-  clinical_trial_name:
-    Desc: The complete name of the clinical trial.
+  clinical_trial_short_name:
+    Desc: An abbreviated title of the clinical trial eg. Molecular Analysis for Therapy Choice
     Src: study_name
     Type: string
     Req: true
     Private: false
   clinical_trial_description:
     Desc: A brief description of clinical study.
-    Src: None
+    Src: NA
     Type: string
     Req: true
     Private: false
   clinical_trial_designation:
-    Desc: A concise name for clinical study.
-    Src: None
+    Desc: A concise name for clinical study eg. MATCH
+    Src: NA
+    Type: string
+    Req: true
+    Private: false
+  clinical_trial_long_name:
+    Desc: The complete name of the clinical trial, eg. Targeted Therapy Directed by Genetic Testing in Treating Patients with Advanced Refractory Solid Tumors, Lymphomas, or Multiple Myeloma (The MATCH Screening Trial).
+    Src: NA
+    Type: string
+    Req: true
+    Private: false
+  clinical_trial_type:
+    Desc: Clinical trial type
+    Src: NA
+    Type: string
+    Req: true
+    Private: false
+  lead_organization:
+    Desc: Lead Organization
+    Src: NA
+    Type: string
+    Req: true
+    Private: false
+  principal_investigators:
+    Desc: Principal Investigators
+    Src: NA
     Type: string
     Req: true
     Private: false
@@ -966,52 +991,52 @@ PropDefinitions:
   allele_frequency:
     Desc: Frequency of alternative nucleotide as determined by number of reads carrying alternative nucleotide as a fraction of total number of reads mapping to variant position.
     Src: alleleFrequency
-    Type: float
+    Type: number
     Req: true
     Private: false
 #delins_variant_of properties
   allele_frequency:
     Desc: Frequency of alternative nucleotide as determined by number of reads carrying alternative nucleotide as a fraction of total number of reads mapping to variant position.
     Src: alleleFrequency
-    Type: float
+    Type: number
     Req: true
     Private: false
 #indel_variant_of properties
   allele_frequency:
     Desc: Frequency of alternative nucleotide as determined by number of reads carrying alternative nucleotide as a fraction of total number of reads mapping to variant position.
     Src: alleleFrequency
-    Type: float
+    Type: number
     Req: true
     Private: false
 #copy_number_variant_of properties
   copy_number:
     Desc: The estimated number of copies for the copy number variant gene.
     Src: copyNumber
-    Type: float
+    Type: number
     Req: true
     Private: false
   copy_number_ci_5:
     Desc: The lower limit of the 95% confidence interval for the estimated copy number.
     Src: confidenceInterval5percent
-    Type: float
+    Type: number
     Req: false
     Private: false
   copy_number_ci_95:
     Desc: The upper limit of the 95% confidence interval for the estimated copy number.
     Src: confidenceInterval95percent
-    Type: float
+    Type: number
     Req: false
     Private: false
 #gene_fusion_variant_of properties
   gene1_read_count:
     Desc: Number of reads mapping to the upstream gene partner.
     Src: partnerReadCount
-    Type: int
+    Type: integer
     Req: true
     Private: false
   gene2_read_count:
     Desc: Number of reads mapping to the downstream gene partner.
     Src: driverReadCount
-    Type: int
+    Type: integer
     Req: true
     Private: false
