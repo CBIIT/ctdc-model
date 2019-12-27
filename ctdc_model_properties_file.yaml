@@ -1,23 +1,26 @@
 PropDefinitions:
-#case properties
+#property of all nodes.
   show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
+    Desc: A settable node property that flags a node and its children as queryable.
     Src: NA
     Type: boolean
     Req: true
     Private: true
+#property of case
   case_id:
     Desc: A unique numerical identifier assigned to each patient by CTDC.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of case
   source_id:
     Desc: A unique identifier by assigned source project
     Src: patientSequenceNumber
     Type: string
     Req: true
     Private: true
+#property of case
   gender:
     Desc: Gender of patient
     Src: gender
@@ -27,6 +30,7 @@ PropDefinitions:
       - UNKNOWN
     Req: true
     Private: false
+#property of case
   race:
     Desc: Race of patient
     Src: races
@@ -40,6 +44,7 @@ PropDefinitions:
       - WHITE
     Req: true
     Private: false
+#property of case
   ethnicity:
     Desc: Ethnicity patient
     Src: ethnicity
@@ -49,6 +54,7 @@ PropDefinitions:
       - UNKNOWN
     Req: true
     Private: false
+#property of case
   patient_status:
     Desc: Status of patient within the MATCH workflow
     Src: currentPatientStatus
@@ -68,61 +74,63 @@ PropDefinitions:
       - REGISTRATION_OUTSIDE_ASSAY
     Req: false
     Private: false
+#property of case
   current_step:
     Desc: A number that designates position of patient in the MATCH workflow.
     Src: currentStepNumber
     Type: integer
     Req: false
     Private: false
+#property of case
   disease:
     Desc: Disease condition diagnosed in study patient.
     Src: diseases
     Type: string
     Req: true
     Private: false
+#property of case
   ctep_category:
     Desc: None
     Src: ctepCategory
     Type: string
     Req: false
     Private: false
+#property of case
   ctep_subcategory:
     Desc: None
     Src: ctepSubCategory
     Type: string
     Req: false
     Private: false
+#property of case
   meddra_code:
     Desc: None
     Src: diseases->_id
     Type: string
     Req: false
     Private: false
+#property of case
   prior_drugs:
     Desc: A list of drugs prescribed to patient prior to study registration.
     Src: priorDrugs
     Type: string
     Req: false
     Private: false
-#specimen properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
+#property of specimen
   specimen_id:
     Desc: A unique identifier assigned to each MATCH specimen by CTDC.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of specimen
   biopsy_sequence_number:
     Desc: A unique identifier assigned to the tumor biopsy assigned by source project.
     Src: biopsySequenceNumber
     Type: string
     Req: true
     Private: true
+#property of specimen
   specimen_type:
     Desc: Biopsy type.
     Src: NA
@@ -132,50 +140,42 @@ PropDefinitions:
       - Unknown
     Req: true
     Private: false
-#nucleic_acid properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
+#property of nucleic_acid
   aliquot_id:
     Desc: A unique identifier assigned to nucleic acid aliquot by CTDC.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of nucleic_acid
   molecular_sequence_number:
     Desc: A unique identifer assigned to an aliquot of nucleic acid, prepared from a patient's tumor biopsy, by the source project.
     Src: molecularSequenceNumber
     Type: string
     Req: true
     Private: true
+#property of nucleic_acid
   nucleic_acid_concentration:
     Desc: Nucleic acid concentration of aliquot expressed in nanograms per microliter.
     Src: dnaConcentration
     Type: number
     Req: true
     Private: false
+#property of nucleic_acid
   nucleic_acid_volume:
     Desc: Aliquot volume expressed as microliters.
     Src: dnaVolume
     Type: number
     Req: true
     Private: false
-#ihc_assay_report properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
+#property of ihc_assay_report
   ihc_assay_id:
     Desc: A unique identifier assigned to each IHC assay report by CTDC.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of ihc_assay_report
   ihc_test_gene:
     Desc: Gene symbol of gene being assayed for expression by an immunohistochemistry (IHC) test.
     Src: biomarker
@@ -186,6 +186,7 @@ PropDefinitions:
       - MSH2
     Req: true
     Private: false
+#property of ihc_assay_report
   ihc_test_result:
     Desc: The result of the IHC test performed on gene.
     Src: result
@@ -196,99 +197,91 @@ PropDefinitions:
       - UNKNOWN
     Req: true
     Private: false
-#sequencing_assay properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
+#property of sequencing_assay
   sequencing_assay_id:
     Desc: A unique identifier assigned to each MATCH sequencing assay report by CTDC.
     Src: NA
     Type: string
     Req: true
     Private: true
+#property of sequencing_assay
   qc_result:
     Desc: Sequencing QC result
     Src: Generated through API call
     Type: string
     Req: false
     Private: false
-#variant_report properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
+#property of variant_report
   variant_report_id:
     Desc: A unique identifier assigned to each variant report by CTDC.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of variant_report, assignment_report
   analysis_id:
     Desc: A unique identifier assigned to each variant report by source project.
     Src: jobName
     Type: string
     Req: true
     Private: true
+#property of variant_report
   mapd:
     Desc: Median Absolute Percentage Deviation (MAPD) is a measure of the accuracy of the copy number calls made by the copy number variant pipeline.
     Src: mapd
     Type: number
     Req: false
     Private: false
+#property of variant_report
   cellularity:
     Desc: The fraction of biopsy specimen estimated to be comprised of tumor cells.
     Src: cellularity
     Type: number
     Req: false
     Private: false
+#property of variant_report
   torrent_variant_caller_version:
     Desc: The version of the variant calling pipeline from Ion Torrent that was used to identify variants in variant report.
     Src: tvc_version
     Type: string
     Req: false
     Private: false
-#file properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
+#property of file
   file_description:
     Desc: Optional description of the file and  its content.
     Src: NA
     Type: string
     Req: false
     Private: false
+#property of file
   file_format:
     Desc: The specific format of the file as derived by the loader.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of file
   file_location:
     Desc: S3 bucket location of file in CTDC.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of file
   file_name:
     Desc: File name as assigned by parent project.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of file
   file_size:
     Desc: Size of the file as derived by the loader.
     Src: NA
     Type: number
     Req: true
     Private: false
+#property of file
   file_status:
     Desc: Enumerated representation of the status of files.
     Src: NA
@@ -308,421 +301,49 @@ PropDefinitions:
       - released
     Req: true
     Private: false
+#property of file
   file_type:
     Desc: Indicator as to the nature of the file in terms of its content.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of file
   md5sum:
     Desc: Md5 checksum.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of file
   uuid:
     Desc: A unique id assigned by CTDC.
     Src: NA
     Type: string
     Req: true
     Private: false
-#snv_variant properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
+#property of snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant
   variant_id:
     Desc: A unique identifier assigned to each variant by CTDC.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant
   external_variant_id:
     Desc: The COSMIC ID of variant, if available, or another source project assigned ID.
     Src: identifier
     Type: string
     Req: false
     Private: false
-  gene:
-    Desc: Gene symbol of gene that has been identified as having a variant nucleotide(s) as compared to the human reference genome.
-    Src: gene
-    Type: string
-    Req: true
-    Private: false
-  chromosome:
-    Desc: The chromosome that encodes variant gene.
-    Src: chromosome
-    Type:
-      - chr1
-      - chr2
-      - chr3
-      - chr4
-      - chr5
-      - chr6
-      - chr7
-      - chr8
-      - chr9
-      - chr10
-      - chr11
-      - chr12
-      - chr13
-      - chr14
-      - chr15
-      - chr16
-      - chr17
-      - chr18
-      - chr19
-      - chr20
-      - chr21
-      - chr22
-      - chrX
-      - chrY
-    Req: true
-    Private: false
-  exon:
-    Desc: The exon that encodes the variant nucleotide position.
-    Src: exon
-    Type: number
-    Req: true
-    Private: false
-  position:
-    Desc: The chromosomal location of nucleotide variant on the positive strand.
-    Src: position
-    Type: number
-    Req: true
-    Private: false
-  reference:
-    Desc: Reference allele at variant position.
-    Src: reference
-    Type: string
-    Req: true
-    Private: false
-  alternative:
-    Desc: Alternative nucelotide identified at variant position.
-    Src: alternative
-    Type: string
-    Req: true
-    Private: false
-  transcript_id:
-    Desc: NCBI Identifier of the transcript isoform chosen for reporting the variant.
-    Src: transcript
-    Type: string
-    Req: true
-    Private: false
-  transcript_hgvs:
-    Desc: The transcript level change annotated in the HGVS format.
-    Src: hgvs
-    Type: string
-    Req: true
-    Private: false
-  oncomine_variant_class:
-    Desc: Variant classification label assigned by the variant calling workflow of the Ion Reporter Software.
-    Src: oncominevariantclass
-    Type:
-      - Amplification
-      - Deletion
-      - Deleterious
-      - Hotspot
-      - Fusion
-    Req: false
-    Private: false
-  variant_classification:
-    Desc: Variant classification based on the effect of the detected genomic change.
-    Src: function
-    Type:
-      - Frameshift
-      - FameshiftBlockSubstitution
-      - FrameshiftDeletion
-      - FrameshiftInsertion
-      - Missense
-      - NonframeshiftBlockSubstitution
-      - NonframeshiftDeletion
-      - NonframeshiftInsertion
-      - Nonsense
-      - Synonymous
-    Req: false
-    Private: false
-  amino_acid_change:
-    Desc: The amino acid change resulting from the nucleotide-level change.
-    Src: NA
-    Type: string
-    Req: false
-    Private: false
-#delins_variant properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
-  variant_id:
-    Desc: A unique identifier assigned to each variant by CTDC.
-    Src: NA
-    Type: string
-    Req: true
-    Private: false
-  external_variant_id:
-    Desc: The COSMIC ID of variant, if available, or another source project assigned ID.
-    Src: identifier
-    Type: string
-    Req: false
-    Private: false
-  gene:
-    Desc: Gene symbol of gene that has been identified as having a variant nucleotide(s) as compared to the human reference genome.
-    Src: gene
-    Type: string
-    Req: true
-    Private: false
-  chromosome:
-    Desc: The chromosome that encodes variant gene.
-    Src: chromosome
-    Type:
-      - chr1
-      - chr2
-      - chr3
-      - chr4
-      - chr5
-      - chr6
-      - chr7
-      - chr8
-      - chr9
-      - chr10
-      - chr11
-      - chr12
-      - chr13
-      - chr14
-      - chr15
-      - chr16
-      - chr17
-      - chr18
-      - chr19
-      - chr20
-      - chr21
-      - chr22
-      - chrX
-      - chrY
-    Req: true
-    Private: false
-  exon:
-    Desc: The exon that encodes the variant nucleotide position.
-    Src: exon
-    Type: number
-    Req: true
-    Private: false
-  position:
-    Desc: The chromosomal location of nucleotide variant on the positive strand.
-    Src: position
-    Type: number
-    Req: true
-    Private: false
-  reference:
-    Desc: Reference allele at variant position.
-    Src: reference
-    Type: string
-    Req: true
-    Private: false
-  alternative:
-    Desc: Alternative nucelotide identified at variant position.
-    Src: alternative
-    Type: string
-    Req: true
-    Private: false
-  transcript_id:
-    Desc: NCBI Identifier of the transcript isoform chosen for reporting the variant.
-    Src: transcript
-    Type: string
-    Req: true
-    Private: false
-  transcript_hgvs:
-    Desc: The transcript level change annotated in the HGVS format.
-    Src: hgvs
-    Type: string
-    Req: true
-    Private: false
-  oncomine_variant_class:
-    Desc: Variant classification label assigned by the variant calling workflow of the Ion Reporter Software.
-    Src: oncominevariantclass
-    Type:
-      - Amplification
-      - Deletion
-      - Deleterious
-      - Hotspot
-      - Fusion
-    Req: false
-    Private: false
-  variant_classification:
-    Desc: Variant classification based on the effect of the detected genomic change.
-    Src: function
-    Type:
-      - Frameshift
-      - FameshiftBlockSubstitution
-      - FrameshiftDeletion
-      - FrameshiftInsertion
-      - Missense
-      - NonframeshiftBlockSubstitution
-      - NonframeshiftDeletion
-      - NonframeshiftInsertion
-      - Nonsense
-      - Synonymous
-    Req: false
-    Private: false
-  amino_acid_change:
-    Desc: The amino acid change resulting from the nucleotide-level change.
-    Src: NA
-    Type: string
-    Req: false
-    Private: false
-#indel_variant properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
-  variant_id:
-    Desc: A unique identifier assigned to each variant by CTDC.
-    Src: NA
-    Type: string
-    Req: true
-    Private: false
-  external_variant_id:
-    Desc: The COSMIC ID of variant, if available, or another source project assigned ID.
-    Src: identifier
-    Type: string
-    Req: false
-    Private: false
-  gene:
-    Desc: Gene symbol of gene that has been identified as having a variant nucleotide(s) as compared to the human reference genome.
-    Src: gene
-    Type: string
-    Req: true
-    Private: false
-  chromosome:
-    Desc: The chromosome that encodes variant gene.
-    Src: chromosome
-    Type:
-      - chr1
-      - chr2
-      - chr3
-      - chr4
-      - chr5
-      - chr6
-      - chr7
-      - chr8
-      - chr9
-      - chr10
-      - chr11
-      - chr12
-      - chr13
-      - chr14
-      - chr15
-      - chr16
-      - chr17
-      - chr18
-      - chr19
-      - chr20
-      - chr21
-      - chr22
-      - chrX
-      - chrY
-    Req: true
-    Private: false
-  exon:
-    Desc: The exon that encodes the variant nucleotide position.
-    Src: exon
-    Type: string
-    Req: true
-    Private: false
-  position:
-    Desc: The chromosomal location of nucleotide variant on the positive strand.
-    Src: position
-    Type: integer
-    Req: true
-    Private: false
-  reference:
-    Desc: Reference allele at variant position.
-    Src: reference
-    Type: string
-    Req: true
-    Private: false
-  alternative:
-    Desc: Alternative nucelotide identified at variant position.
-    Src: alternative
-    Type: string
-    Req: true
-    Private: false
-  transcript_id:
-    Desc: NCBI Identifier of the transcript isoform chosen for reporting the variant.
-    Src: transcript
-    Type: string
-    Req: true
-    Private: false
-  transcript_hgvs:
-    Desc: The transcript level change annotated in the HGVS format.
-    Src: hgvs
-    Type: string
-    Req: true
-    Private: false
-  oncomine_variant_class:
-    Desc: Variant classification label assigned by the variant calling workflow of the Ion Reporter Software.
-    Src: oncominevariantclass
-    Type:
-      - Amplification
-      - Deletion
-      - Deleterious
-      - Hotspot
-      - Fusion
-    Req: false
-    Private: false
-  variant_classification:
-    Desc: Variant classification based on the effect of the detected genomic change.
-    Src: function
-    Type:
-      - Frameshift
-      - FameshiftBlockSubstitution
-      - FrameshiftDeletion
-      - FrameshiftInsertion
-      - Missense
-      - NonframeshiftBlockSubstitution
-      - NonframeshiftDeletion
-      - NonframeshiftInsertion
-      - Nonsense
-      - Synonymous
-    Req: false
-    Private: false
-  amino_acid_change:
-    Desc: The amino acid change resulting from the nucleotide-level change.
-    Src: NA
-    Type: string
-    Req: false
-    Private: false
-#copy_number_variant properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
-  variant_id:
-    Desc: A unique identifier assigned to each variant by CTDC.
-    Src: NA
-    Type: string
-    Req: true
-    Private: false
-  external_variant_id:
-    Desc: The COSMIC ID of variant, if available, or another source project assigned ID.
-    Src: identifier
-    Type: string
-    Req: false
-    Private: false
+#property of snv_variant, delins_variant, indel_variant, copy_number_variant
   gene:
     Desc: Gene symbol of gene that has been identified as having a variant number of copies.
     Src: gene
     Type: string
     Req: true
     Private: false
+#property of snv_variant, delins_variant, indel_variant, copy_number_variant
   chromosome:
     Desc: The chromosome that encodes variant gene.
     Src: chromosome
@@ -753,6 +374,49 @@ PropDefinitions:
       - chrY
     Req: true
     Private: false
+#property of snv_variant, delins_variant, indel_variant
+  exon:
+    Desc: The exon that encodes the variant nucleotide position.
+    Src: exon
+    Type: string
+    Req: true
+    Private: false
+#property of snv_variant, delins_variant, indel_variant
+  position:
+    Desc: The chromosomal location of nucleotide variant on the positive strand.
+    Src: position
+    Type: integer
+    Req: true
+    Private: false
+#property of snv_variant, delins_variant, indel_variant
+  reference:
+    Desc: Reference allele at variant position.
+    Src: reference
+    Type: string
+    Req: true
+    Private: false
+#property of snv_variant, delins_variant, indel_variant
+  alternative:
+    Desc: Alternative nucelotide identified at variant position.
+    Src: alternative
+    Type: string
+    Req: true
+    Private: false
+#property of snv_variant, delins_variant, indel_variant
+  transcript_id:
+    Desc: NCBI Identifier of the transcript isoform chosen for reporting the variant.
+    Src: transcript
+    Type: string
+    Req: true
+    Private: false
+#property of snv_variant, delins_variant, indel_variant
+  transcript_hgvs:
+    Desc: The transcript level change annotated in the HGVS format.
+    Src: hgvs
+    Type: string
+    Req: true
+    Private: false
+#property of snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant
   oncomine_variant_class:
     Desc: Variant classification label assigned by the variant calling workflow of the Ion Reporter Software.
     Src: oncominevariantclass
@@ -764,85 +428,73 @@ PropDefinitions:
       - Fusion
     Req: false
     Private: false
+#property of snv_variant, delins_variant, indel_variant
+  variant_classification:
+    Desc: Variant classification based on the effect of the detected genomic change.
+    Src: function
+    Type:
+      - Frameshift
+      - FameshiftBlockSubstitution
+      - FrameshiftDeletion
+      - FrameshiftInsertion
+      - Missense
+      - NonframeshiftBlockSubstitution
+      - NonframeshiftDeletion
+      - NonframeshiftInsertion
+      - Nonsense
+      - Synonymous
+    Req: false
+    Private: false
+#property of snv_variant, delins_variant, indel_variant
+  amino_acid_change:
+    Desc: The amino acid change resulting from the nucleotide-level change.
+    Src: NA
+    Type: string
+    Req: false
+    Private: false
+#property of copy_number_variant
   tumor_suppressor:
     Desc: A flag that indicates if variant gene is a tumor suppressor.
     Src: cancerGeneType
     Type: boolean
     Req: false
     Private: false
-#gene_fusion_variant properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
-  variant_id:
-    Desc: A unique identifier assigned to each variant by CTDC.
-    Src: NA
-    Type: string
-    Req: true
-    Private: false
-  external_variant_id:
-    Desc: The COSMIC ID of variant, if available, or another source project assigned ID.
-    Src: identifier
-    Type: string
-    Req: false
-    Private: false
+#property of gene_fusion_variant
   gene1:
     Desc: Gene symbol of upstream partner of a fusion variant.
     Src: partnerGene
     Type: string
     Req: true
     Private: false
+#property of gene_fusion_variant
   gene2:
     Desc: Gene symbol of downstream partner of a fusion variant.
     Src: driverGene
     Type: string
     Req: true
     Private: false
-  oncomine_variant_class:
-    Desc: Variant classification label assigned by the variant calling workflow of the Ion Reporter Software.
-    Src: oncominevariantclass
-    Type:
-      - Amplification
-      - Deletion
-      - Deleterious
-      - Hotspot
-      - Fusion
-    Req: false
-    Private: false
-#assignment_report properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
+#property of assignment_report
   assignment_report_id:
     Desc: A unique identifier assigned to each assignment report by CTDC.
     Src: NA
     Type: string
     Req: true
     Private: false
-  analysis_id:
-    Desc: A unique identifier assigned to each variant report by source project.
-    Src: jobName
-    Type: string
-    Req: true
-    Private: true
+#property of assignment_report
   step_at_assignment:
     Desc: The step in the MATCH workflow at which patient has been assigned to treatment arm.
     Src: patientAssignments->stepNumber
     Type: integer
     Req: false
     Private: false
+#property of assignment_report
   assignment_logic:
     Desc: The rationale for assigning treatment arm.
     Src: patientAssignmentLogic
     Type: string
     Req: false
     Private: false
+#property of assignment_report
   assignment_outcome:
     Desc: A status describing outcome of assigning patient to treatment arm.
     Src: assignmentStatusOutcome
@@ -861,13 +513,7 @@ PropDefinitions:
       - PENDING_CONFIRMATION
     Req: true
     Private: false
-#arm properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children, as queryable.
-    Src: NA
-    Type: boolean
-    Req: true
-    Private: true
+#property of arm
   arm_id:
     Desc: A unique identifier assigned to a study arm.
     Src: NA
@@ -913,127 +559,119 @@ PropDefinitions:
       - Y
     Req: true
     Private: false
+#property of arm
   arm_target:
     Desc: A concise description of genomic aberrations being targeted by study arm.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of arm
   arm_drug:
     Desc: The therapeutic agent being tested against the target genomic aberrations.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of arm
   pubmed_id:
     Desc: PubMed ID of the primary publication associated with study arm.
     Src: None
     Type: string
     Req: false
     Private: false
-#clinical_trial properties
-  show_node:
-    Desc: A settable node property that flags a node, and its children as queryable. TRUE = node queryable; FALSE = node not queryable; non-queryable nodes are "dark".
-    Src: NA
-    Type:
-      - None
-    Req: true
-    Private: true
+#property of clinical_trial
   clinical_trial_id:
     Desc: The Trial ID assigned to trial by ClinicalTrials.gov.
     Src: study_id
     Type: string
     Req: true
     Private: false
+#property of clinical_trial
   clinical_trial_short_name:
     Desc: An abbreviated title of the clinical trial eg. Molecular Analysis for Therapy Choice
     Src: study_name
     Type: string
     Req: true
     Private: false
+#property of clinical_trial
   clinical_trial_description:
     Desc: A brief description of clinical study.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of clinical_trial
   clinical_trial_designation:
-    Desc: A concise name for clinical study eg. MATCH
+    Desc: A concise name for clinical study.
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of clinical_trial
   clinical_trial_long_name:
     Desc: The complete name of the clinical trial, eg. Targeted Therapy Directed by Genetic Testing in Treating Patients with Advanced Refractory Solid Tumors, Lymphomas, or Multiple Myeloma (The MATCH Screening Trial).
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of clinical_trial
   clinical_trial_type:
     Desc: Clinical trial type
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of clinical_trial
   lead_organization:
     Desc: Lead Organization
     Src: NA
     Type: string
     Req: true
     Private: false
+#property of clinical_trial
   principal_investigators:
     Desc: Principal Investigators
     Src: NA
     Type: string
     Req: true
     Private: false
-#snv_variant_of properties
+#property of snv_variant_of, delins_variant_of, indel_variant_of
   allele_frequency:
     Desc: Frequency of alternative nucleotide as determined by number of reads carrying alternative nucleotide as a fraction of total number of reads mapping to variant position.
     Src: alleleFrequency
     Type: number
     Req: true
     Private: false
-#delins_variant_of properties
-  allele_frequency:
-    Desc: Frequency of alternative nucleotide as determined by number of reads carrying alternative nucleotide as a fraction of total number of reads mapping to variant position.
-    Src: alleleFrequency
-    Type: number
-    Req: true
-    Private: false
-#indel_variant_of properties
-  allele_frequency:
-    Desc: Frequency of alternative nucleotide as determined by number of reads carrying alternative nucleotide as a fraction of total number of reads mapping to variant position.
-    Src: alleleFrequency
-    Type: number
-    Req: true
-    Private: false
-#copy_number_variant_of properties
+#property of copy_number_variant_of
   copy_number:
     Desc: The estimated number of copies for the copy number variant gene.
     Src: copyNumber
     Type: number
     Req: true
     Private: false
+#property of copy_number_variant_of
   copy_number_ci_5:
     Desc: The lower limit of the 95% confidence interval for the estimated copy number.
     Src: confidenceInterval5percent
     Type: number
     Req: false
     Private: false
+#property of copy_number_variant_of
   copy_number_ci_95:
     Desc: The upper limit of the 95% confidence interval for the estimated copy number.
     Src: confidenceInterval95percent
     Type: number
     Req: false
     Private: false
-#gene_fusion_variant_of properties
+#property of gene_fusion_variant_of
   gene1_read_count:
     Desc: Number of reads mapping to the upstream gene partner.
     Src: partnerReadCount
     Type: integer
     Req: true
     Private: false
+#property of gene_fusion_variant_of
   gene2_read_count:
     Desc: Number of reads mapping to the downstream gene partner.
     Src: driverReadCount
