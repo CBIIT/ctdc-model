@@ -4,7 +4,7 @@
 <script type="text/javascript"  src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
 <script type="text/javascript" src="assets/actions.js"></script>
 
-# Integrated Canine Data Commons data model
+# Clinical Trials Data Commons data model
 
 Zoom to Node: <select id="node_select">
   <option value="">Zoom to Node</option>
