@@ -1,7 +1,7 @@
 PropDefinitions:
-#property of all nodes.
+#property of case, specimen, nucleic_acid, ihc_assay_report, sequencing_assay, variant_report, file, snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant, assignment_report, arm, clinical_trial
   show_node:
-    Desc: A settable node property that flags a node and its children as queryable.
+    Desc: A settable node property that flags a node, and its children as queryable.
     Src: NA
     Type: boolean
     Req: true
@@ -603,14 +603,14 @@ PropDefinitions:
     Private: false
 #property of clinical_trial
   clinical_trial_designation:
-    Desc: A concise name for clinical study.
+    Desc: A concise name for clinical study eg. MATCH
     Src: NA
     Type: string
     Req: true
     Private: false
 #property of clinical_trial
   clinical_trial_long_name:
-    Desc: The complete name of the clinical trial, eg. Targeted Therapy Directed by Genetic Testing in Treating Patients with Advanced Refractory Solid Tumors, Lymphomas, or Multiple Myeloma (The MATCH Screening Trial).
+    Desc: The complete name of the clinical trial, e.g. Targeted Therapy Directed by Genetic Testing in Treating Patients with Advanced Refractory Solid Tumors, Lymphomas, or Multiple Myeloma (The MATCH Screening Trial).
     Src: NA
     Type: string
     Req: true

@@ -163,6 +163,8 @@ Relationships:
         Dst: specimen
       - Src: nucleic_acid
         Dst: specimen
+      - Src: assignment_report
+        Dst: specimen
     Props: null
   of_nucleic_acid:
     Mul: many_to_one
@@ -222,16 +224,12 @@ Relationships:
       - Src: assignment_report
         Dst: variant_report
     Props: null
-  of_ihc_assay_report:
-    Mul: many_to_many
-    Ends:
-      - Src: assignment_report
-        Dst: ihc_assay_report
-    Props: null
   of_arm:
     Mul: many_to_one
     Ends:
       - Src: assignment_report
+        Dst: arm
+      - Src: case
         Dst: arm
     Props: null
   of_trial:
