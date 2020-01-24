@@ -231,6 +231,7 @@ Relationships:
         Dst: arm
       - Src: case
         Dst: arm
+        Mul: many_to_many
     Props: null
   of_trial:
     Mul: many_to_one
