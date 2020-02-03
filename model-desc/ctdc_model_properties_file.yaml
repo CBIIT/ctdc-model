@@ -18,7 +18,7 @@ PropDefinitions:
     Desc: A unique identifier by assigned source project
     Src: patientSequenceNumber
     Type: string
-    Req: true
+    Req: false
     Private: true
 #property of case
   gender:
@@ -72,15 +72,16 @@ PropDefinitions:
       - PTEN_ORDER_REQUESTED
       - REGISTRATION
       - REGISTRATION_OUTSIDE_ASSAY
-    Req: false
+    Req: true
     Private: false
 #property of case
   current_step:
     Desc: A number that designates position of patient in the MATCH workflow.
     Src: currentStepNumber
     Type: integer
-    Req: false
+    Req: true
     Private: false
+    minimum: 0
 #property of case
   disease:
     Desc: Disease condition diagnosed in study patient.
@@ -161,11 +162,24 @@ PropDefinitions:
     Type: number
     Req: true
     Private: false
+    exclusiveMinimum: 0
 #property of nucleic_acid
   nucleic_acid_volume:
     Desc: Aliquot volume expressed as microliters.
     Src: dnaVolume
     Type: number
+    Req: true
+    Private: false
+    exclusiveMinimum: 0
+#property of nucleic_acid
+  nucleic_acid_type:
+    Desc: Nucleic acid type of extract.
+    Src: NA
+    Type:
+      - DNA
+      - RNA
+      - Mixture
+      - Unknown
     Req: true
     Private: false
 #property of ihc_assay_report
@@ -206,7 +220,7 @@ PropDefinitions:
     Private: true
 #property of sequencing_assay
   qc_result:
-    Desc: Sequencing QC result
+    Desc: Sequencing QC result.
     Src: Generated through API call
     Type: string
     Req: false
@@ -232,6 +246,8 @@ PropDefinitions:
     Type: number
     Req: false
     Private: false
+    exclusiveMinimum: 0
+    exclusiveMaximum: 0.5
 #property of variant_report
   cellularity:
     Desc: The fraction of biopsy specimen estimated to be comprised of tumor cells.
@@ -239,6 +255,7 @@ PropDefinitions:
     Type: number
     Req: false
     Private: false
+    exclusiveMinimum: 0
 #property of variant_report
   torrent_variant_caller_version:
     Desc: The version of the variant calling pipeline from Ion Torrent that was used to identify variants in variant report.
@@ -248,7 +265,7 @@ PropDefinitions:
     Private: false
 #property of file
   file_description:
-    Desc: Optional description of the file and  its content.
+    Desc: Optional description of the file and its content.
     Src: NA
     Type: string
     Req: false
@@ -305,7 +322,12 @@ PropDefinitions:
   file_type:
     Desc: Indicator as to the nature of the file in terms of its content.
     Src: NA
-    Type: string
+    Type:
+      - Raw reads file
+      - Aligned DNA reads file
+      - Aligned RNA reads file
+      - Index file
+      - Variants file
     Req: true
     Private: false
 #property of file
@@ -378,9 +400,10 @@ PropDefinitions:
   exon:
     Desc: The exon that encodes the variant nucleotide position.
     Src: exon
-    Type: string
+    Type: integer
     Req: true
     Private: false
+    exclusiveMinimum: 0
 #property of snv_variant, delins_variant, indel_variant
   position:
     Desc: The chromosomal location of nucleotide variant on the positive strand.
@@ -388,6 +411,7 @@ PropDefinitions:
     Type: integer
     Req: true
     Private: false
+    exclusiveMinimum: 0
 #property of snv_variant, delins_variant, indel_variant
   reference:
     Desc: Reference allele at variant position.
@@ -414,9 +438,9 @@ PropDefinitions:
     Desc: The transcript level change annotated in the HGVS format.
     Src: hgvs
     Type: string
-    Req: true
+    Req: false
     Private: false
-#property of snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant
+#property of snv_variant, delins_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant
   oncomine_variant_class:
     Desc: Variant classification label assigned by the variant calling workflow of the Ion Reporter Software.
     Src: oncominevariantclass
@@ -428,29 +452,19 @@ PropDefinitions:
       - Fusion
     Req: false
     Private: false
-#property of snv_variant, delins_variant, indel_variant
+#property of snv_variant, delins_variant, delins_variant, indel_variant
   variant_classification:
-    Desc: Variant classification based on the effect of the detected genomic change.
+    Desc: Variant classification based on the effect of genomic change.
     Src: function
-    Type:
-      - Frameshift
-      - FameshiftBlockSubstitution
-      - FrameshiftDeletion
-      - FrameshiftInsertion
-      - Missense
-      - NonframeshiftBlockSubstitution
-      - NonframeshiftDeletion
-      - NonframeshiftInsertion
-      - Nonsense
-      - Synonymous
-    Req: false
+    Type: string
+    Req: true
     Private: false
-#property of snv_variant, delins_variant, indel_variant
+#property of snv_variant, delins_variant, delins_variant, indel_variant
   amino_acid_change:
     Desc: The amino acid change resulting from the nucleotide-level change.
-    Src: NA
+    Src: protein
     Type: string
-    Req: false
+    Req: true
     Private: false
 #property of copy_number_variant
   tumor_suppressor:
@@ -487,6 +501,7 @@ PropDefinitions:
     Type: integer
     Req: false
     Private: false
+    minimum: 0
 #property of assignment_report
   assignment_logic:
     Desc: The rationale for assigning treatment arm.
@@ -576,7 +591,7 @@ PropDefinitions:
 #property of arm
   pubmed_id:
     Desc: PubMed ID of the primary publication associated with study arm.
-    Src: None
+    Src: NA
     Type: string
     Req: false
     Private: false
@@ -610,7 +625,7 @@ PropDefinitions:
     Private: false
 #property of clinical_trial
   clinical_trial_long_name:
-    Desc: The complete name of the clinical trial, e.g. Targeted Therapy Directed by Genetic Testing in Treating Patients with Advanced Refractory Solid Tumors, Lymphomas, or Multiple Myeloma (The MATCH Screening Trial).
+    Desc: The complete name of the clinical trial, eg. Targeted Therapy Directed by Genetic Testing in Treating Patients with Advanced Refractory Solid Tumors, Lymphomas, or Multiple Myeloma (The MATCH Screening Trial).
     Src: NA
     Type: string
     Req: true
@@ -643,6 +658,8 @@ PropDefinitions:
     Type: number
     Req: true
     Private: false
+    exclusiveMinimum: 0
+    maximum: 1
 #property of copy_number_variant_of
   copy_number:
     Desc: The estimated number of copies for the copy number variant gene.
@@ -650,20 +667,23 @@ PropDefinitions:
     Type: number
     Req: true
     Private: false
+    minimum: 0
 #property of copy_number_variant_of
   copy_number_ci_5:
     Desc: The lower limit of the 95% confidence interval for the estimated copy number.
     Src: confidenceInterval5percent
     Type: number
-    Req: false
+    Req: true
     Private: false
+    minimum: 0
 #property of copy_number_variant_of
   copy_number_ci_95:
     Desc: The upper limit of the 95% confidence interval for the estimated copy number.
     Src: confidenceInterval95percent
     Type: number
-    Req: false
+    Req: true
     Private: false
+    minimum: 0
 #property of gene_fusion_variant_of
   gene1_read_count:
     Desc: Number of reads mapping to the upstream gene partner.
@@ -671,6 +691,7 @@ PropDefinitions:
     Type: integer
     Req: true
     Private: false
+    exclusiveMinimum: 0
 #property of gene_fusion_variant_of
   gene2_read_count:
     Desc: Number of reads mapping to the downstream gene partner.
@@ -678,3 +699,4 @@ PropDefinitions:
     Type: integer
     Req: true
     Private: false
+    exclusiveMinimum: 0

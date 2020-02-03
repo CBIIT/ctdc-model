@@ -27,6 +27,7 @@ Nodes:
       - molecular_sequence_number
       - nucleic_acid_concentration
       - nucleic_acid_volume
+      - nucleic_acid_type
   ihc_assay_report:
     Props:
       - show_node
@@ -87,6 +88,9 @@ Nodes:
       - alternative
       - transcript_id
       - transcript_hgvs
+      - oncomine_variant_class
+      - variant_classification
+      - amino_acid_change
       - oncomine_variant_class
       - variant_classification
       - amino_acid_change
@@ -225,13 +229,12 @@ Relationships:
         Dst: variant_report
     Props: null
   of_arm:
-    Mul: many_to_one
+    Mul: many_to_many
     Ends:
       - Src: assignment_report
         Dst: arm
       - Src: case
         Dst: arm
-        Mul: many_to_many
     Props: null
   of_trial:
     Mul: many_to_one
