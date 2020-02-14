@@ -1,5 +1,5 @@
 PropDefinitions:
-#property of case, specimen, nucleic_acid, ihc_assay_report, sequencing_assay, variant_report, file, snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant, assignment_report, arm, clinical_trial
+#property of case, specimen, metastatic_site, nucleic_acid, ihc_assay_report, sequencing_assay, variant_report, file, snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant, assignment_report, arm, clinical_trial
   show_node:
     Desc: A settable node property that flags a node, and its children as queryable.
     Src: NA
@@ -117,6 +117,31 @@ PropDefinitions:
     Type: string
     Req: false
     Private: false
+#property of case
+  extent_of_disease:
+    Desc: Extent of disease at study entry. Source: ECOG-ACRIN.
+    Src: (ECOG-ACRIN) extnt_dz
+    Type:
+      - Locally advanced
+      - Metastatic
+      - Recurrent
+    Req: false
+    Private: false
+#property of case
+  ecog_performance_status:
+    Desc: ECOG Performance Status at study entry (integer values 0 to 5 – only 0 and 1 are eligible). Source: ECOG-ACRIN.
+    Src: (ECOG-ACRIN) ps
+    Type:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    Req: false
+    Private: false
+    minimum: 0
+    maximum: 1
 #property of specimen
   specimen_id:
     Desc: A unique identifier assigned to each MATCH specimen by CTDC.
@@ -139,6 +164,20 @@ PropDefinitions:
       - Tumor
       - Normal
       - Unknown
+    Req: true
+    Private: false
+#property of metastatic_site
+  met_site_id:
+    Desc: A unique identifier assigned to a metastatic site  by CTDC.
+    Src: NA
+    Type: string
+    Req: true
+    Private: false
+#property of metastatic_site
+  metastatic_site_name:
+    Desc: Metastatic site at study entry. Source: ECOG-ACRIN.
+    Src: (ECOG-ACRIN) met_(site_name)
+    Type: string
     Req: true
     Private: false
 #property of nucleic_acid
@@ -178,7 +217,7 @@ PropDefinitions:
     Type:
       - DNA
       - RNA
-      - Mixture
+      - Pooled DNA/cDNA
       - Unknown
     Req: true
     Private: false
@@ -247,7 +286,7 @@ PropDefinitions:
     Req: false
     Private: false
     exclusiveMinimum: 0
-    exclusiveMaximum: 0.5
+    maximum: 0.5
 #property of variant_report
   cellularity:
     Desc: The fraction of biopsy specimen estimated to be comprised of tumor cells.
@@ -440,7 +479,14 @@ PropDefinitions:
     Type: string
     Req: false
     Private: false
-#property of snv_variant, delins_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant
+#property of snv_variant, delins_variant, indel_variant
+  genomic_hgvs:
+    Desc: The genomic change annotated in the HGVS format.
+    Src: genomicHgvs
+    Type: string
+    Req: false
+    Private: false
+#property of snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant
   oncomine_variant_class:
     Desc: Variant classification label assigned by the variant calling workflow of the Ion Reporter Software.
     Src: oncominevariantclass
@@ -452,14 +498,14 @@ PropDefinitions:
       - Fusion
     Req: false
     Private: false
-#property of snv_variant, delins_variant, delins_variant, indel_variant
+#property of snv_variant, delins_variant, indel_variant
   variant_classification:
     Desc: Variant classification based on the effect of genomic change.
     Src: function
     Type: string
     Req: true
     Private: false
-#property of snv_variant, delins_variant, delins_variant, indel_variant
+#property of snv_variant, delins_variant, indel_variant
   amino_acid_change:
     Desc: The amino acid change resulting from the nucleotide-level change.
     Src: protein
@@ -527,6 +573,18 @@ PropDefinitions:
       - PENDING_APPROVAL
       - PENDING_CONFIRMATION
     Req: true
+    Private: false
+#property of assignment_report
+  treatment_outcome:
+    Desc: Best Confirmed Response. Source: ECOG.
+    Src: (ECOG)best_conf_resp
+    Type:
+      - Complete response
+      - Partial response
+      - Stable disease
+      - Progressive disease
+      - Not evaluable
+    Req: false
     Private: false
 #property of arm
   arm_id:
