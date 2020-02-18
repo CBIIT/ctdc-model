@@ -119,6 +119,7 @@ PropDefinitions:
     Private: false
 #property of case
   extent_of_disease:
+
     Desc: Extent of disease at study entry.
     Src: (ECOG-ACRIN) extnt_dz
     Type:
@@ -131,17 +132,11 @@ PropDefinitions:
   ecog_performance_status:
     Desc: ECOG Performance Status at study entry (integer values 0 to 5 – only 0 and 1 are eligible). 
     Src: (ECOG-ACRIN) ps
-    Type:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
+    Type: integer
     Req: false
     Private: false
     minimum: 0
-    maximum: 1
+    maximum: 5
 #property of specimen
   specimen_id:
     Desc: A unique identifier assigned to each MATCH specimen by CTDC.
@@ -177,7 +172,29 @@ PropDefinitions:
   metastatic_site_name:
     Desc: Metastatic site at study entry. 
     Src: (ECOG-ACRIN) met_(site_name)
-    Type: string
+    Type:
+      - Bone Marrow
+      - Bone
+      - Lung
+      - Pleura
+      - Liver
+      - Kidney
+      - Stomach
+      - Small intestine
+      - Large intestine
+      - Skin
+      - Orbit
+      - Conjunctiva
+      - Parotid
+      - Submandibular
+      - Testicle
+      - Epidural
+      - CNS-Brain
+      - CNS-Leptom
+      - Pericardium
+      - Lymph Nodes
+      - Adrenals
+      - Other
     Req: true
     Private: false
 #property of nucleic_acid
@@ -576,7 +593,7 @@ PropDefinitions:
     Private: false
 #property of assignment_report
   treatment_outcome:
-    Desc: Best Confirmed Response. z
+    Desc: Best Confirmed Response.
     Src: (ECOG)best_conf_resp
     Type:
       - Complete response
