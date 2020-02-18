@@ -9,12 +9,15 @@ assignment_report	assignment_outcome
 assignment_report	assignment_report_id
 assignment_report	show_node
 assignment_report	step_at_assignment
+assignment_report	treatment_outcome
 case	case_id
 case	ctep_category
 case	ctep_subcategory
 case	current_step
 case	disease
+case	ecog_performance_status
 case	ethnicity
+case	extent_of_disease
 case	gender
 case	meddra_code
 case	patient_status
@@ -44,6 +47,7 @@ delins_variant	chromosome
 delins_variant	exon
 delins_variant	external_variant_id
 delins_variant	gene
+delins_variant	genomic_hgvs
 delins_variant	oncomine_variant_class
 delins_variant	position
 delins_variant	reference
@@ -78,6 +82,7 @@ indel_variant	chromosome
 indel_variant	exon
 indel_variant	external_variant_id
 indel_variant	gene
+indel_variant	genomic_hgvs
 indel_variant	oncomine_variant_class
 indel_variant	position
 indel_variant	reference
@@ -86,9 +91,13 @@ indel_variant	transcript_hgvs
 indel_variant	transcript_id
 indel_variant	variant_classification
 indel_variant	variant_id
+metastatic_site	met_site_id
+metastatic_site	metastatic_site_name
+metastatic_site	show_node
 nucleic_acid	aliquot_id
 nucleic_acid	molecular_sequence_number
 nucleic_acid	nucleic_acid_concentration
+nucleic_acid	nucleic_acid_type
 nucleic_acid	nucleic_acid_volume
 nucleic_acid	show_node
 sequencing_assay	qc_result
@@ -100,6 +109,7 @@ snv_variant	chromosome
 snv_variant	exon
 snv_variant	external_variant_id
 snv_variant	gene
+snv_variant	genomic_hgvs
 snv_variant	oncomine_variant_class
 snv_variant	position
 snv_variant	reference

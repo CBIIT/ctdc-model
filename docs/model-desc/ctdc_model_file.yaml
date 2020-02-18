@@ -14,12 +14,19 @@ Nodes:
       - ctep_subcategory
       - meddra_code
       - prior_drugs
+      - extent_of_disease
+      - ecog_performance_status
   specimen:
     Props:
       - show_node
       - specimen_id
       - biopsy_sequence_number
       - specimen_type
+  metastatic_site:
+    Props:
+      - show_node
+      - met_site_id
+      - metastatic_site_name
   nucleic_acid:
     Props:
       - show_node
@@ -27,6 +34,7 @@ Nodes:
       - molecular_sequence_number
       - nucleic_acid_concentration
       - nucleic_acid_volume
+      - nucleic_acid_type
   ihc_assay_report:
     Props:
       - show_node
@@ -71,6 +79,7 @@ Nodes:
       - alternative
       - transcript_id
       - transcript_hgvs
+      - genomic_hgvs
       - oncomine_variant_class
       - variant_classification
       - amino_acid_change
@@ -87,6 +96,7 @@ Nodes:
       - alternative
       - transcript_id
       - transcript_hgvs
+      - genomic_hgvs
       - oncomine_variant_class
       - variant_classification
       - amino_acid_change
@@ -103,6 +113,7 @@ Nodes:
       - alternative
       - transcript_id
       - transcript_hgvs
+      - genomic_hgvs
       - oncomine_variant_class
       - variant_classification
       - amino_acid_change
@@ -131,6 +142,7 @@ Nodes:
       - step_at_assignment
       - assignment_logic
       - assignment_outcome
+      - treatment_outcome
   arm:
     Props:
       - show_node
@@ -225,17 +237,22 @@ Relationships:
         Dst: variant_report
     Props: null
   of_arm:
-    Mul: many_to_one
+    Mul: many_to_many
     Ends:
       - Src: assignment_report
         Dst: arm
       - Src: case
         Dst: arm
-        Mul: many_to_many
     Props: null
   of_trial:
     Mul: many_to_one
     Ends:
       - Src: arm
         Dst: clinical_trial
+    Props: null
+  met_site_of:
+    Mul: many_to_many
+    Ends:
+      - Src: metastatic_site
+        Dst: case
     Props: null
