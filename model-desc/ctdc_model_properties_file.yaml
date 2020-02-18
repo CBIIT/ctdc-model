@@ -598,7 +598,7 @@ PropDefinitions:
     Private: false
 #property of assignment_report
   treatment_outcome:
-    Desc: Best Confirmed Response. Source: ECOG.
+    Desc: Best Confirmed Response. Source is ECOG.
     Src: (ECOG)best_conf_resp
     Type:
       - Complete response
