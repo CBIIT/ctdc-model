@@ -508,7 +508,7 @@ PropDefinitions:
     Type: string
     Req: false
     Private: false
-#property of snv_variant, delins_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant
+#property of snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant
   oncomine_variant_class:
     Desc: Variant classification label assigned by the variant calling workflow of the Ion Reporter Software.
     Src: oncominevariantclass
@@ -520,14 +520,14 @@ PropDefinitions:
       - Fusion
     Req: false
     Private: false
-#property of snv_variant, delins_variant, delins_variant, indel_variant
+#property of snv_variant, delins_variant, indel_variant
   variant_classification:
     Desc: Variant classification based on the effect of genomic change.
     Src: function
     Type: string
     Req: true
     Private: false
-#property of snv_variant, delins_variant, delins_variant, indel_variant
+#property of snv_variant, delins_variant, indel_variant
   amino_acid_change:
     Desc: The amino acid change resulting from the nucleotide-level change.
     Src: protein
@@ -598,7 +598,7 @@ PropDefinitions:
     Private: false
 #property of assignment_report
   treatment_outcome:
-    Desc: Best Confirmed Response. Source is ECOG.
+    Desc: Best Confirmed Response. Source: ECOG.
     Src: (ECOG)best_conf_resp
     Type:
       - Complete response

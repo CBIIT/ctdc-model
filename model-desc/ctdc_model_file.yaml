@@ -100,9 +100,6 @@ Nodes:
       - oncomine_variant_class
       - variant_classification
       - amino_acid_change
-      - oncomine_variant_class
-      - variant_classification
-      - amino_acid_change
   indel_variant:
     Props:
       - show_node
