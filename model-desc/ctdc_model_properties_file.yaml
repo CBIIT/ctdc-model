@@ -119,7 +119,7 @@ PropDefinitions:
     Private: false
 #property of case
   extent_of_disease:
-    Desc: Extent of disease at study entry. Source: ECOG-ACRIN.
+    Desc: Extent of disease at study entry. Source is ECOG-ACRIN.
     Src: (ECOG-ACRIN) extnt_dz
     Type:
       - Locally advanced
@@ -129,7 +129,7 @@ PropDefinitions:
     Private: false
 #property of case
   ecog_performance_status:
-    Desc: ECOG Performance Status at study entry (integer values 0 to 5 – only 0 and 1 are eligible). Source: ECOG-ACRIN.
+    Desc: ECOG Performance Status at study entry (integer values 0 to 5 – only 0 and 1 are eligible). Source is ECOG-ACRIN.
     Src: (ECOG-ACRIN) ps
     Type:
       - 0
@@ -175,9 +175,31 @@ PropDefinitions:
     Private: false
 #property of metastatic_site
   metastatic_site_name:
-    Desc: Metastatic site at study entry. Source: ECOG-ACRIN.
+    Desc: Metastatic site at study entry. Source is ECOG-ACRIN.
     Src: (ECOG-ACRIN) met_(site_name)
-    Type: string
+    Type:
+      - Bone Marrow
+      - Bone
+      - Lung
+      - Pleura
+      - Liver
+      - Kidney
+      - Stomach
+      - Small intestine
+      - Large intestine
+      - Skin
+      - Orbit
+      - Conjunctiva
+      - Parotid
+      - Submandibular
+      - Testicle
+      - Epidural
+      - CNS-Brain
+      - CNS-Leptom
+      - Pericardium
+      - Lymph Nodes
+      - Adrenals
+      - Other
     Req: true
     Private: false
 #property of nucleic_acid
@@ -486,7 +508,7 @@ PropDefinitions:
     Type: string
     Req: false
     Private: false
-#property of snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant
+#property of snv_variant, delins_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant
   oncomine_variant_class:
     Desc: Variant classification label assigned by the variant calling workflow of the Ion Reporter Software.
     Src: oncominevariantclass
@@ -498,14 +520,14 @@ PropDefinitions:
       - Fusion
     Req: false
     Private: false
-#property of snv_variant, delins_variant, indel_variant
+#property of snv_variant, delins_variant, delins_variant, indel_variant
   variant_classification:
     Desc: Variant classification based on the effect of genomic change.
     Src: function
     Type: string
     Req: true
     Private: false
-#property of snv_variant, delins_variant, indel_variant
+#property of snv_variant, delins_variant, delins_variant, indel_variant
   amino_acid_change:
     Desc: The amino acid change resulting from the nucleotide-level change.
     Src: protein
