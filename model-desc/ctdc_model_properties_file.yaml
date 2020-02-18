@@ -129,19 +129,13 @@ PropDefinitions:
     Private: false
 #property of case
   ecog_performance_status:
-    Desc: ECOG Performance Status at study entry (integer values 0 to 5 – only 0 and 1 are eligible). Source is ECOG-ACRIN.
+    Desc: ECOG Performance Status at study entry (integer values 0 to 5 – only 0 and 1 are eligible for NCI-MATCH). Source is ECOG-ACRIN.
     Src: (ECOG-ACRIN) ps
-    Type:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
+    Type: integer
     Req: false
     Private: false
     minimum: 0
-    maximum: 1
+    maximum: 5
 #property of specimen
   specimen_id:
     Desc: A unique identifier assigned to each MATCH specimen by CTDC.
@@ -598,7 +592,7 @@ PropDefinitions:
     Private: false
 #property of assignment_report
   treatment_outcome:
-    Desc: Best Confirmed Response. Source is ECOG-ACRIN.
+    Desc: Best Confirmed Response. Source is  ECOG-ACRIN.
     Src: (ECOG)best_conf_resp
     Type:
       - Complete response
