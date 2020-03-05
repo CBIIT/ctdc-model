@@ -56,7 +56,7 @@ Nodes:
       - mapd
       - cellularity
       - torrent_variant_caller_version
-      - reference genome
+      - reference_genome
   file:
     Props:
       - show_node

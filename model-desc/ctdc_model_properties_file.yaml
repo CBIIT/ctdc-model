@@ -333,7 +333,7 @@ PropDefinitions:
     Req: false
     Private: false
 #property of variant_report
-  reference genome:
+  reference_genome:
     Desc: The reference assembly (Hg19, GRCh37, GRCh38) used to align reads from sequencing assay.
     Src: NA
     Type: string
