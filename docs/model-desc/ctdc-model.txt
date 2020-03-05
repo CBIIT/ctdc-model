@@ -100,6 +100,8 @@ nucleic_acid	nucleic_acid_concentration
 nucleic_acid	nucleic_acid_type
 nucleic_acid	nucleic_acid_volume
 nucleic_acid	show_node
+sequencing_assay	experimental_method
+sequencing_assay	platform
 sequencing_assay	qc_result
 sequencing_assay	sequencing_assay_id
 sequencing_assay	show_node
@@ -125,6 +127,7 @@ specimen	specimen_type
 variant_report	analysis_id
 variant_report	cellularity
 variant_report	mapd
+variant_report	reference_genome
 variant_report	show_node
 variant_report	torrent_variant_caller_version
 variant_report	variant_report_id
