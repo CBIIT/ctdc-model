@@ -46,6 +46,8 @@ Nodes:
       - show_node
       - sequencing_assay_id
       - qc_result
+      - experimental_method
+      - platform
   variant_report:
     Props:
       - show_node
@@ -54,6 +56,7 @@ Nodes:
       - mapd
       - cellularity
       - torrent_variant_caller_version
+      - reference genome
   file:
     Props:
       - show_node

@@ -15,7 +15,7 @@ PropDefinitions:
     Private: false
 #property of case
   source_id:
-    Desc: A unique identifier by assigned source project
+    Desc: A unique identifier assigned by source project
     Src: patientSequenceNumber
     Type: string
     Req: false
@@ -46,7 +46,7 @@ PropDefinitions:
     Private: false
 #property of case
   ethnicity:
-    Desc: Ethnicity patient
+    Desc: Ethnicity of patient
     Src: ethnicity
     Type:
       - HISPANIC_OR_LATINO
@@ -76,7 +76,7 @@ PropDefinitions:
     Private: false
 #property of case
   current_step:
-    Desc: A number that designates position of patient in the MATCH workflow.
+    Desc: The MATCH workflow is divided broadly into steps. Step 0 starts with patient registration and ends with the the sign-out of the first assignment report. If the patient is assigned to a treatment arm s/he moves to step 1. If patient progresses during treatment, s/he is assigned to step 2. Current step denotes the step in the workflow the patient is currently at.
     Src: currentStepNumber
     Type: integer
     Req: true
@@ -91,21 +91,21 @@ PropDefinitions:
     Private: false
 #property of case
   ctep_category:
-    Desc: None
+    Desc: The patient's disease diagnosis described according to the CTEP Simplified Disease Classification.
     Src: ctepCategory
     Type: string
     Req: false
     Private: false
 #property of case
   ctep_subcategory:
-    Desc: None
+    Desc: A more granular mapping of the patient's disease diagnosis to the CTEP Simplified Disease Classification.
     Src: ctepSubCategory
     Type: string
     Req: false
     Private: false
 #property of case
   meddra_code:
-    Desc: None
+    Desc: MedDRA code that is assigned to patient's disease diagnosis and that maps to the CTEP subcategory.
     Src: diseases->_id
     Type: string
     Req: false
@@ -198,7 +198,7 @@ PropDefinitions:
     Private: false
 #property of nucleic_acid
   aliquot_id:
-    Desc: A unique identifier assigned to nucleic acid aliquot by CTDC.
+    Desc: A unique identifer assigned to an aliquot of nucleic acid, prepared from a patient's tumor biopsy, by CTDC.
     Src: NA
     Type: string
     Req: true
@@ -280,6 +280,20 @@ PropDefinitions:
     Type: string
     Req: false
     Private: false
+#property of sequencing_assay
+  experimental_method:
+    Desc: The method or protocol used to perform the sequencing assay. Possible values include-  Targeted NGS (sequencing of selected regions of the genome either via targeted capture or amplification); WGS (whole genome sequencing); WXS (whole exome sequencing); RNA-seq  (transcriptome sequencing); miRNA-Seq (microRNA sequencing); ncRNA-Seq (sequencing of non-coding RNA); ssRNA-seq (strand-specific RNA sequencing); ATAC-seq (assay for Transposase-Accessible Chromatin (ATAC) strategy is used to study genome-wide chromatin accessibility); ChIP-Seq (chromatin ImmunoPrecipitation, reveals binding sites of specific proteins, typically transcription factors using antibodies to extract DNA fragments bound to the target protein); DNase-Hypersensitivity (sequencing of hypersensitive sites, or segments of open chromatin that are more readily cleaved by DNaseI); Bisulfite-Seq (sequencing following treatment of DNA with bisulfite to convert cytosine residues to uracil); ChIA-PET (Direct sequencing of proximity-ligated chromatin immunoprecipitates).
+    Src: NA
+    Type: string
+    Req: true
+    Private: false
+#property of sequencing_assay
+  platform:
+    Desc: The technology platform used to perform the sequencing assay.
+    Src: NA
+    Type: string
+    Req: true
+    Private: false
 #property of variant_report
   variant_report_id:
     Desc: A unique identifier assigned to each variant report by CTDC.
@@ -317,6 +331,13 @@ PropDefinitions:
     Src: tvc_version
     Type: string
     Req: false
+    Private: false
+#property of variant_report
+  reference genome:
+    Desc: The reference assembly (Hg19, GRCh37, GRCh38) used to align reads from sequencing assay.
+    Src: NA
+    Type: string
+    Req: true
     Private: false
 #property of file
   file_description:
@@ -725,52 +746,3 @@ PropDefinitions:
     Type: string
     Req: true
     Private: false
-#property of snv_variant_of, delins_variant_of, indel_variant_of
-  allele_frequency:
-    Desc: Frequency of alternative nucleotide as determined by number of reads carrying alternative nucleotide as a fraction of total number of reads mapping to variant position.
-    Src: alleleFrequency
-    Type: number
-    Req: true
-    Private: false
-    exclusiveMinimum: 0
-    maximum: 1
-#property of copy_number_variant_of
-  copy_number:
-    Desc: The estimated number of copies for the copy number variant gene.
-    Src: copyNumber
-    Type: number
-    Req: true
-    Private: false
-    minimum: 0
-#property of copy_number_variant_of
-  copy_number_ci_5:
-    Desc: The lower limit of the 95% confidence interval for the estimated copy number.
-    Src: confidenceInterval5percent
-    Type: number
-    Req: true
-    Private: false
-    minimum: 0
-#property of copy_number_variant_of
-  copy_number_ci_95:
-    Desc: The upper limit of the 95% confidence interval for the estimated copy number.
-    Src: confidenceInterval95percent
-    Type: number
-    Req: true
-    Private: false
-    minimum: 0
-#property of gene_fusion_variant_of
-  gene1_read_count:
-    Desc: Number of reads mapping to the upstream gene partner.
-    Src: partnerReadCount
-    Type: integer
-    Req: true
-    Private: false
-    exclusiveMinimum: 0
-#property of gene_fusion_variant_of
-  gene2_read_count:
-    Desc: Number of reads mapping to the downstream gene partner.
-    Src: driverReadCount
-    Type: integer
-    Req: true
-    Private: false
-    exclusiveMinimum: 0
