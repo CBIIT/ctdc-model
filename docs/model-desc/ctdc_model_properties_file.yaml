@@ -746,3 +746,52 @@ PropDefinitions:
     Type: string
     Req: true
     Private: false
+#property of snv_variant_of, delins_variant_of, indel_variant_of
+  allele_frequency:
+    Desc: Frequency of alternative nucleotide as determined by number of reads carrying alternative nucleotide as a fraction of total number of reads mapping to variant position.
+    Src: alleleFrequency
+    Type: number
+    Req: true
+    Private: false
+    exclusiveMinimum: 0
+    maximum: 1
+#property of copy_number_variant_of
+  copy_number:
+    Desc: The estimated number of copies for the copy number variant gene.
+    Src: copyNumber
+    Type: number
+    Req: true
+    Private: false
+    minimum: 0
+#property of copy_number_variant_of
+  copy_number_ci_5:
+    Desc: The lower limit of the 95% confidence interval for the estimated copy number.
+    Src: confidenceInterval5percent
+    Type: number
+    Req: true
+    Private: false
+    minimum: 0
+#property of copy_number_variant_of
+  copy_number_ci_95:
+    Desc: The upper limit of the 95% confidence interval for the estimated copy number.
+    Src: confidenceInterval95percent
+    Type: number
+    Req: true
+    Private: false
+    minimum: 0
+#property of gene_fusion_variant_of
+  gene1_read_count:
+    Desc: Number of reads mapping to the upstream gene partner.
+    Src: partnerReadCount
+    Type: integer
+    Req: true
+    Private: false
+    exclusiveMinimum: 0
+#property of gene_fusion_variant_of
+  gene2_read_count:
+    Desc: Number of reads mapping to the downstream gene partner.
+    Src: driverReadCount
+    Type: integer
+    Req: true
+    Private: false
+    exclusiveMinimum: 0
