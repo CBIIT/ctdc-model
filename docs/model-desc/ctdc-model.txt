@@ -1,133 +1,393 @@
-arm	arm_drug
-arm	arm_id
-arm	arm_target
-arm	pubmed_id
-arm	show_node
-assignment_report	analysis_id
-assignment_report	assignment_logic
-assignment_report	assignment_outcome
-assignment_report	assignment_report_id
-assignment_report	show_node
-assignment_report	step_at_assignment
-assignment_report	treatment_outcome
-case	case_id
-case	ctep_category
-case	ctep_subcategory
-case	current_step
-case	disease
-case	ecog_performance_status
-case	ethnicity
-case	extent_of_disease
-case	gender
-case	meddra_code
-case	patient_status
-case	prior_drugs
-case	race
-case	show_node
-case	source_id
-clinical_trial	clinical_trial_description
-clinical_trial	clinical_trial_designation
-clinical_trial	clinical_trial_id
-clinical_trial	clinical_trial_long_name
-clinical_trial	clinical_trial_short_name
-clinical_trial	clinical_trial_type
-clinical_trial	lead_organization
-clinical_trial	principal_investigators
-clinical_trial	show_node
-copy_number_variant	chromosome
-copy_number_variant	external_variant_id
-copy_number_variant	gene
-copy_number_variant	oncomine_variant_class
-copy_number_variant	show_node
-copy_number_variant	tumor_suppressor
-copy_number_variant	variant_id
-delins_variant	alternative
-delins_variant	amino_acid_change
-delins_variant	chromosome
-delins_variant	exon
-delins_variant	external_variant_id
-delins_variant	gene
-delins_variant	genomic_hgvs
-delins_variant	oncomine_variant_class
-delins_variant	position
-delins_variant	reference
-delins_variant	show_node
-delins_variant	transcript_hgvs
-delins_variant	transcript_id
-delins_variant	variant_classification
-delins_variant	variant_id
-file	file_description
-file	file_format
-file	file_location
-file	file_name
-file	file_size
-file	file_status
-file	file_type
-file	md5sum
-file	show_node
-file	uuid
-gene_fusion_variant	external_variant_id
-gene_fusion_variant	gene1
-gene_fusion_variant	gene2
-gene_fusion_variant	oncomine_variant_class
-gene_fusion_variant	show_node
-gene_fusion_variant	variant_id
-ihc_assay_report	ihc_assay_id
-ihc_assay_report	ihc_test_gene
-ihc_assay_report	ihc_test_result
-ihc_assay_report	show_node
-indel_variant	alternative
-indel_variant	amino_acid_change
-indel_variant	chromosome
-indel_variant	exon
-indel_variant	external_variant_id
-indel_variant	gene
-indel_variant	genomic_hgvs
-indel_variant	oncomine_variant_class
-indel_variant	position
-indel_variant	reference
-indel_variant	show_node
-indel_variant	transcript_hgvs
-indel_variant	transcript_id
-indel_variant	variant_classification
-indel_variant	variant_id
-metastatic_site	met_site_id
-metastatic_site	metastatic_site_name
-metastatic_site	show_node
-nucleic_acid	aliquot_id
-nucleic_acid	molecular_sequence_number
-nucleic_acid	nucleic_acid_concentration
-nucleic_acid	nucleic_acid_type
-nucleic_acid	nucleic_acid_volume
-nucleic_acid	show_node
-sequencing_assay	experimental_method
-sequencing_assay	platform
-sequencing_assay	qc_result
-sequencing_assay	sequencing_assay_id
-sequencing_assay	show_node
-snv_variant	alternative
-snv_variant	amino_acid_change
-snv_variant	chromosome
-snv_variant	exon
-snv_variant	external_variant_id
-snv_variant	gene
-snv_variant	genomic_hgvs
-snv_variant	oncomine_variant_class
-snv_variant	position
-snv_variant	reference
-snv_variant	show_node
-snv_variant	transcript_hgvs
-snv_variant	transcript_id
-snv_variant	variant_classification
-snv_variant	variant_id
-specimen	biopsy_sequence_number
-specimen	show_node
-specimen	specimen_id
-specimen	specimen_type
-variant_report	analysis_id
-variant_report	cellularity
-variant_report	mapd
-variant_report	reference_genome
-variant_report	show_node
-variant_report	torrent_variant_caller_version
-variant_report	variant_report_id
+node	property	value_or_TYPE
+arm	arm_drug	STRING
+arm	arm_id	A
+arm	arm_id	B
+arm	arm_id	C1
+arm	arm_id	C2
+arm	arm_id	E
+arm	arm_id	F
+arm	arm_id	G
+arm	arm_id	H
+arm	arm_id	I
+arm	arm_id	J
+arm	arm_id	K1
+arm	arm_id	K2
+arm	arm_id	L
+arm	arm_id	M
+arm	arm_id	N
+arm	arm_id	P
+arm	arm_id	Q
+arm	arm_id	R
+arm	arm_id	S1
+arm	arm_id	S2
+arm	arm_id	T
+arm	arm_id	U
+arm	arm_id	V
+arm	arm_id	W
+arm	arm_id	X
+arm	arm_id	Y
+arm	arm_id	Z1A
+arm	arm_id	Z1B
+arm	arm_id	Z1C
+arm	arm_id	Z1D
+arm	arm_id	Z1E
+arm	arm_id	Z1F
+arm	arm_id	Z1G
+arm	arm_id	Z1H
+arm	arm_id	Z1I
+arm	arm_id	Z1J
+arm	arm_id	Z1K
+arm	arm_id	Z1L
+arm	arm_id	Z1M
+arm	arm_target	STRING
+arm	pubmed_id	STRING
+arm	show_node	BOOLEAN
+assignment_report	analysis_id	STRING
+assignment_report	assignment_logic	STRING
+assignment_report	assignment_outcome	COMPASSIONATE_CARE
+assignment_report	assignment_outcome	FORMERLY_ON_ARM_DECEASED
+assignment_report	assignment_outcome	FORMERLY_ON_ARM_OFF_TRIAL
+assignment_report	assignment_outcome	FORMERLY_ON_ARM_PROGRESSED
+assignment_report	assignment_outcome	NOT_ELIGIBLE
+assignment_report	assignment_outcome	OFF_TRIAL
+assignment_report	assignment_outcome	OFF_TRIAL_DECEASED
+assignment_report	assignment_outcome	OFF_TRIAL_NOT_CONSENTED
+assignment_report	assignment_outcome	OFF_TRIAL_NO_TA_AVAILABLE
+assignment_report	assignment_outcome	ON_TREATMENT_ARM
+assignment_report	assignment_outcome	PENDING_APPROVAL
+assignment_report	assignment_outcome	PENDING_CONFIRMATION
+assignment_report	assignment_report_id	STRING
+assignment_report	show_node	BOOLEAN
+assignment_report	step_at_assignment	INTEGER
+assignment_report	treatment_outcome	Complete response
+assignment_report	treatment_outcome	Not evaluable
+assignment_report	treatment_outcome	Partial response
+assignment_report	treatment_outcome	Progressive disease
+assignment_report	treatment_outcome	Stable disease
+case	case_id	STRING
+case	ctep_category	STRING
+case	ctep_subcategory	STRING
+case	current_step	INTEGER
+case	disease	STRING
+case	ecog_performance_status	INTEGER
+case	ethnicity	HISPANIC_OR_LATINO
+case	ethnicity	NOT_HISPANIC_OR_LATINO
+case	ethnicity	UNKNOWN
+case	extent_of_disease	Locally advanced
+case	extent_of_disease	Metastatic
+case	extent_of_disease	Recurrent
+case	gender	FEMALE
+case	gender	MALE
+case	gender	UNKNOWN
+case	meddra_code	STRING
+case	patient_status	COMPASSIONATE_CARE
+case	patient_status	OFF_TRIAL
+case	patient_status	OFF_TRIAL_BIOPSY_EXPIRED
+case	patient_status	OFF_TRIAL_DECEASED
+case	patient_status	OFF_TRIAL_NOT_CONSENTED
+case	patient_status	OFF_TRIAL_NO_TA_AVAILABLE
+case	patient_status	OFF_TRIAL_REGISTRATION_ERROR
+case	patient_status	ON_TREATMENT_ARM
+case	patient_status	PENDING_APPROVAL
+case	patient_status	PENDING_CONFIRMATION
+case	patient_status	PTEN_ORDER_REQUESTED
+case	patient_status	REGISTRATION
+case	patient_status	REGISTRATION_OUTSIDE_ASSAY
+case	prior_drugs	STRING
+case	race	AMERICAN_INDIAN_OR_ALASKA_NATIVE
+case	race	ASIAN
+case	race	BLACK_OR_AFRICAN_AMERICAN
+case	race	NATIVE_HAWAIIAN_OR_OTHER_PACIFIC_ISLANDER
+case	race	NOT_REPORTED
+case	race	UNKNOWN
+case	race	WHITE
+case	show_node	BOOLEAN
+case	source_id	STRING
+clinical_trial	clinical_trial_description	STRING
+clinical_trial	clinical_trial_designation	STRING
+clinical_trial	clinical_trial_id	STRING
+clinical_trial	clinical_trial_long_name	STRING
+clinical_trial	clinical_trial_short_name	STRING
+clinical_trial	clinical_trial_type	STRING
+clinical_trial	lead_organization	STRING
+clinical_trial	principal_investigators	STRING
+clinical_trial	show_node	BOOLEAN
+copy_number_variant	chromosome	chr1
+copy_number_variant	chromosome	chr10
+copy_number_variant	chromosome	chr11
+copy_number_variant	chromosome	chr12
+copy_number_variant	chromosome	chr13
+copy_number_variant	chromosome	chr14
+copy_number_variant	chromosome	chr15
+copy_number_variant	chromosome	chr16
+copy_number_variant	chromosome	chr17
+copy_number_variant	chromosome	chr18
+copy_number_variant	chromosome	chr19
+copy_number_variant	chromosome	chr2
+copy_number_variant	chromosome	chr20
+copy_number_variant	chromosome	chr21
+copy_number_variant	chromosome	chr22
+copy_number_variant	chromosome	chr3
+copy_number_variant	chromosome	chr4
+copy_number_variant	chromosome	chr5
+copy_number_variant	chromosome	chr6
+copy_number_variant	chromosome	chr7
+copy_number_variant	chromosome	chr8
+copy_number_variant	chromosome	chr9
+copy_number_variant	chromosome	chrX
+copy_number_variant	chromosome	chrY
+copy_number_variant	external_variant_id	STRING
+copy_number_variant	gene	STRING
+copy_number_variant	oncomine_variant_class	Amplification
+copy_number_variant	oncomine_variant_class	Deleterious
+copy_number_variant	oncomine_variant_class	Deletion
+copy_number_variant	oncomine_variant_class	Fusion
+copy_number_variant	oncomine_variant_class	Hotspot
+copy_number_variant	show_node	BOOLEAN
+copy_number_variant	tumor_suppressor	BOOLEAN
+copy_number_variant	variant_id	STRING
+delins_variant	alternative	STRING
+delins_variant	amino_acid_change	STRING
+delins_variant	chromosome	chr1
+delins_variant	chromosome	chr10
+delins_variant	chromosome	chr11
+delins_variant	chromosome	chr12
+delins_variant	chromosome	chr13
+delins_variant	chromosome	chr14
+delins_variant	chromosome	chr15
+delins_variant	chromosome	chr16
+delins_variant	chromosome	chr17
+delins_variant	chromosome	chr18
+delins_variant	chromosome	chr19
+delins_variant	chromosome	chr2
+delins_variant	chromosome	chr20
+delins_variant	chromosome	chr21
+delins_variant	chromosome	chr22
+delins_variant	chromosome	chr3
+delins_variant	chromosome	chr4
+delins_variant	chromosome	chr5
+delins_variant	chromosome	chr6
+delins_variant	chromosome	chr7
+delins_variant	chromosome	chr8
+delins_variant	chromosome	chr9
+delins_variant	chromosome	chrX
+delins_variant	chromosome	chrY
+delins_variant	exon	INTEGER
+delins_variant	external_variant_id	STRING
+delins_variant	gene	STRING
+delins_variant	genomic_hgvs	STRING
+delins_variant	oncomine_variant_class	Amplification
+delins_variant	oncomine_variant_class	Deleterious
+delins_variant	oncomine_variant_class	Deletion
+delins_variant	oncomine_variant_class	Fusion
+delins_variant	oncomine_variant_class	Hotspot
+delins_variant	position	INTEGER
+delins_variant	reference	STRING
+delins_variant	show_node	BOOLEAN
+delins_variant	transcript_hgvs	STRING
+delins_variant	transcript_id	STRING
+delins_variant	variant_classification	STRING
+delins_variant	variant_id	STRING
+file	file_description	STRING
+file	file_format	STRING
+file	file_location	STRING
+file	file_name	STRING
+file	file_size	NUMBER
+file	file_status	error
+file	file_status	invalid
+file	file_status	live
+file	file_status	md5summed
+file	file_status	md5summing
+file	file_status	redacted
+file	file_status	released
+file	file_status	submitted
+file	file_status	suppressed
+file	file_status	uploaded
+file	file_status	uploading
+file	file_status	validated
+file	file_status	validating
+file	file_type	Aligned DNA reads file
+file	file_type	Aligned RNA reads file
+file	file_type	Index file
+file	file_type	Raw reads file
+file	file_type	Variants file
+file	md5sum	STRING
+file	show_node	BOOLEAN
+file	uuid	STRING
+gene_fusion_variant	external_variant_id	STRING
+gene_fusion_variant	gene1	STRING
+gene_fusion_variant	gene2	STRING
+gene_fusion_variant	oncomine_variant_class	Amplification
+gene_fusion_variant	oncomine_variant_class	Deleterious
+gene_fusion_variant	oncomine_variant_class	Deletion
+gene_fusion_variant	oncomine_variant_class	Fusion
+gene_fusion_variant	oncomine_variant_class	Hotspot
+gene_fusion_variant	show_node	BOOLEAN
+gene_fusion_variant	variant_id	STRING
+ihc_assay_report	ihc_assay_id	STRING
+ihc_assay_report	ihc_test_gene	MLH1
+ihc_assay_report	ihc_test_gene	MSH2
+ihc_assay_report	ihc_test_gene	PTEN
+ihc_assay_report	ihc_test_gene	RB
+ihc_assay_report	ihc_test_result	EXPRESSED
+ihc_assay_report	ihc_test_result	INDETERMINATE
+ihc_assay_report	ihc_test_result	LOST
+ihc_assay_report	ihc_test_result	UNKNOWN
+ihc_assay_report	show_node	BOOLEAN
+indel_variant	alternative	STRING
+indel_variant	amino_acid_change	STRING
+indel_variant	chromosome	chr1
+indel_variant	chromosome	chr10
+indel_variant	chromosome	chr11
+indel_variant	chromosome	chr12
+indel_variant	chromosome	chr13
+indel_variant	chromosome	chr14
+indel_variant	chromosome	chr15
+indel_variant	chromosome	chr16
+indel_variant	chromosome	chr17
+indel_variant	chromosome	chr18
+indel_variant	chromosome	chr19
+indel_variant	chromosome	chr2
+indel_variant	chromosome	chr20
+indel_variant	chromosome	chr21
+indel_variant	chromosome	chr22
+indel_variant	chromosome	chr3
+indel_variant	chromosome	chr4
+indel_variant	chromosome	chr5
+indel_variant	chromosome	chr6
+indel_variant	chromosome	chr7
+indel_variant	chromosome	chr8
+indel_variant	chromosome	chr9
+indel_variant	chromosome	chrX
+indel_variant	chromosome	chrY
+indel_variant	exon	INTEGER
+indel_variant	external_variant_id	STRING
+indel_variant	gene	STRING
+indel_variant	genomic_hgvs	STRING
+indel_variant	oncomine_variant_class	Amplification
+indel_variant	oncomine_variant_class	Deleterious
+indel_variant	oncomine_variant_class	Deletion
+indel_variant	oncomine_variant_class	Fusion
+indel_variant	oncomine_variant_class	Hotspot
+indel_variant	position	INTEGER
+indel_variant	reference	STRING
+indel_variant	show_node	BOOLEAN
+indel_variant	transcript_hgvs	STRING
+indel_variant	transcript_id	STRING
+indel_variant	variant_classification	STRING
+indel_variant	variant_id	STRING
+metastatic_site	met_site_id	STRING
+metastatic_site	metastatic_site_name	Adrenals
+metastatic_site	metastatic_site_name	Bone
+metastatic_site	metastatic_site_name	Bone Marrow
+metastatic_site	metastatic_site_name	CNS-Brain
+metastatic_site	metastatic_site_name	CNS-Leptom
+metastatic_site	metastatic_site_name	Conjunctiva
+metastatic_site	metastatic_site_name	Epidural
+metastatic_site	metastatic_site_name	Kidney
+metastatic_site	metastatic_site_name	Large intestine
+metastatic_site	metastatic_site_name	Liver
+metastatic_site	metastatic_site_name	Lung
+metastatic_site	metastatic_site_name	Lymph Nodes
+metastatic_site	metastatic_site_name	Orbit
+metastatic_site	metastatic_site_name	Other
+metastatic_site	metastatic_site_name	Parotid
+metastatic_site	metastatic_site_name	Pericardium
+metastatic_site	metastatic_site_name	Pleura
+metastatic_site	metastatic_site_name	Skin
+metastatic_site	metastatic_site_name	Small intestine
+metastatic_site	metastatic_site_name	Stomach
+metastatic_site	metastatic_site_name	Submandibular
+metastatic_site	metastatic_site_name	Testicle
+metastatic_site	show_node	BOOLEAN
+nucleic_acid	aliquot_id	STRING
+nucleic_acid	molecular_sequence_number	STRING
+nucleic_acid	nucleic_acid_concentration	NUMBER
+nucleic_acid	nucleic_acid_type	DNA
+nucleic_acid	nucleic_acid_type	Pooled DNA/cDNA
+nucleic_acid	nucleic_acid_type	RNA
+nucleic_acid	nucleic_acid_type	Unknown
+nucleic_acid	nucleic_acid_volume	NUMBER
+nucleic_acid	show_node	BOOLEAN
+sequencing_assay	experimental_method	STRING
+sequencing_assay	platform	STRING
+sequencing_assay	qc_result	STRING
+sequencing_assay	sequencing_assay_id	STRING
+sequencing_assay	show_node	BOOLEAN
+snv_variant	alternative	STRING
+snv_variant	amino_acid_change	STRING
+snv_variant	chromosome	chr1
+snv_variant	chromosome	chr10
+snv_variant	chromosome	chr11
+snv_variant	chromosome	chr12
+snv_variant	chromosome	chr13
+snv_variant	chromosome	chr14
+snv_variant	chromosome	chr15
+snv_variant	chromosome	chr16
+snv_variant	chromosome	chr17
+snv_variant	chromosome	chr18
+snv_variant	chromosome	chr19
+snv_variant	chromosome	chr2
+snv_variant	chromosome	chr20
+snv_variant	chromosome	chr21
+snv_variant	chromosome	chr22
+snv_variant	chromosome	chr3
+snv_variant	chromosome	chr4
+snv_variant	chromosome	chr5
+snv_variant	chromosome	chr6
+snv_variant	chromosome	chr7
+snv_variant	chromosome	chr8
+snv_variant	chromosome	chr9
+snv_variant	chromosome	chrX
+snv_variant	chromosome	chrY
+snv_variant	exon	INTEGER
+snv_variant	external_variant_id	STRING
+snv_variant	gene	STRING
+snv_variant	genomic_hgvs	STRING
+snv_variant	oncomine_variant_class	Amplification
+snv_variant	oncomine_variant_class	Deleterious
+snv_variant	oncomine_variant_class	Deletion
+snv_variant	oncomine_variant_class	Fusion
+snv_variant	oncomine_variant_class	Hotspot
+snv_variant	position	INTEGER
+snv_variant	reference	STRING
+snv_variant	show_node	BOOLEAN
+snv_variant	transcript_hgvs	STRING
+snv_variant	transcript_id	STRING
+snv_variant	variant_classification	STRING
+snv_variant	variant_id	STRING
+specimen	biopsy_sequence_number	STRING
+specimen	show_node	BOOLEAN
+specimen	specimen_id	STRING
+specimen	specimen_type	Normal
+specimen	specimen_type	Tumor
+specimen	specimen_type	Unknown
+variant_report	analysis_id	STRING
+variant_report	cellularity	NUMBER
+variant_report	mapd	NUMBER
+variant_report	reference_genome	STRING
+variant_report	show_node	BOOLEAN
+variant_report	torrent_variant_caller_version	STRING
+variant_report	variant_report_id	STRING
+
+relationship	source_node	destination_node	property	value_or_TYPE
+copy_number_variant_of	copy_number_variant	variant_report	copy_number	NUMBER
+copy_number_variant_of	copy_number_variant	variant_report	copy_number_ci_5	NUMBER
+copy_number_variant_of	copy_number_variant	variant_report	copy_number_ci_95	NUMBER
+delins_variant_of	delins_variant	variant_report	allele_frequency	NUMBER
+gene_fusion_variant_of	gene_fusion_variant	variant_report	gene1_read_count	INTEGER
+gene_fusion_variant_of	gene_fusion_variant	variant_report	gene2_read_count	INTEGER
+indel_variant_of	indel_variant	variant_report	allele_frequency	NUMBER
+met_site_of	metastatic_site	case	NA	NA
+of_arm	assignment_report	arm	NA	NA
+of_arm	case	arm	NA	NA
+of_case	specimen	case	NA	NA
+of_nucleic_acid	sequencing_assay	nucleic_acid	NA	NA
+of_sequencing_assay	file	sequencing_assay	NA	NA
+of_sequencing_assay	variant_report	sequencing_assay	NA	NA
+of_specimen	assignment_report	specimen	NA	NA
+of_specimen	nucleic_acid	specimen	NA	NA
+of_specimen	ihc_assay_report	specimen	NA	NA
+of_trial	arm	clinical_trial	NA	NA
+of_variant_report	assignment_report	variant_report	NA	NA
+snv_variant_of	snv_variant	variant_report	allele_frequency	NUMBER
