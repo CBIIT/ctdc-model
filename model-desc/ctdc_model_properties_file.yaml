@@ -15,7 +15,7 @@ PropDefinitions:
     Private: false
 #property of case
   source_id:
-    Desc: A unique identifier assigned by source project
+    Desc: A unique identifier assigned to each patient by source project
     Src: patientSequenceNumber
     Type: string
     Req: false
@@ -119,8 +119,7 @@ PropDefinitions:
     Private: false
 #property of case
   extent_of_disease:
-
-    Desc: Extent of disease at study entry.
+    Desc: Extent of disease at study entry. Source is ECOG-ACRIN.
     Src: (ECOG-ACRIN) extnt_dz
     Type:
       - Locally advanced
@@ -130,7 +129,7 @@ PropDefinitions:
     Private: false
 #property of case
   ecog_performance_status:
-    Desc: ECOG Performance Status at study entry (integer values 0 to 5 – only 0 and 1 are eligible). 
+    Desc: ECOG Performance Status at study entry (integer values 0 to 5 – only 0 and 1 are eligible for NCI-MATCH). Source is ECOG-ACRIN.
     Src: (ECOG-ACRIN) ps
     Type: integer
     Req: false
@@ -146,7 +145,7 @@ PropDefinitions:
     Private: false
 #property of specimen
   biopsy_sequence_number:
-    Desc: A unique identifier assigned to the tumor biopsy assigned by source project.
+    Desc: A unique identifier assigned to the patient biopsy assigned by submitting project.
     Src: biopsySequenceNumber
     Type: string
     Req: true
@@ -170,7 +169,7 @@ PropDefinitions:
     Private: false
 #property of metastatic_site
   metastatic_site_name:
-    Desc: Metastatic site at study entry. 
+    Desc: Metastatic site at study entry. Source is ECOG-ACRIN.
     Src: (ECOG-ACRIN) met_(site_name)
     Type:
       - Bone Marrow
@@ -199,14 +198,14 @@ PropDefinitions:
     Private: false
 #property of nucleic_acid
   aliquot_id:
-    Desc: A unique identifer assigned to an aliquot of nucleic acid, prepared from a patient's tumor biopsy, by CTDC.
+    Desc: A unique identifier assigned to an aliquot of nucleic acid, prepared from a patient's biopsy, by CTDC.
     Src: NA
     Type: string
     Req: true
     Private: false
 #property of nucleic_acid
   molecular_sequence_number:
-    Desc: A unique identifer assigned to an aliquot of nucleic acid, prepared from a patient's tumor biopsy, by the source project.
+    Desc: A unique identifier assigned to an aliquot of nucleic acid, prepared from a patient's  biopsy, by the submitting project.
     Src: molecularSequenceNumber
     Type: string
     Req: true
@@ -403,7 +402,8 @@ PropDefinitions:
       - Raw reads file
       - Aligned DNA reads file
       - Aligned RNA reads file
-      - Index file
+      - RNA Index file
+      - DNA Index file
       - Variants file
     Req: true
     Private: false
@@ -614,7 +614,7 @@ PropDefinitions:
     Private: false
 #property of assignment_report
   treatment_outcome:
-    Desc: Best Confirmed Response.
+    Desc: Best Confirmed Response. Source is  ECOG-ACRIN.
     Src: (ECOG)best_conf_resp
     Type:
       - Complete response
