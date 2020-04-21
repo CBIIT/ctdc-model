@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/ctdc-model.git
-commit 60fb6bd
+commit e47c6bf
 node	property	value_or_TYPE
 arm	arm_drug	STRING
 arm	arm_id	A
@@ -210,7 +210,8 @@ file	file_status	validated
 file	file_status	validating
 file	file_type	Aligned DNA reads file
 file	file_type	Aligned RNA reads file
-file	file_type	Index file
+file	file_type	DNA Index file
+file	file_type	RNA Index file
 file	file_type	Raw reads file
 file	file_type	Variants file
 file	md5sum	STRING
@@ -381,12 +382,12 @@ gene_fusion_variant_of	gene_fusion_variant	variant_report	gene1_read_count	INTEG
 gene_fusion_variant_of	gene_fusion_variant	variant_report	gene2_read_count	INTEGER
 indel_variant_of	indel_variant	variant_report	allele_frequency	NUMBER
 met_site_of	metastatic_site	case	NA	NA
-of_arm	case	arm	NA	NA
 of_arm	assignment_report	arm	NA	NA
+of_arm	case	arm	NA	NA
 of_case	specimen	case	NA	NA
 of_nucleic_acid	sequencing_assay	nucleic_acid	NA	NA
-of_sequencing_assay	file	sequencing_assay	NA	NA
 of_sequencing_assay	variant_report	sequencing_assay	NA	NA
+of_sequencing_assay	file	sequencing_assay	NA	NA
 of_specimen	nucleic_acid	specimen	NA	NA
 of_specimen	assignment_report	specimen	NA	NA
 of_specimen	ihc_assay_report	specimen	NA	NA
