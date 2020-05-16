@@ -9,22 +9,21 @@ language: python
 services:
   - docker
 python:
-  - '3.7'
 branches:
   only:
     - master
 before_install:
   - docker pull maj1/icdc:model-tool-perl
   - sudo apt-get install sed
-  #
 install:
-  - pip install -r bento-mdf/validators/mdf-validate/reqs.txt
-script:
+  - pip install bento-mdf/validators/mdf-validate
+before_script:
   - pushd model-desc
-  - pytest
-  # run model-tool with pre-built perl - fast
+  - test-mdf.py ctdc_model_file.yaml ctdc_model_properties_file.yaml
+script:
   - cp -aR ../bento-mdf/drivers/Perl/make-model/lib lib
   - cp -aR ../bento-mdf/drivers/Perl/make-model/bin bin
+  # run model-tool with pre-built perl - fast
   - docker run --rm -it -v "$PWD":/home/user -w /home/user maj1/icdc:model-tool-perl -Ilib bin/model-tool -g update-model.svg -T update-model.txt ctdc_model_file.yaml ctdc_model_properties_file.yaml
   - echo repo $(git remote get-url origin) > update-info.txt
   # second to last commit is ours, last commit is travis'
@@ -35,7 +34,7 @@ script:
   - cp ctdc_model_file.yaml ctdc_model_properties_file.yaml ../docs/model-desc
   - cp update-model.txt ../docs/model-desc/ctdc-model.txt
   - sed -e '1,6d' update-model.svg > ../docs/model-desc/ctdc-model.svg
-  - rm -f update-model.svg update-model.txt update-info.txt x.txt
+  - rm -f update-model.svg update-info.txt x.txt update-model.txt
   - pushd ../docs
   - cat ./README.md.content > ./README.md
   - echo "<div id='graph' style='display:off;'>" >> ./README.md

@@ -4,7 +4,14 @@
 <script type="text/javascript"  src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
 <script type="text/javascript" src="assets/actions.js"></script>
 
-# Clinical Trials Data Commons data model
+[![Build Status](https://travis-ci.org/CBIIT/ctdc-model.svg?branch=master)](https://travis-ci.org/CBIIT/ctdc-model)
+
+# Clinical Trial Data Commons Data Model
+
+[View model on GitHub Pages](https://cbiit.github.io/ctdc-model/)
+
+
+
 
 Zoom to Node: <select id="node_select">
   <option value="">Zoom to Node</option>
@@ -15,5 +22,3 @@ Zoom to Node: <select id="node_select">
 <a href="./model-desc/ctdc-model.svg">SVG file (in view above)</a>
 <p>
 <a href="./model-desc">Additional model files</a>
-
-
