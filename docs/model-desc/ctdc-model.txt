@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/ctdc-model.git
-commit d7bf97f
+commit a619450
 node	property	value_or_TYPE
 arm	arm_drug	STRING
 arm	arm_id	A
@@ -382,15 +382,104 @@ gene_fusion_variant_of	gene_fusion_variant	variant_report	gene1_read_count	INTEG
 gene_fusion_variant_of	gene_fusion_variant	variant_report	gene2_read_count	INTEGER
 indel_variant_of	indel_variant	variant_report	allele_frequency	NUMBER
 met_site_of	metastatic_site	case	NA	NA
-of_arm	assignment_report	arm	NA	NA
 of_arm	case	arm	NA	NA
+of_arm	assignment_report	arm	NA	NA
 of_case	specimen	case	NA	NA
 of_nucleic_acid	sequencing_assay	nucleic_acid	NA	NA
-of_sequencing_assay	variant_report	sequencing_assay	NA	NA
 of_sequencing_assay	file	sequencing_assay	NA	NA
-of_specimen	ihc_assay_report	specimen	NA	NA
+of_sequencing_assay	variant_report	sequencing_assay	NA	NA
 of_specimen	assignment_report	specimen	NA	NA
+of_specimen	ihc_assay_report	specimen	NA	NA
 of_specimen	nucleic_acid	specimen	NA	NA
 of_trial	arm	clinical_trial	NA	NA
 of_variant_report	assignment_report	variant_report	NA	NA
 snv_variant_of	snv_variant	variant_report	allele_frequency	NUMBER
+
+property	description
+aliquot_id	A unique identifier assigned to an aliquot of nucleic acid, prepared from a patient's biopsy, by CTDC.
+allele_frequency	Frequency of alternative nucleotide as determined by number of reads carrying alternative nucleotide as a fraction of total number of reads mapping to variant position.
+alternative	Alternative nucelotide identified at variant position.
+amino_acid_change	The amino acid change resulting from the nucleotide-level change.
+analysis_id	A unique identifier assigned to each variant report by source project.
+arm_drug	The therapeutic agent being tested against the target genomic aberrations.
+arm_id	A unique identifier assigned to a study arm.
+arm_target	A concise description of genomic aberrations being targeted by study arm.
+assignment_logic	The rationale for assigning treatment arm.
+assignment_outcome	A status describing outcome of assigning patient to treatment arm.
+assignment_report_id	A unique identifier assigned to each assignment report by CTDC.
+biopsy_sequence_number	A unique identifier assigned to the patient biopsy assigned by submitting project.
+case_id	A unique numerical identifier assigned to each patient by CTDC.
+cellularity	The fraction of biopsy specimen estimated to be comprised of tumor cells.
+chromosome	The chromosome that encodes variant gene.
+clinical_trial_description	A brief description of clinical study.
+clinical_trial_designation	A concise name for clinical study eg. MATCH
+clinical_trial_id	The Trial ID assigned to trial by ClinicalTrials.gov.
+clinical_trial_long_name	The complete name of the clinical trial, eg. Targeted Therapy Directed by Genetic Testing in Treating Patients with Advanced Refractory Solid Tumors, Lymphomas, or Multiple Myeloma (The MATCH Screening Trial).
+clinical_trial_short_name	An abbreviated title of the clinical trial eg. Molecular Analysis for Therapy Choice
+clinical_trial_type	Clinical trial type
+copy_number	The estimated number of copies for the copy number variant gene.
+copy_number_ci_5	The lower limit of the 95% confidence interval for the estimated copy number.
+copy_number_ci_95	The upper limit of the 95% confidence interval for the estimated copy number.
+ctep_category	The patient's disease diagnosis described according to the CTEP Simplified Disease Classification.
+ctep_subcategory	A more granular mapping of the patient's disease diagnosis to the CTEP Simplified Disease Classification.
+current_step	The MATCH workflow is divided broadly into steps. Step 0 starts with patient registration and ends with the the sign-out of the first assignment report. If the patient is assigned to a treatment arm s/he moves to step 1. If patient progresses during treatment, s/he is assigned to step 2. Current step denotes the step in the workflow the patient is currently at.
+disease	Disease condition diagnosed in study patient.
+ecog_performance_status	ECOG Performance Status at study entry (integer values 0 to 5 – only 0 and 1 are eligible for NCI-MATCH). Source is ECOG-ACRIN.
+ethnicity	Ethnicity of patient
+exon	The exon that encodes the variant nucleotide position.
+experimental_method	The method or protocol used to perform the sequencing assay. Possible values include-  Targeted NGS (sequencing of selected regions of the genome either via targeted capture or amplification); WGS (whole genome sequencing); WXS (whole exome sequencing); RNA-seq  (transcriptome sequencing); miRNA-Seq (microRNA sequencing); ncRNA-Seq (sequencing of non-coding RNA); ssRNA-seq (strand-specific RNA sequencing); ATAC-seq (assay for Transposase-Accessible Chromatin (ATAC) strategy is used to study genome-wide chromatin accessibility); ChIP-Seq (chromatin ImmunoPrecipitation, reveals binding sites of specific proteins, typically transcription factors using antibodies to extract DNA fragments bound to the target protein); DNase-Hypersensitivity (sequencing of hypersensitive sites, or segments of open chromatin that are more readily cleaved by DNaseI); Bisulfite-Seq (sequencing following treatment of DNA with bisulfite to convert cytosine residues to uracil); ChIA-PET (Direct sequencing of proximity-ligated chromatin immunoprecipitates).
+extent_of_disease	Extent of disease at study entry. Source is ECOG-ACRIN.
+external_variant_id	The COSMIC ID of variant, if available, or another source project assigned ID.
+file_description	Optional description of the file and its content.
+file_format	The specific format of the file as derived by the loader.
+file_location	S3 bucket location of file in CTDC.
+file_name	File name as assigned by parent project.
+file_size	Size of the file as derived by the loader.
+file_status	Enumerated representation of the status of files.
+file_type	Indicator as to the nature of the file in terms of its content.
+gender	Gender of patient
+gene	Gene symbol of gene that has been identified as having a variant number of copies.
+gene1	Gene symbol of upstream partner of a fusion variant.
+gene1_read_count	Number of reads mapping to the upstream gene partner.
+gene2	Gene symbol of downstream partner of a fusion variant.
+gene2_read_count	Number of reads mapping to the downstream gene partner.
+genomic_hgvs	The genomic change annotated in the HGVS format.
+ihc_assay_id	A unique identifier assigned to each IHC assay report by CTDC.
+ihc_test_gene	Gene symbol of gene being assayed for expression by an immunohistochemistry (IHC) test.
+ihc_test_result	The result of the IHC test performed on gene.
+lead_organization	Lead Organization
+mapd	Median Absolute Percentage Deviation (MAPD) is a measure of the accuracy of the copy number calls made by the copy number variant pipeline.
+md5sum	Md5 checksum.
+meddra_code	MedDRA code that is assigned to patient's disease diagnosis and that maps to the CTEP subcategory.
+met_site_id	A unique identifier assigned to a metastatic site  by CTDC.
+metastatic_site_name	Metastatic site at study entry. Source is ECOG-ACRIN.
+molecular_sequence_number	A unique identifier assigned to an aliquot of nucleic acid, prepared from a patient's  biopsy, by the submitting project.
+nucleic_acid_concentration	Nucleic acid concentration of aliquot expressed in nanograms per microliter.
+nucleic_acid_type	Nucleic acid type of extract.
+nucleic_acid_volume	Aliquot volume expressed as microliters.
+oncomine_variant_class	Variant classification label assigned by the variant calling workflow of the Ion Reporter Software.
+patient_status	Status of patient within the MATCH workflow
+platform	The technology platform used to perform the sequencing assay.
+position	The chromosomal location of nucleotide variant on the positive strand.
+principal_investigators	Principal Investigators
+prior_drugs	A list of drugs prescribed to patient prior to study registration.
+pubmed_id	PubMed ID of the primary publication associated with study arm.
+qc_result	Sequencing QC result.
+race	Race of patient
+reference	Reference allele at variant position.
+reference_genome	The reference assembly (Hg19, GRCh37, GRCh38) used to align reads from sequencing assay.
+sequencing_assay_id	A unique identifier assigned to each MATCH sequencing assay report by CTDC.
+show_node	A settable node property that flags a node, and its children as queryable.
+source_id	A unique identifier assigned to each patient by source project
+specimen_id	A unique identifier assigned to each MATCH specimen by CTDC.
+specimen_type	Biopsy type.
+step_at_assignment	The step in the MATCH workflow at which patient has been assigned to treatment arm.
+torrent_variant_caller_version	The version of the variant calling pipeline from Ion Torrent that was used to identify variants in variant report.
+transcript_hgvs	The transcript level change annotated in the HGVS format.
+transcript_id	NCBI Identifier of the transcript isoform chosen for reporting the variant.
+treatment_outcome	Best Confirmed Response. Source is  ECOG-ACRIN.
+tumor_suppressor	A flag that indicates if variant gene is a tumor suppressor.
+uuid	A unique id assigned by CTDC.
+variant_classification	Variant classification based on the effect of genomic change.
+variant_id	A unique identifier assigned to each variant by CTDC.
+variant_report_id	A unique identifier assigned to each variant report by CTDC.
