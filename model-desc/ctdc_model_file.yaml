@@ -259,3 +259,9 @@ Relationships:
       - Src: metastatic_site
         Dst: case
     Props: null
+  of_arm:
+    Mul: many_to_one
+    Ends:
+      - Src: file
+        Dst: arm
+    Props: null

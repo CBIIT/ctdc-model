@@ -405,6 +405,7 @@ PropDefinitions:
       - RNA Index file
       - DNA Index file
       - Variants file
+      - Assignment report
     Req: true
     Private: false
 #property of file
