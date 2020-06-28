@@ -10,20 +10,14 @@ PropDefinitions:
   case_id:
     Desc: A unique numerical identifier assigned to each patient by CTDC.
     Src: NA
-    Type:
-      units:
-       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
-      value_type: string
+    Type: string
     Req: true
     Private: false
 #property of case
   source_id:
     Desc: A unique identifier assigned to each patient by source project
     Src: patientSequenceNumber
-    Type:
-      units:
-       - Will be stored but not displayed. We will display a surrogate ID (denoted as Case ID). Original ID will be stored so that periodic updates from MATCH can be made to case.
-      value_type: string
+    Type: string
     Req: false
     Private: true
 #property of case
@@ -92,10 +86,7 @@ PropDefinitions:
   disease:
     Desc: Disease condition diagnosed in study patient.
     Src: diseases
-    Type:
-      units:
-       - Disease field is being re-encoded by MATCH. We will store and display the new codings that will follow the ICD-O or MONDO standards. Need to specify source controlled vocabulary for disease terms.
-      value_type: string
+    Type: string
     Req: true
     Private: false
 #property of case, disease_eligibility_criterion
@@ -149,20 +140,14 @@ PropDefinitions:
   specimen_id:
     Desc: A unique identifier assigned to each MATCH specimen by CTDC.
     Src: NA
-    Type:
-      units:
-       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
-      value_type: string
+    Type: string
     Req: true
     Private: false
 #property of specimen
   biopsy_sequence_number:
     Desc: A unique identifier assigned to the patient biopsy assigned by submitting project.
     Src: biopsySequenceNumber
-    Type:
-      units:
-       - Will be stored but not displayed. We will display a surrogate ID (Sample ID) instead. Original ID will be stored so that periodic updates can be made to Tumor biopsy information.
-      value_type: string
+    Type: string
     Req: true
     Private: true
 #property of specimen
@@ -179,10 +164,7 @@ PropDefinitions:
   met_site_id:
     Desc: A unique identifier assigned to a metastatic site  by CTDC.
     Src: NA
-    Type:
-      units:
-       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
-      value_type: string
+    Type: string
     Req: true
     Private: false
 #property of metastatic_site
@@ -218,30 +200,21 @@ PropDefinitions:
   aliquot_id:
     Desc: A unique identifier assigned to an aliquot of nucleic acid, prepared from a patient's biopsy, by CTDC.
     Src: NA
-    Type:
-      units:
-       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
-      value_type: string
+    Type: string
     Req: true
     Private: false
 #property of nucleic_acid
   molecular_sequence_number:
     Desc: A unique identifier assigned to an aliquot of nucleic acid, prepared from a patient's  biopsy, by the submitting project.
     Src: molecularSequenceNumber
-    Type:
-      units:
-       - Will be stored but not displayed. We will display a surrogate ID instead. Original ID will be stored so that periodic updates can be made to Nucleic Acid information.
-      value_type: string
+    Type: string
     Req: true
     Private: true
 #property of nucleic_acid
   nucleic_acid_concentration:
     Desc: Nucleic acid concentration of aliquot expressed in nanograms per microliter.
     Src: dnaConcentration
-    Type:
-      units:
-       - Need units from MATCH (ng/ul)
-      value_type: number
+    Type: number
     Req: true
     Private: false
     exclusiveMinimum: 0
@@ -249,10 +222,7 @@ PropDefinitions:
   nucleic_acid_volume:
     Desc: Aliquot volume expressed as microliters.
     Src: dnaVolume
-    Type:
-      units:
-       - Need units from MATCH (ul)
-      value_type: number
+    Type: number
     Req: true
     Private: false
     exclusiveMinimum: 0
@@ -300,20 +270,14 @@ PropDefinitions:
   sequencing_assay_id:
     Desc: A unique identifier assigned to each MATCH sequencing assay report by CTDC.
     Src: NA
-    Type:
-      units:
-       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
-      value_type: string
+    Type: string
     Req: true
     Private: true
 #property of sequencing_assay
   qc_result:
     Desc: Sequencing QC result.
     Src: Generated through API call
-    Type:
-      units:
-       - Oncomine control panel summary will be displayed.
-      value_type: string
+    Type: string
     Req: false
     Private: false
 #property of sequencing_assay
@@ -334,20 +298,14 @@ PropDefinitions:
   variant_report_id:
     Desc: A unique identifier assigned to each variant report by CTDC.
     Src: NA
-    Type:
-      units:
-       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
-      value_type: string
+    Type: string
     Req: true
     Private: false
 #property of variant_report, assignment_report
   analysis_id:
     Desc: A unique identifier assigned to each variant report by source project.
     Src: jobName
-    Type:
-      units:
-       - Will be stored but not displayed. We will display a surrogate ID instead. Original ID will be stored so that periodic updates can be made to Variant Report information.
-      value_type: string
+    Type: string
     Req: true
     Private: true
 #property of variant_report
