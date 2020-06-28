@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/ctdc-model.git
-commit f6b15bf
+commit 46a4fa1
 node	property	value_or_TYPE
 arm	arm_drug	STRING
 arm	arm_id	A
@@ -42,6 +42,7 @@ arm	arm_id	Z1K
 arm	arm_id	Z1L
 arm	arm_id	Z1M
 arm	arm_target	STRING
+arm	arm_title	STRING
 arm	pubmed_id	STRING
 arm	show_node	BOOLEAN
 assignment_report	analysis_id	STRING
@@ -190,6 +191,18 @@ delins_variant	transcript_hgvs	STRING
 delins_variant	transcript_id	STRING
 delins_variant	variant_classification	STRING
 delins_variant	variant_id	STRING
+disease_eligibility_criterion	criterion_type	Exclusion
+disease_eligibility_criterion	criterion_type	Inclusion
+disease_eligibility_criterion	ctep_category	STRING
+disease_eligibility_criterion	ctep_term	STRING
+disease_eligibility_criterion	disease_eligibility_criterion_id	STRING
+disease_eligibility_criterion	meddra_code	STRING
+disease_eligibility_criterion	show_node	BOOLEAN
+drug_eligibility_criterion	criterion_type	Exclusion
+drug_eligibility_criterion	criterion_type	Inclusion
+drug_eligibility_criterion	drug_eligibility_criterion_id	STRING
+drug_eligibility_criterion	drug_name	STRING
+drug_eligibility_criterion	show_node	BOOLEAN
 file	file_description	STRING
 file	file_format	STRING
 file	file_location	STRING
@@ -383,16 +396,18 @@ gene_fusion_variant_of	gene_fusion_variant	variant_report	gene1_read_count	INTEG
 gene_fusion_variant_of	gene_fusion_variant	variant_report	gene2_read_count	INTEGER
 indel_variant_of	indel_variant	variant_report	allele_frequency	NUMBER
 met_site_of	metastatic_site	case	NA	NA
+of_arm	drug_eligibility_criterion	arm	NA	NA
 of_arm	case	arm	NA	NA
-of_arm	assignment_report	arm	NA	NA
+of_arm	disease_eligibility_criterion	arm	NA	NA
 of_arm	file	arm	NA	NA
+of_arm	assignment_report	arm	NA	NA
 of_case	specimen	case	NA	NA
 of_nucleic_acid	sequencing_assay	nucleic_acid	NA	NA
-of_sequencing_assay	variant_report	sequencing_assay	NA	NA
 of_sequencing_assay	file	sequencing_assay	NA	NA
+of_sequencing_assay	variant_report	sequencing_assay	NA	NA
+of_specimen	assignment_report	specimen	NA	NA
 of_specimen	nucleic_acid	specimen	NA	NA
 of_specimen	ihc_assay_report	specimen	NA	NA
-of_specimen	assignment_report	specimen	NA	NA
 of_trial	arm	clinical_trial	NA	NA
 of_variant_report	assignment_report	variant_report	NA	NA
 snv_variant_of	snv_variant	variant_report	allele_frequency	NUMBER
@@ -406,6 +421,7 @@ analysis_id	A unique identifier assigned to each variant report by source projec
 arm_drug	The therapeutic agent being tested against the target genomic aberrations.
 arm_id	A unique identifier assigned to a study arm.
 arm_target	A concise description of genomic aberrations being targeted by study arm.
+arm_title	A short description of the clinical objective of the trial arm.
 assignment_logic	The rationale for assigning treatment arm.
 assignment_outcome	A status describing outcome of assigning patient to treatment arm.
 assignment_report_id	A unique identifier assigned to each assignment report by CTDC.
@@ -422,10 +438,15 @@ clinical_trial_type	Clinical trial type
 copy_number	The estimated number of copies for the copy number variant gene.
 copy_number_ci_5	The lower limit of the 95% confidence interval for the estimated copy number.
 copy_number_ci_95	The upper limit of the 95% confidence interval for the estimated copy number.
-ctep_category	The patient's disease diagnosis described according to the CTEP Simplified Disease Classification.
+criterion_type	The type of eligibility criterion the node represents.
+ctep_category	The disease eligibility criterion as described according to the CTEP Simplified Disease Classification.
 ctep_subcategory	A more granular mapping of the patient's disease diagnosis to the CTEP Simplified Disease Classification.
+ctep_term	A high-level description of disease eligibility criterion, usually based on histology, but excluding concepts such as clinical stage or prior therapy,  that is part of the CTEP Simplified Disease Classification.
 current_step	The MATCH workflow is divided broadly into steps. Step 0 starts with patient registration and ends with the the sign-out of the first assignment report. If the patient is assigned to a treatment arm s/he moves to step 1. If patient progresses during treatment, s/he is assigned to step 2. Current step denotes the step in the workflow the patient is currently at.
 disease	Disease condition diagnosed in study patient.
+disease_eligibility_criterion_id	A unique identifier for the node representing the drug eligibility criterion.
+drug_eligibility_criterion_id	A unique identifier for the node representing the drug eligibility criterion.
+drug_name	The name of the drug that is the eligibility criterion.
 ecog_performance_status	ECOG Performance Status at study entry (integer values 0 to 5 – only 0 and 1 are eligible for NCI-MATCH). Source is ECOG-ACRIN.
 ethnicity	Ethnicity of patient
 exon	The exon that encodes the variant nucleotide position.
@@ -452,7 +473,7 @@ ihc_test_result	The result of the IHC test performed on gene.
 lead_organization	Lead Organization
 mapd	Median Absolute Percentage Deviation (MAPD) is a measure of the accuracy of the copy number calls made by the copy number variant pipeline.
 md5sum	Md5 checksum.
-meddra_code	MedDRA code that is assigned to patient's disease diagnosis and that maps to the CTEP subcategory.
+meddra_code	MedDRA code that is assigned to disease eligibility criterion and that maps to the appropriate CTEP subcategory.
 met_site_id	A unique identifier assigned to a metastatic site  by CTDC.
 metastatic_site_name	Metastatic site at study entry. Source is ECOG-ACRIN.
 molecular_sequence_number	A unique identifier assigned to an aliquot of nucleic acid, prepared from a patient's  biopsy, by the submitting project.
