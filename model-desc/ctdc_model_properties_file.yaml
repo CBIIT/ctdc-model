@@ -1,5 +1,5 @@
 PropDefinitions:
-#property of case, specimen, metastatic_site, nucleic_acid, ihc_assay_report, sequencing_assay, variant_report, file, snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant, assignment_report, arm, clinical_trial
+#property of case, specimen, metastatic_site, nucleic_acid, ihc_assay_report, sequencing_assay, variant_report, file, snv_variant, delins_variant, indel_variant, copy_number_variant, gene_fusion_variant, assignment_report, disease_eligibility_criterion, drug_eligibility_criterion, arm, clinical_trial
   show_node:
     Desc: A settable node property that flags a node, and its children as queryable.
     Src: NA
@@ -10,14 +10,20 @@ PropDefinitions:
   case_id:
     Desc: A unique numerical identifier assigned to each patient by CTDC.
     Src: NA
-    Type: string
+    Type:
+      units:
+       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
+      value_type: string
     Req: true
     Private: false
 #property of case
   source_id:
     Desc: A unique identifier assigned to each patient by source project
     Src: patientSequenceNumber
-    Type: string
+    Type:
+      units:
+       - Will be stored but not displayed. We will display a surrogate ID (denoted as Case ID). Original ID will be stored so that periodic updates from MATCH can be made to case.
+      value_type: string
     Req: false
     Private: true
 #property of case
@@ -25,9 +31,9 @@ PropDefinitions:
     Desc: Gender of patient
     Src: gender
     Type:
-      - MALE
-      - FEMALE
-      - UNKNOWN
+      - "MALE"
+      - "FEMALE"
+      - "UNKNOWN"
     Req: true
     Private: false
 #property of case
@@ -35,13 +41,13 @@ PropDefinitions:
     Desc: Race of patient
     Src: races
     Type:
-      - AMERICAN_INDIAN_OR_ALASKA_NATIVE
-      - ASIAN
-      - BLACK_OR_AFRICAN_AMERICAN
-      - NATIVE_HAWAIIAN_OR_OTHER_PACIFIC_ISLANDER
-      - NOT_REPORTED
-      - UNKNOWN
-      - WHITE
+      - "AMERICAN_INDIAN_OR_ALASKA_NATIVE"
+      - "ASIAN"
+      - "BLACK_OR_AFRICAN_AMERICAN"
+      - "NATIVE_HAWAIIAN_OR_OTHER_PACIFIC_ISLANDER"
+      - "NOT_REPORTED"
+      - "UNKNOWN"
+      - "WHITE"
     Req: true
     Private: false
 #property of case
@@ -49,9 +55,9 @@ PropDefinitions:
     Desc: Ethnicity of patient
     Src: ethnicity
     Type:
-      - HISPANIC_OR_LATINO
-      - NOT_HISPANIC_OR_LATINO
-      - UNKNOWN
+      - "HISPANIC_OR_LATINO"
+      - "NOT_HISPANIC_OR_LATINO"
+      - "UNKNOWN"
     Req: true
     Private: false
 #property of case
@@ -59,19 +65,19 @@ PropDefinitions:
     Desc: Status of patient within the MATCH workflow
     Src: currentPatientStatus
     Type:
-      - COMPASSIONATE_CARE
-      - OFF_TRIAL
-      - OFF_TRIAL_BIOPSY_EXPIRED
-      - OFF_TRIAL_DECEASED
-      - OFF_TRIAL_NOT_CONSENTED
-      - OFF_TRIAL_NO_TA_AVAILABLE
-      - OFF_TRIAL_REGISTRATION_ERROR
-      - ON_TREATMENT_ARM
-      - PENDING_APPROVAL
-      - PENDING_CONFIRMATION
-      - PTEN_ORDER_REQUESTED
-      - REGISTRATION
-      - REGISTRATION_OUTSIDE_ASSAY
+      - "COMPASSIONATE_CARE"
+      - "OFF_TRIAL"
+      - "OFF_TRIAL_BIOPSY_EXPIRED"
+      - "OFF_TRIAL_DECEASED"
+      - "OFF_TRIAL_NOT_CONSENTED"
+      - "OFF_TRIAL_NO_TA_AVAILABLE"
+      - "OFF_TRIAL_REGISTRATION_ERROR"
+      - "ON_TREATMENT_ARM"
+      - "PENDING_APPROVAL"
+      - "PENDING_CONFIRMATION"
+      - "PTEN_ORDER_REQUESTED"
+      - "REGISTRATION"
+      - "REGISTRATION_OUTSIDE_ASSAY"
     Req: true
     Private: false
 #property of case
@@ -86,15 +92,18 @@ PropDefinitions:
   disease:
     Desc: Disease condition diagnosed in study patient.
     Src: diseases
-    Type: string
+    Type:
+      units:
+       - Disease field is being re-encoded by MATCH. We will store and display the new codings that will follow the ICD-O or MONDO standards. Need to specify source controlled vocabulary for disease terms.
+      value_type: string
     Req: true
     Private: false
-#property of case
+#property of case, disease_eligibility_criterion
   ctep_category:
-    Desc: The patient's disease diagnosis described according to the CTEP Simplified Disease Classification.
-    Src: ctepCategory
+    Desc: The disease eligibility criterion as described according to the CTEP Simplified Disease Classification.
+    Src: NA
     Type: string
-    Req: false
+    Req: true
     Private: false
 #property of case
   ctep_subcategory:
@@ -103,12 +112,12 @@ PropDefinitions:
     Type: string
     Req: false
     Private: false
-#property of case
+#property of case, disease_eligibility_criterion
   meddra_code:
-    Desc: MedDRA code that is assigned to patient's disease diagnosis and that maps to the CTEP subcategory.
-    Src: diseases->_id
+    Desc: MedDRA code that is assigned to disease eligibility criterion and that maps to the appropriate CTEP subcategory.
+    Src: NA
     Type: string
-    Req: false
+    Req: true
     Private: false
 #property of case
   prior_drugs:
@@ -122,9 +131,9 @@ PropDefinitions:
     Desc: Extent of disease at study entry. Source is ECOG-ACRIN.
     Src: (ECOG-ACRIN) extnt_dz
     Type:
-      - Locally advanced
-      - Metastatic
-      - Recurrent
+      - "Locally advanced"
+      - "Metastatic"
+      - "Recurrent"
     Req: false
     Private: false
 #property of case
@@ -140,14 +149,20 @@ PropDefinitions:
   specimen_id:
     Desc: A unique identifier assigned to each MATCH specimen by CTDC.
     Src: NA
-    Type: string
+    Type:
+      units:
+       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
+      value_type: string
     Req: true
     Private: false
 #property of specimen
   biopsy_sequence_number:
     Desc: A unique identifier assigned to the patient biopsy assigned by submitting project.
     Src: biopsySequenceNumber
-    Type: string
+    Type:
+      units:
+       - Will be stored but not displayed. We will display a surrogate ID (Sample ID) instead. Original ID will be stored so that periodic updates can be made to Tumor biopsy information.
+      value_type: string
     Req: true
     Private: true
 #property of specimen
@@ -155,16 +170,19 @@ PropDefinitions:
     Desc: Biopsy type.
     Src: NA
     Type:
-      - Tumor
-      - Normal
-      - Unknown
+      - "Tumor"
+      - "Normal"
+      - "Unknown"
     Req: true
     Private: false
 #property of metastatic_site
   met_site_id:
     Desc: A unique identifier assigned to a metastatic site  by CTDC.
     Src: NA
-    Type: string
+    Type:
+      units:
+       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
+      value_type: string
     Req: true
     Private: false
 #property of metastatic_site
@@ -172,49 +190,58 @@ PropDefinitions:
     Desc: Metastatic site at study entry. Source is ECOG-ACRIN.
     Src: (ECOG-ACRIN) met_(site_name)
     Type:
-      - Bone Marrow
-      - Bone
-      - Lung
-      - Pleura
-      - Liver
-      - Kidney
-      - Stomach
-      - Small intestine
-      - Large intestine
-      - Skin
-      - Orbit
-      - Conjunctiva
-      - Parotid
-      - Submandibular
-      - Testicle
-      - Epidural
-      - CNS-Brain
-      - CNS-Leptom
-      - Pericardium
-      - Lymph Nodes
-      - Adrenals
-      - Other
+      - "Bone Marrow"
+      - "Bone"
+      - "Lung"
+      - "Pleura"
+      - "Liver"
+      - "Kidney"
+      - "Stomach"
+      - "Small intestine"
+      - "Large intestine"
+      - "Skin"
+      - "Orbit"
+      - "Conjunctiva"
+      - "Parotid"
+      - "Submandibular"
+      - "Testicle"
+      - "Epidural"
+      - "CNS-Brain"
+      - "CNS-Leptom"
+      - "Pericardium"
+      - "Lymph Nodes"
+      - "Adrenals"
+      - "Other"
     Req: true
     Private: false
 #property of nucleic_acid
   aliquot_id:
     Desc: A unique identifier assigned to an aliquot of nucleic acid, prepared from a patient's biopsy, by CTDC.
     Src: NA
-    Type: string
+    Type:
+      units:
+       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
+      value_type: string
     Req: true
     Private: false
 #property of nucleic_acid
   molecular_sequence_number:
     Desc: A unique identifier assigned to an aliquot of nucleic acid, prepared from a patient's  biopsy, by the submitting project.
     Src: molecularSequenceNumber
-    Type: string
+    Type:
+      units:
+       - Will be stored but not displayed. We will display a surrogate ID instead. Original ID will be stored so that periodic updates can be made to Nucleic Acid information.
+      value_type: string
     Req: true
     Private: true
 #property of nucleic_acid
   nucleic_acid_concentration:
     Desc: Nucleic acid concentration of aliquot expressed in nanograms per microliter.
     Src: dnaConcentration
-    Type: number
+    Type:
+      units:
+       - Need units from MATCH (ng/ul)
+      value_type: number
     Req: true
     Private: false
     exclusiveMinimum: 0
@@ -222,7 +249,10 @@ PropDefinitions:
   nucleic_acid_volume:
     Desc: Aliquot volume expressed as microliters.
     Src: dnaVolume
-    Type: number
+    Type:
+      units:
+       - Need units from MATCH (ul)
+      value_type: number
     Req: true
     Private: false
     exclusiveMinimum: 0
@@ -231,10 +261,10 @@ PropDefinitions:
     Desc: Nucleic acid type of extract.
     Src: NA
     Type:
-      - DNA
-      - RNA
-      - Pooled DNA/cDNA
-      - Unknown
+      - "DNA"
+      - "RNA"
+      - "Pooled DNA/cDNA"
+      - "Unknown"
     Req: true
     Private: false
 #property of ihc_assay_report
@@ -249,10 +279,10 @@ PropDefinitions:
     Desc: Gene symbol of gene being assayed for expression by an immunohistochemistry (IHC) test.
     Src: biomarker
     Type:
-      - PTEN
-      - RB
-      - MLH1
-      - MSH2
+      - "PTEN"
+      - "RB"
+      - "MLH1"
+      - "MSH2"
     Req: true
     Private: false
 #property of ihc_assay_report
@@ -260,24 +290,30 @@ PropDefinitions:
     Desc: The result of the IHC test performed on gene.
     Src: result
     Type:
-      - EXPRESSED
-      - LOST
-      - INDETERMINATE
-      - UNKNOWN
+      - "EXPRESSED"
+      - "LOST"
+      - "INDETERMINATE"
+      - "UNKNOWN"
     Req: true
     Private: false
 #property of sequencing_assay
   sequencing_assay_id:
     Desc: A unique identifier assigned to each MATCH sequencing assay report by CTDC.
     Src: NA
-    Type: string
+    Type:
+      units:
+       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
+      value_type: string
     Req: true
     Private: true
 #property of sequencing_assay
   qc_result:
     Desc: Sequencing QC result.
     Src: Generated through API call
-    Type: string
+    Type:
+      units:
+       - Oncomine control panel summary will be displayed.
+      value_type: string
     Req: false
     Private: false
 #property of sequencing_assay
@@ -298,14 +334,20 @@ PropDefinitions:
   variant_report_id:
     Desc: A unique identifier assigned to each variant report by CTDC.
     Src: NA
-    Type: string
+    Type:
+      units:
+       - CTDC assigned field. This field is not present in the parent data fields. It will have to be included during the data transformation process.
+      value_type: string
     Req: true
     Private: false
 #property of variant_report, assignment_report
   analysis_id:
     Desc: A unique identifier assigned to each variant report by source project.
     Src: jobName
-    Type: string
+    Type:
+      units:
+       - Will be stored but not displayed. We will display a surrogate ID instead. Original ID will be stored so that periodic updates can be made to Variant Report information.
+      value_type: string
     Req: true
     Private: true
 #property of variant_report
@@ -379,19 +421,19 @@ PropDefinitions:
     Desc: Enumerated representation of the status of files.
     Src: NA
     Type:
-      - uploading
-      - uploaded
-      - md5summing
-      - md5summed
-      - validating
-      - error
-      - invalid
-      - suppressed
-      - redacted
-      - live
-      - validated
-      - submitted
-      - released
+      - "uploading"
+      - "uploaded"
+      - "md5summing"
+      - "md5summed"
+      - "validating"
+      - "error"
+      - "invalid"
+      - "suppressed"
+      - "redacted"
+      - "live"
+      - "validated"
+      - "submitted"
+      - "released"
     Req: true
     Private: false
 #property of file
@@ -399,13 +441,13 @@ PropDefinitions:
     Desc: Indicator as to the nature of the file in terms of its content.
     Src: NA
     Type:
-      - Raw reads file
-      - Aligned DNA reads file
-      - Aligned RNA reads file
-      - RNA Index file
-      - DNA Index file
-      - Variants file
-      - Assignment report
+      - "Raw reads file"
+      - "Aligned DNA reads file"
+      - "Aligned RNA reads file"
+      - "RNA Index file"
+      - "DNA Index file"
+      - "Variants file"
+      - "Assignment report"
     Req: true
     Private: false
 #property of file
@@ -448,30 +490,30 @@ PropDefinitions:
     Desc: The chromosome that encodes variant gene.
     Src: chromosome
     Type:
-      - chr1
-      - chr2
-      - chr3
-      - chr4
-      - chr5
-      - chr6
-      - chr7
-      - chr8
-      - chr9
-      - chr10
-      - chr11
-      - chr12
-      - chr13
-      - chr14
-      - chr15
-      - chr16
-      - chr17
-      - chr18
-      - chr19
-      - chr20
-      - chr21
-      - chr22
-      - chrX
-      - chrY
+      - "chr1"
+      - "chr2"
+      - "chr3"
+      - "chr4"
+      - "chr5"
+      - "chr6"
+      - "chr7"
+      - "chr8"
+      - "chr9"
+      - "chr10"
+      - "chr11"
+      - "chr12"
+      - "chr13"
+      - "chr14"
+      - "chr15"
+      - "chr16"
+      - "chr17"
+      - "chr18"
+      - "chr19"
+      - "chr20"
+      - "chr21"
+      - "chr22"
+      - "chrX"
+      - "chrY"
     Req: true
     Private: false
 #property of snv_variant, delins_variant, indel_variant
@@ -530,11 +572,11 @@ PropDefinitions:
     Desc: Variant classification label assigned by the variant calling workflow of the Ion Reporter Software.
     Src: oncominevariantclass
     Type:
-      - Amplification
-      - Deletion
-      - Deleterious
-      - Hotspot
-      - Fusion
+      - "Amplification"
+      - "Deletion"
+      - "Deleterious"
+      - "Hotspot"
+      - "Fusion"
     Req: false
     Private: false
 #property of snv_variant, delins_variant, indel_variant
@@ -599,18 +641,18 @@ PropDefinitions:
     Desc: A status describing outcome of assigning patient to treatment arm.
     Src: assignmentStatusOutcome
     Type:
-      - COMPASSIONATE_CARE
-      - FORMERLY_ON_ARM_DECEASED
-      - FORMERLY_ON_ARM_OFF_TRIAL
-      - FORMERLY_ON_ARM_PROGRESSED
-      - NOT_ELIGIBLE
-      - OFF_TRIAL
-      - OFF_TRIAL_DECEASED
-      - OFF_TRIAL_NO_TA_AVAILABLE
-      - OFF_TRIAL_NOT_CONSENTED
-      - ON_TREATMENT_ARM
-      - PENDING_APPROVAL
-      - PENDING_CONFIRMATION
+      - "COMPASSIONATE_CARE"
+      - "FORMERLY_ON_ARM_DECEASED"
+      - "FORMERLY_ON_ARM_OFF_TRIAL"
+      - "FORMERLY_ON_ARM_PROGRESSED"
+      - "NOT_ELIGIBLE"
+      - "OFF_TRIAL"
+      - "OFF_TRIAL_DECEASED"
+      - "OFF_TRIAL_NO_TA_AVAILABLE"
+      - "OFF_TRIAL_NOT_CONSENTED"
+      - "ON_TREATMENT_ARM"
+      - "PENDING_APPROVAL"
+      - "PENDING_CONFIRMATION"
     Req: true
     Private: false
 #property of assignment_report
@@ -618,58 +660,102 @@ PropDefinitions:
     Desc: Best Confirmed Response. Source is  ECOG-ACRIN.
     Src: (ECOG)best_conf_resp
     Type:
-      - Complete response
-      - Partial response
-      - Stable disease
-      - Progressive disease
-      - Not evaluable
+      - "Complete response"
+      - "Partial response"
+      - "Stable disease"
+      - "Progressive disease"
+      - "Not evaluable"
     Req: false
+    Private: false
+#property of disease_eligibility_criterion
+  disease_eligibility_criterion_id:
+    Desc: A unique identifier for the node representing the drug eligibility criterion.
+    Src: NA
+    Type: string
+    Req: true
+    Private: false
+#property of disease_eligibility_criterion, drug_eligibility_criterion
+  criterion_type:
+    Desc: The type of eligibility criterion the node represents.
+    Src: NA
+    Type:
+      - "Inclusion"
+      - "Exclusion"
+    Req: true
+    Private: false
+#property of disease_eligibility_criterion
+  ctep_term:
+    Desc: A high-level description of disease eligibility criterion, usually based on histology, but excluding concepts such as clinical stage or prior therapy,  that is part of the CTEP Simplified Disease Classification.
+    Src: NA
+    Type: string
+    Req: true
+    Private: false
+#property of drug_eligibility_criterion
+  drug_eligibility_criterion_id:
+    Desc: A unique identifier for the node representing the drug eligibility criterion.
+    Src: NA
+    Type: string
+    Req: true
+    Private: false
+#property of drug_eligibility_criterion
+  drug_name:
+    Desc: The name of the drug that is the eligibility criterion.
+    Src: NA
+    Type: string
+    Req: true
     Private: false
 #property of arm
   arm_id:
     Desc: A unique identifier assigned to a study arm.
     Src: NA
     Type:
-      - A
-      - C2
-      - E
-      - L
-      - T
-      - V
-      - Z1E
-      - Z1G
-      - Z1H
-      - Z1K
-      - Z1L
-      - Z1J
-      - Z1M
-      - C1
-      - J
-      - K1
-      - K2
-      - M
-      - Z1C
-      - Z1F
-      - F
-      - G
-      - H
-      - R
-      - U
-      - S1
-      - S2
-      - X
-      - Z1A
-      - B
-      - Z1B
-      - Z1D
-      - Z1I
-      - I
-      - N
-      - P
-      - Q
-      - W
-      - Y
+      - "A"
+      - "C2"
+      - "E"
+      - "L"
+      - "T"
+      - "V"
+      - "Z1E"
+      - "Z1G"
+      - "Z1H"
+      - "Z1K"
+      - "Z1L"
+      - "Z1J"
+      - "Z1M"
+      - "C1"
+      - "J"
+      - "K1"
+      - "K2"
+      - "M"
+      - "Z1C"
+      - "Z1F"
+      - "F"
+      - "G"
+      - "H"
+      - "R"
+      - "U"
+      - "S1"
+      - "S2"
+      - "X"
+      - "Z1A"
+      - "B"
+      - "Z1B"
+      - "Z1D"
+      - "Z1I"
+      - "I"
+      - "N"
+      - "P"
+      - "Q"
+      - "W"
+      - "Y"
     Req: true
+    Private: false
+#property of arm
+  arm_title:
+    Desc: A short description of the clinical objective of the trial arm.
+    Src: NA
+    Type: string
+    Req: false
     Private: false
 #property of arm
   arm_target:

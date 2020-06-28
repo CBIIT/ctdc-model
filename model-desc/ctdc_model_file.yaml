@@ -146,10 +146,25 @@ Nodes:
       - assignment_logic
       - assignment_outcome
       - treatment_outcome
+  disease_eligibility_criterion:
+    Props:
+      - show_node
+      - disease_eligibility_criterion_id
+      - criterion_type
+      - ctep_category
+      - ctep_term
+      - meddra_code
+  drug_eligibility_criterion:
+    Props:
+      - show_node
+      - drug_eligibility_criterion_id
+      - criterion_type
+      - drug_name
   arm:
     Props:
       - show_node
       - arm_id
+      - arm_title
       - arm_target
       - arm_drug
       - pubmed_id
@@ -244,11 +259,16 @@ Relationships:
     Ends:
       - Src: assignment_report
         Dst: arm
+        Mul: many_to_one
       - Src: case
         Dst: arm
       - Src: file
         Dst: arm
         Mul: many_to_one
+      - Src: disease_eligibility_criterion
+        Dst: arm
+      - Src: drug_eligibility_criterion
+        Dst: arm
     Props: null
   of_trial:
     Mul: many_to_one
