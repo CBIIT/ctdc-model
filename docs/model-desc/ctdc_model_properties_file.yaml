@@ -96,16 +96,16 @@ PropDefinitions:
     Type: string
     Req: true
     Private: false
-#property of case
+#property of case, disease_eligibility_criterion
   ctep_subcategory:
-    Desc: A more granular mapping of the patient's disease diagnosis to the CTEP Simplified Disease Classification.
-    Src: ctepSubCategory
+    Desc: A more granular description of the  disease eligibility criterion as described according to the CTEP Simplified Disease Classification.
+    Src: NA
     Type: string
-    Req: false
+    Req: true
     Private: false
 #property of case, disease_eligibility_criterion
   meddra_code:
-    Desc: MedDRA code that is assigned to disease eligibility criterion and that maps to the appropriate CTEP subcategory.
+    Desc: MedDRA code that is assigned to disease eligibility criterion and that maps to the appropriate CTEP Term.
     Src: NA
     Type: string
     Req: true
@@ -642,8 +642,8 @@ PropDefinitions:
     Req: true
     Private: false
 #property of disease_eligibility_criterion
-  ctep_term:
-    Desc: A high-level description of disease eligibility criterion, usually based on histology, but excluding concepts such as clinical stage or prior therapy,  that is part of the CTEP Simplified Disease Classification.
+  ctep_short_name:
+    Desc: The CTEP term is the most granular disease description in the CTEP Simplified Disease Classification. The CTEP Short Name is a shortened form of the CTEP term.
     Src: NA
     Type: string
     Req: true
@@ -733,6 +733,13 @@ PropDefinitions:
   pubmed_id:
     Desc: PubMed ID of the primary publication associated with study arm.
     Src: NA
+    Type: string
+    Req: false
+    Private: false
+#property of arm, clinical_trial
+  dbgap_accession_number:
+    Desc: The dbgap accession number provided for the trial or arm.
+    Src: None
     Type: string
     Req: false
     Private: false
