@@ -152,7 +152,8 @@ Nodes:
       - disease_eligibility_criterion_id
       - criterion_type
       - ctep_category
-      - ctep_term
+      - ctep_subcategory
+      - ctep_short_name
       - meddra_code
   drug_eligibility_criterion:
     Props:
@@ -168,6 +169,7 @@ Nodes:
       - arm_target
       - arm_drug
       - pubmed_id
+      - dbgap_accession_number
   clinical_trial:
     Props:
       - show_node
@@ -179,6 +181,7 @@ Nodes:
       - clinical_trial_type
       - lead_organization
       - principal_investigators
+      - dbgap_accession_number
 Relationships:
   of_case:
     Mul: many_to_one
