@@ -1,5 +1,26 @@
 Nodes:
+  arm:
+    Category: administrative
+    Props:
+      - show_node
+      - arm_id
+      - arm_title
+      - arm_target
+      - arm_drug
+      - pubmed_id
+      - dbgap_accession_number
+  assignment_report:
+    Category: generated_data_file
+    Props:
+      - show_node
+      - assignment_report_id
+      - analysis_id
+      - step_at_assignment
+      - assignment_logic
+      - assignment_outcome
+      - treatment_outcome
   case:
+    Category: case
     Props:
       - show_node
       - case_id
@@ -16,161 +37,8 @@ Nodes:
       - prior_drugs
       - extent_of_disease
       - ecog_performance_status
-  specimen:
-    Props:
-      - show_node
-      - specimen_id
-      - biopsy_sequence_number
-      - specimen_type
-  metastatic_site:
-    Props:
-      - show_node
-      - met_site_id
-      - metastatic_site_name
-  nucleic_acid:
-    Props:
-      - show_node
-      - aliquot_id
-      - molecular_sequence_number
-      - nucleic_acid_concentration
-      - nucleic_acid_volume
-      - nucleic_acid_type
-  ihc_assay_report:
-    Props:
-      - show_node
-      - ihc_assay_id
-      - ihc_test_gene
-      - ihc_test_result
-  sequencing_assay:
-    Props:
-      - show_node
-      - sequencing_assay_id
-      - qc_result
-      - experimental_method
-      - platform
-  variant_report:
-    Props:
-      - show_node
-      - variant_report_id
-      - analysis_id
-      - mapd
-      - cellularity
-      - torrent_variant_caller_version
-      - reference_genome
-  file:
-    Props:
-      - show_node
-      - file_description
-      - file_format
-      - file_location
-      - file_name
-      - file_size
-      - file_status
-      - file_type
-      - md5sum
-      - uuid
-  snv_variant:
-    Props:
-      - show_node
-      - variant_id
-      - external_variant_id
-      - gene
-      - chromosome
-      - exon
-      - position
-      - reference
-      - alternative
-      - transcript_id
-      - transcript_hgvs
-      - genomic_hgvs
-      - oncomine_variant_class
-      - variant_classification
-      - amino_acid_change
-  delins_variant:
-    Props:
-      - show_node
-      - variant_id
-      - external_variant_id
-      - gene
-      - chromosome
-      - exon
-      - position
-      - reference
-      - alternative
-      - transcript_id
-      - transcript_hgvs
-      - genomic_hgvs
-      - oncomine_variant_class
-      - variant_classification
-      - amino_acid_change
-  indel_variant:
-    Props:
-      - show_node
-      - variant_id
-      - external_variant_id
-      - gene
-      - chromosome
-      - exon
-      - position
-      - reference
-      - alternative
-      - transcript_id
-      - transcript_hgvs
-      - genomic_hgvs
-      - oncomine_variant_class
-      - variant_classification
-      - amino_acid_change
-  copy_number_variant:
-    Props:
-      - show_node
-      - variant_id
-      - external_variant_id
-      - gene
-      - chromosome
-      - oncomine_variant_class
-      - tumor_suppressor
-  gene_fusion_variant:
-    Props:
-      - show_node
-      - variant_id
-      - external_variant_id
-      - gene1
-      - gene2
-      - oncomine_variant_class
-  assignment_report:
-    Props:
-      - show_node
-      - assignment_report_id
-      - analysis_id
-      - step_at_assignment
-      - assignment_logic
-      - assignment_outcome
-      - treatment_outcome
-  disease_eligibility_criterion:
-    Props:
-      - show_node
-      - disease_eligibility_criterion_id
-      - criterion_type
-      - ctep_category
-      - ctep_subcategory
-      - ctep_short_name
-      - meddra_code
-  drug_eligibility_criterion:
-    Props:
-      - show_node
-      - drug_eligibility_criterion_id
-      - criterion_type
-      - drug_name
-  arm:
-    Props:
-      - show_node
-      - arm_id
-      - arm_title
-      - arm_target
-      - arm_drug
-      - pubmed_id
-      - dbgap_accession_number
   clinical_trial:
+    Category: administrative
     Props:
       - show_node
       - clinical_trial_id
@@ -182,6 +50,156 @@ Nodes:
       - lead_organization
       - principal_investigators
       - dbgap_accession_number
+  copy_number_variant:
+    Category: nucleic_acid_variant
+    Props:
+      - show_node
+      - variant_id
+      - external_variant_id
+      - gene
+      - chromosome
+      - oncomine_variant_class
+      - tumor_suppressor
+  delins_variant:
+    Category: nucleic_acid_variant
+    Props:
+      - show_node
+      - variant_id
+      - external_variant_id
+      - gene
+      - chromosome
+      - exon
+      - position
+      - reference
+      - alternative
+      - transcript_id
+      - transcript_hgvs
+      - genomic_hgvs
+      - oncomine_variant_class
+      - variant_classification
+      - amino_acid_change
+  disease_eligibility_criterion:
+    Category: clinical
+    Props:
+      - show_node
+      - disease_eligibility_criterion_id
+      - criterion_type
+      - ctep_category
+      - ctep_subcategory
+      - ctep_short_name
+      - meddra_code
+  drug_eligibility_criterion:
+    Category: clinical
+    Props:
+      - show_node
+      - drug_eligibility_criterion_id
+      - criterion_type
+      - drug_name
+  file:
+    Category: generated_data_file
+    Props:
+      - show_node
+      - file_description
+      - file_format
+      - file_location
+      - file_name
+      - file_size
+      - file_status
+      - file_type
+      - md5sum
+      - uuid
+  gene_fusion_variant:
+    Category: nucleic_acid_variant
+    Props:
+      - show_node
+      - variant_id
+      - external_variant_id
+      - gene1
+      - gene2
+      - oncomine_variant_class
+  ihc_assay_report:
+    Category: generated_data_file
+    Props:
+      - show_node
+      - ihc_assay_id
+      - ihc_test_gene
+      - ihc_test_result
+  indel_variant:
+    Category: nucleic_acid_variant
+    Props:
+      - show_node
+      - variant_id
+      - external_variant_id
+      - gene
+      - chromosome
+      - exon
+      - position
+      - reference
+      - alternative
+      - transcript_id
+      - transcript_hgvs
+      - genomic_hgvs
+      - oncomine_variant_class
+      - variant_classification
+      - amino_acid_change
+  metastatic_site:
+    Category: clinical
+    Props:
+      - show_node
+      - met_site_id
+      - metastatic_site_name
+  nucleic_acid:
+    Category: biospecimen
+    Props:
+      - show_node
+      - aliquot_id
+      - molecular_sequence_number
+      - nucleic_acid_concentration
+      - nucleic_acid_volume
+      - nucleic_acid_type
+  sequencing_assay:
+    Category: analysis
+    Props:
+      - show_node
+      - sequencing_assay_id
+      - qc_result
+      - experimental_method
+      - platform
+  snv_variant:
+    Category: nucleic_acid_variant
+    Props:
+      - show_node
+      - variant_id
+      - external_variant_id
+      - gene
+      - chromosome
+      - exon
+      - position
+      - reference
+      - alternative
+      - transcript_id
+      - transcript_hgvs
+      - genomic_hgvs
+      - oncomine_variant_class
+      - variant_classification
+      - amino_acid_change
+  specimen:
+    Category: biospecimen
+    Props:
+      - show_node
+      - specimen_id
+      - biopsy_sequence_number
+      - specimen_type
+  variant_report:
+    Category: generated_data_file
+    Props:
+      - show_node
+      - variant_report_id
+      - analysis_id
+      - mapd
+      - cellularity
+      - torrent_variant_caller_version
+      - reference_genome
 Relationships:
   of_case:
     Mul: many_to_one
@@ -262,12 +280,10 @@ Relationships:
     Ends:
       - Src: assignment_report
         Dst: arm
-        Mul: many_to_one
       - Src: case
         Dst: arm
       - Src: file
         Dst: arm
-        Mul: many_to_one
       - Src: disease_eligibility_criterion
         Dst: arm
       - Src: drug_eligibility_criterion
