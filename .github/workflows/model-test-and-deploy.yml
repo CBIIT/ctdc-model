@@ -14,6 +14,7 @@ jobs:
       model_files: |
         ctdc_model_file.yaml ctdc_model_properties_file.yaml
       model_prefix: ctdc-model
+      event_name: ${{ github.event_name }}
     secrets:
       docker_repo: ${{ secrets.REPO }}
       docker_svc: ${{ secrets.RSVC }}
