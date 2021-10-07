@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/ctdc-model
-commit 1af7618
+commit bd2bfb8
 node	property	value_or_TYPE
 arm	arm_drug	STRING
 arm	arm_id	A
@@ -401,9 +401,9 @@ indel_variant_of	indel_variant	variant_report	allele_frequency	NUMBER
 met_site_of	metastatic_site	case	NA	NA
 of_arm	assignment_report	arm	NA	NA
 of_arm	drug_eligibility_criterion	arm	NA	NA
-of_arm	case	arm	NA	NA
 of_arm	disease_eligibility_criterion	arm	NA	NA
 of_arm	file	arm	NA	NA
+of_arm	case	arm	NA	NA
 of_case	specimen	case	NA	NA
 of_nucleic_acid	sequencing_assay	nucleic_acid	NA	NA
 of_sequencing_assay	variant_report	sequencing_assay	NA	NA
