@@ -1,6 +1,10 @@
 Nodes:
   arm:
     Category: administrative
+    Tags:
+      This: that
+      Other: true
+
     Props:
       - show_node
       - arm_id
