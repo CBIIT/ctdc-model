@@ -1,5 +1,5 @@
-repo https://github.com/CBIIT/ctdc-model.git
-commit 46a4fa1
+repo https://github.com/CBIIT/ctdc-model
+commit f803f56
 node	property	value_or_TYPE
 arm	arm_drug	STRING
 arm	arm_id	A
@@ -43,6 +43,7 @@ arm	arm_id	Z1L
 arm	arm_id	Z1M
 arm	arm_target	STRING
 arm	arm_title	STRING
+arm	dbgap_accession_number	STRING
 arm	pubmed_id	STRING
 arm	show_node	BOOLEAN
 assignment_report	analysis_id	STRING
@@ -112,6 +113,7 @@ clinical_trial	clinical_trial_id	STRING
 clinical_trial	clinical_trial_long_name	STRING
 clinical_trial	clinical_trial_short_name	STRING
 clinical_trial	clinical_trial_type	STRING
+clinical_trial	dbgap_accession_number	STRING
 clinical_trial	lead_organization	STRING
 clinical_trial	principal_investigators	STRING
 clinical_trial	show_node	BOOLEAN
@@ -194,7 +196,8 @@ delins_variant	variant_id	STRING
 disease_eligibility_criterion	criterion_type	Exclusion
 disease_eligibility_criterion	criterion_type	Inclusion
 disease_eligibility_criterion	ctep_category	STRING
-disease_eligibility_criterion	ctep_term	STRING
+disease_eligibility_criterion	ctep_short_name	STRING
+disease_eligibility_criterion	ctep_subcategory	STRING
 disease_eligibility_criterion	disease_eligibility_criterion_id	STRING
 disease_eligibility_criterion	meddra_code	STRING
 disease_eligibility_criterion	show_node	BOOLEAN
@@ -397,17 +400,17 @@ gene_fusion_variant_of	gene_fusion_variant	variant_report	gene2_read_count	INTEG
 indel_variant_of	indel_variant	variant_report	allele_frequency	NUMBER
 met_site_of	metastatic_site	case	NA	NA
 of_arm	drug_eligibility_criterion	arm	NA	NA
-of_arm	case	arm	NA	NA
 of_arm	disease_eligibility_criterion	arm	NA	NA
-of_arm	file	arm	NA	NA
+of_arm	case	arm	NA	NA
 of_arm	assignment_report	arm	NA	NA
+of_arm	file	arm	NA	NA
 of_case	specimen	case	NA	NA
 of_nucleic_acid	sequencing_assay	nucleic_acid	NA	NA
 of_sequencing_assay	file	sequencing_assay	NA	NA
 of_sequencing_assay	variant_report	sequencing_assay	NA	NA
 of_specimen	assignment_report	specimen	NA	NA
-of_specimen	nucleic_acid	specimen	NA	NA
 of_specimen	ihc_assay_report	specimen	NA	NA
+of_specimen	nucleic_acid	specimen	NA	NA
 of_trial	arm	clinical_trial	NA	NA
 of_variant_report	assignment_report	variant_report	NA	NA
 snv_variant_of	snv_variant	variant_report	allele_frequency	NUMBER
@@ -440,9 +443,10 @@ copy_number_ci_5	The lower limit of the 95% confidence interval for the estimate
 copy_number_ci_95	The upper limit of the 95% confidence interval for the estimated copy number.
 criterion_type	The type of eligibility criterion the node represents.
 ctep_category	The disease eligibility criterion as described according to the CTEP Simplified Disease Classification.
-ctep_subcategory	A more granular mapping of the patient's disease diagnosis to the CTEP Simplified Disease Classification.
-ctep_term	A high-level description of disease eligibility criterion, usually based on histology, but excluding concepts such as clinical stage or prior therapy,  that is part of the CTEP Simplified Disease Classification.
+ctep_short_name	The CTEP term is the most granular disease description in the CTEP Simplified Disease Classification. The CTEP Short Name is a shortened form of the CTEP term.
+ctep_subcategory	A more granular description of the  disease eligibility criterion as described according to the CTEP Simplified Disease Classification.
 current_step	The MATCH workflow is divided broadly into steps. Step 0 starts with patient registration and ends with the the sign-out of the first assignment report. If the patient is assigned to a treatment arm s/he moves to step 1. If patient progresses during treatment, s/he is assigned to step 2. Current step denotes the step in the workflow the patient is currently at.
+dbgap_accession_number	The dbgap accession number provided for the trial or arm.
 disease	Disease condition diagnosed in study patient.
 disease_eligibility_criterion_id	A unique identifier for the node representing the drug eligibility criterion.
 drug_eligibility_criterion_id	A unique identifier for the node representing the drug eligibility criterion.
@@ -473,7 +477,7 @@ ihc_test_result	The result of the IHC test performed on gene.
 lead_organization	Lead Organization
 mapd	Median Absolute Percentage Deviation (MAPD) is a measure of the accuracy of the copy number calls made by the copy number variant pipeline.
 md5sum	Md5 checksum.
-meddra_code	MedDRA code that is assigned to disease eligibility criterion and that maps to the appropriate CTEP subcategory.
+meddra_code	MedDRA code that is assigned to disease eligibility criterion and that maps to the appropriate CTEP Term.
 met_site_id	A unique identifier assigned to a metastatic site  by CTDC.
 metastatic_site_name	Metastatic site at study entry. Source is ECOG-ACRIN.
 molecular_sequence_number	A unique identifier assigned to an aliquot of nucleic acid, prepared from a patient's  biopsy, by the submitting project.
