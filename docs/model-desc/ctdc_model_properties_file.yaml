@@ -94,21 +94,21 @@ PropDefinitions:
     Desc: The disease eligibility criterion as described according to the CTEP Simplified Disease Classification.
     Src: NA
     Type: string
-    Req: true
+    Req: false
     Private: false
 #property of case, disease_eligibility_criterion
   ctep_subcategory:
     Desc: A more granular description of the  disease eligibility criterion as described according to the CTEP Simplified Disease Classification.
     Src: NA
     Type: string
-    Req: true
+    Req: false
     Private: false
 #property of case, disease_eligibility_criterion
   meddra_code:
     Desc: MedDRA code that is assigned to disease eligibility criterion and that maps to the appropriate CTEP Term.
     Src: NA
     Type: string
-    Req: true
+    Req: false
     Private: false
 #property of case
   prior_drugs:
@@ -215,7 +215,7 @@ PropDefinitions:
     Desc: Nucleic acid concentration of aliquot expressed in nanograms per microliter.
     Src: dnaConcentration
     Type: number
-    Req: true
+    Req: false
     Private: false
     exclusiveMinimum: 0
 #property of nucleic_acid
@@ -223,7 +223,7 @@ PropDefinitions:
     Desc: Aliquot volume expressed as microliters.
     Src: dnaVolume
     Type: number
-    Req: true
+    Req: false
     Private: false
     exclusiveMinimum: 0
 #property of nucleic_acid
