@@ -9,7 +9,7 @@ on:
 
 jobs:
   validate-and-build:
-    uses: CBIIT/bento-workflows/.github/workflows/model-test-and-deploy.yml@v1.1.4.2
+    uses: CBIIT/bento-workflows/.github/workflows/model-test-and-deploy.yml@v1.1.4.5
     with:
       model_files: |
         ctdc_model_file.yaml ctdc_model_properties_file.yaml
