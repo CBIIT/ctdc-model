@@ -2,16 +2,23 @@ name: Model Validate and Build
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
+      - develop
 
 jobs:
   validate-and-build:
-    uses: CBIIT/bento-workflows/.github/workflows/model-test-and-deploy.yml@v1.1.4.5
+    permissions:
+      packages: read
+      contents: write
+    uses: CBIIT/bento-workflows/.github/workflows/model-test-and-deploy.yml@v2.2.2
     with:
       model_files: |
         ctdc_model_file.yaml ctdc_model_properties_file.yaml
       model_prefix: ctdc-model
       event_name: ${{ github.event_name }}
+      nodes_only_graph: no
+    secrets:
+      token: ${{ secrets.PAT }}
