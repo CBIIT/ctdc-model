@@ -298,19 +298,6 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'              
  # specimen 
-  Props:
-      - days_from_diagnosis_to_specimen_collection #11253404
-      - diagnosis_date #from the CMB perspective, this is supposedly equivalent to the above, but because of the way this date is indexed to enrollment date, it should not be a specimen property
-      - days_from_first_subject_visit_to_specimen_collection #11248874
-      - days_from_first_treatment_to_specimen_collection #11250807
-      - days_from_initial_genomic_sequencing_to_Specimen_collection #11250807
-      - days_from_recurrence_to_specimen_collection #11251133
-      - days_from_specimen_collection_to_initial_pathologic_diagnosis #11253404
-      - collection_date #from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
-      - obi_specimen_type #11253427
-      - specimen_category #is this the Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic caDSR 7069877
-      - type_of_tissue #caDSR 7003892
-      - assessment_timepoint #this appears to be the Catalog Site's "Collection Timepoint" caDSR 7065963
   days_from_diagnosis_to_specimen_collection:
   #11253404
     Desc: text
@@ -389,7 +376,7 @@ PropDefinitions:
         - days
       value_type: number
     Req: 'No'
-  collection_date:
+  collection_date: #from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
     Desc: text
     Term:
       - Origin: caDSR
