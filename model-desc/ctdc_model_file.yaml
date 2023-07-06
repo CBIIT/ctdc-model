@@ -167,7 +167,7 @@ Relationships:
       - Src: study
         Dst: project
       - Src: study # so can a lowest-level study belong directly to a highest-level program?
-      - Dst: program
+        Dst: program
       - Src: project # this relationship can be removed because project is above study?
         Dst: study
       - Src: project # this seems legitimate
@@ -206,7 +206,7 @@ Relationships:
         Mul: many_to_one
     Props: null    
   of_subject:
-    Mul: #many_to_one
+    Mul: many_to_one
     Ends:
       - Src: demographic
         Dst: subject
