@@ -11,12 +11,12 @@ Nodes:
       Class: value
       Template: 'Yes'
     Props:
-      - property
-      - property
-      - property
-      - property
-      - property
-      - property
+      - property 1
+      - property 2
+      - property 3
+      - property 4
+      - property 5
+      - property 6
   program:  
     Desc: text
     Tags:
@@ -68,12 +68,12 @@ Nodes:
       Class: value
       Template: 'Yes'
     Props:
-      - property
-      - property
-      - property
-      - property
-      - property
-      - property
+      - property 1
+      - property 2
+      - property 3
+      - property 4
+      - property 5
+      - property 6
   demographic:
     Desc: the typical demographics
     Tags:
@@ -86,8 +86,6 @@ Nodes:
       - reported_gender #10748236
       - ncbi_taxonomy_id #10543100
       - ncbi_taxonomy_name #10543082
-      - property
-      - property
   exposure:
     Desc: environmental, workplace and lifestyle exposure(s)
     Tags:
@@ -97,11 +95,6 @@ Nodes:
       Template: 'Yes'
     Props:
       - environmental_exposure_type #11256813
-      - property
-      - property
-      - property
-      - property
-      - property
   diagnosis:
     Desc: diagnosis
     Tags:
@@ -130,8 +123,6 @@ Nodes:
       - therapy #6400634
       - surgical_procedure_name #6411539
       - radiological_procedure_name #6411539
-      - property
-      - property
   specimen:
     Desc: text
     Tags:
