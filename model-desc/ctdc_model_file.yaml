@@ -11,13 +11,12 @@ Nodes:
       Class: value
       Template: 'Yes'
     Props:
-      - property 1
-      - property 2
-      - property 3
-      - property 4
-      - property 5
-      - property 6
-  program:  
+      - property_1
+      - property_2
+      - property_3
+      - property_4
+      - property_5
+_  program:  
     Desc: text
     Tags:
       Category: value
@@ -68,12 +67,12 @@ Nodes:
       Class: value
       Template: 'Yes'
     Props:
-      - property 1
-      - property 2
-      - property 3
-      - property 4
-      - property 5
-      - property 6
+      - property_1
+      - property_2
+      - property_3
+      - property_4
+      - property_5
+      - property_6
   demographic:
     Desc: the typical demographics
     Tags:

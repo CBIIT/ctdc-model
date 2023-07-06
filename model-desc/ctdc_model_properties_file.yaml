@@ -4,7 +4,7 @@
 
 PropDefinitions:
   # name_of_node
-  property:
+  property_1:
     Desc: text
     Term:
       - Origin: caDSR
@@ -13,12 +13,12 @@ PropDefinitions:
     Src: value
     Type: integer
     Req: 'Yes'
-  property:
+  property_2:
     Desc: text
     Src: value
     Type: datetime
     Req: 'No'
-  property:
+  property_3:
     Desc: text
     Src: value
     Enum: 
