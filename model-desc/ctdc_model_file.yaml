@@ -16,7 +16,8 @@ Nodes:
       - property_3
       - property_4
       - property_5
-_  program:  
+      - property_6
+  program:  
     Desc: text
     Tags:
       Category: value
