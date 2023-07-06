@@ -143,7 +143,7 @@ Nodes:
       - specimen_category #is this the Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic caDSR 7069877
       - type_of_tissue #caDSR 7003892
       - assessment_timepoint #this appears to be the Catalog Site's "Collection Timepoint" caDSR 7065963
-data_file:
+ data_file:
     Desc: file
     Tags:
       Category: value
