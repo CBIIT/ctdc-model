@@ -20,9 +20,9 @@ Nodes:
   program:  
     Desc: text
     Tags:
-      Category: value
-      Assignment: value
-      Class: value
+      Category: administrative
+      Assignment: core
+      Class: primary
       Template: 'Yes'
     Props:
       - program_name #11444542
@@ -30,9 +30,9 @@ Nodes:
   project:
     Desc: text
     Tags:
-      Category: value
-      Assignment: value
-      Class: value
+      Category: administrative
+      Assignment: core
+      Class: secondary
       Template: 'Yes'
     Props:
       - project_name #11459804
@@ -40,9 +40,9 @@ Nodes:
   principal_investigator:
     Desc: text
     Tags:
-      Category: value
-      Assignment: value
-      Class: value
+      Category: study
+      Assignment: core
+      Class: primary
       Template: 'Yes'
     Props:
       - principal_investigator_first_name #10624731
@@ -52,55 +52,66 @@ Nodes:
   study:
     Desc: text
     Tags:
-      Category: value
-      Assignment: value
-      Class: value
+      Category: study
+      Assignment: core
+      Class: primary
       Template: 'Yes'
     Props:
       - study_name #11459810
       - study_short_name #11459812
       - study_type #11160683
+  image_collection:
+    Desc: text
+    Tags:
+      Category: study
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - image_collection_name
+      - image_type_included
+      - image_collection_url
+      - repository_name
+      - collection_access
   subject:
     Desc: text
     Tags:
-      Category: value
-      Assignment: value
-      Class: value
+      Category: subject
+      Assignment: core
+      Class: primary
       Template: 'Yes'
     Props:
-      - property_1
-      - property_2
-      - property_3
-      - property_4
-      - property_5
-      - property_6
+      - subject_id
   demographic:
     Desc: the typical demographics
     Tags:
-      Category: value
-      Assignment: value
-      Class: value
+      Category: subject
+      Assignment: core
+      Class: primary
       Template: 'Yes'
     Props:
       - sex
       - reported_gender #10748236
+      - race
+      - ethnicity
       - ncbi_taxonomy_id #10543100
       - ncbi_taxonomy_name #10543082
   exposure:
     Desc: environmental, workplace and lifestyle exposure(s)
     Tags:
-      Category: value
-      Assignment: value
-      Class: value
+      Category: subject
+      Assignment: core
+      Class: secondary
       Template: 'Yes'
     Props:
       - environmental_exposure_type #11256813
+      - carcinogen_exposure
   diagnosis:
     Desc: diagnosis
     Tags:
-      Category: value
-      Assignment: value
-      Class: value
+      Category: clinical
+      Assignment: core
+      Class: primary
       Template: 'Yes'
     Props:
       - icd_10_disease_code #11479873
@@ -114,9 +125,9 @@ Nodes:
   treatment:
     Desc: text
     Tags:
-      Category: value
-      Assignment: value
-      Class: value
+      Category: clinical
+      Assignment: core
+      Class: primary
       Template: 'Yes'
     Props:
       - targeted_therapy #6400634
@@ -126,9 +137,9 @@ Nodes:
   specimen:
     Desc: text
     Tags:
-      Category: value
-      Assignment: value
-      Class: value
+      Category: biospecimen
+      Assignment: core
+      Class: primary
       Template: 'Yes'
     Props:
       - days_from_diagnosis_to_specimen_collection #11253404
@@ -142,13 +153,17 @@ Nodes:
       - obi_specimen_type #11253427
       - specimen_category #is this the Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic caDSR 7069877
       - type_of_tissue #caDSR 7003892
+      - anatomical_collection_site
+      - parent_biospecimen_type
+      - biospecimen_type
+      - tissue_category
       - assessment_timepoint #this appears to be the Catalog Site's "Collection Timepoint" caDSR 7065963
   data_file:
     Desc: file
     Tags:
-      Category: value
-      Assignment: value
-      Class: value
+      Category: data_file
+      Assignment: core
+      Class: primary
       Template: 'Yes'
     Props:
       - data_file_checksum_type #11475057

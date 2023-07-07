@@ -141,8 +141,70 @@ PropDefinitions:
       - value 1
       - value 2
     Req: 'Yes'
+  # image collection props
+  image_collection_name:
+    Desc: The name of the image collection exactly as it appears at the location where the collection can be viewed and/or accessed.
+    Src: Internally-curated
+    Type: string
+    Req: 'Yes'
+    Tags:
+       Labeled: Collection
+  image_type_included:
+    Desc: A list of the image types included in the image collection, drawn from a list of acceptable values.
+    Src: Internally-curated
+    Type:
+      value_type: list
+      Enum:
+        - CT
+        - Histopathology
+        - MRI
+        - PET
+        - X-ray
+        - Optical
+        - Ultrasound
+    Req: 'Yes'
+    Tags:
+       Labeled: Image Types
+  image_collection_url:
+    Desc: The external url via which the image collection can be viewed and/or accessed.
+    Src: Internally-curated
+    Type: string
+    Req: 'Yes'
+  repository_name:
+    Desc: The name of the image repository within which the image collection can be found, stated in the form of the appropriate acronym.
+    Src: Internally-curated
+    Type: string
+    Req: 'Yes'
+  collection_access:
+    Desc: Indicator as to whether the image collection can be accessed via download versus being accessible only via the cloud.
+    Src: Internally-curated
+    Enum:
+      - Download
+      - Cloud
+    Req: 'Yes'
   # subject
+  subject_id: #CMB Participant ID
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
   # demographic
+  age_at_enrollment:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'Yes'
   sex:
     Desc: text
     Term:
@@ -150,7 +212,9 @@ PropDefinitions:
         Code: 'PID6343385'
         Value: Data Element Name  
     Src: CMB
-    Type: integer
+    Type:
+      - Female
+      - Male
     Req: 'Yes'
   reported_gender:
   #10748236
@@ -161,6 +225,33 @@ PropDefinitions:
         Value: Person Reported Gender Type  
     Src: DSS
     Type: integer
+    Req: 'Yes'
+  race: # details straight from the CMB Catalog Site
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      - American Indian or Alaska Native
+      - Black or African American
+      - Native Hawaiian or other Pacific Islander
+      - Not Reported
+      - Unknown
+    Req: 'Yes'
+  ethnicity: # details straight from the CMB Catalog Site
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      - Hispanic or Latino
+      - Not Hispanic or Latino
+      - Not reported
+      - Unknown
     Req: 'Yes'
   ncbi_taxonomy_id: # perhaps this a direct property of subject?
   #10543100
@@ -193,6 +284,18 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: 'Yes'
+  carcinogen_exposure:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      - 'Yes'
+      - 'No'
+      - Unknown
+    Req: 'Yes'  
   # diagnosis
   icd_10_disease_code:
   #11479873
@@ -211,7 +314,15 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type: string
+    Type:
+      - 10000884-Acute Myeloid Leukemia Not Otherwise Specified
+      - 10010029 - Colorectal Carcinoma
+       -10066354 - Gastroesophageal Junction Adenocarcinoma
+      - 10029514 - Lung Non-Small Cell Carcinoma
+      - 10041071 - Lung Small Cell Carcinoma
+      - 10053571 - Melanoma
+      - 10028566 - Plasma Cell Myeloma
+      - 10036910 - Prostate Carcinoma
     Req: 'Yes'
   snomed_disease_code: #CMB Disease Stage
     Desc: text
@@ -282,7 +393,11 @@ PropDefinitions:
         Code: '11325685'
         Value: Diagnosis Tumor Grade 
     Src: DSS
-    Type: string
+    Type:
+      - Grade Cannot Be Assessed
+      - Moderately Differentiated
+      - Poorly Differentiated
+      - Well Differentiated
     Req: 'Yes'
   subject_age_at_diagnosis:
   #10609539
@@ -418,7 +533,73 @@ PropDefinitions:
     Src: CMB
     Type: integer
     Req: 'Yes'
-  assessment_timepoint: #this appears to be the Catalog Site's "Collection Timepoint"
+  anatomical_collection_site: # details straight from the CMB Catalog Site
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: integer
+    Req: 'Yes'
+  parent_biospecimen_type: # details straight from the CMB Catalog Site
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      - Bone Marrow Aspirate
+      - Cell Block
+      - EDTA Blood
+      - FFPE Block
+      - Formalin Bone Marrow Biopsy
+      - Formalin Fixed Tissue
+      - Snap Frozen Tissue
+      - Stained Bone Marrow Aspirate Slide
+      - Streck Blood
+      - Unstained Bone Marrow Aspirate Slide
+      - Unstained Slide
+    Req: 'Yes'
+  biospecimen_type: # details straight from the CMB Catalog Site
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      - BMMC
+      - Blood Pellet
+      - Cells
+      - Curl
+      - DNA
+      - FFPE Block
+      - Glass H&E Slide
+      - Glass Slide Smear
+      - Glass Unstained Slide
+      - PBMC
+      - Plasma
+      - Plasma-cf
+      - RNA
+      - Snap Frozen Unfixed Tissue
+      - Tissue Curl
+      - cDNA
+    Req: 'Yes'
+  tissue_category: # details straight from the CMB Catalog Site
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: value
+    Type:
+      - Metastatic
+      - Normal
+      - Primary
+    Req: 'Yes'
+  assessment_timepoint: # this appears to be the CMB Catalog Site's "Collection Timepoint"
     #caDSR 7065963
     Desc: text
     Term:
@@ -432,7 +613,7 @@ PropDefinitions:
       - ON TREATMENT
       - PROGRESSION
     Req: 'Yes'  
-  # data_file
+ # data_file
   data_file_checksum_type:
   #11475057
     Desc: text
