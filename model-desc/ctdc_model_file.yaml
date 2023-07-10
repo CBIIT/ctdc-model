@@ -232,7 +232,7 @@ Relationships:
         Mul: one_to_one
       - Src: diagnosis
         Dst: subject
-      - Src: tretament
+      - Src: treatment
         Dst: subject  
       - Src: exposure
         Dst: subject
