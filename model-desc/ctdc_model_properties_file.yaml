@@ -42,7 +42,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR
         Code: '11459801'
-        Value: Project Short Name Text  
+        Value: Program Short Name Text  
     Src: DSS
     Type: string
     Req: 'Yes'
@@ -67,7 +67,40 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: 'Yes'
-  #principal_investigator
+  # study
+  study_name:
+  #11459810
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11459810'
+        Value: Study Name Text  
+    Src: DSS
+    Type: string
+    Req: 'Yes'  
+  study_short_name:
+  #11459812
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11459812'
+        Value: Study Short Name Text
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  study_type:
+  #11160683
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11160683'
+        Value: Data Element Name  
+    Src: DSS
+    Enum:
+      - value 1
+      - value 2
+    Req: 'Yes'
+  # principal_investigator
   principal_investigator_first_name:
   #10624731
     Desc: text
@@ -108,76 +141,42 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: Preferred
-  # study
-  study_name:
-  #11459810
-    Desc: text
-    Term:
-      - Origin: caDSR
-        Code: '11459810'
-        Value: Study Name Text  
-    Src: DSS
-    Type: string
-    Req: 'Yes'  
-  study_short_name:
-  #11459812
-    Desc: text
-    Term:
-      - Origin: caDSR
-        Code: '11459812'
-        Value: Study Short Name Text
-    Src: DSS
-    Type: string
-    Req: 'Yes'
-  study_type:
-  #11160683
-    Desc: text
-    Term:
-      - Origin: caDSR
-        Code: '11160683'
-        Value: Data Element Name  
-    Src: DSS
-    Enum:
-      - value 1
-      - value 2
-    Req: 'Yes'
   # image collection props
   image_collection_name:
     Desc: The name of the image collection exactly as it appears at the location where the collection can be viewed and/or accessed.
-    Src: Internally-curated
+    Src: ICDC
     Type: string
     Req: 'Yes'
     Tags:
        Labeled: Collection
   image_type_included:
     Desc: A list of the image types included in the image collection, drawn from a list of acceptable values.
-    Src: Internally-curated
+    Src: ICDC
     Type:
       value_type: list
       Enum:
         - CT
-        - Histopathology
+        - Digital Radiography 
         - MRI
+        - Nuclear Medicine
         - PET
-        - X-ray
-        - Optical
         - Ultrasound
     Req: 'Yes'
     Tags:
        Labeled: Image Types
   image_collection_url:
     Desc: The external url via which the image collection can be viewed and/or accessed.
-    Src: Internally-curated
+    Src: ICDC
     Type: string
     Req: 'Yes'
   repository_name:
     Desc: The name of the image repository within which the image collection can be found, stated in the form of the appropriate acronym.
-    Src: Internally-curated
+    Src: ICDC
     Type: string
     Req: 'Yes'
   collection_access:
     Desc: Indicator as to whether the image collection can be accessed via download versus being accessible only via the cloud.
-    Src: Internally-curated
+    Src: ICDC
     Enum:
       - Download
       - Cloud
@@ -202,7 +201,7 @@ PropDefinitions:
     Src: CMB
     Type:
       units:
-        - days
+        - years
       value_type: number
     Req: 'Yes'
   sex:
@@ -212,9 +211,13 @@ PropDefinitions:
         Code: 'PID6343385'
         Value: Data Element Name  
     Src: CMB
-    Type:
+    Enum:
+      - F 
       - Female
+      - M
       - Male
+      - U
+      - UNDIFFERENTIATED
     Req: 'Yes'
   reported_gender:
   #10748236
@@ -224,7 +227,17 @@ PropDefinitions:
         Code: '10748236'
         Value: Person Reported Gender Type  
     Src: DSS
-    Type: integer
+    Enum:
+      - Choose Not to Disclose
+      - Intersex
+      - Female
+      - Female-To-Male
+      - Male
+      - Male-To-Female
+      - None Of These Describe Me
+      - Non-Conforming Gender
+      - Refused to Answer
+      - Unknown
     Req: 'Yes'
   race: # details straight from the CMB Catalog Site
     Desc: text
@@ -233,7 +246,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type:
+    Enum:
       - American Indian or Alaska Native
       - Black or African American
       - Native Hawaiian or other Pacific Islander
@@ -247,7 +260,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type:
+    Enum:
       - Hispanic or Latino
       - Not Hispanic or Latino
       - Not reported
@@ -282,7 +295,17 @@ PropDefinitions:
         Code: '11256813'
         Value: Environmental Exposure Type
     Src: DSS
-    Type: string
+    Type:
+      - Asbestos Exposure
+      - Chemical Exposure
+      - Marijuana Smoke Exposure
+      - Radiation Exposure
+      - Radon Exposure
+      - Respirable Crystalline Silica Exposure
+      - Smoke Exposure
+      - Smokeless Tobacco Exposure
+      - Tobacco Related Exposure
+      - Wood Dust Exposure
     Req: 'Yes'
   carcinogen_exposure:
     Desc: text
@@ -291,7 +314,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type:
+    Enum:
       - 'Yes'
       - 'No'
       - Unknown
@@ -314,7 +337,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type:
+    Enum:
       - 10000884-Acute Myeloid Leukemia Not Otherwise Specified
       - 10010029 - Colorectal Carcinoma
        -10066354 - Gastroesophageal Junction Adenocarcinoma
@@ -393,7 +416,7 @@ PropDefinitions:
         Code: '11325685'
         Value: Diagnosis Tumor Grade 
     Src: DSS
-    Type:
+    Enum:
       - Grade Cannot Be Assessed
       - Moderately Differentiated
       - Poorly Differentiated
@@ -521,7 +544,7 @@ PropDefinitions:
         Code: 'caDSR 7069877D'
         Value: Data Element Name  
     Src: CMB
-    Type: ENUM
+    Type: string
     Req: 'Yes'
   type_of_tissue:
     #caDSR 7003892
@@ -549,7 +572,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type:
+    Enum:
       - Bone Marrow Aspirate
       - Cell Block
       - EDTA Blood
@@ -569,7 +592,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type:
+    Enum:
       - BMMC
       - Blood Pellet
       - Cells
@@ -594,7 +617,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: value
-    Type:
+    Enum:
       - Metastatic
       - Normal
       - Primary
@@ -607,7 +630,7 @@ PropDefinitions:
         Code: 'caDSR 7065963'
         Value: Data Element Name  
     Src: CMB
-    Type:
+    Enum:
       - ARCHIVAL
       - BASELINE
       - ON TREATMENT
