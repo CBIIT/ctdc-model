@@ -76,7 +76,7 @@ Nodes:
   subject:
     Desc: text
     Tags:
-      Category: subject
+      Category: case # temporarily, will actually be "subject"
       Assignment: core
       Class: primary
       Template: 'Yes'
@@ -85,7 +85,7 @@ Nodes:
   demographic:
     Desc: the typical demographics
     Tags:
-      Category: subject
+      Category: case # temporarily, will actually be "subject"
       Assignment: core
       Class: primary
       Template: 'Yes'
@@ -99,7 +99,7 @@ Nodes:
   exposure:
     Desc: environmental, workplace and lifestyle exposure(s)
     Tags:
-      Category: subject
+      Category: case # temporarily, will actually be "subject"
       Assignment: core
       Class: secondary
       Template: 'Yes'
@@ -201,6 +201,10 @@ Relationships:
         Dst: study
       - Src: data_file
         Dst: project
+      - Src: image_collection
+        Dst: study
+      - Src: image_collection
+        Dst: project
     Props: null      
   #of_study:
     #Mul: many_to_many
@@ -228,6 +232,8 @@ Relationships:
         Mul: one_to_one
       - Src: diagnosis
         Dst: subject
+      - Src: tretament
+        Dst: subject  
       - Src: exposure
         Dst: subject
         # to accommodate a Specimen being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Visit, etc.
