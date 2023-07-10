@@ -208,7 +208,7 @@ PropDefinitions:
     Desc: text
     Term:
       - Origin: caDSR
-        Code: 'PID6343385'
+        Code: '6343385'
         Value: Data Element Name  
     Src: CMB
     Enum:
@@ -417,10 +417,21 @@ PropDefinitions:
         Value: Diagnosis Tumor Grade 
     Src: DSS
     Enum:
-      - Grade Cannot Be Assessed
-      - Moderately Differentiated
-      - Poorly Differentiated
-      - Well Differentiated
+      - GB
+      - GX
+      - G1
+      - G2
+      - G3
+      - G4
+      - High Grade
+      - Intermediate Grade
+      - Low Grade
+      - Not Applicable
+      - Not Reported 
+      - Grade Cannot Be Assessed # from CMB Catalog Site
+      - Moderately Differentiated # from CMB Catalog Site
+      - Poorly Differentiated # from CMB Catalog Site
+      - Well Differentiated # from CMB Catalog Site
     Req: 'Yes'
   subject_age_at_diagnosis:
   #10609539
@@ -532,29 +543,46 @@ PropDefinitions:
     Term:
       - Origin: caDSR
         Code: '11253427'
-        Value: Data Element Name  
+        Value: Specimen Type Text # this does not match the caDSR record of "Specimen Material OBIB Source"  
     Src: DSS
     Type: integer
     Req: 'No'
-  specimen_category: #is this the Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic?
+  specimen_category: #is this the Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic? Based on the caDSR list of permissible values HELL NO!
     #caDSR 7069877
     Desc: text
     Term:
       - Origin: caDSR
-        Code: 'caDSR 7069877D'
+        Code: '7069877D'
         Value: Data Element Name  
     Src: CMB
-    Type: string
+    Enum:
+      - BLOOD
+      - BONE MARROW
+      - BUCCAL CELL SAMPLE
+      - CEREBROSPINAL FLUID
+      - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
+      - FORMALIN FIXED TISSUE
+      - FRESH TISSUE
+      - FROZEN TISSUE
+      - OTHER BODILY FLUIDs
+      - SALIVA
+      - STOOL
+      - URINE
     Req: 'Yes'
   type_of_tissue:
     #caDSR 7003892
     Desc: text
     Term:
       - Origin: caDSR
-        Code: '#caDSR 7003892'
-        Value: Data Element Name  
+        Code: '7003892'
+        Value: Tissue Type  
     Src: CMB
-    Type: integer
+    Enum:
+      - ANT # Adjacent Normal Tissue
+      - NORMAL
+      - METASTATIC
+      - OTHER
+      - PRIMARY
     Req: 'Yes'
   anatomical_collection_site: # details straight from the CMB Catalog Site
     Desc: text
@@ -610,7 +638,7 @@ PropDefinitions:
       - Tissue Curl
       - cDNA
     Req: 'Yes'
-  tissue_category: # details straight from the CMB Catalog Site
+  tissue_category: # details straight from the CMB Catalog Site. Based upon the values in use, this looks like caDSR "Tissue Type" aka CTDC "type_of_tissue"
     Desc: text
     Term:
       - Origin: caDSR
@@ -645,7 +673,10 @@ PropDefinitions:
         Code: '11475057'
         Value: Electronic Data File Checksum Type  
     Src: DSS
-    Type: string
+    Enum:
+      - md5sum
+      - sha1
+      - sha256
     Req: 'Yes'
   data_file_checksum_value:
   #11480133
@@ -665,7 +696,10 @@ PropDefinitions:
         Code: '11387114'
         Value: Electronic Data File Compression Type  
     Src: DSS
-    Type: integer
+    Enum:
+      - Compressed
+      - Uncompressed
+      - Unknown
     Req: Preferred
   data_file_description:
   #11280338

@@ -150,13 +150,13 @@ Nodes:
       - days_from_recurrence_to_specimen_collection #11251133
       - days_from_specimen_collection_to_initial_pathologic_diagnosis #11253404
       - collection_date # from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
-      - obi_specimen_type #11253427
-      - specimen_category # is this the Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic caDSR 7069877
-      - type_of_tissue #caDSR 7003892
+      - obi_specimen_type #11253427 not a good match to the caDSR term reference by the CDE's ID
+      - specimen_category # confusingly close to the CMB Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, but acceptable terms for caDSR 7069877, quoted as a reference for "specimen category" uses terms that do not relate to "tissue category"
+      - type_of_tissue #caDSR 7003892 this looks very much like the CMB Catalog Site's "Tissue Category"
       - anatomical_collection_site
       - parent_biospecimen_type
       - biospecimen_type
-      - tissue_category # this would be the Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic caDSR 7069877, which appears within at least two of the DDs as Tissue Type
+      - tissue_category # this would be the Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, which appears within at least two of the DDs as Tissue Type
       - assessment_timepoint # this appears to be the Catalog Site's "Collection Timepoint" caDSR 7065963
   data_file:
     Desc: file
