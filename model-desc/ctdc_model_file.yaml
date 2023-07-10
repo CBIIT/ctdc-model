@@ -233,7 +233,7 @@ Relationships:
       - Src: diagnosis
         Dst: subject
       - Src: treatment
-        Dst: subject  
+        Dst: subject
       - Src: exposure
         Dst: subject
         # to accommodate a Specimen being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Visit, etc.
