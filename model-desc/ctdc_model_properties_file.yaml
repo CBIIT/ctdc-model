@@ -477,7 +477,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'No'
-    radiological_procedure_name:
+  radiological_procedure_name:
     #6411539
     Desc: text
     Term:
