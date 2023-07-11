@@ -25,7 +25,7 @@ PropDefinitions:
       - 'Yes'
       - 'No'
     Req: Preferred
-  #program
+  # program
   program_name:
   #11444542:
     Desc: text
@@ -46,7 +46,7 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: 'Yes'
-  #project
+  # project
   project_name:
   #11459804
     Desc: text
@@ -274,7 +274,7 @@ PropDefinitions:
         Code: '10543100'
         Value: Subject National Center for Biotechnology Information Taxonomy Identifier Integer
     Src: DSS
-    Type: integer
+    Type: integer # not enumerated
     Req: 'Yes'
   ncbi_taxonomy_name: # perhaps this a direct property of subject?
   #10543082
@@ -284,7 +284,7 @@ PropDefinitions:
         Code: '10543082'
         Value: Subject National Center for Biotechnology Information Taxonomy Name Text
     Src: DSS
-    Type: string
+    Type: string # supposedly enumerated but no permissible values listed
     Req: 'Yes'
   # exposure
   environmental_exposure_type:
@@ -445,7 +445,72 @@ PropDefinitions:
       units:
         - years
       value_type: number
+    Req: 'Yes'
+ # treatment
+  targeted_therapy:
+  #6400634
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '6400634'
+        Value: Concomitant Medication Name # check on this, repeated below
+    Src: CMB
+    Type: string
+    Req: 'No'
+  therapy:
+  #6400634
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '6400634'
+        Value: Concomitant Medication Name 
+    Src: CMB
+    Type: string
+    Req: 'No'
+  surgical_procedure_name:
+  #6411539
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '6411539'
+        Value: Procedure Name  
+    Src: CMB
+    Type: string
+    Req: 'No'
+    radiological_procedure_name:
+    #6411539
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '6411539'
+        Value: Procedure Name  
+    Src: CMB
+    Type: string
+    Req: 'No'     
+ # survival_status
+  survival_status:
+  #7050072
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '7050072'
+        Value: Survival Status  
+    Src: CMB
+    Enum:
+      - ALIVE
+      - DEAD
+      - UNKNOWN
     Req: 'Yes'              
+  primary_cause_of_death:
+  #6421593
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '6421593'
+        Value: Primary Cause of Death 
+    Src: CMB
+    Type: string
+    Req: 'No'  
  # specimen 
   days_from_diagnosis_to_specimen_collection:
   #11253404
@@ -569,7 +634,7 @@ PropDefinitions:
       - STOOL
       - URINE
     Req: 'Yes'
-  type_of_tissue:
+  type_of_tissue: # this looks very much like CMB Catalog "Tissue Category"
     #caDSR 7003892
     Desc: text
     Term:
