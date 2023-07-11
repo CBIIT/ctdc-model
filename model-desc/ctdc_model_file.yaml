@@ -3,20 +3,6 @@
 # Lower case names are labels for the entities
 
 Nodes:
-  node:
-    Desc: text
-    Tags:
-      Category: value
-      Assignment: value
-      Class: value
-      Template: 'Yes'
-    Props:
-      - property_1
-      - property_2
-      - property_3
-      - property_4
-      - property_5
-      - property_6
   program:  
     Desc: text
     Tags:
