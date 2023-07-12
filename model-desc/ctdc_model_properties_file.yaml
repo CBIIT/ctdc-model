@@ -97,8 +97,29 @@ PropDefinitions:
         Value: Data Element Name  
     Src: DSS
     Enum:
-      - value 1
-      - value 2
+      - Adverse Effect Mitigation Study 
+      - Ancillary Study
+      - Basic Science Research
+      - Correlative Study
+      - Cure Study
+      - Device Feasibility Study
+      - Diagnosis Study
+      - Disease Modifying Treatment Study
+      - Early Detection Study
+      - Education Training Clinical Study
+      - Epidemiology Research 
+      - Genomics Research
+      - Health Services Research
+      - Imaging Research
+      - Observational Study
+      - Outcomes Research
+      - Prevention Study
+      - Proteomic Research
+      - Rehabilitation Clinical Study
+      - Screening Study
+      - Supportive Care Study
+      - Transcriptomics Research
+      - Treatment Study
     Req: 'Yes'
   # principal_investigator
   principal_investigator_first_name:
@@ -602,6 +623,16 @@ PropDefinitions:
         - days
       value_type: number
     Req: 'Yes'
+  icd_o_3_tissue_morphology:
+    #11326261
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11326261'
+        Value: Specimen Tumor Tissue ICD-O-3 Morphology Code 
+    Src: DSS
+    Type: string # actually enumerated to a long list of ICD-O-3 codes, which is too long to specifiy here; we should instead just include the codes that will be seen in CMB data?
+    Req: 'No'
   obi_specimen_type:
     #11253427
     Desc: text
