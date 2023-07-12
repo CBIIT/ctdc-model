@@ -82,6 +82,9 @@ Nodes:
       Template: 'Yes'
     Props:
       - subject_id
+      - biomarker_results_available
+      - radiology_images_available
+      - histology_images_available
   demographic:
     Desc: the typical demographics
     Tags:

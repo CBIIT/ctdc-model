@@ -204,7 +204,7 @@ PropDefinitions:
     Req: 'Yes'
   # subject
   subject_id: #CMB Participant ID
-    Desc: text
+    Desc: The globally unique ID by which any given subject can be unambiguously identified and displayed across studies/trials. <br>This property is used as the key via which child records, e.g. sample records, can be associated with the appropriate sbject during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -212,6 +212,34 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
+    Key: true
+  biomarker_results_available:
+    Desc: An indication as to whether biomarker results relating to the subject in question are available
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string # at least temporarily
+    Req: Preferred # at least temporarily
+  radiology_images_available:
+    Desc: An indication as to whether radiology images relating to the subject in question are available
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string # at least temporarily
+    Req: Preferred # at least temporarily
+  histology_images_available:
+    Desc: An indication as to whether histology images relating to the subject in question are available
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string # at least temporarily
+    Req: Preferred # at least temporarily
   # demographic
   age_at_enrollment:
     Desc: text
