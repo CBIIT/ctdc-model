@@ -251,7 +251,7 @@ Relationships:
         Dst: subject
       - Src: treatment
         Dst: subject
-      - Src: survival_status
+      - Src: subject_status
         Dst: subject
         Mul: one_to_one  
       - Src: exposure
