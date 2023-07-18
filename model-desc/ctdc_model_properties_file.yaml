@@ -222,6 +222,18 @@ PropDefinitions:
     Src: CMB
     Type: string # at least temporarily
     Req: Preferred # at least temporarily
+  radiology_report_available: # aka CMB's RADIOLOGY REPORT annotation #6944764
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '6944764'
+        Value: Report Upload 
+    Src: value
+    Type:
+      - 'Yes'
+      - 'No'
+      - Unknown
+    Req: 'Yes'
   radiology_images_available:
     Desc: An indication as to whether radiology images relating to the subject in question are available
     Term:
@@ -379,7 +391,7 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: Preferred
-  medra_disease_code: #CMB Primary Diagnosis
+  meddra_disease_code: #CMB Primary Diagnosis
     Desc: text
     Term:
       - Origin: caDSR
@@ -536,7 +548,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'No'     
- # survival_status
+ # subject_status
   survival_status:
   #7050072
     Desc: text
@@ -559,7 +571,29 @@ PropDefinitions:
         Value: Primary Cause of Death 
     Src: CMB
     Type: string
-    Req: 'No'  
+    Req: 'No'
+  off_study:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: value
+    Type:
+      - 'Yes'
+      - 'No'
+      - Unknown
+    Req: 'Yes'
+  off_study_reason:
+  #6355981
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '6355981'
+        Value: Disposition Event Dictionary-Derived/Standardized Term 
+    Src: value
+    Type: integer # actually enumerated via a long list of ~40 acceptable terms, but do these in fact represent the values CMB has/uses?
+    Req: 'Yes'     
  # specimen 
   days_from_diagnosis_to_specimen_collection:
   #11253404

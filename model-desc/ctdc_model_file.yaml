@@ -83,6 +83,7 @@ Nodes:
     Props:
       - subject_id
       - biomarker_results_available
+      - radiology_report_available #6944764
       - radiology_images_available
       - histology_images_available
   demographic:
@@ -118,7 +119,7 @@ Nodes:
       Template: 'Yes'
     Props:
       - icd_10_disease_code #11479873
-      - medra_disease_code
+      - meddra_disease_code
       - snomed_disease_code #this is disease plus stage I think
       - diagnosis_date #quantified in days indexed to date of trial enrollment
       - icd_o_primary_site #11341616
@@ -137,7 +138,7 @@ Nodes:
       - therapy #6400634
       - surgical_procedure_name #6411539
       - radiological_procedure_name #6411539
-  survival_status:
+  subject_status:
     Desc: text
     Tags:
       Category: clinical
@@ -147,6 +148,8 @@ Nodes:
     Props:
       - survival_status #7050072
       - primary_cause_of_death #6421593
+      - off_study
+      - off_study_reason #6355981
   specimen:
     Desc: text
     Tags:
