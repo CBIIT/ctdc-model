@@ -27,8 +27,7 @@ PropDefinitions:
     Req: Preferred
   # program
   program_name:
-  #11444542:
-    Desc: text
+    Desc: CDE ID = 11444542
     Term:
       - Origin: caDSR
         Code: '11444542'
@@ -37,8 +36,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   program_short_name:
-  #11459801
-    Desc: text
+    Desc: CDE ID = 11459801
     Term:
       - Origin: caDSR
         Code: '11459801'
@@ -48,8 +46,7 @@ PropDefinitions:
     Req: 'Yes'
   # project
   project_name:
-  #11459804
-    Desc: text
+    Desc: CDE ID = 11459804
     Term:
       - Origin: caDSR
         Code: '11459804'
@@ -58,8 +55,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   project_short_name:
-  #11459806
-    Desc: text
+    Desc: CDE ID = 11459806
     Term:
       - Origin: caDSR
         Code: '11459806'
@@ -69,8 +65,7 @@ PropDefinitions:
     Req: 'Yes'
   # study
   study_name:
-  #11459810
-    Desc: text
+    Desc: CDE ID = 11459810
     Term:
       - Origin: caDSR
         Code: '11459810'
@@ -79,8 +74,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'  
   study_short_name:
-  #11459812
-    Desc: text
+    Desc: CDE ID = 11459812
     Term:
       - Origin: caDSR
         Code: '11459812'
@@ -89,12 +83,11 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   study_type:
-  #11160683
-    Desc: text
+    Desc: CDE ID = 11160683
     Term:
       - Origin: caDSR
         Code: '11160683'
-        Value: Data Element Name  
+        Value: Study Primary Purpose Type 
     Src: DSS
     Enum:
       - Adverse Effect Mitigation Study 
@@ -123,8 +116,7 @@ PropDefinitions:
     Req: 'Yes'
   # principal_investigator
   principal_investigator_first_name:
-  #10624731
-    Desc: text
+    Desc: CDE ID = 10624731
     Term:
       - Origin: caDSR
         Code: '10624731'
@@ -133,18 +125,16 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   principal_investigator_last_name:
-  #10624733
-    Desc: text
+    Desc: CDE ID = 10624733
     Term:
       - Origin: caDSR
-        Code: '10624733D'
+        Code: '10624733'
         Value: Principal Investigator Last Name Text  
     Src: DSS
     Type: string
     Req: 'Yes'
   principal_investigator_middle_name:
-  #10624732
-    Desc: text
+    Desc: CDE ID = 10624732
     Term:
       - Origin: caDSR
         Code: '10624732'
@@ -153,8 +143,7 @@ PropDefinitions:
     Type: string
     Req: 'No'
   principal_investigator_orcid_id:
-  #10624734
-    Desc: text
+    Desc: CDE ID = 10624734
     Term:
       - Origin: caDSR
         Code: '10624734'
@@ -175,7 +164,7 @@ PropDefinitions:
     Src: ICDC
     Type:
       value_type: list
-      Enum:
+      Enum: #updated to accurately reflect the CMB image types
         - CT
         - Digital Radiography 
         - MRI
@@ -204,7 +193,7 @@ PropDefinitions:
     Req: 'Yes'
   # subject
   subject_id: #CMB Participant ID
-    Desc: The globally unique ID by which any given subject can be unambiguously identified and displayed across studies/trials. <br>This property is used as the key via which child records, e.g. sample records, can be associated with the appropriate sbject during data loading, and to identify the correct records during data updates.
+    Desc: The globally unique ID by which any given subject can be unambiguously identified and displayed across studies/trials. <br>This property is used as the key via which child records, e.g. biospecimen records, can be associated with the appropriate subject during data loading, and to identify the correct records during data updates. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -214,47 +203,56 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   biomarker_results_available:
-    Desc: An indication as to whether biomarker results relating to the subject in question are available
+    Desc: Indicator as to whether any biomarker results relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type: string # at least temporarily
-    Req: Preferred # at least temporarily
+    Enum:
+      - 'Yes'
+      - 'No'
+      - Unknown
+    Req: 'Yes'
   radiology_report_available: # aka CMB's RADIOLOGY REPORT annotation #6944764
-    Desc: text
+    Desc: Indicator as to whether any radiology reports results relating to the subject in question are available. CDE ID = 6944764
     Term:
       - Origin: caDSR
         Code: '6944764'
         Value: Report Upload 
     Src: value
-    Type:
+    Enum:
       - 'Yes'
       - 'No'
       - Unknown
     Req: 'Yes'
   radiology_images_available:
-    Desc: An indication as to whether radiology images relating to the subject in question are available
+    Desc: Indicator as to whether any radiology images relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type: string # at least temporarily
-    Req: Preferred # at least temporarily
+    Enum:
+      - 'Yes'
+      - 'No'
+      - Unknown
+    Req: 'Yes'
   histology_images_available:
-    Desc: An indication as to whether histology images relating to the subject in question are available
+    Desc: Indicator as to whether any histology images relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type: string # at least temporarily
-    Req: Preferred # at least temporarily
+    Enum:
+      - 'Yes'
+      - 'No'
+      - Unknown
+    Req: 'Yes'
   # demographic
   age_at_enrollment:
-    Desc: text
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -266,11 +264,11 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   sex:
-    Desc: text
+    Desc: text CDE ID = 6343385
     Term:
       - Origin: caDSR
         Code: '6343385'
-        Value: Data Element Name  
+        Value: Sex  
     Src: CMB
     Enum:
       - F 
@@ -281,8 +279,7 @@ PropDefinitions:
       - UNDIFFERENTIATED
     Req: 'Yes'
   reported_gender:
-  #10748236
-    Desc: text
+    Desc: text CDE ID = 10748236
     Term:
       - Origin: caDSR
         Code: '10748236'
@@ -300,8 +297,8 @@ PropDefinitions:
       - Refused to Answer
       - Unknown
     Req: 'Yes'
-  race: # details straight from the CMB Catalog Site
-    Desc: text
+  race:  # details straight from the CMB Catalog Site
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -315,7 +312,7 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   ethnicity: # details straight from the CMB Catalog Site
-    Desc: text
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -328,8 +325,7 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   ncbi_taxonomy_id: # perhaps this a direct property of subject?
-  #10543100
-    Desc: text
+    Desc: text CDE ID = 10543100
     Term:
       - Origin: caDSR
         Code: '10543100'
@@ -338,8 +334,7 @@ PropDefinitions:
     Type: integer # not enumerated
     Req: 'Yes'
   ncbi_taxonomy_name: # perhaps this a direct property of subject?
-  #10543082
-    Desc: text
+    Desc: text CDE ID = 10543082
     Term:
       - Origin: caDSR
         Code: '10543082'
@@ -350,13 +345,13 @@ PropDefinitions:
   # exposure
   environmental_exposure_type:
   #11256813
-    Desc: text
+    Desc: text CDE ID = 11256813
     Term:
       - Origin: caDSR
         Code: '11256813'
         Value: Environmental Exposure Type
     Src: DSS
-    Type:
+    Enum:
       - Asbestos Exposure
       - Chemical Exposure
       - Marijuana Smoke Exposure
@@ -369,7 +364,7 @@ PropDefinitions:
       - Wood Dust Exposure
     Req: 'Yes'
   carcinogen_exposure:
-    Desc: text
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -383,7 +378,7 @@ PropDefinitions:
   # diagnosis
   icd_10_disease_code:
   #11479873
-    Desc: text
+    Desc: text CDE ID = 11479873
     Term:
       - Origin: caDSR
         Code: '11479873'
@@ -391,8 +386,8 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: Preferred
-  meddra_disease_code: #CMB Primary Diagnosis
-    Desc: text
+  meddra_disease_code: # the CMB Catalog Site's "Primary Diagnosis (medDRA Disease Code)" is actually a concatenation of medDRA code and CTEP disease code
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -408,8 +403,26 @@ PropDefinitions:
       - 10028566 - Plasma Cell Myeloma
       - 10036910 - Prostate Carcinoma
     Req: 'Yes'
+  ctep_disease_code:
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: value
+    Enum:
+      - Acute Myeloid Leukemia Not Otherwise Specified  # 10000884
+      - Adenocarcinoma of the Gastroesophageal Junction # 10066354
+      - Colon Adenocarcinoma                            # 10010029
+      - Colorectal Carcinoma                            # 10010029
+      - Melanoma                                        # 10053571
+      - Non-Small Cell Lung Carcinoma                   # 10029514
+      - Plasma Cell Myeloma                             # 10028566
+      - Prostate Carcinoma                              # 10036910
+      - Small Cell Lung Carcinoma                       # 10041071 
+    Req: 'Yes'  
   snomed_disease_code: #CMB Disease Stage
-    Desc: text
+    Desc: text CDE ID = 6642369
     Term:
       - Origin: caDSR
         Code: '6642369'
@@ -418,7 +431,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   diagnosis_date:
-    Desc: text
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -431,7 +444,7 @@ PropDefinitions:
     Req: 'Yes'
   icd_o_primary_site:
   #11341616
-    Desc: text
+    Desc: text CDE ID = 11341616
     Term:
       - Origin: caDSR
         Code: '11341616'
@@ -440,7 +453,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   primary_disease_site:
-    Desc: text
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -449,7 +462,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   histological_subtype:
-    Desc: text
+    Desc: text CDE ID = 7344580
     Term:
       - Origin: caDSR
         Code: '7344580'
@@ -458,7 +471,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   date_of_confirmation_of_histology:
-    Desc: text
+    Desc: text CDE ID = 6409589
     Term:
       - Origin: caDSR
         Code: '6409589'
@@ -471,7 +484,7 @@ PropDefinitions:
     Req: 'Yes'
   tumor_grade:
   #11325685
-    Desc: text
+    Desc: text CDE ID = 11325685
     Term:
       - Origin: caDSR
         Code: '11325685'
@@ -495,8 +508,7 @@ PropDefinitions:
       - Well Differentiated # from CMB Catalog Site
     Req: 'Yes'
   subject_age_at_diagnosis:
-  #10609539
-    Desc: text
+    Desc: text CDE ID = 10609539
     Term:
       - Origin: caDSR
         Code: '10609539'
@@ -508,9 +520,8 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
  # treatment
-  targeted_therapy:
-  #6400634
-    Desc: text
+  targeted_therapy: # CMTRT_DSL in CMB Data Submission - 5a_TargetedTherapyAdministration???
+    Desc: text CDE ID = 6400634
     Term:
       - Origin: caDSR
         Code: '6400634'
@@ -518,9 +529,8 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'No'
-  therapy:
-  #6400634
-    Desc: text
+  therapy: # Non-Targeted Therapy in CMB Data Submission - 5a_NonTargetedTherapySupplement
+    Desc: text CDE ID = 6400634
     Term:
       - Origin: caDSR
         Code: '6400634'
@@ -528,9 +538,8 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'No'
-  surgical_procedure_name:
-  #6411539
-    Desc: text
+  surgical_procedure_name: # SURG_PROC_NAME in CMB Data Submission - 5a_NonTargetedSurgerySupplement
+    Desc: text CDE ID = 6411539
     Term:
       - Origin: caDSR
         Code: '6411539'
@@ -538,9 +547,8 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'No'
-  radiological_procedure_name:
-    #6411539
-    Desc: text
+  radiological_procedure_name: # RAD_PROC_NAME in CMB Data Submission - 5a_NonTargetedRadiationSupplement
+    Desc: text CDE ID = 6411539
     Term:
       - Origin: caDSR
         Code: '6411539'
@@ -549,9 +557,8 @@ PropDefinitions:
     Type: string
     Req: 'No'     
  # subject_status
-  survival_status:
-  #7050072
-    Desc: text
+  survival_status: # in CMB Data Submission - 5a_FollowUp
+    Desc: text CDE ID = 7050072
     Term:
       - Origin: caDSR
         Code: '7050072'
@@ -561,10 +568,13 @@ PropDefinitions:
       - ALIVE
       - DEAD
       - UNKNOWN
+      - Alive with Disease # from CMB Data Submission - 5a FollowUp
+      - Alive with No Evidence of Disease # from CMB Data Submission - 5a FollowUp
+      - Alive, Disease Status Unknown # from CMB Data Submission - 5a FollowUp
+      - Dead # from CMB Data Submission - 5a FollowUp
     Req: 'Yes'              
-  primary_cause_of_death:
-  #6421593
-    Desc: text
+  primary_cause_of_death: # in CMB Data Submission - 5a_DeathSummary
+    Desc: text CDE ID = 6421593
     Term:
       - Origin: caDSR
         Code: '6421593'
@@ -572,32 +582,70 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'No'
-  off_study:
-    Desc: text
+  off_study: # infer from OFF_STUDY_DATE in CMB Data Submission - 5a_OffStudy?
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: value
-    Type:
+    Enum:
       - 'Yes'
       - 'No'
       - Unknown
     Req: 'Yes'
-  off_study_reason:
-  #6355981
-    Desc: text
+  off_study_reason: # in CMB Data Submission - 5a_OffStudy
+    Desc: text CDE ID = 6355981
     Term:
       - Origin: caDSR
         Code: '6355981'
         Value: Disposition Event Dictionary-Derived/Standardized Term 
     Src: value
-    Type: integer # actually enumerated via a long list of ~40 acceptable terms, but do these in fact represent the values CMB has/uses?
-    Req: 'Yes'     
+    Enum: # enumerated via a long list of ~40 acceptable terms, but do these in fact represent the values CMB has/uses?
+      - ADVERSE EVENT
+      - APPROVED DRUG AVAILABLE FOR INDICATION
+      - COMPLETED
+      - DEATH
+      - DISEASE RELAPSE
+      - FAILURE TO MEET CONTINUATION CRITERIA
+      - FAILURE TO MEET RANDOMIZATION CRITERIA
+      - LACK OF EFFICACY
+      - LOGISTICAL PROBLEM
+      - LOST TO FOLLOW-UP
+      - MET ELIGIBILITY CRITERIA BUT NOT NEEDED
+      - NEVER DOSED
+      - NO LONGER CLINICALLY BENEFITING
+      - NON-COMPLIANCE WITH NON-STUDY DEVICE
+      - NON-COMPLIANCE WITH STUDY DEVICE
+      - NON-COMPLIANCE WITH STUDY DRUG
+      - NON-COMPLIANCE WITH STUDY SCHEDULE
+      - OTHER
+      - PARTNER PREGNANCY
+      - PHYSICIAN DECISION
+      - PREGNANCY
+      - PROGRESSIVE DISEASE
+      - PROTOCOL DEVIATION
+      - PROTOCOL VIOLATION
+      - PROTOCOL-SPECIFIED WITHDRAWAL CRITERION MET
+      - RANDOMIZED BY MISTAKE
+      - RANDOMIZED BY MISTAKE WITH STUDY TREATMENT
+      - RANDOMIZED BY MISTAKE WITHOUT STUDY TREATMENT
+      - RECOVERY
+      - REQUIRES PROHIBITED MEDICATION
+      - SCREEN FAILURE
+      - SCREENING NOT COMPLETED
+      - SITE TERMINATED BY SPONSOR
+      - SPONSOR REQUEST
+      - STUDY TERMINATED BY SPONSOR
+      - TECHNICAL PROBLEMS
+      - WITHDRAWAL BY PARENT/GUARDIAN
+      - WITHDRAWAL BY SUBJECT
+      - WITHDRAWAL OF ASSENT
+      - WITHDRAWAL OF CONSENT
+    Req: 'No'     
  # specimen 
   days_from_diagnosis_to_specimen_collection:
-  #11253404
-    Desc: text
+    Desc: text CDE ID = 11253404
     Term:
       - Origin: caDSR
         Code: '11253404'
@@ -609,12 +657,11 @@ PropDefinitions:
       value_type: number
     Req: 'No'
   days_from_first_subject_visit_to_specimen_collection:
-    #11248874
-    Desc: text
+    Desc: text CDE ID = 11248874
     Term:
       - Origin: caDSR
         Code: '11248874'
-        Value: Data Element Name  
+        Value: Specimen First Subject Visit To Specimen Collection Day Count
     Src: DSS
     Type:
       units:
@@ -622,12 +669,11 @@ PropDefinitions:
       value_type: number
     Req: 'No'
   days_from_first_treatment_to_specimen_collection:
-    #11250807
-    Desc: text
+    Desc: text CDE ID = 11250807
     Term:
       - Origin: caDSR
         Code: '11250807'
-        Value: Data Element Name  
+        Value: Specimen First Treatment To Specimen Collection Day Count
     Src: DSS
     Type:
       units:
@@ -635,12 +681,11 @@ PropDefinitions:
       value_type: number
     Req: 'No'
   days_from_initial_genomic_sequencing_to_Specimen_collection:
-    #11250807
-    Desc: text
+    Desc: text CDE ID = 11251130
     Term:
       - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+        Code: '11251130'
+        Value: Specimen Initial Genomic Sequencing To Specimen Collection Day Count
     Src: DSS
     Type:
       units:
@@ -648,12 +693,11 @@ PropDefinitions:
       value_type: number
     Req: 'No'
   days_from_recurrence_to_specimen_collection:
-    #11251133
-    Desc: text
+    Desc: text cde id = 11251133
     Term:
       - Origin: caDSR
         Code: '11251133'
-        Value: Data Element Name  
+        Value: Specimen Recurrence To Specimen Collection Day Count
     Src: DSS
     Type:
       units:
@@ -661,12 +705,11 @@ PropDefinitions:
       value_type: number
     Req: 'No'
   days_from_specimen_collection_to_initial_pathologic_diagnosis:
-    #11253404
-    Desc: text
+    Desc: text CDE ID = 11253404
     Term:
       - Origin: caDSR
         Code: '11253404'
-        Value: Data Element Name  
+        Value: Specimen Collection To Initial Pathologic Diagnosis Day Count
     Src: DSS
     Type:
       units:
@@ -674,7 +717,7 @@ PropDefinitions:
       value_type: number
     Req: 'No'
   collection_date: #from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
-    Desc: text
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -686,8 +729,7 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   icd_o_3_tissue_morphology:
-    #11326261
-    Desc: text
+    Desc: text CDE ID = 11326261
     Term:
       - Origin: caDSR
         Code: '11326261'
@@ -696,8 +738,7 @@ PropDefinitions:
     Type: string # actually enumerated to a long list of ICD-O-3 codes, which is too long to specifiy here; we should instead just include the codes that will be seen in CMB data?
     Req: 'No'
   obi_specimen_type:
-    #11253427
-    Desc: text
+    Desc: text CDE ID = 11253427
     Term:
       - Origin: caDSR
         Code: '11253427'
@@ -706,8 +747,7 @@ PropDefinitions:
     Type: integer
     Req: 'No'
   specimen_category: #is this the Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic? Based on the caDSR list of permissible values HELL NO!
-    #caDSR 7069877
-    Desc: text
+    Desc: text CDE ID = 7069877
     Term:
       - Origin: caDSR
         Code: '7069877D'
@@ -728,8 +768,7 @@ PropDefinitions:
       - URINE
     Req: 'Yes'
   type_of_tissue: # this looks very much like CMB Catalog "Tissue Category"
-    #caDSR 7003892
-    Desc: text
+    Desc: text CDE ID = 7003892
     Term:
       - Origin: caDSR
         Code: '7003892'
@@ -743,7 +782,7 @@ PropDefinitions:
       - PRIMARY
     Req: 'Yes'
   anatomical_collection_site: # details straight from the CMB Catalog Site
-    Desc: text
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -752,7 +791,7 @@ PropDefinitions:
     Type: integer
     Req: 'Yes'
   parent_biospecimen_type: # details straight from the CMB Catalog Site
-    Desc: text
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -772,7 +811,7 @@ PropDefinitions:
       - Unstained Slide
     Req: 'Yes'
   biospecimen_type: # details straight from the CMB Catalog Site
-    Desc: text
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -797,7 +836,7 @@ PropDefinitions:
       - cDNA
     Req: 'Yes'
   tissue_category: # details straight from the CMB Catalog Site. Based upon the values in use, this looks like caDSR "Tissue Type" aka CTDC "type_of_tissue"
-    Desc: text
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -809,11 +848,10 @@ PropDefinitions:
       - Primary
     Req: 'Yes'
   assessment_timepoint: # this appears to be the CMB Catalog Site's "Collection Timepoint"
-    #caDSR 7065963
-    Desc: text
+    Desc: text CDE ID = 7065963
     Term:
       - Origin: caDSR
-        Code: 'caDSR 7065963'
+        Code: '7065963'
         Value: Data Element Name  
     Src: CMB
     Enum:
@@ -824,8 +862,7 @@ PropDefinitions:
     Req: 'Yes'  
  # data_file
   data_file_checksum_type:
-  #11475057
-    Desc: text
+    Desc: text CDE ID = 11475057
     Term:
       - Origin: caDSR
         Code: '11475057'
@@ -837,8 +874,7 @@ PropDefinitions:
       - sha256
     Req: 'Yes'
   data_file_checksum_value:
-  #11480133
-    Desc: text
+    Desc: text CDE ID = 11480133
     Term:
       - Origin: caDSR
         Code: '11480133'
@@ -847,8 +883,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   data_file_compression_status:
-  #11387114
-    Desc: text
+    Desc: text CDE ID = 11387114
     Term:
       - Origin: caDSR
         Code: '11387114'
@@ -860,8 +895,7 @@ PropDefinitions:
       - Unknown
     Req: Preferred
   data_file_description:
-  #11280338
-    Desc: text
+    Desc: text CDE ID = 11280338
     Term:
       - Origin: caDSR
         Code: '11280338'
@@ -870,8 +904,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   data_file_format:
-  #11416926
-    Desc: text
+    Desc: text CDE ID = 11416926
     Term:
       - Origin: caDSR
         Code: '11416926'
@@ -880,8 +913,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   data_file_name:
-  #11284037
-    Desc: text
+    Desc: text CDE ID = 11284037
     Term:
       - Origin: caDSR
         Code: '11284037'
@@ -890,8 +922,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   data_file_size:
-  #11479876
-    Desc: text
+    Desc: text CDE ID = 11479876
     Term:
       - Origin: caDSR
         Code: '11479876'

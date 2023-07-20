@@ -120,8 +120,9 @@ Nodes:
     Props:
       - icd_10_disease_code #11479873
       - meddra_disease_code
-      - snomed_disease_code #this is disease plus stage I think
-      - diagnosis_date #quantified in days indexed to date of trial enrollment
+      - ctep_disease_code
+      - snomed_disease_code # this is disease plus stage I think
+      - diagnosis_date # quantified in days indexed to date of trial enrollment
       - icd_o_primary_site #11341616
       - primary_disease_site
       - tumor_grade #11325685
