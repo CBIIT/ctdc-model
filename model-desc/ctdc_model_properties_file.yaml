@@ -27,7 +27,7 @@ PropDefinitions:
     Req: Preferred
   # program
   program_name:
-    Desc: CDE ID = 11444542
+    Desc: text CDE ID = 11444542 
     Term:
       - Origin: caDSR
         Code: '11444542'
@@ -36,7 +36,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   program_short_name:
-    Desc: CDE ID = 11459801
+    Desc: text CDE ID = 11459801 <br>This property is used as the key via which child records, e.g. project and/or study/trial records, can be associated with the appropriate program during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: '11459801'
@@ -56,7 +56,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   project_short_name:
-    Desc: CDE ID = 11459806
+    Desc: CDE ID = 11459806 <br>This property is used as the key via which child records, e.g. study/trial, image collection and principal investigator records, can be associated with the appropriate project during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: '11459806'
@@ -76,7 +76,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'  
   study_short_name:
-    Desc: CDE ID = 11459812
+    Desc: CDE ID = 11459812 <br>This property is used as the key via which child records, e.g. image collection and subject records, can be associated with the appropriate study/trial during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: '11459812'
@@ -160,6 +160,7 @@ PropDefinitions:
     Src: ICDC
     Type: string
     Req: 'Yes'
+    Key: true
     Tags:
        Labeled: Collection
   image_type_included:
@@ -255,7 +256,7 @@ PropDefinitions:
     Req: 'Yes'
   # demographic
   demographic_id: # this will be the same value as subject_id
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key with which to identify the correct records during data updates.
+    Desc: A unique identifier of each demographic record, used to identify the correct demographic records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -355,8 +356,17 @@ PropDefinitions:
     Type: string # supposedly enumerated but no permissible values listed
     Req: 'Yes'
   # exposure
+  exposure_id:
+    Desc: A unique identifier of each exposure record, used to identify the correct exposure records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: value
+    Type: string
+    Req: 'Yes'
+    Key: true
   environmental_exposure_type:
-  #11256813
     Desc: text CDE ID = 11256813
     Term:
       - Origin: caDSR
@@ -539,6 +549,16 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
  # treatment
+  treatment_id:
+    Desc: A unique identifier of each treatment record, used to identify the correct treatment records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: value
+    Type: string
+    Req: 'Yes'
+    Key: true
   targeted_therapy: # CMTRT_DSL in CMB Data Submission - 5a_TargetedTherapyAdministration???
     Desc: text CDE ID = 6400634
     Term:
@@ -577,7 +597,7 @@ PropDefinitions:
     Req: 'No'     
  # subject_status
   subject_staus_id: # this will be the same value as subject_id
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key with which to identify the correct records during data updates. 
+    Desc: text A unique identifier of each subject_status record, used to identify the correct subject_status records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE 
     Term:
       - Origin: caDSR
         Code: 'code/ID'

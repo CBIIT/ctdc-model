@@ -109,6 +109,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
+      - exposure_id
       - environmental_exposure_type #11256813
       - carcinogen_exposure
   diagnosis:
@@ -137,6 +138,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
+      - treatment_id
       - targeted_therapy #6400634
       - therapy #6400634
       - surgical_procedure_name #6411539
