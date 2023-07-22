@@ -44,6 +44,7 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: 'Yes'
+    Key: true
   # project
   project_name:
     Desc: CDE ID = 11459804
@@ -63,6 +64,7 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: 'Yes'
+    Key: true
   # study
   study_name:
     Desc: CDE ID = 11459810
@@ -82,6 +84,7 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: 'Yes'
+    Key: true
   study_type:
     Desc: CDE ID = 11160683
     Term:
@@ -193,7 +196,7 @@ PropDefinitions:
     Req: 'Yes'
   # subject
   subject_id: #CMB Participant ID
-    Desc: The globally unique ID by which any given subject can be unambiguously identified and displayed across studies/trials. <br>This property is used as the key via which child records, e.g. biospecimen records, can be associated with the appropriate subject during data loading, and to identify the correct records during data updates. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The globally unique ID by which any given subject can be unambiguously identified and displayed across studies/trials. <br>NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key via which child records, e.g. biospecimen records, can be associated with the appropriate subject during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -251,6 +254,15 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   # demographic
+  demographic_id: # this will be the same value as subject_id
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key with which to identify the correct records during data updates.
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Key: true
   age_at_enrollment:
     Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -376,8 +388,17 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'  
   # diagnosis
+  diagnosis_id: # this will be the same value as subject_id
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key via which child records, e.g. clinical reports, can be associated with the appropriate diagnosis record during data loading, and to identify the correct records during data updates.
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+    Key: true
   icd_10_disease_code:
-  #11479873
     Desc: text CDE ID = 11479873
     Term:
       - Origin: caDSR
@@ -393,7 +414,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Enum:
+    Enum: # actual values as displayed within the CMB's Catalog Site
       - 10000884-Acute Myeloid Leukemia Not Otherwise Specified
       - 10010029 - Colorectal Carcinoma
        -10066354 - Gastroesophageal Junction Adenocarcinoma
@@ -410,7 +431,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: value
-    Enum:
+    Enum: # actual values in the latest CMB data submission
       - Acute Myeloid Leukemia Not Otherwise Specified  # 10000884
       - Adenocarcinoma of the Gastroesophageal Junction # 10066354
       - Colon Adenocarcinoma                            # 10010029
@@ -443,7 +464,6 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   icd_o_primary_site:
-  #11341616
     Desc: text CDE ID = 11341616
     Term:
       - Origin: caDSR
@@ -483,7 +503,6 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   tumor_grade:
-  #11325685
     Desc: text CDE ID = 11325685
     Term:
       - Origin: caDSR
@@ -557,6 +576,16 @@ PropDefinitions:
     Type: string
     Req: 'No'     
  # subject_status
+  subject_staus_id: # this will be the same value as subject_id
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key with which to identify the correct records during data updates. 
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: integer
+    Req: 'Yes'
+    Key: true
   survival_status: # in CMB Data Submission - 5a_FollowUp
     Desc: text CDE ID = 7050072
     Term:
@@ -644,6 +673,25 @@ PropDefinitions:
       - WITHDRAWAL OF CONSENT
     Req: 'No'     
  # specimen 
+  specimen_id: # this will be the exact same value that the CMB uses for biospecimen_id
+    Desc: text  NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key via which child records, e.g. data files generated via Oncomine panel analyses, can be associated with the appropriate specimen during data loading, and to identify the correct records during data updates.
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+    Key: true
+  parent_specimen_id: # this will be the exact same value that the CMB uses for parent_biospecimen_id
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
   days_from_diagnosis_to_specimen_collection:
     Desc: text CDE ID = 11253404
     Term:

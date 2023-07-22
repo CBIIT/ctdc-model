@@ -94,6 +94,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
+      - demographic_id
       - sex
       - reported_gender #10748236
       - race
@@ -118,6 +119,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
+      - diagnosis_id
       - icd_10_disease_code #11479873
       - meddra_disease_code
       - ctep_disease_code
@@ -147,6 +149,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
+      - subject_status_id
       - survival_status #7050072
       - primary_cause_of_death #6421593
       - off_study
@@ -159,6 +162,8 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
+      - specimen_id
+      - parent_specimen_id
       - days_from_diagnosis_to_specimen_collection #11253404
       - diagnosis_date # from the CMB perspective, this is supposedly equivalent to the above, but because of the way this date is indexed to enrollment date, it should not be a specimen property
       - days_from_first_subject_visit_to_specimen_collection #11248874
