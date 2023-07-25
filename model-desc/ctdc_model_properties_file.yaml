@@ -548,7 +548,7 @@ PropDefinitions:
         - years
       value_type: number
     Req: 'Yes'
- # treatment
+  # treatment
   treatment_id:
     Desc: A unique identifier of each treatment record, used to identify the correct treatment records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -595,7 +595,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'No'     
- # targeted_therapy
+  # targeted_therapy
   targeted_therapy_id:
     Desc: A unique identifier of each targeted therapy record, used to identify the correct targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -614,7 +614,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
- # therapy
+  # therapy
   therapy_id:
     Desc: A unique identifier of each non-targeted therapy record, used to identify the correct non-targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -633,7 +633,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-# surgical_procedure
+  # surgical_procedure
   surgical_procedure_id:
     Desc: A unique identifier of each surgical procedure record, used to identify the correct surgical procedure therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -652,7 +652,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
- # radiological_procedure
+  # radiological_procedure
   radiological_procedure_id:
     Desc: A unique identifier of each radiological procedure record, used to identify the correct radiological procedure record during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -671,7 +671,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'   
- # subject_status
+  # subject_status
   subject_staus_id: # this will be the same value as subject_id
     Desc: A unique identifier of each subject_status record, used to identify the correct subject_status records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE 
     Term:
@@ -768,7 +768,7 @@ PropDefinitions:
       - WITHDRAWAL OF ASSENT
       - WITHDRAWAL OF CONSENT
     Req: 'No'     
- # specimen 
+  # specimen 
   specimen_id: # this will be the exact same value that the CMB uses for biospecimen_id
     Desc: text  NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key via which child records, e.g. data files generated via Oncomine panel analyses, can be associated with the appropriate specimen during data loading, and to identify the correct records during data updates.
     Term:
@@ -1004,7 +1004,7 @@ PropDefinitions:
       - ON TREATMENT
       - PROGRESSION
     Req: 'Yes'  
- # data_file
+  # data_file
   data_file_checksum_type:
     Desc: text CDE ID = 11475057
     Term:
