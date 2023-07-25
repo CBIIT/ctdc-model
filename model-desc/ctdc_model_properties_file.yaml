@@ -615,8 +615,8 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
  # therapy
-  therapy_id: A unique identifier of each non-targeted therapy record, used to identify the correct non-targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
-    Desc: text
+  therapy_id:
+    Desc: A unique identifier of each non-targeted therapy record, used to identify the correct non-targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -634,8 +634,8 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
 # surgical_procedure
-  surgical_procedure_id: A unique identifier of each surgical procedure record, used to identify the correct surgical procedure therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
-    Desc: text
+  surgical_procedure_id:
+    Desc: A unique identifier of each surgical procedure record, used to identify the correct surgical procedure therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
