@@ -140,8 +140,8 @@ Nodes:
     Props:
       - treatment_id
       - x_targeted_therapy #6400634
-      - x-therapy #6400634
-      - x-surgical_procedure_name #6411539
+      - x_therapy #6400634
+      - x_surgical_procedure_name #6411539
       - x_radiological_procedure_name #6411539
   targeted_therapy:
     Desc: text
