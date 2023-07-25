@@ -143,6 +143,46 @@ Nodes:
       - therapy #6400634
       - surgical_procedure_name #6411539
       - radiological_procedure_name #6411539
+  targeted_therapy:
+    Desc: text
+    Tags:
+      Category: treatment
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - targeted_therapy_id
+      - targeted_therapy #6400634
+  therapy:
+    Desc: text
+    Tags:
+      Category: treatment
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - therapy_id
+      - therapy #6400634
+  surgical_procedure:
+    Desc: text
+    Tags:
+      Category: treatment
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - surgical_procedure_id
+      - surgical_procedure_name #6411539    
+  radiological_procedure:
+    Desc: text
+    Tags:
+      Category: treatment
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - radiological_procedure_id
+      - radiological_procedure_name #6411539
   subject_status:
     Desc: text
     Tags:
@@ -255,15 +295,23 @@ Relationships:
       - Src: demographic
         Dst: subject
         Mul: one_to_one
+      - Src: exposure
+        Dst: subject
       - Src: diagnosis
         Dst: subject
       - Src: treatment
         Dst: subject
+      - Src: targeted_therapy
+        Dst: subject  
+      - Src: therapy
+        Dst: subject
+      - Src: surgical_procedure
+        Dst: subject
+      - Src: radiological procedure
+        Dst: subject
       - Src: subject_status
         Dst: subject
         Mul: one_to_one  
-      - Src: exposure
-        Dst: subject
         # to accommodate a Specimen being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Visit, etc.
       - Src: specimen
         Dst: subject

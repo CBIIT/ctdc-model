@@ -595,9 +595,85 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'No'     
+ # targeted_therapy
+  targeted_therapy_id:
+    Desc: A unique identifier of each targeted therapy record, used to identify the correct targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  targeted_therapy: # CMTRT_DSL in CMB Data Submission - 5a_TargetedTherapyAdministration???
+    Desc: text CDE ID = 6400634
+    Term:
+      - Origin: caDSR
+        Code: '6400634'
+        Value: Concomitant Medication Name # check on this, repeated below
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+ # therapy
+  therapy_id: A unique identifier of each non-targeted therapy record, used to identify the correct non-targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  therapy: # Non-Targeted Therapy in CMB Data Submission - 5a_NonTargetedTherapySupplement
+    Desc: text CDE ID = 6400634
+    Term:
+      - Origin: caDSR
+        Code: '6400634'
+        Value: Concomitant Medication Name 
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+# surgical_procedure
+  surgical_procedure_id: A unique identifier of each surgical procedure record, used to identify the correct surgical procedure therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  surgical_procedure_name: # SURG_PROC_NAME in CMB Data Submission - 5a_NonTargetedSurgerySupplement
+    Desc: text CDE ID = 6411539
+    Term:
+      - Origin: caDSR
+        Code: '6411539'
+        Value: Procedure Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+ # radiological_procedure
+  radiological_procedure_id:
+    Desc: A unique identifier of each radiological procedure record, used to identify the correct radiological procedure record during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  radiological_procedure_name: # RAD_PROC_NAME in CMB Data Submission - 5a_NonTargetedRadiationSupplement
+    Desc: text CDE ID = 6411539
+    Term:
+      - Origin: caDSR
+        Code: '6411539'
+        Value: Procedure Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'   
  # subject_status
   subject_staus_id: # this will be the same value as subject_id
-    Desc: text A unique identifier of each subject_status record, used to identify the correct subject_status records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE 
+    Desc: A unique identifier of each subject_status record, used to identify the correct subject_status records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE 
     Term:
       - Origin: caDSR
         Code: 'code/ID'
