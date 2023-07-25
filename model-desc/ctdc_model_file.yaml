@@ -307,7 +307,7 @@ Relationships:
         Dst: subject
       - Src: surgical_procedure
         Dst: subject
-      - Src: radiological procedure
+      - Src: radiological_procedure
         Dst: subject
       - Src: subject_status
         Dst: subject
