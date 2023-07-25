@@ -559,7 +559,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
     Key: true
-  targeted_therapy: # CMTRT_DSL in CMB Data Submission - 5a_TargetedTherapyAdministration???
+  x_targeted_therapy: # CMTRT_DSL in CMB Data Submission - 5a_TargetedTherapyAdministration???
     Desc: text CDE ID = 6400634
     Term:
       - Origin: caDSR
@@ -568,7 +568,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'No'
-  therapy: # Non-Targeted Therapy in CMB Data Submission - 5a_NonTargetedTherapySupplement
+  x_therapy: # Non-Targeted Therapy in CMB Data Submission - 5a_NonTargetedTherapySupplement
     Desc: text CDE ID = 6400634
     Term:
       - Origin: caDSR
@@ -577,7 +577,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'No'
-  surgical_procedure_name: # SURG_PROC_NAME in CMB Data Submission - 5a_NonTargetedSurgerySupplement
+  x_surgical_procedure_name: # SURG_PROC_NAME in CMB Data Submission - 5a_NonTargetedSurgerySupplement
     Desc: text CDE ID = 6411539
     Term:
       - Origin: caDSR
@@ -586,7 +586,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'No'
-  radiological_procedure_name: # RAD_PROC_NAME in CMB Data Submission - 5a_NonTargetedRadiationSupplement
+  x_radiological_procedure_name: # RAD_PROC_NAME in CMB Data Submission - 5a_NonTargetedRadiationSupplement
     Desc: text CDE ID = 6411539
     Term:
       - Origin: caDSR
