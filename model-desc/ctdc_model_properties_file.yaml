@@ -169,12 +169,17 @@ PropDefinitions:
     Type:
       value_type: list
       Enum: #updated to accurately reflect the CMB image types
-        - CT
-        - Digital Radiography 
+        - CT # specific term used by both IDC and TCIA
+        - Digital Radiography
+        - DX # specific term used by both IDC and TCIA
+        - MR # specific term used by both IDC and TCIA
         - MRI
+        - NM # specific term used by both IDC and TCIA
         - Nuclear Medicine
         - PET
+        - PT # specific term used by both IDC and TCIA
         - Ultrasound
+        - US # specific term used by both IDC and TCIA
     Req: 'Yes'
     Tags:
        Labeled: Image Types
@@ -189,11 +194,12 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   collection_access:
-    Desc: Indicator as to whether the image collection can be accessed via download versus being accessible only via the cloud.
+    Desc: Indicator as to whether the image collection can be accessed only via the cloud, accessed only via download, or accessed via both mechanisms.
     Src: ICDC
     Enum:
-      - Download
       - Cloud
+      - Download
+      - Unrestricted
     Req: 'Yes'
   # subject
   subject_id: #CMB Participant ID
