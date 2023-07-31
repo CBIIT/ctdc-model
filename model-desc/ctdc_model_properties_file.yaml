@@ -85,6 +85,24 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
     Key: true
+  study_id:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: FNL
+    Type: string
+    Req: 'No'
+  study_description:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: FNL
+    Type: string
+    Req: 'Yes'
   study_type:
     Desc: CDE ID = 11160683
     Term:
@@ -116,6 +134,15 @@ PropDefinitions:
       - Supportive Care Study
       - Transcriptomics Research
       - Treatment Study
+    Req: 'Yes'
+  dates_of_conduct:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: FNL
+    Type: string
     Req: 'Yes'
   # principal_investigator
   principal_investigator_first_name:
@@ -262,7 +289,7 @@ PropDefinitions:
     Req: 'Yes'
   # demographic
   demographic_id: # this will be the same value as subject_id
-    Desc: A unique identifier of each demographic record, used to identify the correct demographic records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: A unique identifier of each demographic record, used to identify the correct demographic records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -363,7 +390,7 @@ PropDefinitions:
     Req: 'Yes'
   # exposure
   exposure_id:
-    Desc: A unique identifier of each exposure record, used to identify the correct exposure records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: A unique identifier of each exposure record, used to identify the correct exposure records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -405,7 +432,7 @@ PropDefinitions:
     Req: 'Yes'  
   # diagnosis
   diagnosis_id: # this will be the same value as subject_id
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key via which child records, e.g. clinical reports, can be associated with the appropriate diagnosis record during data loading, and to identify the correct records during data updates.
+    Desc: text NO CDE REQUIRED <br>This property is used as the key via which child records, e.g. clinical reports, can be associated with the appropriate diagnosis record during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -556,7 +583,7 @@ PropDefinitions:
     Req: 'Yes'
   # treatment
   treatment_id:
-    Desc: A unique identifier of each treatment record, used to identify the correct treatment records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: A unique identifier of each treatment record, used to identify the correct treatment records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -603,7 +630,7 @@ PropDefinitions:
     Req: 'No'     
   # targeted_therapy
   targeted_therapy_id:
-    Desc: A unique identifier of each targeted therapy record, used to identify the correct targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: A unique identifier of each targeted therapy record, used to identify the correct targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -622,7 +649,7 @@ PropDefinitions:
     Req: 'Yes'
   # therapy
   therapy_id:
-    Desc: A unique identifier of each non-targeted therapy record, used to identify the correct non-targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: A unique identifier of each non-targeted therapy record, used to identify the correct non-targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -641,7 +668,7 @@ PropDefinitions:
     Req: 'Yes'
   # surgical_procedure
   surgical_procedure_id:
-    Desc: A unique identifier of each surgical procedure record, used to identify the correct surgical procedure therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: A unique identifier of each surgical procedure record, used to identify the correct surgical procedure therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -660,7 +687,7 @@ PropDefinitions:
     Req: 'Yes'
   # radiological_procedure
   radiological_procedure_id:
-    Desc: A unique identifier of each radiological procedure record, used to identify the correct radiological procedure record during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: A unique identifier of each radiological procedure record, used to identify the correct radiological procedure record during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -679,7 +706,7 @@ PropDefinitions:
     Req: 'Yes'   
   # subject_status
   subject_staus_id: # this will be the same value as subject_id
-    Desc: A unique identifier of each subject_status record, used to identify the correct subject_status records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NOT CURRENTLY ASSIGNED ANY CDE 
+    Desc: A unique identifier of each subject_status record, used to identify the correct subject_status records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -776,7 +803,7 @@ PropDefinitions:
     Req: 'No'     
   # specimen 
   specimen_id: # this will be the exact same value that the CMB uses for biospecimen_id
-    Desc: text  NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key via which child records, e.g. data files generated via Oncomine panel analyses, can be associated with the appropriate specimen during data loading, and to identify the correct records during data updates.
+    Desc: text  NO CDE REQUIRED? <br>This property is used as the key via which child records, e.g. data files generated via Oncomine panel analyses, can be associated with the appropriate specimen during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1011,39 +1038,26 @@ PropDefinitions:
       - PROGRESSION
     Req: 'Yes'  
   # data_file
-  data_file_checksum_type:
-    Desc: text CDE ID = 11475057
+  data_file_name:
+    Desc: text CDE ID = 11284037
     Term:
       - Origin: caDSR
-        Code: '11475057'
-        Value: Electronic Data File Checksum Type  
-    Src: DSS
-    Enum:
-      - md5sum
-      - sha1
-      - sha256
-    Req: 'Yes'
-  data_file_checksum_value:
-    Desc: text CDE ID = 11480133
-    Term:
-      - Origin: caDSR
-        Code: '11480133'
-        Value: Electronic Data File Checksum Value  
+        Code: '11284037'
+        Value: Electronic Data File Name  
     Src: DSS
     Type: string
     Req: 'Yes'
-  data_file_compression_status:
-    Desc: text CDE ID = 11387114
+  data_file_type:
+    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
-        Code: '11387114'
-        Value: Electronic Data File Compression Type  
-    Src: DSS
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: FNL
     Enum:
-      - Compressed
-      - Uncompressed
-      - Unknown
-    Req: Preferred
+      - Clinical Report
+      - Variant Call File
+    Req: 'Yes'
   data_file_description:
     Desc: text CDE ID = 11280338
     Term:
@@ -1062,15 +1076,6 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: 'Yes'
-  data_file_name:
-    Desc: text CDE ID = 11284037
-    Term:
-      - Origin: caDSR
-        Code: '11284037'
-        Value: Electronic Data File Name  
-    Src: DSS
-    Type: string
-    Req: 'Yes'
   data_file_size:
     Desc: text CDE ID = 11479876
     Term:
@@ -1080,3 +1085,54 @@ PropDefinitions:
     Src: DSS
     Type: number
     Req: 'Yes'
+  data_file_checksum_value:
+    Desc: text CDE ID = 11480133
+    Term:
+      - Origin: caDSR
+        Code: '11480133'
+        Value: Electronic Data File Checksum Value  
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  data_file_checksum_type:
+    Desc: text CDE ID = 11475057
+    Term:
+      - Origin: caDSR
+        Code: '11475057'
+        Value: Electronic Data File Checksum Type  
+    Src: DSS
+    Enum:
+      - md5sum
+      - sha1
+      - sha256
+    Req: 'Yes'
+  data_file_compression_status:
+    Desc: text CDE ID = 11387114
+    Term:
+      - Origin: caDSR
+        Code: '11387114'
+        Value: Electronic Data File Compression Type  
+    Src: DSS
+    Enum:
+      - Compressed
+      - Uncompressed
+      - Unknown
+    Req: Preferred
+  data_file_uuid:
+    Desc: text NO CDE REQUIRED
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: FNL
+    Type: string
+    Req: 'Yes'
+  data_file_location:
+    Desc: text NO CDE REQUIRED
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: FNL
+    Type: string
+    Req: 'Yes'    

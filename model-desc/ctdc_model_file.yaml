@@ -59,7 +59,10 @@ Nodes:
     Props:
       - study_name #11459810
       - study_short_name #11459812
+      - study_id
+      - study_description
       - study_type #11160683
+      - dates_of_conduct
   image_collection:
     Desc: text
     Tags:
@@ -231,13 +234,16 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - data_file_checksum_type #11475057
-      - data_file_checksum_value #11480133
-      - data_file_compression_status #11387114
+      - data_file_name #11284037
+      - data_file_type
       - data_file_description #11280338
       - data_file_format #11416926
-      - data_file_name #11284037
       - data_file_size #11479876
+      - data_file_checksum_value #11480133
+      - data_file_checksum_type #11475057
+      - data_file_compression_status #11387114
+      - data_file_uuid
+      - data_file_location
 Relationships:
   belongs_to:
     Mul: many_to_one
