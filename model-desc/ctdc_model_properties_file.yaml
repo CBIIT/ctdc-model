@@ -181,6 +181,25 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: Preferred
+  # associated_link
+  associated_link_name:
+    Desc: text NO CDE REQUIRED
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: FNL
+    Type: string
+    Req: 'Yes'
+  associated_link_url:
+    Desc: text NO CDE REQUIRED
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: FNL
+    Type: string
+    Req: 'Yes'  
   # image collection props
   image_collection_name:
     Desc: The name of the image collection exactly as it appears at the location where the collection can be viewed and/or accessed.

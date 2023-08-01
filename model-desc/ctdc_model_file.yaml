@@ -63,6 +63,16 @@ Nodes:
       - study_description
       - study_type #11160683
       - dates_of_conduct
+  associated_link:
+    Desc: text
+    Tags:
+      Category: study
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - associated_link_name
+      - associated_link_url
   image_collection:
     Desc: text
     Tags:
@@ -272,6 +282,10 @@ Relationships:
         Dst: study
       - Src: data_file
         Dst: project
+      - Src: associated_link
+        Dst: study
+      - Src: associated_link
+        Dst: project  
       - Src: image_collection
         Dst: study
       - Src: image_collection
