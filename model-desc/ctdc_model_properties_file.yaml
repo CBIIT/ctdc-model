@@ -47,7 +47,7 @@ PropDefinitions:
     Key: true
   # project
   project_name:
-    Desc: CDE ID = 11459804
+    Desc: Full title of the study/trial <br>CDE ID = 11459804
     Term:
       - Origin: caDSR
         Code: '11459804'
@@ -56,7 +56,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   project_short_name:
-    Desc: CDE ID = 11459806 <br>This property is used as the key via which child records, e.g. study/trial, image collection and principal investigator records, can be associated with the appropriate project during data loading, and to identify the correct records during data updates.
+    Desc:  Internally-assigned project "code" <br>CDE ID = 11459806 <br>This property is used as the key via which child records, e.g. study/trial, image collection and principal investigator records, can be associated with the appropriate project during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: '11459806'
@@ -66,8 +66,8 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   # study
-  study_name:
-    Desc: CDE ID = 11459810
+  study_name: 
+    Desc: Full title of the study/trial <br>CDE ID = 11459810
     Term:
       - Origin: caDSR
         Code: '11459810'
@@ -76,7 +76,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'  
   study_short_name:
-    Desc: CDE ID = 11459812 <br>This property is used as the key via which child records, e.g. image collection and subject records, can be associated with the appropriate study/trial during data loading, and to identify the correct records during data updates.
+    Desc:  Internally-assigned study/trial "code" <br>CDE ID = 11459812 <br>This property is used as the key via which child records, e.g. image collection and subject records, can be associated with the appropriate study/trial during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: '11459812'
@@ -86,7 +86,7 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   study_id:
-    Desc: text
+    Desc: Any external identifier by which the study/trial in question is known
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -94,8 +94,8 @@ PropDefinitions:
     Src: FNL
     Type: string
     Req: 'No'
-  study_description:
-    Desc: text
+  study_description: 
+    Desc: Narrative description of the study/trial
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -103,8 +103,8 @@ PropDefinitions:
     Src: FNL
     Type: string
     Req: 'Yes'
-  study_type:
-    Desc: CDE ID = 11160683
+  study_type: 
+    Desc: The underlying scientific nature of the study/trial <br>CDE ID = 11160683
     Term:
       - Origin: caDSR
         Code: '11160683'
@@ -136,7 +136,7 @@ PropDefinitions:
       - Treatment Study
     Req: 'Yes'
   dates_of_conduct:
-    Desc: text
+    Desc: Timespan over which the study/trial was/is being conducted
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -182,8 +182,8 @@ PropDefinitions:
     Type: string
     Req: Preferred
   # associated_link
-  associated_link_name:
-    Desc: text NO CDE REQUIRED
+  associated_link_name:  
+    Desc: The exact text to be displayed within the UI and used as an intuitive identifier of any given associated link <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -192,7 +192,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   associated_link_url:
-    Desc: text NO CDE REQUIRED
+    Desc: The url to which an end user will be redirected upon selection of the corresponding link name displayed within the UI <br>NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -317,7 +317,7 @@ PropDefinitions:
     Type: string
     Key: true
   age_at_enrollment:
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: Age of each subject as of being enrolled upon the study/trial <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -438,7 +438,7 @@ PropDefinitions:
       - Wood Dust Exposure
     Req: 'Yes'
   carcinogen_exposure:
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: Indicator as to whether the subject in question has had significant exposure to any known carcinogen(s) <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -470,7 +470,7 @@ PropDefinitions:
     Type: string
     Req: Preferred
   meddra_disease_code: # the CMB Catalog Site's "Primary Diagnosis (medDRA Disease Code)" is actually a concatenation of medDRA code and CTEP disease code
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: An eight digit numerical code for the primary disease with which the subject in question has been diagnosed <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -486,8 +486,8 @@ PropDefinitions:
       - 10028566 - Plasma Cell Myeloma
       - 10036910 - Prostate Carcinoma
     Req: 'Yes'
-  ctep_disease_code:
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+  ctep_disease_code: #the CMB's Catalog Site presents ctep disease codes concatenated with the corresponding meddra disease code
+    Desc: A human-readable "narrative" statement of the primary disease with which the subject in question has been diagnosed <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -505,7 +505,7 @@ PropDefinitions:
       - Small Cell Lung Carcinoma                       # 10041071 
     Req: 'Yes'  
   snomed_disease_code: #CMB Disease Stage
-    Desc: text CDE ID = 6642369
+    Desc: A human-readable "narrative" statement of the primary disease with which the subject in question has been diagnosed, but inclusive of both the stage and histological subtype of the disease in question <br>CDE ID = 6642369
     Term:
       - Origin: caDSR
         Code: '6642369'
@@ -822,7 +822,7 @@ PropDefinitions:
     Req: 'No'     
   # specimen 
   specimen_id: # this will be the exact same value that the CMB uses for biospecimen_id
-    Desc: text  NO CDE REQUIRED? <br>This property is used as the key via which child records, e.g. data files generated via Oncomine panel analyses, can be associated with the appropriate specimen during data loading, and to identify the correct records during data updates.
+    Desc: CMB's "Biospecimen ID" <br>NO CDE REQUIRED? <br>This property is used as the key via which child records, e.g. data files generated via Oncomine panel analyses, can be associated with the appropriate specimen during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -832,7 +832,7 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   parent_specimen_id: # this will be the exact same value that the CMB uses for parent_biospecimen_id
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: CMB's "Parent Biospecimen ID" <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -942,8 +942,8 @@ PropDefinitions:
     Src: DSS
     Type: integer
     Req: 'No'
-  specimen_category: #is this the Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic? Based on the caDSR list of permissible values HELL NO!
-    Desc: text CDE ID = 7069877
+  specimen_category:
+    Desc:  This in NOT the CMB Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatictext CDE ID = 7069877
     Term:
       - Origin: caDSR
         Code: '7069877D'
@@ -963,8 +963,8 @@ PropDefinitions:
       - STOOL
       - URINE
     Req: 'Yes'
-  type_of_tissue: # this looks very much like CMB Catalog "Tissue Category"
-    Desc: text CDE ID = 7003892
+  type_of_tissue:
+    Desc:  CDE ID = 7003892
     Term:
       - Origin: caDSR
         Code: '7003892'
@@ -977,8 +977,8 @@ PropDefinitions:
       - OTHER
       - PRIMARY
     Req: 'Yes'
-  anatomical_collection_site: # details straight from the CMB Catalog Site
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+  anatomical_collection_site:
+    Desc: CMB's version of "sample site" <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1032,7 +1032,7 @@ PropDefinitions:
       - cDNA
     Req: 'Yes'
   tissue_category: # details straight from the CMB Catalog Site. Based upon the values in use, this looks like caDSR "Tissue Type" aka CTDC "type_of_tissue"
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: CMB Catalog's version of caDSR's "Tissue Type" <br>text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1043,8 +1043,8 @@ PropDefinitions:
       - Normal
       - Primary
     Req: 'Yes'
-  assessment_timepoint: # this appears to be the CMB Catalog Site's "Collection Timepoint"
-    Desc: text CDE ID = 7065963
+  assessment_timepoint: 
+    Desc: CMB Catalog Site's "Collection Timepoint" <br>CDE ID = 7065963
     Term:
       - Origin: caDSR
         Code: '7065963'
@@ -1058,7 +1058,7 @@ PropDefinitions:
     Req: 'Yes'  
   # data_file
   data_file_name:
-    Desc: text CDE ID = 11284037
+    Desc: The name of the data file <br>CDE ID = 11284037
     Term:
       - Origin: caDSR
         Code: '11284037'
@@ -1067,7 +1067,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   data_file_type:
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: A curated indicator as to the type of content represented by the data file <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1078,7 +1078,7 @@ PropDefinitions:
       - Variant Call File
     Req: 'Yes'
   data_file_description:
-    Desc: text CDE ID = 11280338
+    Desc: A short narrative description of the data file's derivation, e.g. from normal tissue versus tumor tissue <br>CDE ID = 11280338
     Term:
       - Origin: caDSR
         Code: '11280338'
@@ -1087,7 +1087,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   data_file_format:
-    Desc: text CDE ID = 11416926
+    Desc: The electronic format of the file, as derived during file validation <br>CDE ID = 11416926
     Term:
       - Origin: caDSR
         Code: '11416926'
@@ -1096,7 +1096,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   data_file_size:
-    Desc: text CDE ID = 11479876
+    Desc: The exact size of the data file in question, expressed in bytes <br>CDE ID = 11479876
     Term:
       - Origin: caDSR
         Code: '11479876'
@@ -1147,7 +1147,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   data_file_location:
-    Desc: text NO CDE REQUIRED
+    Desc: The specific location within the S3 storage bucket at which the file is stored, expressed in terms of a unique url <br>NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
