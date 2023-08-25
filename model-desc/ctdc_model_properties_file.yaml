@@ -477,14 +477,14 @@ PropDefinitions:
         Value: Data Element Name  
     Src: CMB
     Enum: # actual values as displayed within the CMB's Catalog Site
-      - 10000884-Acute Myeloid Leukemia Not Otherwise Specified
-      - 10010029 - Colorectal Carcinoma
-       -10066354 - Gastroesophageal Junction Adenocarcinoma
-      - 10029514 - Lung Non-Small Cell Carcinoma
-      - 10041071 - Lung Small Cell Carcinoma
-      - 10053571 - Melanoma
-      - 10028566 - Plasma Cell Myeloma
-      - 10036910 - Prostate Carcinoma
+      - 10000884 #-Acute Myeloid Leukemia Not Otherwise Specified
+      - 10010029 #- Colorectal Carcinoma
+       -10066354 #- Gastroesophageal Junction Adenocarcinoma
+      - 10029514 #- Lung Non-Small Cell Carcinoma
+      - 10041071 #- Lung Small Cell Carcinoma
+      - 10053571 #- Melanoma
+      - 10028566 #- Plasma Cell Myeloma
+      - 10036910 #- Prostate Carcinoma
     Req: 'Yes'
   ctep_disease_code: #the CMB's Catalog Site presents ctep disease codes concatenated with the corresponding meddra disease code
     Desc: A human-readable "narrative" statement of the primary disease with which the subject in question has been diagnosed <br>NOT CURRENTLY ASSIGNED ANY CDE
@@ -494,15 +494,15 @@ PropDefinitions:
         Value: Data Element Name  
     Src: value
     Enum: # actual values in the latest CMB data submission
-      - Acute Myeloid Leukemia Not Otherwise Specified  # 10000884
-      - Adenocarcinoma of the Gastroesophageal Junction # 10066354
-      - Colon Adenocarcinoma                            # 10010029
-      - Colorectal Carcinoma                            # 10010029
-      - Melanoma                                        # 10053571
-      - Non-Small Cell Lung Carcinoma                   # 10029514
-      - Plasma Cell Myeloma                             # 10028566
-      - Prostate Carcinoma                              # 10036910
-      - Small Cell Lung Carcinoma                       # 10041071 
+      - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
+      - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
+      - Colon Adenocarcinoma                            # meddra code 10010029
+      - Colorectal Carcinoma                            # meddra code 10010029
+      - Melanoma                                        # meddra code 10053571
+      - Non-Small Cell Lung Carcinoma                   # meddra code 10029514
+      - Plasma Cell Myeloma                             # meddra code 10028566
+      - Prostate Carcinoma                              # meddra code 10036910
+      - Small Cell Lung Carcinoma                       # meddra code 10041071 
     Req: 'Yes'  
   snomed_disease_code: #CMB Disease Stage
     Desc: A human-readable "narrative" statement of the primary disease with which the subject in question has been diagnosed, but inclusive of both the stage and histological subtype of the disease in question <br>CDE ID = 6642369
@@ -601,52 +601,52 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   # treatment
-  treatment_id:
-    Desc: A unique identifier of each treatment record, used to identify the correct treatment records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NO CDE REQUIRED
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: value
-    Type: string
-    Req: 'Yes'
-    Key: true
-  x_targeted_therapy: # CMTRT_DSL in CMB Data Submission - 5a_TargetedTherapyAdministration???
-    Desc: text CDE ID = 6400634
-    Term:
-      - Origin: caDSR
-        Code: '6400634'
-        Value: Concomitant Medication Name # check on this, repeated below
-    Src: CMB
-    Type: string
-    Req: 'No'
-  x_therapy: # Non-Targeted Therapy in CMB Data Submission - 5a_NonTargetedTherapySupplement
-    Desc: text CDE ID = 6400634
-    Term:
-      - Origin: caDSR
-        Code: '6400634'
-        Value: Concomitant Medication Name 
-    Src: CMB
-    Type: string
-    Req: 'No'
-  x_surgical_procedure_name: # SURG_PROC_NAME in CMB Data Submission - 5a_NonTargetedSurgerySupplement
-    Desc: text CDE ID = 6411539
-    Term:
-      - Origin: caDSR
-        Code: '6411539'
-        Value: Procedure Name  
-    Src: CMB
-    Type: string
-    Req: 'No'
-  x_radiological_procedure_name: # RAD_PROC_NAME in CMB Data Submission - 5a_NonTargetedRadiationSupplement
-    Desc: text CDE ID = 6411539
-    Term:
-      - Origin: caDSR
-        Code: '6411539'
-        Value: Procedure Name  
-    Src: CMB
-    Type: string
-    Req: 'No'     
+  # treatment_id:
+  #   Desc: A unique identifier of each treatment record, used to identify the correct treatment records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NO CDE REQUIRED
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: 'code/ID'
+  #       Value: Data Element Name  
+  #   Src: value
+  #   Type: string
+  #   Req: 'Yes'
+  #   Key: true
+  # x_targeted_therapy: # CMTRT_DSL in CMB Data Submission - 5a_TargetedTherapyAdministration???
+  #   Desc: text CDE ID = 6400634
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '6400634'
+  #       Value: Concomitant Medication Name # check on this, repeated below
+  #   Src: CMB
+  #   Type: string
+  #   Req: 'No'
+  # x_therapy: # Non-Targeted Therapy in CMB Data Submission - 5a_NonTargetedTherapySupplement
+  #   Desc: text CDE ID = 6400634
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '6400634'
+  #       Value: Concomitant Medication Name 
+  #   Src: CMB
+  #   Type: string
+  #   Req: 'No'
+  # x_surgical_procedure_name: # SURG_PROC_NAME in CMB Data Submission - 5a_NonTargetedSurgerySupplement
+  #   Desc: text CDE ID = 6411539
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '6411539'
+  #       Value: Procedure Name  
+  #   Src: CMB
+  #   Type: string
+  #   Req: 'No'
+  # x_radiological_procedure_name: # RAD_PROC_NAME in CMB Data Submission - 5a_NonTargetedRadiationSupplement
+  #   Desc: text CDE ID = 6411539
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '6411539'
+  #       Value: Procedure Name  
+  #   Src: CMB
+  #   Type: string
+  #   Req: 'No'     
   # targeted_therapy
   targeted_therapy_id:
     Desc: A unique identifier of each targeted therapy record, used to identify the correct targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NO CDE REQUIRED
@@ -876,7 +876,7 @@ PropDefinitions:
         - days
       value_type: number
     Req: 'No'
-  days_from_initial_genomic_sequencing_to_Specimen_collection:
+  days_from_initial_genomic_sequencing_to_specimen_collection:
     Desc: text CDE ID = 11251130
     Term:
       - Origin: caDSR
@@ -934,16 +934,16 @@ PropDefinitions:
     Type: string # actually enumerated to a long list of ICD-O-3 codes, which is too long to specifiy here; we should instead just include the codes that will be seen in CMB data?
     Req: 'No'
   obi_specimen_type:
-    Desc: text CDE ID = 11253427
+    Desc: This doesn't match the caDSR record of "Specimen Material OBIB Source" for CDE ID = 11253427
     Term:
       - Origin: caDSR
         Code: '11253427'
-        Value: Specimen Type Text # this does not match the caDSR record of "Specimen Material OBIB Source"  
+        Value: Specimen Type Text  
     Src: DSS
     Type: integer
     Req: 'No'
   specimen_category:
-    Desc:  This in NOT the CMB Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatictext CDE ID = 7069877
+    Desc:  This in NOT the CMB Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic <br>CDE ID = 7069877
     Term:
       - Origin: caDSR
         Code: '7069877D'
@@ -964,7 +964,7 @@ PropDefinitions:
       - URINE
     Req: 'Yes'
   type_of_tissue:
-    Desc:  CDE ID = 7003892
+    Desc:  caDSR's version of CMB Catalog's "Tissue Category" <br>CDE ID = 7003892
     Term:
       - Origin: caDSR
         Code: '7003892'
@@ -986,7 +986,7 @@ PropDefinitions:
     Src: CMB
     Type: integer
     Req: 'Yes'
-  parent_biospecimen_type: # details straight from the CMB Catalog Site
+  parent_specimen_type: # details straight from the CMB Catalog Site
     Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
@@ -1006,7 +1006,7 @@ PropDefinitions:
       - Unstained Bone Marrow Aspirate Slide
       - Unstained Slide
     Req: 'Yes'
-  biospecimen_type: # details straight from the CMB Catalog Site
+  specimen_type: # details straight from the CMB Catalog Site
     Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
@@ -1032,7 +1032,7 @@ PropDefinitions:
       - cDNA
     Req: 'Yes'
   tissue_category: # details straight from the CMB Catalog Site. Based upon the values in use, this looks like caDSR "Tissue Type" aka CTDC "type_of_tissue"
-    Desc: CMB Catalog's version of caDSR's "Tissue Type" <br>text NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: CMB Catalog's version of caDSR's "Tyoe of Tissue" <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
