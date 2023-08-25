@@ -104,7 +104,6 @@ Nodes:
     Tags:
       Category: case # in lieu of "subject" being a category recognized by the DMN
       Assignment: core
-      Assignment: core
       Class: primary
       Template: 'Yes'
     Props:
@@ -119,7 +118,6 @@ Nodes:
     Desc: environmental, workplace and lifestyle exposure(s)
     Tags:
       Category: case # in lieu of "subject" being a category recognized by the DMN
-      Assignment: core
       Assignment: core
       Class: secondary
       Template: 'Yes'
