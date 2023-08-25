@@ -477,14 +477,14 @@ PropDefinitions:
         Value: Data Element Name  
     Src: CMB
     Enum: # actual values as displayed within the CMB's Catalog Site
-      - 10000884 #-Acute Myeloid Leukemia Not Otherwise Specified
-      - 10010029 #- Colorectal Carcinoma
-       -10066354 #- Gastroesophageal Junction Adenocarcinoma
-      - 10029514 #- Lung Non-Small Cell Carcinoma
-      - 10041071 #- Lung Small Cell Carcinoma
-      - 10053571 #- Melanoma
-      - 10028566 #- Plasma Cell Myeloma
-      - 10036910 #- Prostate Carcinoma
+      - "10000884" #-Acute Myeloid Leukemia Not Otherwise Specified
+      - "10010029" #- Colorectal Carcinoma
+       -"10066354" #- Gastroesophageal Junction Adenocarcinoma
+      - "10029514" #- Lung Non-Small Cell Carcinoma
+      - "10041071" #- Lung Small Cell Carcinoma
+      - "10053571" #- Melanoma
+      - "10028566" #- Plasma Cell Myeloma
+      - "10036910" #- Prostate Carcinoma
     Req: 'Yes'
   ctep_disease_code: #the CMB's Catalog Site presents ctep disease codes concatenated with the corresponding meddra disease code
     Desc: A human-readable "narrative" statement of the primary disease with which the subject in question has been diagnosed <br>NOT CURRENTLY ASSIGNED ANY CDE
