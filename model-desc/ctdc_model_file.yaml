@@ -159,7 +159,7 @@ Nodes:
   targeted_therapy:
     Desc: text
     Tags:
-      Category: clinical trial # in lieu of "treatment" being a category recognized by the DMN
+      Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
       Class: secondary
       Template: 'Yes'
@@ -169,7 +169,7 @@ Nodes:
   therapy:
     Desc: text
     Tags:
-      Category: clinical trial # in lieu of "treatment" being a category recognized by the DMN
+      Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
       Class: secondary
       Template: 'Yes'
@@ -179,7 +179,7 @@ Nodes:
   surgical_procedure:
     Desc: text
     Tags:
-      Category: clinical trial # in lieu of "treatment" being a category recognized by the DMN
+      Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
       Class: secondary
       Template: 'Yes'
@@ -189,7 +189,7 @@ Nodes:
   radiological_procedure:
     Desc: text
     Tags:
-      Category: clinical trial # in lieu of "treatment" being a category recognized by the DMN
+      Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
       Class: secondary
       Template: 'Yes'
