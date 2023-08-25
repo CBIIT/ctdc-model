@@ -479,7 +479,7 @@ PropDefinitions:
     Enum: # actual values as displayed within the CMB's Catalog Site
       - "10000884" #-Acute Myeloid Leukemia Not Otherwise Specified
       - "10010029" #- Colorectal Carcinoma
-       -"10066354" #- Gastroesophageal Junction Adenocarcinoma
+      - "10066354" #- Gastroesophageal Junction Adenocarcinoma
       - "10029514" #- Lung Non-Small Cell Carcinoma
       - "10041071" #- Lung Small Cell Carcinoma
       - "10053571" #- Melanoma
