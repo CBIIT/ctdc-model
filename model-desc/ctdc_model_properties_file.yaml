@@ -840,78 +840,78 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-  days_from_diagnosis_to_specimen_collection:
-    Desc: text CDE ID = 11253404
-    Term:
-      - Origin: caDSR
-        Code: '11253404'
-        Value: Specimen Diagnosis To Specimen Collection Day Count  
-    Src: DSS
-    Type:
-      units:
-        - days
-      value_type: number
-    Req: 'No'
-  days_from_first_subject_visit_to_specimen_collection:
-    Desc: text CDE ID = 11248874
-    Term:
-      - Origin: caDSR
-        Code: '11248874'
-        Value: Specimen First Subject Visit To Specimen Collection Day Count
-    Src: DSS
-    Type:
-      units:
-        - days
-      value_type: number
-    Req: 'No'
-  days_from_first_treatment_to_specimen_collection:
-    Desc: text CDE ID = 11250807
-    Term:
-      - Origin: caDSR
-        Code: '11250807'
-        Value: Specimen First Treatment To Specimen Collection Day Count
-    Src: DSS
-    Type:
-      units:
-        - days
-      value_type: number
-    Req: 'No'
-  days_from_initial_genomic_sequencing_to_specimen_collection:
-    Desc: text CDE ID = 11251130
-    Term:
-      - Origin: caDSR
-        Code: '11251130'
-        Value: Specimen Initial Genomic Sequencing To Specimen Collection Day Count
-    Src: DSS
-    Type:
-      units:
-        - days
-      value_type: number
-    Req: 'No'
-  days_from_recurrence_to_specimen_collection:
-    Desc: text cde id = 11251133
-    Term:
-      - Origin: caDSR
-        Code: '11251133'
-        Value: Specimen Recurrence To Specimen Collection Day Count
-    Src: DSS
-    Type:
-      units:
-        - days
-      value_type: number
-    Req: 'No'
-  days_from_specimen_collection_to_initial_pathologic_diagnosis:
-    Desc: text CDE ID = 11253404
-    Term:
-      - Origin: caDSR
-        Code: '11253404'
-        Value: Specimen Collection To Initial Pathologic Diagnosis Day Count
-    Src: DSS
-    Type:
-      units:
-        - days
-      value_type: number
-    Req: 'No'
+  # days_from_diagnosis_to_specimen_collection:
+  #   Desc: text CDE ID = 11253404
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '11253404'
+  #       Value: Specimen Diagnosis To Specimen Collection Day Count  
+  #   Src: DSS
+  #   Type:
+  #     units:
+  #       - days
+  #     value_type: number
+  #   Req: 'No'
+  # days_from_first_subject_visit_to_specimen_collection:
+  #   Desc: text CDE ID = 11248874
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '11248874'
+  #       Value: Specimen First Subject Visit To Specimen Collection Day Count
+  #   Src: DSS
+  #   Type:
+  #     units:
+  #       - days
+  #     value_type: number
+  #   Req: 'No'
+  # days_from_first_treatment_to_specimen_collection:
+  #   Desc: text CDE ID = 11250807
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '11250807'
+  #       Value: Specimen First Treatment To Specimen Collection Day Count
+  #   Src: DSS
+  #   Type:
+  #     units:
+  #       - days
+  #     value_type: number
+  #   Req: 'No'
+  # days_from_initial_genomic_sequencing_to_specimen_collection:
+  #   Desc: text CDE ID = 11251130
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '11251130'
+  #       Value: Specimen Initial Genomic Sequencing To Specimen Collection Day Count
+  #   Src: DSS
+  #   Type:
+  #     units:
+  #       - days
+  #     value_type: number
+  #   Req: 'No'
+  # days_from_recurrence_to_specimen_collection:
+  #   Desc: text cde id = 11251133
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '11251133'
+  #       Value: Specimen Recurrence To Specimen Collection Day Count
+  #   Src: DSS
+  #   Type:
+  #     units:
+  #       - days
+  #     value_type: number
+  #   Req: 'No'
+  # days_from_specimen_collection_to_initial_pathologic_diagnosis:
+  #   Desc: text CDE ID = 11253404
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '11253404'
+  #       Value: Specimen Collection To Initial Pathologic Diagnosis Day Count
+  #   Src: DSS
+  #   Type:
+  #     units:
+  #       - days
+  #     value_type: number
+  #   Req: 'No'
   collection_date: #from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
     Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:

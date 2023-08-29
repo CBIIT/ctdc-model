@@ -219,13 +219,13 @@ Nodes:
     Props:
       - specimen_id
       - parent_specimen_id
-      - days_from_diagnosis_to_specimen_collection #11253404
-      - diagnosis_date # from the CMB perspective, this is supposedly equivalent to the above, but because of the way this date is indexed to enrollment date, it should not be a specimen property
-      - days_from_first_subject_visit_to_specimen_collection #11248874
-      - days_from_first_treatment_to_specimen_collection #11250807
-      - days_from_initial_genomic_sequencing_to_Specimen_collection #11250807
-      - days_from_recurrence_to_specimen_collection #11251133
-      - days_from_specimen_collection_to_initial_pathologic_diagnosis #11253404
+      # - days_from_diagnosis_to_specimen_collection #11253404
+      # - diagnosis_date # from the CMB perspective, this is supposedly equivalent to the above, but because of the way this date is indexed to enrollment date, it should not be a specimen property
+      # - days_from_first_subject_visit_to_specimen_collection #11248874
+      # - days_from_first_treatment_to_specimen_collection #11250807
+      # - days_from_initial_genomic_sequencing_to_Specimen_collection #11250807
+      # - days_from_recurrence_to_specimen_collection #11251133
+      # - days_from_specimen_collection_to_initial_pathologic_diagnosis #11253404
       - collection_date # from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
       - icd_o_3_tissue_morphology # 11326261
       - obi_specimen_type #11253427 not a good match to the caDSR term referenced by the CDE's ID
