@@ -27,18 +27,18 @@ PropDefinitions:
     Req: Preferred
   # program
   program_name:
-    Desc: text CDE ID = 11444542 
+    Desc: The narrative title used to refer to a broad framework (an administrative umbrella) of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis. <br>CDE ID = 11444542 
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11444542'
         Value: Program Name Text  
     Src: DSS
     Type: string
     Req: 'Yes'
   program_short_name:
-    Desc: text CDE ID = 11459801 <br>This property is used as the key via which child records, e.g. project and/or study/trial records, can be associated with the appropriate program during data loading, and to identify the correct records during data updates.
+    Desc: An acronym or abbreviated form of the title of a broad framework of goals under which related projects or other research activities are grouped. For example, CPTAC. <br>CDE ID = 11459801 <br>This property is used as the key via which child records, e.g. project and/or study/trial records, can be associated with the appropriate program during data loading, and to identify the correct records during data updates.
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11459801'
         Value: Program Short Name Text  
     Src: DSS
@@ -47,18 +47,18 @@ PropDefinitions:
     Key: true
   # project
   project_name:
-    Desc: Full title of the study/trial <br>CDE ID = 11459804
+    Desc: The narrative title used to refer to an organ-, site-, disease- or phase-specific data collection within a broad framework of goals under which related studies or other research activities are grouped. <br>CDE ID = 11459804
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11459804'
         Value: Project Name Text  
     Src: DSS
     Type: string
     Req: 'Yes'
   project_short_name:
-    Desc:  Internally-assigned project "code" <br>CDE ID = 11459806 <br>This property is used as the key via which child records, e.g. study/trial, image collection and principal investigator records, can be associated with the appropriate project during data loading, and to identify the correct records during data updates.
+    Desc:  An acronym or abbreviated form of the title used to refer to an organ-, site- or disease-specific data collection within a broad framework of goals under which related studies or other research activities are grouped. <br>CDE ID = 11459806 <br>This property is used as the key via which child records, e.g. study/trial, image collection and principal investigator records, can be associated with the appropriate project during data loading, and to identify the correct records during data updates.
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11459806'
         Value: Project Short Name Text  
     Src: DSS
@@ -67,18 +67,18 @@ PropDefinitions:
     Key: true
   # study
   study_name: 
-    Desc: Full title of the study/trial <br>CDE ID = 11459810
+    Desc: The narrative title used as a textual label for a research data collection. For example,Comparative Molecular Life History of Spontaneous Canine and Human Gliomas. <br>CDE ID = 11459810
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11459810'
         Value: Study Name Text  
     Src: DSS
     Type: string
     Req: 'Yes'  
   study_short_name:
-    Desc:  Internally-assigned study/trial "code" <br>CDE ID = 11459812 <br>This property is used as the key via which child records, e.g. image collection and subject records, can be associated with the appropriate study/trial during data loading, and to identify the correct records during data updates.
+    Desc:  The acronym or abbreviated form of the title for a research data collection. For example, GLIOMA01. <br>CDE ID = 11459812 <br>This property is used as the key via which child records, e.g. image collection and subject records, can be associated with the appropriate study/trial during data loading, and to identify the correct records during data updates.
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11459812'
         Value: Study Short Name Text
     Src: DSS
@@ -86,7 +86,7 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   study_id:
-    Desc: Any external identifier by which the study/trial in question is known
+    Desc: Any external identifier by which the study/trial in question is known. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -95,7 +95,7 @@ PropDefinitions:
     Type: string
     Req: 'No'
   study_description: 
-    Desc: Narrative description of the study/trial
+    Desc: Narrative description of the study/trial. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -104,9 +104,9 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   study_type: 
-    Desc: The underlying scientific nature of the study/trial <br>CDE ID = 11160683
+    Desc: A classification of the study based upon the primary intent of the study's activities. <br>CDE ID = 11160683
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11160683'
         Value: Study Primary Purpose Type 
     Src: DSS
@@ -136,7 +136,7 @@ PropDefinitions:
       - Treatment Study
     Req: 'Yes'
   dates_of_conduct:
-    Desc: Timespan over which the study/trial was/is being conducted
+    Desc: Timespan over which the study/trial was/is being conducted. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -146,36 +146,36 @@ PropDefinitions:
     Req: 'Yes'
   # principal_investigator
   principal_investigator_first_name:
-    Desc: CDE ID = 10624731
+    Desc: The first or given name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 10624731
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - NCI Standard
         Code: '10624731'
         Value: Principal Investigator First Name Text 
     Src: DSS
     Type: string
     Req: 'Yes'
   principal_investigator_last_name:
-    Desc: CDE ID = 10624733
+    Desc: The last or family name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 10624733
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - NCI Standard
         Code: '10624733'
         Value: Principal Investigator Last Name Text  
     Src: DSS
     Type: string
     Req: 'Yes'
   principal_investigator_middle_name:
-    Desc: CDE ID = 10624732
+    Desc: The middle name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 10624732
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - NCI Standard
         Code: '10624732'
         Value: Principal Investigator Middle Name Text  
     Src: DSS
     Type: string
     Req: 'No'
   principal_investigator_orcid_id:
-    Desc: CDE ID = 10624734
+    Desc: A persistent unique digital identifier assigned to a principal investigator by the Open Researcher and Contributor ID (ORCID) organization. <br>CDE ID = 10624734
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - NCI Standard
         Code: '10624734'
         Value: Principal Investigator ORCID Text
     Src: DSS
@@ -183,7 +183,7 @@ PropDefinitions:
     Req: Preferred
   # associated_link
   associated_link_name:  
-    Desc: The exact text to be displayed within the UI and used as an intuitive identifier of any given associated link <br> NO CDE REQUIRED
+    Desc: The exact text to be displayed within the UI and used as an intuitive identifier of any given link associated with the study/trial in question. <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -192,7 +192,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   associated_link_url:
-    Desc: The url to which an end user will be redirected upon selection of the corresponding link name displayed within the UI <br>NO CDE REQUIRED
+    Desc: The url to which an end user will be redirected upon selection of the corresponding link name displayed within the UI. <br>NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -202,7 +202,7 @@ PropDefinitions:
     Req: 'Yes'  
   # image collection props
   image_collection_name:
-    Desc: The name of the image collection exactly as it appears at the location where the collection can be viewed and/or accessed.
+    Desc: The name of the image collection exactly as it appears at the location where the collection can be viewed and/or accessed. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Src: ICDC
     Type: string
     Req: 'Yes'
@@ -210,7 +210,7 @@ PropDefinitions:
     Tags:
        Labeled: Collection
   image_type_included:
-    Desc: A list of the image types included in the image collection, drawn from a list of acceptable values.
+    Desc: A list of the image types included in the image collection, drawn from a list of acceptable values. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Src: ICDC
     Type:
       value_type: list
@@ -230,17 +230,17 @@ PropDefinitions:
     Tags:
        Labeled: Image Types
   image_collection_url:
-    Desc: The external url via which the image collection can be viewed and/or accessed.
+    Desc: The external url via which the image collection can be viewed and/or accessed. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Src: ICDC
     Type: string
     Req: 'Yes'
   repository_name:
-    Desc: The name of the image repository within which the image collection can be found, stated in the form of the appropriate acronym.
+    Desc: The name of the image repository within which the image collection can be found, stated in the form of the appropriate acronym. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Src: ICDC
     Type: string
     Req: 'Yes'
   collection_access:
-    Desc: Indicator as to whether the image collection can be accessed only via the cloud, accessed only via download, or accessed via both mechanisms.
+    Desc: Indicator as to whether the image collection can be accessed only via the cloud, accessed only via download, or accessed via both mechanisms. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Src: ICDC
     Enum:
       - Cloud
@@ -249,7 +249,7 @@ PropDefinitions:
     Req: 'Yes'
   # subject
   subject_id: #CMB Participant ID
-    Desc: The globally unique ID by which any given subject can be unambiguously identified and displayed across studies/trials. <br>NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key via which child records, e.g. biospecimen records, can be associated with the appropriate subject during data loading, and to identify the correct records during data updates.
+    Desc: The globally unique ID by which any given subject can be unambiguously identified and displayed across studies/trials. <br>NOT CURRENTLY ASSIGNED ANY CDE <br>This property is used as the key via which child records, e.g. specimen records, can be associated with the appropriate subject during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -344,9 +344,9 @@ PropDefinitions:
       - UNDIFFERENTIATED
     Req: 'Yes'
   reported_gender:
-    Desc: text CDE ID = 10748236
+    Desc: Characteristics of people that are socially constructed, including norms, behaviors, and roles based on their sex. As a social construct,  these norms, behaviors, and roles vary from society to society and can change over time. <br>CDE ID = 10748236
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '10748236'
         Value: Person Reported Gender Type  
     Src: DSS
@@ -363,9 +363,9 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   race:  # details straight from the CMB Catalog Site
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The text for reporting information about race based on the Office of Management and Budget (OMB) categories. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - NCI Standard
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
@@ -377,9 +377,9 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   ethnicity: # details straight from the CMB Catalog Site
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The text for reporting information about ethnicity based on the Office of Management and Budget (OMB) categories. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - NCI Standard
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
@@ -390,18 +390,18 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   ncbi_taxonomy_id: # perhaps this a direct property of subject?
-    Desc: text CDE ID = 10543100
+    Desc: A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/),  which uniquely identifies group or category, at any level, in a system for classifying plants or animals (including humans) providing ranked categories for the classification of organisms according to their suspected evolutionary relationships. <br>CDE ID = 10543100
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '10543100'
         Value: Subject National Center for Biotechnology Information Taxonomy Identifier Integer
     Src: DSS
     Type: integer # not enumerated
     Req: 'Yes'
   ncbi_taxonomy_name: # perhaps this a direct property of subject?
-    Desc: text CDE ID = 10543082
+    Desc: The textual label associated with a subject's organismal classification as captured in the National Center for Biotechnology Information (NCBI) Taxonomy standard nomenclature and classification repository. <br>CDE ID = 10543082
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '10543082'
         Value: Subject National Center for Biotechnology Information Taxonomy Name Text
     Src: DSS
@@ -419,9 +419,9 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   environmental_exposure_type:
-    Desc: text CDE ID = 11256813
+    Desc: The category related to contact with chemical, biological, or physical substances found in air, water, food, soil, or product that may have a harmful effect on a person's health. <br>CDE ID = 11256813
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11256813'
         Value: Environmental Exposure Type
     Src: DSS
@@ -461,9 +461,9 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   icd_10_disease_code:
-    Desc: text CDE ID = 11479873
+    Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans. <br>CDE ID = 11479873
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11479873'
         Value: Diagnosis Disease or Disorder ICD-10-CM Code
     Src: DSS
@@ -526,9 +526,9 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   icd_o_primary_site:
-    Desc: text CDE ID = 11341616
+    Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3). <br>CDE ID = 11341616
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11341616'
         Value: Diagnosis Primary Anatomic Site ICD-O-3 Code
     Src: DSS
@@ -565,9 +565,9 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   tumor_grade:
-    Desc: text CDE ID = 11325685
+    Desc: A text term to express the degree of abnormality of cancer cells as a measure of differentiation and aggressiveness. <br>CDE ID = 11325685
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11325685'
         Value: Diagnosis Tumor Grade 
     Src: DSS
@@ -589,9 +589,9 @@ PropDefinitions:
       - Well Differentiated # from CMB Catalog Site
     Req: 'Yes'
   subject_age_at_diagnosis:
-    Desc: text CDE ID = 10609539
+    Desc: Age at the time of diagnosis expressed in number of days since birth. CMB data has this expressed in years not days! <br>CDE ID = 10609539
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '10609539'
         Value: Subject Age at Diagnosis Integer
     Src: DSS
@@ -735,12 +735,12 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   survival_status: # in CMB Data Submission - 5a_FollowUp
-    Desc: text CDE ID = 7050072
+    Desc: The participant's survival state as being living or deceased. <br>NEW CDE ID = 2847330 <br>OLD CDE ID = 7050072
     Term:
-      - Origin: caDSR
-        Code: '7050072'
+      - Origin: caDSR-NCI Standard
+        Code: '2847330' # formerly '7050072'
         Value: Survival Status  
-    Src: CMB
+    Src: DSS # previously CMB
     Enum:
       - ALIVE
       - DEAD
@@ -841,10 +841,10 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   # days_from_diagnosis_to_specimen_collection:
-  #   Desc: text CDE ID = 11253404
+  #   Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis. <br>CDE ID = 11253404 ALL OF THIS IS INCORRECT BECAUSE THE INCORRECT CDE WAS REFERENCED; PER THE CORRECT CDE ID OF 11248865 THE PROPERTY DESCRIPTION SHOULD BE The number of days from the date the diagnosis was made to the date a sample was collected.
   #   Term:
-  #     - Origin: caDSR
-  #       Code: '11253404'
+  #     - Origin: caDSR - CRDC
+  #       Code: '11253404' THIS IS INCORRECT, AND AS A RESULT, SO IS THE DESCRIPTION THE CORRECT CDE ID IS 11248865
   #       Value: Specimen Diagnosis To Specimen Collection Day Count  
   #   Src: DSS
   #   Type:
@@ -853,9 +853,9 @@ PropDefinitions:
   #     value_type: number
   #   Req: 'No'
   # days_from_first_subject_visit_to_specimen_collection:
-  #   Desc: text CDE ID = 11248874
+  #   Desc: The number of days from the date the subject first visited to the date a sample was collected. <br>CDE ID = 11248874
   #   Term:
-  #     - Origin: caDSR
+  #     - Origin: caDSR - CRDC
   #       Code: '11248874'
   #       Value: Specimen First Subject Visit To Specimen Collection Day Count
   #   Src: DSS
@@ -865,9 +865,9 @@ PropDefinitions:
   #     value_type: number
   #   Req: 'No'
   # days_from_first_treatment_to_specimen_collection:
-  #   Desc: text CDE ID = 11250807
+  #   Desc: The number of days from the date the first treatment was administered to the date a sample was collected. <br>CDE ID = 11250807
   #   Term:
-  #     - Origin: caDSR
+  #     - Origin: caDSR -  CRDC
   #       Code: '11250807'
   #       Value: Specimen First Treatment To Specimen Collection Day Count
   #   Src: DSS
@@ -877,9 +877,9 @@ PropDefinitions:
   #     value_type: number
   #   Req: 'No'
   # days_from_initial_genomic_sequencing_to_specimen_collection:
-  #   Desc: text CDE ID = 11251130
+  #   Desc: The number of days from the date the initial genomic sequencing was done to the date a sample was collected. <br>CDE ID = 11251130
   #   Term:
-  #     - Origin: caDSR
+  #     - Origin: caDSR - CRDC
   #       Code: '11251130'
   #       Value: Specimen Initial Genomic Sequencing To Specimen Collection Day Count
   #   Src: DSS
@@ -889,9 +889,9 @@ PropDefinitions:
   #     value_type: number
   #   Req: 'No'
   # days_from_recurrence_to_specimen_collection:
-  #   Desc: text cde id = 11251133
+  #   Desc: The number of days from the date the disease recurrence was identified to the date a sample was collected. <br>CDE ID = 11251133
   #   Term:
-  #     - Origin: caDSR
+  #     - Origin: caDSR-CRDC
   #       Code: '11251133'
   #       Value: Specimen Recurrence To Specimen Collection Day Count
   #   Src: DSS
@@ -901,9 +901,9 @@ PropDefinitions:
   #     value_type: number
   #   Req: 'No'
   # days_from_specimen_collection_to_initial_pathologic_diagnosis:
-  #   Desc: text CDE ID = 11253404
+  #   Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis. <br>CDE ID = 11253404
   #   Term:
-  #     - Origin: caDSR
+  #     - Origin: caDSR - CRDC
   #       Code: '11253404'
   #       Value: Specimen Collection To Initial Pathologic Diagnosis Day Count
   #   Src: DSS
@@ -912,11 +912,11 @@ PropDefinitions:
   #       - days
   #     value_type: number
   #   Req: 'No'
-  collection_date: #from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+  collection_date: 
+    Desc: From the CMB perspective, this may be equivalent to "days_from_diagnosis_to_specimen_collection" (now block commented out) (CDE ID = 11253404), with collection date indexed to enrollment date. <br>CDE ID 6401821
     Term:
       - Origin: caDSR
-        Code: 'code/ID'
+        Code: '6401821'
         Value: Data Element Name  
     Src: CMB
     Type:
@@ -925,30 +925,30 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   icd_o_3_tissue_morphology:
-    Desc: text CDE ID = 11326261
+    Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology. <br>CDE ID = 11326261
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11326261'
         Value: Specimen Tumor Tissue ICD-O-3 Morphology Code 
     Src: DSS
     Type: string # actually enumerated to a long list of ICD-O-3 codes, which is too long to specifiy here; we should instead just include the codes that will be seen in CMB data?
     Req: 'No'
   obi_specimen_type:
-    Desc: This doesn't match the caDSR record of "Specimen Material OBIB Source" for CDE ID = 11253427
+    Desc: This doesn't match the caDSR record of "Specimen Material OBIB Source" for CDE ID = 11253427 <br>The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB), a specimen subset of the Ontology for Biomedical Investigations (OBI).
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11253427'
         Value: Specimen Type Text  
     Src: DSS
     Type: integer
     Req: 'No'
   specimen_category:
-    Desc:  This in NOT the CMB Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic <br>CDE ID = 7069877
+    Desc:  This in NOT the CMB Catalog Site's "Tissue Ccategory", the indicator as to normal vs primary vs metastatic. Not used within the CMB Catalog site itself, but defined within at least one of the associated Data Dictionaries. <br>CDE ID = 7069877
     Term:
       - Origin: caDSR
         Code: '7069877D'
         Value: Data Element Name  
-    Src: CMB
+    Src: CMB DD
     Enum:
       - BLOOD
       - BONE MARROW
@@ -964,12 +964,12 @@ PropDefinitions:
       - URINE
     Req: 'Yes'
   type_of_tissue:
-    Desc:  caDSR's version of CMB Catalog's "Tissue Category" <br>CDE ID = 7003892
+    Desc:  This is caDSR's version of CMB Catalog's "Tissue Category". Acceptable values taken from the caDSR's definition of the data element. <br>CDE ID = 7003892
     Term:
       - Origin: caDSR
         Code: '7003892'
         Value: Tissue Type  
-    Src: CMB
+    Src: CMB DD
     Enum:
       - ANT # Adjacent Normal Tissue
       - NORMAL
@@ -978,7 +978,7 @@ PropDefinitions:
       - PRIMARY
     Req: 'Yes'
   anatomical_collection_site:
-    Desc: CMB's version of "sample site" <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: This is CMB's version of "sample site". <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -986,8 +986,8 @@ PropDefinitions:
     Src: CMB
     Type: integer
     Req: 'Yes'
-  parent_specimen_type: # details straight from the CMB Catalog Site
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+  parent_specimen_type: 
+    Desc: Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1006,8 +1006,8 @@ PropDefinitions:
       - Unstained Bone Marrow Aspirate Slide
       - Unstained Slide
     Req: 'Yes'
-  specimen_type: # details straight from the CMB Catalog Site
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+  specimen_type: 
+    Desc: Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1031,20 +1031,20 @@ PropDefinitions:
       - Tissue Curl
       - cDNA
     Req: 'Yes'
-  tissue_category: # details straight from the CMB Catalog Site. Based upon the values in use, this looks like caDSR "Tissue Type" aka CTDC "type_of_tissue"
-    Desc: CMB Catalog's version of caDSR's "Tyoe of Tissue" <br>NOT CURRENTLY ASSIGNED ANY CDE
+  tissue_category: 
+    Desc: Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue". Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
-    Src: value
+    Src: CMB
     Enum:
       - Metastatic
       - Normal
       - Primary
     Req: 'Yes'
   assessment_timepoint: 
-    Desc: CMB Catalog Site's "Collection Timepoint" <br>CDE ID = 7065963
+    Desc: CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 7065963
     Term:
       - Origin: caDSR
         Code: '7065963'
@@ -1058,9 +1058,9 @@ PropDefinitions:
     Req: 'Yes'  
   # data_file
   data_file_name:
-    Desc: The name of the data file <br>CDE ID = 11284037
+    Desc: The literal label for an electronic data file. <br>CDE ID = 11284037
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11284037'
         Value: Electronic Data File Name  
     Src: DSS
@@ -1076,47 +1076,48 @@ PropDefinitions:
     Enum:
       - Clinical Report
       - Variant Call File
+      - Investigator Report
     Req: 'Yes'
   data_file_description:
-    Desc: A short narrative description of the data file's derivation, e.g. from normal tissue versus tumor tissue <br>CDE ID = 11280338
+    Desc: A free text field that can be used to document the content and other details about an electronic file that may not be captured elsewhere. For example, the file's derivation from a specimen of normal tissue versus tumor tissue. <br>CDE ID = 11280338
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11280338'
         Value: Electronic Data File Description Text  
     Src: DSS
     Type: string
     Req: 'Yes'
   data_file_format:
-    Desc: The electronic format of the file, as derived during file validation <br>CDE ID = 11416926
+    Desc: A defined organization or layout representing and structuring data in a computer file; the electronic format of the file, as derived during file validation <br>CDE ID = 11416926
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11416926'
         Value: Electronic Data File Format Type  
     Src: DSS
     Type: string
     Req: 'Yes'
   data_file_size:
-    Desc: The exact size of the data file in question, expressed in bytes <br>CDE ID = 11479876
+    Desc: The measure, expressed in bytes, as to how much space a data file takes up on a storage medium. <br>CDE ID = 11479876
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11479876'
         Value: Electronic Data File Size Integer  
     Src: DSS
     Type: number
     Req: 'Yes'
   data_file_checksum_value:
-    Desc: text CDE ID = 11480133
+    Desc: A small-sized block of data derived from a file for the purpose of detecting errors that may have been introduced during file transmission and/or storage and used to verify data integrity. <br>CDE ID = 11480133
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11480133'
         Value: Electronic Data File Checksum Value  
     Src: DSS
     Type: string
     Req: 'Yes'
   data_file_checksum_type:
-    Desc: text CDE ID = 11475057
+    Desc: The method by which the file checksum was calculated. <br>CDE ID = 11475057
     Term:
-      - Origin: caDSR
+      - Origin: caDSR - CRDC
         Code: '11475057'
         Value: Electronic Data File Checksum Type  
     Src: DSS
@@ -1126,9 +1127,9 @@ PropDefinitions:
       - sha256
     Req: 'Yes'
   data_file_compression_status:
-    Desc: text CDE ID = 11387114
+    Desc: The state of data when saved to storage space or during data transmission. <br>CDE ID = 11387114
     Term:
-      - Origin: caDSR
+      - Origin: caDSR-CRDC
         Code: '11387114'
         Value: Electronic Data File Compression Type  
     Src: DSS
