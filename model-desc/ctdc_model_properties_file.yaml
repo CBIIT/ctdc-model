@@ -724,14 +724,14 @@ PropDefinitions:
     Type: string
     Req: 'Yes'   
   # subject_status
-  subject_staus_id: # this will be the same value as subject_id
+  subject_status_id: # this will be the same value as subject_id
     Desc: A unique identifier of each subject_status record, used to identify the correct subject_status records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type: integer
+    Type: string
     Req: 'Yes'
     Key: true
   survival_status: # in CMB Data Submission - 5a_FollowUp
@@ -984,7 +984,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type: integer
+    Type: string
     Req: 'Yes'
   parent_specimen_type: 
     Desc: Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
