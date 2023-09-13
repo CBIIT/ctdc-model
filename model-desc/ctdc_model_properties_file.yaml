@@ -505,7 +505,7 @@ PropDefinitions:
       - Small Cell Lung Carcinoma                       # meddra code 10041071 
     Req: 'Yes'  
   snomed_disease_code: 
-    Desc: A 9-digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>Within the CMB Catalog Site, this is concatenated with a human readable narrative statement of the primary disease (CTEP disease code), suffixed with stage and histology/pathology <br>CDE ID = 6642369
+    Desc: A 9-digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>Within the CMB Catalog Site, this is concatenated with a human readable narrative statement of the primary disease (CTEP disease code), suffixed with stage and histology/pathology. <br>Acceptable values currently specified, all modified versions of the corresponding MEDDRA disease codes, are to be used only for generation of mock data. <br>CDE ID = 6642369
     Term:
       - Origin: caDSR
         Code: '6642369'
@@ -522,7 +522,7 @@ PropDefinitions:
       - "123036910" #- Prostate Carcinoma
     Req: 'Yes'
   stage_of_disease:
-    Desc: The stage of the primary disease with which the subject in question has been diagnosed <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The stage of the primary disease with which the subject in question has been diagnosed. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Src: CMB
     Enum: 
       - II
@@ -559,12 +559,13 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   primary_disease_site:
-    Desc: text NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
+    #Type: string
     Enum:
       - Bone Marrow 
       - Colon
@@ -576,7 +577,7 @@ PropDefinitions:
       - Rectum
     Req: 'Yes'
   histological_subtype:
-    Desc: Acceptable values currently specified are to be used only for generation of mock data. <br>CDE ID = 7344580
+    Desc: Acceptable values currently specified,none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 7344580
     Term:
       - Origin: caDSR
         Code: '7344580'
@@ -857,31 +858,24 @@ PropDefinitions:
       - left neck dissection
       - resection
       - left parotid LN biopsy
-      - resection
       - needle/ core biopsy
       - CT guided lung biopsy
       - biopsy
       - Portion of mass from right foot, biopsy
-      - biopsy
       - robotic lower anterior resection
-      - biopsy
       - Laparoscopic mobilization o fleft colon and splenic flexure, open rectosigmoid resection with anastamosis
       - endobronchial biopsy
       - needle core biopsy
-      - biopsy
       - fine needle aspiration
       - CT guided right adrenal mass biopsy
       - sigmoid resection
-      - fine needle aspiration
       - robotic assisted left lung upper lobe wedge
       - right lung mass CT guided FNA (cytology)
       - Lymph node dissection
       - liver resection
       - needle core biopsy
-      - left lung wedge resection
       - Colon resection and ovary removal
       - left lung wedge resection
-      - Colon resection and ovary removal
       - wide local excision of right thigh melanoma with primary closure sentinel lymph node biopsy of right inguinal lymph node
       - Liver, RUQ-biopsy
       - abdominoperineal resection
@@ -898,14 +892,12 @@ PropDefinitions:
       - robotic assisted laparoscopic radical prostatectomy
       - stereotactic volumetric resection of right occipital intraaxial lesion.
       - partial colectomy
-      - biopsy
       - fine needle biopsy
       - TURP and bilateral orchiectomy
       - Tumor debulking
       - cytoreductive surgery with HIPEC
       - Resection of periumbilical mass
       - CT guided left iliac biopsy
-      - fine needle aspiration
       - Thoracic Laminectomy - Removal of Lesion
       - Thoracic Decompression - Removal of Tumor
       - right hemicolectomy
@@ -916,7 +908,6 @@ PropDefinitions:
       - Parietal Brain Resection, left. Parietal Craniotomy, left.
       - rectal biopsy
       - colonoscopy
-      - biopsy
       - hepatectomy
       - hemicolectomy
       - Lymph node, left axillary, needle core biopsy
@@ -1178,7 +1169,7 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   icd_o_3_tissue_morphology:
-    Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology. <br>Acceptable values currently specified are to be used only for generation of mock data. <br>CDE ID = 11326261
+    Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 11326261
     Term:
       - Origin: caDSR - CRDC
         Code: '11326261'
@@ -1258,7 +1249,7 @@ PropDefinitions:
       - PRIMARY
     Req: 'Yes'
   anatomical_collection_site:
-    Desc: This is CMB's version of "sample site". <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: This is CMB's version of "sample site". <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'

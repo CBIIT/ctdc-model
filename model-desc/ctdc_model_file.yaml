@@ -230,7 +230,7 @@ Nodes:
       - collection_date # from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
       - icd_o_3_tissue_morphology # 11326261
       - obi_specimen_type #11253427 not a good match to the caDSR term referenced by the CDE's ID
-      - specimen_category # confusingly close to the CMB Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, but acceptable terms for caDSR 7069877, quoted as a reference for "specimen category" uses terms that do not relate to "tissue category"
+      # - specimen_category # confusingly close to the CMB Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, but acceptable terms for caDSR 7069877, quoted as a reference for "specimen category" uses terms that do not relate to "tissue category"
       - type_of_tissue #caDSR 7003892 this looks very much like the CMB Catalog Site's "Tissue Category"
       - anatomical_collection_site
       - parent_specimen_type
