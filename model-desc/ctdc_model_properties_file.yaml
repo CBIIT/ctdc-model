@@ -182,13 +182,22 @@ PropDefinitions:
     Type: string
     Req: Preferred
   # associated_link
+  associated_link_id:  
+    Desc: A unique identifier of each associated link record, used to identify the correct associated link records during data updates. <br>NO CDE REQUIRED
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
   associated_link_name:  
     Desc: The exact text to be displayed within the UI and used as an intuitive identifier of any given link associated with the study/trial in question. <br> NO CDE REQUIRED
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
-    Src: FNL
+    Src: CMB
     Type: string
     Req: 'Yes'
   associated_link_url:
@@ -197,10 +206,19 @@ PropDefinitions:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
-    Src: FNL
+    Src: CMB
     Type: string
     Req: 'Yes'  
   # image collection props
+  image_collection_id:
+    Desc: A unique identifier of each image collection record, used to identify the correct image collection records during data updates. <br> NO CDE REQUIRED
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: FNL
+    Type: string
+    Req: 'Yes'
   image_collection_name:
     Desc: The name of the image collection exactly as it appears at the location where the collection can be viewed and/or accessed. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Src: ICDC
@@ -1233,7 +1251,7 @@ PropDefinitions:
   #     - URINE
   #   Req: 'Yes'
   type_of_tissue:
-    Desc:  This is caDSR's version of CMB Catalog's "Tissue Category". Acceptable values taken from the caDSR's definition of the data element. <br>CDE ID = 7003892
+    Desc:  This is caDSR's version of CMB Catalog's "Tissue Category". <br>Acceptable values taken from the caDSR's definition of the data element. <br>CDE ID = 7003892
     Term:
       - Origin: caDSR
         Code: '7003892'
@@ -1317,7 +1335,7 @@ PropDefinitions:
       - cDNA
     Req: 'Yes'
   tissue_category: 
-    Desc: Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue". Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue". <br>Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'

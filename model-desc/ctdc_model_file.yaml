@@ -71,6 +71,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
+      - associated_link_id
       - associated_link_name
       - associated_link_url
   image_collection:
@@ -81,6 +82,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
+      - image_collection_id
       - image_collection_name
       - image_type_included
       - image_collection_url
@@ -320,8 +322,8 @@ Relationships:
         Dst: subject
       - Src: diagnosis
         Dst: subject
-      - Src: treatment
-        Dst: subject
+      #- Src: treatment
+        #Dst: subject
       - Src: targeted_therapy
         Dst: subject  
       - Src: therapy
