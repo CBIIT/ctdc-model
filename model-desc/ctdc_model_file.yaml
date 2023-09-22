@@ -144,6 +144,8 @@ Nodes:
       - diagnosis_date # quantified in days indexed to date of trial enrollment
       - icd_o_primary_site #11341616
       - primary_disease_site
+      - histological_subtype #7344580
+      - date_of_confirmation_of_histology #6409589
       - tumor_grade #11325685
       - subject_age_at_diagnosis #10609539
   # treatment:

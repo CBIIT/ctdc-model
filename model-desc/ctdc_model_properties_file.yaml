@@ -505,7 +505,7 @@ PropDefinitions:
       - "10036910" #- Prostate Carcinoma
     Req: 'Yes'
   ctep_disease_code: 
-    Desc: A human-readable "narrative" statement(?) of the primary disease with which the subject in question has been diagnosed. <br>The CMB's Catalog Site presents ctep disease codes concatenated with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the subject in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -523,7 +523,7 @@ PropDefinitions:
       - Small Cell Lung Carcinoma                       # meddra code 10041071 
     Req: 'Yes'  
   snomed_disease_code: 
-    Desc: A 9-digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>Within the CMB Catalog Site, this is concatenated with a human readable narrative statement of the primary disease (CTEP disease code), suffixed with stage and histology/pathology. <br>Acceptable values currently specified, all modified versions of the corresponding MEDDRA disease codes, are to be used only for generation of mock data. <br>CDE ID = 6642369
+    Desc: Strictly-speaking, a 9-digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>Within the CMB Catalog Site, Disease Stage (SNOMED) is presented in the form of a human readable narrative statement of the primary disease which includes some histoligical detail and disease stage. <br>Acceptable values currently specified, all modified versions of the corresponding MEDDRA disease codes, are to be used only for generation of mock data. <br>CDE ID = 6642369
     Term:
       - Origin: caDSR
         Code: '6642369'
@@ -595,7 +595,7 @@ PropDefinitions:
       - Rectum
     Req: 'Yes'
   histological_subtype:
-    Desc: Acceptable values currently specified,none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 7344580
+    Desc: Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 7344580
     Term:
       - Origin: caDSR
         Code: '7344580'
