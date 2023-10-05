@@ -334,6 +334,17 @@ PropDefinitions:
     Src: CMB
     Type: string
     Key: true
+  age_at_diagnosis:
+    Desc: Age of each subject as of the diagnosis which resulted in their enrollment upon the study/trial being made. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      units:
+        - years
+      value_type: number
   age_at_enrollment:
     Desc: Age of each subject as of being enrolled upon the study/trial. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -345,6 +356,33 @@ PropDefinitions:
       units:
         - years
       value_type: number
+    Req: 'Yes'
+  race:
+    Desc: The text for reporting information about race based on the Office of Management and Budget (OMB) categories. <br>Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR - NCI Standard
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Enum:
+      - American Indian or Alaska Native
+      - Black or African American
+      - Native Hawaiian or other Pacific Islander
+      - Not Reported
+      - Unknown
+    Req: 'Yes'
+  ethnicity:
+    Desc: The text for reporting information about ethnicity based on the Office of Management and Budget (OMB) categories. <br>Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR - NCI Standard
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Enum:
+      - Hispanic or Latino
+      - Not Hispanic or Latino
+      - Not reported
+      - Unknown
     Req: 'Yes'
   sex:
     Desc: text CDE ID = 6343385
@@ -380,33 +418,78 @@ PropDefinitions:
       - Refused to Answer
       - Unknown
     Req: 'Yes'
-  race:
-    Desc: The text for reporting information about race based on the Office of Management and Budget (OMB) categories. <br>Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
+  height:
+    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
-      - Origin: caDSR - NCI Standard
+      - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Enum:
-      - American Indian or Alaska Native
-      - Black or African American
-      - Native Hawaiian or other Pacific Islander
-      - Not Reported
-      - Unknown
-    Req: 'Yes'
-  ethnicity:
-    Desc: The text for reporting information about ethnicity based on the Office of Management and Budget (OMB) categories. <br>Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Type:
+      units:
+        - TBD
+      value_type: number
+    Req: Preferred
+  weight:
+    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
-      - Origin: caDSR - NCI Standard
+      - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Enum:
-      - Hispanic or Latino
-      - Not Hispanic or Latino
-      - Not reported
-      - Unknown
-    Req: 'Yes'
+    Type:
+      units:
+        - TBD
+      value_type: number
+    Req: Preferred
+  body_surface_area:
+    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      units:
+        - TBD
+      value_type: number
+    Req: Preferred
+  occupation:
+    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: Preferred
+  income:
+    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: Preferred
+  level_of_education:
+    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: Preferred
+  site_of_enrollment:
+    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: Preferred
   ncbi_taxonomy_id: # perhaps this a direct property of subject?
     Desc: A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/),  which uniquely identifies group or category, at any level, in a system for classifying plants or animals (including humans) providing ranked categories for the classification of organisms according to their suspected evolutionary relationships. <br>CDE ID = 10543100
     Term:

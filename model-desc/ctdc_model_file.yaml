@@ -110,10 +110,19 @@ Nodes:
       Template: 'Yes'
     Props:
       - demographic_id
-      - sex
-      - reported_gender #10748236
+      - age_at_diagnosis
+      - age_at_enrollment
       - race
       - ethnicity
+      - sex
+      - reported_gender #10748236
+      - height
+      - weight
+      - body_surface_area
+      - occupation
+      - income
+      - level_of_education
+      - site_of_enrollment
       - ncbi_taxonomy_id #10543100
       - ncbi_taxonomy_name #10543082
   exposure:
