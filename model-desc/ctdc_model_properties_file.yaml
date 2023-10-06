@@ -980,7 +980,7 @@ PropDefinitions:
       - bicalutamide
       - firmagon
     Req: 'Yes'
-    dose_of_non_targeted_therapy:
+  dose_of_non_targeted_therapy:
     Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
