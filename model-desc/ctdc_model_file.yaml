@@ -213,7 +213,7 @@ Nodes:
       - surgical_procedure_therapeutic
       - surgical_procedure_findings
       - extent_of_residual_disease  
-  radiological_procedure:
+  radiotherapy:
     Desc: text
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
@@ -222,7 +222,13 @@ Nodes:
       Template: 'Yes'
     Props:
       - radiological_procedure_id
-      - radiological_procedure_name #6411539
+      - radiological_procedure #6411539
+      - radiological_procedure_anatomical_location
+      - radiation_dose
+      - radiation_frequency
+      - radiation_extent
+      - radiotherapy_start_and_end_date
+      - best_response_to_radiotherapy
   subject_status:
     Desc: text
     Tags:

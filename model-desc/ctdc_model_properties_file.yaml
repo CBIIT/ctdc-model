@@ -1157,7 +1157,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-  # radiological_procedure
+  # radiotherapy
   radiological_procedure_id:
     Desc: A unique identifier of each radiological procedure record, used to identify the correct radiological procedure record during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NO CDE REQUIRED
     Term:
@@ -1167,7 +1167,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-  radiological_procedure_name: # RAD_PROC_NAME in CMB Data Submission - 5a_NonTargetedRadiationSupplement
+  radiological_procedure: # RAD_PROC_NAME in CMB Data Submission - 5a_NonTargetedRadiationSupplement
     Desc: Acceptable values to be used for generation of mock data taken from RAD_PROC_NAME in CMB Version 2 DS 5a_NonTargetedRadiationSupplement <br>CDE ID = 6411539
     Term:
       - Origin: caDSR
@@ -1199,6 +1199,60 @@ PropDefinitions:
       - CyberKnife SBRT
       - Prophylactic Cranial Radiation
     Req: 'Yes'   
+  radiological_procedure_anatomical_location:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  radiation_dose:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  radiation_frequency:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  radiation_extent:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  radiotherapy_start_and_end_date:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: integer
+    Req: 'Yes'
+  best_response_to_radiotherapy:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: integer
+    Req: 'Yes'
   # subject_status
   subject_status_id:
     Desc: A unique identifier of each subject_status record, used to identify the correct subject_status records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NO CDE REQUIRED
