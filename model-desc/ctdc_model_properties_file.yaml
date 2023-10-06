@@ -989,7 +989,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-  frequency_of_non_targeted therapy:
+  frequency_of_non_targeted_therapy:
     Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
