@@ -184,7 +184,7 @@ Nodes:
       - frequency_of_targeted therapy
       - start_and_end_of_targeted_therapy
       - best_response_to_targeted_therapy
-  therapy:
+  non_targeted_therapy:
     Desc: text
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
@@ -192,8 +192,12 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - therapy_id
-      - therapy #6400634
+      - non_targeted_therapy_id
+      - non_targeted_therapy #6400634
+      - dose_of_non_targeted_therapy
+      - frequency_of_non_targeted_therapy
+      - start_and_end_of_non_targeted_therapy
+      - best_response_to_non_targeted_therapy
   surgical_procedure:
     Desc: text
     Tags:
