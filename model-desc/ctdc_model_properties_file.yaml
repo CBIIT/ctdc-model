@@ -876,6 +876,49 @@ PropDefinitions:
       - Selinexor
       - trametinib
     Req: 'Yes'
+  dose_of_targeted_therapy:
+    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  frequency_of_targeted therapy:
+    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: value
+    Type: string
+    Req: 'Yes'
+  start_and_end_of_targeted_therapy:
+    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: value
+    Type: string
+    Req: 'Yes'
+  best_response_to_targeted_therapy:
+    Desc: Acceptable values currently in place are taken directly from ICDC, if only to drive a discussion as to what values would be more/most appropriate. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: value
+    Enum:
+      - Complete Response
+      - Partial Response
+      - Stable Disease
+      - Progressive Disease
+      - Not Determined
+      - Not Applicable
+      - Unknown
+    Req: 'Yes'
   # therapy
   therapy_id:
     Desc: A unique identifier of each non-targeted therapy record, used to identify the correct non-targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NO CDE REQUIRED

@@ -180,6 +180,10 @@ Nodes:
     Props:
       - targeted_therapy_id
       - targeted_therapy #6400634
+      - dose_of_targeted_therapy
+      - frequency_of_targeted therapy
+      - start_and_end_of_targeted_therapy
+      - best_response_to_targeted_therapy
   therapy:
     Desc: text
     Tags:
