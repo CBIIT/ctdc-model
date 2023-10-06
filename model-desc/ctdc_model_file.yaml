@@ -198,7 +198,7 @@ Nodes:
       - frequency_of_non_targeted_therapy
       - start_and_end_of_non_targeted_therapy
       - best_response_to_non_targeted_therapy
-  surgical_procedure:
+  surgery:
     Desc: text
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
@@ -207,7 +207,12 @@ Nodes:
       Template: 'Yes'
     Props:
       - surgical_procedure_id
-      - surgical_procedure_name #6411539    
+      - surgical_procedure #6411539
+      - surgical_procedure_date
+      - surgical_procedure_anatomical_location
+      - surgical_procedure_therapeutic
+      - surgical_procedure_findings
+      - extent_of_residual_disease  
   radiological_procedure:
     Desc: text
     Tags:

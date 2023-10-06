@@ -1023,7 +1023,7 @@ PropDefinitions:
       - Not Applicable
       - Unknown
     Req: 'Yes'
-  # surgical_procedure
+  # surgery
   surgical_procedure_id:
     Desc: A unique identifier of each surgical procedure record, used to identify the correct surgical procedure therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NO CDE REQUIRED
     Term:
@@ -1033,7 +1033,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-  surgical_procedure_name: 
+  surgical_procedure: 
     Desc: Acceptable values to be used for generation of mock data taken from SURG_PROC_NAME in CMB Version 2 DS 5a_NonTargetedSurgerySupplement <br>CDE ID = 6411539
     Term:
       - Origin: caDSR
@@ -1109,6 +1109,53 @@ PropDefinitions:
       - T4 and T5 laminectomy for epidural tumor resection
       - Port Placement, Laparoscopic loop colostomy and mobilization of the splenic flexure
       - Right sub trochanteric fracture ORIF w/ TFN
+    Req: 'Yes'
+  surgical_procedure_date:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: date
+    Req: 'Yes'
+  surgical_procedure_anatomical_location:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  surgical_procedure_therapeutic:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Enum:
+      - 'Yes'
+      - 'No'
+    Req: 'Yes'
+  surgical_procedure_findings:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  extent_of_residual_disease:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
     Req: 'Yes'
   # radiological_procedure
   radiological_procedure_id:
