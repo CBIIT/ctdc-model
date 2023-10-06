@@ -356,11 +356,11 @@ Relationships:
         #Dst: subject
       - Src: targeted_therapy
         Dst: subject  
-      - Src: therapy
+      - Src: non_targeted_therapy
         Dst: subject
-      - Src: surgical_procedure
+      - Src: surgery
         Dst: subject
-      - Src: radiological_procedure
+      - Src: radiotherapy
         Dst: subject
       - Src: subject_status
         Dst: subject
