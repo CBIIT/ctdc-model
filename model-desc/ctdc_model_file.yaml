@@ -110,7 +110,7 @@ Nodes:
       Template: 'Yes'
     Props:
       - demographic_id
-      - age_at_diagnosis
+      #- age_at_diagnosis
       - age_at_enrollment
       - race
       - ethnicity
@@ -122,7 +122,7 @@ Nodes:
       - occupation
       - income
       - level_of_education
-      - site_of_enrollment
+      #- site_of_enrollment
       - ncbi_taxonomy_id #10543100
       - ncbi_taxonomy_name #10543082
   exposure:
@@ -180,9 +180,9 @@ Nodes:
     Props:
       - targeted_therapy_id
       - targeted_therapy #6400634
-      - dose_of_targeted_therapy
-      - frequency_of_targeted_therapy
-      - start_and_end_of_targeted_therapy
+      - targeted_therapy_dose
+      - targeted_therapy_frequency
+      - targeted_therapy_start_and_end
       - best_response_to_targeted_therapy
   non_targeted_therapy:
     Desc: text
@@ -194,9 +194,9 @@ Nodes:
     Props:
       - non_targeted_therapy_id
       - non_targeted_therapy #6400634
-      - dose_of_non_targeted_therapy
-      - frequency_of_non_targeted_therapy
-      - start_and_end_of_non_targeted_therapy
+      - non_targeted_therapy_dose
+      - non_targeted_therapy_frequency
+      - non_targeted_therapy_start_and_end
       - best_response_to_non_targeted_therapy
   surgery:
     Desc: text
@@ -227,7 +227,7 @@ Nodes:
       - radiation_dose
       - radiation_frequency
       - radiation_extent
-      - radiotherapy_start_and_end_date
+      - radiotherapy_start_and_end
       - best_response_to_radiotherapy
   subject_status:
     Desc: text

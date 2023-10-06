@@ -334,19 +334,19 @@ PropDefinitions:
     Src: CMB
     Type: string
     Key: true
-  age_at_diagnosis:
-    Desc: Age of each subject as of the diagnosis which resulted in their enrollment upon the study/trial being made. <br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: CMB
-    Type:
-      units:
-        - years
-      value_type: number
+  # age_at_diagnosis:
+  #   Desc: Age of each subject as of the diagnosis which resulted in their enrollment upon the study/trial being made. <br>NOT CURRENTLY ASSIGNED ANY CDE
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: 'code/ID'
+  #       Value: Data Element Name  
+  #   Src: CMB
+  #   Type:
+  #     units:
+  #       - years
+  #     value_type: number
   age_at_enrollment:
-    Desc: Age of each subject as of being enrolled upon the study/trial. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: Age of each subject as of being enrolled upon the study/trial, measured in years. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -419,7 +419,7 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   height:
-    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: Height at enrollment, measured in cm. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -427,11 +427,11 @@ PropDefinitions:
     Src: CMB
     Type:
       units:
-        - TBD
+        - cm
       value_type: number
-    Req: Preferred
+    Req: 'Yes'
   weight:
-    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: Weight at enrollment, measured in kg. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -439,11 +439,11 @@ PropDefinitions:
     Src: CMB
     Type:
       units:
-        - TBD
+        - kg
       value_type: number
-    Req: Preferred
+    Req: 'Yes'
   body_surface_area:
-    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: Body surface area at enrollment, measured in square meters. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -451,9 +451,9 @@ PropDefinitions:
     Src: CMB
     Type:
       units:
-        - TBD
+        - m2
       value_type: number
-    Req: Preferred
+    Req: 'Yes'
   occupation:
     Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -479,17 +479,22 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type: string
+    Enum:
+      - TBD 1
+      - TBD 2
+      - TBD 3
+      - TBD 4
+      - TBD 5
     Req: Preferred
-  site_of_enrollment:
-    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: CMB
-    Type: string
-    Req: Preferred
+  # site_of_enrollment:
+  #   Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: 'code/ID'
+  #       Value: Data Element Name  
+  #   Src: CMB
+  #   Type: string
+  #   Req: Preferred
   ncbi_taxonomy_id: # perhaps this a direct property of subject?
     Desc: A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/),  which uniquely identifies group or category, at any level, in a system for classifying plants or animals (including humans) providing ranked categories for the classification of organisms according to their suspected evolutionary relationships. <br>CDE ID = 10543100
     Term:
@@ -807,6 +812,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
+    Key: true
   targeted_therapy: # CMTRT_DSL in CMB Data Submission - 5a_TargetedTherapyAdministration???
     Desc: Acceptable values to be used for generation of mock data taken from TARGETED_THERAPY in CMB Version 2 DS 5a_TargetedTherapyAdministration <br>CDE ID = 6400634
     Term:
@@ -876,7 +882,7 @@ PropDefinitions:
       - Selinexor
       - trametinib
     Req: 'Yes'
-  dose_of_targeted_therapy:
+  targeted_therapy_dose:
     Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
@@ -885,7 +891,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-  frequency_of_targeted_therapy:
+  targeted_therapy_frequency:
     Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
@@ -894,7 +900,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-  start_and_end_of_targeted_therapy:
+  targeted_therapy_start_and_end:
     Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
@@ -929,6 +935,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
+    Key: true
   non_targeted_therapy: 
     Desc: Non-Targeted Therapy in CMB Data Submission <br>Acceptable values to be used for generation of mock data taken from THERAPY in CMB Version 2 DS 5a_NonTargetedTherapySupplement <br> CDE ID = 6400634
     Term:
@@ -980,7 +987,7 @@ PropDefinitions:
       - bicalutamide
       - firmagon
     Req: 'Yes'
-  dose_of_non_targeted_therapy:
+  non_targeted_therapy_dose:
     Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
@@ -989,7 +996,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-  frequency_of_non_targeted_therapy:
+  non_targeted_therapy_frequency:
     Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
@@ -998,7 +1005,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-  start_and_end_of_non_targeted_therapy:
+  non_targeted_therapy_start_and_end:
     Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
@@ -1033,6 +1040,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
+    Key: true
   surgical_procedure: 
     Desc: Acceptable values to be used for generation of mock data taken from SURG_PROC_NAME in CMB Version 2 DS 5a_NonTargetedSurgerySupplement <br>CDE ID = 6411539
     Term:
@@ -1167,6 +1175,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
+    Key: true
   radiological_procedure: # RAD_PROC_NAME in CMB Data Submission - 5a_NonTargetedRadiationSupplement
     Desc: Acceptable values to be used for generation of mock data taken from RAD_PROC_NAME in CMB Version 2 DS 5a_NonTargetedRadiationSupplement <br>CDE ID = 6411539
     Term:
@@ -1235,7 +1244,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-  radiotherapy_start_and_end_date:
+  radiotherapy_start_and_end:
     Desc: text
     Term:
       - Origin: caDSR
@@ -1245,13 +1254,20 @@ PropDefinitions:
     Type: integer
     Req: 'Yes'
   best_response_to_radiotherapy:
-    Desc: text
+    Desc: Acceptable values currently in place are taken directly from ICDC, if only to drive a discussion as to what values would be more/most appropriate. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Type: integer
+    Enum:
+      - Complete Response
+      - Partial Response
+      - Stable Disease
+      - Progressive Disease
+      - Not Determined
+      - Not Applicable
+      - Unknown
     Req: 'Yes'
   # subject_status
   subject_status_id:
