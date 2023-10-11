@@ -121,7 +121,7 @@ Nodes:
       - body_surface_area
       - occupation
       - income
-      - level_of_education
+      - highest_level_of_education
       #- site_of_enrollment
       - ncbi_taxonomy_id #10543100
       - ncbi_taxonomy_name #10543082

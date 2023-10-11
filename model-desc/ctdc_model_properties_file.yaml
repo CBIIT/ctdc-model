@@ -335,7 +335,7 @@ PropDefinitions:
     Type: string
     Key: true
   # age_at_diagnosis:
-  #   Desc: Age of each subject as of the diagnosis which resulted in their enrollment upon the study/trial being made. <br>NOT CURRENTLY ASSIGNED ANY CDE
+  #   Desc: For subjects enrolled upon the CMB trial, the age of the subject as of the diagnosis which resulted in their enrollment being made. <br>NOT CURRENTLY ASSIGNED ANY CDE
   #   Term:
   #     - Origin: caDSR
   #       Code: 'code/ID'
@@ -346,7 +346,7 @@ PropDefinitions:
   #       - years
   #     value_type: number
   age_at_enrollment:
-    Desc: Age of each subject as of being enrolled upon the study/trial, measured in years. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The age of the subject as of enrollment, measured in years. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -419,7 +419,7 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   height:
-    Desc: Height at enrollment, measured in cm. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The height of the subject as of enrollment, measured in cm. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -431,7 +431,7 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   weight:
-    Desc: Weight at enrollment, measured in kg. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The weight of the subject as of enrollment, measured in kg. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -443,7 +443,7 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   body_surface_area:
-    Desc: Body surface area at enrollment, measured in square meters. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The body surface area of the subject as of enrollment, mathematically derived from the subject's height and weight, and expressed in square meters. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -472,22 +472,26 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: Preferred
-  level_of_education:
-    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+  highest_level_of_education:
+    Desc: An indication as to the highest level of education attained by the subject. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
     Enum:
-      - TBD 1
-      - TBD 2
-      - TBD 3
-      - TBD 4
-      - TBD 5
+      - No formal education
+      - Grade school
+      - Not high school graduate
+      - High school graduate (including equivalency)
+      - Some college or Associate degree
+      - Bachelor's degree
+      - Master's degree
+      - Doctoral or professional degree
+      - Declined to answer
     Req: Preferred
   # site_of_enrollment:
-  #   Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+  #   Desc: The identity of the hospital, medical center or clinic at which the subject was enrolled upon the study/trial. <br>NOT CURRENTLY ASSIGNED ANY CDE
   #   Term:
   #     - Origin: caDSR
   #       Code: 'code/ID'
@@ -557,7 +561,7 @@ PropDefinitions:
     Req: 'Yes'  
   # diagnosis
   diagnosis_id:
-    Desc: A unique identifier of each demographic record, used to identify the correct demographic records during data updates. <br>The value of this property will generally be the same as the value of the subject_id property. <br>NO CDE REQUIRED <br>This property is used as the key via which child records, e.g. clinical reports, can be associated with the appropriate diagnosis record during data loading, and to identify the correct records during data updates.
+    Desc: A unique identifier of each diagnosisc record, used to identify the correct diagnosis records during data updates. <br>The value of this property will generally be the same as the value of the subject_id property. <br>NO CDE REQUIRED <br>This property is used as the key via which child records, e.g. clinical reports, can be associated with the appropriate diagnosis record during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -814,7 +818,7 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   targeted_therapy: # CMTRT_DSL in CMB Data Submission - 5a_TargetedTherapyAdministration???
-    Desc: Acceptable values to be used for generation of mock data taken from TARGETED_THERAPY in CMB Version 2 DS 5a_TargetedTherapyAdministration <br>CDE ID = 6400634
+    Desc: The name of the therapeutic agent administered to a subject as a targeted therapy, i.e. one that is considered to have enhanced therapeutic effects upon the specific type of cancer with which the subject has been diagnosed, and/or upon that type of cancer specifically within the context of a given subject because of factors such as tumor histology, grade, gene expression and genetic make-up. <br>Acceptable values to be used for generation of mock data taken from TARGETED_THERAPY in CMB Version 2 DS 5a_TargetedTherapyAdministration <br>CDE ID = 6400634
     Term:
       - Origin: caDSR
         Code: '6400634'
@@ -883,7 +887,7 @@ PropDefinitions:
       - trametinib
     Req: 'Yes'
   targeted_therapy_dose:
-    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The dose at which the targeted therapeutic agent in question was administered, inclusive of the appropriate dosage units. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -892,7 +896,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   targeted_therapy_frequency:
-    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The frequency at which the targeted therapeutic agent in question was administered. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -901,7 +905,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   targeted_therapy_start_and_end:
-    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The timeframe over which the targeted therapy in question was administered, expressed as the number of days before or after study enrollment the targeted therapy was started, and the number of days before or after study enrollment the targeted therapy ended. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -910,7 +914,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   best_response_to_targeted_therapy:
-    Desc: Acceptable values currently in place are taken directly from ICDC, if only to drive a discussion as to what values would be more/most appropriate. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: An indication as to the best overall response to treatment with the targeted therapy in question. <br>Acceptable values currently in place are taken directly from ICDC, if only to drive a discussion as to what values would be more/most appropriate. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -937,7 +941,7 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   non_targeted_therapy: 
-    Desc: Non-Targeted Therapy in CMB Data Submission <br>Acceptable values to be used for generation of mock data taken from THERAPY in CMB Version 2 DS 5a_NonTargetedTherapySupplement <br> CDE ID = 6400634
+    Desc: The name of the therapeutic agent administered to a subject as a non-targeted therapy, i.e. one that is considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnose, but not to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject. <br>Acceptable values to be used for generation of mock data taken from THERAPY in CMB Version 2 DS 5a_NonTargetedTherapySupplement <br> CDE ID = 6400634
     Term:
       - Origin: caDSR
         Code: '6400634'
@@ -988,7 +992,7 @@ PropDefinitions:
       - firmagon
     Req: 'Yes'
   non_targeted_therapy_dose:
-    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The dose at which the non-targeted therapeutic agent in question was administered, inclusive of the appropriate dosage units. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -997,7 +1001,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   non_targeted_therapy_frequency:
-    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The frequency at which the non-targeted therapeutic agent in question was administered. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1006,7 +1010,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   non_targeted_therapy_start_and_end:
-    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The timeframe over which the non-targeted therapy in question was administered, expressed as the number of days before or after study enrollment the non-targeted therapy was started, and the number of days before or after study enrollment the non-targeted therapy ended. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1015,7 +1019,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   best_response_to_non_targeted_therapy:
-    Desc: Acceptable values currently in place are taken directly from ICDC, if only to drive a discussion as to what values would be more/most appropriate. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: An indication as to the best overall response to treatment with the non-targeted therapy in question. <br>Acceptable values currently in place are taken directly from ICDC, if only to drive a discussion as to what values would be more/most appropriate. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1042,7 +1046,7 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   surgical_procedure: 
-    Desc: Acceptable values to be used for generation of mock data taken from SURG_PROC_NAME in CMB Version 2 DS 5a_NonTargetedSurgerySupplement <br>CDE ID = 6411539
+    Desc: The name and/or a brief narrative description of the surgical procedure performed upon the subject. <br>Acceptable values to be used for generation of mock data taken from SURG_PROC_NAME in CMB Version 2 DS 5a_NonTargetedSurgerySupplement <br>CDE ID = 6411539
     Term:
       - Origin: caDSR
         Code: '6411539'
@@ -1119,7 +1123,7 @@ PropDefinitions:
       - Right sub trochanteric fracture ORIF w/ TFN
     Req: 'Yes'
   surgical_procedure_date:
-    Desc: text
+    Desc: The date upon which the surgical procedure in question was performed. EXPRESSED HOW? <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1128,7 +1132,7 @@ PropDefinitions:
     Type: date
     Req: 'Yes'
   surgical_procedure_anatomical_location:
-    Desc: text
+    Desc: The anatomical site or sites at which the surgical procedure in question was performed. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1137,7 +1141,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   surgical_procedure_therapeutic:
-    Desc: text
+    Desc: An indication as to whether the surgical procedure in question was performed with therapeutic intent. <br>NOT CURRENTLY ASSIGNED ANY CDEtext
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1148,7 +1152,7 @@ PropDefinitions:
       - 'No'
     Req: 'Yes'
   surgical_procedure_findings:
-    Desc: text
+    Desc: A narrative description of any significant findings observed during the surgical procedure in question. <br>NOT CURRENTLY ASSIGNED ANY CDEtext
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1157,7 +1161,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   extent_of_residual_disease:
-    Desc: text
+    Desc: text <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1177,7 +1181,7 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   radiological_procedure: # RAD_PROC_NAME in CMB Data Submission - 5a_NonTargetedRadiationSupplement
-    Desc: Acceptable values to be used for generation of mock data taken from RAD_PROC_NAME in CMB Version 2 DS 5a_NonTargetedRadiationSupplement <br>CDE ID = 6411539
+    Desc: The name and/or a brief narrative description of the radiological procedure performed upon the subject. <br>Acceptable values to be used for generation of mock data taken from RAD_PROC_NAME in CMB Version 2 DS 5a_NonTargetedRadiationSupplement <br>CDE ID = 6411539
     Term:
       - Origin: caDSR
         Code: '6411539'
@@ -1209,7 +1213,7 @@ PropDefinitions:
       - Prophylactic Cranial Radiation
     Req: 'Yes'   
   radiological_procedure_anatomical_location:
-    Desc: text
+    Desc: The anatomical site or sites subject to the radiological procedure in question. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1218,7 +1222,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   radiation_dose:
-    Desc: text
+    Desc: The dose at which the radiotherapy in question was administered, inclusive of the appropriate dosage units. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1227,7 +1231,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   radiation_frequency:
-    Desc: text
+    Desc: The frequency at which the radiotherapy in question was administered. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1245,7 +1249,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   radiotherapy_start_and_end:
-    Desc: text
+    Desc: The timeframe over which the radiotherapy in question was administered, expressed as the number of days before or after study enrollment the radiotherapy was started, and the number of days before or after study enrollment the radiotherapy ended. <br>NOT CURRENTLY ASSIGNED ANY CDEtext
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1254,7 +1258,7 @@ PropDefinitions:
     Type: integer
     Req: 'Yes'
   best_response_to_radiotherapy:
-    Desc: Acceptable values currently in place are taken directly from ICDC, if only to drive a discussion as to what values would be more/most appropriate. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: An indication as to the best overall response to the radiotherapy in question. <br>Acceptable values currently in place are taken directly from ICDC, if only to drive a discussion as to what values would be more/most appropriate. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
