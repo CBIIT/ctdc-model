@@ -410,10 +410,9 @@ PropDefinitions:
     Src: DSS
     Enum:
       - Choose Not to Disclose # Response Declined per CMB?
-      - Intersex
       - Female
       - Female-To-Male # Female-to-Male Transsexual per CMB
-      - Intersex # per CMB
+      - Intersex # Intersex per CMB
       - Male
       - Male-To-Female # Male-to-Female Transsexual per CMB
       - None Of These Describe Me
