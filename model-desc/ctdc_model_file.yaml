@@ -145,17 +145,20 @@ Nodes:
       Template: 'Yes'
     Props:
       - diagnosis_id
+      - primary_diagnosis_disease_group
       - icd_10_disease_code #11479873
       - meddra_disease_code
-      - ctep_disease_code
+      - ctep_disease_code- icd_o_primary_site #11341616
+      - snomed_disease_term
       - snomed_disease_code # this is disease plus stage as presented within the CMB Catalog
-      - stage_of_disease
-      - diagnosis_date # quantified in days indexed to date of trial enrollment
       - icd_o_primary_site #11341616
       - primary_disease_site
-      - histological_subtype #7344580
+      - histology
       - date_of_confirmation_of_histology #6409589
+      - histological_subtype #7344580
+      - stage_of_disease
       - tumor_grade #11325685
+      - diagnosis_date # quantified in days indexed to date of trial enrollment 
       - subject_age_at_diagnosis #10609539
   # treatment:
   #   Desc: text
@@ -355,13 +358,17 @@ Relationships:
       #- Src: treatment
         #Dst: subject
       - Src: targeted_therapy
-        Dst: subject  
+        Dst: subject
+        Mul: many_to_many  
       - Src: non_targeted_therapy
         Dst: subject
+        Mul: many_to_many
       - Src: surgery
         Dst: subject
+        Mul: many_to_many
       - Src: radiotherapy
         Dst: subject
+        Mul: many_to_many
       - Src: subject_status
         Dst: subject
         Mul: one_to_one  
