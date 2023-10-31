@@ -1729,7 +1729,7 @@ PropDefinitions:
     Enum:
       - Clinical Report
       - Variant Call File
-      - Investigator Report
+      #- Investigator Report
       - DNA Methylation Analysis File
       - Index File
       - RNA Sequence File
