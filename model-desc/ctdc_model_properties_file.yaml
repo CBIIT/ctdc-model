@@ -1450,6 +1450,193 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
+  parent_specimen_type: # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
+    Desc: Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Enum:
+      - Bone Marrow Aspirate
+      - Cell Block
+      - EDTA Blood
+      - FFPE Block
+      - Formalin Bone Marrow Biopsy
+      - Formalin Fixed Tissue
+      - Snap Frozen Tissue
+      - Stained Bone Marrow Aspirate Slide
+      - Streck Blood
+      - Unstained Bone Marrow Aspirate Slide
+      - Unstained Slide
+    Req: 'Yes'
+  specimen_type: # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
+    Desc: Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Enum:
+      - BMMC
+      - Blood Pellet
+      - Cells
+      - Curl
+      - DNA
+      - FFPE Block
+      - Glass H&E Slide
+      - Glass Slide Smear
+      - Glass Unstained Slide
+      - PBMC
+      - Plasma
+      - Plasma-cf
+      - RNA
+      - Snap Frozen Unfixed Tissue
+      - Tissue Curl
+      - cDNA
+    Req: 'Yes'
+  obi_specimen_type:
+    Desc: This doesn't match the caDSR record of "Specimen Material OBIB Source" for CDE ID = 11253427 <br>The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB), a specimen subset of the Ontology for Biomedical Investigations (OBI).
+    Term:
+      - Origin: caDSR - CRDC
+        Code: '11253427'
+        Value: Specimen Type Text  
+    Src: DSS
+    Type: integer
+    Req: 'No'
+  anatomical_collection_site:
+    Desc: This is CMB's version of "sample site". <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    type_of_tissue:
+    Desc:  This is caDSR's version of CMB Catalog's "Tissue Category". <br>Acceptable values taken from the caDSR's definition of the data element. <br>CDE ID = 7003892
+    Term:
+      - Origin: caDSR
+        Code: '7003892'
+        Value: Tissue Type  
+    Src: CMB DD
+    Enum:
+      - ANT # Adjacent Normal Tissue
+      - NORMAL
+      - METASTATIC
+      - OTHER
+      - PRIMARY
+    Req: 'Yes'
+  tissue_category: 
+    Desc: Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue". <br>Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Enum:
+      - Metastatic
+      - Normal
+      - Primary
+    Req: 'Yes'
+    #Type: string
+    Enum:
+      - Bone Marrow
+      - Brain
+      - Bronchus
+      - Colon
+      - Duodenum
+      - Epidermis
+      - Esophagus
+      - Kidney
+      - Liver
+      - Lung
+      - Lymph Node
+      - Pancreas
+      - Prostate
+      - Rectum
+      - Stomach
+    Req: 'Yes'
+  icd_o_3_tissue_morphology:
+    Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 11326261
+    Term:
+      - Origin: caDSR - CRDC
+        Code: '11326261'
+        Value: Specimen Tumor Tissue ICD-O-3 Morphology Code 
+    Src: DSS
+    #Type: string
+    # actually enumerated to a long list of ICD-O-3 codes, which is too long to specifiy here; we should instead just include the codes that will be seen in CMB data?
+    Enum:
+      - Acute Myeloid Leukemia - M3 eosinophilic variant
+      - Acute Myeloid Leukemia - poorly-differentiated M1 variant
+      - Acute Myeloid Leukemia - M5 granulocytic variant
+      - Adenocarcinoma
+      - Adenosquamous Carcinoma
+      - High-grade Carcinoma
+      - Invasive Adenocarcinoma
+      - Large Cell Carcinoma
+      - Metastatic Adenocarcinoma
+      - Metastatic Adenosquamous Carcinoma
+      - Metastatic High-grade Carcinoma
+      - Metastatic Invasive Adenocarcinoma
+      - Metastatic Large Cell Carcinoma
+      - Metastatic Melanoma
+      - Metastatic Non-Small Cell Carcinoma
+      - Metastatic Prostate Carcinoma
+      - Metastatic Small Cell Carcinoma
+      - Metastatic Squamous Cell Carcinoma
+      - Melanoma
+      - Multiple Myeloma
+      - Non-Small Cell Carcinoma
+      - Plasma Cell Myeloma
+      - Prostate Carcinoma
+      - Small Cell Carcinoma
+      - Squamous Cell Carcinoma
+    Req: 'No'
+  assessment_timepoint: 
+    Desc: CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 7065963
+    Term:
+      - Origin: caDSR
+        Code: '7065963'
+        Value: Data Element Name  
+    Src: CMB
+    Enum:
+      - ARCHIVAL
+      - BASELINE
+      - ON TREATMENT
+      - PROGRESSION
+    Req: 'Yes'
+  collection_date: 
+    Desc: From the CMB perspective, this may be equivalent to "days_from_diagnosis_to_specimen_collection" (now block commented out) (CDE ID = 11253404), with collection date indexed to enrollment date. <br>CDE ID 6401821
+    Term:
+      - Origin: caDSR
+        Code: '6401821'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'Yes'
+  specimen_category:
+    Desc:  This in NOT the CMB Catalog Site's "Tissue Ccategory", the indicator as to normal vs primary vs metastatic. Not used within the CMB Catalog site itself, but defined within at least one of the associated Data Dictionaries. <br>CDE ID = 7069877
+    Term:
+      - Origin: caDSR
+        Code: '7069877D'
+        Value: Data Element Name  
+    Src: CMB DD
+    Enum:
+      - BLOOD
+      - BONE MARROW
+      - BUCCAL CELL SAMPLE
+      - CEREBROSPINAL FLUID
+      - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
+      - FORMALIN FIXED TISSUE
+      - FRESH TISSUE
+      - FROZEN TISSUE
+      - OTHER BODILY FLUIDs
+      - SALIVA
+      - STOOL
+      - URINE
+    Req: 'Yes'
   # days_from_diagnosis_to_specimen_collection:
   #   Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis. <br>CDE ID = 11253404 ALL OF THIS IS INCORRECT BECAUSE THE INCORRECT CDE WAS REFERENCED; PER THE CORRECT CDE ID OF 11248865 THE PROPERTY DESCRIPTION SHOULD BE The number of days from the date the diagnosis was made to the date a sample was collected.
   #   Term:
@@ -1522,193 +1709,6 @@ PropDefinitions:
   #       - days
   #     value_type: number
   #   Req: 'No'
-  collection_date: 
-    Desc: From the CMB perspective, this may be equivalent to "days_from_diagnosis_to_specimen_collection" (now block commented out) (CDE ID = 11253404), with collection date indexed to enrollment date. <br>CDE ID 6401821
-    Term:
-      - Origin: caDSR
-        Code: '6401821'
-        Value: Data Element Name  
-    Src: CMB
-    Type:
-      units:
-        - days
-      value_type: number
-    Req: 'Yes'
-  icd_o_3_tissue_morphology:
-    Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 11326261
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '11326261'
-        Value: Specimen Tumor Tissue ICD-O-3 Morphology Code 
-    Src: DSS
-    #Type: string
-    # actually enumerated to a long list of ICD-O-3 codes, which is too long to specifiy here; we should instead just include the codes that will be seen in CMB data?
-    Enum:
-      - Acute Myeloid Leukemia - M3 eosinophilic variant
-      - Acute Myeloid Leukemia - poorly-differentiated M1 variant
-      - Acute Myeloid Leukemia - M5 granulocytic variant
-      - Adenocarcinoma
-      - Adenosquamous Carcinoma
-      - High-grade Carcinoma
-      - Invasive Adenocarcinoma
-      - Large Cell Carcinoma
-      - Metastatic Adenocarcinoma
-      - Metastatic Adenosquamous Carcinoma
-      - Metastatic High-grade Carcinoma
-      - Metastatic Invasive Adenocarcinoma
-      - Metastatic Large Cell Carcinoma
-      - Metastatic Melanoma
-      - Metastatic Non-Small Cell Carcinoma
-      - Metastatic Prostate Carcinoma
-      - Metastatic Small Cell Carcinoma
-      - Metastatic Squamous Cell Carcinoma
-      - Melanoma
-      - Multiple Myeloma
-      - Non-Small Cell Carcinoma
-      - Plasma Cell Myeloma
-      - Prostate Carcinoma
-      - Small Cell Carcinoma
-      - Squamous Cell Carcinoma
-    Req: 'No'
-  obi_specimen_type:
-    Desc: This doesn't match the caDSR record of "Specimen Material OBIB Source" for CDE ID = 11253427 <br>The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB), a specimen subset of the Ontology for Biomedical Investigations (OBI).
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '11253427'
-        Value: Specimen Type Text  
-    Src: DSS
-    Type: integer
-    Req: 'No'
-  # specimen_category:
-  #   Desc:  This in NOT the CMB Catalog Site's "Tissue Ccategory", the indicator as to normal vs primary vs metastatic. Not used within the CMB Catalog site itself, but defined within at least one of the associated Data Dictionaries. <br>CDE ID = 7069877
-  #   Term:
-  #     - Origin: caDSR
-  #       Code: '7069877D'
-  #       Value: Data Element Name  
-  #   Src: CMB DD
-  #   Enum:
-  #     - BLOOD
-  #     - BONE MARROW
-  #     - BUCCAL CELL SAMPLE
-  #     - CEREBROSPINAL FLUID
-  #     - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
-  #     - FORMALIN FIXED TISSUE
-  #     - FRESH TISSUE
-  #     - FROZEN TISSUE
-  #     - OTHER BODILY FLUIDs
-  #     - SALIVA
-  #     - STOOL
-  #     - URINE
-  #   Req: 'Yes'
-  type_of_tissue:
-    Desc:  This is caDSR's version of CMB Catalog's "Tissue Category". <br>Acceptable values taken from the caDSR's definition of the data element. <br>CDE ID = 7003892
-    Term:
-      - Origin: caDSR
-        Code: '7003892'
-        Value: Tissue Type  
-    Src: CMB DD
-    Enum:
-      - ANT # Adjacent Normal Tissue
-      - NORMAL
-      - METASTATIC
-      - OTHER
-      - PRIMARY
-    Req: 'Yes'
-  anatomical_collection_site:
-    Desc: This is CMB's version of "sample site". <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: CMB
-    #Type: string
-    Enum:
-      - Bone Marrow
-      - Brain
-      - Bronchus
-      - Colon
-      - Duodenum
-      - Epidermis
-      - Esophagus
-      - Kidney
-      - Liver
-      - Lung
-      - Lymph Node
-      - Pancreas
-      - Prostate
-      - Rectum
-      - Stomach
-    Req: 'Yes'
-  parent_specimen_type: 
-    Desc: Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: CMB
-    Enum:
-      - Bone Marrow Aspirate
-      - Cell Block
-      - EDTA Blood
-      - FFPE Block
-      - Formalin Bone Marrow Biopsy
-      - Formalin Fixed Tissue
-      - Snap Frozen Tissue
-      - Stained Bone Marrow Aspirate Slide
-      - Streck Blood
-      - Unstained Bone Marrow Aspirate Slide
-      - Unstained Slide
-    Req: 'Yes'
-  specimen_type: 
-    Desc: Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: CMB
-    Enum:
-      - BMMC
-      - Blood Pellet
-      - Cells
-      - Curl
-      - DNA
-      - FFPE Block
-      - Glass H&E Slide
-      - Glass Slide Smear
-      - Glass Unstained Slide
-      - PBMC
-      - Plasma
-      - Plasma-cf
-      - RNA
-      - Snap Frozen Unfixed Tissue
-      - Tissue Curl
-      - cDNA
-    Req: 'Yes'
-  tissue_category: 
-    Desc: Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue". <br>Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: CMB
-    Enum:
-      - Metastatic
-      - Normal
-      - Primary
-    Req: 'Yes'
-  assessment_timepoint: 
-    Desc: CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 7065963
-    Term:
-      - Origin: caDSR
-        Code: '7065963'
-        Value: Data Element Name  
-    Src: CMB
-    Enum:
-      - ARCHIVAL
-      - BASELINE
-      - ON TREATMENT
-      - PROGRESSION
-    Req: 'Yes'  
   # data_file
   data_file_name:
     Desc: The literal label for an electronic data file. <br>CDE ID = 11284037
