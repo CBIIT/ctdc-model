@@ -1511,7 +1511,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    type_of_tissue:
+  type_of_tissue:
     Desc:  This is caDSR's version of CMB Catalog's "Tissue Category". <br>Acceptable values taken from the caDSR's definition of the data element. <br>CDE ID = 7003892
     Term:
       - Origin: caDSR
