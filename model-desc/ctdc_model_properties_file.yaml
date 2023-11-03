@@ -1511,6 +1511,24 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
+    #Type: string
+    Enum:
+      - Bone Marrow
+      - Brain
+      - Bronchus
+      - Colon
+      - Duodenum
+      - Epidermis
+      - Esophagus
+      - Kidney
+      - Liver
+      - Lung
+      - Lymph Node
+      - Pancreas
+      - Prostate
+      - Rectum
+      - Stomach
+    Req: 'Yes'
   type_of_tissue:
     Desc:  This is caDSR's version of CMB Catalog's "Tissue Category". <br>Acceptable values taken from the caDSR's definition of the data element. <br>CDE ID = 7003892
     Term:
@@ -1536,24 +1554,6 @@ PropDefinitions:
       - Metastatic
       - Normal
       - Primary
-    Req: 'Yes'
-    #Type: string
-    Enum:
-      - Bone Marrow
-      - Brain
-      - Bronchus
-      - Colon
-      - Duodenum
-      - Epidermis
-      - Esophagus
-      - Kidney
-      - Liver
-      - Lung
-      - Lymph Node
-      - Pancreas
-      - Prostate
-      - Rectum
-      - Stomach
     Req: 'Yes'
   icd_o_3_tissue_morphology:
     Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 11326261
