@@ -1504,6 +1504,27 @@ PropDefinitions:
     Src: DSS
     Type: integer
     Req: 'No'
+  # specimen_category:
+  #   Desc:  This in NOT the CMB Catalog Site's "Tissue Ccategory", the indicator as to normal vs primary vs metastatic. Not used within the CMB Catalog site itself, but defined within at least one of the associated Data Dictionaries. <br>CDE ID = 7069877
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '7069877D'
+  #       Value: Data Element Name  
+  #   Src: CMB DD
+  #   Enum:
+  #     - BLOOD
+  #     - BONE MARROW
+  #     - BUCCAL CELL SAMPLE
+  #     - CEREBROSPINAL FLUID
+  #     - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
+  #     - FORMALIN FIXED TISSUE
+  #     - FRESH TISSUE
+  #     - FROZEN TISSUE
+  #     - OTHER BODILY FLUIDs
+  #     - SALIVA
+  #     - STOOL
+  #     - URINE
+  #   Req: 'Yes'
   anatomical_collection_site:
     Desc: This is CMB's version of "sample site". <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -1616,26 +1637,27 @@ PropDefinitions:
         - days
       value_type: number
     Req: 'Yes'
-  specimen_category:
-    Desc:  This in NOT the CMB Catalog Site's "Tissue Ccategory", the indicator as to normal vs primary vs metastatic. Not used within the CMB Catalog site itself, but defined within at least one of the associated Data Dictionaries. <br>CDE ID = 7069877
+  collection_method:
+    Desc: text
     Term:
       - Origin: caDSR
-        Code: '7069877D'
+        Code: 'code/ID'
         Value: Data Element Name  
-    Src: CMB DD
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  fixative:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
     Enum:
-      - BLOOD
-      - BONE MARROW
-      - BUCCAL CELL SAMPLE
-      - CEREBROSPINAL FLUID
-      - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
-      - FORMALIN FIXED TISSUE
-      - FRESH TISSUE
-      - FROZEN TISSUE
-      - OTHER BODILY FLUIDs
-      - SALIVA
-      - STOOL
-      - URINE
+      - EDTA
+      - FFPE
+      - Formalin
+      - Streck
     Req: 'Yes'
   # days_from_diagnosis_to_specimen_collection:
   #   Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis. <br>CDE ID = 11253404 ALL OF THIS IS INCORRECT BECAUSE THE INCORRECT CDE WAS REFERENCED; PER THE CORRECT CDE ID OF 11248865 THE PROPERTY DESCRIPTION SHOULD BE The number of days from the date the diagnosis was made to the date a sample was collected.

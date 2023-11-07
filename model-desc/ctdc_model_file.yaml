@@ -274,7 +274,6 @@ Nodes:
       # - days_from_initial_genomic_sequencing_to_Specimen_collection #11250807
       # - days_from_recurrence_to_specimen_collection #11251133
       # - days_from_specimen_collection_to_initial_pathologic_diagnosis #11253404
-      
   data_file:
     Desc: Data files can be associated with CTDC project, study, participant, diagnosis and specimen records, but are not themselves stored within the application. Instead, the application stores records as to the existence and nature of such data files. The Data File node is comprised of properties which characterize these files in terms of their size, format and content, such that they can be appropriately represented within the application’s UI, and in terms of their storage location, such that they can be retrieved for analysis.
     Tags:
