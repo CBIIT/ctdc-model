@@ -409,16 +409,19 @@ PropDefinitions:
         Value: Person Reported Gender Type  
     Src: DSS
     Enum:
-      - Choose Not to Disclose # Response Declined per CMB?
-      - Female
-      - Female-To-Male # Female-to-Male Transsexual per CMB
-      - Intersex # Intersex per CMB
+      - Choose Not to Disclose # = Response Declined per CMB?
+      - Female # perfect match to CMB data values
+      - Female-To-Male
+      - Female-to-Male Transsexual # per CMB
+      - Intersex # perfect match to CMB data values
       - Male
-      - Male-To-Female # Male-to-Female Transsexual per CMB
+      - Male-To-Female
+      - Male-to-Female Transsexual # per CMB
       - None Of These Describe Me
       - Non-Conforming Gender
-      - Refused to Answer # Response Declined per CMB?
-      - Unknown # Unknown per CMB
+      - Refused to Answer # = Response Declined per CMB?
+      - Response Declined # per CMB
+      - Unknown # perfect match to CMB data values
     Req: 'Yes'
   height:
     Desc: The height of the subject as of enrollment, measured in cm. <br>NOT CURRENTLY ASSIGNED ANY CDE
@@ -580,13 +583,20 @@ PropDefinitions:
         Value: Data Element Name  
     Src: CMB
     Enum:
-      - Disease Group 1
-      - Disease Group 2
-      - Disease Group 3
-      - Disease Group 4
-      - Disease Group 5
-      - Disease Group 6
-      - Disease Group 7
+      - Colorectal cancer, NOS
+      - Acute myeloid leukemia, NOS
+      - Adenocarcinoma of the gastroesophageal junction
+      - Melanoma
+      - Myeloma, NOS
+      - Non-small cell lung cancer, NOS
+      - Prostate cancer, NOS
+      - Small cell lung cancer
+      - Invasive breast carcinoma
+      - Fallopian tube carcinoma
+      - Gastric cancer, NOS
+      - Primary peritoneal carcinoma
+      - Esophageal cancer, NOS
+      - Ovarian epithelial cancer
     Req: 'Yes'
   icd_10_disease_code:
     Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans. <br>CDE ID = 11479873
@@ -759,17 +769,14 @@ PropDefinitions:
     Desc: The stage of the primary disease with which the subject in question has been diagnosed. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Src: CMB
     Enum: 
-      - II
-      - IIa
-      - IIb
-      - III
-      - IIIa
-      - IIIb
-      - IV
-      - IVa
-      - IVb
-      - Unknown
-      - Not Determined
+      - Stage III
+      - Stage IIIA
+      - Stage IIIB
+      - Stage IIIC
+      - Stage IV
+      - Stage IVA
+      - Stage IVB
+      - Stage IVC
     Req: 'Yes'
   tumor_grade:
     Desc: A text term to express the degree of abnormality of cancer cells as a measure of differentiation and aggressiveness. <br>CDE ID = 11325685
@@ -790,10 +797,12 @@ PropDefinitions:
       - Low Grade
       - Not Applicable
       - Not Reported 
-      - Grade Cannot Be Assessed # from CMB Catalog Site
-      - Moderately Differentiated # from CMB Catalog Site
-      - Poorly Differentiated # from CMB Catalog Site
-      - Well Differentiated # from CMB Catalog Site
+      - Grade Cannot Be Assessed # from CMB Catalog Site and directly from Jeff
+      - Borderline Malignancy # directly from Jeff
+      - Well Differentiated # from CMB Catalog Site and directly from Jeff
+      - Moderately Differentiated # from CMB Catalog Site and directly from Jeff
+      - Poorly Differentiated # from CMB Catalog Site and directly from Jeff
+      - Undifferentiated Grade # directly from Jeff
     Req: 'Yes'
   diagnosis_date:
     Desc: text NOT CURRENTLY ASSIGNED ANY CDE
@@ -983,10 +992,12 @@ PropDefinitions:
     Enum:
       - Complete Response
       - Partial Response
+      - Less than partial response
       - Stable Disease
       - Progressive Disease
-      - Not Determined
-      - Not Applicable
+      - Not Assessed
+      - Too Early
+      - Not Evaluable
       - Unknown
     Req: Preferred
   # non_targeted_therapy
@@ -1088,10 +1099,12 @@ PropDefinitions:
     Enum:
       - Complete Response
       - Partial Response
+      - Less than partial response
       - Stable Disease
       - Progressive Disease
-      - Not Determined
-      - Not Applicable
+      - Not Assessed
+      - Too Early
+      - Not Evaluable
       - Unknown
     Req: 'Yes'
   # surgery
@@ -1327,10 +1340,12 @@ PropDefinitions:
     Enum:
       - Complete Response
       - Partial Response
+      - Less than partial response
       - Stable Disease
       - Progressive Disease
-      - Not Determined
-      - Not Applicable
+      - Not Assessed
+      - Too Early
+      - Not Evaluable
       - Unknown
     Req: 'Yes'
   # subject_status
