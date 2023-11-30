@@ -738,7 +738,7 @@ PropDefinitions:
       - "2092003" #Melanoma
       - "372244006" #Melanoma
       - "72495009" #Mucinous Adenocarcinoma
-      - "55921005" #Multiple myeloma
+      - "55921005a" #Multiple myeloma
       - "188717001" #Multiple myeloma and immunoproliferative disease
       - "253000007" #Neuroendocrine Carcinoma
       - "2142002" #Nodular Melanoma
@@ -746,7 +746,7 @@ PropDefinitions:
       - "254637007" #Non-Small Cell Lung Carcinoma
       - "128922003" #Plasma Cell Leukemia
       - "109989006" #Plasma Cell Myeloma
-      - "55921005" #Plasma Cell Myeloma
+      - "55921005b" #Plasma Cell Myeloma
       - "399490008" #Prostate Adenocarcinoma
       - "254900004" #Prostate Carcinoma
       - "399068003" #Prostate Carcinoma
