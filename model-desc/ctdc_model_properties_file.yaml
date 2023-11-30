@@ -576,7 +576,7 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   primary_diagnosis_disease_group:
-    Desc: Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -614,51 +614,104 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Enum: # actual values as displayed within the CMB's Catalog Site
-      - "10000884" #- Acute Myeloid Leukemia Not Otherwise Specified
-      - "10010029" #- Colorectal Carcinoma
-      - "10066354" #- Gastroesophageal Junction Adenocarcinoma
-      - "10029514" #- Lung Non-Small Cell Carcinoma
-      - "10041071" #- Lung Small Cell Carcinoma
-      - "10053571" #- Melanoma
-      - "10028566" #- Plasma Cell Myeloma
-      - "10036910" #- Prostate Carcinoma
+    Enum:
+    # actual values as displayed within the CMB's Catalog Site
+      # - "10000884" #- Acute Myeloid Leukemia Not Otherwise Specified
+      # - "10010029" #- Colorectal Carcinoma
+      # - "10066354" #- Gastroesophageal Junction Adenocarcinoma
+      # - "10029514" #- Lung Non-Small Cell Carcinoma
+      # - "10041071" #- Lung Small Cell Carcinoma
+      # - "10053571" #- Melanoma
+      # - "10028566" #- Plasma Cell Myeloma
+      # - "10036910" #- Prostate Carcinoma
+     #actual values in the v3 CMB data submission
+      - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
+      - "10066354" # Adenocarcinoma of the Gastroesophageal Junction
+      - "10010029" # Colorectal Carcinoma
+      - "10006190" # Invasive Breast Carcinoma NEW
+      - "10053571" # Melanoma
+      - "10029514" # Non-Small Cell Lung Carcinoma
+      - "10033159" # Ovarian Carcinoma NEW
+      - "10028566" # Plasma Cell Myeloma
+      - "10036910" # Prostate Carcinoma
+      - "10041071" # Small Cell Lung Carcinoma
     Req: 'Yes'
-  ctep_disease_code: 
+  ctep_disease_code: #this really should be referred to as CTEP disease term
     Desc: In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the subject in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: value
-    Enum: # actual values in the latest CMB data submission
+    Enum:
+    # actual values in the v2 CMB data submission
+      # - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
+      # - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
+      # - Colon Adenocarcinoma                            # meddra code 10010029
+      # - Colorectal Carcinoma                            # meddra code 10010029
+      # - Melanoma                                        # meddra code 10053571
+      # - Non-Small Cell Lung Carcinoma                   # meddra code 10029514
+      # - Plasma Cell Myeloma                             # meddra code 10028566
+      # - Prostate Carcinoma                              # meddra code 10036910
+      # - Small Cell Lung Carcinoma                       # meddra code 10041071
+    # actual values in the v3 CMB data submission
       - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
       - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
-      - Colon Adenocarcinoma                            # meddra code 10010029
       - Colorectal Carcinoma                            # meddra code 10010029
-      - Melanoma                                        # meddra code 10053571
+      - Invasive Breast Carcinoma                       # meddra code 10006190 NEW
+      - Melanoma                                        # meddra code 10053571 
       - Non-Small Cell Lung Carcinoma                   # meddra code 10029514
-      - Plasma Cell Myeloma                             # meddra code 10028566
-      - Prostate Carcinoma                              # meddra code 10036910
-      - Small Cell Lung Carcinoma                       # meddra code 10041071 
+      - Ovarian Carcinoma                               # meddra code 10033159 NEW
+      - Plasma Cell Myeloma                             # meddra code 10028566 
+      - Prostate Carcinoma                              # meddra code 10036910 
+      - Small Cell Lung Carcinoma                       # meddra code 10041071
     Req: 'Yes'  
   snomed_disease_term:
-    Desc: Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: Acceptable values currently specified, all of which are sourced from actual data, are likely to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
     Enum:
-      - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
-      - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
-      - Colon Adenocarcinoma                            # meddra code 10010029
-      - Colorectal Carcinoma                            # meddra code 10010029
-      - Melanoma                                        # meddra code 10053571
-      - Non-Small Cell Lung Carcinoma                   # meddra code 10029514
-      - Plasma Cell Myeloma                             # meddra code 10028566
-      - Prostate Carcinoma                              # meddra code 10036910
-      - Small Cell Lung Carcinoma                       # meddra code 10041071 
+      - Acute Myeloid Leukemia 17788007
+      - Adenocarcinoma 35917007
+      - Adenocarcinoma 443961001
+      - Amelanotic Melanoma 70594002
+      - Breast Carcinoma 254838004
+      - Colon Adenoma 428054006
+      - Colon Carcinoma 269533000
+      - Colorectal Adenocarcinoma 408645001
+      - Cutaneous Melanoma 93655004
+      - Epithelioid Cell Melanoma 37138001
+      - Esophageal Adenocarcinoma 276803003
+      - Gastric Adenocarcinoma 408647009
+      - Lung Adenocarcinoma 254626006
+      - Lung Carcinoma 448993007
+      - Melanoma 2092003
+      - Melanoma 372244006
+      - Mucinous Adenocarcinoma 72495009
+      - Multiple myeloma 55921005
+      - Multiple myeloma and immunoproliferative disease 188717001
+      - Neuroendocrine Carcinoma 253000007
+      - Nodular Melanoma 2142002
+      - Nodular Melanoma 254731001
+      - Non-Small Cell Lung Carcinoma 254637007
+      - Plasma Cell Leukemia 128922003
+      - Plasma Cell Myeloma 109989006
+      - Plasma Cell Myeloma 55921005
+      - Prostate Adenocarcinoma 399490008
+      - Prostate Carcinoma 254900004
+      - Prostate Carcinoma 399068003
+      - Rectal Adenoma 399730005
+      - Rectal Carcinoma 254582000
+      - Small Cell Carcinoma 74364000
+      - Small Cell Lung Carcinoma 254632001
+      - Small Cell Lung Carcinoma 254633006
+      - Squamous Cell Carcinoma 28899001
+      - Squamous Cell Carcinoma 402815007
+      - Squamous Cell Lung Carcinoma 254634000
+      - Superficial Spreading Melanoma 254730000
     Req: 'Yes'
   snomed_disease_code: 
     Desc: Strictly-speaking, a 9-digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>Within the CMB Catalog Site, Disease Stage (SNOMED) is presented in the form of a human readable narrative statement of the primary disease which includes some histoligical detail and disease stage. <br>Acceptable values currently specified, all modified versions of the corresponding MEDDRA disease codes, are to be used only for generation of mock data. <br>CDE ID = 6642369
@@ -668,14 +721,44 @@ PropDefinitions:
         Value: Data Element Name  
     Src: CMB
     Enum:
-      - "123000884" #- Acute Myeloid Leukemia Not Otherwise Specified
-      - "123010029" #- Colorectal Carcinoma
-      - "123066354" #- Gastroesophageal Junction Adenocarcinoma
-      - "123029514" #- Lung Non-Small Cell Carcinoma
-      - "123041071" #- Lung Small Cell Carcinoma
-      - "123053571" #- Melanoma
-      - "123028566" #- Plasma Cell Myeloma
-      - "123036910" #- Prostate Carcinoma
+      - "17788007" #Acute Myeloid Leukemia
+      - "35917007" #Adenocarcinoma
+      - "443961001" #Adenocarcinoma
+      - "70594002" #Amelanotic Melanoma
+      - "254838004" #Breast Carcinoma
+      - "428054006" #Colon Adenoma
+      - "269533000" #Colon Carcinoma
+      - "408645001" #Colorectal Adenocarcinoma
+      - "93655004" #Cutaneous Melanoma
+      - "37138001" #Epithelioid Cell Melanoma
+      - "276803003" #Esophageal Adenocarcinoma
+      - "408647009" #Gastric Adenocarcinoma
+      - "254626006" #Lung Adenocarcinoma
+      - "448993007" #Lung Carcinoma
+      - "2092003" #Melanoma
+      - "372244006" #Melanoma
+      - "72495009" #Mucinous Adenocarcinoma
+      - "55921005" #Multiple myeloma
+      - "188717001" #Multiple myeloma and immunoproliferative disease
+      - "253000007" #Neuroendocrine Carcinoma
+      - "2142002" #Nodular Melanoma
+      - "254731001" #Nodular Melanoma
+      - "254637007" #Non-Small Cell Lung Carcinoma
+      - "128922003" #Plasma Cell Leukemia
+      - "109989006" #Plasma Cell Myeloma
+      - "55921005" #Plasma Cell Myeloma
+      - "399490008" #Prostate Adenocarcinoma
+      - "254900004" #Prostate Carcinoma
+      - "399068003" #Prostate Carcinoma
+      - "399730005" #Rectal Adenoma
+      - "254582000" #Rectal Carcinoma
+      - "74364000" #Small Cell Carcinoma
+      - "254632001" #Small Cell Lung Carcinoma
+      - "254633006" #Small Cell Lung Carcinoma
+      - "28899001" #Squamous Cell Carcinoma 
+      - "402815007" #Squamous Cell Carcinoma
+      - "254634000" #Squamous Cell Lung Carcinoma
+      - "254730000" #Superficial Spreading Melanoma
     Req: 'Yes'
   icd_o_primary_site:
     Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3). <br>CDE ID = 11341616
