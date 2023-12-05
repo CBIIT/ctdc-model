@@ -1,303 +1,397 @@
+# Cancer Moonshot Biobank data model nodes, properties and relationships file
+# Title case names are "reserved" (meaningful to the parser)
+# Lower case names are labels for the entities
+
 Nodes:
-  arm:
-    Category: administrative
+  node:
+    Desc: text
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
     Props:
-      - show_node
-      - arm_id
-      - arm_title
-      - arm_target
-      - arm_drug
-      - pubmed_id
-      - dbgap_accession_number
-  assignment_report:
-    Category: generated_data_file
+      - property_1
+      - property_2
+      - property_3
+      - property_4
+      - property_5
+      - property_6
+  program:  
+    Desc: Within the Clinical Trial Data Commons, projects and studies/trials are grouped into discrete programs, based upon the origins and/or scientific nature of each project or study/trial. These programs may or may not directly relate to any formal program, e.g. NCI funding programs. The Program node contains the properties required to appropriately characterize any given CTDC program.
+    Tags:
+      Category: administrative
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
     Props:
-      - show_node
-      - assignment_report_id
-      - analysis_id
-      - step_at_assignment
-      - assignment_logic
-      - assignment_outcome
-      - treatment_outcome
-  case:
-    Category: case
+      - program_name #11444542
+      - program_short_name #11459801
+  project:
+    Desc: text
+    Tags:
+      Category: administrative
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
     Props:
-      - show_node
-      - case_id
-      - source_id
-      - gender
+      - project_name #11459804
+      - project_short_name #11459806
+  principal_investigator:
+    Desc: The Principal Investigator node contains properties which identify the principal investigator(s) responsible for any given study/trial. A study/trial may have one or more principal investigators, and any given individual may be listed as a principal investigator on more than one study/trial.
+    Tags:
+      Category: study
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+      - principal_investigator_first_name #10624731
+      - principal_investigator_last_name #10624733
+      - principal_investigator_middle_name #10624732
+      - principal_investigator_orcid_id #10624734
+  study:
+    Desc: The Study node contains properties required to characterize each study/trial in terms of a title, describe when, how and why the study/trial was conducted, and provide links to additional information about the study/trial.
+    Tags:
+      Category: study
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+      - study_name #11459810
+      - study_short_name #11459812
+      - study_id
+      - study_description
+      - study_type #11160683
+      - dates_of_conduct
+  associated_link:
+    Desc: The Associated Link node cotains the properties required to associate multiple links to additional information about any given study/trial to the appropriate study/trial, and define an inuitive label via which each link will be diplayed within the UI. 
+    Tags:
+      Category: study
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - associated_link_id
+      - associated_link_name
+      - associated_link_url
+  image_collection:
+    Desc: The Image Collection node is comprised of properties which describe collections of images that are associated with any given study/trial. These properties characterize such image collections in terms of the types of images they contain, where the collections are hosted, and how they can be accessed.
+    Tags:
+      Category: study
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - image_collection_id
+      - image_collection_name
+      - image_type_included
+      - image_collection_url
+      - repository_name
+      - collection_access
+  subject:
+    Desc: text
+    Tags:
+      Category: case # in lieu of "subject" being a category recognized by the DMN
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+      - subject_id
+      - biomarker_results_available
+      - radiology_report_available #6944764
+      - radiology_images_available
+      - histology_images_available
+  demographic:
+    Desc: The Demographic node is comprised of properties which describe the key characteristics of each study/trial subject, such as sex, gender, race and etnnicity, etc.
+    Tags:
+      Category: case # in lieu of "subject" being a category recognized by the DMN
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+      - demographic_id
+      #- age_at_diagnosis
+      - age_at_enrollment
       - race
       - ethnicity
-      - patient_status
-      - current_step
-      - disease
-      - ctep_category
-      - ctep_subcategory
-      - meddra_code
-      - prior_drugs
-      - extent_of_disease
-      - ecog_performance_status
-  clinical_trial:
-    Category: administrative
+      - sex
+      - reported_gender #10748236
+      - height
+      - weight
+      - body_surface_area
+      - occupation
+      - income
+      - highest_level_of_education
+      #- site_of_enrollment
+      - ncbi_taxonomy_id #10543100
+      - ncbi_taxonomy_name #10543082
+  exposure:
+    Desc: environmental, workplace and lifestyle exposure(s)
+    Tags:
+      Category: case # in lieu of "subject" being a category recognized by the DMN
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
     Props:
-      - show_node
-      - clinical_trial_id
-      - clinical_trial_short_name
-      - clinical_trial_description
-      - clinical_trial_designation
-      - clinical_trial_long_name
-      - clinical_trial_type
-      - lead_organization
-      - principal_investigators
-      - dbgap_accession_number
-  copy_number_variant:
-    Category: nucleic_acid_variant
+      - exposure_id
+      - environmental_exposure_type #11256813
+      - carcinogen_exposure
+  diagnosis:
+    Desc: The Diagnosis node contains numerous properties which fully characterize the type of cancer with which any given study/trial subject was diagnosed, inclusive of disease stage, histology/pathology, and age at diagnosis.
+    Tags:
+      Category: clinical
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
     Props:
-      - show_node
-      - variant_id
-      - external_variant_id
-      - gene
-      - chromosome
-      - oncomine_variant_class
-      - tumor_suppressor
-  delins_variant:
-    Category: nucleic_acid_variant
+      - diagnosis_id
+      - primary_diagnosis_disease_group
+      - icd_10_disease_code #11479873
+      - ctep_disease_term
+      - meddra_disease_code
+      - snomed_disease_term
+      - snomed_disease_code # this is disease plus stage as presented within the CMB Catalog
+      - icd_o_primary_site #11341616
+      - primary_disease_site
+      - histology
+      - date_of_confirmation_of_histology #6409589
+      - histological_subtype #7344580
+      - stage_of_disease
+      - tumor_grade #11325685
+      - diagnosis_date # quantified in days indexed to date of trial enrollment 
+      - subject_age_at_diagnosis #10609539
+  # treatment:
+  #   Desc: text
+  #   Tags:
+  #     Category: clinical
+  #     Assignment: core
+  #     Class: primary
+  #     Template: 'Yes'
+  #   Props:
+  #     - treatment_id
+  #     - x_targeted_therapy #6400634
+  #     - x_therapy #6400634
+  #     - x_surgical_procedure_name #6411539
+  #     - x_radiological_procedure_name #6411539
+  targeted_therapy:
+    Desc: text
+    Tags:
+      Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
     Props:
-      - show_node
-      - variant_id
-      - external_variant_id
-      - gene
-      - chromosome
-      - exon
-      - position
-      - reference
-      - alternative
-      - transcript_id
-      - transcript_hgvs
-      - genomic_hgvs
-      - oncomine_variant_class
-      - variant_classification
-      - amino_acid_change
-  disease_eligibility_criterion:
-    Category: clinical
+      - targeted_therapy_id
+      - targeted_therapy #6400634
+      - targeted_therapy_dose
+      - targeted_therapy_frequency
+      - targeted_therapy_start_and_end
+      - best_response_to_targeted_therapy
+  non_targeted_therapy:
+    Desc: text
+    Tags:
+      Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
     Props:
-      - show_node
-      - disease_eligibility_criterion_id
-      - criterion_type
-      - ctep_category
-      - ctep_subcategory
-      - ctep_short_name
-      - meddra_code
-  drug_eligibility_criterion:
-    Category: clinical
+      - non_targeted_therapy_id
+      - non_targeted_therapy #6400634
+      - non_targeted_therapy_dose
+      - non_targeted_therapy_frequency
+      - non_targeted_therapy_start_and_end
+      - best_response_to_non_targeted_therapy
+  surgery:
+    Desc: text
+    Tags:
+      Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
     Props:
-      - show_node
-      - drug_eligibility_criterion_id
-      - criterion_type
-      - drug_name
-  file:
-    Category: generated_data_file
+      - surgical_procedure_id
+      - surgical_procedure #6411539
+      - surgical_procedure_date
+      - surgical_procedure_anatomical_location
+      - surgical_procedure_therapeutic
+      - surgical_procedure_findings
+      - extent_of_residual_disease  
+  radiotherapy:
+    Desc: text
+    Tags:
+      Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
     Props:
-      - show_node
-      - file_description
-      - file_format
-      - file_location
-      - file_name
-      - file_size
-      - file_status
-      - file_type
-      - md5sum
-      - uuid
-  gene_fusion_variant:
-    Category: nucleic_acid_variant
+      - radiological_procedure_id
+      - radiological_procedure #6411539
+      - radiological_procedure_anatomical_location
+      - radiation_dose
+      - radiation_frequency
+      - radiation_extent
+      - radiotherapy_start_and_end
+      - best_response_to_radiotherapy
+  subject_status:
+    Desc: text
+    Tags:
+      Category: clinical
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
     Props:
-      - show_node
-      - variant_id
-      - external_variant_id
-      - gene1
-      - gene2
-      - oncomine_variant_class
-  ihc_assay_report:
-    Category: generated_data_file
-    Props:
-      - show_node
-      - ihc_assay_id
-      - ihc_test_gene
-      - ihc_test_result
-  indel_variant:
-    Category: nucleic_acid_variant
-    Props:
-      - show_node
-      - variant_id
-      - external_variant_id
-      - gene
-      - chromosome
-      - exon
-      - position
-      - reference
-      - alternative
-      - transcript_id
-      - transcript_hgvs
-      - genomic_hgvs
-      - oncomine_variant_class
-      - variant_classification
-      - amino_acid_change
-  metastatic_site:
-    Category: clinical
-    Props:
-      - show_node
-      - met_site_id
-      - metastatic_site_name
-  nucleic_acid:
-    Category: biospecimen
-    Props:
-      - show_node
-      - aliquot_id
-      - molecular_sequence_number
-      - nucleic_acid_concentration
-      - nucleic_acid_volume
-      - nucleic_acid_type
-  sequencing_assay:
-    Category: analysis
-    Props:
-      - show_node
-      - sequencing_assay_id
-      - qc_result
-      - experimental_method
-      - platform
-  snv_variant:
-    Category: nucleic_acid_variant
-    Props:
-      - show_node
-      - variant_id
-      - external_variant_id
-      - gene
-      - chromosome
-      - exon
-      - position
-      - reference
-      - alternative
-      - transcript_id
-      - transcript_hgvs
-      - genomic_hgvs
-      - oncomine_variant_class
-      - variant_classification
-      - amino_acid_change
+      - subject_status_id
+      - survival_status #7050072
+      - primary_cause_of_death #6421593
+      - off_study
+      - off_study_reason #6355981
   specimen:
-    Category: biospecimen
+    Desc: The Specimen node contains numerous properties which provide an in-depth characterization of the types of biospecimens which were collected from any given study/trial participant and subsequently analyzed.
+    Tags:
+      Category: biospecimen # in lieu of "specimen" being a category recognized by the DMN
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
     Props:
-      - show_node
       - specimen_id
-      - biopsy_sequence_number
-      - specimen_type
-  variant_report:
-    Category: generated_data_file
+      - parent_specimen_id
+      - parent_specimen_type # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
+      - specimen_type # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
+      - obi_specimen_type #11253427 not a good match to the caDSR term referenced by the CDE's ID
+      # - specimen_category # confusingly close to the CMB Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, but acceptable terms for caDSR 7069877, quoted as a reference for "specimen category" uses terms that do not relate to "tissue category"
+      - anatomical_collection_site
+      - type_of_tissue #caDSR 7003892 this looks very much like the CMB Catalog Site's "Tissue Category"
+      - tissue_category # this would be the Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, which appears within at least two of the DDs as Tissue Type
+      - icd_o_3_tissue_morphology # 11326261
+      - assessment_timepoint # this appears to be the Catalog Site's "Collection Timepoint" caDSR 7065963
+      - collection_date # from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
+      - collection_method
+      - fixative
+      # - days_from_diagnosis_to_specimen_collection #11253404
+      # - diagnosis_date # from the CMB perspective, this is supposedly equivalent to the above, but because of the way this date is indexed to enrollment date, it should not be a specimen property
+      # - days_from_first_subject_visit_to_specimen_collection #11248874
+      # - days_from_first_treatment_to_specimen_collection #11250807
+      # - days_from_initial_genomic_sequencing_to_Specimen_collection #11250807
+      # - days_from_recurrence_to_specimen_collection #11251133
+      # - days_from_specimen_collection_to_initial_pathologic_diagnosis #11253404
+  data_file:
+    Desc: Data files can be associated with CTDC project, study, participant, diagnosis and specimen records, but are not themselves stored within the application. Instead, the application stores records as to the existence and nature of such data files. The Data File node is comprised of properties which characterize these files in terms of their size, format and content, such that they can be appropriately represented within the application’s UI, and in terms of their storage location, such that they can be retrieved for analysis.
+    Tags:
+      Category: data_file
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
     Props:
-      - show_node
-      - variant_report_id
-      - analysis_id
-      - mapd
-      - cellularity
-      - torrent_variant_caller_version
-      - reference_genome
+      - data_file_name #11284037
+      - data_file_type
+      - data_file_description #11280338
+      - data_file_format #11416926
+      - data_file_size #11479876
+      - data_file_checksum_value #11480133
+      - data_file_checksum_type #11475057
+      - data_file_compression_status #11387114
+      - data_file_uuid
+      - data_file_location
 Relationships:
-  of_case:
+  belongs_to:
     Mul: many_to_one
     Ends:
+      - Src: subject
+        Dst: study
+      - Src: study
+        Dst: project
+      - Src: study # so can a lowest-level study belong directly to a highest-level program?
+        Dst: program
+      #- Src: project # this relationship can be removed because project is above study?
+        #Dst: study
+      - Src: project # this seems legitimate
+        Dst: program     
+    Props: null
+  associated_with: # group all file relationships in here?
+    Mul: many_to_one
+    Ends:
+      - Src: data_file
+        Dst: specimen
+      - Src: data_file
+        Dst: diagnosis
+      - Src: data_file
+        Dst: subject
+      - Src: data_file
+        Dst: study
+      - Src: data_file
+        Dst: project
+      - Src: associated_link
+        Dst: study
+      - Src: associated_link
+        Dst: project  
+      - Src: image_collection
+        Dst: study
+      - Src: image_collection
+        Dst: project
+    Props: null      
+  #of_study:
+    #Mul: many_to_many
+    #Ends:
+      #- Src: principal_ivestigator # alternatively, express principal investigator relationships to both study and project elsewhere as "directs" relationships
+        #Dst: study
+      #- Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+        #Dst: study
+        #Mul: many_to_one
+    #Props: null    
+  #of_project:
+    #Mul: many_to_many
+    #Ends:
+      #- Src: principal_investigator # alternatively, express principal investigator relationships to both study and project elsewhere as "directs" relationships
+        #Dst: project
+      #- Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+        #Dst: project
+        #Mul: many_to_one
+    #Props: null    
+  of_subject:
+    Mul: many_to_one
+    Ends:
+      - Src: demographic
+        Dst: subject
+        Mul: one_to_one
+      - Src: exposure
+        Dst: subject
+      - Src: diagnosis
+        Dst: subject
+      #- Src: treatment
+        #Dst: subject
+      - Src: targeted_therapy
+        Dst: subject
+        Mul: many_to_many  
+      - Src: non_targeted_therapy
+        Dst: subject
+        Mul: many_to_many
+      - Src: surgery
+        Dst: subject
+        Mul: many_to_many
+      - Src: radiotherapy
+        Dst: subject
+        Mul: many_to_many
+      - Src: subject_status
+        Dst: subject
+        Mul: one_to_one  
+        # to accommodate a Specimen being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Visit, etc.
       - Src: specimen
-        Dst: case
+        Dst: subject
+        # to accommodate a Data File being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Specimen or Diagnosis
+      #- Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+        #Dst: subject
     Props: null
-  of_specimen:
-    Mul: many_to_one
-    Ends:
-      - Src: ihc_assay_report
-        Dst: specimen
-      - Src: nucleic_acid
-        Dst: specimen
-      - Src: assignment_report
-        Dst: specimen
-    Props: null
-  of_nucleic_acid:
-    Mul: many_to_one
-    Ends:
-      - Src: sequencing_assay
-        Dst: nucleic_acid
-    Props: null
-  of_sequencing_assay:
-    Mul: many_to_one
-    Ends:
-      - Src: file
-        Dst: sequencing_assay
-      - Src: variant_report
-        Dst: sequencing_assay
-    Props: null
-  snv_variant_of:
+  #of_specimen:
+    #Mul: many_to_one
+    #Ends:
+      #- Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+        #Dst: specimen
+    #Props: null       
+  directs: 
     Mul: many_to_many
     Ends:
-      - Src: snv_variant
-        Dst: variant_report
-    Props:
-      - allele_frequency
-  delins_variant_of:
-    Mul: many_to_many
-    Ends:
-      - Src: delins_variant
-        Dst: variant_report
-    Props:
-      - allele_frequency
-  indel_variant_of:
-    Mul: many_to_many
-    Ends:
-      - Src: indel_variant
-        Dst: variant_report
-    Props:
-      - allele_frequency
-  copy_number_variant_of:
-    Mul: many_to_many
-    Ends:
-      - Src: copy_number_variant
-        Dst: variant_report
-    Props:
-      - copy_number
-      - copy_number_ci_5
-      - copy_number_ci_95
-  gene_fusion_variant_of:
-    Mul: many_to_many
-    Ends:
-      - Src: gene_fusion_variant
-        Dst: variant_report
-    Props:
-      - gene1_read_count
-      - gene2_read_count
-  of_variant_report:
-    Mul: many_to_one
-    Ends:
-      - Src: assignment_report
-        Dst: variant_report
-    Props: null
-  of_arm:
-    Mul: many_to_many
-    Ends:
-      - Src: assignment_report
-        Dst: arm
-      - Src: case
-        Dst: arm
-      - Src: file
-        Dst: arm
-      - Src: disease_eligibility_criterion
-        Dst: arm
-      - Src: drug_eligibility_criterion
-        Dst: arm
-    Props: null
-  of_trial:
-    Mul: many_to_one
-    Ends:
-      - Src: arm
-        Dst: clinical_trial
-    Props: null
-  met_site_of:
-    Mul: many_to_many
-    Ends:
-      - Src: metastatic_site
-        Dst: case
+      - Src: principal_investigator
+        Dst: project
+      - Src: principal_investigator
+        Dst: study
     Props: null
