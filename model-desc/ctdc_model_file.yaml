@@ -147,8 +147,8 @@ Nodes:
       - diagnosis_id
       - primary_diagnosis_disease_group
       - icd_10_disease_code #11479873
+      - ctep_disease_term
       - meddra_disease_code
-      - ctep_disease_code
       - snomed_disease_term
       - snomed_disease_code # this is disease plus stage as presented within the CMB Catalog
       - icd_o_primary_site #11341616

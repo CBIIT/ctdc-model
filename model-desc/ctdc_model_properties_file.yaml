@@ -607,36 +607,7 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: Preferred
-  meddra_disease_code: 
-    Desc: An eight digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>The CMB Catalog Site's "Primary Diagnosis (medDRA Disease Code)" is actually a concatenation of medDRA code and CTEP disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: CMB
-    Enum:
-    # actual values as displayed within the CMB's Catalog Site
-      # - "10000884" #- Acute Myeloid Leukemia Not Otherwise Specified
-      # - "10010029" #- Colorectal Carcinoma
-      # - "10066354" #- Gastroesophageal Junction Adenocarcinoma
-      # - "10029514" #- Lung Non-Small Cell Carcinoma
-      # - "10041071" #- Lung Small Cell Carcinoma
-      # - "10053571" #- Melanoma
-      # - "10028566" #- Plasma Cell Myeloma
-      # - "10036910" #- Prostate Carcinoma
-     #actual values in the v3 CMB data submission
-      - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
-      - "10066354" # Adenocarcinoma of the Gastroesophageal Junction
-      - "10010029" # Colorectal Carcinoma
-      - "10006190" # Invasive Breast Carcinoma NEW
-      - "10053571" # Melanoma
-      - "10029514" # Non-Small Cell Lung Carcinoma
-      - "10033159" # Ovarian Carcinoma NEW
-      - "10028566" # Plasma Cell Myeloma
-      - "10036910" # Prostate Carcinoma
-      - "10041071" # Small Cell Lung Carcinoma
-    Req: 'Yes'
-  ctep_disease_code: #this really should be referred to as CTEP disease term
+  ctep_disease_term: #this really should be referred to as CTEP disease term
     Desc: In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the subject in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
@@ -666,6 +637,35 @@ PropDefinitions:
       - Prostate Carcinoma                              # meddra code 10036910 
       - Small Cell Lung Carcinoma                       # meddra code 10041071
     Req: 'Yes'  
+  meddra_disease_code: 
+    Desc: An eight digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>The CMB Catalog Site's "Primary Diagnosis (medDRA Disease Code)" is actually a concatenation of CTEP disease "term" and medDRA code <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Enum:
+    # actual values as displayed within the CMB's Catalog Site
+      # - "10000884" #- Acute Myeloid Leukemia Not Otherwise Specified
+      # - "10010029" #- Colorectal Carcinoma
+      # - "10066354" #- Gastroesophageal Junction Adenocarcinoma
+      # - "10029514" #- Lung Non-Small Cell Carcinoma
+      # - "10041071" #- Lung Small Cell Carcinoma
+      # - "10053571" #- Melanoma
+      # - "10028566" #- Plasma Cell Myeloma
+      # - "10036910" #- Prostate Carcinoma
+     #actual values in the v3 CMB data submission
+      - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
+      - "10066354" # Adenocarcinoma of the Gastroesophageal Junction
+      - "10010029" # Colorectal Carcinoma
+      - "10006190" # Invasive Breast Carcinoma NEW
+      - "10053571" # Melanoma
+      - "10029514" # Non-Small Cell Lung Carcinoma
+      - "10033159" # Ovarian Carcinoma NEW
+      - "10028566" # Plasma Cell Myeloma
+      - "10036910" # Prostate Carcinoma
+      - "10041071" # Small Cell Lung Carcinoma
+    Req: 'Yes'
   snomed_disease_term:
     Desc: Acceptable values currently specified, all of which are sourced from actual data, are likely to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
