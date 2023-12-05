@@ -1,0 +1,247 @@
+# Cancer Moonshot Biobank data model nodes, properties and relationships file
+# Title case names are "reserved" (meaningful to the parser)
+# Lower case names are labels for the entities
+
+Nodes:
+  node:
+    Desc: text
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - property
+      - property
+      - property
+      - property
+      - property
+      - property
+  program:  
+    Desc: text
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - program_name #11444542
+      - program_short_name #11459801
+  project:
+    Desc: text
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - project_name #11459804
+      - project_short_name #11459806
+  principal_investigator:
+    Desc: text
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - principal_investigator_first_name #10624731
+      - principal_investigator_last_name #10624733
+      - principal_investigator_middle_name #10624732
+      - principal_investigator_orcid_id #10624734
+  study:
+    Desc: text
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - study_name #11459810
+      - study_short_name #11459812
+      - study_type #11160683
+  subject:
+    Desc: text
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - property
+      - property
+      - property
+      - property
+      - property
+      - property
+  demographic:
+    Desc: the typical demographics
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - sex
+      - reported_gender #10748236
+      - ncbi_taxonomy_id #10543100
+      - ncbi_taxonomy_name #10543082
+      - property
+      - property
+  exposure:
+    Desc: environmental, workplace and lifestyle exposure(s)
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - environmental_exposure_type #11256813
+      - property
+      - property
+      - property
+      - property
+      - property
+  diagnosis:
+    Desc: diagnosis
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - icd_10_disease_code #11479873
+      - medra_disease_code
+      - snomed_disease_code #this is disease plus stage I think
+      - diagnosis_date #quantified in days indexed to date of trial enrollment
+      - icd_o_primary_site #11341616
+      - primary_disease_site
+      - tumor_grade #11325685
+      - subject_age_at_diagnosis #10609539
+  treatment:
+    Desc: text
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - targeted_therapy #6400634
+      - therapy #6400634
+      - surgical_procedure_name #6411539
+      - radiological_procedure_name #6411539
+      - property
+      - property
+  specimen:
+    Desc: text
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - days_from_diagnosis_to_specimen_collection #11253404
+      - diagnosis_date #from the CMB perspective, this is supposedly equivalent to the above, but because of the way this date is indexed to enrollment date, it should not be a specimen property
+      - days_from_first_subject_visit_to_specimen_collection #11248874
+      - days_from_first_treatment_to_specimen_collection #11250807
+      - days_from_initial_genomic_sequencing_to_Specimen_collection #11250807
+      - days_from_recurrence_to_specimen_collection #11251133
+      - days_from_specimen_collection_to_initial_pathologic_diagnosis #11253404
+      - collection_date #from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
+      - obi_specimen_type #11253427
+      - specimen_category #is this the Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic caDSR 7069877
+      - type_of_tissue #caDSR 7003892
+      - assessment_timepoint #this appears to be the Catalog Site's "Collection Timepoint" caDSR 7065963
+data_file:
+    Desc: file
+    Tags:
+      Category: value
+      Assignment: value
+      Class: value
+      Template: 'Yes'
+    Props:
+      - data_file_checksum_type #11475057
+      - data_file_checksum_value #11480133
+      - data_file_compression_status #11387114
+      - data_file_description #11280338
+      - data_file_format #11416926
+      - data_file_name #11284037
+      - data_file_size #11479876
+Relationships:
+  belongs_to:
+    Mul: many_to_one
+    Ends:
+      - Src: subject
+        Dst: study
+      - Src: study
+        Dst: project
+      - Src: study # so can a lowest-level study belong directly to a highest-level program?
+      - Dst: program
+      - Src: project # this relationship can be removed because project is above study?
+        Dst: study
+      - Src: project # this seems legitimate
+        Dst: program     
+    Props: null
+  associated_with: # group all file relationships in here?
+    Mul: many_to_one
+    Ends:
+      - Src: data_file
+        Dst: specimen
+      - Src: data_file
+        Dst: diagnosis
+      - Src: data_file
+        Dst: subject
+      - Src: data_file
+        Dst: study
+      - Src: data_file
+        Dst: project
+    Props: null      
+  of_study:
+    Mul: many_to_many
+    Ends:
+      - Src: principal_ivestigator # alternatively, express principal investigator relationships to both study and project elsewhere as "directs" relationships
+        Dst: study
+      - Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+        Dst: study
+        Mul: many_to_one
+    Props: null    
+  of_project:
+    Mul: many_to_many
+    Ends:
+      - Src: principal_investigator # alternatively, express principal investigator relationships to both study and project elsewhere as "directs" relationships
+        Dst: project
+      - Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+        Dst: project
+        Mul: many_to_one
+    Props: null    
+  of_subject:
+    Mul: #many_to_one
+    Ends:
+      - Src: demographic
+        Dst: subject
+        Mul: one_to_one
+      - Src: diagnosis
+        Dst: subject
+      - Src: exposure
+        Dst: subject
+        # to accommodate a Specimen being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Visit, etc.
+      - Src: specimen
+        Dst: subject
+        # to accommodate a Data File being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Specimen or Diagnosis
+      - Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+        Dst: subject
+    Props: null
+  of_specimen:
+    Mul: many_to_one
+    Ends:
+      - Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+        Dst: specimen
+    Props: null       
+  directs: 
+    Mul: many_to_many
+    Ends:
+      - Src: principal_investigator
+        Dst: project
+      - Src: principal_investigator
+        Dst: study
+    Props: null
