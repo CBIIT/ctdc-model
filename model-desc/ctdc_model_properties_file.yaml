@@ -667,7 +667,7 @@ PropDefinitions:
       - "10041071" # Small Cell Lung Carcinoma
     Req: 'Yes'
   snomed_disease_term:
-    Desc: Acceptable values currently specified, all of which are sourced from actual data, are likely to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: Acceptable values currently specified, all of which are sourced from actual data, may be of use only during the generation of mock data, with the data type for this property potentially being changed to string. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -714,7 +714,7 @@ PropDefinitions:
       - Superficial Spreading Melanoma 254730000
     Req: 'Yes'
   snomed_disease_code: 
-    Desc: Strictly-speaking, a 9-digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>Within the CMB Catalog Site, Disease Stage (SNOMED) is presented in the form of a human readable narrative statement of the primary disease which includes some histoligical detail and disease stage. <br>Acceptable values currently specified, all modified versions of the corresponding MEDDRA disease codes, are to be used only for generation of mock data. <br>CDE ID = 6642369
+    Desc: Strictly-speaking, a 9-digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>Within the CMB Catalog Site, Disease Stage (SNOMED) is presented in the form of a human readable narrative statement of the primary disease which includes some histoligical detail and disease stage. <br>Acceptable values currently specified, all of which are sourced from actual data, may be of use only during the generation of mock data, with the data type for this property potentially being changed to string. <br>CDE ID = 6642369
     Term:
       - Origin: caDSR
         Code: '6642369'
@@ -1865,13 +1865,23 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   data_file_format:
-    Desc: A defined organization or layout representing and structuring data in a computer file; the electronic format of the file, as derived during file validation <br>CDE ID = 11416926
+    Desc: A defined organization or layout representing and structuring data in a computer file; the electronic format of the file, as derived during file validation <br>With the actual values of this property being loader derived, the acceptable values currently specified are in place only to support the generation of mock data <br>CDE ID = 11416926
     Term:
       - Origin: caDSR - CRDC
         Code: '11416926'
         Value: Electronic Data File Format Type  
     Src: DSS
-    Type: string
+    #Type: string
+    Enum:
+      - bam
+      - bai
+      - vcf
+      - pdf
+      - docx
+      - xlsx
+      - tbi
+      - csv
+      - gz
     Req: 'Yes'
   data_file_size:
     Desc: The measure, expressed in bytes, as to how much space a data file takes up on a storage medium. <br>CDE ID = 11479876
