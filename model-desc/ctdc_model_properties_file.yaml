@@ -598,15 +598,15 @@ PropDefinitions:
       - Esophageal cancer, NOS
       - Ovarian epithelial cancer
     Req: 'Yes'
-  icd_10_disease_code:
-    Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans. <br>CDE ID = 11479873
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '11479873'
-        Value: Diagnosis Disease or Disorder ICD-10-CM Code
-    Src: DSS
-    Type: string
-    Req: Preferred
+  # icd_10_disease_code:
+  #   Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans. <br>CDE ID = 11479873
+  #   Term:
+  #     - Origin: caDSR - CRDC
+  #       Code: '11479873'
+  #       Value: Diagnosis Disease or Disorder ICD-10-CM Code
+  #   Src: DSS
+  #   Type: string
+  #   Req: Preferred
   ctep_disease_term: #this really should be referred to as CTEP disease term
     Desc: In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the subject in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -760,15 +760,15 @@ PropDefinitions:
       - "254634000" #Squamous Cell Lung Carcinoma
       - "254730000" #Superficial Spreading Melanoma
     Req: 'Yes'
-  icd_o_primary_site:
-    Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3). <br>CDE ID = 11341616
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '11341616'
-        Value: Diagnosis Primary Anatomic Site ICD-O-3 Code
-    Src: DSS
-    Type: string
-    Req: 'Yes'
+  # icd_o_primary_site:
+  #   Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3). <br>CDE ID = 11341616
+  #   Term:
+  #     - Origin: caDSR - CRDC
+  #       Code: '11341616'
+  #       Value: Diagnosis Primary Anatomic Site ICD-O-3 Code
+  #   Src: DSS
+  #   Type: string
+  #   Req: 'Yes'
   primary_disease_site:
     Desc: Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -811,18 +811,18 @@ PropDefinitions:
       - Small Cell Carcinoma
       - Squamous Cell Carcinoma
     Req: 'Yes'
-  date_of_confirmation_of_histology:
-    Desc: text CDE ID = 6409589
-    Term:
-      - Origin: caDSR
-        Code: '6409589'
-        Value: Data Element Name  
-    Src: CMB
-    Type:
-      units:
-        - days
-      value_type: number
-    Req: 'Yes'
+  # date_of_confirmation_of_histology:
+  #   Desc: text CDE ID = 6409589
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: '6409589'
+  #       Value: Data Element Name  
+  #   Src: CMB
+  #   Type:
+  #     units:
+  #       - days
+  #     value_type: number
+  #   Req: 'Yes'
   histological_subtype:
     Desc: Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 7344580
     Term:
@@ -880,14 +880,14 @@ PropDefinitions:
       - Low Grade
       - Not Applicable
       - Not Reported 
-      - Grade Cannot Be Assessed # from CMB Catalog Site and directly from Jeff
-      - Borderline Malignancy # directly from Jeff
+      - Grade cannot be assessed # from CMB Catalog Site and directly from Jeff
+      - Borderline malignancy # directly from Jeff
       - Well Differentiated # from CMB Catalog Site and directly from Jeff
       - Moderately Differentiated # from CMB Catalog Site and directly from Jeff
       - Poorly Differentiated # from CMB Catalog Site and directly from Jeff
-      - Undifferentiated Grade # directly from Jeff
+      - Undifferentiated grade # directly from Jeff
     Req: 'Yes'
-  diagnosis_date:
+  date_of_diagnosis:
     Desc: text NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
@@ -899,18 +899,18 @@ PropDefinitions:
         - days
       value_type: number
     Req: 'Yes'
-  subject_age_at_diagnosis:
-    Desc: Age at the time of diagnosis expressed in number of days since birth. CMB data has this expressed in years not days! <br>CDE ID = 10609539
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '10609539'
-        Value: Subject Age at Diagnosis Integer
-    Src: DSS
-    Type:
-      units:
-        - years
-      value_type: number
-    Req: 'Yes'
+  # subject_age_at_diagnosis:
+  #   Desc: Age at the time of diagnosis expressed in number of days since birth. CMB data has this expressed in years not days! <br>CDE ID = 10609539
+  #   Term:
+  #     - Origin: caDSR - CRDC
+  #       Code: '10609539'
+  #       Value: Subject Age at Diagnosis Integer
+  #   Src: DSS
+  #   Type:
+  #     units:
+  #       - years
+  #     value_type: number
+  #   Req: 'Yes'
   # treatment
   # treatment_id:
   #   Desc: A unique identifier of each treatment record, used to identify the correct treatment records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NO CDE REQUIRED
@@ -1593,36 +1593,36 @@ PropDefinitions:
       - Tissue Curl
       - cDNA
     Req: 'Yes'
-  obi_specimen_type:
-    Desc: This doesn't match the caDSR record of "Specimen Material OBIB Source" for CDE ID = 11253427 <br>The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB), a specimen subset of the Ontology for Biomedical Investigations (OBI).
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '11253427'
-        Value: Specimen Type Text  
-    Src: DSS
-    Type: integer
-    Req: 'No'
-  # specimen_category:
-  #   Desc:  This in NOT the CMB Catalog Site's "Tissue Ccategory", the indicator as to normal vs primary vs metastatic. Not used within the CMB Catalog site itself, but defined within at least one of the associated Data Dictionaries. <br>CDE ID = 7069877
+  # obi_specimen_type:
+  #   Desc: This doesn't match the caDSR record of "Specimen Material OBIB Source" for CDE ID = 11253427 <br>The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB), a specimen subset of the Ontology for Biomedical Investigations (OBI).
   #   Term:
-  #     - Origin: caDSR
-  #       Code: '7069877D'
-  #       Value: Data Element Name  
-  #   Src: CMB DD
-  #   Enum:
-  #     - BLOOD
-  #     - BONE MARROW
-  #     - BUCCAL CELL SAMPLE
-  #     - CEREBROSPINAL FLUID
-  #     - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
-  #     - FORMALIN FIXED TISSUE
-  #     - FRESH TISSUE
-  #     - FROZEN TISSUE
-  #     - OTHER BODILY FLUIDs
-  #     - SALIVA
-  #     - STOOL
-  #     - URINE
-  #   Req: 'Yes'
+  #     - Origin: caDSR - CRDC
+  #       Code: '11253427'
+  #       Value: Specimen Type Text  
+  #   Src: DSS
+  #   Type: integer
+  #   Req: 'No'
+  specimen_category:
+    Desc:  This in NOT the CMB Catalog Site's "Tissue Ccategory", the indicator as to normal vs primary vs metastatic. Not used within the CMB Catalog site itself, but defined within at least one of the associated Data Dictionaries. <br>CDE ID = 7069877
+    Term:
+      - Origin: caDSR
+        Code: '7069877D'
+        Value: Data Element Name  
+    Src: CMB DD
+    Enum:
+      - BLOOD
+      - BONE MARROW
+      - BUCCAL CELL SAMPLE
+      - CEREBROSPINAL FLUID
+      - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
+      - FORMALIN FIXED TISSUE
+      - FRESH TISSUE
+      - FROZEN TISSUE
+      - OTHER BODILY FLUIDs
+      - SALIVA
+      - STOOL
+      - URINE
+    Req: 'Yes'
   anatomical_collection_site:
     Desc: This is CMB's version of "sample site". <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -1674,42 +1674,42 @@ PropDefinitions:
       - Normal
       - Primary
     Req: 'Yes'
-  icd_o_3_tissue_morphology:
-    Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 11326261
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '11326261'
-        Value: Specimen Tumor Tissue ICD-O-3 Morphology Code 
-    Src: DSS
-    #Type: string
-    # actually enumerated to a long list of ICD-O-3 codes, which is too long to specifiy here; we should instead just include the codes that will be seen in CMB data?
-    Enum:
-      - Acute Myeloid Leukemia - M3 eosinophilic variant
-      - Acute Myeloid Leukemia - poorly-differentiated M1 variant
-      - Acute Myeloid Leukemia - M5 granulocytic variant
-      - Adenocarcinoma
-      - Adenosquamous Carcinoma
-      - High-grade Carcinoma
-      - Invasive Adenocarcinoma
-      - Large Cell Carcinoma
-      - Metastatic Adenocarcinoma
-      - Metastatic Adenosquamous Carcinoma
-      - Metastatic High-grade Carcinoma
-      - Metastatic Invasive Adenocarcinoma
-      - Metastatic Large Cell Carcinoma
-      - Metastatic Melanoma
-      - Metastatic Non-Small Cell Carcinoma
-      - Metastatic Prostate Carcinoma
-      - Metastatic Small Cell Carcinoma
-      - Metastatic Squamous Cell Carcinoma
-      - Melanoma
-      - Multiple Myeloma
-      - Non-Small Cell Carcinoma
-      - Plasma Cell Myeloma
-      - Prostate Carcinoma
-      - Small Cell Carcinoma
-      - Squamous Cell Carcinoma
-    Req: 'No'
+  # icd_o_3_tissue_morphology:
+  #   Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 11326261
+  #   Term:
+  #     - Origin: caDSR - CRDC
+  #       Code: '11326261'
+  #       Value: Specimen Tumor Tissue ICD-O-3 Morphology Code 
+  #   Src: DSS
+  #   #Type: string
+  #   # actually enumerated to a long list of ICD-O-3 codes, which is too long to specifiy here; we should instead just include the codes that will be seen in CMB data?
+  #   Enum:
+  #     - Acute Myeloid Leukemia - M3 eosinophilic variant
+  #     - Acute Myeloid Leukemia - poorly-differentiated M1 variant
+  #     - Acute Myeloid Leukemia - M5 granulocytic variant
+  #     - Adenocarcinoma
+  #     - Adenosquamous Carcinoma
+  #     - High-grade Carcinoma
+  #     - Invasive Adenocarcinoma
+  #     - Large Cell Carcinoma
+  #     - Metastatic Adenocarcinoma
+  #     - Metastatic Adenosquamous Carcinoma
+  #     - Metastatic High-grade Carcinoma
+  #     - Metastatic Invasive Adenocarcinoma
+  #     - Metastatic Large Cell Carcinoma
+  #     - Metastatic Melanoma
+  #     - Metastatic Non-Small Cell Carcinoma
+  #     - Metastatic Prostate Carcinoma
+  #     - Metastatic Small Cell Carcinoma
+  #     - Metastatic Squamous Cell Carcinoma
+  #     - Melanoma
+  #     - Multiple Myeloma
+  #     - Non-Small Cell Carcinoma
+  #     - Plasma Cell Myeloma
+  #     - Prostate Carcinoma
+  #     - Small Cell Carcinoma
+  #     - Squamous Cell Carcinoma
+  #   Req: 'No'
   assessment_timepoint: 
     Desc: CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 7065963
     Term:
@@ -1735,27 +1735,27 @@ PropDefinitions:
         - days
       value_type: number
     Req: 'Yes'
-  collection_method:
-    Desc: text
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: CMB
-    Type: string
-    Req: 'Yes'
-  fixative:
-    Desc: text
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: CMB
-    Enum:
-      - EDTA
-      - FFPE
-      - Formalin
-      - Streck
+  # collection_method:
+  #   Desc: text
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: 'code/ID'
+  #       Value: Data Element Name  
+  #   Src: CMB
+  #   Type: string
+  #   Req: 'Yes'
+  # fixative:
+  #   Desc: text
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: 'code/ID'
+  #       Value: Data Element Name  
+  #   Src: CMB
+  #   Enum:
+  #     - EDTA
+  #     - FFPE
+  #     - Formalin
+  #     - Streck
     Req: 'Yes'
   # days_from_diagnosis_to_specimen_collection:
   #   Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis. <br>CDE ID = 11253404 ALL OF THIS IS INCORRECT BECAUSE THE INCORRECT CDE WAS REFERENCED; PER THE CORRECT CDE ID OF 11248865 THE PROPERTY DESCRIPTION SHOULD BE The number of days from the date the diagnosis was made to the date a sample was collected.
