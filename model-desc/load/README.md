@@ -3,7 +3,7 @@
 v0.1 (05 Feb 2024)
 
 
-The file (cmb-transform-ctdc.r)[./cmb-transform-ctdc.r] is an R script that uses the mapping spreadsheet (cmb-dbgap-to-ctdc-mapping.v02-05-24.xlsx)[./cmb-dbgap-to-ctdc-mapping.v02-05-24.xlsx] to transform Biobank data in dbGaP submission spreadsheets to CSV (.txt) files suitable for the Bento data loader.
+The file [cmb-transform-ctdc.r](./cmb-transform-ctdc.r) is an R script that uses the mapping spreadsheet [cmb-dbgap-to-ctdc-mapping.v02-05-24.xlsx](./cmb-dbgap-to-ctdc-mapping.v02-05-24.xlsx) to transform Biobank data in dbGaP submission spreadsheets to CSV (.txt) files suitable for the Bento data loader.
 
 The transformation as of v0.1 performs the following actions:
 
