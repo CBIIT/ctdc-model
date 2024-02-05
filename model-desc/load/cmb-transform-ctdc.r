@@ -5,7 +5,7 @@ filter <- dplyr::filter
 datadir <- "data"
 map_file  <- "cmb-dbgap-to-ctdc-mapping.v10-26-23.xlsx"
 map_sheet  <- "Sheet1"
-files <- grep("xlsx", list.files(datadir), value=T)
+files <- grep("^[^~].*xlsx", list.files(datadir), value=T)
 
 ## actual column names in dbGaP data files:
 fields_by_file <- tibble(files %>%
@@ -179,9 +179,11 @@ for (nd in maps$`CTDC Destination Node` %>% unique) {
             tb  <- ctdc_spec %>% left_join(ctdc_subj, by=c("subject.subject_id")) %>%
                       mutate( type = nd ) %>% 
                       unique
-            tb  <- tb %>% mutate(sid = if_else(is.na(specimen_id),
-                                               dum_ids(specimen_id),
-                                               specimen_id)) %>%
+            # dummy specimen_ids for NAs
+            tb  <- tb %>% mutate(sid = map_chr(specimen_id,
+                                               function (x) if_else(is.na(x),
+                                               dum_ids(x),
+                                               x))) %>%
                 select(-specimen_id) %>% rename(specimen_id = sid)
             write_tsv(tb,
                       paste(nd,"txt",sep="."), na="")                      
@@ -191,7 +193,10 @@ for (nd in maps$`CTDC Destination Node` %>% unique) {
         tb  <- ctdc_subj %>% mutate(type = nd)
         if (nd != "subject") {
             tb  <- tb %>% mutate(idname = new_ids(type))
-            names(tb)[length(tb)] <- paste(nd,"id",sep="_")
+            nd_id  <- nd
+            if (nd == "surgery") {nd_id <- "surgical_procedure"}
+            if (nd == "radiotherapy") {nd_id  <- "radiological_procedure"}
+            names(tb)[length(tb)] <- paste(nd_id,"id",sep="_")
             if (nd == "subject_status") {
                 tb  <- tb %>% filter( !(is.na(survival_status) & is.na(primary_cause_of_death)) )
             }
@@ -199,7 +204,20 @@ for (nd in maps$`CTDC Destination Node` %>% unique) {
         write_tsv(tb, paste(nd,"txt",sep="."),na="")
     }
     else if(!is.null(ctdc_spec)) {
-        if (nd != "subject") {
+        if (nd == "specimen") {
+            tb  <- ctdc_spec %>% 
+                      mutate( type = nd ) %>% 
+                      unique
+            # dummy specimen_ids for NAs
+            tb  <- tb %>% mutate(sid = map_chr(specimen_id,
+                                               function (x) if_else(is.na(x),
+                                               dum_ids(x),
+                                               x))) %>%
+                select(-specimen_id) %>% rename(specimen_id = sid)
+            write_tsv(tb,
+                      paste(nd,"txt",sep="."), na="")                      
+        }
+        else {
             tb  <- tb %>% mutate(idname = new_ids(type))
             names(tb)[length(tb)] <- paste(nd,"id",sep="_")
         }
