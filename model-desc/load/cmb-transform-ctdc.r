@@ -1,11 +1,11 @@
 library(tidyverse)
 library(readxl)
-
 filter <- dplyr::filter
 datadir <- "data"
-map_file  <- "cmb-dbgap-to-ctdc-mapping.v10-26-23.xlsx"
+# map_file  <- "cmb-dbgap-to-ctdc-mapping.v02-05-24.xlsx"
+map_file  <- "cmb-dbgap-to-ctdc-mapping.v03-12-24.xlsx"
 map_sheet  <- "Sheet1"
-files <- grep("^[^~].*xlsx", list.files(datadir), value=T)
+files <- rev(grep("^[^~].*xlsx", list.files(datadir), value=T))
 
 ## actual column names in dbGaP data files:
 fields_by_file <- tibble(files %>%
@@ -61,7 +61,22 @@ for (m in maps$`CMB Source Data File` %>% unique) {
     print(fn)
     if (!is.na(file.info(fn)$isdir) && !file.info(fn)$isdir ) {
         dta <- read_excel(fn)
-        # why is the below line so complicated?
+        ## pull in mocha lab specimens (pull-mocha-specimens.r)
+        if (grepl("SpecimenTransmittal",fn)) {
+            dta  <- dta %>% bind_rows( read_csv("mocha_spec_transmittal.csv") )
+        }
+        if (grepl("SpecimenTracking",fn)) {
+            dta  <- dta %>% bind_rows( read_csv("mocha_spec_tracking.csv") )
+        }
+        ## split SNOMED_CODE
+        if (grepl("Histology",fn)) {
+            dta  <-  dta %>% separate_wider_delim(SNOMED_CODE, delim=" = ",
+                                                  names = c("SNOMED_TERM","SNOMED_CODE"))
+            maps[match("SNOMED_CODE",maps$`CMB Source Field`),"CMB Source Field"] <- "SNOMED_TERM"
+            maps[match("SNOMED_TERM",maps$`CMB Source Field`),
+                 "qualified_source_field"] <- "SNOMED_TERM.HistologyAndDisease"
+        }
+        ##  why is the below line so complicated?
         dbcode  <- as.character( maps %>% dplyr::filter( `CMB Source Data File` == m ) %>%
             select(`dbGaP code`) %>% group_by(`dbGaP code`) %>% summarize)
         if (dbcode == '5A') {
@@ -179,12 +194,12 @@ for (nd in maps$`CTDC Destination Node` %>% unique) {
             tb  <- ctdc_spec %>% left_join(ctdc_subj, by=c("subject.subject_id")) %>%
                       mutate( type = nd ) %>% 
                       unique
-            # dummy specimen_ids for NAs
-            tb  <- tb %>% mutate(sid = map_chr(specimen_id,
-                                               function (x) if_else(is.na(x),
-                                               dum_ids(x),
-                                               x))) %>%
-                select(-specimen_id) %>% rename(specimen_id = sid)
+            ## dummy specimen_ids for NAs
+            ## tb  <- tb %>% mutate(sid = map_chr(specimen_id,
+            ##                                    function (x) if_else(is.na(x),
+            ##                                    dum_ids(x),
+            ##                                    x))) %>%
+            ##     select(-specimen_id) %>% rename(specimen_id = sid)
             write_tsv(tb,
                       paste(nd,"txt",sep="."), na="")                      
         }
@@ -201,7 +216,10 @@ for (nd in maps$`CTDC Destination Node` %>% unique) {
                 tb  <- tb %>% filter( !(is.na(survival_status) & is.na(primary_cause_of_death)) )
             }
         }
-        write_tsv(tb, paste(nd,"txt",sep="."),na="")
+        if (nd == "demographic" ) {
+            tb <- tb %>% mutate(ncbi_taxonomy_id = "9606", ncbi_taxonomy_name = "Homo sapiens")
+        }
+        write_tsv(tb, paste(file.path("ctdc-data","data", nd),"txt",sep="."),na="")
     }
     else if(!is.null(ctdc_spec)) {
         if (nd == "specimen") {
@@ -209,11 +227,11 @@ for (nd in maps$`CTDC Destination Node` %>% unique) {
                       mutate( type = nd ) %>% 
                       unique
             # dummy specimen_ids for NAs
-            tb  <- tb %>% mutate(sid = map_chr(specimen_id,
-                                               function (x) if_else(is.na(x),
-                                               dum_ids(x),
-                                               x))) %>%
-                select(-specimen_id) %>% rename(specimen_id = sid)
+            ## tb  <- tb %>% mutate(sid = map_chr(specimen_id,
+            ##                                    function (x) if_else(is.na(x),
+            ##                                    dum_ids(x),
+            ##                                    x))) %>%
+            ##     select(-specimen_id) %>% rename(specimen_id = sid)
             write_tsv(tb,
                       paste(nd,"txt",sep="."), na="")                      
         }
@@ -221,6 +239,6 @@ for (nd in maps$`CTDC Destination Node` %>% unique) {
             tb  <- tb %>% mutate(idname = new_ids(type))
             names(tb)[length(tb)] <- paste(nd,"id",sep="_")
         }
-        write_tsv(tb, paste(nd,"txt",sep="."),na="")
+        write_tsv(tb, paste(file.path("ctdc-data","data", nd),"txt",sep="."),na="")
     }    
 }
