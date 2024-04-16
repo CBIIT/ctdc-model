@@ -232,17 +232,12 @@ PropDefinitions:
     Src: ICDC
     Type:
       value_type: list
-      Enum: #updated to accurately reflect the CMB image types
+      Enum: # Reflective of the image types available for CMB participants
         - CT # specific term used by both IDC and TCIA
-        - Digital Radiography
         - DX # specific term used by both IDC and TCIA
         - MR # specific term used by both IDC and TCIA
-        - MRI
         - NM # specific term used by both IDC and TCIA
-        - Nuclear Medicine
-        - PET
         - PT # specific term used by both IDC and TCIA
-        - Ultrasound
         - US # specific term used by both IDC and TCIA
     Req: 'Yes'
     Tags:
@@ -334,17 +329,6 @@ PropDefinitions:
     Src: CMB
     Type: string
     Key: true
-  # age_at_diagnosis:
-  #   Desc: For subjects enrolled upon the CMB trial, the age of the subject as of the diagnosis which resulted in their enrollment being made. <br>NOT CURRENTLY ASSIGNED ANY CDE
-  #   Term:
-  #     - Origin: caDSR
-  #       Code: 'code/ID'
-  #       Value: Data Element Name  
-  #   Src: CMB
-  #   Type:
-  #     units:
-  #       - years
-  #     value_type: number
   age_at_enrollment:
     Desc: The age of the subject as of enrollment, measured in years. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
@@ -391,15 +375,11 @@ PropDefinitions:
         Code: '6343385'
         Value: Sex  
     Src: CMB
-    Enum:
-      - F 
-      - Female #CMB
-      - Intersex #CMB
-      - M
-      - Male #CMB
-      - U
-      - UNDIFFERENTIATED
-      - Unknown #CMB
+    Enum: # Reflective only of the values used by the CMB
+      - Female
+      - Intersex
+      - Male
+      - Unknown
     Req: 'Yes'
   reported_gender:
     Desc: Characteristics of people that are socially constructed, including norms, behaviors, and roles based on their sex. As a social construct, these norms, behaviors, and roles vary from society to society and can change over time. <br>CDE ID = 10748236
@@ -409,19 +389,19 @@ PropDefinitions:
         Value: Person Reported Gender Type  
     Src: DSS
     Enum:
-      - Choose Not to Disclose # = Response Declined per CMB?
-      - Female # perfect match to CMB data values
-      - Female-To-Male
-      - Female-to-Male Transsexual # per CMB
-      - Intersex # perfect match to CMB data values
-      - Male
-      - Male-To-Female
-      - Male-to-Female Transsexual # per CMB
-      - None Of These Describe Me
-      - Non-Conforming Gender
-      - Refused to Answer # = Response Declined per CMB?
-      - Response Declined # per CMB
-      - Unknown # perfect match to CMB data values
+      # - Choose Not to Disclose # = Response Declined per CMB?
+      - Female # per CMB data values
+      # - Female-To-Male
+      - Female-to-Male Transsexual # per CMB data values
+      - Intersex # per CMB data values
+      - Male # per CMB data values
+      # - Male-To-Female
+      - Male-to-Female Transsexual # per CMB data values
+      # - None Of These Describe Me
+      # - Non-Conforming Gender
+      #- Refused to Answer # = Response Declined per CMB?
+      - Response Declined # per CMB data values
+      - Unknown # per CMB data values
     Req: 'Yes'
   height:
     Desc: The height of the subject as of enrollment, measured in cm. <br>NOT CURRENTLY ASSIGNED ANY CDE
@@ -484,7 +464,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Enum:
+    Enum: # Reflective of the values used by the CMB
       - No formal education
       - Grade school
       - Not high school graduate
@@ -495,15 +475,6 @@ PropDefinitions:
       - Doctoral or professional degree
       - Declined to answer
     Req: Preferred
-  # site_of_enrollment:
-  #   Desc: The identity of the hospital, medical center or clinic at which the subject was enrolled upon the study/trial. <br>NOT CURRENTLY ASSIGNED ANY CDE
-  #   Term:
-  #     - Origin: caDSR
-  #       Code: 'code/ID'
-  #       Value: Data Element Name  
-  #   Src: CMB
-  #   Type: string
-  #   Req: Preferred
   ncbi_taxonomy_id: # perhaps this a direct property of subject?
     Desc: A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/),  which uniquely identifies group or category, at any level, in a system for classifying plants or animals (including humans) providing ranked categories for the classification of organisms according to their suspected evolutionary relationships. <br>CDE ID = 10543100
     Term:
@@ -582,7 +553,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Enum:
+    Enum: # Reflective of the values used by the CMB
       - Colorectal cancer, NOS
       - Acute myeloid leukemia, NOS
       - Adenocarcinoma of the gastroesophageal junction
@@ -607,25 +578,14 @@ PropDefinitions:
   #   Src: DSS
   #   Type: string
   #   Req: Preferred
-  ctep_disease_term: #this really should be referred to as CTEP disease term
+  ctep_disease_term:
     Desc: In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the subject in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
         Value: Data Element Name  
     Src: value
-    Enum:
-    # actual values in the v2 CMB data submission
-      # - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
-      # - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
-      # - Colon Adenocarcinoma                            # meddra code 10010029
-      # - Colorectal Carcinoma                            # meddra code 10010029
-      # - Melanoma                                        # meddra code 10053571
-      # - Non-Small Cell Lung Carcinoma                   # meddra code 10029514
-      # - Plasma Cell Myeloma                             # meddra code 10028566
-      # - Prostate Carcinoma                              # meddra code 10036910
-      # - Small Cell Lung Carcinoma                       # meddra code 10041071
-    # actual values in the v3 CMB data submission
+    Enum: # Reflective of values used in the v3 CMB data submission
       - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
       - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
       - Colorectal Carcinoma                            # meddra code 10010029
@@ -644,17 +604,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Enum:
-    # actual values as displayed within the CMB's Catalog Site
-      # - "10000884" #- Acute Myeloid Leukemia Not Otherwise Specified
-      # - "10010029" #- Colorectal Carcinoma
-      # - "10066354" #- Gastroesophageal Junction Adenocarcinoma
-      # - "10029514" #- Lung Non-Small Cell Carcinoma
-      # - "10041071" #- Lung Small Cell Carcinoma
-      # - "10053571" #- Melanoma
-      # - "10028566" #- Plasma Cell Myeloma
-      # - "10036910" #- Prostate Carcinoma
-     #actual values in the v3 CMB data submission
+    Enum: # Reflective of the values used in the v3 CMB data submission
       - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
       - "10066354" # Adenocarcinoma of the Gastroesophageal Junction
       - "10010029" # Colorectal Carcinoma
@@ -776,16 +726,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    #Type: string
-    Enum:
-      - Bone Marrow 
-      - Colon
-      - Epidermis 
-      - Gastroesophageal Junction
-      - Lung
-      - Lymph Node
-      - Prostate
-      - Rectum
+    Type: string
     Req: 'Yes'
   histology:
     Desc: Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
@@ -794,22 +735,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    Enum:
-      - Acute Myeloid Leukemia - M3 eosinophilic variant
-      - Acute Myeloid Leukemia - poorly-differentiated M1 variant
-      - Acute Myeloid Leukemia - M5 granulocytic variant
-      - Adenocarcinoma
-      - Adenosquamous Carcinoma
-      - High-grade Carcinoma
-      - Invasive Adenocarcinoma
-      - Large Cell Carcinoma
-      - Melanoma
-      - Multiple Myeloma
-      - Non-Small Cell Carcinoma
-      - Plasma Cell Myeloma
-      - Prostate Carcinoma
-      - Small Cell Carcinoma
-      - Squamous Cell Carcinoma
+    Type: string
     Req: 'Yes'
   # date_of_confirmation_of_histology:
   #   Desc: text CDE ID = 6409589
@@ -830,28 +756,12 @@ PropDefinitions:
         Code: '7344580'
         Value: Data Element Name  
     Src: CMB
-    #Type: string
-    Enum:
-      - Acute Myeloid Leukemia - M3 eosinophilic variant
-      - Acute Myeloid Leukemia - poorly-differentiated M1 variant
-      - Acute Myeloid Leukemia - M5 granulocytic variant
-      - Adenocarcinoma
-      - Adenosquamous Carcinoma
-      - High-grade Carcinoma
-      - Invasive Adenocarcinoma
-      - Large Cell Carcinoma
-      - Melanoma
-      - Multiple Myeloma
-      - Non-Small Cell Carcinoma
-      - Plasma Cell Myeloma
-      - Prostate Carcinoma
-      - Small Cell Carcinoma
-      - Squamous Cell Carcinoma
+    Type: string
     Req: 'Yes'  
   stage_of_disease:
     Desc: The stage of the primary disease with which the subject in question has been diagnosed. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Src: CMB
-    Enum: 
+    Enum: # Reflective of the values used by the CMB
       - Stage III
       - Stage IIIA
       - Stage IIIB
@@ -869,23 +779,23 @@ PropDefinitions:
         Value: Diagnosis Tumor Grade 
     Src: DSS
     Enum:
-      - GB
-      - GX
-      - G1
-      - G2
-      - G3
-      - G4
-      - High Grade
-      - Intermediate Grade
-      - Low Grade
-      - Not Applicable
-      - Not Reported 
-      - Grade cannot be assessed # from CMB Catalog Site and directly from Jeff
-      - Borderline malignancy # directly from Jeff
-      - Well Differentiated # from CMB Catalog Site and directly from Jeff
-      - Moderately Differentiated # from CMB Catalog Site and directly from Jeff
-      - Poorly Differentiated # from CMB Catalog Site and directly from Jeff
-      - Undifferentiated grade # directly from Jeff
+      # - GB
+      # - GX
+      # - G1
+      # - G2
+      # - G3
+      # - G4
+      # - High Grade
+      # - Intermediate Grade
+      # - Low Grade
+      # - Not Applicable
+      # - Not Reported 
+      - Grade cannot be assessed # Value exactly as used by the CMB
+      - Borderline malignancy # Value exactly as used by the CMB
+      - Well Differentiated # Value exactly as used by the CMB
+      - Moderately Differentiated # Value exactly as used by the CMB
+      - Poorly Differentiated # Value exactly as used by the CMB
+      - Undifferentiated grade # Value exactly as used by the CMB
     Req: 'Yes'
   date_of_diagnosis:
     Desc: text NOT CURRENTLY ASSIGNED ANY CDE
@@ -911,53 +821,6 @@ PropDefinitions:
   #       - years
   #     value_type: number
   #   Req: 'Yes'
-  # treatment
-  # treatment_id:
-  #   Desc: A unique identifier of each treatment record, used to identify the correct treatment records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br> NO CDE REQUIRED
-  #   Term:
-  #     - Origin: caDSR
-  #       Code: 'code/ID'
-  #       Value: Data Element Name  
-  #   Src: value
-  #   Type: string
-  #   Req: 'Yes'
-  #   Key: true
-  # x_targeted_therapy: # CMTRT_DSL in CMB Data Submission - 5a_TargetedTherapyAdministration???
-  #   Desc: text CDE ID = 6400634
-  #   Term:
-  #     - Origin: caDSR
-  #       Code: '6400634'
-  #       Value: Concomitant Medication Name # check on this, repeated below
-  #   Src: CMB
-  #   Type: string
-  #   Req: 'No'
-  # x_therapy: # Non-Targeted Therapy in CMB Data Submission - 5a_NonTargetedTherapySupplement
-  #   Desc: text CDE ID = 6400634
-  #   Term:
-  #     - Origin: caDSR
-  #       Code: '6400634'
-  #       Value: Concomitant Medication Name 
-  #   Src: CMB
-  #   Type: string
-  #   Req: 'No'
-  # x_surgical_procedure_name: # SURG_PROC_NAME in CMB Data Submission - 5a_NonTargetedSurgerySupplement
-  #   Desc: text CDE ID = 6411539
-  #   Term:
-  #     - Origin: caDSR
-  #       Code: '6411539'
-  #       Value: Procedure Name  
-  #   Src: CMB
-  #   Type: string
-  #   Req: 'No'
-  # x_radiological_procedure_name: # RAD_PROC_NAME in CMB Data Submission - 5a_NonTargetedRadiationSupplement
-  #   Desc: text CDE ID = 6411539
-  #   Term:
-  #     - Origin: caDSR
-  #       Code: '6411539'
-  #       Value: Procedure Name  
-  #   Src: CMB
-  #   Type: string
-  #   Req: 'No'     
   # targeted_therapy
   targeted_therapy_id:
     Desc: A unique identifier of each targeted therapy record, used to identify the correct targeted therapy records during data updates. The value of this property will generally be based largely upon the value of the subject_id property. <br> NO CDE REQUIRED
@@ -976,67 +839,7 @@ PropDefinitions:
         Code: '6400634'
         Value: Concomitant Medication Name # check on this, repeated below
     Src: CMB
-    #Type: string
-    Enum:
-      - Anti-CD19 CAR T-Cell Therapy
-      - Anti-p53 CAR T-Cell Therapy
-      - Ipilimumab Immunotherapy
-      - Nivolumab Immunotherapy
-      - Nivolumab and Ipilimumab Combination Immunotherapy
-      - Abiraterone
-      - afatinib
-      - Alectinib
-      - Atezolizumab
-      - belantamab mafodotin
-      - Bevacizumab
-      - bevacizumab
-      - Bicalutamide
-      - binimetinib
-      - Binimetinib
-      - Bortezomib
-      - cabazitaxel
-      - Cabazitaxel
-      - carfilizomib
-      - Carfilzomib
-      - carfilzomib
-      - Cetuximab
-      - cetuximab
-      - dabrafenib
-      - Dabrafenib
-      - Daratumumab
-      - docetaxel
-      - durvalumab
-      - Durvalumab
-      - Elotuzumab
-      - encorafenib
-      - Encorafenib
-      - Encorafenib + cetuximab
-      - enzalutamide
-      - Enzalutamide
-      - Gemtuzumab ozogamicin
-      - ipilimumab
-      - isatuximab-irfc
-      - ixazomib
-      - Lenalidomide
-      - lenalidomide
-      - Midostaurin
-      - nivolumab
-      - Nivolumab
-      - Olaparib
-      - osimertinib
-      - Osimertinib
-      - panitumumab
-      - pembrolizumab
-      - Pembrolizumab
-      - Pomalidamide
-      - pomalidomide
-      - regorafenib
-      - Revlamid
-      - Revlimib
-      - Revlimid
-      - revlimide
-      - Selinexor
-      - trametinib
+    Type: string
     Req: 'Yes'
   targeted_therapy_dose:
     Desc: The dose at which the targeted therapeutic agent in question was administered, inclusive of the appropriate dosage units. <br>NOT CURRENTLY ASSIGNED ANY CDE
@@ -1101,49 +904,7 @@ PropDefinitions:
         Code: '6400634'
         Value: Concomitant Medication Name 
     Src: CMB
-    #Type: string
-    Enum:
-      - CHOP
-      - Cyclophosphamide
-      - High-dose Ablastane
-      - Doxorubicin plus Vincristine Combination Therapy
-      - R-CHOP
-      - fluorouracil
-      - leucovorin
-      - oxaliplatin
-      - hydroxyurea
-      - cytarabine
-      - daunorubicin
-      - oxaliplatin, fluorouracil, leucovorin
-      - lenalidomide
-      - bortezomib
-      - cyclophosphamide
-      - zoledronic acid
-      - denosumab
-      - capecitabine
-      - irinotecan
-      - cisplatin
-      - melphalan
-      - autologous stem cell transplant
-      - etoposide
-      - doxorubicin
-      - fludarabine
-      - leuprolide
-      - pemetrexed
-      - paclitaxel
-      - melphalan flufenamide
-      - dexamethasone
-      - carboplatin
-      - lurbinectedin
-      - carboplatin, etoposide
-      - fluorouracil, irinotecan, leucovorin
-      - cisplatin, docetaxel
-      - Leucovorin Calcium/Fluorouracil/Oxaliplatin
-      - fluorouracil, irinotecan, oxaliplatin, leucovorin
-      - cyclophosphamide, dexamethasone
-      - Leucovorin Calcium/Irinotecan Hydrochloride
-      - bicalutamide
-      - firmagon
+    Type: string
     Req: 'Yes'
   non_targeted_therapy_dose:
     Desc: The dose at which the non-targeted therapeutic agent in question was administered, inclusive of the appropriate dosage units. <br>NOT CURRENTLY ASSIGNED ANY CDE
@@ -1208,75 +969,7 @@ PropDefinitions:
         Code: '6411539'
         Value: Procedure Name  
     Src: CMB
-    #Type: string
-    Enum:
-      - left neck dissection
-      - resection
-      - left parotid LN biopsy
-      - needle/ core biopsy
-      - CT guided lung biopsy
-      - biopsy
-      - Portion of mass from right foot, biopsy
-      - robotic lower anterior resection
-      - Laparoscopic mobilization o fleft colon and splenic flexure, open rectosigmoid resection with anastamosis
-      - endobronchial biopsy
-      - needle core biopsy
-      - fine needle aspiration
-      - CT guided right adrenal mass biopsy
-      - sigmoid resection
-      - robotic assisted left lung upper lobe wedge
-      - right lung mass CT guided FNA (cytology)
-      - Lymph node dissection
-      - liver resection
-      - Colon resection and ovary removal
-      - left lung wedge resection
-      - wide local excision of right thigh melanoma with primary closure sentinel lymph node biopsy of right inguinal lymph node
-      - Liver, RUQ-biopsy
-      - abdominoperineal resection
-      - Lymph node, retroperitoneal lymph node-biopsy
-      - Liver, mass, needle core biopsy
-      - Lung, right upper lobe, mass, smears and cell block, FNA
-      - Stomach, antral ulcer-biopsy
-      - Core biopsy
-      - CT guided biopsy
-      - Lymph node, fine-needle aspirate (aspirate smears and cell block
-      - sidmoidoscopy
-      - tissue pathology
-      - robotic assisted laparoscopic radical prostatectomy
-      - stereotactic volumetric resection of right occipital intraaxial lesion.
-      - partial colectomy
-      - fine needle biopsy
-      - TURP and bilateral orchiectomy
-      - Tumor debulking
-      - cytoreductive surgery with HIPEC
-      - Resection of periumbilical mass
-      - CT guided left iliac biopsy
-      - Thoracic Laminectomy - Removal of Lesion
-      - Thoracic Decompression - Removal of Tumor
-      - right hemicolectomy
-      - ultrasound-guided core biopsy
-      - Biopsy
-      - Bronchoscopy, endobronchial ultrasound
-      - Laparoscopic assisted right colectomy
-      - Parietal Brain Resection, left. Parietal Craniotomy, left.
-      - rectal biopsy
-      - colonoscopy
-      - hepatectomy
-      - hemicolectomy
-      - Lymph node, left axillary, needle core biopsy
-      - TURP
-      - rectosigmoid colectomy
-      - Open partial hepatectomy
-      - Laparoscopic Diverting Colostomy
-      - IR Kyphoplasty
-      - Left temporal craniotomy for tumor resection
-      - subtotal colectomy, end ileostomy, liver biopsy and wedge (segment 8)
-      - Laparoscopic, hand assisted low anterior resection with end descending colostomy and Laparoscopic complete mobilization of the splenic flexure
-      - Right video assisted thorascopic upper lobectomy and mediastinal lymphadenectomy
-      - Open Reduction and Internal Fixation (ORIF) of the right proximal humerus fracture and curettage and cementing of right proximal humerus
-      - T4 and T5 laminectomy for epidural tumor resection
-      - Port Placement, Laparoscopic loop colostomy and mobilization of the splenic flexure
-      - Right sub trochanteric fracture ORIF w/ TFN
+    Type: string
     Req: 'Yes'
   surgical_procedure_date:
     Desc: The date upon which the surgical procedure in question was performed. EXPRESSED HOW? <br>NOT CURRENTLY ASSIGNED ANY CDE
@@ -1343,30 +1036,7 @@ PropDefinitions:
         Code: '6411539'
         Value: Procedure Name  
     Src: CMB
-    #Type: string
-    Enum:
-      - LOW DOSE RADIATION
-      - HIGH DOSE RADIATION
-      - SBRT
-      - Yttrium 90 radio embolization Y90 Microspheres injection
-      - Radiotherapy
-      - stereotactic ablative radiotherapy
-      - Salvage radiotherapy
-      - External beam radiation delivered in 2 fractions to T5-T8.
-      - CyberKnife
-      - Palliative Radiotherapy
-      - Daily Radiation Treatment to R Lung/Nodes
-      - Palliative radiation to the pelvic mass
-      - Whole Brain Radiation
-      - External Beam Radiation
-      - Radiation Treatment
-      - External Beam Radiation Therapy
-      - IGRT
-      - Palliative Radiation Therapy
-      - 3D Conformal Radiation Therapy
-      - IMRT
-      - CyberKnife SBRT
-      - Prophylactic Cranial Radiation
+    Type: string
     Req: 'Yes'   
   radiological_procedure_anatomical_location:
     Desc: The anatomical site or sites subject to the radiological procedure in question. <br>NOT CURRENTLY ASSIGNED ANY CDE
@@ -1450,13 +1120,13 @@ PropDefinitions:
         Value: Survival Status  
     Src: DSS # previously CMB
     Enum:
-      - ALIVE
-      - DEAD
-      - UNKNOWN
-      - Alive with Disease # from CMB Data Submission - 5a FollowUp
-      - Alive with No Evidence of Disease # from CMB Data Submission - 5a FollowUp
-      - Alive, Disease Status Unknown # from CMB Data Submission - 5a FollowUp
-      - Dead # from CMB Data Submission - 5a FollowUp
+      # - ALIVE
+      # - DEAD
+      # - UNKNOWN
+      - Alive with Disease # Value exactly as used by the CMB
+      - Alive with No Evidence of Disease # Value exactly as used by the CMB
+      - Alive, Disease Status Unknown # Value exactly as used by the CMB
+      - Dead # Value exactly as used by the CMB
     Req: 'Yes'              
   primary_cause_of_death:
     Desc:  In CMB Data Submission - 5a_DeathSummary <br>CDE ID = 6421593
@@ -1630,23 +1300,7 @@ PropDefinitions:
         Code: 'code/ID'
         Value: Data Element Name  
     Src: CMB
-    #Type: string
-    Enum:
-      - Bone Marrow
-      - Brain
-      - Bronchus
-      - Colon
-      - Duodenum
-      - Epidermis
-      - Esophagus
-      - Kidney
-      - Liver
-      - Lung
-      - Lymph Node
-      - Pancreas
-      - Prostate
-      - Rectum
-      - Stomach
+    Type: string
     Req: 'Yes'
   type_of_tissue:
     Desc:  This is caDSR's version of CMB Catalog's "Tissue Category". <br>Acceptable values taken from the caDSR's definition of the data element. <br>CDE ID = 7003892
@@ -1683,32 +1337,6 @@ PropDefinitions:
   #   Src: DSS
   #   #Type: string
   #   # actually enumerated to a long list of ICD-O-3 codes, which is too long to specifiy here; we should instead just include the codes that will be seen in CMB data?
-  #   Enum:
-  #     - Acute Myeloid Leukemia - M3 eosinophilic variant
-  #     - Acute Myeloid Leukemia - poorly-differentiated M1 variant
-  #     - Acute Myeloid Leukemia - M5 granulocytic variant
-  #     - Adenocarcinoma
-  #     - Adenosquamous Carcinoma
-  #     - High-grade Carcinoma
-  #     - Invasive Adenocarcinoma
-  #     - Large Cell Carcinoma
-  #     - Metastatic Adenocarcinoma
-  #     - Metastatic Adenosquamous Carcinoma
-  #     - Metastatic High-grade Carcinoma
-  #     - Metastatic Invasive Adenocarcinoma
-  #     - Metastatic Large Cell Carcinoma
-  #     - Metastatic Melanoma
-  #     - Metastatic Non-Small Cell Carcinoma
-  #     - Metastatic Prostate Carcinoma
-  #     - Metastatic Small Cell Carcinoma
-  #     - Metastatic Squamous Cell Carcinoma
-  #     - Melanoma
-  #     - Multiple Myeloma
-  #     - Non-Small Cell Carcinoma
-  #     - Plasma Cell Myeloma
-  #     - Prostate Carcinoma
-  #     - Small Cell Carcinoma
-  #     - Squamous Cell Carcinoma
   #   Req: 'No'
   assessment_timepoint: 
     Desc: CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 7065963
@@ -1735,28 +1363,6 @@ PropDefinitions:
         - days
       value_type: number
     Req: 'Yes'
-  # collection_method:
-  #   Desc: text
-  #   Term:
-  #     - Origin: caDSR
-  #       Code: 'code/ID'
-  #       Value: Data Element Name  
-  #   Src: CMB
-  #   Type: string
-  #   Req: 'Yes'
-  # fixative:
-  #   Desc: text
-  #   Term:
-  #     - Origin: caDSR
-  #       Code: 'code/ID'
-  #       Value: Data Element Name  
-  #   Src: CMB
-  #   Enum:
-  #     - EDTA
-  #     - FFPE
-  #     - Formalin
-  #     - Streck
-  #   Req: 'Yes'
   # days_from_diagnosis_to_specimen_collection:
   #   Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis. <br>CDE ID = 11253404 ALL OF THIS IS INCORRECT BECAUSE THE INCORRECT CDE WAS REFERENCED; PER THE CORRECT CDE ID OF 11248865 THE PROPERTY DESCRIPTION SHOULD BE The number of days from the date the diagnosis was made to the date a sample was collected.
   #   Term:
@@ -1848,12 +1454,10 @@ PropDefinitions:
     Src: FNL
     Enum:
       - Clinical Report
+      - File Collection
+      # - Investigator Report
       - Variant Call File
-      #- Investigator Report
-      - DNA Methylation Analysis File
-      - Index File
-      - RNA Sequence File
-      - Whole Exome Sequence File
+      - Variant Report
     Req: 'Yes'
   data_file_description:
     Desc: A free text field that can be used to document the content and other details about an electronic file that may not be captured elsewhere. For example, the file's derivation from a specimen of normal tissue versus tumor tissue. <br>CDE ID = 11280338
@@ -1873,15 +1477,11 @@ PropDefinitions:
     Src: DSS
     #Type: string
     Enum:
-      - bam
-      - bai
-      - vcf
-      - pdf
       - docx
-      - xlsx
-      - tbi
-      - csv
       - gz
+      - pdf
+      - vcf
+      - zip
     Req: 'Yes'
   data_file_size:
     Desc: The measure, expressed in bytes, as to how much space a data file takes up on a storage medium. <br>CDE ID = 11479876
