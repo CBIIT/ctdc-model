@@ -221,11 +221,10 @@ PropDefinitions:
     Req: 'Yes'
   image_collection_name:
     Desc: <The words by which a set of images that are stored together are known.> The name of the image collection exactly as it appears at the location where the collection can be viewed and/or accessed. <br>CDE ID = 14826008 (added 05-28-24)
-Image Collection Name
     Term:
       - Origin: caDSR - CTDC
         Code: '14826008'
-        Value: Data Element Name
+        Value: Image Collection Name
     Src: ICDC
     Type: string
     Req: 'Yes'
