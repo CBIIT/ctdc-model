@@ -145,7 +145,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   # principal_investigator
-  person_first_name #principal_investigator_first_name:
+  person_first_name: #principal_investigator_first_name
     Desc: <A word or group of words indicating a person's first (personal or given) name; the name that precedes the surname. Synonym = Given Name.> The first or given name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179589 (updated 05-28-24) #CDE ID = 10624731 
     Term:
       - Origin: CSAERS/NCI Standard #caDSR - NCI Standard
@@ -154,7 +154,7 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: 'Yes'
-  person_last_name #principal_investigator_last_name:
+  person_last_name: #principal_investigator_last_name
     Desc: <A means of identifying an individual by using a word or group of words indicating a person's last (family) name. Synonym = Last Name, Surname.> The last or family name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179591 (updated 05-28-24) #CDE ID = 10624733
     Term:
       - Origin: CSAERS/NCI Standard #caDSR - NCI Standard
@@ -163,7 +163,7 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: 'Yes'
-  person_middle_name #principal_investigator_middle_name:
+  person_middle_name: #principal_investigator_middle_name
     Desc: <A means of identifying an individual by using a word or group of words indicating a person's middle name.> The middle name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179590 (updated 05-28-24) #CDE ID = 10624732
     Term:
       - Origin: CSAERS/NCI Standard #caDSR - NCI Standard
@@ -172,7 +172,7 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: 'No'
-  person_orcid #principal_investigator_orcid_id:
+  person_orcid: #principal_investigator_orcid_id
     Desc: <A persistent unique digital identifier assigned to a person by the Open Researcher and Contributor ID (ORCID) organization.> A persistent unique digital identifier assigned to a principal investigator by the Open Researcher and Contributor ID (ORCID) organization. <br>CDE ID = 10624734 (updated 05-28-24)
     Term:
       - Origin: caDSR - CRDC #caDSR - NCI Standard
