@@ -3,22 +3,22 @@
 # Lower case names are labels for the entities
 
 Nodes:
-  node:
-    Desc: text
-    Tags:
-      Category: value
-      Assignment: value
-      Class: value
-      Template: 'Yes'
-    Props:
-      - property_1
-      - property_2
-      - property_3
-      - property_4
-      - property_5
-      - property_6
+  # node:
+  #   Desc: text
+  #   Tags:
+  #     Category: value
+  #     Assignment: value
+  #     Class: value
+  #     Template: 'Yes'
+  #   Props:
+  #     - property_1
+  #     - property_2
+  #     - property_3
+  #     - property_4
+  #     - property_5
+  #     - property_6
   program:  
-    Desc: Within the Clinical Trial Data Commons, projects and studies/trials are grouped into discrete programs, based upon the origins and/or scientific nature of each project or study/trial. These programs may or may not directly relate to any formal program, e.g. NCI funding programs. The Program node contains the properties required to appropriately characterize any given CTDC program.
+    Desc: <WORK NEEDED HERE> Within the Clinical Trial Data Commons, projects and studies/trials are grouped into discrete programs, based upon the origins and/or scientific nature of each project or study/trial. These programs may or may not directly relate to any formal program, e.g. NCI funding programs. The Program node contains the properties required to appropriately characterize any given CTDC program.
     Tags:
       Category: administrative
       Assignment: core
@@ -28,7 +28,7 @@ Nodes:
       - program_name #11444542
       - program_short_name #11459801
   project:
-    Desc: text
+    Desc: text <WORK NEEDED HERE>
     Tags:
       Category: administrative
       Assignment: core
@@ -45,10 +45,10 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - principal_investigator_first_name #10624731
-      - principal_investigator_last_name #10624733
-      - principal_investigator_middle_name #10624732
-      - principal_investigator_orcid_id #10624734
+      - person_first_name #principal_investigator_first_name #10624731
+      - person_last_name #principal_investigator_last_name #10624733
+      - person_middle_name #principal_investigator_middle_name #10624732
+      - person_orcid #principal_investigator_orcid_id #10624734
   study:
     Desc: The Study node contains properties required to characterize each study/trial in terms of a title, describe when, how and why the study/trial was conducted, and provide links to additional information about the study/trial.
     Tags:
@@ -64,7 +64,7 @@ Nodes:
       - study_type #11160683
       - dates_of_conduct
   associated_link:
-    Desc: The Associated Link node cotains the properties required to associate multiple links to additional information about any given study/trial to the appropriate study/trial, and define an inuitive label via which each link will be diplayed within the UI. 
+    Desc: The Associated Link node contains the properties required to associate multiple links to additional information about any given study/trial to the appropriate study/trial, and define an inuitive label via which each link will be diplayed within the UI. 
     Tags:
       Category: study
       Assignment: core
@@ -89,7 +89,7 @@ Nodes:
       - repository_name
       - collection_access
   subject:
-    Desc: text
+    Desc: text <WORK NEEDED HERE>
     Tags:
       Category: case # in lieu of "subject" being a category recognized by the DMN
       Assignment: core
@@ -125,7 +125,7 @@ Nodes:
       - ncbi_taxonomy_id #10543100
       - ncbi_taxonomy_name #10543082
   exposure:
-    Desc: environmental, workplace and lifestyle exposure(s)
+    Desc: <WORK WAS NEEDED HERE> Properties within the Exposure node capture information concerning a subject's environmental, workplace and lifestyle exposure(s) which have the potential to have increased the risk of developing cancer, and/or caused cancer, and/or exacerbated an underlying maliignancy.
     Tags:
       Category: case # in lieu of "subject" being a category recognized by the DMN
       Assignment: core
@@ -160,7 +160,7 @@ Nodes:
       - date_of_diagnosis # quantified in days indexed to date of trial enrollment 
       #- subject_age_at_diagnosis #10609539
   targeted_therapy:
-    Desc: text
+    Desc: <WORK WAS NEEDED HERE>The Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as targeted therapies, i.e. therapies that are considered to have enhanced therapeutic effects upon the specific type of cancer with which the subject has been diagnosed, and/or upon that type of cancer specifically within the context of a given subject because of factors such as tumor histology, grade, gene expression and genetic make-up.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -170,11 +170,13 @@ Nodes:
       - targeted_therapy_id
       - targeted_therapy #6400634
       - targeted_therapy_dose
+      - targeted_therapy_dose_units # NEW
       - targeted_therapy_frequency
-      - targeted_therapy_start_and_end
+      - targeted_therapy_start_date # NEW
+      - targeted_therapy_end_date # NEW
       - best_response_to_targeted_therapy
   non_targeted_therapy:
-    Desc: text
+    Desc: <WORK WAS NEEDED HERE>The Non-Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as standard and/or non-targeted therapies, i.e. therapies considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnosed, but not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -184,11 +186,13 @@ Nodes:
       - non_targeted_therapy_id
       - non_targeted_therapy #6400634
       - non_targeted_therapy_dose
+      - non_targeted_therapy_dose_units
       - non_targeted_therapy_frequency
-      - non_targeted_therapy_start_and_end
+      - non_targeted_therapy_start_date
+      - non_targeted_therapy_end_date
       - best_response_to_non_targeted_therapy
   surgery:
-    Desc: text
+    Desc: <WORK WAS NEEDED HERE> The Surgery node contains properties which detail surgical procedures performed upon the subject in question, including the type of procedure performed, the anatomical locations impacted, notable findings, and whether or not the procedure was conducted as part of the overall treatment of the cancer in question.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -203,7 +207,7 @@ Nodes:
       - surgical_procedure_findings
       - extent_of_residual_disease  
   radiotherapy:
-    Desc: text
+    Desc: text <WORK WAS NEEDED HERE>The Radiotherapy node contains properties which detail radiological procedures performed on the subject in question as part of their overall treatent, including the type of each radiological procedure performed, the anatomical location(s) impacted, and the response to such radiotherapy.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -214,12 +218,14 @@ Nodes:
       - radiological_procedure #6411539
       - radiological_procedure_anatomical_location
       - radiation_dose
+      - radiation_dose_units
       - radiation_frequency
       - radiation_extent
-      - radiotherapy_start_and_end
+      - radiotherapy_start_date
+      - radiotherapy_end_date
       - best_response_to_radiotherapy
   subject_status:
-    Desc: text
+    Desc: text <WORK WAS NEEDED HERE> Properties within the Subject Status node capture key information as to the subject's survival status and where applicable, a subject's withdrawal from the study. 
     Tags:
       Category: clinical
       Assignment: core
@@ -259,7 +265,7 @@ Nodes:
       # - days_from_recurrence_to_specimen_collection #11251133
       # - days_from_specimen_collection_to_initial_pathologic_diagnosis #11253404
   data_file:
-    Desc: Data files can be associated with CTDC project, study, participant, diagnosis and specimen records, but are not themselves stored within the application. Instead, the application stores records as to the existence and nature of such data files. The Data File node is comprised of properties which characterize these files in terms of their size, format and content, such that they can be appropriately represented within the application’s UI, and in terms of their storage location, such that they can be retrieved for analysis.
+    Desc: Data files can be associated with CTDC project, study, participant, diagnosis and specimen records, but are not themselves stored within the application. Instead, the application stores records as to the existence and nature of such data files. The Data File node is comprised of properties which characterize these files in terms of their size, format and content, such that they can be appropriately represented within the application's UI, and in terms of their storage location, such that they can be retrieved for analysis.
     Tags:
       Category: data_file
       Assignment: core
