@@ -201,7 +201,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   associated_link_url:
-    Desc: <The global address of the linkage between related records on the World Wide Web.> The url to which an end user will be redirected upon selection of the corresponding link name displayed within the UI. <br>CDE ID = 14822140
+    Desc: <The global address of the linkage between related records on the World Wide Web.> The url to which an end user will be redirected upon selection of the corresponding link name displayed within the UI. <br>CDE ID = 14822140 (added 05-28-24)
     Term:
       - Origin: caDSR - CTDC
         Code: '14822140'
@@ -292,7 +292,7 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   biomarker_results_available:
-    Desc: Indicator as to whether any biomarker results relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: An indicator as to whether any biomarker results relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -304,7 +304,7 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   radiology_report_available:
-    Desc: Indicator as to whether any radiology reports results relating to the subject in question are available. <br>This is CMB's RADIOLOGY REPORT annotation <br>CDE ID = 6944764
+    Desc: An indicator as to whether any radiology reports results relating to the subject in question are available. <br>This is CMB's RADIOLOGY REPORT annotation <br>CDE ID = 6944764
     Term:
       - Origin: caDSR
         Code: '6944764'
@@ -316,7 +316,7 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   radiology_images_available:
-    Desc: Indicator as to whether any radiology images relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: An indicator as to whether any radiology images relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -328,7 +328,7 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   histology_images_available:
-    Desc: Indicator as to whether any histology images relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: An indicator as to whether any histology images relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -362,7 +362,7 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   race:
-    Desc: <The text for reporting information about race based on the Office of Management and Budget (OMB) categories.> The text for reporting information about race based on the Office of Management and Budget (OMB) categories. <br>CDE ID = 2192199 (added 05-31-24)
+    Desc: <The text for reporting information about race based on the Office of Management and Budget (OMB) categories.> <br>CDE ID = 2192199 (added 05-31-24)
     Term:
       - Origin: caDSR - OMB/NCI Standard
         Code: '2192199'
@@ -376,7 +376,7 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   ethnicity:
-    Desc: <The text for reporting information about ethnicity based on the Office of Management and Budget (OMB) categories.> The text for reporting information about ethnicity based on the Office of Management and Budget (OMB) categories. <br>CDE ID = 2192217 (added 05-31-24)
+    Desc: <The text for reporting information about ethnicity based on the Office of Management and Budget (OMB) categories.> <br>CDE ID = 2192217 (added 05-31-24)
     Term:
       - Origin: caDSR - OMB/NCI Standard
         Code: '2192217'
@@ -544,7 +544,7 @@ PropDefinitions:
       - Wood Dust Exposure
     Req: 'Yes'
   carcinogen_exposure:
-    Desc: <An indication of whether the participant was exposed to environmental/workplace carcinogens (for example arsenic, asbestos, diesel exhaust, chromium, silica). Indicator as to whether the subject in question has had significant exposure to any known carcinogen(s) <br>NOT CURRENTLY ASSIGNED ANY CDE CDE ID = 5205578 (added 05-31-24)
+    Desc: <An indication of whether the participant was exposed to environmental/workplace carcinogens (for example arsenic, asbestos, diesel exhaust, chromium, silica).> An indicator as to whether the subject in question has had significant exposure to any known carcinogen(s) <br>CDE ID = 5205578 (added 05-31-24)
     Term:
       - Origin: caDSR - BPV
         Code: '5205578'
@@ -893,7 +893,7 @@ PropDefinitions:
     Type: string
     Req: Preferred
   targeted_therapy_start_date:
-    Desc: The date upon which administration of the targeted therapy in question began, expressed as the number of days before or after study enrollment the targeted therapy administration began. <br>NOT CURRENTLY ASSIGNED ANY CDE <br>Proposed CDE references age not time relative to study enrollment
+    Desc: The date upon which administration of the targeted therapy in question began, expressed as the number of days before or after study enrollment the targeted therapy administration began. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -902,7 +902,7 @@ PropDefinitions:
     Type: integer
     Req: Preferred
   targeted_therapy_end_date:
-    Desc: The date upon which administration of the targeted therapy in question ended, expressed as the number of days before or after study enrollment the targeted therapy administration ended. <br>NOT CURRENTLY ASSIGNED ANY CDE <br>Proposed CDE references age not time relative to study enrollment
+    Desc: The date upon which administration of the targeted therapy in question ended, expressed as the number of days before or after study enrollment the targeted therapy administration ended. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The proposed CDE references age not time relative to study enrollment
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -976,7 +976,7 @@ PropDefinitions:
     Type: string
     Req: Preferred
   non_targeted_therapy_start_date:
-    Desc: The date upon which administration of the non-targeted therapy in question began, expressed as the number of days before or after study enrollment the non-targeted therapy administration began. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The date upon which administration of the non-targeted therapy in question began, expressed as the number of days before or after study enrollment the non-targeted therapy administration began. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -985,7 +985,7 @@ PropDefinitions:
     Type: integer
     Req: Preferred
   non_targeted_therapy_end_date:
-    Desc: text The date upon which administration of the non-targeted therapy in question ended, expressed as the number of days before or after study enrollment the non-targeted therapy administration ended. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: text The date upon which administration of the non-targeted therapy in question ended, expressed as the number of days before or after study enrollment the non-targeted therapy administration ended. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1144,7 +1144,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   radiotherapy_start_date:
-    Desc: The date upon which administration of the radiotherapy in question began, expressed as the number of days before or after study enrollment the radiotherapy began. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The date upon which administration of the radiotherapy in question began, expressed as the number of days before or after study enrollment the radiotherapy began. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1153,7 +1153,7 @@ PropDefinitions:
     Type: integer
     Req: 'Yes'
   radiotherapy_end_date:
-    Desc: The date upon which administration of the radiotherapy in question ended, expressed as the number of days before or after study enrollment the radiotherapy ended. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The date upon which administration of the radiotherapy in question ended, expressed as the number of days before or after study enrollment the radiotherapy ended. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
     Term:
       - Origin: caDSR
         Code: 'code/ID'
@@ -1318,7 +1318,7 @@ PropDefinitions:
       - Unstained Slide
     Req: 'Yes'
   specimen_type: # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
-    Desc: <The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).> Acceptable values taken straight from the CMB Catalog Site. <br>NOT CURRENTLY ASSIGNED ANY CDE ID = 11253427 (added 06-03-24)
+    Desc: <The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).> Acceptable values taken straight from the CMB Catalog Site. <br>CDE ID = 11253427 (added 06-03-24)
     Term:
       - Origin: caDSR - CRDC
         Code: '1253427'
@@ -1604,7 +1604,7 @@ PropDefinitions:
       - Unknown
     Req: Preferred
   data_file_uuid:
-    Desc: <A unique sequence of characters used to identify the contents of an electronic record.> CDE ID = 14826100 (added 05-30-24)
+    Desc: <A unique sequence of characters used to identify the contents of an electronic record.> <br>CDE ID = 14826100 (added 05-30-24)
     Term:
       - Origin: caDSR - CTDC
         Code: '14826100'

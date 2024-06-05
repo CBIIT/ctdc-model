@@ -160,7 +160,7 @@ Nodes:
       - date_of_diagnosis # quantified in days indexed to date of trial enrollment 
       #- subject_age_at_diagnosis #10609539
   targeted_therapy:
-    Desc: <WORK WAS NEEDED HERE>The Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as targeted therapies, i.e. therapies that are considered to have enhanced therapeutic effects upon the specific type of cancer with which the subject has been diagnosed, and/or upon that type of cancer specifically within the context of a given subject because of factors such as tumor histology, grade, gene expression and genetic make-up.
+    Desc: The Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as targeted therapies, i.e. therapies that are considered to have enhanced therapeutic effects upon the specific type of cancer with which the subject has been diagnosed, and/or upon that type of cancer specifically within the context of a given subject because of factors such as tumor histology, grade, gene expression and genetic make-up.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -176,7 +176,7 @@ Nodes:
       - targeted_therapy_end_date # NEW
       - best_response_to_targeted_therapy
   non_targeted_therapy:
-    Desc: <WORK WAS NEEDED HERE>The Non-Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as standard and/or non-targeted therapies, i.e. therapies considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnosed, but not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject.
+    Desc: The Non-Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as standard and/or non-targeted therapies, i.e. therapies considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnosed, but not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -192,7 +192,7 @@ Nodes:
       - non_targeted_therapy_end_date
       - best_response_to_non_targeted_therapy
   surgery:
-    Desc: <WORK WAS NEEDED HERE> The Surgery node contains properties which detail surgical procedures performed upon the subject in question, including the type of procedure performed, the anatomical locations impacted, notable findings, and whether or not the procedure was conducted as part of the overall treatment of the cancer in question.
+    Desc: The Surgery node contains properties which detail surgical procedures performed upon the subject in question, including the type of procedure performed, the anatomical locations impacted, notable findings, and whether or not the procedure was conducted as part of the overall treatment of the cancer in question.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -207,7 +207,7 @@ Nodes:
       - surgical_procedure_findings
       - extent_of_residual_disease  
   radiotherapy:
-    Desc: text <WORK WAS NEEDED HERE>The Radiotherapy node contains properties which detail radiological procedures performed on the subject in question as part of their overall treatent, including the type of each radiological procedure performed, the anatomical location(s) impacted, and the response to such radiotherapy.
+    Desc: The Radiotherapy node contains properties which detail radiological procedures performed on the subject in question as part of their overall treatent, including the type of each radiological procedure performed, the anatomical location(s) impacted, and the response to such radiotherapy.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -225,7 +225,7 @@ Nodes:
       - radiotherapy_end_date
       - best_response_to_radiotherapy
   subject_status:
-    Desc: text <WORK WAS NEEDED HERE> Properties within the Subject Status node capture key information as to the subject's survival status and where applicable, a subject's withdrawal from the study. 
+    Desc: Properties within the Subject Status node capture key information as to the subject's survival status and where applicable, a subject's withdrawal from the study. 
     Tags:
       Category: clinical
       Assignment: core
