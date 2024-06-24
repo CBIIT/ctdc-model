@@ -167,7 +167,7 @@ PropDefinitions:
     Desc: <A means of identifying an individual by using a word or group of words indicating a person's middle name.> The middle name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179590 (updated 05-28-24) #CDE ID = 10624732
     Term:
       - Origin: CSAERS/NCI Standard #caDSR - NCI Standard
-        Code: '217959' #'10624732'
+        Code: '2179590' #'10624732'
         Value: Person Middle Name #Principal Investigator Middle Name Text  
     Src: DSS
     Type: string
@@ -195,7 +195,7 @@ PropDefinitions:
     Desc: <The words by which the linkage between related records is known.> The exact text to be displayed within the UI and used as an intuitive identifier of any given link associated with the study/trial in question.  <br>CDE ID = 14822136 (added 05-28-24) 
     Term:
       - Origin: caDSR - CTDC
-        Code: '1482213'
+        Code: '14822136'
         Value: Data Record Link Identifier Name
     Src: CMB
     Type: string
@@ -752,7 +752,7 @@ PropDefinitions:
     Desc: <Words that describe the normal and abnormal morphologic characteristics in cells and tissues.> <br>CDE ID = 14842510 (added 05-28-24)
     Term:
       - Origin: caDSR - CTDC
-        Code: '4842510'
+        #Code: '14842510'
         Value: Disease or Disorder Histology Text
     Src: CMB
     Type: string
@@ -773,7 +773,7 @@ PropDefinitions:
     Desc: <Words that describe the classification of tumors based on their histology.> CDE ID = 14843594 (added 05-28-24) #<br>CDE ID = 7344580   
     Term:
       - Origin: caDSR - CTDC
-        Code: '4843594' #'7344580'
+        Code: '14843594' #'7344580'
         Value: Disease or Disorder Histologic Subtype Text
     Src: CMB
     Type: string
@@ -860,7 +860,7 @@ PropDefinitions:
     Desc: <A term describing a therapeutic agent as captured in the Pharmacological Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic agent administered to a subject as a targeted therapy, i.e. one that is considered to have enhanced therapeutic effects upon the specific type of cancer with which the subject has been diagnosed, and/or upon that type of cancer specifically within the context of a given subject because of factors such as tumor histology, grade, gene expression and genetic make-up. Notably, a therapeutic agent considered to be and administered as a targeted therapy in one subject based upon the specifics of such characteristics can, conversely, be considered and administered as a non-targeted therapy in another subject, because of differences in his or her type of cancer per se, or the specific context of the cancer in question. <br>CDE ID = 14913015 (updated 05-29-24) #CDE ID = 6400634
     Term:
       - Origin: caDSR - CRDC
-        Code: '1491301' #'6400634'
+        Code: '14913015' #'6400634'
         Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus Name #Concomitant Medication Name # check on this, repeated below
     Src: CMB
     Type: string
@@ -878,7 +878,7 @@ PropDefinitions:
     Desc: <Text name to represent units of measure used to describe dosages of an agent or measure.> The units of measure for the dose at which the targeted therapeutic agent in question was administered. <br>CDE ID = 2321160 (added 05-29-24)
     Term:
       - Origin: caDSR - CCR
-        Code: '321160'
+        Code: '2321160'
         Value: Agent Administration Dose Unit of Measure Name
     Src: CMB
     Type: string
@@ -940,7 +940,7 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   non_targeted_therapy: 
-    Desc: <A term describing a therapeutic agent as captured in the Pharmacological Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic agent administered to a subject as a non-targeted therapy, i.e. one that is considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnosed, but is not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject. Notably, a therapeutic agent considered to be and administered as a non-targeted therapy in one subject can, conversely, be considered and administered as a targeted therapy in another subject, where differences in his or her type of cancer per se, or the specific context of the cancer in question make the therapy more specific. <br>CDE ID = 14913015 #CDE ID = 6400634
+    Desc: <A term describing a therapeutic agent as captured in the Pharmacological Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic agent administered to a subject as a non-targeted therapy, i.e. one that is considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnosed, but is not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject. Notably, a therapeutic agent considered to be and administered as a non-targeted therapy in one subject can, conversely, be considered and administered as a targeted therapy in another subject, where differences in his or her type of cancer per se, or the specific context of the cancer in question make the therapy more specific. <br>CDE ID = 14913015 (updated 05-29-24) #CDE ID = 6400634
     Term:
       - Origin: caDSR - CRDC
         Code: '14913015' #'6400634'
@@ -1016,7 +1016,7 @@ PropDefinitions:
     Desc: <A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each surgical procedure record, used to identify the correct surgical procedure therapy records during data updates. <br>CDE ID = 14822135 (added 05-29-24)
     Term:
       - Origin: caDSR - CTDC
-        Code: '4822135'
+        Code: '14822135'
         Value: Data Record Link Unique Identifier
     Src: CMB
     Type: string
@@ -1026,7 +1026,7 @@ PropDefinitions:
     Desc: <The type of surgical procedure categorized by type or purpose.> The name and/or a brief narrative description of the surgical procedure performed upon the subject. <br>CDE ID = 13383457 #CDE ID = 6411539
     Term:
       - Origin: caDSR - PCDC
-        Code: "13383457" #'6411539'
+        Code: '13383457' #'6411539'
         Value: Therapeutic Surgical Procedure Type #Procedure Name  
     Src: CMB
     Type: string
@@ -1282,7 +1282,7 @@ PropDefinitions:
     Desc: <A unique sequence of alphanumeric characters used to identify the specimen at it's point of origin.> CMB's "Biospecimen ID" <br>CDE ID = 6921892 (added 06-03-24) <br>This property is used as the key via which child records, e.g. data files generated via Oncomine panel analyses, can be associated with the appropriate specimen during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR - MCL
-        Code: '921892'
+        Code: '6921892'
         Value: Biospecimen Source Laboratory Identifier 
     Src: CMB
     Type: string
@@ -1321,7 +1321,7 @@ PropDefinitions:
     Desc: <The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).> Acceptable values taken straight from the CMB Catalog Site. <br>CDE ID = 11253427 (added 06-03-24)
     Term:
       - Origin: caDSR - CRDC
-        Code: '1253427'
+        Code: '11253427'
         Value: Specimen Material OBIB Source 
     Src: CMB
     Enum:
@@ -1421,7 +1421,7 @@ PropDefinitions:
     Desc: <A specific point in the time continuum, including those established relative to an event.> CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 5899851 (updated 06-03-24)
     Term:
       - Origin: caDSR - NCI CRF Standards
-        Code: '899851' #'7065963'
+        Code: '5899851' #'7065963'
         Value: Timepoint Event Assessment Period Type
     Src: CMB
     Enum:
@@ -1528,7 +1528,7 @@ PropDefinitions:
     Desc: <The type of information contained in an electronic record.> A curated indicator as to the type of content represented by the data file <br>CDE ID = 14824731 (added 05-30-24)
     Term:
       - Origin: caDSR - CTDC
-        Code: '4824731'
+        Code: '14824731'
         Value: Electronic Data File Content Type 
     Src: FNL
     Enum:
@@ -1616,7 +1616,7 @@ PropDefinitions:
     Desc: <The specification of a node (file or directory) in a hierarchical file system where an electronic file is located.> The specific location within the S3 storage bucket at which the file is stored, expressed in terms of a unique url <br>CDE ID = 11556141 (added 05-30-24)
     Term:
       - Origin: caDSR - CDS
-        Code: '1556141'
+        Code: '11556141'
         Value: Electronic File Pathname Text  
     Src: FNL
     Type: string

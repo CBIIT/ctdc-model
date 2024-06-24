@@ -45,10 +45,10 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - person_first_name #principal_investigator_first_name #10624731
-      - person_last_name #principal_investigator_last_name #10624733
-      - person_middle_name #principal_investigator_middle_name #10624732
-      - person_orcid #principal_investigator_orcid_id #10624734
+      - person_first_name #2179589
+      - person_last_name #2179591
+      - person_middle_name #2179590
+      - person_orcid #10624734
   study:
     Desc: The Study node contains properties required to characterize each study/trial in terms of a title, describe when, how and why the study/trial was conducted, and provide links to additional information about the study/trial.
     Tags:
@@ -59,8 +59,8 @@ Nodes:
     Props:
       - study_name #11459810
       - study_short_name #11459812
-      - study_id
-      - study_description
+      - study_id #5054234
+      - study_description #3444002
       - study_type #11160683
       - dates_of_conduct
   associated_link:
@@ -71,9 +71,9 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - associated_link_id
-      - associated_link_name
-      - associated_link_url
+      - associated_link_id #14822135
+      - associated_link_name #14822136
+      - associated_link_url #14822140
   image_collection:
     Desc: The Image Collection node is comprised of properties which describe collections of images that are associated with any given study/trial. These properties characterize such image collections in terms of the types of images they contain, where the collections are hosted, and how they can be accessed.
     Tags:
@@ -82,12 +82,12 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - image_collection_id
-      - image_collection_name
-      - image_type_included
-      - image_collection_url
-      - repository_name
-      - collection_access
+      - image_collection_id #14822135
+      - image_collection_name #14826008
+      - image_type_included #12137353
+      - image_collection_url #11556141
+      - repository_name #14826003
+      - collection_access #14825946
   subject:
     Desc: text <WORK NEEDED HERE>
     Tags:
@@ -96,7 +96,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - subject_id
+      - subject_id #12220014
       - biomarker_results_available
       - radiology_report_available #6944764
       - radiology_images_available
@@ -109,32 +109,32 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - demographic_id
+      - demographic_id #14822135
       #- age_at_diagnosis
-      - age_at_enrollment
-      - race
-      - ethnicity
-      - sex
-      - reported_gender #10748236
-      - height
-      - weight
-      - body_surface_area
-      - occupation
-      - income
-      - highest_level_of_education
+      - age_at_enrollment #12299548
+      - race #2192199
+      - ethnicity #2192217
+      - sex #7572817
+      - reported_gender #14927178
+      - height #2179643
+      - weight #2179689
+      - body_surface_area #653
+      - occupation #6617540
+      - income #14834966
+      - highest_level_of_education #2681552
       - ncbi_taxonomy_id #10543100
       - ncbi_taxonomy_name #10543082
   exposure:
-    Desc: <WORK WAS NEEDED HERE> Properties within the Exposure node capture information concerning a subject's environmental, workplace and lifestyle exposure(s) which have the potential to have increased the risk of developing cancer, and/or caused cancer, and/or exacerbated an underlying maliignancy.
+    Desc: Properties within the Exposure node capture information concerning a subject's environmental, workplace and lifestyle exposure(s) which have the potential to have increased the risk of developing cancer, and/or caused cancer, and/or exacerbated an underlying maliignancy.
     Tags:
       Category: case # in lieu of "subject" being a category recognized by the DMN
       Assignment: core
       Class: secondary
       Template: 'Yes'
     Props:
-      - exposure_id
+      - exposure_id #14822135
       - environmental_exposure_type #11256813
-      - carcinogen_exposure
+      - carcinogen_exposure #5205578
   diagnosis:
     Desc: The Diagnosis node contains numerous properties which fully characterize the type of cancer with which any given study/trial subject was diagnosed, inclusive of disease stage, histology/pathology, and age at diagnosis.
     Tags:
@@ -143,21 +143,21 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - diagnosis_id
-      - primary_diagnosis_disease_group
+      - diagnosis_id #14822135
+      - primary_diagnosis_disease_group #14905532
       #- icd_10_disease_code #11479873
-      - ctep_disease_term
-      - meddra_disease_code
+      - ctep_disease_term #4723846
+      - meddra_disease_code #2004425
       - snomed_disease_term
       - snomed_disease_code # this is disease plus stage as presented within the CMB Catalog
       #- icd_o_primary_site #11341616
-      - primary_disease_site
-      - histology
+      - primary_disease_site #14883047
+      - histology #14842510
       #- date_of_confirmation_of_histology #6409589
-      - histological_subtype #7344580
-      - stage_of_disease
+      - histological_subtype #14843594
+      - stage_of_disease #3440332
       - tumor_grade #11325685
-      - date_of_diagnosis # quantified in days indexed to date of trial enrollment 
+      - date_of_diagnosis #2178801 # quantified in days indexed to date of trial enrollment 
       #- subject_age_at_diagnosis #10609539
   targeted_therapy:
     Desc: The Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as targeted therapies, i.e. therapies that are considered to have enhanced therapeutic effects upon the specific type of cancer with which the subject has been diagnosed, and/or upon that type of cancer specifically within the context of a given subject because of factors such as tumor histology, grade, gene expression and genetic make-up.
@@ -167,14 +167,14 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - targeted_therapy_id
-      - targeted_therapy #6400634
-      - targeted_therapy_dose
-      - targeted_therapy_dose_units # NEW
-      - targeted_therapy_frequency
+      - targeted_therapy_id #14822135
+      - targeted_therapy #14913015
+      - targeted_therapy_dose #2182728
+      - targeted_therapy_dose_units #2321160 # NEW
+      - targeted_therapy_frequency #2003878
       - targeted_therapy_start_date # NEW
       - targeted_therapy_end_date # NEW
-      - best_response_to_targeted_therapy
+      - best_response_to_targeted_therapy #13383448
   non_targeted_therapy:
     Desc: The Non-Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as standard and/or non-targeted therapies, i.e. therapies considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnosed, but not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject.
     Tags:
@@ -183,14 +183,14 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - non_targeted_therapy_id
-      - non_targeted_therapy #6400634
-      - non_targeted_therapy_dose
-      - non_targeted_therapy_dose_units
-      - non_targeted_therapy_frequency
+      - non_targeted_therapy_id #14822135
+      - non_targeted_therapy #14913015
+      - non_targeted_therapy_dose #2182728
+      - non_targeted_therapy_dose_units #2321160
+      - non_targeted_therapy_frequency #2003878
       - non_targeted_therapy_start_date
       - non_targeted_therapy_end_date
-      - best_response_to_non_targeted_therapy
+      - best_response_to_non_targeted_therapy #13383448
   surgery:
     Desc: The Surgery node contains properties which detail surgical procedures performed upon the subject in question, including the type of procedure performed, the anatomical locations impacted, notable findings, and whether or not the procedure was conducted as part of the overall treatment of the cancer in question.
     Tags:
@@ -199,13 +199,13 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - surgical_procedure_id
-      - surgical_procedure #6411539
+      - surgical_procedure_id #14822135
+      - surgical_procedure #13383457 #6411539
       - surgical_procedure_date
       - surgical_procedure_anatomical_location
       - surgical_procedure_therapeutic
       - surgical_procedure_findings
-      - extent_of_residual_disease  
+      - extent_of_residual_disease #13362284
   radiotherapy:
     Desc: The Radiotherapy node contains properties which detail radiological procedures performed on the subject in question as part of their overall treatent, including the type of each radiological procedure performed, the anatomical location(s) impacted, and the response to such radiotherapy.
     Tags:
@@ -214,16 +214,16 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - radiological_procedure_id
+      - radiological_procedure_id #14822135
       - radiological_procedure #6411539
       - radiological_procedure_anatomical_location
       - radiation_dose
-      - radiation_dose_units
-      - radiation_frequency
-      - radiation_extent
+      - radiation_dose_units #13383458
+      - radiation_frequency #14918782
+      - radiation_extent #7063755
       - radiotherapy_start_date
       - radiotherapy_end_date
-      - best_response_to_radiotherapy
+      - best_response_to_radiotherapy #13383448
   subject_status:
     Desc: Properties within the Subject Status node capture key information as to the subject's survival status and where applicable, a subject's withdrawal from the study. 
     Tags:
@@ -232,11 +232,11 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - subject_status_id
-      - survival_status #7050072
-      - primary_cause_of_death #6421593
-      - off_study
-      - off_study_reason #6355981
+      - subject_status_id #14822135
+      - survival_status #2847330
+      - primary_cause_of_death #4783274
+      - off_study #14834973
+      - off_study_reason #13362265
   specimen:
     Desc: The Specimen node contains numerous properties which provide an in-depth characterization of the types of biospecimens which were collected from any given study/trial participant and subsequently analyzed.
     Tags:
@@ -245,18 +245,18 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - specimen_id
-      - parent_specimen_id
-      - parent_specimen_type # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
-      - specimen_type # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
+      - specimen_id #6921892
+      - parent_specimen_id #5581201
+      - parent_specimen_type #11253427 # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
+      - specimen_type #11253427 # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
       #- obi_specimen_type #11253427 not a good match to the caDSR term referenced by the CDE's ID
-      - specimen_category # confusingly close to the CMB Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, but acceptable terms for caDSR 7069877, quoted as a reference for "specimen category" uses terms that do not relate to "tissue category"
-      - anatomical_collection_site
-      - type_of_tissue #caDSR 7003892 this looks very much like the CMB Catalog Site's "Tissue Category"
-      - tissue_category # this would be the Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, which appears within at least two of the DDs as Tissue Type
+      - specimen_category #12445832 # confusingly close to the CMB Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, but acceptable terms for caDSR 7069877, quoted as a reference for "specimen category" uses terms that do not relate to "tissue category"
+      - anatomical_collection_site #12083894
+      #- type_of_tissue #14688604 #caDSR 7003892 this looks very much like the CMB Catalog Site's "Tissue Category"
+      - tissue_category #14688604 # this would be the Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, which appears within at least two of the DDs as Tissue Type
       #- icd_o_3_tissue_morphology # 11326261
-      - assessment_timepoint # this appears to be the Catalog Site's "Collection Timepoint" caDSR 7065963
-      - collection_date # from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
+      - assessment_timepoint #5899851 # this appears to be the Catalog Site's "Collection Timepoint" caDSR 7065963
+      - collection_date #6401821 # from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
       # - days_from_diagnosis_to_specimen_collection #11253404
       # - diagnosis_date # from the CMB perspective, this is supposedly equivalent to the above, but because of the way this date is indexed to enrollment date, it should not be a specimen property
       # - days_from_first_subject_visit_to_specimen_collection #11248874
@@ -273,15 +273,15 @@ Nodes:
       Template: 'Yes'
     Props:
       - data_file_name #11284037
-      - data_file_type
+      - data_file_type  #14824731
       - data_file_description #11280338
       - data_file_format #11416926
       - data_file_size #11479876
       - data_file_checksum_value #11480133
-      - data_file_checksum_type #11475057
+      - data_file_checksum_type #11475057 
       - data_file_compression_status #11387114
-      - data_file_uuid
-      - data_file_location
+      - data_file_uuid #14826100
+      - data_file_location #11556141
 Relationships:
   belongs_to:
     Mul: many_to_one
