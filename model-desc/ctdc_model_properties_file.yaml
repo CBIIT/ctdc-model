@@ -647,8 +647,7 @@ PropDefinitions:
     Src: CMB
     Enum: #Acceptable values currently specified, all of which are sourced from actual data, may be of use only during the generation of mock data, with the data type for this property potentially being changed to string.
       - Acute Myeloid Leukemia #17788007
-      - Adenocarcinoma #35917007
-      - Adenocarcinoma #443961001
+      - Adenocarcinoma #35917007 #443961001
       - Amelanotic Melanoma #70594002
       - Breast Carcinoma #254838004
       - Colon Adenoma #428054006
@@ -660,28 +659,22 @@ PropDefinitions:
       - Gastric Adenocarcinoma #408647009
       - Lung Adenocarcinoma #254626006
       - Lung Carcinoma #448993007
-      - Melanoma #2092003
-      - Melanoma #372244006
+      - Melanoma #2092003 #372244006
       - Mucinous Adenocarcinoma #72495009
       - Multiple myeloma #55921005
       - Multiple myeloma and immunoproliferative disease #188717001
       - Neuroendocrine Carcinoma #253000007
-      - Nodular Melanoma #2142002
-      - Nodular Melanoma #254731001
+      - Nodular Melanoma #2142002 #254731001
       - Non-Small Cell Lung Carcinoma #254637007
       - Plasma Cell Leukemia #128922003
-      - Plasma Cell Myeloma #109989006
-      - Plasma Cell Myeloma #55921005
+      - Plasma Cell Myeloma #109989006 #55921005
       - Prostate Adenocarcinoma #399490008
-      - Prostate Carcinoma #254900004
-      - Prostate Carcinoma #399068003
+      - Prostate Carcinoma #254900004 #399068003
       - Rectal Adenoma #399730005
       - Rectal Carcinoma #254582000
       - Small Cell Carcinoma #74364000
-      - Small Cell Lung Carcinoma #254632001
-      - Small Cell Lung Carcinoma #254633006
-      - Squamous Cell Carcinoma #28899001
-      - Squamous Cell Carcinoma #402815007
+      - Small Cell Lung Carcinoma #254632001 #254633006
+      - Squamous Cell Carcinoma #28899001 #402815007
       - Squamous Cell Lung Carcinoma #254634000
       - Superficial Spreading Melanoma #254730000
     Req: 'Yes'
