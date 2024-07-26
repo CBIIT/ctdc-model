@@ -97,10 +97,10 @@ Nodes:
       Template: 'Yes'
     Props:
       - subject_id #12220014
-      - biomarker_results_available
-      - radiology_report_available #6944764
-      - radiology_images_available
-      - histology_images_available
+      - biomarker_results_available #14735824
+      - radiology_report_available #14735825
+      - radiology_images_available #14735826
+      - histology_images_available #14735827
   demographic:
     Desc: The Demographic node is comprised of properties which describe the key characteristics of each study/trial subject, such as sex, gender, race and etnnicity, etc.
     Tags:
@@ -170,10 +170,10 @@ Nodes:
       - targeted_therapy_id #14822135
       - targeted_therapy #14913015
       - targeted_therapy_dose #2182728
-      - targeted_therapy_dose_units #2321160 # NEW
+      - targeted_therapy_dose_units #2321160
       - targeted_therapy_frequency #2003878
-      - targeted_therapy_start_date # NEW
-      - targeted_therapy_end_date # NEW
+      - targeted_therapy_start_date #14984532
+      - targeted_therapy_end_date #14984563
       - best_response_to_targeted_therapy #13383448
   non_targeted_therapy:
     Desc: The Non-Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as standard and/or non-targeted therapies, i.e. therapies considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnosed, but not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject.
@@ -188,8 +188,8 @@ Nodes:
       - non_targeted_therapy_dose #2182728
       - non_targeted_therapy_dose_units #2321160
       - non_targeted_therapy_frequency #2003878
-      - non_targeted_therapy_start_date
-      - non_targeted_therapy_end_date
+      - non_targeted_therapy_start_date #14984532
+      - non_targeted_therapy_end_date #14984563
       - best_response_to_non_targeted_therapy #13383448
   surgery:
     Desc: The Surgery node contains properties which detail surgical procedures performed upon the subject in question, including the type of procedure performed, the anatomical locations impacted, notable findings, and whether or not the procedure was conducted as part of the overall treatment of the cancer in question.
@@ -221,8 +221,8 @@ Nodes:
       - radiation_dose_units #13383458
       - radiation_frequency #14918782
       - radiation_extent #7063755
-      - radiotherapy_start_date
-      - radiotherapy_end_date
+      - radiotherapy_start_date #14984532
+      - radiotherapy_end_date #14984563
       - best_response_to_radiotherapy #13383448
   subject_status:
     Desc: Properties within the Subject Status node capture key information as to the subject's survival status and where applicable, a subject's withdrawal from the study. 
@@ -245,9 +245,9 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - specimen_id #6921892
-      - parent_specimen_id #5581201
-      - parent_specimen_type #11253427 # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
+      - specimen_id #14986441
+      - parent_specimen_id #14986442
+      - parent_specimen_type #14986443 # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
       - specimen_type #11253427 # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
       #- obi_specimen_type #11253427 not a good match to the caDSR term referenced by the CDE's ID
       - specimen_category #12445832 # confusingly close to the CMB Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, but acceptable terms for caDSR 7069877, quoted as a reference for "specimen category" uses terms that do not relate to "tissue category"

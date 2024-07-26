@@ -888,20 +888,20 @@ PropDefinitions:
     Type: string
     Req: Preferred
   targeted_therapy_start_date:
-    Desc: The date upon which administration of the targeted therapy in question began, expressed as the number of days before or after study enrollment the targeted therapy administration began.
+    Desc: <The number of days from the date of enrollment to the date of treatment start.> The date upon which administration of the targeted therapy in question began, expressed as the number of days before or after study enrollment the targeted therapy administration began. <br>CDE ID = 14984532
     Term:
-      - Origin: caDSR
-        Code: 'code/ID' # NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14984532' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment Start Day Count
     Src: CMB
     Type: integer
     Req: Preferred
   targeted_therapy_end_date:
-    Desc: The date upon which administration of the targeted therapy in question ended, expressed as the number of days before or after study enrollment the targeted therapy administration ended.
+    Desc: <The number of days from the date of enrollment to the date of treatment end.> The date upon which administration of the targeted therapy in question ended, expressed as the number of days before or after study enrollment the targeted therapy administration ended. <br>CDE ID = 14984563
     Term:
       - Origin: caDSR
-        Code: 'code/ID' # NOT CURRENTLY ASSIGNED ANY CDE >>> The proposed CDE references age not time relative to study enrollment
-        Value: Data Element Name  
+        Code: '14984563' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment End Day Count
     Src: CMB
     Type: integer
     Req: Preferred
@@ -971,20 +971,20 @@ PropDefinitions:
     Type: string
     Req: Preferred
   non_targeted_therapy_start_date:
-    Desc: The date upon which administration of the non-targeted therapy in question began, expressed as the number of days before or after study enrollment the non-targeted therapy administration began.
+    Desc: <The number of days from the date of enrollment to the date of treatment start.> The date upon which administration of the non-targeted therapy in question began, expressed as the number of days before or after study enrollment the non-targeted therapy administration began. <br>CDE ID = 14984532
     Term:
-      - Origin: caDSR
-        Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14984532' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment Start Day Count
     Src: CMB
     Type: integer
     Req: Preferred
   non_targeted_therapy_end_date:
-    Desc: The date upon which administration of the non-targeted therapy in question ended, expressed as the number of days before or after study enrollment the non-targeted therapy administration ended.
+    Desc: <The number of days from the date of enrollment to the date of treatment end.> The date upon which administration of the non-targeted therapy in question ended, expressed as the number of days before or after study enrollment the non-targeted therapy administration ended. <br>CDE ID = 14984563
     Term:
-      - Origin: caDSR
-        Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14984563' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment End Day Count
     Src: CMB
     Type: integer
     Req: Preferred
@@ -1139,20 +1139,20 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   radiotherapy_start_date:
-    Desc: The date upon which administration of the radiotherapy in question began, expressed as the number of days before or after study enrollment the radiotherapy began.
+    Desc: <The number of days from the date of enrollment to the date of treatment start.> The date upon which administration of the radiotherapy in question began, expressed as the number of days before or after study enrollment the radiotherapy began. <br>CDE ID = 14984532
     Term:
-      - Origin: caDSR
-        Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14984532' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment Start Day Count
     Src: CMB
     Type: integer
     Req: 'Yes'
   radiotherapy_end_date:
-    Desc: The date upon which administration of the radiotherapy in question ended, expressed as the number of days before or after study enrollment the radiotherapy ended.
+    Desc: <The number of days from the date of enrollment to the date of treatment end.> The date upon which administration of the radiotherapy in question ended, expressed as the number of days before or after study enrollment the radiotherapy ended. <br>CDE ID = 14984563
     Term:
-      - Origin: caDSR
-        Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14984563' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment End Day Count 
     Src: CMB
     Type: integer
     Req: Preferred
@@ -1274,31 +1274,31 @@ PropDefinitions:
     Req: 'No'     
   # specimen 
   specimen_id: # this will be the exact same value that the CMB uses for biospecimen_id
-    Desc: <A unique sequence of alphanumeric characters used to identify the specimen at it's point of origin.> <br>CDE ID = 6921892 <br>This property is used as the key via which child records, e.g. data files generated via Oncomine panel analyses, can be associated with the appropriate specimen during data loading, and to identify the correct records during data updates. #CMB's "Biospecimen ID"
+    Desc: <A sequence of characters used to identify the kind of material that forms the sample.> <br>CDE ID =  14986441 <br>This property is used as the key via which child records, e.g. data files generated via Oncomine panel analyses, can be associated with the appropriate specimen during data loading, and to identify the correct records during data updates. #CMB's "Biospecimen ID"
     Term:
-      - Origin: caDSR - MCL
-        Code: '6921892' #(added 06-03-24)
-        Value: Biospecimen Source Laboratory Identifier 
+      - Origin: caDSR - CTDC
+        Code: '14986441' #(updated 07-23-24) prior CDE ID = 6921892 (added 06-03-24)
+        Value: Specimen Material Identifier #Biospecimen Source Laboratory Identifier <A unique sequence of alphanumeric characters used to identify the specimen at it's point of origin.>
     Src: CMB
     Type: string
     Req: 'Yes'
     Key: true
   parent_specimen_id: # this will be the exact same value that the CMB uses for parent_biospecimen_id
-    Desc: <One or more characters used to identify the parent substance, or portion of material obtained for use in testing, examination, or study.> <br>CDE ID = 5581201 #CMB's "Parent Biospecimen ID" 
+    Desc: <A sequence of characters used to identify the kind of material that forms the parent sample.> <br>CDE ID =  14986442 #CMB's "Parent Biospecimen ID"
     Term:
-      - Origin: caDSR - DCP
-        Code: '5581201' #(added 06-03-24)
-        Value: Parent Specimen Label Identifier  
+      - Origin: caDSR - CTDC
+        Code:  '14986442' #(updated 07-23-24) prior CDE ID = 5581201 (added 06-03-24) 
+        Value: Specimen Material Parent Identifier #Parent Specimen Label Identifier <One or more characters used to identify the parent substance, or portion of material obtained for use in testing, examination, or study.>
     Src: CMB
     Type: string
     Req: 'Yes'
     Key: true
   parent_specimen_type: # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
-    Desc: <The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).> <br>CDE ID = 11253427
+    Desc: <The kind of material that forms the parent sample as captured in the Ontology for Biobanking (OBIB).> <br>CDE ID = 14986443
     Term:
-      - Origin: caDSR - CRDC
-        Code: '11253427' #(added 06-03-24)
-        Value: Specimen Material OBIB Source
+      - Origin: caDSR - CTDC
+        Code: '14986443' #(updated 07-23-24) prior CDE ID = 11253427 (added 06-03-24)
+        Value: Specimen Material Parent OBIB Source #Specimen Material OBIB Source <The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).>
     Src: CMB
     Enum: #Acceptable values taken straight from the CMB Catalog Site
       - Bone Marrow Aspirate
@@ -1317,7 +1317,7 @@ PropDefinitions:
     Desc: <The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).> <br>CDE ID = 11253427
     Term:
       - Origin: caDSR - CRDC
-        Code: '11253427' #(added 06-03-24)
+        Code: '11253427' #(added 06-03-24) (correct as of 07-23-24)
         Value: Specimen Material OBIB Source 
     Src: CMB
     Enum: #Acceptable values taken straight from the CMB Catalog Site
