@@ -295,7 +295,6 @@ PropDefinitions:
     Src: ICDC
     Type: string
     Req: 'Yes'
-    Key: true
     Tags:
       Labeled: Collection
   image_type_included:
