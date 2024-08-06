@@ -45,6 +45,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
+      - pi_id
       - person_first_name #2179589
       - person_last_name #2179591
       - person_middle_name #2179590
