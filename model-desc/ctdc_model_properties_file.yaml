@@ -3,115 +3,147 @@
 # Lower case names are labels for the entities
 
 PropDefinitions:
-  # name_of_node
-  property_1:
-    Desc: text
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: value
-    Type: integer
-    Req: 'Yes'
-  property_2:
-    Desc: text
-    Src: value
-    Type: datetime
-    Req: 'No'
-  property_3:
-    Desc: text
-    Src: value
-    Enum: 
-      - 'Yes'
-      - 'No'
-    Req: Preferred
+# # name_of_node
+  # property_1:
+  #   Desc: text
+  #   Term:
+  #     - Origin: caDSR
+  #       Code: 'code/ID'
+  #       Value: Data Element Name  
+  #   Src: value
+  #   Type: integer
+  #   Req: 'Yes'
+  # property_2:
+  #   Desc: text
+  #   Src: value
+  #   Type: datetime
+  #   Req: 'No'
+  # property_3:
+  #   Desc: text
+  #   Src: value
+  #   Enum: 
+  #     - 'Yes'
+  #     - 'No'
+  #   Req: Preferred
   # program
   program_name:
-    Desc: <The narrative title used to refer to a broad framework (an administrative umbrella) of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis.> <br>CDE ID = 11444542 (correct as of 05-28-24)
+    Desc: <The narrative title used to refer to a broad framework (an administrative
+      umbrella) of goals under which related projects or other research activities
+      are grouped. Example - Clinical Proteomic Tumor Analysis.> <br>CDE ID = 11444542
     Term:
       - Origin: caDSR - CRDC
-        Code: '11444542'
-        Value: Program Name Text  
+        Code: '11444542' #(correct as of 05-28-24)
+        Value: Program Name Text
+        Version: '1'
     Src: DSS
     Type: string
     Req: 'Yes'
   program_short_name:
-    Desc: <An acronym or abbreviated form of the title of a broad framework of goals under which related projects or other research activities are grouped. For example, CPTAC.> <br>CDE ID = 11459801 (correct as of 05-28-24) <br>This property is used as the key via which child records, e.g. project and/or study/trial records, can be associated with the appropriate program during data loading, and to identify the correct records during data updates.
+    Desc: <An acronym or abbreviated form of the title of a broad framework of goals
+      under which related projects or other research activities are grouped. For example,
+      CPTAC.> <br>CDE ID = 11459801 <br>This property is used as the key via which
+      child records, e.g. project and/or study/trial records, can be associated with
+      the appropriate program during data loading, and to identify the correct records
+      during data updates.
     Term:
       - Origin: caDSR - CRDC
-        Code: '11459801'
-        Value: Program Short Name Text  
+        Code: '11459801' #(correct as of 05-28-24)
+        Value: Program Short Name Text
+        Version: '1'
     Src: DSS
     Type: string
     Req: 'Yes'
     Key: true
   # project
   project_name:
-    Desc: <The narrative title used to refer to an organ-, site-, disease- or phase-specific data collection within a broad framework of goals under which related studies or other research activities are grouped.> <br>CDE ID = 11459804 (correct as of 05-28-24)
+    Desc: <The narrative title used to refer to an organ-, site-, disease- or phase-specific
+      data collection within a broad framework of goals under which related studies
+      or other research activities are grouped.> <br>CDE ID = 11459804
     Term:
       - Origin: caDSR - CRDC
-        Code: '11459804'
-        Value: Project Name Text  
+        Code: '11459804' #(correct as of 05-28-24)
+        Value: Project Name Text
+        Version: '1'
     Src: DSS
     Type: string
     Req: 'Yes'
   project_short_name:
-    Desc:  <An acronym or abbreviated form of the title used to refer to an organ-, site- or disease-specific data collection within a broad framework of goals under which related studies or other research activities are grouped.> <br>CDE ID = 11459806 (correct as of 05-28-24) <br>This property is used as the key via which child records, e.g. study/trial, image collection and principal investigator records, can be associated with the appropriate project during data loading, and to identify the correct records during data updates.
+    Desc: <An acronym or abbreviated form of the title used to refer to an organ-,
+      site- or disease-specific data collection within a broad framework of goals
+      under which related studies or other research activities are grouped.> <br>CDE
+      ID = 11459806 <br>This property is used as the key via which child records,
+      e.g. study/trial, image collection and principal investigator records, can be
+      associated with the appropriate project during data loading, and to identify
+      the correct records during data updates.
     Term:
       - Origin: caDSR - CRDC
-        Code: '11459806'
-        Value: Project Short Name Text  
+        Code: '11459806' #(correct as of 05-28-24)
+        Value: Project Short Name Text
+        Version: '1'
     Src: DSS
     Type: string
     Req: 'Yes'
     Key: true
   # study
-  study_name: 
-    Desc: <The narrative title used as a textual label for a research data collection.> <br>CDE ID = 11459810 (correct as of 05-28-24)
+  study_name:
+    Desc: <The narrative title used as a textual label for a research data collection.>
+      <br>CDE ID = 11459810
     Term:
       - Origin: caDSR - CRDC
-        Code: '11459810'
-        Value: Study Name Text  
+        Code: '11459810' #(correct as of 05-28-24)
+        Value: Study Name Text
+        Version: '1'
     Src: DSS
     Type: string
-    Req: 'Yes'  
+    Req: 'Yes'
   study_short_name:
-    Desc:  <The acronym or abbreviated form of the title for a research data collection.> <br>CDE ID = 11459812 (correct as of 05-28-24) <br>This property is used as the key via which child records, e.g. image collection and subject records, can be associated with the appropriate study/trial during data loading, and to identify the correct records during data updates.
+    Desc: <The acronym or abbreviated form of the title for a research data collection.>
+      <br>CDE ID = 11459812 <br>This property is used as the key via which child records,
+      e.g. image collection and subject records, can be associated with the appropriate
+      study/trial during data loading, and to identify the correct records during
+      data updates.
     Term:
       - Origin: caDSR - CRDC
-        Code: '11459812'
+        Code: '11459812' #(correct as of 05-28-24)
         Value: Study Short Name Text
+        Version: '1'
     Src: DSS
     Type: string
     Req: 'Yes'
     Key: true
   study_id:
-    Desc: <A unique identifier assigned to a clinical study.> Any external identifier by which the study/trial in question is known.<br>CDE ID = 5054234 (added 05-28-24)
+    Desc: <A unique identifier assigned to a clinical study.> Any external identifier
+      by which the study/trial in question is known.<br>CDE ID = 5054234
     Term:
       - Origin: caDSR - NMDP
-        Code: '5054234'
-        Value: Clinical Study Identifier 
+        Code: '5054234' #(added 05-28-24)
+        Value: Clinical Study Identifier
+        Version: '1'
     Src: FNL
     Type: string
     Req: 'No'
-  study_description: 
-    Desc: <A textual description of the study, with components such as objectives or goals.> A narrative description of the study/trial. <br>CDE ID = 3444002 (added 05-28-24)
+  study_description:
+    Desc: <A textual description of the study, with components such as objectives
+      or goals.> A narrative description of the study/trial. <br>CDE ID = 3444002
     Term:
       - Origin: caDSR - CCDI
-        Code: '3444002'
-        Value: Study Research Identification Descriptive Text 
+        Code: '3444002' #(added 05-28-24)
+        Value: Study Research Identification Descriptive Text
+        Version: '2'
     Src: FNL
     Type: string
     Req: 'Yes'
-  study_type: 
-    Desc: <A classification of the study based upon the primary intent of the study's activities.> <br>CDE ID = 11160683 (correct as of 05-28-24)
+  study_type:
+    Desc: <A classification of the study based upon the primary intent of the study's
+      activities.> <br>CDE ID = 11160683
     Term:
       - Origin: caDSR - CRDC
-        Code: '11160683'
-        Value: Study Primary Purpose Type 
+        Code: '11160683' #(correct as of 05-28-24)
+        Value: Study Primary Purpose Type
+        Version: '1'
     Src: DSS
     Enum:
-      - Adverse Effect Mitigation Study 
+      - Adverse Effect Mitigation Study
       - Ancillary Study
       - Basic Science Research
       - Correlative Study
@@ -121,7 +153,7 @@ PropDefinitions:
       - Disease Modifying Treatment Study
       - Early Detection Study
       - Education Training Clinical Study
-      - Epidemiology Research 
+      - Epidemiology Research
       - Genomics Research
       - Health Services Research
       - Imaging Research
@@ -136,144 +168,186 @@ PropDefinitions:
       - Treatment Study
     Req: 'Yes'
   dates_of_conduct:
-    Desc: The timespan over which the study/trial was/is being conducted. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The timespan over which the study/trial was/is being conducted.
     Term:
       - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+        Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
+        Value: Data Element Name
     Src: FNL
     Type: string
     Req: 'Yes'
   # principal_investigator
-  person_first_name: #principal_investigator_first_name
-    Desc: <A word or group of words indicating a person's first (personal or given) name; the name that precedes the surname. Synonym = Given Name.> The first or given name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179589 (updated 05-28-24) #CDE ID = 10624731 
+  person_first_name: #formerly principal_investigator_first_name
+    Desc: <A word or group of words indicating a person's first (personal or given)
+      name; the name that precedes the surname. Synonym = Given Name.> The first or
+      given name of the person responsible for the conduct of the clinical trial or
+      research project. <br>CDE ID = 2179589
     Term:
       - Origin: CSAERS/NCI Standard #caDSR - NCI Standard
-        Code: '2179589' #'10624731'
+        Code: '2179589' #(updated 05-28-24) prior CDE ID = 10624731
         Value: Person Given/First Name #Principal Investigator First Name Text
     Src: DSS
     Type: string
     Req: 'Yes'
-  person_last_name: #principal_investigator_last_name
-    Desc: <A means of identifying an individual by using a word or group of words indicating a person's last (family) name. Synonym = Last Name, Surname.> The last or family name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179591 (updated 05-28-24) #CDE ID = 10624733
+  person_last_name: #formerly principal_investigator_last_name
+    Desc: <A means of identifying an individual by using a word or group of words
+      indicating a person's last (family) name. Synonym = Last Name, Surname.> The
+      last or family name of the person responsible for the conduct of the clinical
+      trial or research project. <br>CDE ID = 2179591
     Term:
       - Origin: CSAERS/NCI Standard #caDSR - NCI Standard
-        Code: '2179591' #'10624733'
+        Code: '2179591' #(updated 05-28-24) prior CDE ID = 10624733
         Value: Person Family/Last Name #Principal Investigator Last Name Text  
     Src: DSS
     Type: string
     Req: 'Yes'
-  person_middle_name: #principal_investigator_middle_name
-    Desc: <A means of identifying an individual by using a word or group of words indicating a person's middle name.> The middle name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179590 (updated 05-28-24) #CDE ID = 10624732
+  person_middle_name: #formerly principal_investigator_middle_name
+    Desc: <A means of identifying an individual by using a word or group of words
+      indicating a person's middle name.> The middle name of the person responsible
+      for the conduct of the clinical trial or research project. <br>CDE ID = 2179590
     Term:
       - Origin: CSAERS/NCI Standard #caDSR - NCI Standard
-        Code: '2179590' #'10624732'
+        Code: '2179590' #(updated 05-28-24) prior CDE ID = 10624732
         Value: Person Middle Name #Principal Investigator Middle Name Text  
     Src: DSS
     Type: string
     Req: 'No'
-  person_orcid: #principal_investigator_orcid_id
-    Desc: <A persistent unique digital identifier assigned to a person by the Open Researcher and Contributor ID (ORCID) organization.> A persistent unique digital identifier assigned to a principal investigator by the Open Researcher and Contributor ID (ORCID) organization. <br>CDE ID = 10624734 (updated 05-28-24)
+  person_orcid: #formerly principal_investigator_orcid_id
+    Desc: <A persistent unique digital identifier assigned to a person by the Open
+      Researcher and Contributor ID (ORCID) organization.> A persistent unique digital
+      identifier assigned to a principal investigator by the Open Researcher and Contributor
+      ID (ORCID) organization. <br>CDE ID = 10624734
     Term:
       - Origin: caDSR - CRDC #caDSR - NCI Standard
-        Code: '10624734'
+        Code: '10624734' #(updated 05-28-24)
         Value: Person ORCID Text #Principal Investigator ORCID Text
+        Version: '2'
     Src: DSS
     Type: string
     Req: Preferred
   # associated_link
-  associated_link_id:  
-    Desc: <A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each associated link record, used to identify the correct associated link records during data updates. <br>CDE ID = 14822135 (added 05-28-24)
+  associated_link_id:
+    Desc: <A unique sequence of characters used to identify a linkage between related
+      records.> A unique identifier of each associated link record, used to identify
+      the correct associated link records during data updates. <br>CDE ID = 14822135
     Term:
       - Origin: caDSR - CTDC
-        Code: '14822135'
-        Value: Data Record Link Unique Identifier 
+        Code: '14822135' #(added 05-28-24)
+        Value: Data Record Link Unique Identifier
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
-  associated_link_name:  
-    Desc: <The words by which the linkage between related records is known.> The exact text to be displayed within the UI and used as an intuitive identifier of any given link associated with the study/trial in question.  <br>CDE ID = 14822136 (added 05-28-24) 
+    Key: true
+  associated_link_name:
+    Desc: <The words by which the linkage between related records is known.> The exact
+      text to be displayed within the UI and used as an intuitive identifier of any
+      given link associated with the study/trial in question. <br>CDE ID = 14822136
     Term:
       - Origin: caDSR - CTDC
-        Code: '14822136'
+        Code: '14822136' #(added 05-28-24)
         Value: Data Record Link Identifier Name
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
   associated_link_url:
-    Desc: <The global address of the linkage between related records on the World Wide Web.> The url to which an end user will be redirected upon selection of the corresponding link name displayed within the UI. <br>CDE ID = 14822140 (added 05-28-24)
+    Desc: <The global address of the linkage between related records on the World
+      Wide Web.> The url to which an end user will be redirected upon selection of
+      the corresponding link name displayed within the UI. <br>CDE ID = 14822140
     Term:
       - Origin: caDSR - CTDC
-        Code: '14822140'
+        Code: '14822140' #(added 05-28-24)
         Value: Clinical Study Record Link Identifier URL Text
+        Version: '1'
     Src: CMB
     Type: string
-    Req: 'Yes'  
+    Req: 'Yes'
   # image collection props
   image_collection_id:
-    Desc: <A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each image collection record, used to identify the correct image collection records during data updates. <br>CDE ID = 14822135 (added 05-28-24)
+    Desc: <A unique sequence of characters used to identify a linkage between related
+      records.> A unique identifier of each image collection record, used to identify
+      the correct image collection records during data updates. <br>CDE ID = 14822135
     Term:
       - Origin: caDSR - CTDC
-        Code: '14822135'
+        Code: '14822135' #(added 05-28-24)
         Value: Data Record Link Unique Identifier
+        Version: '1'
     Src: FNL
     Type: string
     Req: 'Yes'
+    Key: true
   image_collection_name:
-    Desc: <The words by which a set of images that are stored together are known.> The name of the image collection exactly as it appears at the location where the collection can be viewed and/or accessed. <br>CDE ID = 14826008 (added 05-28-24)
+    Desc: <The words by which a set of images that are stored together are known.>
+      The name of the image collection exactly as it appears at the location where
+      the collection can be viewed and/or accessed. <br>CDE ID = 14826008
     Term:
       - Origin: caDSR - CTDC
-        Code: '14826008'
+        Code: '14826008' #(added 05-28-24)
         Value: Image Collection Name
+        Version: '1'
     Src: ICDC
     Type: string
     Req: 'Yes'
     Key: true
     Tags:
-       Labeled: Collection
+      Labeled: Collection
   image_type_included:
-    Desc: <A system of categories for representing a specific manner, characteristic, pattern of a data acquisition device used in an imaging event whether physical or electronic.> A list of the image types included in the image collection, drawn from a list of acceptable values. <br>CDE ID = 12137353 (added 05-28-24)
+    Desc: <A system of categories for representing a specific manner, characteristic,
+      pattern of a data acquisition device used in an imaging event whether physical
+      or electronic.> A list of the image types included in the image collection,
+      drawn from a list of acceptable values. <br>CDE ID = 12137353
     Term:
       - Origin: caDSR - DICOM
-        Code: '12137353'
+        Code: '12137353' #(added 05-28-24)
         Value: DICOM Modality Type
+        Version: '1'
     Src: ICDC
     Type:
       value_type: list
-      Enum: # Reflective of the image types available for CMB participants
-        - CT # specific term used by both IDC and TCIA
-        - DX # specific term used by both IDC and TCIA
-        - MR # specific term used by both IDC and TCIA
-        - NM # specific term used by both IDC and TCIA
-        - PT # specific term used by both IDC and TCIA
-        - US # specific term used by both IDC and TCIA
+      Enum: # Reflective of the image types available for CMB participants, all acceptable terms are exactly as used by both IDC and TCIA
+        - CT
+        - DX
+        - MR
+        - NM
+        - PT
+        - US
     Req: 'Yes'
     Tags:
-       Labeled: Image Types
+      Labeled: Image Types
   image_collection_url:
-    Desc: <The specification of a node (file or directory) in a hierarchical file system where an electronic file is located.> The external url via which the image collection can be viewed and/or accessed. <br>CDE ID = 11556141 (added 05-28-24)
+    Desc: <The specification of a node (file or directory) in a hierarchical file
+      system where an electronic file is located.> The external url via which the
+      image collection can be viewed and/or accessed. <br>CDE ID = 11556141
     Term:
       - Origin: caDSR - CDS
-        Code: '11556141'
+        Code: '11556141' #(added 05-28-24)
         Value: Electronic File Pathname Text
+        Version: '1'
     Src: ICDC
     Type: string
     Req: 'Yes'
   repository_name:
-    Desc: <The words by which the storage location for imaging records is known.> The name of the image repository within which the image collection can be found, stated in the form of the appropriate acronym. <br>CDE ID = 14826003 (added 05-28-24)
+    Desc: <The words by which the storage location for imaging records is known.>
+      The name of the image repository within which the image collection can be found,
+      stated in the form of the appropriate acronym. <br>CDE ID = 14826003
     Term:
       - Origin: caDSR - CTDC
-        Code: '14826003'
+        Code: '14826003' #(added 05-28-24)
         Value: Image Digital Data Repository Name
+        Version: '1'
     Src: ICDC
     Type: string
     Req: 'Yes'
   collection_access:
-    Desc: <The methods by which a user can obtain an image set.> Indicator as to whether the image collection can be accessed only via the cloud, accessed only via download, or accessed via both mechanisms. <br>CDE ID = 14825946 (added 05-28-24)
+    Desc: <The methods by which a user can obtain an image set.> Indicator as to whether
+      the image collection can be accessed only via the cloud, accessed only via download,
+      or accessed via both mechanisms. <br>CDE ID = 14825946
     Term:
       - Origin: caDSR - CTDC
-        Code: '14825946'
+        Code: '14825946' #(added 05-28-24)
         Value: Image Collection Access Type
+        Version: '1'
     Src: ICDC
     Enum:
       - Cloud
@@ -282,79 +356,105 @@ PropDefinitions:
     Req: 'Yes'
   # subject
   subject_id:
-    Desc: <A sequence of letters, numbers, or characters that uniquely identifies the subject who has taken part in the investigation or research study.> The globally unique ID by which any given subject can be unambiguously identified and displayed across studies/trials. <br>CDE ID = 12220014 (added 05-31-24) <br>This property is used as the key via which child records, e.g. specimen records, can be associated with the appropriate subject during data loading, and to identify the correct records during data updates.
+    Desc: <A sequence of letters, numbers, or characters that uniquely identifies
+      the subject who has taken part in the investigation or research study.> The
+      globally unique ID by which any given subject can be unambiguously identified
+      and displayed across studies/trials. <br>CDE ID = 12220014 <br>This property
+      is used as the key via which child records, e.g. specimen records, can be associated
+      with the appropriate subject during data loading, and to identify the correct
+      records during data updates.
     Term:
       - Origin: caDSR - CDS
-        Code: '12220014'
+        Code: '12220014' #(added 05-31-24)
         Value: Subject Data Origin Identifier
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
     Key: true
   biomarker_results_available:
-    Desc: An indicator as to whether any biomarker results relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: <A response to indicate whether or not biomarker results are available for
+      a person.> An indicator as to whether any biomarker results relating to the
+      subject in question are available. <br>CDE ID = 14735824
     Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14735824' #(added 07-16-24)
+        Value: Person Biomarker Result Available Indicator
+        Version: '1'
     Src: CMB
     Enum:
       - 'Yes'
       - 'No'
       - Unknown
-    Req: 'Yes'
+    Req: Preferred
   radiology_report_available:
-    Desc: An indicator as to whether any radiology reports results relating to the subject in question are available. <br>This is CMB's RADIOLOGY REPORT annotation <br>CDE ID = 6944764
+    Desc: <A response to indicate whether or not any radiology reports are available
+      for an individual.> An indicator as to whether any radiology reports results
+      relating to the subject in question are available. <br>CDE ID = 14735825                                                                                                                                                             # This property corresponds to CMB's RADIOLOGY REPORT annotation
     Term:
-      - Origin: caDSR
-        Code: '6944764'
-        Value: Report Upload 
+      - Origin: caDSR - CTDC
+        Code: '14735825'  #(updated 07-16-24) prior CDE ID = 6944764
+        Value: Person Radiology Report Available Indicator #Report Upload 
+        Version: '1'
     Src: value
     Enum:
       - 'Yes'
       - 'No'
       - Unknown
-    Req: 'Yes'
+    Req: Preferred
   radiology_images_available:
-    Desc: An indicator as to whether any radiology images relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: CMB
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Unknown
-    Req: 'Yes'
-  histology_images_available:
-    Desc: An indicator as to whether any histology images relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
-    Src: CMB
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Unknown
-    Req: 'Yes'
-  # demographic
-  demographic_id:
-    Desc: <A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each demographic record, used to identify the correct demographic records during data updates. <br>The value of this property will generally be the same as the value of the subject_id property. <br>CDE ID = 14822135 (added 05-31-24)
+    Desc: <A response to indicate whether or not any radiology images are available
+      for an individual.> An indicator as to whether any radiology images relating
+      to the subject in question are available. <br>CDE ID = 14735826
     Term:
       - Origin: caDSR - CTDC
-        Code: '14822135'
+        Code: '14735826' #(added 07-16-24)
+        Value: Person Radiology Image Available Indicator
+        Version: '1'
+    Src: CMB
+    Enum:
+      - 'Yes'
+      - 'No'
+      - Unknown
+    Req: Preferred
+  histology_images_available:
+    Desc: <A response to indicate whether or not any histology slide images are available
+      for an individual.> An indicator as to whether any histology images relating
+      to the subject in question are available. <br>CDE ID = 14735827
+    Term:
+      - Origin: caDSR - CTDC
+        Code: '14735827' #(added 07-16-24)
+        Value: Person Histology Slide Image Available Indicator
+        Version: '1'
+    Src: CMB
+    Enum:
+      - 'Yes'
+      - 'No'
+      - Unknown
+    Req: Preferred
+  # demographic
+  demographic_id:
+    Desc: <A unique sequence of characters used to identify a linkage between related
+      records.> A unique identifier of each demographic record, used to identify the
+      correct demographic records during data updates. <br>The value of this property
+      will generally be the same as the value of the subject_id property. <br>CDE
+      ID = 14822135
+    Term:
+      - Origin: caDSR - CTDC
+        Code: '14822135' #(added 05-31-24)
         Value: Data Record Link Unique Identifier
+        Version: '1'
     Src: CMB
     Type: string
     Key: true
   age_at_enrollment:
-    Desc: <The age (in days) of the subject when the subject enrolled in the study.> The age of the subject as of enrollment, measured in years. <br>CDE ID = 12299548 (added 05-31-24)
+    Desc: <The age (in days) of the subject when the subject enrolled in the study.>
+      The age of the subject as of enrollment, measured in years. <br>CDE ID = 12299548                                                                                #ANY REFERENCE TO AGE IN DAYS IS INCORRECT
     Term:
       - Origin: caDSR - PCDC
-        Code: '12299548'
-        Value: Subject Age of Enrollment Day Count 
+        Code: '12299548' #(added 05-31-24)
+        Value: Subject Age of Enrollment Day Count
+        Version: '1'
     Src: CMB
     Type:
       units:
@@ -362,13 +462,15 @@ PropDefinitions:
       value_type: number
     Req: 'Yes'
   race:
-    Desc: <The text for reporting information about race based on the Office of Management and Budget (OMB) categories.> <br>CDE ID = 2192199 (added 05-31-24)
+    Desc: <The text for reporting information about race based on the Office of Management
+      and Budget (OMB) categories.> <br>CDE ID = 2192199
     Term:
       - Origin: caDSR - OMB/NCI Standard
-        Code: '2192199'
-        Value: Subject Race 
+        Code: '2192199' #(added 05-31-24)
+        Value: Subject Race
+        Version: '1'
     Src: CMB
-    Enum: # Reflective only of the values used by the CMB
+    Enum: # Currently reflective only of the values used by the CMB
       - American Indian or Alaska Native
       - Black or African American
       - Native Hawaiian or other Pacific Islander
@@ -376,39 +478,48 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   ethnicity:
-    Desc: <The text for reporting information about ethnicity based on the Office of Management and Budget (OMB) categories.> <br>CDE ID = 2192217 (added 05-31-24)
+    Desc: <The text for reporting information about ethnicity based on the Office
+      of Management and Budget (OMB) categories.> <br>CDE ID = 2192217
     Term:
       - Origin: caDSR - OMB/NCI Standard
-        Code: '2192217'
+        Code: '2192217' #(added 05-31-24)
         Value: Ethnic Group Category Text
+        Version: '2'
     Src: CMB
-    Enum: # Reflective only of the values used by the CMB
+    Enum: # Currently reflective only of the values used by the CMB
       - Hispanic or Latino
       - Not Hispanic or Latino
       - Not reported
       - Unknown
     Req: 'Yes'
   sex:
-    Desc: <A textual description of a person's sex at birth.> CDE ID = 7572817 (updated 05-31-24) #CDE ID = 6343385
+    Desc: <A textual description of a person's sex at birth.> CDE ID = 7572817
     Term:
       - Origin: caDSR - NCI Standards
-        Code: '7572817' #'6343385'
+        Code: '7572817' #(updated 05-31-24) prior CDE ID = 6343385
         Value: Person Sex at Birth Category #Sex  
+        Version: '2'
     Src: CMB
-    Enum: # Reflective only of the values used by the CMB
+    Enum:
       - Female
       - Intersex
       - Male
       - Unknown
     Req: 'Yes'
   reported_gender:
-    Desc: <A text term which describes a person's internally held sense of their gender, which may or may not correspond to the individual's genotypic or phenotypic sex.> Characteristics of people that are socially constructed, including norms, behaviors, and roles based on their sex. As a social construct, these norms, behaviors, and roles vary from society to society and can change over time. <br>CDE ID = 14927178 #CDE ID = 10748236
+    Desc: <A text term which describes a person's internally held sense of their gender,
+      which may or may not correspond to the individual's genotypic or phenotypic
+      sex.> Characteristics of people that are socially constructed, including norms,
+      behaviors, and roles based on their sex. As a social construct, these norms,
+      behaviors, and roles vary from society to society and can change over time.
+      <br>CDE ID = 14927178
     Term:
       - Origin: caDSR - NCI Standards
-        Code: '14927178' #'10748236'
+        Code: '14927178' #(updated) prior #CDE ID = 10748236
         Value: Person Gender Identity Type #Person Reported Gender Type  
+        Version: '1'
     Src: DSS
-    Enum:
+    Enum: # Currently reflective only of the values used by the CMB
       # - Choose Not to Disclose # = Response Declined per CMB?
       - Female # per CMB data values
       # - Female-To-Male
@@ -424,11 +535,13 @@ PropDefinitions:
       - Unknown # per CMB data values
     Req: 'Yes'
   height:
-    Desc: <The number that describes the vertical distance of an individual.> The height of the subject as of enrollment, measured in cm. <br>CDE ID = 2179643 (added 05-31-24)
+    Desc: <The number that describes the vertical distance of an individual.> The
+      height of the subject as of enrollment, measured in cm. <br>CDE ID = 2179643
     Term:
       - Origin: caDSR- CSAERS/NCI Standard
-        Code: '2179643'
+        Code: '2179643' #(added 05-31-24)
         Value: Person Height Value
+        Version: '4'
     Src: CMB
     Type:
       units:
@@ -436,11 +549,14 @@ PropDefinitions:
       value_type: number
     Req: Preferred
   weight:
-    Desc: <The number that describes the vertical force exerted by the mass of an individual as a result of gravity.> The weight of the subject as of enrollment, measured in kg. <br>CDE ID = 2179689 (added 05-31-24)
+    Desc: <The number that describes the vertical force exerted by the mass of an
+      individual as a result of gravity.> The weight of the subject as of enrollment,
+      measured in kg. <br>CDE ID = 2179689
     Term:
       - Origin: caDSR - CSAERS/NCI Standard
-        Code: '2179689'
+        Code: '2179689' #(added 05-31-24)
         Value: Person Weight Value
+        Version: '4'
     Src: CMB
     Type:
       units:
@@ -448,11 +564,15 @@ PropDefinitions:
       value_type: number
     Req: Preferred
   body_surface_area:
-    Desc: <The calculated numerical quantity that represents the 2-dimensional extent of the body surface relating height to weight.> The body surface area of the subject as of enrollment, mathematically derived from the subject's height and weight, and expressed in square meters. <br>CDE ID = 653 (added 05-31-24)
+    Desc: <The calculated numerical quantity that represents the 2-dimensional extent
+      of the body surface relating height to weight.> The body surface area of the
+      subject as of enrollment, mathematically derived from the subject's height and
+      weight, and expressed in square meters. <br>CDE ID = 653
     Term:
       - Origin: caDSR - CTEP
-        Code: '653'
-        Value: Person Body Surface Area Value 
+        Code: '653' #(added 05-31-24)
+        Value: Person Body Surface Area Value
+        Version: '6'
     Src: CMB
     Type:
       units:
@@ -460,29 +580,34 @@ PropDefinitions:
       value_type: number
     Req: Preferred
   occupation:
-    Desc: <The occupation/job category of a person.> <br>CDE ID = 6617540 (added 05-31-24)
+    Desc: <The occupation/job category of a person.> <br>CDE ID = 6617540
     Term:
       - Origin: caDSR - NCIP
-        Code: '6617540'
-        Value: Person Occupation Category 
+        Code: '6617540' #(added 05-31-24)
+        Value: Person Occupation Category
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
   income:
-    Desc: <The amount of earnings made by a family in a year.> <br>CDE ID = 14834966 (added 05-31-24)
+    Desc: <The amount of earnings made by a family in a year.> <br>CDE ID = 14834966
     Term:
       - Origin: caDSR - CTDC
-        Code: '14834966'
+        Code: '14834966' #(added 05-31-24)
         Value: Person Annual Household Income Text
+        Version: '1'
     Src: CMB
     Type: string
     Req: Preferred
   highest_level_of_education:
-    Desc: <The subdivision that summarizes the highest level of education attained by a person.> An indication as to the highest level of education attained by the subject. <br>CDE ID = 2681552 (added 05-31-24)
+    Desc: <The subdivision that summarizes the highest level of education attained
+      by a person.> An indication as to the highest level of education attained by
+      the subject. <br>CDE ID = 2681552
     Term:
       - Origin: caDSR - NCI Standards (NCIP)
-        Code: '2681552'
+        Code: '2681552' #(added 05-31-24)
         Value: Person Education Level Summary Type
+        Version: '1'
     Src: CMB
     Enum: # Reflective of the values used by the CMB
       - No formal education
@@ -496,40 +621,59 @@ PropDefinitions:
       - Declined to answer
     Req: Preferred
   ncbi_taxonomy_id:
-    Desc: A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/),  which uniquely identifies group or category, at any level, in a system for classifying plants or animals (including humans) providing ranked categories for the classification of organisms according to their suspected evolutionary relationships. <br>CDE ID = 10543100 (correct as of 05-31-24)
+    Desc: A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/),  which
+      uniquely identifies group or category, at any level, in a system for classifying
+      plants or animals (including humans) providing ranked categories for the classification
+      of organisms according to their suspected evolutionary relationships. <br>CDE
+      ID = 10543100
     Term:
       - Origin: caDSR - CRDC
-        Code: '10543100'
-        Value: Subject National Center for Biotechnology Information Taxonomy Identifier Integer
+        Code: '10543100' #(correct as of 05-31-24)
+        Value: Subject National Center for Biotechnology Information Taxonomy Identifier
+          Integer
+        Version: '2'
     Src: DSS
     Type: integer # not enumerated
     Req: 'Yes'
   ncbi_taxonomy_name:
-    Desc: The textual label associated with a subject's organismal classification as captured in the National Center for Biotechnology Information (NCBI) Taxonomy standard nomenclature and classification repository.  <br>Supposedly enumerated but no permissible values specified. <br>CDE ID = 10543082 (correct as of 05-31-24)
+    Desc: The textual label associated with a subject's organismal classification
+      as captured in the National Center for Biotechnology Information (NCBI) Taxonomy
+      standard nomenclature and classification repository.  <br>Supposedly enumerated
+      but no permissible values specified. <br>CDE ID = 10543082
     Term:
       - Origin: caDSR - CRDC
-        Code: '10543082'
-        Value: Subject National Center for Biotechnology Information Taxonomy Name Text
+        Code: '10543082' #(correct as of 05-31-24)
+        Value: Subject National Center for Biotechnology Information Taxonomy Name
+          Text
+        Version: '2'
     Src: DSS
     Type: string # supposedly enumerated but no permissible values specified
     Req: 'Yes'
   # exposure
   exposure_id:
-    Desc: <A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each exposure record, used to identify the correct exposure records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br>CDE ID = 14822135 (added 05-31-24)
+    Desc: <A unique sequence of characters used to identify a linkage between related
+      records.> A unique identifier of each exposure record, used to identify the
+      correct exposure records during data updates. The value of this property will
+      generally be the same as the value of the subject_id property. <br>CDE ID =
+      14822135
     Term:
       - Origin: caDSR - CTDC
-        Code: '14822135'
-        Value: Data Record Link Unique Identifier 
+        Code: '14822135' #(added 05-31-24)
+        Value: Data Record Link Unique Identifier
+        Version: '1'
     Src: value
     Type: string
     Req: 'Yes'
     Key: true
   environmental_exposure_type:
-    Desc: <The category related to contact with chemical, biological, or physical substances found in air, water, food, soil, or product that may have a harmful effect on a person's health.> <br>CDE ID = 11256813 (correct as of 05-31-24)
+    Desc: <The category related to contact with chemical, biological, or physical
+      substances found in air, water, food, soil, or product that may have a harmful
+      effect on a person's health.> <br>CDE ID = 11256813
     Term:
       - Origin: caDSR - CRDC
-        Code: '11256813'
+        Code: '11256813' #(correct as of 05-31-24)
         Value: Environmental Exposure Type
+        Version: '1'
     Src: DSS
     Enum:
       - Asbestos Exposure
@@ -544,36 +688,50 @@ PropDefinitions:
       - Wood Dust Exposure
     Req: 'Yes'
   carcinogen_exposure:
-    Desc: <An indication of whether the participant was exposed to environmental/workplace carcinogens (for example arsenic, asbestos, diesel exhaust, chromium, silica).> An indicator as to whether the subject in question has had significant exposure to any known carcinogen(s) <br>CDE ID = 5205578 (added 05-31-24)
+    Desc: <An indication of whether the participant was exposed to environmental/workplace
+      carcinogens (for example arsenic, asbestos, diesel exhaust, chromium, silica).>
+      An indicator as to whether the subject in question has had significant exposure
+      to any known carcinogen(s) <br>CDE ID = 5205578
     Term:
       - Origin: caDSR - BPV
-        Code: '5205578'
+        Code: '5205578' #(added 05-31-24)
         Value: Carcinogen Exposure Indicator
+        Version: '1'
     Src: CMB
     Enum:
       - 'Yes'
       - 'No'
       - Unknown
-    Req: 'Yes'  
+    Req: 'Yes'
   # diagnosis
   diagnosis_id:
-    Desc: <A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each diagnosisc record, used to identify the correct diagnosis records during data updates. <br>The value of this property will generally be the same as the value of the subject_id property. <br>CDE ID = 14822135 (added 05-28-24) <br>This property is used as the key via which child records, e.g. clinical reports, can be associated with the appropriate diagnosis record during data loading, and to identify the correct records during data updates.
+    Desc: <A unique sequence of characters used to identify a linkage between related
+      records.> A unique identifier of each diagnosisc record, used to identify the
+      correct diagnosis records during data updates. <br>The value of this property
+      will generally be the same as the value of the subject_id property. <br>CDE
+      ID = 14822135 <br>This property is used as the key via which child records,
+      e.g. clinical reports, can be associated with the appropriate diagnosis record
+      during data loading, and to identify the correct records during data updates.
     Term:
       - Origin: caDSR - CTDC
-        Code: '14822135'
+        Code: '14822135' #(added 05-28-24)
         Value: Data Record Link Unique Identifier
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
     Key: true
   primary_diagnosis_disease_group:
-    Desc: <A term describing the main condition for evaluation and treatment as captured in the Disease or Diagnosis (C2991) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> <br>CDE ID = 14905532 (added 05-28-24)
+    Desc: <A term describing the main condition for evaluation and treatment as captured
+      in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
+      Thesaurus (NCIt) hierarchy tree.> <br>CDE ID = 14905532
     Term:
       - Origin: caDSR - CRDC
-        Code: '14905532'
+        Code: '14905532' #(added 05-28-24)
         Value: Disease Primary Diagnosis NCI Thesaurus Name
+        Version: '1'
     Src: CMB
-    Enum: # Reflective of the values used by the CMB
+    Enum: # Currently reflective only of the values used by the CMB
       - Colorectal cancer, NOS
       - Acute myeloid leukemia, NOS
       - Adenocarcinoma of the gastroesophageal junction
@@ -599,13 +757,16 @@ PropDefinitions:
   #   Type: string
   #   Req: Preferred
   ctep_disease_term:
-    Desc: <The coded response indicating the MedDRA code Version 10 used in the NCI Simplified Disease Classification (SDC) Terminology for diagnoses.> <br>CDE ID = 4723846 (added 05-28-24) #<WORK NEEDED HERE> In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the subject in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: <The coded response indicating the MedDRA code Version 10 used in the NCI
+      Simplified Disease Classification (SDC) Terminology for diagnoses.> <br>CDE
+      ID = 4723846                                                                                                                                                           #<WORK NEEDED HERE> In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the subject in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: THERADEX
-        Code: '4723846'
-        Value: NCI CTEP Simplified Disease Classification Terminology MedDRA Version 10 Code
+        Code: '4723846' #(added 05-28-24)
+        Value: NCI CTEP Simplified Disease Classification Terminology MedDRA Version
+          10 Code
     Src: value
-    Enum: # Reflective of values used in the v3 CMB data submission
+    Enum: # Currently reflective only of values used in the v3 CMB data submission
       - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
       - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
       - Colorectal Carcinoma                            # meddra code 10010029
@@ -616,15 +777,17 @@ PropDefinitions:
       - Plasma Cell Myeloma                             # meddra code 10028566 
       - Prostate Carcinoma                              # meddra code 10036910 
       - Small Cell Lung Carcinoma                       # meddra code 10041071
-    Req: 'Yes'  
-  meddra_disease_code: 
-    Desc: <The MedDRA code describing a medical condition and/or anatomic location.> An eight digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>CDE ID = 2004425 (added 05-28-24)
+    Req: 'Yes'
+  meddra_disease_code:
+    Desc: <The MedDRA code describing a medical condition and/or anatomic location.>
+      An eight digit numerical code for the primary disease with which the subject
+      in question has been diagnosed. <br>CDE ID = 2004425
     Term:
       - Origin: ADEERS
-        Code: '2004425'
+        Code: '2004425' #(added 05-28-24)
         Value: MedDRA Code
     Src: CMB
-    Enum: # Reflective of the values used in the v3 CMB data submission
+    Enum: # Currently reflective only of the values used in the v3 CMB data submission
       - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
       - "10066354" # Adenocarcinoma of the Gastroesophageal Junction
       - "10010029" # Colorectal Carcinoma
@@ -637,58 +800,53 @@ PropDefinitions:
       - "10041071" # Small Cell Lung Carcinoma
     Req: 'Yes'
   snomed_disease_term:
-    Desc: text <WORK NEEDED HERE> <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: Description pending #<br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: caDSR
         Code: 'code/ID'
-        Value: Data Element Name  
+        Value: Data Element Name
     Src: CMB
     Enum: #Acceptable values currently specified, all of which are sourced from actual data, may be of use only during the generation of mock data, with the data type for this property potentially being changed to string.
-      - Acute Myeloid Leukemia 17788007
-      - Adenocarcinoma 35917007
-      - Adenocarcinoma 443961001
-      - Amelanotic Melanoma 70594002
-      - Breast Carcinoma 254838004
-      - Colon Adenoma 428054006
-      - Colon Carcinoma 269533000
-      - Colorectal Adenocarcinoma 408645001
-      - Cutaneous Melanoma 93655004
-      - Epithelioid Cell Melanoma 37138001
-      - Esophageal Adenocarcinoma 276803003
-      - Gastric Adenocarcinoma 408647009
-      - Lung Adenocarcinoma 254626006
-      - Lung Carcinoma 448993007
-      - Melanoma 2092003
-      - Melanoma 372244006
-      - Mucinous Adenocarcinoma 72495009
-      - Multiple myeloma 55921005
-      - Multiple myeloma and immunoproliferative disease 188717001
-      - Neuroendocrine Carcinoma 253000007
-      - Nodular Melanoma 2142002
-      - Nodular Melanoma 254731001
-      - Non-Small Cell Lung Carcinoma 254637007
-      - Plasma Cell Leukemia 128922003
-      - Plasma Cell Myeloma 109989006
-      - Plasma Cell Myeloma 55921005
-      - Prostate Adenocarcinoma 399490008
-      - Prostate Carcinoma 254900004
-      - Prostate Carcinoma 399068003
-      - Rectal Adenoma 399730005
-      - Rectal Carcinoma 254582000
-      - Small Cell Carcinoma 74364000
-      - Small Cell Lung Carcinoma 254632001
-      - Small Cell Lung Carcinoma 254633006
-      - Squamous Cell Carcinoma 28899001
-      - Squamous Cell Carcinoma 402815007
-      - Squamous Cell Lung Carcinoma 254634000
-      - Superficial Spreading Melanoma 254730000
+      - Acute Myeloid Leukemia #17788007
+      - Adenocarcinoma #35917007 #443961001
+      - Amelanotic Melanoma #70594002
+      - Breast Carcinoma #254838004
+      - Colon Adenoma #428054006
+      - Colon Carcinoma #269533000
+      - Colorectal Adenocarcinoma #408645001
+      - Cutaneous Melanoma #93655004
+      - Epithelioid Cell Melanoma #37138001
+      - Esophageal Adenocarcinoma #276803003
+      - Gastric Adenocarcinoma #408647009
+      - Lung Adenocarcinoma #254626006
+      - Lung Carcinoma #448993007
+      - Melanoma #2092003 #372244006
+      - Mucinous Adenocarcinoma #72495009
+      - Multiple myeloma #55921005
+      - Multiple myeloma and immunoproliferative disease #188717001
+      - Neuroendocrine Carcinoma #253000007
+      - Nodular Melanoma #2142002 #254731001
+      - Non-Small Cell Lung Carcinoma #254637007
+      - Plasma Cell Leukemia #128922003
+      - Plasma Cell Myeloma #109989006 #55921005
+      - Prostate Adenocarcinoma #399490008
+      - Prostate Carcinoma #254900004 #399068003
+      - Rectal Adenoma #399730005
+      - Rectal Carcinoma #254582000
+      - Small Cell Carcinoma #74364000
+      - Small Cell Lung Carcinoma #254632001 #254633006
+      - Squamous Cell Carcinoma #28899001 #402815007
+      - Squamous Cell Lung Carcinoma #254634000
+      - Superficial Spreading Melanoma #254730000
     Req: 'Yes'
-  snomed_disease_code: 
-    Desc: A 9-digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>CDE ID = 6642369 #<br>Within the CMB Catalog Site, Disease Stage (SNOMED) is presented in the form of a human readable narrative statement of the primary disease which includes some histoligical detail and disease stage. <br>Acceptable values currently specified, all of which are sourced from actual data, may be of use only during the generation of mock data, with the data type for this property potentially being changed to string.
+  snomed_disease_code:
+    Desc: A 9-digit numerical code for the primary disease with which the subject
+      in question has been diagnosed. <br>CDE ID = 6642369                                                                             #<br>Within the CMB Catalog Site, Disease Stage (SNOMED) is presented in the form of a human readable narrative statement of the primary disease which includes some histoligical detail and disease stage. <br>Acceptable values currently specified, all of which are sourced from actual data, may be of use only during the generation of mock data, with the data type for this property potentially being changed to string.
     Term:
       - Origin: caDSR
         Code: '6642369'
-        Value: Data Element Name  
+        Value: Data Element Name
+        Version: '1'
     Src: CMB
     Enum:
       - "17788007" #Acute Myeloid Leukemia
@@ -740,20 +898,24 @@ PropDefinitions:
   #   Type: string
   #   Req: 'Yes'
   primary_disease_site:
-    Desc: <The location within the body from where the disease of interest originated as captured in the Uberon identifier.> <br>CDE ID = 14883047 (added 05-28-24)
+    Desc: <The location within the body from where the disease of interest originated
+      as captured in the Uberon identifier.> <br>CDE ID = 14883047
     Term:
       - Origin: caDSR - CRDC
-        Code: '14883047'
-        Value: Disease Primary Site of Disease Uberon Identifier 
+        Code: '14883047' #(added 05-28-24)
+        Value: Disease Primary Site of Disease Uberon Identifier
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
   histology:
-    Desc: <Words that describe the normal and abnormal morphologic characteristics in cells and tissues.> <br>CDE ID = 14842510 (added 05-28-24)
+    Desc: <Words that describe the normal and abnormal morphologic characteristics
+      in cells and tissues.> <br>CDE ID = 14842510
     Term:
       - Origin: caDSR - CTDC
-        #Code: '14842510'
+        Code: '14842510'
         Value: Disease or Disorder Histology Text
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
@@ -770,22 +932,28 @@ PropDefinitions:
   #     value_type: number
   #   Req: 'Yes'
   histological_subtype:
-    Desc: <Words that describe the classification of tumors based on their histology.> CDE ID = 14843594 (added 05-28-24) #<br>CDE ID = 7344580   
+    Desc: <Words that describe the classification of tumors based on their histology.>
+      CDE ID = 14843594
     Term:
       - Origin: caDSR - CTDC
-        Code: '14843594' #'7344580'
+        Code: '14843594' #(updated 05-28-24) prior CDE ID = 7344580
         Value: Disease or Disorder Histologic Subtype Text
+        Version: '1'
     Src: CMB
     Type: string
-    Req: 'Yes'  
+    Req: 'Yes'
   stage_of_disease:
-    Desc: <Stage group determined from clinical information on the tumor (T), regional node (N) and metastases (M) and by grouping cases with similar prognosis for cancer.> The stage of the primary disease with which the subject in question has been diagnosed. <br>CDE ID = 3440332 (added 05-28-24)
+    Desc: <Stage group determined from clinical information on the tumor (T), regional
+      node (N) and metastases (M) and by grouping cases with similar prognosis for
+      cancer.> The stage of the primary disease with which the subject in question
+      has been diagnosed. <br>CDE ID = 3440332
     Term:
       - Origin: caDSR - TCGA
-        Code: '3440332'
+        Code: '3440332' #(added 05-28-24)
         Value: Neoplasm American Joint Committee on Cancer Clinical Group Stage
+        Version: '1'
     Src: CMB
-    Enum: # Reflective of the values used by the CMB
+    Enum: # Currently reflective only of the values used by the CMB
       - Stage III
       - Stage IIIA
       - Stage IIIB
@@ -796,11 +964,13 @@ PropDefinitions:
       - Stage IVC
     Req: 'Yes'
   tumor_grade:
-    Desc: <A text term to express the degree of abnormality of cancer cells as a measure of differentiation and aggressiveness.> <br>CDE ID = 11325685 (correct as of 05-28-24)
+    Desc: <A text term to express the degree of abnormality of cancer cells as a measure
+      of differentiation and aggressiveness.> <br>CDE ID = 11325685
     Term:
       - Origin: caDSR - CRDC
-        Code: '11325685'
-        Value: Diagnosis Tumor Grade 
+        Code: '11325685' #(correct as of 05-28-24)
+        Value: Diagnosis Tumor Grade
+        Version: '1'
     Src: DSS
     Enum:
       # - GB
@@ -847,75 +1017,112 @@ PropDefinitions:
   #   Req: 'Yes'
   # targeted_therapy
   targeted_therapy_id:
-    Desc: <A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each targeted therapy record, used to identify the correct targeted therapy records during data updates. <br>CDE ID = 14822135 (added 05-29-24)
+    Desc: <A unique sequence of characters used to identify a linkage between related
+      records.> A unique identifier of each targeted therapy record, used to identify
+      the correct targeted therapy records during data updates. <br>CDE ID = 14822135
     Term:
       - Origin: caDSR - CCDI
-        Code: '14822135'
-        Value: Data Record Link Unique Identifier  
+        Code: '14822135' #(added 05-29-24)
+        Value: Data Record Link Unique Identifier
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
     Key: true
   targeted_therapy:
-    Desc: <A term describing a therapeutic agent as captured in the Pharmacological Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic agent administered to a subject as a targeted therapy, i.e. one that is considered to have enhanced therapeutic effects upon the specific type of cancer with which the subject has been diagnosed, and/or upon that type of cancer specifically within the context of a given subject because of factors such as tumor histology, grade, gene expression and genetic make-up. Notably, a therapeutic agent considered to be and administered as a targeted therapy in one subject based upon the specifics of such characteristics can, conversely, be considered and administered as a non-targeted therapy in another subject, because of differences in his or her type of cancer per se, or the specific context of the cancer in question. <br>CDE ID = 14913015 (updated 05-29-24) #CDE ID = 6400634
+    Desc: <A term describing a therapeutic agent as captured in the Pharmacological
+      Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National
+      Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic
+      agent administered to a subject as a targeted therapy, i.e. one that is considered
+      to have enhanced therapeutic effects upon the specific type of cancer with which
+      the subject has been diagnosed, and/or upon that type of cancer specifically
+      within the context of a given subject because of factors such as tumor histology,
+      grade, gene expression and genetic make-up. Notably, a therapeutic agent considered
+      to be and administered as a targeted therapy in one subject based upon the specifics
+      of such characteristics can, conversely, be considered and administered as a
+      non-targeted therapy in another subject, because of differences in his or her
+      type of cancer per se, or the specific context of the cancer in question. <br>CDE
+      ID = 14913015
     Term:
       - Origin: caDSR - CRDC
-        Code: '14913015' #'6400634'
-        Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus Name #Concomitant Medication Name # check on this, repeated below
+        Code: '14913015' #(updated 05-29-24) prior CDE ID = 6400634
+        Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus
+          Name                                                                              #Concomitant Medication Name
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
   targeted_therapy_dose:
-    Desc: <The amount that represents the dose of the agent.> The dose at which the targeted therapeutic agent in question was administered, exclusive of dosage units. <br>CDE ID = 2182728 (added 05-29-24)
+    Desc: <The amount that represents the dose of the agent.> The dose at which the
+      targeted therapeutic agent in question was administered, exclusive of dosage
+      units. <br>CDE ID = 2182728
     Term:
       - Origin: caDSR - DCP
-        Code: '2182728'
+        Code: '2182728' #(added 05-29-24)
         Value: Agent Dose
+        Version: '3'
     Src: CMB
     Type: string
     Req: Preferred
   targeted_therapy_dose_units:
-    Desc: <Text name to represent units of measure used to describe dosages of an agent or measure.> The units of measure for the dose at which the targeted therapeutic agent in question was administered. <br>CDE ID = 2321160 (added 05-29-24)
+    Desc: <Text name to represent units of measure used to describe dosages of an
+      agent or measure.> The units of measure for the dose at which the targeted therapeutic
+      agent in question was administered. <br>CDE ID = 2321160
     Term:
       - Origin: caDSR - CCR
-        Code: '2321160'
+        Code: '2321160' #(added 05-29-24)
         Value: Agent Administration Dose Unit of Measure Name
+        Version: '4'
     Src: CMB
     Type: string
     Req: Preferred
   targeted_therapy_frequency:
-    Desc: <The frequency of how often a medication is being administered.> The frequency at which the targeted therapeutic agent in question was administered. <br>CDE ID = 2003878 (added 05-29-24)
+    Desc: <The frequency of how often a medication is being administered.> The frequency
+      at which the targeted therapeutic agent in question was administered. <br>CDE
+      ID = 2003878
     Term:
       - Origin: caDSR - CTEP
-        Code: '2003878'
-        Value: Agent Administered Frequency  
+        Code: '2003878' #(added 05-29-24)
+        Value: Agent Administered Frequency
+        Version: '4'
     Src: CMB
     Type: string
     Req: Preferred
   targeted_therapy_start_date:
-    Desc: The date upon which administration of the targeted therapy in question began, expressed as the number of days before or after study enrollment the targeted therapy administration began. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
+    Desc: <The number of days from the date of enrollment to the date of treatment
+      start.> The date upon which administration of the targeted therapy in question
+      began, expressed as the number of days before or after study enrollment the
+      targeted therapy administration began. <br>CDE ID = 14984532
     Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14984532' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment Start Day Count
+        Version: '1'
     Src: CMB
     Type: integer
     Req: Preferred
   targeted_therapy_end_date:
-    Desc: The date upon which administration of the targeted therapy in question ended, expressed as the number of days before or after study enrollment the targeted therapy administration ended. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The proposed CDE references age not time relative to study enrollment
+    Desc: <The number of days from the date of enrollment to the date of treatment
+      end.> The date upon which administration of the targeted therapy in question
+      ended, expressed as the number of days before or after study enrollment the
+      targeted therapy administration ended. <br>CDE ID = 14984563
     Term:
       - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+        Code: '14984563' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment End Day Count
+        Version: '1'
     Src: CMB
     Type: integer
     Req: Preferred
   best_response_to_targeted_therapy:
-    Desc: <The result of an evaluation to determine whether pathologic and/or clinical changes resulted from treatment.> An indication as to the best overall response to treatment with the targeted therapy in question. <br>CDE ID = 13383448 (added 05-29-24)
+    Desc: <The result of an evaluation to determine whether pathologic and/or clinical
+      changes resulted from treatment.> An indication as to the best overall response
+      to treatment with the targeted therapy in question. <br>CDE ID = 13383448
     Term:
       - Origin: caDSR - PCDC
-        Code: '13383448'
-        Value: Disease Response Assessment Outcome 
+        Code: '13383448' #(added 05-29-24)
+        Value: Disease Response Assessment Outcome
+        Version: '1'
     Src: CMB
     Enum:
       - Complete Response
@@ -930,75 +1137,112 @@ PropDefinitions:
     Req: Preferred
   # non_targeted_therapy
   non_targeted_therapy_id:
-    Desc: <A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each non-targeted therapy record, used to identify the correct non-targeted therapy records during data updates. <br>CDE ID = 14822135 (added 05-29-24)
+    Desc: <A unique sequence of characters used to identify a linkage between related
+      records.> A unique identifier of each non-targeted therapy record, used to identify
+      the correct non-targeted therapy records during data updates. <br>CDE ID = 14822135
     Term:
       - Origin: caDSR - CCDI
-        Code: '14822135'
+        Code: '14822135' #(added 05-29-24)
         Value: Data Record Link Unique Identifier
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
     Key: true
-  non_targeted_therapy: 
-    Desc: <A term describing a therapeutic agent as captured in the Pharmacological Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic agent administered to a subject as a non-targeted therapy, i.e. one that is considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnosed, but is not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject. Notably, a therapeutic agent considered to be and administered as a non-targeted therapy in one subject can, conversely, be considered and administered as a targeted therapy in another subject, where differences in his or her type of cancer per se, or the specific context of the cancer in question make the therapy more specific. <br>CDE ID = 14913015 (updated 05-29-24) #CDE ID = 6400634
+  non_targeted_therapy:
+    Desc: <A term describing a therapeutic agent as captured in the Pharmacological
+      Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National
+      Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic
+      agent administered to a subject as a non-targeted therapy, i.e. one that is
+      considered to be appropriate for and effective against the specific type of
+      cancer with which the subject has been diagnosed, but is not considered to have
+      significantly enhanced therapeutic effects upon that cancer in general or upon
+      that cancer specifically within the context of a given subject. Notably, a therapeutic
+      agent considered to be and administered as a non-targeted therapy in one subject
+      can, conversely, be considered and administered as a targeted therapy in another
+      subject, where differences in his or her type of cancer per se, or the specific
+      context of the cancer in question make the therapy more specific. <br>CDE ID
+      = 14913015
     Term:
       - Origin: caDSR - CRDC
-        Code: '14913015' #'6400634'
-        Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus Name #Concomitant Medication Name 
+        Code: '14913015' #(updated 05-29-24) prior CDE ID = 6400634
+        Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus
+          Name                                                                              #Concomitant Medication Name 
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
   non_targeted_therapy_dose:
-    Desc: <The amount that represents the dose of the agent.> The dose at which the non-targeted therapeutic agent in question was administered, exclusive of the dosage units. <br>CDE ID = 2182728 (added 05-29-24)
+    Desc: <The amount that represents the dose of the agent.> The dose at which the
+      non-targeted therapeutic agent in question was administered, exclusive of the
+      dosage units. <br>CDE ID = 2182728
     Term:
       - Origin: caDSR - DCP
-        Code: '2182728'
+        Code: '2182728' #(added 05-29-24)
         Value: Agent Dose
+        Version: '3'
     Src: CMB
     Type: string
     Req: Preferred
   non_targeted_therapy_dose_units:
-    Desc: <Text name to represent units of measure used to describe dosages of an agent or measure.> The units of measure for the dose at which the non-targeted therapeutic agent in question was administered. <br>CDE ID = 2321160 (added 05-29-24)
+    Desc: <Text name to represent units of measure used to describe dosages of an
+      agent or measure.> The units of measure for the dose at which the non-targeted
+      therapeutic agent in question was administered. <br>CDE ID = 2321160
     Term:
       - Origin: caDSR - CCR
-        Code: '2321160'
+        Code: '2321160' #(added 05-29-24)
         Value: Agent Administration Dose Unit of Measure Name
+        Version: '4'
     Src: CMB
     Type: string
     Req: Preferred
   non_targeted_therapy_frequency:
-    Desc: <The frequency of how often a medication is being administered.> The frequency at which the non-targeted therapeutic agent in question was administered. <br>CDE ID = 2003878 (added 05-29-24)
+    Desc: <The frequency of how often a medication is being administered.> The frequency
+      at which the non-targeted therapeutic agent in question was administered. <br>CDE
+      ID = 2003878
     Term:
       - Origin: caDSR - CTEP
-        Code: '2003878'
+        Code: '2003878' #(added 05-29-24)
         Value: Agent Administered Frequency
+        Version: '4'
     Src: CMB
     Type: string
     Req: Preferred
   non_targeted_therapy_start_date:
-    Desc: The date upon which administration of the non-targeted therapy in question began, expressed as the number of days before or after study enrollment the non-targeted therapy administration began. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
+    Desc: <The number of days from the date of enrollment to the date of treatment
+      start.> The date upon which administration of the non-targeted therapy in question
+      began, expressed as the number of days before or after study enrollment the
+      non-targeted therapy administration began. <br>CDE ID = 14984532
     Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14984532' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment Start Day Count
+        Version: '1'
     Src: CMB
     Type: integer
     Req: Preferred
   non_targeted_therapy_end_date:
-    Desc: text The date upon which administration of the non-targeted therapy in question ended, expressed as the number of days before or after study enrollment the non-targeted therapy administration ended. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
+    Desc: <The number of days from the date of enrollment to the date of treatment
+      end.> The date upon which administration of the non-targeted therapy in question
+      ended, expressed as the number of days before or after study enrollment the
+      non-targeted therapy administration ended. <br>CDE ID = 14984563
     Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14984563' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment End Day Count
+        Version: '1'
     Src: CMB
     Type: integer
     Req: Preferred
   best_response_to_non_targeted_therapy:
-    Desc: <The result of an evaluation to determine whether pathologic and/or clinical changes resulted from treatment.> An indication as to the best overall response to treatment with the non-targeted therapy in question. <br>CDE ID = 13383448 (added 05-29-24)
+    Desc: <The result of an evaluation to determine whether pathologic and/or clinical
+      changes resulted from treatment.> An indication as to the best overall response
+      to treatment with the non-targeted therapy in question. <br>CDE ID = 13383448
     Term:
       - Origin: caDSR - PCDC
-        Code: '13383448'
-        Value: Disease Response Assessment Outcome 
+        Code: '13383448' #(added 05-29-24)
+        Value: Disease Response Assessment Outcome
+        Version: '1'
     Src: CMB
     Enum:
       - Complete Response
@@ -1013,160 +1257,207 @@ PropDefinitions:
     Req: 'Yes'
   # surgery
   surgical_procedure_id:
-    Desc: <A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each surgical procedure record, used to identify the correct surgical procedure therapy records during data updates. <br>CDE ID = 14822135 (added 05-29-24)
+    Desc: <A unique sequence of characters used to identify a linkage between related
+      records.> A unique identifier of each surgical procedure record, used to identify
+      the correct surgical procedure records during data updates. <br>CDE ID = 14822135
     Term:
       - Origin: caDSR - CTDC
-        Code: '14822135'
+        Code: '14822135' #(added 05-29-24)
         Value: Data Record Link Unique Identifier
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
     Key: true
-  surgical_procedure: 
-    Desc: <The type of surgical procedure categorized by type or purpose.> The name and/or a brief narrative description of the surgical procedure performed upon the subject. <br>CDE ID = 13383457 #CDE ID = 6411539
+  surgical_procedure:
+    Desc: <The type of surgical procedure categorized by type or purpose.> The name
+      and/or a brief narrative description of the surgical procedure performed upon
+      the subject. <br>CDE ID = 13383457
     Term:
       - Origin: caDSR - PCDC
-        Code: '13383457' #'6411539'
+        Code: '13383457' #(updated) prior CDE 6411539'
         Value: Therapeutic Surgical Procedure Type #Procedure Name  
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
   surgical_procedure_date:
-    Desc: The date upon which the surgical procedure in question was performed. EXPRESSED HOW? <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The date upon which the surgical procedure in question was performed. #EXPRESSED HOW?
     Term:
       - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+        Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
+        Value: Data Element Name
     Src: CMB
     Type: date
     Req: 'Yes'
   surgical_procedure_anatomical_location:
-    Desc: The anatomical site or sites at which the surgical procedure in question was performed. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: <The Uberon identifier for the location within the body where a procedure
+      was performed.> The anatomical site or sites at which the surgical procedure
+      in question was performed. <br>CDE ID = 14980609
     Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14980609' #(added 07-16-24)
+        Value: Procedure Anatomic Site Uberon Identifier
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
   surgical_procedure_therapeutic:
-    Desc: An indication as to whether the surgical procedure in question was performed with therapeutic intent. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: <A response which indicates whether the administration of a therapeutic
+      procedure that is intended to alter or stop a pathologic process occurred.>
+      An indication as to whether the surgical procedure in question was performed
+      with therapeutic intent. <br>CDE ID = 6765611
     Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+      - Origin: caDSR - MCL
+        Code: '6765611' #(added 07-16-24)
+        Value: Therapeutic Procedure Occurrence Indicator
+        Version: '1'
     Src: CMB
     Enum:
       - 'Yes'
       - 'No'
     Req: 'Yes'
   surgical_procedure_findings:
-    Desc: A narrative description of any significant findings observed during the surgical procedure in question. <br>NOT CURRENTLY ASSIGNED ANY CDEtext
+    Desc: <Words which describe observations that are made during surgery.> A narrative
+      description of any significant findings observed during the surgical procedure
+      in question. <br>CDE ID = 14918773
     Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14918773' #(added 07-16-24)
+        Value: Procedure Surgical Finding Text
+        Version: '1'
     Src: CMB
     Type: string
     Req: Preferred
   extent_of_residual_disease:
-    Desc: <A textual description of evidence for remaining tumor following primary treatment that is only apparent using highly sensitive techniques.> <br>CDE ID = 13362284 (added 05-29-24)
+    Desc: <A textual description of evidence for remaining tumor following primary
+      treatment that is only apparent using highly sensitive techniques.> <br>CDE
+      ID = 13362284
     Term:
       - Origin: caDSR - PCDC
-        Code: '13362284'
+        Code: '13362284' #(added 05-29-24)
         Value: Measurable Residual Disease Assessment Text
+        Version: '1'
     Src: CMB
     Type: string
     Req: Preferred
   # radiotherapy
   radiological_procedure_id:
-    Desc: <A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each radiological procedure record, used to identify the correct radiological procedure record during data updates. <br>CDE ID = 14822135 (added 05-29-24)
+    Desc: <A unique sequence of characters used to identify a linkage between related
+      records.> A unique identifier of each radiological procedure record, used to
+      identify the correct radiological procedure record during data updates. <br>CDE
+      ID = 14822135
     Term:
       - Origin: caDSR - CTDC
-        Code: '14822135'
+        Code: '14822135' #(added 05-29-24)
         Value: Data Record Link Unique Identifier
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
     Key: true
   radiological_procedure:
-    Desc: The name and/or a brief narrative description of the radiological procedure performed upon the subject. <br>CDE ID = 6411539
+    Desc: The name and/or a brief narrative description of the radiological procedure
+      performed upon the subject. <br>CDE ID = 6411539
     Term:
       - Origin: caDSR
         Code: '6411539'
-        Value: Procedure Name  
+        Value: Procedure Name
+        Version: '1'
     Src: CMB
     Type: string
-    Req: 'Yes'   
+    Req: 'Yes'
   radiological_procedure_anatomical_location:
-    Desc: The anatomical site or sites subject to the radiological procedure in question. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: The anatomical site or sites subject to the radiological procedure in question.
     Term:
       - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+        Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
+        Value: Data Element Name
     Src: CMB
     Type: string
     Req: Preferred
   radiation_dose:
-    Desc: The dose at which the radiotherapy in question was administered, exclusive of the dosage units. <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: <The quantity of radiation energy administered, taken, or absorbed.> The
+      dose at which the radiotherapy in question was administered, exclusive of the
+      dosage units. CDE ID = 14986422
     Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+      - Origin: caDSR - PCDC
+        Code: '14986422' #(added 07-16-24)
+        Value: Procedure Radiation Therapy Administered Dose
+        Version: '1'
     Src: CMB
     Type: string
     Req: Preferred
   radiation_dose_units:
-    Desc: <A standard unit of measurement associated with the total quantity or strength of therapeutic radiation received or absorbed.> The units of measure for the dose at which the radiotherapy in question was administered. <br>CDE ID = 13383458 (added 05-29-24)
+    Desc: <A standard unit of measurement associated with the total quantity or strength
+      of therapeutic radiation received or absorbed.> The units of measure for the
+      dose at which the radiotherapy in question was administered. <br>CDE ID = 13383458
     Term:
       - Origin: caDSR - PCDC
-        Code: '13383458'
+        Code: '13383458' #(added 05-29-24)
         Value: Radiation Therapy Dose Unit of Measure
+        Version: '1'
     Src: CMB
     Type: string
     Req: Preferred
   radiation_frequency:
-    Desc: <Words which describe the number of occurrences of radiation therapy within a given time period.> The frequency at which the radiotherapy in question was administered. <br>CDE ID = 14918782 (added 05-29-24)
+    Desc: <Words which describe the number of occurrences of radiation therapy within
+      a given time period.> The frequency at which the radiotherapy in question was
+      administered. <br>CDE ID = 14918782
     Term:
       - Origin: caDSR- CTDC
-        Code: '14918782'
-        Value: Radiation Therapy Frequency Text  
+        Code: '14918782' #(added 05-29-24)
+        Value: Radiation Therapy Frequency Text
+        Version: '1'
     Src: CMB
     Type: string
     Req: Preferred
   radiation_extent:
-    Desc: <The extent of radiation exposure administered to the patient's body during radiation therapy.> CDE ID = 7063755 (added 05-29-24)
+    Desc: <The extent of radiation exposure administered to the patient's body during
+      radiation therapy.> CDE ID = 7063755
     Term:
       - Origin: caDSR - NCI CRF Stds
-        Code: '7063755'
+        Code: '7063755' #(added 05-29-24)
         Value: Radiation Therapy Administration Extent Type
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
   radiotherapy_start_date:
-    Desc: The date upon which administration of the radiotherapy in question began, expressed as the number of days before or after study enrollment the radiotherapy began. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
+    Desc: <The number of days from the date of enrollment to the date of treatment
+      start.> The date upon which administration of the radiotherapy in question began,
+      expressed as the number of days before or after study enrollment the radiotherapy
+      began. <br>CDE ID = 14984532
     Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14984532' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment Start Day Count
+        Version: '1'
     Src: CMB
     Type: integer
     Req: 'Yes'
   radiotherapy_end_date:
-    Desc: The date upon which administration of the radiotherapy in question ended, expressed as the number of days before or after study enrollment the radiotherapy ended. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
+    Desc: <The number of days from the date of enrollment to the date of treatment
+      end.> The date upon which administration of the radiotherapy in question ended,
+      expressed as the number of days before or after study enrollment the radiotherapy
+      ended. <br>CDE ID = 14984563
     Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name  
+      - Origin: caDSR - CTDC
+        Code: '14984563' #(added 07-25-24)
+        Value: Procedure Enrollment To Treatment End Day Count
+        Version: '1'
     Src: CMB
     Type: integer
     Req: Preferred
   best_response_to_radiotherapy:
-    Desc: <The result of an evaluation to determine whether pathologic and/or clinical changes resulted from treatment.> An indication as to the best overall response to the radiotherapy in question. <br>CDE ID = 13383448 (added 05-29-24)
+    Desc: <The result of an evaluation to determine whether pathologic and/or clinical
+      changes resulted from treatment.> An indication as to the best overall response
+      to the radiotherapy in question. <br>CDE ID = 13383448
     Term:
       - Origin: caDSR - PCDC
-        Code: '13383448'
+        Code: '13383448' #(added 05-29-24)
         Value: Disease Response Assessment Outcome
+        Version: '1'
     Src: CMB
     Enum:
       - Complete Response
@@ -1181,21 +1472,28 @@ PropDefinitions:
     Req: 'Yes'
   # subject_status
   subject_status_id:
-    Desc: <A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each subject_status record, used to identify the correct subject_status records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br>CDE ID = 14822135 (added 05-31-24)
+    Desc: <A unique sequence of characters used to identify a linkage between related
+      records.> A unique identifier of each subject_status record, used to identify
+      the correct subject_status records during data updates. The value of this property
+      will generally be the same as the value of the subject_id property. <br>CDE
+      ID = 14822135
     Term:
       - Origin: caDSR - CTDC
-        Code: '14822135'
-        Value: Data Record Link Unique Identifier 
-    Src: CMB
+        Code: '14822135' #(added 05-31-24)
+        Value: Data Record Link Unique Identifier
+        Version: '1'
+    Src: DSS
     Type: string
     Req: 'Yes'
     Key: true
-  survival_status: 
-    Desc: <The participant's survival state as being living or deceased.> <br>CDE ID = 2847330 (correct as of 05-31-24, but CDE metadata updated) #ORIGINAL CDE ID = 7050072
+  survival_status:
+    Desc: <The participant's survival state as being living or deceased.> <br>CDE
+      ID = 2847330
     Term:
       - Origin: caDSR-NCI Standard
-        Code: '2847330' # formerly '7050072'
+        Code: '2847330' #(correct as of 05-31-24, but CDE metadata updated) ORIGINAL CDE ID = 7050072
         Value: Participant Vital Status Type #Survival Status  
+        Version: '1'
     Src: DSS # previously CMB
     Enum:
       # - ALIVE
@@ -1205,22 +1503,27 @@ PropDefinitions:
       - Alive with No Evidence of Disease # Value exactly as used by the CMB
       - Alive, Disease Status Unknown # Value exactly as used by the CMB
       - Dead # Value exactly as used by the CMB
-    Req: 'Yes'              
+    Req: 'Yes'
   primary_cause_of_death:
-    Desc:  <The circumstance or condition of greatest rank or importance that results in the death of a living being.> <br>CDE ID = 4783274 (updated 05-31-24) #CDE ID = 6421593
+    Desc: <The circumstance or condition of greatest rank or importance that results
+      in the death of a living being.> <br>CDE ID = 4783274
     Term:
       - Origin: caDSR - NCI Standard
-        Code: '4783274' #'#6421593'
+        Code: '4783274' #(updated 05-31-24) prior CDE ID = 6421593
         Value: Primary Cause of Death #Primary Cause of Death 
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'No'
   off_study:
-    Desc:  <A response that indicates whether or not an individual is receiving protocol therapy.> Infer value from OFF_STUDY_DATE in CMB Data Submission - 5a_OffStudy? <br>CDE ID = 14834973 (added 05-31-24)
+    Desc: <A response that indicates whether or not an individual is receiving protocol
+      therapy.> Infer value from OFF_STUDY_DATE in CMB Data Submission - 5a_OffStudy?
+      <br>CDE ID = 14834973
     Term:
       - Origin: caDSR - CTDC
-        Code: '14834973'
+        Code: '14834973' #(added 05-31-24)
         Value: Subject Protocol Therapy Status Indicator
+        Version: '1'
     Src: value
     Enum:
       - 'Yes'
@@ -1228,12 +1531,14 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   off_study_reason:
-    Desc: <An explanation describing why an individual is no longer receiving protocol therapy.> <br>Enumerated via a long list of ~40 acceptable terms, but do these in fact represent the values CMB has/uses? <br>CDE ID = 13362265 (updated 05-31-24)
+    Desc: <An explanation describing why an individual is no longer receiving protocol
+      therapy.> <br>CDE ID = 13362265                                                                                  #<br>Enumerated via a long list of ~40 acceptable terms, but do these in fact represent the values CMB has/uses?
 #CDE ID = 6355981
     Term:
       - Origin: caDSR - PCDC
-        Code: '13362265' #'6355981'
+        Code: '13362265' #(updated 05-31-24) prior CDE ID = 6355981
         Value: Subject Protocol Therapy Status Off Protocol Reason #Disposition Event Dictionary-Derived/Standardized Term 
+        Version: '1'
     Src: value
     Enum:
       - ADVERSE EVENT
@@ -1276,35 +1581,45 @@ PropDefinitions:
       - WITHDRAWAL BY SUBJECT
       - WITHDRAWAL OF ASSENT
       - WITHDRAWAL OF CONSENT
-    Req: 'No'     
+    Req: 'No'
   # specimen 
   specimen_id: # this will be the exact same value that the CMB uses for biospecimen_id
-    Desc: <A unique sequence of alphanumeric characters used to identify the specimen at it's point of origin.> CMB's "Biospecimen ID" <br>CDE ID = 6921892 (added 06-03-24) <br>This property is used as the key via which child records, e.g. data files generated via Oncomine panel analyses, can be associated with the appropriate specimen during data loading, and to identify the correct records during data updates.
+    Desc: <A sequence of characters used to identify the kind of material that forms
+      the sample.> <br>CDE ID =  14986441 <br>This property is used as the key via
+      which child records, e.g. data files generated via Oncomine panel analyses,
+      can be associated with the appropriate specimen during data loading, and to
+      identify the correct records during data updates.                                                                                                                                                                                                                                                                                                                     #CMB's "Biospecimen ID"
     Term:
-      - Origin: caDSR - MCL
-        Code: '6921892'
-        Value: Biospecimen Source Laboratory Identifier 
+      - Origin: caDSR - CTDC
+        Code: '14986441' #(updated 07-23-24) prior CDE ID = 6921892 (added 06-03-24)
+        Value: Specimen Material Identifier #Biospecimen Source Laboratory Identifier <A unique sequence of alphanumeric characters used to identify the specimen at it's point of origin.>
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
     Key: true
   parent_specimen_id: # this will be the exact same value that the CMB uses for parent_biospecimen_id
-    Desc: <One or more characters used to identify the parent substance, or portion of material obtained for use in testing, examination, or study.> CMB's "Parent Biospecimen ID" <br>CDE ID = 5581201 (added 06-03-24)
+    Desc: <A sequence of characters used to identify the kind of material that forms
+      the parent sample.> <br>CDE ID =  14986442                                                                                #CMB's "Parent Biospecimen ID"
     Term:
-      - Origin: caDSR - DCP
-        Code: '5581201'
-        Value: Parent Specimen Label Identifier  
+      - Origin: caDSR - CTDC
+        Code: '14986442'  #(updated 07-23-24) prior CDE ID = 5581201 (added 06-03-24) 
+        Value: Specimen Material Parent Identifier #Parent Specimen Label Identifier <One or more characters used to identify the parent substance, or portion of material obtained for use in testing, examination, or study.>
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
+    Key: true
   parent_specimen_type: # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
-    Desc: <The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).> Acceptable values taken straight from the CMB Catalog Site. <br>CDE ID = 11253427 (added 06-03-24)
+    Desc: <The kind of material that forms the parent sample as captured in the Ontology
+      for Biobanking (OBIB).> <br>CDE ID = 14986443
     Term:
-      - Origin: caDSR - CRDC
-        Code: '11253427'
-        Value: Specimen Material OBIB Source
+      - Origin: caDSR - CTDC
+        Code: '14986443' #(updated 07-23-24) prior CDE ID = 11253427 (added 06-03-24)
+        Value: Specimen Material Parent OBIB Source #Specimen Material OBIB Source <The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).>
+        Version: '1'
     Src: CMB
-    Enum:
+    Enum: #Acceptable values taken straight from the CMB Catalog Site
       - Bone Marrow Aspirate
       - Cell Block
       - EDTA Blood
@@ -1318,13 +1633,15 @@ PropDefinitions:
       - Unstained Slide
     Req: 'Yes'
   specimen_type: # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
-    Desc: <The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).> Acceptable values taken straight from the CMB Catalog Site. <br>CDE ID = 11253427 (added 06-03-24)
+    Desc: <The kind of material that forms the sample as captured in the Ontology
+      for Biobanking (OBIB).> <br>CDE ID = 11253427
     Term:
       - Origin: caDSR - CRDC
-        Code: '11253427'
-        Value: Specimen Material OBIB Source 
+        Code: '11253427' #(added 06-03-24) (correct as of 07-23-24)
+        Value: Specimen Material OBIB Source
+        Version: '1'
     Src: CMB
-    Enum:
+    Enum: #Acceptable values taken straight from the CMB Catalog Site
       - BMMC
       - Blood Pellet
       - Cells
@@ -1352,11 +1669,13 @@ PropDefinitions:
   #   Type: integer
   #   Req: 'No'
   specimen_category:
-    Desc: <The biospecimen grouping that describes the kind of material that forms the sample.> <br>CDE ID = 12445832 (updated 06-03-24) #CDE ID = 7069877 #This in NOT the CMB Catalog Site's "Tissue Ccategory", the indicator as to normal vs primary vs metastatic. Not used within the CMB Catalog site itself, but defined within at least one of the associated Data Dictionaries.
+    Desc: <The biospecimen grouping that describes the kind of material that forms
+      the sample.> <br>CDE ID = 12445832 (updated 06-03-24)                                                                              #CDE ID = 7069877 #This in NOT the CMB Catalog Site's "Tissue Ccategory", the indicator as to normal vs primary vs metastatic. Not used within the CMB Catalog site itself, but defined within at least one of the associated Data Dictionaries.
     Term:
       - Origin: caDSR - CDS
         Code: '12445832' #'7069877D'
         Value: Specimen Material Biospecimen Category
+        Version: '1'
     Src: CMB DD
     Enum:
       - BLOOD
@@ -1373,11 +1692,13 @@ PropDefinitions:
       - URINE
     Req: 'Yes'
   anatomical_collection_site:
-    Desc: <The location within the body from which a specimen was originally obtained as captured in the Uberon identifier.> This is CMB's version of "sample site". <br>CDE ID = 12083894 (added 06-03-24)
+    Desc: <The location within the body from which a specimen was originally obtained
+      as captured in the Uberon identifier.> <br>CDE ID = 12083894                                                                                 #This is CMB's version of "sample site".
     Term:
       - Origin: caDSR - CRDC
-        Code: '12083894'
-        Value: Specimen Original Anatomic Site Uberon Identifier 
+        Code: '12083894' #(added 06-03-24) 
+        Value: Specimen Original Anatomic Site Uberon Identifier
+        Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
@@ -1395,14 +1716,17 @@ PropDefinitions:
   #     - OTHER
   #     - PRIMARY
   #   Req: 'Yes'
-  tissue_category: 
-    Desc: <A text term based on categorization of cytologic atypia found in cellular molecules, cells, tissues, organs, body fluids, or body excretory products.> Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue". <br>Acceptable values taken straight from the CMB Catalog Site. <br>CDE ID = 14688604 (added 06-03-24)
+  tissue_category:
+    Desc: <A text term based on categorization of cytologic atypia found in cellular
+      molecules, cells, tissues, organs, body fluids, or body excretory products.>  <br>CDE
+      ID = 14688604                                                                                                                                                                      #Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue"
     Term:
       - Origin: caDSR - CRDC
-        Code: '14688604'
-        Value: Specimen Neoplasm Category 
+        Code: '14688604' #(added 06-03-24)
+        Value: Specimen Neoplasm Category
+        Version: '1'
     Src: CMB
-    Enum:
+    Enum: #Acceptable values taken straight from the CMB Catalog Site.
       - Metastatic
       - Normal
       - Primary
@@ -1417,12 +1741,15 @@ PropDefinitions:
   #   #Type: string
   #   # actually enumerated to a long list of ICD-O-3 codes, which is too long to specifiy here; we should instead just include the codes that will be seen in CMB data?
   #   Req: 'No'
-  assessment_timepoint: 
-    Desc: <A specific point in the time continuum, including those established relative to an event.> CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 5899851 (updated 06-03-24)
+  assessment_timepoint:
+    Desc: <A specific point in the time continuum, including those established relative
+      to an event.> CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 5899851
+      (updated 06-03-24)
     Term:
       - Origin: caDSR - NCI CRF Standards
         Code: '5899851' #'7065963'
         Value: Timepoint Event Assessment Period Type
+        Version: '1'
     Src: CMB
     Enum:
       - ARCHIVAL
@@ -1430,12 +1757,15 @@ PropDefinitions:
       - ON TREATMENT
       - PROGRESSION
     Req: 'Yes'
-  collection_date: 
-    Desc: <WORK NEEDED HERE> From the CMB perspective, this may be equivalent to "days_from_diagnosis_to_specimen_collection" (now block commented out) (CDE ID = 11253404), with collection date indexed to enrollment date. <br>CDE ID 6401821
+  collection_date:
+    Desc: <WORK NEEDED HERE> From the CMB perspective, this may be equivalent to "days_from_diagnosis_to_specimen_collection"
+      (now block commented out) (CDE ID = 11253404), with collection date indexed
+      to enrollment date. <br>CDE ID 6401821
     Term:
       - Origin: caDSR
         Code: '6401821'
-        Value: Data Element Name  
+        Value: Data Element Name
+        Version: '1'
     Src: CMB
     Type:
       units:
@@ -1516,20 +1846,24 @@ PropDefinitions:
   #   Req: 'No'
   # data_file
   data_file_name:
-    Desc: <The literal label for an electronic data file.> , inclusive of file extension(s). <br>CDE ID = 11284037 (correct as of 05-30-24)
+    Desc: <The literal label for an electronic data file.> , inclusive of file extension(s).
+      <br>CDE ID = 11284037
     Term:
       - Origin: caDSR - CRDC
-        Code: '11284037'
-        Value: Electronic Data File Name  
+        Code: '11284037' #(correct as of 05-30-24)
+        Value: Electronic Data File Name
+        Version: '1'
     Src: DSS
     Type: string
     Req: 'Yes'
   data_file_type:
-    Desc: <The type of information contained in an electronic record.> A curated indicator as to the type of content represented by the data file <br>CDE ID = 14824731 (added 05-30-24)
+    Desc: <The type of information contained in an electronic record.> A curated indicator
+      as to the type of content represented by the data file <br>CDE ID = 14824731
     Term:
       - Origin: caDSR - CTDC
-        Code: '14824731'
-        Value: Electronic Data File Content Type 
+        Code: '14824731' #(added 05-30-24)
+        Value: Electronic Data File Content Type
+        Version: '1'
     Src: FNL
     Enum:
       - Clinical Report
@@ -1539,20 +1873,29 @@ PropDefinitions:
       - Variant Report
     Req: 'Yes'
   data_file_description:
-    Desc: <A free text field that can be used to document the content and other details about an electronic file that may not be captured elsewhere.> For example, the file's derivation from a specimen of normal tissue versus tumor tissue.  <br>CDE ID = 11280338 (correct as of 05-30-24)
+    Desc: <A free text field that can be used to document the content and other details
+      about an electronic file that may not be captured elsewhere.> For example, the
+      file's derivation from a specimen of normal tissue versus tumor tissue.  <br>CDE
+      ID = 11280338
     Term:
       - Origin: caDSR - CRDC
-        Code: '11280338'
-        Value: Electronic Data File Description Text  
+        Code: '11280338' #(correct as of 05-30-24)
+        Value: Electronic Data File Description Text
+        Version: '1'
     Src: DSS
     Type: string
     Req: 'Yes'
   data_file_format:
-    Desc: <A defined organization or layout representing and structuring data in a computer file.> ; the electronic format of the file, as derived during file validation <br>With the actual values of this property being loader derived, the acceptable values currently specified are in place only to support the generation of mock data <br>CDE ID = 11416926 (correct as of 05-30-24)
+    Desc: <A defined organization or layout representing and structuring data in a
+      computer file.> ; the electronic format of the file, as derived during file
+      validation <br>With the actual values of this property being loader derived,
+      the acceptable values currently specified are in place only to support the generation
+      of mock data <br>CDE ID = 11416926
     Term:
       - Origin: caDSR - CRDC
-        Code: '11416926'
-        Value: Electronic Data File Format Type  
+        Code: '11416926' #(correct as of 05-30-24)
+        Value: Electronic Data File Format Type
+        Version: '1'
     Src: DSS
     Enum:
       - docx
@@ -1562,29 +1905,35 @@ PropDefinitions:
       - zip
     Req: 'Yes'
   data_file_size:
-    Desc: <The measure, expressed in bytes, as to how much space a data file takes up on a storage medium.> <br>CDE ID = 11479876 (correct as of 05-30-24)
+    Desc: <The measure, expressed in bytes, as to how much space a data file takes
+      up on a storage medium.> <br>CDE ID = 11479876
     Term:
       - Origin: caDSR - CRDC
-        Code: '11479876'
-        Value: Electronic Data File Size Integer  
+        Code: '11479876' #(correct as of 05-30-24)
+        Value: Electronic Data File Size Integer
+        Version: '1'
     Src: DSS
     Type: number
     Req: 'Yes'
   data_file_checksum_value:
-    Desc: <A small-sized block of data derived from a file for the purpose of detecting errors that may have been introduced during file transmission and/or storage and used to verify data integrity.> <br>CDE ID = 11480133 (correct as of 05-30-24)
+    Desc: <A small-sized block of data derived from a file for the purpose of detecting
+      errors that may have been introduced during file transmission and/or storage
+      and used to verify data integrity.> <br>CDE ID = 11480133
     Term:
       - Origin: caDSR - CRDC
-        Code: '11480133'
-        Value: Electronic Data File Checksum Value  
+        Code: '11480133' #(correct as of 05-30-24)
+        Value: Electronic Data File Checksum Value
+        Version: '1'
     Src: DSS
     Type: string
     Req: 'Yes'
   data_file_checksum_type:
-    Desc: <The method by which the file checksum was calculated.> <br>CDE ID = 11475057 (correct as of 05-30-24)
+    Desc: <The method by which the file checksum was calculated.> <br>CDE ID = 11475057
     Term:
       - Origin: caDSR - CRDC
-        Code: '11475057'
-        Value: Electronic Data File Checksum Type  
+        Code: '11475057' #(correct as of 05-30-24)
+        Value: Electronic Data File Checksum Type
+        Version: '1'
     Src: DSS
     Enum:
       - md5sum
@@ -1592,11 +1941,13 @@ PropDefinitions:
       - sha256
     Req: 'Yes'
   data_file_compression_status:
-    Desc: <The state of data when saved to storage space or during data transmission.> <br>CDE ID = 11387114 (correct as of 05-30-24)
+    Desc: <The state of data when saved to storage space or during data transmission.>
+      <br>CDE ID = 11387114
     Term:
       - Origin: caDSR - CRDC
-        Code: '11387114'
-        Value: Electronic Data File Compression Type  
+        Code: '11387114' #(correct as of 05-30-24)
+        Value: Electronic Data File Compression Type
+        Version: '1'
     Src: DSS
     Enum:
       - Compressed
@@ -1604,20 +1955,26 @@ PropDefinitions:
       - Unknown
     Req: Preferred
   data_file_uuid:
-    Desc: <A unique sequence of characters used to identify the contents of an electronic record.> <br>CDE ID = 14826100 (added 05-30-24)
+    Desc: <A unique sequence of characters used to identify the contents of an electronic
+      record.> <br>CDE ID = 14826100
     Term:
       - Origin: caDSR - CTDC
-        Code: '14826100'
-        Value: Electronic Data File Content Unique Identifier 
+        Code: '14826100' #(added 05-30-24)
+        Value: Electronic Data File Content Unique Identifier
+        Version: '1'
     Src: FNL
     Type: string
     Req: 'Yes'
   data_file_location:
-    Desc: <The specification of a node (file or directory) in a hierarchical file system where an electronic file is located.> The specific location within the S3 storage bucket at which the file is stored, expressed in terms of a unique url <br>CDE ID = 11556141 (added 05-30-24)
+    Desc: <The specification of a node (file or directory) in a hierarchical file
+      system where an electronic file is located.> The specific location within the
+      S3 storage bucket at which the file is stored, expressed in terms of a unique
+      url <br>CDE ID = 11556141
     Term:
       - Origin: caDSR - CDS
-        Code: '11556141'
-        Value: Electronic File Pathname Text  
+        Code: '11556141' #(added 05-30-24)
+        Value: Electronic File Pathname Text
+        Version: '1'
     Src: FNL
     Type: string
-    Req: 'Yes'    
+    Req: 'Yes'
