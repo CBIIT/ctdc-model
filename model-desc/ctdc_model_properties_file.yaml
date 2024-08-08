@@ -177,6 +177,12 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   # principal_investigator
+  pi_id: 
+    Desc: A globally unique identifier via which principle investigator can be differentiated across studies; specifically the value of study_id concatenated with the value of pi_last_name, <br>This property is used as the key via which child records, e.g. cohort records, can be associated with the appropriate principle investigator, and to identify the correct principle investigator records during data updates.
+    Src: Data Onwer(s)
+    Type: string
+    Req: 'Yes'
+    Key: true
   person_first_name: #formerly principal_investigator_first_name
     Desc: <A word or group of words indicating a person's first (personal or given)
       name; the name that precedes the surname. Synonym = Given Name.> The first or
@@ -289,7 +295,6 @@ PropDefinitions:
     Src: ICDC
     Type: string
     Req: 'Yes'
-    Key: true
     Tags:
       Labeled: Collection
   image_type_included:
