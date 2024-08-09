@@ -1942,8 +1942,8 @@ PropDefinitions:
     Src: DSS
     Enum:
       - md5sum
-      - sha1
-      - sha256
+      # - sha1
+      # - sha256
     Req: 'Yes'
   data_file_compression_status:
     Desc: <The state of data when saved to storage space or during data transmission.>
@@ -1970,6 +1970,9 @@ PropDefinitions:
     Src: FNL
     Type: string
     Req: 'Yes'
+    Key: true
+    Tags:
+      Template: 'No'
   data_file_location:
     Desc: <The specification of a node (file or directory) in a hierarchical file
       system where an electronic file is located.> The specific location within the
@@ -1982,4 +1985,6 @@ PropDefinitions:
         Version: '1'
     Src: FNL
     Type: string
-    Req: 'Yes'
+    Req: 'No'
+    Tags:
+      Template: 'No'
