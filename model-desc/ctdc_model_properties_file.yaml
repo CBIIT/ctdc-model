@@ -177,7 +177,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   # principal_investigator
-  pi_id: 
+  person_record_id: 
     Desc: A globally unique identifier via which principle investigator can be differentiated across studies; specifically the value of study_id concatenated with the value of pi_last_name, <br>This property is used as the key via which child records, e.g. cohort records, can be associated with the appropriate principle investigator, and to identify the correct principle investigator records during data updates.
     Src: Data Onwer(s)
     Type: string
@@ -232,7 +232,7 @@ PropDefinitions:
     Type: string
     Req: Preferred
   # associated_link
-  associated_link_id:
+  associated_link_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each associated link record, used to identify
       the correct associated link records during data updates. <br>CDE ID = 14822135
@@ -270,7 +270,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   # image collection props
-  image_collection_id:
+  image_collection_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each image collection record, used to identify
       the correct image collection records during data updates. <br>CDE ID = 14822135
@@ -438,7 +438,7 @@ PropDefinitions:
       - Unknown
     Req: Preferred
   # demographic
-  demographic_id:
+  demographic_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each demographic record, used to identify the
       correct demographic records during data updates. <br>The value of this property
@@ -709,7 +709,7 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   # diagnosis
-  diagnosis_id:
+  diagnosis_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each diagnosisc record, used to identify the
       correct diagnosis records during data updates. <br>The value of this property
@@ -1021,7 +1021,7 @@ PropDefinitions:
   #     value_type: number
   #   Req: 'Yes'
   # targeted_therapy
-  targeted_therapy_id:
+  targeted_therapy_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each targeted therapy record, used to identify
       the correct targeted therapy records during data updates. <br>CDE ID = 14822135
@@ -1141,7 +1141,7 @@ PropDefinitions:
       - Unknown
     Req: Preferred
   # non_targeted_therapy
-  non_targeted_therapy_id:
+  non_targeted_therapy_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each non-targeted therapy record, used to identify
       the correct non-targeted therapy records during data updates. <br>CDE ID = 14822135
@@ -1261,7 +1261,7 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   # surgery
-  surgical_procedure_id:
+  surgical_procedure_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each surgical procedure record, used to identify
       the correct surgical procedure records during data updates. <br>CDE ID = 14822135
@@ -1347,7 +1347,7 @@ PropDefinitions:
     Type: string
     Req: Preferred
   # radiotherapy
-  radiological_procedure_id:
+  radiological_procedure_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each radiological procedure record, used to
       identify the correct radiological procedure record during data updates. <br>CDE
@@ -1476,7 +1476,7 @@ PropDefinitions:
       - Unknown
     Req: 'Yes'
   # subject_status
-  subject_status_id:
+  subject_status_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each subject_status record, used to identify
       the correct subject_status records during data updates. The value of this property
@@ -1588,7 +1588,7 @@ PropDefinitions:
       - WITHDRAWAL OF CONSENT
     Req: 'No'
   # specimen 
-  specimen_id: # this will be the exact same value that the CMB uses for biospecimen_id
+  specimen_record_id: # this will be the exact same value that the CMB uses for biospecimen_id
     Desc: <A sequence of characters used to identify the kind of material that forms
       the sample.> <br>CDE ID =  14986441 <br>This property is used as the key via
       which child records, e.g. data files generated via Oncomine panel analyses,
@@ -1988,3 +1988,4 @@ PropDefinitions:
     Req: 'No'
     Tags:
       Template: 'No'
+      
