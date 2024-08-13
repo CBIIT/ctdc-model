@@ -39,7 +39,7 @@ Nodes:
     Props:
       - project_name #11459804
       - project_short_name #11459806
-      - crdc-id
+      - crdc_id
   principal_investigator:
     Desc: The Principal Investigator node contains properties which identify the principal investigator(s) responsible for any given study/trial. A study/trial may have one or more principal investigators, and any given individual may be listed as a principal investigator on more than one study/trial.
     Tags:
