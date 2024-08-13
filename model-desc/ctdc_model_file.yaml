@@ -45,7 +45,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - pi_id
+      - person_record_id
       - person_first_name #2179589
       - person_last_name #2179591
       - person_middle_name #2179590
@@ -72,7 +72,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - associated_link_id #14822135
+      - associated_link_record_id #14822135
       - associated_link_name #14822136
       - associated_link_url #14822140
   image_collection:
@@ -83,7 +83,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - image_collection_id #14822135
+      - image_collection_record_id #14822135
       - image_collection_name #14826008
       - image_type_included #12137353
       - image_collection_url #11556141
@@ -110,7 +110,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - demographic_id #14822135
+      - demographic_record_id #14822135
       #- age_at_diagnosis
       - age_at_enrollment #12299548
       - race #2192199
@@ -144,7 +144,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - diagnosis_id #14822135
+      - diagnosis_record_id #14822135
       - primary_diagnosis_disease_group #14905532
       #- icd_10_disease_code #11479873
       - ctep_disease_term #4723846
@@ -168,7 +168,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - targeted_therapy_id #14822135
+      - targeted_therapy_record_id #14822135
       - targeted_therapy #14913015
       - targeted_therapy_dose #2182728
       - targeted_therapy_dose_units #2321160
@@ -184,7 +184,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - non_targeted_therapy_id #14822135
+      - non_targeted_therapy_record_id #14822135
       - non_targeted_therapy #14913015
       - non_targeted_therapy_dose #2182728
       - non_targeted_therapy_dose_units #2321160
@@ -200,7 +200,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - surgical_procedure_id #14822135
+      - surgical_procedure_record_id #14822135
       - surgical_procedure #13383457 #6411539
       - surgical_procedure_date
       - surgical_procedure_anatomical_location
@@ -215,7 +215,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - radiological_procedure_id #14822135
+      - radiological_procedure_record_id #14822135
       - radiological_procedure #6411539
       - radiological_procedure_anatomical_location
       - radiation_dose
@@ -233,7 +233,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - subject_status_id #14822135
+      - subject_status_record_id #14822135
       - survival_status #2847330
       - primary_cause_of_death #4783274
       - off_study #14834973
@@ -246,7 +246,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - specimen_id #14986441
+      - specimen_record_id #14986441
       - parent_specimen_id #14986442
       - parent_specimen_type #14986443 # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
       - specimen_type #11253427 # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
