@@ -28,6 +28,7 @@ Nodes:
     Props:
       - program_name #11444542
       - program_short_name #11459801
+      - crdc_id
   project:
     Desc: text <WORK NEEDED HERE>
     Tags:
@@ -38,6 +39,7 @@ Nodes:
     Props:
       - project_name #11459804
       - project_short_name #11459806
+      - crdc_id
   principal_investigator:
     Desc: The Principal Investigator node contains properties which identify the principal investigator(s) responsible for any given study/trial. A study/trial may have one or more principal investigators, and any given individual may be listed as a principal investigator on more than one study/trial.
     Tags:
@@ -51,6 +53,7 @@ Nodes:
       - person_last_name #2179591
       - person_middle_name #2179590
       - person_orcid #10624734
+      - crdc_id
   study:
     Desc: The Study node contains properties required to characterize each study/trial in terms of a title, describe when, how and why the study/trial was conducted, and provide links to additional information about the study/trial.
     Tags:
@@ -65,6 +68,7 @@ Nodes:
       - study_description #3444002
       - study_type #11160683
       - dates_of_conduct
+      - crdc_id
   associated_link:
     Desc: The Associated Link node contains the properties required to associate multiple links to additional information about any given study/trial to the appropriate study/trial, and define an inuitive label via which each link will be diplayed within the UI. 
     Tags:
@@ -76,6 +80,7 @@ Nodes:
       - associated_link_record_id #14822135
       - associated_link_name #14822136
       - associated_link_url #14822140
+      - crdc_id
   image_collection:
     Desc: The Image Collection node is comprised of properties which describe collections of images that are associated with any given study/trial. These properties characterize such image collections in terms of the types of images they contain, where the collections are hosted, and how they can be accessed.
     Tags:
@@ -90,6 +95,7 @@ Nodes:
       - image_collection_url #11556141
       - repository_name #14826003
       - collection_access #14825946
+      - crdc_id
   subject:
     Desc: text <WORK NEEDED HERE>
     Tags:
@@ -103,6 +109,7 @@ Nodes:
       - radiology_report_available #14735825
       - radiology_images_available #14735826
       - histology_images_available #14735827
+      - crdc_id
   demographic:
     Desc: The Demographic node is comprised of properties which describe the key characteristics of each study/trial subject, such as sex, gender, race and etnnicity, etc.
     Tags:
@@ -126,6 +133,7 @@ Nodes:
       - highest_level_of_education #2681552
       - ncbi_taxonomy_id #10543100
       - ncbi_taxonomy_name #10543082
+      - crdc_id
   exposure:
     Desc: Properties within the Exposure node capture information concerning a subject's environmental, workplace and lifestyle exposure(s) which have the potential to have increased the risk of developing cancer, and/or caused cancer, and/or exacerbated an underlying maliignancy.
     Tags:
@@ -137,6 +145,7 @@ Nodes:
       - exposure_id #14822135
       - environmental_exposure_type #11256813
       - carcinogen_exposure #5205578
+      - crdc_id
   diagnosis:
     Desc: The Diagnosis node contains numerous properties which fully characterize the type of cancer with which any given study/trial subject was diagnosed, inclusive of disease stage, histology/pathology, and age at diagnosis.
     Tags:
@@ -161,6 +170,7 @@ Nodes:
       - tumor_grade #11325685
       - date_of_diagnosis #2178801 # quantified in days indexed to date of trial enrollment 
       #- subject_age_at_diagnosis #10609539
+      - crdc_id
   targeted_therapy:
     Desc: The Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as targeted therapies, i.e. therapies that are considered to have enhanced therapeutic effects upon the specific type of cancer with which the subject has been diagnosed, and/or upon that type of cancer specifically within the context of a given subject because of factors such as tumor histology, grade, gene expression and genetic make-up.
     Tags:
@@ -177,6 +187,7 @@ Nodes:
       - targeted_therapy_start_date #14984532
       - targeted_therapy_end_date #14984563
       - best_response_to_targeted_therapy #13383448
+      - crdc_id
   non_targeted_therapy:
     Desc: The Non-Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as standard and/or non-targeted therapies, i.e. therapies considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnosed, but not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject.
     Tags:
@@ -193,6 +204,7 @@ Nodes:
       - non_targeted_therapy_start_date #14984532
       - non_targeted_therapy_end_date #14984563
       - best_response_to_non_targeted_therapy #13383448
+      - crdc_id
   surgery:
     Desc: The Surgery node contains properties which detail surgical procedures performed upon the subject in question, including the type of procedure performed, the anatomical locations impacted, notable findings, and whether or not the procedure was conducted as part of the overall treatment of the cancer in question.
     Tags:
@@ -208,6 +220,7 @@ Nodes:
       - surgical_procedure_therapeutic
       - surgical_procedure_findings
       - extent_of_residual_disease #13362284
+      - crdc_id
   radiotherapy:
     Desc: The Radiotherapy node contains properties which detail radiological procedures performed on the subject in question as part of their overall treatent, including the type of each radiological procedure performed, the anatomical location(s) impacted, and the response to such radiotherapy.
     Tags:
@@ -226,6 +239,7 @@ Nodes:
       - radiotherapy_start_date #14984532
       - radiotherapy_end_date #14984563
       - best_response_to_radiotherapy #13383448
+      - crdc_id
   subject_status:
     Desc: Properties within the Subject Status node capture key information as to the subject's survival status and where applicable, a subject's withdrawal from the study. 
     Tags:
@@ -239,6 +253,7 @@ Nodes:
       - primary_cause_of_death #4783274
       - off_study #14834973
       - off_study_reason #13362265
+      - crdc_id
   specimen:
     Desc: The Specimen node contains numerous properties which provide an in-depth characterization of the types of biospecimens which were collected from any given study/trial participant and subsequently analyzed.
     Tags:
@@ -266,6 +281,7 @@ Nodes:
       # - days_from_initial_genomic_sequencing_to_Specimen_collection #11250807
       # - days_from_recurrence_to_specimen_collection #11251133
       # - days_from_specimen_collection_to_initial_pathologic_diagnosis #11253404
+      - crdc_id
   data_file:
     Desc: Data files can be associated with CTDC project, study, participant, diagnosis and specimen records, but are not themselves stored within the application. Instead, the application stores records as to the existence and nature of such data files. The Data File node is comprised of properties which characterize these files in terms of their size, format and content, such that they can be appropriately represented within the application's UI, and in terms of their storage location, such that they can be retrieved for analysis.
     Tags:
@@ -284,6 +300,7 @@ Nodes:
       - data_file_compression_status #11387114
       - data_file_uuid #14826100
       - data_file_location #11556141
+      - crdc_id
 Relationships:
   belongs_to:
     Mul: many_to_one
