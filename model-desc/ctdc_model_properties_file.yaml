@@ -1978,7 +1978,7 @@ PropDefinitions:
     Req: 'No'
     Key: true
     Tags:
-      Template: 'No'
+      Template: 'Yes'
   data_file_location:
     Desc: <The specification of a node (file or directory) in a hierarchical file
       system where an electronic file is located.> The specific location within the
