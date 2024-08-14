@@ -1620,7 +1620,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-    Key: true
+    Key: false
   parent_specimen_type: # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
     Desc: <The kind of material that forms the parent sample as captured in the Ontology
       for Biobanking (OBIB).> <br>CDE ID = 14986443
@@ -1975,7 +1975,7 @@ PropDefinitions:
         Version: '1'
     Src: FNL
     Type: string
-    Req: 'Yes'
+    Req: 'No'
     Key: true
     Tags:
       Template: 'No'
