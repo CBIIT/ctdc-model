@@ -1609,7 +1609,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
     Key: true
-  parent_specimen_id: # this will be the exact same value that the CMB uses for parent_biospecimen_id
+  specimen_id: # this will be the exact same value that the CMB uses for parent_biospecimen_id
     Desc: <A sequence of characters used to identify the kind of material that forms
       the parent sample.> <br>CDE ID =  14986442                                                                                #CMB's "Parent Biospecimen ID"
     Term:
@@ -1621,7 +1621,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
     Key: false
-  parent_specimen_type: # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
+  specimen_type: # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
     Desc: <The kind of material that forms the parent sample as captured in the Ontology
       for Biobanking (OBIB).> <br>CDE ID = 14986443
     Term:
@@ -1643,33 +1643,33 @@ PropDefinitions:
       - Unstained Bone Marrow Aspirate Slide
       - Unstained Slide
     Req: 'Yes'
-  specimen_type: # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
-    Desc: <The kind of material that forms the sample as captured in the Ontology
-      for Biobanking (OBIB).> <br>CDE ID = 11253427
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '11253427' #(added 06-03-24) (correct as of 07-23-24)
-        Value: Specimen Material OBIB Source
-        Version: '1'
-    Src: CMB
-    Enum: #Acceptable values taken straight from the CMB Catalog Site
-      - BMMC
-      - Blood Pellet
-      - Cells
-      - Curl
-      - DNA
-      - FFPE Block
-      - Glass H&E Slide
-      - Glass Slide Smear
-      - Glass Unstained Slide
-      - PBMC
-      - Plasma
-      - Plasma-cf
-      - RNA
-      - Snap Frozen Unfixed Tissue
-      - Tissue Curl
-      - cDNA
-    Req: 'Yes'
+  # specimen_type: # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
+  #   Desc: <The kind of material that forms the sample as captured in the Ontology
+  #     for Biobanking (OBIB).> <br>CDE ID = 11253427
+  #   Term:
+  #     - Origin: caDSR - CRDC
+  #       Code: '11253427' #(added 06-03-24) (correct as of 07-23-24)
+  #       Value: Specimen Material OBIB Source
+  #       Version: '1'
+  #   Src: CMB
+  #   Enum: #Acceptable values taken straight from the CMB Catalog Site
+  #     - BMMC
+  #     - Blood Pellet
+  #     - Cells
+  #     - Curl
+  #     - DNA
+  #     - FFPE Block
+  #     - Glass H&E Slide
+  #     - Glass Slide Smear
+  #     - Glass Unstained Slide
+  #     - PBMC
+  #     - Plasma
+  #     - Plasma-cf
+  #     - RNA
+  #     - Snap Frozen Unfixed Tissue
+  #     - Tissue Curl
+  #     - cDNA
+  #   Req: 'Yes'
   # obi_specimen_type:
   #   Desc: This doesn't match the caDSR record of "Specimen Material OBIB Source" for CDE ID = 11253427 <br>The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB), a specimen subset of the Ontology for Biomedical Investigations (OBI).
   #   Term:
