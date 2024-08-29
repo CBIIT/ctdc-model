@@ -662,7 +662,7 @@ PropDefinitions:
     Type: string # supposedly enumerated but no permissible values specified
     Req: 'Yes'
   # exposure
-  exposure_id:
+  exposure_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each exposure record, used to identify the
       correct exposure records during data updates. The value of this property will
