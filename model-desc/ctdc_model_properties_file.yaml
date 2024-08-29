@@ -600,7 +600,7 @@ PropDefinitions:
         Version: '1'
     Src: CMB
     Type: string
-    Req: 'Optional'
+    Req: Preferred
   income:
     Desc: <The amount of earnings made by a family in a year.> <br>CDE ID = 14834966
     Term:
