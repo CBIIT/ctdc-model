@@ -485,6 +485,7 @@ PropDefinitions:
       - American Indian or Alaska Native
       - Black or African American
       - Native Hawaiian or other Pacific Islander
+      - White
       - Not Reported
       - Unknown
     Req: 'Yes'
@@ -544,7 +545,7 @@ PropDefinitions:
       #- Refused to Answer # = Response Declined per CMB?
       - Response Declined # per CMB data values
       - Unknown # per CMB data values
-    Req: 'Yes'
+    Req: Preferred
   height:
     Desc: <The number that describes the vertical distance of an individual.> The
       height of the subject as of enrollment, measured in cm. <br>CDE ID = 2179643
@@ -599,7 +600,7 @@ PropDefinitions:
         Version: '1'
     Src: CMB
     Type: string
-    Req: 'Yes'
+    Req: Preferred
   income:
     Desc: <The amount of earnings made by a family in a year.> <br>CDE ID = 14834966
     Term:
