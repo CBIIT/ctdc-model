@@ -811,6 +811,7 @@ PropDefinitions:
       - "10028566" # Plasma Cell Myeloma
       - "10036910" # Prostate Carcinoma
       - "10041071" # Small Cell Lung Carcinoma
+      - "10017760" # Gastric Cancer NOS
     Req: 'Yes'
   snomed_disease_term:
     Desc: Description pending #<br>NOT CURRENTLY ASSIGNED ANY CDE
@@ -880,6 +881,7 @@ PropDefinitions:
       - "372244006" #Melanoma
       - "72495009" #Mucinous Adenocarcinoma
       - "55921005a" #Multiple myeloma
+      - "55921005" #Multiple myeloma
       - "188717001" #Multiple myeloma and immunoproliferative disease
       - "253000007" #Neuroendocrine Carcinoma
       - "2142002" #Nodular Melanoma
