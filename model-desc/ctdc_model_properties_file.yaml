@@ -483,6 +483,7 @@ PropDefinitions:
     Src: CMB
     Enum: # Currently reflective only of the values used by the CMB
       - American Indian or Alaska Native
+      - Asian
       - Black or African American
       - Native Hawaiian or other Pacific Islander
       - White
