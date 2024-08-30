@@ -142,7 +142,7 @@ Nodes:
       Class: secondary
       Template: 'Yes'
     Props:
-      - exposure_id #14822135
+      - exposure_record_id #14822135
       - environmental_exposure_type #11256813
       - carcinogen_exposure #5205578
       - crdc_id

@@ -974,7 +974,7 @@ PropDefinitions:
       - Stage IVA
       - Stage IVB
       - Stage IVC
-    Req: 'Yes'
+    Req: Preferred
   tumor_grade:
     Desc: <A text term to express the degree of abnormality of cancer cells as a measure
       of differentiation and aggressiveness.> <br>CDE ID = 11325685
@@ -1002,7 +1002,7 @@ PropDefinitions:
       - Moderately Differentiated # Value exactly as used by the CMB
       - Poorly Differentiated # Value exactly as used by the CMB
       - Undifferentiated grade # Value exactly as used by the CMB
-    Req: 'Yes'
+    Req: Preferred
   # date_of_diagnosis:
   #   Desc: <The date of the procedure or evaluation used to determine the diagnosis.> <br>CDE ID = 2178801 (added 05-28-24)
   #   Term:
