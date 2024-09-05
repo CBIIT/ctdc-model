@@ -1484,7 +1484,7 @@ PropDefinitions:
       - Too Early
       - Not Evaluable
       - Unknown
-    Req: 'Yes'
+    Req: Preferred
   # subject_status
   subject_status_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
