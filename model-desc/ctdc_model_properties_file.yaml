@@ -699,7 +699,7 @@ PropDefinitions:
       - Smokeless Tobacco Exposure
       - Tobacco Related Exposure
       - Wood Dust Exposure
-    Req: 'Yes'
+    Req: Preferred
   carcinogen_exposure:
     Desc: <An indication of whether the participant was exposed to environmental/workplace
       carcinogens (for example arsenic, asbestos, diesel exhaust, chromium, silica).>
@@ -1269,7 +1269,7 @@ PropDefinitions:
       - Too Early
       - Not Evaluable
       - Unknown
-    Req: 'Yes'
+    Req: Preferred
   # surgery
   surgical_procedure_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
@@ -1303,7 +1303,7 @@ PropDefinitions:
         Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
         Value: Data Element Name
     Src: CMB
-    Type: date
+    Type: integer
     Req: 'Yes'
   surgical_procedure_anatomical_location:
     Desc: <The Uberon identifier for the location within the body where a procedure
