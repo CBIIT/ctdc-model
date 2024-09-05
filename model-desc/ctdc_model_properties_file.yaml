@@ -1450,7 +1450,7 @@ PropDefinitions:
         Version: '1'
     Src: CMB
     Type: integer
-    Req: 'Yes'
+    Req: Preferred
   radiotherapy_end_date:
     Desc: <The number of days from the date of enrollment to the date of treatment
       end.> The date upon which administration of the radiotherapy in question ended,
@@ -1511,9 +1511,9 @@ PropDefinitions:
         Version: '1'
     Src: DSS # previously CMB
     Enum:
-      # - ALIVE
-      # - DEAD
-      # - UNKNOWN
+      - ALIVE # Value exactly as used by the CMB
+      - DEAD # Value exactly as used by the CMB
+      - UNKNOWN # Value exactly as used by the CMB
       - Alive with Disease # Value exactly as used by the CMB
       - Alive with No Evidence of Disease # Value exactly as used by the CMB
       - Alive, Disease Status Unknown # Value exactly as used by the CMB
@@ -1598,22 +1598,22 @@ PropDefinitions:
       - WITHDRAWAL OF CONSENT
     Req: 'No'
   # specimen 
-  specimen_record_id: # this will be the exact same value that the CMB uses for biospecimen_id
-    Desc: <A sequence of characters used to identify the kind of material that forms
-      the sample.> <br>CDE ID =  14986441 <br>This property is used as the key via
-      which child records, e.g. data files generated via Oncomine panel analyses,
-      can be associated with the appropriate specimen during data loading, and to
-      identify the correct records during data updates.                                                                                                                                                                                                                                                                                                                     #CMB's "Biospecimen ID"
-    Term:
-      - Origin: caDSR - CTDC
-        Code: '14986441' #(updated 07-23-24) prior CDE ID = 6921892 (added 06-03-24)
-        Value: Specimen Material Identifier #Biospecimen Source Laboratory Identifier <A unique sequence of alphanumeric characters used to identify the specimen at it's point of origin.>
-        Version: '1'
-    Src: CMB
-    Type: string
-    Req: 'Yes'
-    Key: true
-  specimen_id: # this will be the exact same value that the CMB uses for parent_biospecimen_id
+  # specimen_id: # this will be the exact same value that the CMB uses for biospecimen_id
+  #   Desc: <A sequence of characters used to identify the kind of material that forms
+  #     the sample.> <br>CDE ID =  14986441 <br>This property is used as the key via
+  #     which child records, e.g. data files generated via Oncomine panel analyses,
+  #     can be associated with the appropriate specimen during data loading, and to
+  #     identify the correct records during data updates.                                                                                                                                                                                                                                                                                                                     #CMB's "Biospecimen ID"
+  #   Term:
+  #     - Origin: caDSR - CTDC
+  #       Code: '14986441' #(updated 07-23-24) prior CDE ID = 6921892 (added 06-03-24)
+  #       Value: Specimen Material Identifier #Biospecimen Source Laboratory Identifier <A unique sequence of alphanumeric characters used to identify the specimen at it's point of origin.>
+  #       Version: '1'
+    # Src: CMB
+    # Type: string
+    # Req: 'Yes'
+    # Key: true
+  specimen_record_id: # this will be the exact same value that the CMB uses for parent_biospecimen_id
     Desc: <A sequence of characters used to identify the kind of material that forms
       the parent sample.> <br>CDE ID =  14986442                                                                                #CMB's "Parent Biospecimen ID"
     Term:
@@ -1624,7 +1624,7 @@ PropDefinitions:
     Src: CMB
     Type: string
     Req: 'Yes'
-    Key: false
+    Key: true
   specimen_type: # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
     Desc: <The kind of material that forms the parent sample as captured in the Ontology
       for Biobanking (OBIB).> <br>CDE ID = 14986443
@@ -1979,7 +1979,7 @@ PropDefinitions:
         Version: '1'
     Src: FNL
     Type: string
-    Req: 'No'
+    Req: 'Yes'
     Key: true
     Tags:
       Template: 'No'
