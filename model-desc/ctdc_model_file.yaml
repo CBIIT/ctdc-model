@@ -262,8 +262,8 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - specimen_record_id #14986441
-      - specimen_id #14986442
+      # - specimen_id #14986441
+      - specimen_record_id #14986442
       - specimen_type #14986443 # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
       # - specimen_type #11253427 # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
       #- obi_specimen_type #11253427 not a good match to the caDSR term referenced by the CDE's ID
