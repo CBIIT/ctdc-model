@@ -1641,6 +1641,7 @@ PropDefinitions:
       - FFPE Block
       - Formalin Bone Marrow Biopsy
       - Formalin Fixed Tissue
+      - FORMALIN FIXED TISSUE
       - Snap Frozen Tissue
       - Stained Bone Marrow Aspirate Slide
       - Streck Blood
@@ -1648,6 +1649,7 @@ PropDefinitions:
       - Unstained Bone Marrow Aspirate Slide
       - Unstained Slide
       - Fresh Tissue in Media to PDMR
+      - Streck Blood to PDMR
     Req: 'Yes'
   # specimen_type: # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
   #   Desc: <The kind of material that forms the sample as captured in the Ontology
@@ -1706,6 +1708,7 @@ PropDefinitions:
       - FORMALIN FIXED TISSUE
       - Formalin Fixed Tissue
       - FRESH TISSUE
+      - Fresh Tissue
       - FROZEN TISSUE
       - Frozen Tissue
       - OTHER BODILY FLUIDs
@@ -1753,6 +1756,7 @@ PropDefinitions:
       - Metastatic
       - Normal
       - Primary
+      - Adjacent Non-Tumor
     Req: Preferred
   # icd_o_3_tissue_morphology:
   #   Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 11326261
@@ -1782,6 +1786,8 @@ PropDefinitions:
       - Baseline (Fresh)
       - On Treatment (Fresh)
       - Archival
+      - Progression (Fresh)
+      - Post-Treatment (No progression)
     Req: 'Yes'
   collection_date:
     Desc: <WORK NEEDED HERE> From the CMB perspective, this may be equivalent to "days_from_diagnosis_to_specimen_collection"
@@ -1797,7 +1803,7 @@ PropDefinitions:
       units:
         - days
       value_type: number
-    Req: 'Yes'
+    Req: Preferred
   # days_from_diagnosis_to_specimen_collection:
   #   Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis. <br>CDE ID = 11253404 ALL OF THIS IS INCORRECT BECAUSE THE INCORRECT CDE WAS REFERENCED; PER THE CORRECT CDE ID OF 11248865 THE PROPERTY DESCRIPTION SHOULD BE The number of days from the date the diagnosis was made to the date a sample was collected.
   #   Term:
