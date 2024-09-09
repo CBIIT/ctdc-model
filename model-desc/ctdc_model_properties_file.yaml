@@ -1644,8 +1644,10 @@ PropDefinitions:
       - Snap Frozen Tissue
       - Stained Bone Marrow Aspirate Slide
       - Streck Blood
+      - Streck Blood to VARI
       - Unstained Bone Marrow Aspirate Slide
       - Unstained Slide
+      - Fresh Tissue in Media to PDMR
     Req: 'Yes'
   # specimen_type: # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
   #   Desc: <The kind of material that forms the sample as captured in the Ontology
@@ -1694,17 +1696,23 @@ PropDefinitions:
     Src: CMB DD
     Enum:
       - BLOOD
+      - Blood
       - BONE MARROW
+      - Bone Marrow
       - BUCCAL CELL SAMPLE
       - CEREBROSPINAL FLUID
       - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
+      - Formalin Fixed Paraffin Embedded Tissue
       - FORMALIN FIXED TISSUE
+      - Formalin Fixed Tissue
       - FRESH TISSUE
       - FROZEN TISSUE
+      - Frozen Tissue
       - OTHER BODILY FLUIDs
       - SALIVA
       - STOOL
       - URINE
+      
     Req: 'Yes'
   anatomical_collection_site:
     Desc: <The location within the body from which a specimen was originally obtained
@@ -1745,7 +1753,7 @@ PropDefinitions:
       - Metastatic
       - Normal
       - Primary
-    Req: 'Yes'
+    Req: Preferred
   # icd_o_3_tissue_morphology:
   #   Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 11326261
   #   Term:
@@ -1771,6 +1779,9 @@ PropDefinitions:
       - BASELINE
       - ON TREATMENT
       - PROGRESSION
+      - Baseline (Fresh)
+      - On Treatment (Fresh)
+      - Archival
     Req: 'Yes'
   collection_date:
     Desc: <WORK NEEDED HERE> From the CMB perspective, this may be equivalent to "days_from_diagnosis_to_specimen_collection"
