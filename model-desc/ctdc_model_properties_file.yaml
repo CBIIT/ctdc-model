@@ -175,17 +175,17 @@ PropDefinitions:
     Req: 'Yes'
   dates_of_conduct:
     Desc: The timespan over which the study/trial was/is being conducted.
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
-        Value: Data Element Name
+    # Term:
+    #   - Origin: caDSR
+    #     Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
+    #     Value: Data Element Name
     Src: FNL
     Type: string
     Req: 'Yes'
   # principal_investigator
   person_record_id: 
     Desc: A globally unique identifier via which principle investigator can be differentiated across studies; specifically the value of study_id concatenated with the value of pi_last_name, <br>This property is used as the key via which child records, e.g. cohort records, can be associated with the appropriate principle investigator, and to identify the correct principle investigator records during data updates.
-    Src: Data Onwer(s)
+    Src: Data Owner(s)
     Type: string
     Req: 'Yes'
     Key: true
@@ -198,6 +198,7 @@ PropDefinitions:
       - Origin: CSAERS/NCI Standard #caDSR - NCI Standard
         Code: '2179589' #(updated 05-28-24) prior CDE ID = 10624731
         Value: Person Given/First Name #Principal Investigator First Name Text
+        Version: '2'
     Src: DSS
     Type: string
     Req: 'Yes'
@@ -209,7 +210,9 @@ PropDefinitions:
     Term:
       - Origin: CSAERS/NCI Standard #caDSR - NCI Standard
         Code: '2179591' #(updated 05-28-24) prior CDE ID = 10624733
-        Value: Person Family/Last Name #Principal Investigator Last Name Text  
+        Value: Person Family/Last Name #Principal Investigator Last Name Text
+        Version: '2'
+          
     Src: DSS
     Type: string
     Req: 'Yes'
@@ -220,7 +223,8 @@ PropDefinitions:
     Term:
       - Origin: CSAERS/NCI Standard #caDSR - NCI Standard
         Code: '2179590' #(updated 05-28-24) prior CDE ID = 10624732
-        Value: Person Middle Name #Principal Investigator Middle Name Text  
+        Value: Person Middle Name #Principal Investigator Middle Name Text
+        Version: '2'  
     Src: DSS
     Type: string
     Req: 'No'
@@ -770,14 +774,12 @@ PropDefinitions:
   #   Type: string
   #   Req: Preferred
   ctep_disease_term:
-    Desc: <The coded response indicating the MedDRA code Version 10 used in the NCI
-      Simplified Disease Classification (SDC) Terminology for diagnoses.> <br>CDE
-      ID = 4723846                                                                                                                                                           #<WORK NEEDED HERE> In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the subject in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: <The coded response indicating the MedDRA code Version 10 used in the NCI Simplified Disease Classification (SDC) Terminology for diagnoses.> <br>CDE ID = 4723846                                                                                                                                                           #<WORK NEEDED HERE> In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the subject in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: THERADEX
         Code: '4723846' #(added 05-28-24)
-        Value: NCI CTEP Simplified Disease Classification Terminology MedDRA Version
-          10 Code
+        Value: NCI CTEP Simplified Disease Classification Terminology MedDRA Version 10 Code
+        Version: '1'
     Src: value
     Enum: # Currently reflective only of values used in the v3 CMB data submission
       - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
@@ -799,6 +801,7 @@ PropDefinitions:
       - Origin: ADEERS
         Code: '2004425' #(added 05-28-24)
         Value: MedDRA Code
+        Version: '4'
     Src: CMB
     Enum: # Currently reflective only of the values used in the v3 CMB data submission
       - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
@@ -815,10 +818,10 @@ PropDefinitions:
     Req: 'Yes'
   snomed_disease_term:
     Desc: Description pending #<br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID'
-        Value: Data Element Name
+    # Term:
+    #   - Origin: caDSR
+    #     Code: 'code/ID'
+    #     Value: Data Element Name
     Src: CMB
     Enum: #Acceptable values currently specified, all of which are sourced from actual data, may be of use only during the generation of mock data, with the data type for this property potentially being changed to string.
       - Acute Myeloid Leukemia #17788007
@@ -1298,10 +1301,10 @@ PropDefinitions:
     Req: 'Yes'
   surgical_procedure_date:
     Desc: The date upon which the surgical procedure in question was performed. #EXPRESSED HOW?
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
-        Value: Data Element Name
+    # Term:
+    #   - Origin: caDSR
+    #     Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
+    #     Value: Data Element Name
     Src: CMB
     Type: integer
     Req: 'Yes'
@@ -1384,10 +1387,10 @@ PropDefinitions:
     Req: 'Yes'
   radiological_procedure_anatomical_location:
     Desc: The anatomical site or sites subject to the radiological procedure in question.
-    Term:
-      - Origin: caDSR
-        Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
-        Value: Data Element Name
+    # Term:
+    #   - Origin: caDSR
+    #     Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
+    #     Value: Data Element Name
     Src: CMB
     Type: string
     Req: Preferred
