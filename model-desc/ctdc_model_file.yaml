@@ -399,8 +399,8 @@ Relationships:
   directs: 
     Mul: many_to_many
     Ends:
-      - Src: principal_investigator
-        Dst: project
+      # - Src: principal_investigator
+      #   Dst: project
       - Src: principal_investigator
         Dst: study
     Props: null
