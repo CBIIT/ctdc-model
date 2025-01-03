@@ -307,14 +307,14 @@ Relationships:
     Ends:
       - Src: subject
         Dst: study
-      - Src: study
-        Dst: project
+      # - Src: study
+      #   Dst: project
       - Src: study # so can a lowest-level study belong directly to a highest-level program?
         Dst: program
       #- Src: project # this relationship can be removed because project is above study?
         #Dst: study
-      - Src: project # this seems legitimate
-        Dst: program     
+      # - Src: project # this seems legitimate
+      #   Dst: program     
     Props: null
   associated_with: # group all file relationships in here?
     Mul: many_to_one
@@ -327,16 +327,16 @@ Relationships:
         Dst: subject
       - Src: data_file
         Dst: study
-      - Src: data_file
-        Dst: project
+      # - Src: data_file
+      #   Dst: project
       - Src: associated_link
         Dst: study
-      - Src: associated_link
-        Dst: project  
+      # - Src: associated_link
+      #   Dst: project  
       - Src: image_collection
         Dst: study
-      - Src: image_collection
-        Dst: project
+      # - Src: image_collection
+      #   Dst: project
     Props: null      
   #of_study:
     #Mul: many_to_many
@@ -360,28 +360,28 @@ Relationships:
     Mul: many_to_one
     Ends:
       - Src: demographic
-        Dst: subject
+        Dst: participant
         Mul: one_to_one
       - Src: exposure
-        Dst: subject
+        Dst: participant
       - Src: diagnosis
-        Dst: subject
+        Dst: participant
       #- Src: treatment
-        #Dst: subject
+        #Dst: participant
       - Src: targeted_therapy
-        Dst: subject
+        Dst: participant
         Mul: many_to_many  
       - Src: non_targeted_therapy
-        Dst: subject
+        Dst: participant
         Mul: many_to_many
       - Src: surgery
-        Dst: subject
+        Dst: participant
         Mul: many_to_many
       - Src: radiotherapy
-        Dst: subject
+        Dst: participant
         Mul: many_to_many
       - Src: subject_status
-        Dst: subject
+        Dst: participant
         Mul: one_to_one  
         # to accommodate a Specimen being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Visit, etc.
       - Src: specimen
