@@ -305,7 +305,7 @@ Relationships:
   belongs_to:
     Mul: many_to_one
     Ends:
-      - Src: subject
+      - Src: participant
         Dst: study
       # - Src: study
       #   Dst: project
@@ -324,7 +324,7 @@ Relationships:
       - Src: data_file
         Dst: diagnosis
       - Src: data_file
-        Dst: subject
+        Dst: participant
       - Src: data_file
         Dst: study
       # - Src: data_file
@@ -356,7 +356,7 @@ Relationships:
         #Dst: project
         #Mul: many_to_one
     #Props: null    
-  of_subject:
+  of_participant:
     Mul: many_to_one
     Ends:
       - Src: demographic
@@ -385,10 +385,10 @@ Relationships:
         Mul: one_to_one  
         # to accommodate a Specimen being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Visit, etc.
       - Src: specimen
-        Dst: subject
+        Dst: participant
         # to accommodate a Data File being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Specimen or Diagnosis
-      #- Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
-        #Dst: subject
+      - Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+        Dst: participant
     Props: null
   #of_specimen:
     #Mul: many_to_one
