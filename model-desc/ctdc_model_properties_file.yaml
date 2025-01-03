@@ -61,35 +61,35 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   # project
-  project_name:
-    Desc: <The narrative title used to refer to an organ-, site-, disease- or phase-specific
-      data collection within a broad framework of goals under which related studies
-      or other research activities are grouped.> <br>CDE ID = 11459804
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '11459804' #(correct as of 05-28-24)
-        Value: Project Name Text
-        Version: '1'
-    Src: DSS
-    Type: string
-    Req: 'Yes'
-  project_short_name:
-    Desc: <An acronym or abbreviated form of the title used to refer to an organ-,
-      site- or disease-specific data collection within a broad framework of goals
-      under which related studies or other research activities are grouped.> <br>CDE
-      ID = 11459806 <br>This property is used as the key via which child records,
-      e.g. study/trial, image collection and principal investigator records, can be
-      associated with the appropriate project during data loading, and to identify
-      the correct records during data updates.
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '11459806' #(correct as of 05-28-24)
-        Value: Project Short Name Text
-        Version: '1'
-    Src: DSS
-    Type: string
-    Req: 'Yes'
-    Key: true
+  # project_name:
+  #   Desc: <The narrative title used to refer to an organ-, site-, disease- or phase-specific
+  #     data collection within a broad framework of goals under which related studies
+  #     or other research activities are grouped.> <br>CDE ID = 11459804
+  #   Term:
+  #     - Origin: caDSR - CRDC
+  #       Code: '11459804' #(correct as of 05-28-24)
+  #       Value: Project Name Text
+  #       Version: '1'
+  #   Src: DSS
+  #   Type: string
+  #   Req: 'Yes'
+  # project_short_name:
+  #   Desc: <An acronym or abbreviated form of the title used to refer to an organ-,
+  #     site- or disease-specific data collection within a broad framework of goals
+  #     under which related studies or other research activities are grouped.> <br>CDE
+  #     ID = 11459806 <br>This property is used as the key via which child records,
+  #     e.g. study/trial, image collection and principal investigator records, can be
+  #     associated with the appropriate project during data loading, and to identify
+  #     the correct records during data updates.
+  #   Term:
+  #     - Origin: caDSR - CRDC
+  #       Code: '11459806' #(correct as of 05-28-24)
+  #       Value: Project Short Name Text
+  #       Version: '1'
+  #   Src: DSS
+  #   Type: string
+  #   Req: 'Yes'
+  #   Key: true
   # study
   study_name:
     Desc: <The narrative title used as a textual label for a research data collection.>
@@ -369,7 +369,7 @@ PropDefinitions:
       - Download
       - Unrestricted
     Req: 'Yes'
-  # subject
+  # participant
   subject_id:
     Desc: <A sequence of letters, numbers, or characters that uniquely identifies
       the subject who has taken part in the investigation or research study.> The

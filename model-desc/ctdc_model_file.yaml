@@ -2,7 +2,7 @@
 # Title case names are "reserved" (meaningful to the parser)
 # Lower case names are labels for the entities
 Handle: CTDC
-Version: v1.0.0
+Version: v1.1.0
 Nodes:
   # node:
   #   Desc: text
@@ -19,7 +19,7 @@ Nodes:
   #     - property_5
   #     - property_6
   program:  
-    Desc: <WORK NEEDED HERE> Within the Clinical Trial Data Commons, projects and studies/trials are grouped into discrete programs, based upon the origins and/or scientific nature of each project or study/trial. These programs may or may not directly relate to any formal program, e.g. NCI funding programs. The Program node contains the properties required to appropriately characterize any given CTDC program.
+    Desc: Within the Clinical Trial Data Commons, projects and studies/trials are grouped into discrete programs, based upon the origins and/or scientific nature of each project or study/trial. These programs may or may not directly relate to any formal program, e.g. NCI funding programs. The Program node contains the properties required to appropriately characterize any given CTDC program.
     Tags:
       Category: administrative
       Assignment: core
@@ -29,17 +29,17 @@ Nodes:
       - program_name #11444542
       - program_short_name #11459801
       - crdc_id
-  project:
-    Desc: text <WORK NEEDED HERE>
-    Tags:
-      Category: administrative
-      Assignment: core
-      Class: secondary
-      Template: 'Yes'
-    Props:
-      - project_name #11459804
-      - project_short_name #11459806
-      - crdc_id
+  # project:
+  #   Desc: text <WORK NEEDED HERE>
+  #   Tags:
+  #     Category: administrative
+  #     Assignment: core
+  #     Class: secondary
+  #     Template: 'Yes'
+  #   Props:
+  #     - project_name #11459804
+  #     - project_short_name #11459806
+  #     - crdc_id
   principal_investigator:
     Desc: The Principal Investigator node contains properties which identify the principal investigator(s) responsible for any given study/trial. A study/trial may have one or more principal investigators, and any given individual may be listed as a principal investigator on more than one study/trial.
     Tags:
@@ -96,8 +96,8 @@ Nodes:
       - repository_name #14826003
       - collection_access #14825946
       - crdc_id
-  subject:
-    Desc: text <WORK NEEDED HERE>
+  participant:
+    Desc: Individual who takes part in the study
     Tags:
       Category: case # in lieu of "subject" being a category recognized by the DMN
       Assignment: core
