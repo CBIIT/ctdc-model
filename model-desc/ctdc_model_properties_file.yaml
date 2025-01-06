@@ -370,7 +370,7 @@ PropDefinitions:
       - Unrestricted
     Req: 'Yes'
   # participant
-  subject_id:
+  participant_id:
     Desc: <A sequence of letters, numbers, or characters that uniquely identifies
       the subject who has taken part in the investigation or research study.> The
       globally unique ID by which any given subject can be unambiguously identified
@@ -452,7 +452,7 @@ PropDefinitions:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each demographic record, used to identify the
       correct demographic records during data updates. <br>The value of this property
-      will generally be the same as the value of the subject_id property. <br>CDE
+      will generally be the same as the value of the participant_id property. <br>CDE
       ID = 14822135
     Term:
       - Origin: caDSR - CTDC
@@ -671,7 +671,7 @@ PropDefinitions:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each exposure record, used to identify the
       correct exposure records during data updates. The value of this property will
-      generally be the same as the value of the subject_id property. <br>CDE ID =
+      generally be the same as the value of the participant_id property. <br>CDE ID =
       14822135
     Term:
       - Origin: caDSR - CTDC
@@ -725,7 +725,7 @@ PropDefinitions:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each diagnosisc record, used to identify the
       correct diagnosis records during data updates. <br>The value of this property
-      will generally be the same as the value of the subject_id property. <br>CDE
+      will generally be the same as the value of the participant_id property. <br>CDE
       ID = 14822135 <br>This property is used as the key via which child records,
       e.g. clinical reports, can be associated with the appropriate diagnosis record
       during data loading, and to identify the correct records during data updates.
@@ -1493,7 +1493,7 @@ PropDefinitions:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each subject_status record, used to identify
       the correct subject_status records during data updates. The value of this property
-      will generally be the same as the value of the subject_id property. <br>CDE
+      will generally be the same as the value of the participant_id property. <br>CDE
       ID = 14822135
     Term:
       - Origin: caDSR - CTDC

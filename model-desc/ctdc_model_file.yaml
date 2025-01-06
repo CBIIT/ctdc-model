@@ -104,7 +104,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
-      - subject_id #12220014
+      - participant_id #12220014
       - biomarker_results_available #14735824
       - radiology_report_available #14735825
       - radiology_images_available #14735826
