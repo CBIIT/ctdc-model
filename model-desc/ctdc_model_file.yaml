@@ -99,7 +99,7 @@ Nodes:
   participant:
     Desc: Individual who takes part in the study
     Tags:
-      Category: case # in lieu of "subject" being a category recognized by the DMN
+      Category: case # in lieu of "participant" being a category recognized by the DMN
       Assignment: core
       Class: primary
       Template: 'Yes'
@@ -111,9 +111,9 @@ Nodes:
       - histology_images_available #14735827
       - crdc_id
   demographic:
-    Desc: The Demographic node is comprised of properties which describe the key characteristics of each study/trial subject, such as sex, gender, race and etnnicity, etc.
+    Desc: The Demographic node is comprised of properties which describe the key characteristics of each study/trial participant, such as sex, gender, race and etnnicity, etc.
     Tags:
-      Category: case # in lieu of "subject" being a category recognized by the DMN
+      Category: case # in lieu of "participant" being a category recognized by the DMN
       Assignment: core
       Class: primary
       Template: 'Yes'
@@ -135,9 +135,9 @@ Nodes:
       - ncbi_taxonomy_name #10543082
       - crdc_id
   exposure:
-    Desc: Properties within the Exposure node capture information concerning a subject's environmental, workplace and lifestyle exposure(s) which have the potential to have increased the risk of developing cancer, and/or caused cancer, and/or exacerbated an underlying maliignancy.
+    Desc: Properties within the Exposure node capture information concerning a participant's environmental, workplace and lifestyle exposure(s) which have the potential to have increased the risk of developing cancer, and/or caused cancer, and/or exacerbated an underlying maliignancy.
     Tags:
-      Category: case # in lieu of "subject" being a category recognized by the DMN
+      Category: case # in lieu of "participant" being a category recognized by the DMN
       Assignment: core
       Class: secondary
       Template: 'Yes'
@@ -147,7 +147,7 @@ Nodes:
       - carcinogen_exposure #5205578
       - crdc_id
   diagnosis:
-    Desc: The Diagnosis node contains numerous properties which fully characterize the type of cancer with which any given study/trial subject was diagnosed, inclusive of disease stage, histology/pathology, and age at diagnosis.
+    Desc: The Diagnosis node contains numerous properties which fully characterize the type of cancer with which any given study/trial participant was diagnosed, inclusive of disease stage, histology/pathology, and age at diagnosis.
     Tags:
       Category: clinical
       Assignment: core
@@ -172,7 +172,7 @@ Nodes:
       #- subject_age_at_diagnosis #10609539
       - crdc_id
   targeted_therapy:
-    Desc: The Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as targeted therapies, i.e. therapies that are considered to have enhanced therapeutic effects upon the specific type of cancer with which the subject has been diagnosed, and/or upon that type of cancer specifically within the context of a given subject because of factors such as tumor histology, grade, gene expression and genetic make-up.
+    Desc: The Targeted Therapy node contains properties which detail therapeutic interventions administered to a participant as targeted therapies, i.e. therapies that are considered to have enhanced therapeutic effects upon the specific type of cancer with which the participant has been diagnosed, and/or upon that type of cancer specifically within the context of a given participant because of factors such as tumor histology, grade, gene expression and genetic make-up.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -189,7 +189,7 @@ Nodes:
       - best_response_to_targeted_therapy #13383448
       - crdc_id
   non_targeted_therapy:
-    Desc: The Non-Targeted Therapy node contains properties which detail therapeutic interventions administered to a subject as standard and/or non-targeted therapies, i.e. therapies considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnosed, but not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject.
+    Desc: The Non-Targeted Therapy node contains properties which detail therapeutic interventions administered to a participant as standard and/or non-targeted therapies, i.e. therapies considered to be appropriate for and effective against the specific type of cancer with which the participant has been diagnosed, but not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given participant.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -206,7 +206,7 @@ Nodes:
       - best_response_to_non_targeted_therapy #13383448
       - crdc_id
   surgery:
-    Desc: The Surgery node contains properties which detail surgical procedures performed upon the subject in question, including the type of procedure performed, the anatomical locations impacted, notable findings, and whether or not the procedure was conducted as part of the overall treatment of the cancer in question.
+    Desc: The Surgery node contains properties which detail surgical procedures performed upon the participant in question, including the type of procedure performed, the anatomical locations impacted, notable findings, and whether or not the procedure was conducted as part of the overall treatment of the cancer in question.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -222,7 +222,7 @@ Nodes:
       - extent_of_residual_disease #13362284
       - crdc_id
   radiotherapy:
-    Desc: The Radiotherapy node contains properties which detail radiological procedures performed on the subject in question as part of their overall treatent, including the type of each radiological procedure performed, the anatomical location(s) impacted, and the response to such radiotherapy.
+    Desc: The Radiotherapy node contains properties which detail radiological procedures performed on the participant in question as part of their overall treatent, including the type of each radiological procedure performed, the anatomical location(s) impacted, and the response to such radiotherapy.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -240,15 +240,15 @@ Nodes:
       - radiotherapy_end_date #14984563
       - best_response_to_radiotherapy #13383448
       - crdc_id
-  subject_status:
-    Desc: Properties within the Subject Status node capture key information as to the subject's survival status and where applicable, a subject's withdrawal from the study. 
+  participant_status:
+    Desc: Properties within the Participant Status node capture key information as to the participant's survival status and where applicable, a participant's withdrawal from the study. 
     Tags:
       Category: clinical
       Assignment: core
       Class: secondary
       Template: 'Yes'
     Props:
-      - subject_status_record_id #14822135
+      - participant_status_record_id #14822135
       - survival_status #2847330
       - primary_cause_of_death #4783274
       - off_study #14834973
@@ -380,7 +380,7 @@ Relationships:
       - Src: radiotherapy
         Dst: participant
         Mul: many_to_many
-      - Src: subject_status
+      - Src: participant_status
         Dst: participant
         Mul: one_to_one  
         # to accommodate a Specimen being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Visit, etc.
