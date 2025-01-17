@@ -61,35 +61,35 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   # project
-  project_name:
-    Desc: <The narrative title used to refer to an organ-, site-, disease- or phase-specific
-      data collection within a broad framework of goals under which related studies
-      or other research activities are grouped.> <br>CDE ID = 11459804
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '11459804' #(correct as of 05-28-24)
-        Value: Project Name Text
-        Version: '1'
-    Src: DSS
-    Type: string
-    Req: 'Yes'
-  project_short_name:
-    Desc: <An acronym or abbreviated form of the title used to refer to an organ-,
-      site- or disease-specific data collection within a broad framework of goals
-      under which related studies or other research activities are grouped.> <br>CDE
-      ID = 11459806 <br>This property is used as the key via which child records,
-      e.g. study/trial, image collection and principal investigator records, can be
-      associated with the appropriate project during data loading, and to identify
-      the correct records during data updates.
-    Term:
-      - Origin: caDSR - CRDC
-        Code: '11459806' #(correct as of 05-28-24)
-        Value: Project Short Name Text
-        Version: '1'
-    Src: DSS
-    Type: string
-    Req: 'Yes'
-    Key: true
+  # project_name:
+  #   Desc: <The narrative title used to refer to an organ-, site-, disease- or phase-specific
+  #     data collection within a broad framework of goals under which related studies
+  #     or other research activities are grouped.> <br>CDE ID = 11459804
+  #   Term:
+  #     - Origin: caDSR - CRDC
+  #       Code: '11459804' #(correct as of 05-28-24)
+  #       Value: Project Name Text
+  #       Version: '1'
+  #   Src: DSS
+  #   Type: string
+  #   Req: 'Yes'
+  # project_short_name:
+  #   Desc: <An acronym or abbreviated form of the title used to refer to an organ-,
+  #     site- or disease-specific data collection within a broad framework of goals
+  #     under which related studies or other research activities are grouped.> <br>CDE
+  #     ID = 11459806 <br>This property is used as the key via which child records,
+  #     e.g. study/trial, image collection and principal investigator records, can be
+  #     associated with the appropriate project during data loading, and to identify
+  #     the correct records during data updates.
+  #   Term:
+  #     - Origin: caDSR - CRDC
+  #       Code: '11459806' #(correct as of 05-28-24)
+  #       Value: Project Short Name Text
+  #       Version: '1'
+  #   Src: DSS
+  #   Type: string
+  #   Req: 'Yes'
+  #   Key: true
   # study
   study_name:
     Desc: <The narrative title used as a textual label for a research data collection.>
@@ -105,7 +105,7 @@ PropDefinitions:
   study_short_name:
     Desc: <The acronym or abbreviated form of the title for a research data collection.>
       <br>CDE ID = 11459812 <br>This property is used as the key via which child records,
-      e.g. image collection and subject records, can be associated with the appropriate
+      e.g. image collection and participant records, can be associated with the appropriate
       study/trial during data loading, and to identify the correct records during
       data updates.
     Term:
@@ -369,14 +369,14 @@ PropDefinitions:
       - Download
       - Unrestricted
     Req: 'Yes'
-  # subject
-  subject_id:
+  # participant
+  participant_id:
     Desc: <A sequence of letters, numbers, or characters that uniquely identifies
-      the subject who has taken part in the investigation or research study.> The
-      globally unique ID by which any given subject can be unambiguously identified
+      the participant who has taken part in the investigation or research study.> The
+      globally unique ID by which any given participant can be unambiguously identified
       and displayed across studies/trials. <br>CDE ID = 12220014 <br>This property
       is used as the key via which child records, e.g. specimen records, can be associated
-      with the appropriate subject during data loading, and to identify the correct
+      with the appropriate participant during data loading, and to identify the correct
       records during data updates.
     Term:
       - Origin: caDSR - CDS
@@ -390,7 +390,7 @@ PropDefinitions:
   biomarker_results_available:
     Desc: <A response to indicate whether or not biomarker results are available for
       a person.> An indicator as to whether any biomarker results relating to the
-      subject in question are available. <br>CDE ID = 14735824
+      participant in question are available. <br>CDE ID = 14735824
     Term:
       - Origin: caDSR - CTDC
         Code: '14735824' #(added 07-16-24)
@@ -405,7 +405,7 @@ PropDefinitions:
   radiology_report_available:
     Desc: <A response to indicate whether or not any radiology reports are available
       for an individual.> An indicator as to whether any radiology reports results
-      relating to the subject in question are available. <br>CDE ID = 14735825                                                                                                                                                             # This property corresponds to CMB's RADIOLOGY REPORT annotation
+      relating to the participant in question are available. <br>CDE ID = 14735825                                                                                                                                                             # This property corresponds to CMB's RADIOLOGY REPORT annotation
     Term:
       - Origin: caDSR - CTDC
         Code: '14735825'  #(updated 07-16-24) prior CDE ID = 6944764
@@ -420,7 +420,7 @@ PropDefinitions:
   radiology_images_available:
     Desc: <A response to indicate whether or not any radiology images are available
       for an individual.> An indicator as to whether any radiology images relating
-      to the subject in question are available. <br>CDE ID = 14735826
+      to the participant in question are available. <br>CDE ID = 14735826
     Term:
       - Origin: caDSR - CTDC
         Code: '14735826' #(added 07-16-24)
@@ -435,7 +435,7 @@ PropDefinitions:
   histology_images_available:
     Desc: <A response to indicate whether or not any histology slide images are available
       for an individual.> An indicator as to whether any histology images relating
-      to the subject in question are available. <br>CDE ID = 14735827
+      to the participant in question are available. <br>CDE ID = 14735827
     Term:
       - Origin: caDSR - CTDC
         Code: '14735827' #(added 07-16-24)
@@ -452,7 +452,7 @@ PropDefinitions:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each demographic record, used to identify the
       correct demographic records during data updates. <br>The value of this property
-      will generally be the same as the value of the subject_id property. <br>CDE
+      will generally be the same as the value of the participant_id property. <br>CDE
       ID = 14822135
     Term:
       - Origin: caDSR - CTDC
@@ -463,8 +463,8 @@ PropDefinitions:
     Type: string
     Key: true
   age_at_enrollment:
-    Desc: <The age (in days) of the subject when the subject enrolled in the study.>
-      The age of the subject as of enrollment, measured in years. <br>CDE ID = 12299548                                                                                #ANY REFERENCE TO AGE IN DAYS IS INCORRECT
+    Desc: <The age (in days) of the participant when the participant enrolled in the study.>
+      The age of the participant as of enrollment, measured in years. <br>CDE ID = 12299548                                                                                #ANY REFERENCE TO AGE IN DAYS IS INCORRECT
     Term:
       - Origin: caDSR - PCDC
         Code: '12299548' #(added 05-31-24)
@@ -553,7 +553,7 @@ PropDefinitions:
     Req: Preferred
   height:
     Desc: <The number that describes the vertical distance of an individual.> The
-      height of the subject as of enrollment, measured in cm. <br>CDE ID = 2179643
+      height of the participant as of enrollment, measured in cm. <br>CDE ID = 2179643
     Term:
       - Origin: caDSR- CSAERS/NCI Standard
         Code: '2179643' #(added 05-31-24)
@@ -567,7 +567,7 @@ PropDefinitions:
     Req: Preferred
   weight:
     Desc: <The number that describes the vertical force exerted by the mass of an
-      individual as a result of gravity.> The weight of the subject as of enrollment,
+      individual as a result of gravity.> The weight of the participant as of enrollment,
       measured in kg. <br>CDE ID = 2179689
     Term:
       - Origin: caDSR - CSAERS/NCI Standard
@@ -583,7 +583,7 @@ PropDefinitions:
   body_surface_area:
     Desc: <The calculated numerical quantity that represents the 2-dimensional extent
       of the body surface relating height to weight.> The body surface area of the
-      subject as of enrollment, mathematically derived from the subject's height and
+      participant as of enrollment, mathematically derived from the participant's height and
       weight, and expressed in square meters. <br>CDE ID = 653
     Term:
       - Origin: caDSR - CTEP
@@ -619,7 +619,7 @@ PropDefinitions:
   highest_level_of_education:
     Desc: <The subdivision that summarizes the highest level of education attained
       by a person.> An indication as to the highest level of education attained by
-      the subject. <br>CDE ID = 2681552
+      the participant. <br>CDE ID = 2681552
     Term:
       - Origin: caDSR - NCI Standards (NCIP)
         Code: '2681552' #(added 05-31-24)
@@ -653,7 +653,7 @@ PropDefinitions:
     Type: integer # not enumerated
     Req: 'Yes'
   ncbi_taxonomy_name:
-    Desc: The textual label associated with a subject's organismal classification
+    Desc: The textual label associated with a participant's organismal classification
       as captured in the National Center for Biotechnology Information (NCBI) Taxonomy
       standard nomenclature and classification repository.  <br>Supposedly enumerated
       but no permissible values specified. <br>CDE ID = 10543082
@@ -671,7 +671,7 @@ PropDefinitions:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each exposure record, used to identify the
       correct exposure records during data updates. The value of this property will
-      generally be the same as the value of the subject_id property. <br>CDE ID =
+      generally be the same as the value of the participant_id property. <br>CDE ID =
       14822135
     Term:
       - Origin: caDSR - CTDC
@@ -707,7 +707,7 @@ PropDefinitions:
   carcinogen_exposure:
     Desc: <An indication of whether the participant was exposed to environmental/workplace
       carcinogens (for example arsenic, asbestos, diesel exhaust, chromium, silica).>
-      An indicator as to whether the subject in question has had significant exposure
+      An indicator as to whether the participant in question has had significant exposure
       to any known carcinogen(s) <br>CDE ID = 5205578
     Term:
       - Origin: caDSR - BPV
@@ -725,7 +725,7 @@ PropDefinitions:
     Desc: <A unique sequence of characters used to identify a linkage between related
       records.> A unique identifier of each diagnosisc record, used to identify the
       correct diagnosis records during data updates. <br>The value of this property
-      will generally be the same as the value of the subject_id property. <br>CDE
+      will generally be the same as the value of the participant_id property. <br>CDE
       ID = 14822135 <br>This property is used as the key via which child records,
       e.g. clinical reports, can be associated with the appropriate diagnosis record
       during data loading, and to identify the correct records during data updates.
@@ -774,7 +774,7 @@ PropDefinitions:
   #   Type: string
   #   Req: Preferred
   ctep_disease_term:
-    Desc: <The coded response indicating the MedDRA code Version 10 used in the NCI Simplified Disease Classification (SDC) Terminology for diagnoses.> <br>CDE ID = 4723846                                                                                                                                                           #<WORK NEEDED HERE> In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the subject in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
+    Desc: <The coded response indicating the MedDRA code Version 10 used in the NCI Simplified Disease Classification (SDC) Terminology for diagnoses.> <br>CDE ID = 4723846                                                                                                                                                           #<WORK NEEDED HERE> In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the participant in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
     Term:
       - Origin: THERADEX
         Code: '4723846' #(added 05-28-24)
@@ -795,7 +795,7 @@ PropDefinitions:
     Req: 'Yes'
   meddra_disease_code:
     Desc: <The MedDRA code describing a medical condition and/or anatomic location.>
-      An eight digit numerical code for the primary disease with which the subject
+      An eight digit numerical code for the primary disease with which the participant
       in question has been diagnosed. <br>CDE ID = 2004425
     Term:
       - Origin: ADEERS
@@ -857,7 +857,7 @@ PropDefinitions:
       - Superficial Spreading Melanoma #254730000
     Req: 'Yes'
   snomed_disease_code:
-    Desc: A 9-digit numerical code for the primary disease with which the subject
+    Desc: A 9-digit numerical code for the primary disease with which the participant
       in question has been diagnosed. <br>CDE ID = 6642369                                                                             #<br>Within the CMB Catalog Site, Disease Stage (SNOMED) is presented in the form of a human readable narrative statement of the primary disease which includes some histoligical detail and disease stage. <br>Acceptable values currently specified, all of which are sourced from actual data, may be of use only during the generation of mock data, with the data type for this property potentially being changed to string.
     Term:
       - Origin: caDSR
@@ -963,7 +963,7 @@ PropDefinitions:
   stage_of_disease:
     Desc: <Stage group determined from clinical information on the tumor (T), regional
       node (N) and metastases (M) and by grouping cases with similar prognosis for
-      cancer.> The stage of the primary disease with which the subject in question
+      cancer.> The stage of the primary disease with which the participant in question
       has been diagnosed. <br>CDE ID = 3440332
     Term:
       - Origin: caDSR - TCGA
@@ -1021,7 +1021,7 @@ PropDefinitions:
   #       - days
   #     value_type: number
   #   Req: 'Yes'
-  # subject_age_at_diagnosis:
+  # participant_age_at_diagnosis:
   #   Desc: Age at the time of diagnosis expressed in number of days since birth. CMB data has this expressed in years not days! <br>CDE ID = 10609539
   #   Term:
   #     - Origin: caDSR - CRDC
@@ -1051,14 +1051,14 @@ PropDefinitions:
     Desc: <A term describing a therapeutic agent as captured in the Pharmacological
       Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National
       Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic
-      agent administered to a subject as a targeted therapy, i.e. one that is considered
+      agent administered to a participant as a targeted therapy, i.e. one that is considered
       to have enhanced therapeutic effects upon the specific type of cancer with which
-      the subject has been diagnosed, and/or upon that type of cancer specifically
-      within the context of a given subject because of factors such as tumor histology,
+      the participant has been diagnosed, and/or upon that type of cancer specifically
+      within the context of a given participant because of factors such as tumor histology,
       grade, gene expression and genetic make-up. Notably, a therapeutic agent considered
-      to be and administered as a targeted therapy in one subject based upon the specifics
+      to be and administered as a targeted therapy in one participant based upon the specifics
       of such characteristics can, conversely, be considered and administered as a
-      non-targeted therapy in another subject, because of differences in his or her
+      non-targeted therapy in another participant, because of differences in his or her
       type of cancer per se, or the specific context of the cancer in question. <br>CDE
       ID = 14913015
     Term:
@@ -1171,14 +1171,14 @@ PropDefinitions:
     Desc: <A term describing a therapeutic agent as captured in the Pharmacological
       Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National
       Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic
-      agent administered to a subject as a non-targeted therapy, i.e. one that is
+      agent administered to a participant as a non-targeted therapy, i.e. one that is
       considered to be appropriate for and effective against the specific type of
-      cancer with which the subject has been diagnosed, but is not considered to have
+      cancer with which the participant has been diagnosed, but is not considered to have
       significantly enhanced therapeutic effects upon that cancer in general or upon
-      that cancer specifically within the context of a given subject. Notably, a therapeutic
-      agent considered to be and administered as a non-targeted therapy in one subject
+      that cancer specifically within the context of a given participant. Notably, a therapeutic
+      agent considered to be and administered as a non-targeted therapy in one participant
       can, conversely, be considered and administered as a targeted therapy in another
-      subject, where differences in his or her type of cancer per se, or the specific
+      participant, where differences in his or her type of cancer per se, or the specific
       context of the cancer in question make the therapy more specific. <br>CDE ID
       = 14913015
     Term:
@@ -1290,7 +1290,7 @@ PropDefinitions:
   surgical_procedure:
     Desc: <The type of surgical procedure categorized by type or purpose.> The name
       and/or a brief narrative description of the surgical procedure performed upon
-      the subject. <br>CDE ID = 13383457
+      the participant. <br>CDE ID = 13383457
     Term:
       - Origin: caDSR - PCDC
         Code: '13383457' #(updated) prior CDE 6411539'
@@ -1376,7 +1376,7 @@ PropDefinitions:
     Key: true
   radiological_procedure:
     Desc: The name and/or a brief narrative description of the radiological procedure
-      performed upon the subject. <br>CDE ID = 6411539
+      performed upon the participant. <br>CDE ID = 6411539
     Term:
       - Origin: caDSR
         Code: '6411539'
@@ -1386,7 +1386,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   radiological_procedure_anatomical_location:
-    Desc: The anatomical site or sites subject to the radiological procedure in question.
+    Desc: The anatomical site or sites participant to the radiological procedure in question.
     # Term:
     #   - Origin: caDSR
     #     Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
@@ -1488,12 +1488,12 @@ PropDefinitions:
       - Not Evaluable
       - Unknown
     Req: Preferred
-  # subject_status
-  subject_status_record_id:
+  # participant_status
+  participant_status_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
-      records.> A unique identifier of each subject_status record, used to identify
-      the correct subject_status records during data updates. The value of this property
-      will generally be the same as the value of the subject_id property. <br>CDE
+      records.> A unique identifier of each participant_status record, used to identify
+      the correct participant_status records during data updates. The value of this property
+      will generally be the same as the value of the participant_id property. <br>CDE
       ID = 14822135
     Term:
       - Origin: caDSR - CTDC
@@ -1654,7 +1654,7 @@ PropDefinitions:
       - Fresh Tissue in Media to PDMR
       - Streck Blood to PDMR
     Req: 'Yes'
-  # specimen_type: # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
+  # specimen_type: # this refers to the nature of the sub-specimen that was actually participant to downstream analysis
   #   Desc: <The kind of material that forms the sample as captured in the Ontology
   #     for Biobanking (OBIB).> <br>CDE ID = 11253427
   #   Term:
@@ -1819,8 +1819,8 @@ PropDefinitions:
   #       - days
   #     value_type: number
   #   Req: 'No'
-  # days_from_first_subject_visit_to_specimen_collection:
-  #   Desc: The number of days from the date the subject first visited to the date a sample was collected. <br>CDE ID = 11248874
+  # days_from_first_participant_visit_to_specimen_collection:
+  #   Desc: The number of days from the date the participant first visited to the date a sample was collected. <br>CDE ID = 11248874
   #   Term:
   #     - Origin: caDSR - CRDC
   #       Code: '11248874'
