@@ -1,0 +1,5 @@
+type	study.study_short_name	associated_link_id	associated_link_name	associated_link_url
+associated_link	CMB	CMB-associated_link-01	ClinicalTrials.gov record	https://classic.clinicaltrials.gov/ct2/show/NCT04314401
+associated_link	CMB	CMB-associated_link-02	Cancer Moonshot Biobank Home	https://moonshotbiobank.cancer.gov/
+associated_link	CMB	CMB-associated_link-03	About the Biobank	https://moonshotbiobank.cancer.gov/about
+associated_link	CMB	CMB-associated_link-04	CMB Imaging	https://www.cancerimagingarchive.net/research/cmb/

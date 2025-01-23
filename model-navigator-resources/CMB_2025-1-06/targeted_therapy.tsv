@@ -1,0 +1,659 @@
+targeted_therapy	targeted_therapy_dose	targeted_therapy_frequency	participant.participant_id	type	targeted_therapy_id
+Panitumumab		Every two weeks	MSB-01068	targeted_therapy	N931036
+Pembrolizumab		Every three weeks	MSB-02291	targeted_therapy	N748569
+Pembrolizumab		Every six weeks	MSB-06720	targeted_therapy	N718717
+Pembrolizumab		Every six weeks	MSB-04863	targeted_therapy	N317814
+Bevacizumab	4.55	Every two weeks	MSB-04847	targeted_therapy	N37004
+Pembrolizumab	200	Every three weeks	MSB-04847	targeted_therapy	N78713
+Durvalumab	10	Every two weeks	MSB-09794	targeted_therapy	N933684
+Nivolumab	480	Every four weeks	MSB-09018	targeted_therapy	N594211
+Bortezomib	1.3	Weekly	MSB-06305	targeted_therapy	N430181
+Isatuximab	10	Weekly	MSB-06305	targeted_therapy	N253480
+Lenalidomide	15	Daily	MSB-06305	targeted_therapy	N61130
+Pomalidomide	4	Daily	MSB-06305	targeted_therapy	N932230
+Selinexor	100	Weekly	MSB-06305	targeted_therapy	N42028
+Dabrafenib	150	Twice a day	MSB-01652	targeted_therapy	N917369
+Pembrolizumab	10	Every two weeks	MSB-01499	targeted_therapy	N941266
+Bevacizumab	300	Every two weeks	MSB-09019	targeted_therapy	N766205
+Pembrolizumab		Every six weeks	MSB-01206	targeted_therapy	N164931
+Bevacizumab	5	Every two weeks	MSB-02381	targeted_therapy	N79732
+Bevacizumab	4.6	Every two weeks	MSB-02381	targeted_therapy	N999982
+Bevacizumab	4.5	Every two weeks	MSB-02381	targeted_therapy	N199111
+Bevacizumab	4.75	Every two weeks	MSB-02381	targeted_therapy	N888198
+Bevacizumab	4.8	Every two weeks	MSB-02381	targeted_therapy	N932875
+Bevacizumab	4.65	Every two weeks	MSB-02381	targeted_therapy	N247348
+Bevacizumab	4.55	Every two weeks	MSB-02381	targeted_therapy	N473281
+Bevacizumab	500	Once	MSB-03725	targeted_therapy	N522099
+Bevacizumab	0	Once	MSB-03725	targeted_therapy	N176633
+Regorafenib	160	Daily	MSB-03725	targeted_therapy	N225124
+Bevacizumab	500	Every two weeks	MSB-03032	targeted_therapy	N370772
+Pembrolizumab	200	Every three weeks	MSB-01459	targeted_therapy	N545576
+Bevacizumab	5	Every two weeks	MSB-03808	targeted_therapy	N928954
+Bevacizumab	7.875	Every two weeks	MSB-03808	targeted_therapy	N684501
+Bevacizumab	7.5	Every two weeks	MSB-03808	targeted_therapy	N40809
+Bevacizumab	500	Every two weeks	MSB-03808	targeted_therapy	N202407
+Bevacizumab	495	Every two weeks	MSB-03808	targeted_therapy	N916067
+Osimertinib	80	Daily	MSB-09027	targeted_therapy	N205173
+Bevacizumab	400	Every two weeks	MSB-08588	targeted_therapy	N593860
+Bevacizumab	453	Every two weeks	MSB-08588	targeted_therapy	N606223
+Bevacizumab	500	Every two weeks	MSB-08588	targeted_therapy	N371901
+Daratumumab	1800	Every seven days	MSB-07473	targeted_therapy	N734550
+Daratumumab	1800	Every four weeks	MSB-07473	targeted_therapy	N456310
+Bortezomib	1.3	Twice a week	MSB-07473	targeted_therapy	N943493
+Daratumumab	1800	Once	MSB-07473	targeted_therapy	N21708
+Bortezomib	1.3	Weekly	MSB-07473	targeted_therapy	N234282
+Bortezomib	1.5	Weekly	MSB-07473	targeted_therapy	N821393
+Bortezomib	1.3	Every two weeks	MSB-07473	targeted_therapy	N834199
+Bortezomib	1.3	Every four days	MSB-07473	targeted_therapy	N89138
+Lenalidomide	5	Daily	MSB-07473	targeted_therapy	N83165
+Nivolumab	1	Every three weeks	MSB-01849	targeted_therapy	N549879
+Bortezomib		Every three weeks	MSB-05283	targeted_therapy	N370705
+Daratumumab	7.5	Every four weeks	MSB-05283	targeted_therapy	N361433
+Bevacizumab	5	Every two weeks	MSB-09151	targeted_therapy	N716726
+Bevacizumab	7.5	Every three weeks	MSB-09151	targeted_therapy	N212068
+Pembrolizumab	200	Every three weeks	MSB-05412	targeted_therapy	N24498
+Binimetinib	45	Twice a day	MSB-05412	targeted_therapy	N234334
+Encorafenib	450	Daily	MSB-05412	targeted_therapy	N425726
+Bortezomib	2.1	Every four weeks	MSB-02286	targeted_therapy	N988541
+Osimertinib	80	Daily	MSB-05508	targeted_therapy	N986550
+Bevacizumab		Every two weeks	MSB-08170	targeted_therapy	N374861
+Bevacizumab	400	Every two weeks	MSB-08170	targeted_therapy	N683774
+Carfilizomib	26.8	Weekly	MSB-04030	targeted_therapy	N792217
+Carfilizomib	70	Weekly	MSB-04030	targeted_therapy	N740961
+Carfilizomib	74.5	Weekly	MSB-04030	targeted_therapy	N539388
+Carfilizomib	76.16	Every two weeks	MSB-04030	targeted_therapy	N159506
+Carfilizomib	80	Every two weeks	MSB-04030	targeted_therapy	N244797
+Daratumumab	1800	Weekly	MSB-04030	targeted_therapy	N595495
+Carfilizomib	75.6	Every two weeks	MSB-04030	targeted_therapy	N992413
+Carfilizomib	73.9	Weekly	MSB-04030	targeted_therapy	N883102
+Carfilizomib	75.6	Weekly	MSB-04030	targeted_therapy	N237081
+Daratumumab	1800	Once	MSB-04030	targeted_therapy	N164839
+Daratumumab	1800	Every two weeks	MSB-04030	targeted_therapy	N125767
+Nivolumab		Every three weeks	MSB-07612	targeted_therapy	N958130
+Encorafenib	450	Daily	MSB-07612	targeted_therapy	N368700
+Dabrafenib	75	Twice a day	MSB-07612	targeted_therapy	N934413
+Pembrolizumab	200	Every three weeks	MSB-07612	targeted_therapy	N943041
+Encorafenib	150	Twice a day	MSB-07612	targeted_therapy	N24979
+Binimetinib	30	Daily	MSB-07612	targeted_therapy	N297983
+Binimetinib	45	Twice a day	MSB-07612	targeted_therapy	N353499
+Dabrafenib	75	Daily	MSB-07612	targeted_therapy	N778817
+Nivolumab	480	Every three weeks	MSB-07994	targeted_therapy	N817768
+Regorafenib		Daily	MSB-01262	targeted_therapy	N48703
+Docetaxel		Every three weeks	MSB-07483	targeted_therapy	N458135
+Atezolizumab		Every three weeks	MSB-05837	targeted_therapy	N297511
+Pembrolizumab	200	Every three weeks	MSB-07865	targeted_therapy	N194772
+Pembrolizumab	200	Every three weeks	MSB-03053	targeted_therapy	N230766
+Pembrolizumab	200	Every three weeks	MSB-08267	targeted_therapy	N132123
+Pembrolizumab		Every three weeks	MSB-09117	targeted_therapy	N972763
+Pembrolizumab	200	Every three weeks	MSB-09117	targeted_therapy	N534796
+Bevacizumab	300	Every two weeks	MSB-03258	targeted_therapy	N731984
+Bevacizumab	200	Every two weeks	MSB-03258	targeted_therapy	N724047
+Nivolumab		Every two weeks	MSB-06857	targeted_therapy	N583232
+Nivolumab	240	Every two weeks	MSB-06857	targeted_therapy	N676150
+Ipilimumab	120	Every three weeks	MSB-05040	targeted_therapy	N688863
+Ipilimumab	350	Every three weeks	MSB-05040	targeted_therapy	N674520
+Nivolumab	240	Every three weeks	MSB-05040	targeted_therapy	N436988
+Nivolumab	120	Every three weeks	MSB-05040	targeted_therapy	N24372
+Enzalutamide	160	Daily	MSB-03973	targeted_therapy	N993890
+Abiraterone	1	Daily	MSB-02917	targeted_therapy	N769531
+Bevacizumab	400	Every three weeks	MSB-00952	targeted_therapy	N568551
+Pembrolizumab		Every three weeks	MSB-02118	targeted_therapy	N409671
+Pembrolizumab		Every six weeks	MSB-02118	targeted_therapy	N595145
+Olaparib	300	Twice a day	MSB-07436	targeted_therapy	N508999
+Cabazitaxel	36	Every three weeks	MSB-07436	targeted_therapy	N67790
+Lenalidomide	10	Daily	MSB-02249	targeted_therapy	N509150
+Nivolumab	480	Every four weeks	MSB-03244	targeted_therapy	N669898
+Daratumumab	1800	Weekly	MSB-01103	targeted_therapy	N430675
+Daratumumab	1800	Once	MSB-01103	targeted_therapy	N94107
+Daratumumab	1800	Every two weeks	MSB-01103	targeted_therapy	N891894
+Pomalidomide	2	Daily	MSB-01103	targeted_therapy	N47777
+Enzalutamide	160	Daily	MSB-08178	targeted_therapy	N794990
+Pembrolizumab		Every three weeks	MSB-08922	targeted_therapy	N9681
+Bevacizumab	500	Every two weeks	MSB-06489	targeted_therapy	N949103
+Atezolizumab		Every three weeks	MSB-04332	targeted_therapy	N916225
+Bevacizumab	400	Every two weeks	MSB-07225	targeted_therapy	N874292
+Enzalutamide	160	Daily	MSB-05563	targeted_therapy	N503189
+Regorafenib	160	Daily	MSB-07059	targeted_therapy	N527506
+Abiraterone	500	Twice a day	MSB-06184	targeted_therapy	N372374
+Nivolumab	480	Every four weeks	MSB-08536	targeted_therapy	N902959
+Lenalidomide	25	Daily	MSB-04950	targeted_therapy	N939347
+Bortezomib	2.9	Every three days	MSB-04950	targeted_therapy	N614542
+Bortezomib	3	Every three days	MSB-04950	targeted_therapy	N100256
+Carfilizomib	150	Weekly	MSB-04950	targeted_therapy	N168542
+Daratumumab	1800	Weekly	MSB-04950	targeted_therapy	N637251
+Daratumumab	1800	Every two weeks	MSB-04950	targeted_therapy	N900131
+Elotuzumab	1000	Weekly	MSB-04950	targeted_therapy	N897644
+Pomalidomide	4	Daily	MSB-04950	targeted_therapy	N125999
+Lenalidomide	10	Daily	MSB-04950	targeted_therapy	N402817
+Bevacizumab	400	Every two weeks	MSB-09601	targeted_therapy	N804995
+Bevacizumab	700	Every three weeks	MSB-09601	targeted_therapy	N844491
+Nivolumab	210	Every four weeks	MSB-09601	targeted_therapy	N888627
+Bortezomib	2	Twice a week	MSB-05789	targeted_therapy	N241322
+Encorafenib + Cetuximab	900	Weekly	MSB-07099	targeted_therapy	N561816
+Atezolizumab	200	Every three weeks	MSB-07099	targeted_therapy	N326959
+Bevacizumab	450	Every two weeks	MSB-09886	targeted_therapy	N407445
+Bevacizumab	400	Every two weeks	MSB-09886	targeted_therapy	N682830
+Bevacizumab	325	Every two weeks	MSB-09886	targeted_therapy	N185577
+Afatinib	10	Daily	MSB-01031	targeted_therapy	N828505
+Durvalumab	958	Once	MSB-04315	targeted_therapy	N770328
+Nivolumab	480	Every four weeks	MSB-03796	targeted_therapy	N187802
+Nivolumab	480	Every four weeks	MSB-09774	targeted_therapy	N272312
+Bevacizumab	375	Every two weeks	MSB-03400	targeted_therapy	N597732
+Bevacizumab	337.5	Every two weeks	MSB-03400	targeted_therapy	N155558
+Dabrafenib	75	Twice a day	MSB-06735	targeted_therapy	N559572
+Panitumumab	400	Every two weeks	MSB-06236	targeted_therapy	N849066
+Daratumumab	1800	Every seven days	MSB-05562	targeted_therapy	N226382
+Carfilizomib	110	Twice a week	MSB-05562	targeted_therapy	N909587
+Bortezomib	2.5	Every seven days	MSB-05562	targeted_therapy	N522953
+Carfilizomib	39	Twice a week	MSB-05562	targeted_therapy	N259424
+Carfilizomib	70	Twice a week	MSB-05562	targeted_therapy	N125232
+Alectinib	600	Twice a day	MSB-01649	targeted_therapy	N953807
+Bevacizumab	300	Every two weeks	MSB-04153	targeted_therapy	N489656
+Bevacizumab	5	Every two weeks	MSB-04153	targeted_therapy	N982947
+Bevacizumab	400	Every two weeks	MSB-04153	targeted_therapy	N39082
+Durvalumab	1500	Every four weeks	MSB-01413	targeted_therapy	N206965
+Pembrolizumab	200	Every three weeks	MSB-00939	targeted_therapy	N258409
+Pembrolizumab	400	Every six weeks	MSB-00939	targeted_therapy	N391408
+Pembrolizumab	400	Every three weeks	MSB-00939	targeted_therapy	N703036
+Dabrafenib	150	Twice a day	MSB-04432	targeted_therapy	N303728
+Bevacizumab	300	Every two weeks	MSB-01627	targeted_therapy	N305760
+Bevacizumab	30	Every two weeks	MSB-01627	targeted_therapy	N764634
+Cetuximab	500	Every two weeks	MSB-01627	targeted_therapy	N464276
+Cetuximab	50	Every two weeks	MSB-01627	targeted_therapy	N723243
+Pomalidomide	4	Daily	MSB-03226	targeted_therapy	N526089
+Daratumumab	1800	Weekly	MSB-03226	targeted_therapy	N619241
+Daratumumab	1800	Every two weeks	MSB-03226	targeted_therapy	N346322
+Daratumumab	1800	Once	MSB-03226	targeted_therapy	N394847
+Bevacizumab	610	Every two weeks	MSB-06029	targeted_therapy	N190360
+Bortezomib	2.5	Weekly	MSB-05206	targeted_therapy	N257349
+Daratumumab	1800	Every four weeks	MSB-05206	targeted_therapy	N935450
+Bortezomib	2.5	Every seven days	MSB-05206	targeted_therapy	N787178
+Lenalidomide	25	Daily	MSB-05206	targeted_therapy	N985538
+Lenalidomide	10	Daily	MSB-05206	targeted_therapy	N963743
+Bortezomib	2.5	Once	MSB-05206	targeted_therapy	N983569
+Daratumumab	1800	Weekly	MSB-05206	targeted_therapy	N113139
+Daratumumab	1800	Every two weeks	MSB-05206	targeted_therapy	N370513
+Lenalidomide	15	Daily	MSB-05206	targeted_therapy	N9304
+Lenalidomide	5	Daily	MSB-05206	targeted_therapy	N440888
+Regorafenib	80	Daily	MSB-05206	targeted_therapy	N640232
+Regorafenib	160	Daily	MSB-05206	targeted_therapy	N190140
+Panitumumab	560	Every three weeks	MSB-00352	targeted_therapy	N739438
+Atezolizumab	1200	Every three weeks	MSB-05281	targeted_therapy	N609840
+Pembrolizumab	200	Weekly	MSB-01617	targeted_therapy	N568366
+Bevacizumab	700	Every two weeks	MSB-09991	targeted_therapy	N38796
+Bevacizumab	600	Every two weeks	MSB-09991	targeted_therapy	N40776
+Cetuximab	1200	Every two weeks	MSB-09991	targeted_therapy	N93558
+Isatuximab	500	Every two weeks	MSB-04031	targeted_therapy	N236011
+Carfilizomib	80	Weekly	MSB-04031	targeted_therapy	N297886
+Carfilizomib	65.7	Weekly	MSB-04031	targeted_therapy	N669819
+Isatuximab	476	Weekly	MSB-04031	targeted_therapy	N688850
+Pomalidomide	2	Daily	MSB-04031	targeted_therapy	N24913
+Carfilizomib	65.3	Weekly	MSB-04031	targeted_therapy	N243141
+Nivolumab	3	Once	MSB-03932	targeted_therapy	N90702
+Nivolumab	240	Every two weeks	MSB-03932	targeted_therapy	N980292
+Ipilimumab	1	Once	MSB-03932	targeted_therapy	N181969
+Lenalidomide	25	Daily	MSB-03406	targeted_therapy	N313412
+Bortezomib	2.5	Every three days	MSB-03406	targeted_therapy	N97687
+Ixazomib	3	Weekly	MSB-03406	targeted_therapy	N447911
+Daratumumab	1800	Every four weeks	MSB-03406	targeted_therapy	N762529
+Daratumumab	1800	Every seven days	MSB-03406	targeted_therapy	N633352
+Daratumumab	1800	Every two weeks	MSB-03406	targeted_therapy	N391552
+Ixazomib	4	Weekly	MSB-03406	targeted_therapy	N850917
+Cetuximab	500	Weekly	MSB-08045	targeted_therapy	N695523
+Cetuximab	800	Once	MSB-08045	targeted_therapy	N468728
+Encorafenib	300	Once	MSB-08045	targeted_therapy	N678400
+Bevacizumab	500	Every two weeks	MSB-08045	targeted_therapy	N393841
+Regorafenib	80	Daily	MSB-08045	targeted_therapy	N654421
+Regorafenib	160	Daily	MSB-08045	targeted_therapy	N614096
+Gemtuzumab Ozogamicin	4.5	Once	MSB-01723	targeted_therapy	N5400
+Midostaurin	50	Twice a day	MSB-01723	targeted_therapy	N569221
+Nivolumab	480	Every four weeks	MSB-02271	targeted_therapy	N616070
+Lenalidomide	10	Twice a day	MSB-08093	targeted_therapy	N390780
+Bortezomib	2.75	Weekly	MSB-08093	targeted_therapy	N671640
+Daratumumab	1800	Weekly	MSB-08093	targeted_therapy	N106703
+Bortezomib	2.5	Daily	MSB-08093	targeted_therapy	N509354
+Lenalidomide	5	Daily	MSB-08093	targeted_therapy	N760577
+Bortezomib	2.3	Every two weeks	MSB-03315	targeted_therapy	N298657
+Bortezomib	2.2	Every three days	MSB-03315	targeted_therapy	N942538
+Lenalidomide	15	Daily	MSB-03315	targeted_therapy	N893044
+Lenalidomide	10	Daily	MSB-03315	targeted_therapy	N607263
+Pomalidomide	4	Daily	MSB-03315	targeted_therapy	N934452
+Daratumumab	1800	Weekly	MSB-03315	targeted_therapy	N5622
+Daratumumab	1800	Every two weeks	MSB-03315	targeted_therapy	N877379
+Carfilizomib	120	Weekly	MSB-03315	targeted_therapy	N159429
+Selinexor	80	Every seven days	MSB-03315	targeted_therapy	N86310
+Lenalidomide	15	Daily	MSB-01224	targeted_therapy	N806453
+Lenalidomide	5	Daily	MSB-01224	targeted_therapy	N336766
+Bortezomib	2.5	Once	MSB-01224	targeted_therapy	N285472
+Carfilizomib	50	Weekly	MSB-01224	targeted_therapy	N558976
+Pomalidomide	2	Daily	MSB-01224	targeted_therapy	N136296
+Daratumumab	1800	Weekly	MSB-01224	targeted_therapy	N872359
+Daratumumab	1800	Every two weeks	MSB-01224	targeted_therapy	N834522
+Carfilizomib	110	Weekly	MSB-01224	targeted_therapy	N628315
+Carfilizomib	40	Once	MSB-01224	targeted_therapy	N650656
+Daratumumab	1800	Weekly	MSB-05742	targeted_therapy	N847815
+Bortezomib	3	Every three days	MSB-05742	targeted_therapy	N440381
+Daratumumab	1800	Once	MSB-05742	targeted_therapy	N463780
+Bortezomib	2.3	Every three days	MSB-05742	targeted_therapy	N369297
+Lenalidomide	25	Daily	MSB-05742	targeted_therapy	N855097
+Lenalidomide	10	Daily	MSB-05742	targeted_therapy	N520006
+Bevacizumab	399	Every two weeks	MSB-08631	targeted_therapy	N238476
+Bevacizumab	600	Every three weeks	MSB-08631	targeted_therapy	N182363
+Bevacizumab	445	Every two weeks	MSB-08631	targeted_therapy	N807123
+Bortezomib	1.3	Weekly	MSB-03885	targeted_therapy	N278594
+Bortezomib	1.339	Weekly	MSB-03885	targeted_therapy	N975607
+Lenalidomide	15	Every three weeks	MSB-03885	targeted_therapy	N912166
+Pomalidomide	4	Every three weeks	MSB-03885	targeted_therapy	N574984
+Daratumumab	1100	Weekly	MSB-03885	targeted_therapy	N396742
+Daratumumab	2300	Weekly	MSB-03885	targeted_therapy	N583726
+Daratumumab	2400	Weekly	MSB-03885	targeted_therapy	N571579
+Daratumumab	1900	Every Month	MSB-03885	targeted_therapy	N678620
+Daratumumab	1800	Every Month	MSB-03885	targeted_therapy	N531888
+Daratumumab	2350	Weekly	MSB-03885	targeted_therapy	N651424
+Daratumumab	2250	Every two weeks	MSB-03885	targeted_therapy	N419926
+Daratumumab	1800	Every two weeks	MSB-03885	targeted_therapy	N705778
+Daratumumab	2000	Every Month	MSB-03885	targeted_therapy	N191559
+Daratumumab	1860	Every Month	MSB-03885	targeted_therapy	N238672
+Pembrolizumab	200	Every three weeks	MSB-00556	targeted_therapy	N983442
+Nivolumab	240	Every two weeks	MSB-05975	targeted_therapy	N195820
+Nivolumab	480	Every four weeks	MSB-05975	targeted_therapy	N515042
+Nivolumab	60	Every three weeks	MSB-05975	targeted_therapy	N239926
+Ipilimumab	180	Every three weeks	MSB-05975	targeted_therapy	N421602
+Lenalidomide	25	Daily	MSB-03453	targeted_therapy	N438218
+Lenalidomide	20	Daily	MSB-03453	targeted_therapy	N340076
+Lenalidomide	10	Daily	MSB-03453	targeted_therapy	N701283
+Lenalidomide	15	Daily	MSB-03453	targeted_therapy	N920437
+Bortezomib	2.5	Every three days	MSB-03453	targeted_therapy	N721121
+Bortezomib	2.7	Every three days	MSB-03453	targeted_therapy	N611357
+Bortezomib	2.6	Every three days	MSB-03453	targeted_therapy	N130089
+Pomalidomide	4	Daily	MSB-03453	targeted_therapy	N154
+Daratumumab	1300	Weekly	MSB-03453	targeted_therapy	N132794
+Daratumumab	1800	Weekly	MSB-03453	targeted_therapy	N378061
+Daratumumab	1800	Every two weeks	MSB-03453	targeted_therapy	N43176
+Daratumumab	1800	Once	MSB-03453	targeted_therapy	N177948
+Carfilizomib	140	Weekly	MSB-03453	targeted_therapy	N570099
+Carfilizomib	110	Weekly	MSB-03453	targeted_therapy	N546612
+Carfilizomib	110	Every two weeks	MSB-03453	targeted_therapy	N157435
+Carfilizomib	120	Weekly	MSB-03453	targeted_therapy	N287274
+Carfilizomib	110	Once	MSB-03453	targeted_therapy	N291895
+Selinexor	80	Every seven days	MSB-03453	targeted_therapy	N102489
+Belantamab Mafodotin	200	Once	MSB-03453	targeted_therapy	N141751
+Docetaxel	132	Every three weeks	MSB-02472	targeted_therapy	N48978
+Bortezomib	1.3	Every three weeks	MSB-05737	targeted_therapy	N71503
+Bevacizumab	282	Every two weeks	MSB-01771	targeted_therapy	N676132
+Bevacizumab	300	Every two weeks	MSB-01771	targeted_therapy	N927504
+Bevacizumab	293	Every two weeks	MSB-01771	targeted_therapy	N477021
+Bevacizumab	326	Every two weeks	MSB-01771	targeted_therapy	N818376
+Bevacizumab	331	Every two hours	MSB-01771	targeted_therapy	N861778
+Bevacizumab	331	Every two weeks	MSB-01771	targeted_therapy	N181503
+Bevacizumab	271	Every two weeks	MSB-01771	targeted_therapy	N640331
+Panitumumab	400	Every two weeks	MSB-01771	targeted_therapy	N54
+Panitumumab	406	Every three weeks	MSB-01771	targeted_therapy	N71798
+Panitumumab	400	Every three weeks	MSB-01771	targeted_therapy	N83477
+Daratumumab	1800	Every four weeks	MSB-06699	targeted_therapy	N866988
+Bortezomib	2.5	Every seven days	MSB-06699	targeted_therapy	N107343
+Bortezomib	2.75	Every seven days	MSB-06699	targeted_therapy	N299541
+Daratumumab	1800	Every seven days	MSB-06699	targeted_therapy	N104655
+Lenalidomide	5	Daily	MSB-06699	targeted_therapy	N97901
+Lenalidomide	25	Daily	MSB-06699	targeted_therapy	N516874
+Lenalidomide	10	Daily	MSB-06699	targeted_therapy	N968664
+Daratumumab	1800	Every three weeks	MSB-06699	targeted_therapy	N956164
+Pembrolizumab	200	Every three weeks	MSB-05746	targeted_therapy	N562571
+Bortezomib	1.3	Weekly	MSB-07917	targeted_therapy	N338639
+Bortezomib	1.6	Once	MSB-07917	targeted_therapy	N777189
+Bortezomib	1.6	Weekly	MSB-07917	targeted_therapy	N324726
+Lenalidomide	10	Daily	MSB-07917	targeted_therapy	N388152
+Lenalidomide	25	Daily	MSB-07917	targeted_therapy	N654775
+Atezolizumab	1200	Every three weeks	MSB-05388	targeted_therapy	N169095
+Nivolumab	240	Once	MSB-09348	targeted_therapy	N200194
+Bortezomib	3.275	Weekly	MSB-03069	targeted_therapy	N852312
+Bortezomib	2.1	Weekly	MSB-03069	targeted_therapy	N74344
+Bortezomib	2.1	Every two weeks	MSB-03069	targeted_therapy	N733190
+Bortezomib	2.1	Every three weeks	MSB-03069	targeted_therapy	N820484
+Lenalidomide	25	Daily	MSB-03069	targeted_therapy	N203961
+Lenalidomide	5	Daily	MSB-03069	targeted_therapy	N241742
+Lenalidomide	20	Daily	MSB-07715	targeted_therapy	N509352
+Bortezomib	2.5	Every three days	MSB-07715	targeted_therapy	N71614
+Lenalidomide	10	Daily	MSB-02429	targeted_therapy	N660264
+Bortezomib	2.5	Every three days	MSB-02429	targeted_therapy	N566686
+Daratumumab	1800	Weekly	MSB-02429	targeted_therapy	N787772
+Bortezomib	3	Weekly	MSB-02429	targeted_therapy	N667201
+Bortezomib	3.1	Once	MSB-02429	targeted_therapy	N717478
+Bevacizumab	490	Every two weeks	MSB-04141	targeted_therapy	N900938
+Bevacizumab	1400	Every three weeks	MSB-04141	targeted_therapy	N467392
+Bevacizumab	480	Every two weeks	MSB-04141	targeted_therapy	N197672
+Panitumumab	580	Every two weeks	MSB-04141	targeted_therapy	N292548
+Panitumumab	470	Every two weeks	MSB-04141	targeted_therapy	N512560
+Panitumumab	450	Every two weeks	MSB-04141	targeted_therapy	N617263
+Panitumumab	440	Every two weeks	MSB-04141	targeted_therapy	N983196
+Panitumumab	460	Every two weeks	MSB-04141	targeted_therapy	N499734
+Lenalidomide	25	Daily	MSB-08799	targeted_therapy	N595839
+Lenalidomide	10	Daily	MSB-08799	targeted_therapy	N913332
+Bortezomib	3.2	Every three days	MSB-08799	targeted_therapy	N861558
+Bortezomib	3.1	Every three days	MSB-08799	targeted_therapy	N552946
+Bortezomib	3.3	Every three days	MSB-08799	targeted_therapy	N977185
+Bortezomib	3	Every three days	MSB-08799	targeted_therapy	N695367
+Lenalidomide	15	Daily	MSB-05126	targeted_therapy	N925099
+Lenalidomide	10	Daily	MSB-05126	targeted_therapy	N288164
+Bortezomib	2.7	Weekly	MSB-05126	targeted_therapy	N752309
+Bortezomib	3.5	Weekly	MSB-05126	targeted_therapy	N850196
+Lenalidomide	25	Daily	MSB-00140	targeted_therapy	N956760
+Lenalidomide	20	Daily	MSB-00140	targeted_therapy	N376407
+Lenalidomide	15	Daily	MSB-00140	targeted_therapy	N255006
+Bortezomib	2.3	Every three days	MSB-00140	targeted_therapy	N434337
+Bortezomib	2.2	Every three days	MSB-00140	targeted_therapy	N105390
+Bortezomib	2.2	Once	MSB-00140	targeted_therapy	N164947
+Bortezomib	2.1	Once	MSB-00140	targeted_therapy	N361753
+Pembrolizumab	200	Every three weeks	MSB-07278	targeted_therapy	N860738
+Pembrolizumab	200	Every three weeks	MSB-00520	targeted_therapy	N446763
+Lenalidomide	10	Daily	MSB-01049	targeted_therapy	N755781
+Lenalidomide	15	Daily	MSB-01049	targeted_therapy	N165210
+Bortezomib	2.5	Every three days	MSB-01049	targeted_therapy	N743570
+Daratumumab	1800	Weekly	MSB-01049	targeted_therapy	N662914
+Pembrolizumab	200	Every three weeks	MSB-07270	targeted_therapy	N208864
+Atezolizumab	200	Once	MSB-04437	targeted_therapy	N88593
+Pembrolizumab	400	Every six weeks	MSB-02302	targeted_therapy	N238086
+Gemtuzumab Ozogamicin	4.5	Every three days	MSB-07839	targeted_therapy	N308855
+Gemtuzumab Ozogamicin	4.5	Once	MSB-07839	targeted_therapy	N834968
+Atezolizumab	1200	Every three weeks	MSB-03330	targeted_therapy	N691981
+Bortezomib	3.2	Every three days	MSB-07709	targeted_therapy	N700952
+Lenalidomide	15	Daily	MSB-07709	targeted_therapy	N913156
+Lenalidomide	10	Daily	MSB-07709	targeted_therapy	N24628
+Carfilizomib	150	Weekly	MSB-07709	targeted_therapy	N587773
+Daratumumab	1800	Weekly	MSB-07709	targeted_therapy	N570942
+Lenalidomide	15	Daily	MSB-09491	targeted_therapy	N884217
+Lenalidomide	25	Daily	MSB-05435	targeted_therapy	N499685
+Lenalidomide	20	Daily	MSB-05435	targeted_therapy	N881783
+Lenalidomide	10	Daily	MSB-05435	targeted_therapy	N173663
+Lenalidomide	15	Daily	MSB-05435	targeted_therapy	N343983
+Bortezomib	3.5	Every three days	MSB-05435	targeted_therapy	N730228
+Enzalutamide	160	Daily	MSB-06894	targeted_therapy	N909465
+Enzalutamide	160	Every morning	MSB-06894	targeted_therapy	N151346
+Erlotinib	150	Daily	MSB-07945	targeted_therapy	N359687
+Gemtuzumab Ozogamicin	4.5	Once	MSB-07656	targeted_therapy	N564589
+Pembrolizumab	400	Every six weeks	MSB-07435	targeted_therapy	N631919
+Osimertinib	80	Daily	MSB-02661	targeted_therapy	N263817
+Pembrolizumab	200	Every three weeks	MSB-02661	targeted_therapy	N470751
+Atezolizumab	1200	Every three weeks	MSB-04286	targeted_therapy	N227972
+Bevacizumab	656	Every two weeks	MSB-02169	targeted_therapy	N745170
+Bevacizumab	656	Every three weeks	MSB-02169	targeted_therapy	N709297
+Durvalumab	1500	Every four weeks	MSB-08354	targeted_therapy	N616755
+Pembrolizumab	200	Once	MSB-04433	targeted_therapy	N465359
+Ipilimumab	345	Every two weeks	MSB-04433	targeted_therapy	N521884
+Nivolumab	115	Every two weeks	MSB-04433	targeted_therapy	N33797
+Dabrafenib	150	Twice a day	MSB-04433	targeted_therapy	N481421
+Pembrolizumab	200	Once	MSB-01597	targeted_therapy	N144126
+Ramucirumab	738	Once	MSB-01597	targeted_therapy	N380973
+Pembrolizumab	400	Every six weeks	MSB-08544	targeted_therapy	N352156
+Entrectinib	400	Every twenty four hours	MSB-07272	targeted_therapy	N818788
+Cobimetinib	60	Daily	MSB-06403	targeted_therapy	N572110
+Vemurafenib	960	Twice a day	MSB-06403	targeted_therapy	N666628
+Pembrolizumab	400	Every two weeks	MSB-06682	targeted_therapy	N717189
+Osimertinib	80	Daily	MSB-05756	targeted_therapy	N358310
+Bevacizumab	610	Every two weeks	MSB-07221	targeted_therapy	N636305
+Daratumumab	1800	Once	MSB-07479	targeted_therapy	N229590
+Bortezomib	2.1	Weekly	MSB-07479	targeted_therapy	N228274
+Daratumumab	1800	Every two weeks	MSB-07479	targeted_therapy	N486709
+Bortezomib	2	Weekly	MSB-07479	targeted_therapy	N357723
+Daratumumab	1800	Weekly	MSB-07479	targeted_therapy	N826620
+Apalutamide	240	Daily	MSB-04415	targeted_therapy	N184866
+Bevacizumab	470	Every two weeks	MSB-09897	targeted_therapy	N347804
+Lenalidomide	15	Daily	MSB-05676	targeted_therapy	N358564
+Daratumumab	1800	Weekly	MSB-05676	targeted_therapy	N979418
+Bevacizumab	350	Every two weeks	MSB-07784	targeted_therapy	N592367
+Pembrolizumab	200	Every three weeks	MSB-05354	targeted_therapy	N141206
+Ipilimumab	132	Every three weeks	MSB-05354	targeted_therapy	N433651
+Atezolizumab	1200	Every four weeks	MSB-07662	targeted_therapy	N169250
+Atezolizumab	1200	Once	MSB-06864	targeted_therapy	N361712
+Lenalidomide	20	Daily	MSB-07146	targeted_therapy	N790934
+Lenalidomide	25	Daily	MSB-07146	targeted_therapy	N301907
+Bortezomib	2.1	Every three days	MSB-07146	targeted_therapy	N170690
+Bortezomib	2	Every three days	MSB-07146	targeted_therapy	N37380
+Daratumumab	1800	Once	MSB-07146	targeted_therapy	N548497
+Daratumumab	1800	Weekly	MSB-07146	targeted_therapy	N195805
+Carfilizomib	90	Weekly	MSB-07146	targeted_therapy	N519231
+Carfilizomib	84.6	Weekly	MSB-07146	targeted_therapy	N623546
+Nivolumab	240	Every Month	MSB-01493	targeted_therapy	N869654
+Enzalutamide	40	Four times a day	MSB-05602	targeted_therapy	N240747
+Alectinib	600	Twice a day	MSB-07370	targeted_therapy	N374197
+Pembrolizumab	200	Every three weeks	MSB-01437	targeted_therapy	N562773
+Pembrolizumab	200	Every two weeks	MSB-01437	targeted_therapy	N3370
+Daratumumab	1800	Every Month	MSB-07085	targeted_therapy	N64226
+Bortezomib	2	Every seven days	MSB-07186	targeted_therapy	N159142
+Bortezomib	2.5	Every seven days	MSB-07186	targeted_therapy	N751473
+Lenalidomide	10	Daily	MSB-07186	targeted_therapy	N275622
+Lenalidomide	25	Daily	MSB-07186	targeted_therapy	N356495
+Daratumumab	1800	Every four weeks	MSB-07186	targeted_therapy	N796300
+Daratumumab	1800	Every three weeks	MSB-07186	targeted_therapy	N156291
+Lenalidomide	5	Daily	MSB-07186	targeted_therapy	N196409
+Lenalidomide	25	Daily	MSB-02901	targeted_therapy	N935095
+Lenalidomide	20	Daily	MSB-02901	targeted_therapy	N396300
+Lenalidomide	15	Daily	MSB-02901	targeted_therapy	N489238
+Lenalidomide	10	Daily	MSB-02901	targeted_therapy	N490799
+Lenalidomide	5	Daily	MSB-02901	targeted_therapy	N867501
+Bortezomib	2.1	Every three days	MSB-02901	targeted_therapy	N113795
+Bortezomib	1.6	Every three days	MSB-02901	targeted_therapy	N294125
+Pembrolizumab	200	Every three weeks	MSB-01594	targeted_therapy	N755298
+Lenalidomide	25	Daily	MSB-02988	targeted_therapy	N817140
+Lenalidomide	15	Daily	MSB-02988	targeted_therapy	N852446
+Lenalidomide	10	Daily	MSB-02988	targeted_therapy	N57636
+Bortezomib	3	Every three days	MSB-02988	targeted_therapy	N83574
+Bortezomib	3.1	Every three days	MSB-02988	targeted_therapy	N483184
+Bortezomib	3.2	Every three days	MSB-02988	targeted_therapy	N121081
+Midostaurin	50	Twice a day	MSB-05702	targeted_therapy	N142400
+Midostaurin	25	Every twelve hours	MSB-05702	targeted_therapy	N346719
+Pembrolizumab	200	Every three weeks	MSB-02370	targeted_therapy	N670720
+Bortezomib	2.5	Every seven days	MSB-04176	targeted_therapy	N281372
+Bortezomib	2.2	Every seven days	MSB-04176	targeted_therapy	N548841
+Lenalidomide	20	Daily	MSB-04176	targeted_therapy	N972072
+Lenalidomide	10	Daily	MSB-04176	targeted_therapy	N310337
+Bortezomib	3	Every three days	MSB-09124	targeted_therapy	N757737
+Bortezomib	2.9	Every three days	MSB-09124	targeted_therapy	N220162
+Lenalidomide	5	Every other day	MSB-09124	targeted_therapy	N623276
+Daratumumab	1800	Weekly	MSB-09124	targeted_therapy	N459223
+Lenalidomide	25	Daily	MSB-08058	targeted_therapy	N328651
+Lenalidomide	10	Daily	MSB-08058	targeted_therapy	N376251
+Lenalidomide	5	Daily	MSB-08058	targeted_therapy	N37039
+Nivolumab	360	Once	MSB-07578	targeted_therapy	N430895
+Ipilimumab	65	Once	MSB-07578	targeted_therapy	N927747
+Ipilimumab	59	Once	MSB-07578	targeted_therapy	N645295
+Ipilimumab	58	Once	MSB-07578	targeted_therapy	N262383
+Ipilimumab	60	Once	MSB-07578	targeted_therapy	N121651
+Ipilimumab	63	Once	MSB-07578	targeted_therapy	N184825
+Ipilimumab	66	Once	MSB-07578	targeted_therapy	N156227
+Lenalidomide	25	Daily	MSB-06606	targeted_therapy	N721456
+Lenalidomide	10	Daily	MSB-06606	targeted_therapy	N477203
+Lenalidomide	15	Daily	MSB-06606	targeted_therapy	N604031
+Bortezomib	2.3	Every three days	MSB-06606	targeted_therapy	N245151
+Bortezomib	2.4	Every three days	MSB-01208	targeted_therapy	N840401
+Bortezomib	2.3	Every three days	MSB-01208	targeted_therapy	N964974
+Lenalidomide	25	Daily	MSB-01208	targeted_therapy	N417481
+Pembrolizumab	200	Every three weeks	MSB-04500	targeted_therapy	N551400
+Durvalumab	925	Every two weeks	MSB-09666	targeted_therapy	N894975
+Bevacizumab	400	Every two weeks	MSB-07414	targeted_therapy	N821927
+Pembrolizumab	200	Every three weeks	MSB-05856	targeted_therapy	N260658
+Lenalidomide	20	Daily	MSB-00089	targeted_therapy	N768779
+Bortezomib	2.4	Weekly	MSB-00089	targeted_therapy	N224290
+Bortezomib	2.9	Once	MSB-08228	targeted_therapy	N845250
+Bortezomib	2.8	Once	MSB-08228	targeted_therapy	N462210
+Bortezomib	3.2	Weekly	MSB-08228	targeted_therapy	N880722
+Bortezomib	2.8	Every three days	MSB-08228	targeted_therapy	N960891
+Lenalidomide	5	Daily	MSB-08228	targeted_therapy	N506132
+Lenalidomide	15	Daily	MSB-08228	targeted_therapy	N616094
+Pembrolizumab	400	Every six weeks	MSB-01463	targeted_therapy	N68002
+Trametinib	2	Every twenty four hours	MSB-01433	targeted_therapy	N24966
+Dabrafenib	75	Every twelve hours	MSB-01433	targeted_therapy	N318535
+Trametinib	2	Daily	MSB-01433	targeted_therapy	N450285
+Daratumumab	1800	Every three weeks	MSB-05151	targeted_therapy	N470427
+Bortezomib	2	Every seven days	MSB-05151	targeted_therapy	N513210
+Bortezomib	2.5	Every seven days	MSB-05151	targeted_therapy	N959530
+Daratumumab	1800	Every seven days	MSB-05151	targeted_therapy	N188605
+Panitumumab	381.6	Every two weeks	MSB-09202	targeted_therapy	N410078
+Panitumumab	337.2	Every two weeks	MSB-09202	targeted_therapy	N983623
+Bevacizumab	300	Every two weeks	MSB-09202	targeted_therapy	N625635
+Darolutamide	600	Twice a day	MSB-08965	targeted_therapy	N685659
+Docetaxel	75	Every three weeks	MSB-08965	targeted_therapy	N301011
+Atezolizumab	200	Every three weeks	MSB-01960	targeted_therapy	N353202
+Durvalumab	1500	Every four weeks	MSB-04319	targeted_therapy	N953330
+Gemtuzumab Ozogamicin	4.5	Once	MSB-04591	targeted_therapy	N66237
+Midostaurin	50	Every twelve hours	MSB-04591	targeted_therapy	N606154
+Lenalidomide	25	Daily	MSB-00902	targeted_therapy	N446337
+Lenalidomide	10	Daily	MSB-00902	targeted_therapy	N474763
+Bortezomib	2.25	Every two weeks	MSB-00902	targeted_therapy	N802801
+Bortezomib	2.25	Weekly	MSB-00902	targeted_therapy	N688492
+Atezolizumab	1200	Every three weeks	MSB-00956	targeted_therapy	N267958
+Isatuximab	900	Weekly	MSB-00437	targeted_therapy	N536178
+Isatuximab	1000	Every two weeks	MSB-00437	targeted_therapy	N726845
+Pomalidomide	3	Daily	MSB-00437	targeted_therapy	N464364
+Isatuximab	1000	Once	MSB-00437	targeted_therapy	N985399
+Pomalidomide	4	Daily	MSB-00437	targeted_therapy	N674744
+Pembrolizumab	400	Every six weeks	MSB-04006	targeted_therapy	N44440
+Osimertinib	80	Daily	MSB-00316	targeted_therapy	N498770
+Pembrolizumab	200	Every three weeks	MSB-08777	targeted_therapy	N201880
+Pembrolizumab	200	Every three weeks	MSB-05460	targeted_therapy	N264395
+Lenalidomide	25	Daily	MSB-07840	targeted_therapy	N586994
+Lenalidomide	20	Daily	MSB-07840	targeted_therapy	N7725
+Lenalidomide	10	Daily	MSB-07840	targeted_therapy	N107631
+Bortezomib	2.6	Every three days	MSB-07840	targeted_therapy	N715650
+Bortezomib	2	Once	MSB-07840	targeted_therapy	N501055
+Carfilizomib	40	Daily	MSB-07840	targeted_therapy	N723033
+Carfilizomib	52.9	Daily	MSB-07840	targeted_therapy	N648886
+Daratumumab	1800	Every seven days	MSB-06833	targeted_therapy	N283278
+Bortezomib	1.3	Every seven days	MSB-06833	targeted_therapy	N863088
+Lenalidomide	25	Daily	MSB-06833	targeted_therapy	N481671
+Lenalidomide	25	Daily	MSB-08700	targeted_therapy	N32237
+Pembrolizumab	200	Every three weeks	MSB-04388	targeted_therapy	N827388
+Pembrolizumab	400	Every six weeks	MSB-04388	targeted_therapy	N460889
+Atezolizumab	1200	Every three weeks	MSB-01307	targeted_therapy	N201597
+Gemtuzumab Ozogamicin	4.5	Once	MSB-06711	targeted_therapy	N119044
+Midostaurin	50	Every twelve hours	MSB-05167	targeted_therapy	N731718
+Bevacizumab	600	Every two weeks	MSB-04143	targeted_therapy	N849511
+Pembrolizumab	200	Every three weeks	MSB-06059	targeted_therapy	N695352
+Pembrolizumab	200	Every three weeks	MSB-04968	targeted_therapy	N332107
+Osimertinib	80	Daily	MSB-05098	targeted_therapy	N486813
+Nivolumab	480	Every four weeks	MSB-08454	targeted_therapy	N243029
+Nivolumab	480	Every four weeks	MSB-06256	targeted_therapy	N992259
+Gemtuzumab Ozogamicin	4.5	Once	MSB-02960	targeted_therapy	N753202
+Midostaurin	50	Every twelve hours	MSB-02960	targeted_therapy	N915159
+Bevacizumab	5	Every two weeks	MSB-04064	targeted_therapy	N573687
+Bevacizumab	672	Every two weeks	MSB-04064	targeted_therapy	N136286
+Bevacizumab	680	Every two weeks	MSB-04064	targeted_therapy	N139359
+Bevacizumab	692	Every two weeks	MSB-04064	targeted_therapy	N983098
+Bevacizumab	696	Every two weeks	MSB-04064	targeted_therapy	N733319
+Bevacizumab	684	Every two weeks	MSB-04064	targeted_therapy	N351174
+Bevacizumab	704	Every two weeks	MSB-04064	targeted_therapy	N667274
+Bevacizumab	716	Every two weeks	MSB-04064	targeted_therapy	N473564
+Bevacizumab	720	Every two weeks	MSB-04064	targeted_therapy	N558513
+Nivolumab	480	Every four weeks	MSB-06817	targeted_therapy	N308722
+Bortezomib	3.1	Weekly	MSB-03312	targeted_therapy	N370628
+Bortezomib	3.2	Weekly	MSB-03312	targeted_therapy	N398640
+Bortezomib	2	Weekly	MSB-03312	targeted_therapy	N561701
+Lenalidomide	15	Daily	MSB-03312	targeted_therapy	N463284
+Pomalidomide	2	Daily	MSB-03312	targeted_therapy	N242378
+Daratumumab	1800	Weekly	MSB-03312	targeted_therapy	N843819
+Daratumumab	1800	Every two weeks	MSB-03312	targeted_therapy	N663749
+Daratumumab	1800	Once	MSB-03312	targeted_therapy	N422963
+Carfilizomib	120	Weekly	MSB-03312	targeted_therapy	N840153
+Carfilizomib	74.9	Weekly	MSB-03312	targeted_therapy	N53853
+Carfilizomib	74.6	Weekly	MSB-03312	targeted_therapy	N459013
+Carfilizomib	70	Weekly	MSB-03312	targeted_therapy	N219052
+Carfilizomib	73.9	Weekly	MSB-03312	targeted_therapy	N317175
+Carfilizomib	55.4	Weekly	MSB-03312	targeted_therapy	N631931
+Carfilizomib	55.6	Weekly	MSB-03312	targeted_therapy	N344605
+Carfilizomib	55.6	Every two weeks	MSB-03312	targeted_therapy	N72959
+Carfilizomib	55.9	Weekly	MSB-03312	targeted_therapy	N15613
+Carfilizomib	55.1	Weekly	MSB-03312	targeted_therapy	N863547
+Carfilizomib	75.3	Once	MSB-03312	targeted_therapy	N406568
+Carfilizomib	74.2	Weekly	MSB-03312	targeted_therapy	N384839
+Pomalidomide	4	Daily	MSB-03312	targeted_therapy	N710774
+Elotuzumab	900	Once	MSB-03312	targeted_therapy	N165416
+Lenalidomide	25	Daily	MSB-04450	targeted_therapy	N651853
+Lenalidomide	20	Daily	MSB-04450	targeted_therapy	N187706
+Lenalidomide	15	Daily	MSB-04450	targeted_therapy	N421802
+Lenalidomide	10	Daily	MSB-04450	targeted_therapy	N7427
+Lenalidomide	5	Daily	MSB-04450	targeted_therapy	N350370
+Bortezomib	2.2	Every three days	MSB-04450	targeted_therapy	N866136
+Bortezomib	2.7	Weekly	MSB-04450	targeted_therapy	N18709
+Bortezomib	2.2	Every two weeks	MSB-04450	targeted_therapy	N586573
+Bortezomib	2.2	Weekly	MSB-04450	targeted_therapy	N593693
+Nivolumab	480	Every four weeks	MSB-02829	targeted_therapy	N704767
+Bevacizumab	575	Every three weeks	MSB-03513	targeted_therapy	N887906
+Lenalidomide	25	Daily	MSB-02139	targeted_therapy	N30571
+Lenalidomide	10	Daily	MSB-02139	targeted_therapy	N558405
+Lenalidomide	5	Daily	MSB-02139	targeted_therapy	N477538
+Bortezomib	2.7	Every three days	MSB-02139	targeted_therapy	N236616
+Pembrolizumab	200	Every three weeks	MSB-03483	targeted_therapy	N533379
+Atezolizumab	1200	Every three weeks	MSB-05620	targeted_therapy	N992298
+Pembrolizumab	200	Every three weeks	MSB-03738	targeted_therapy	N155915
+Lenalidomide	10	Daily	MSB-09350	targeted_therapy	N619026
+Daratumumab	1300	Weekly	MSB-09350	targeted_therapy	N804068
+Daratumumab	1200	Weekly	MSB-09350	targeted_therapy	N19665
+Daratumumab	1200	Every two weeks	MSB-09350	targeted_therapy	N599685
+Daratumumab	1300	Every two weeks	MSB-09350	targeted_therapy	N610174
+Daratumumab	1400	Every two weeks	MSB-09350	targeted_therapy	N927928
+Daratumumab	1400	Once	MSB-09350	targeted_therapy	N793289
+Daratumumab	1300	Once	MSB-09350	targeted_therapy	N524786
+Daratumumab	1800	Once	MSB-09350	targeted_therapy	N449901
+Lenalidomide	15	Daily	MSB-01757	targeted_therapy	N221973
+Daratumumab	1800	Every seven days	MSB-01757	targeted_therapy	N889959
+Bortezomib	2.5	Every seven days	MSB-01757	targeted_therapy	N3534
+Pembrolizumab	200	Every three weeks	MSB-09880	targeted_therapy	N693133
+Panitumumab	600	Every two weeks	MSB-07991	targeted_therapy	N321913
+Lenalidomide	25	Daily	MSB-09994	targeted_therapy	N838197
+Lenalidomide	10	Daily	MSB-09994	targeted_therapy	N643766
+Bortezomib	2.9	Every three days	MSB-09994	targeted_therapy	N678872
+Bortezomib	3	Every three days	MSB-09994	targeted_therapy	N411648
+Bortezomib	2.9	Once	MSB-09994	targeted_therapy	N167874
+Pomalidomide	3	Daily	MSB-09994	targeted_therapy	N970560
+Pomalidomide	2	Daily	MSB-09994	targeted_therapy	N544075
+Daratumumab	1800	Weekly	MSB-09994	targeted_therapy	N369484
+Bortezomib	2.5	Every three days	MSB-00498	targeted_therapy	N38820
+Lenalidomide	10	Daily	MSB-00498	targeted_therapy	N250486
+Lenalidomide	25	Daily	MSB-00498	targeted_therapy	N270782
+Lenalidomide	15	Daily	MSB-00498	targeted_therapy	N811901
+Bortezomib	2.5	Weekly	MSB-00498	targeted_therapy	N265835
+Bortezomib	2.6	Weekly	MSB-00498	targeted_therapy	N448168
+Bortezomib	1.9	Every three days	MSB-00498	targeted_therapy	N817298
+Bortezomib	2	Every three days	MSB-00498	targeted_therapy	N771204
+Bortezomib	2.5	Once	MSB-00498	targeted_therapy	N103890
+Lenalidomide	5	Daily	MSB-00498	targeted_therapy	N308658
+Pomalidomide	2	Daily	MSB-00498	targeted_therapy	N517371
+Pomalidomide	1	Daily	MSB-00498	targeted_therapy	N613212
+Elotuzumab	1800	Once	MSB-00498	targeted_therapy	N158915
+Elotuzumab	1700	Once	MSB-00498	targeted_therapy	N378700
+Elotuzumab	1500	Once	MSB-00498	targeted_therapy	N318961
+Elotuzumab	900	Weekly	MSB-00498	targeted_therapy	N195952
+Daratumumab	1800	Weekly	MSB-00498	targeted_therapy	N76747
+Daratumumab	1800	Every two weeks	MSB-00498	targeted_therapy	N51603
+Daratumumab	1800	Once	MSB-00498	targeted_therapy	N139853
+			MSB-09737	targeted_therapy	N5097
+			MSB-04831	targeted_therapy	N740930
+			MSB-00263	targeted_therapy	N244946
+			MSB-09286	targeted_therapy	N391360
+			MSB-09495	targeted_therapy	N831486
+			MSB-09977	targeted_therapy	N100526
+			MSB-00205	targeted_therapy	N658437
+			MSB-02746	targeted_therapy	N820420
+			MSB-03272	targeted_therapy	N295634
+			MSB-08142	targeted_therapy	N156777
+			MSB-01363	targeted_therapy	N348846
+			MSB-06226	targeted_therapy	N336313
+			MSB-03548	targeted_therapy	N262461
+			MSB-06426	targeted_therapy	N736778
+			MSB-05387	targeted_therapy	N579624
+			MSB-09619	targeted_therapy	N371782
+			MSB-00643	targeted_therapy	N246707
+			MSB-00241	targeted_therapy	N128560
+			MSB-00268	targeted_therapy	N80025
+			MSB-07075	targeted_therapy	N79738
+			MSB-00755	targeted_therapy	N18821
+			MSB-08104	targeted_therapy	N626133
+			MSB-05876	targeted_therapy	N765310
+			MSB-04939	targeted_therapy	N349375
+			MSB-05447	targeted_therapy	N24942
+			MSB-03321	targeted_therapy	N245846
+			MSB-07848	targeted_therapy	N280299
+			MSB-02151	targeted_therapy	N55416
+			MSB-00602	targeted_therapy	N681367
+			MSB-08063	targeted_therapy	N764698
+			MSB-01825	targeted_therapy	N35898
