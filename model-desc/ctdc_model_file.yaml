@@ -111,7 +111,7 @@ Nodes:
       - histology_images_available #14735827
       - crdc_id
   demographic:
-    Desc: The Demographic node is comprised of properties which describe the key characteristics of each study/trial participant, such as sex, gender, race and etnnicity, etc.
+    Desc: The Demographic node is comprised of properties which describe the key characteristics of each study/trial participant, such as sex, race and etnnicity, etc.
     Tags:
       Category: case # in lieu of "participant" being a category recognized by the DMN
       Assignment: core
@@ -124,7 +124,7 @@ Nodes:
       - race #2192199
       - ethnicity #2192217
       - sex #7572817
-      - reported_gender #14927178
+      # - reported_gender #14927178
       - height #2179643
       - weight #2179689
       - body_surface_area #653
