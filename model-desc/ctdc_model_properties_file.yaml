@@ -523,34 +523,34 @@ PropDefinitions:
       - Male
       - Unknown
     Req: 'Yes'
-  reported_gender:
-    Desc: <A text term which describes a person's internally held sense of their gender,
-      which may or may not correspond to the individual's genotypic or phenotypic
-      sex.> Characteristics of people that are socially constructed, including norms,
-      behaviors, and roles based on their sex. As a social construct, these norms,
-      behaviors, and roles vary from society to society and can change over time.
-      <br>CDE ID = 14927178
-    Term:
-      - Origin: caDSR - NCI Standards
-        Code: '14927178' #(updated) prior #CDE ID = 10748236
-        Value: Person Gender Identity Type #Person Reported Gender Type  
-        Version: '1'
-    Src: DSS
-    Enum: # Currently reflective only of the values used by the CMB
-      # - Choose Not to Disclose # = Response Declined per CMB?
-      - Female # per CMB data values
-      # - Female-To-Male
-      - Female-to-Male Transsexual # per CMB data values
-      - Intersex # per CMB data values
-      - Male # per CMB data values
-      # - Male-To-Female
-      - Male-to-Female Transsexual # per CMB data values
-      # - None Of These Describe Me
-      # - Non-Conforming Gender
-      #- Refused to Answer # = Response Declined per CMB?
-      - Response Declined # per CMB data values
-      - Unknown # per CMB data values
-    Req: Preferred
+  # reported_gender:
+  #   Desc: <A text term which describes a person's internally held sense of their gender,
+  #     which may or may not correspond to the individual's genotypic or phenotypic
+  #     sex.> Characteristics of people that are socially constructed, including norms,
+  #     behaviors, and roles based on their sex. As a social construct, these norms,
+  #     behaviors, and roles vary from society to society and can change over time.
+  #     <br>CDE ID = 14927178
+  #   Term:
+  #     - Origin: caDSR - NCI Standards
+  #       Code: '14927178' #(updated) prior #CDE ID = 10748236
+  #       Value: Person Gender Identity Type #Person Reported Gender Type  
+  #       Version: '1'
+  #   Src: DSS
+  #   Enum: # Currently reflective only of the values used by the CMB
+  #     # - Choose Not to Disclose # = Response Declined per CMB?
+  #     - Female # per CMB data values
+  #     # - Female-To-Male
+  #     - Female-to-Male Transsexual # per CMB data values
+  #     - Intersex # per CMB data values
+  #     - Male # per CMB data values
+  #     # - Male-To-Female
+  #     - Male-to-Female Transsexual # per CMB data values
+  #     # - None Of These Describe Me
+  #     # - Non-Conforming Gender
+  #     #- Refused to Answer # = Response Declined per CMB?
+  #     - Response Declined # per CMB data values
+  #     - Unknown # per CMB data values
+  #   Req: Preferred
   height:
     Desc: <The number that describes the vertical distance of an individual.> The
       height of the participant as of enrollment, measured in cm. <br>CDE ID = 2179643
