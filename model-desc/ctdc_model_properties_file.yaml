@@ -37,7 +37,7 @@ PropDefinitions:
       umbrella) of goals under which related projects or other research activities
       are grouped. Example - Clinical Proteomic Tumor Analysis.> <br>CDE ID = 11444542
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11444542' #(correct as of 05-28-24)
         Value: Program Name Text
         Version: '1'
@@ -52,7 +52,7 @@ PropDefinitions:
       the appropriate program during data loading, and to identify the correct records
       during data updates.
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11459801' #(correct as of 05-28-24)
         Value: Program Short Name Text
         Version: '1'
@@ -66,7 +66,7 @@ PropDefinitions:
   #     data collection within a broad framework of goals under which related studies
   #     or other research activities are grouped.> <br>CDE ID = 11459804
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '11459804' #(correct as of 05-28-24)
   #       Value: Project Name Text
   #       Version: '1'
@@ -82,7 +82,7 @@ PropDefinitions:
   #     associated with the appropriate project during data loading, and to identify
   #     the correct records during data updates.
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '11459806' #(correct as of 05-28-24)
   #       Value: Project Short Name Text
   #       Version: '1'
@@ -95,7 +95,7 @@ PropDefinitions:
     Desc: <The narrative title used as a textual label for a research data collection.>
       <br>CDE ID = 11459810
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11459810' #(correct as of 05-28-24)
         Value: Study Name Text
         Version: '1'
@@ -109,7 +109,7 @@ PropDefinitions:
       study/trial during data loading, and to identify the correct records during
       data updates.
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11459812' #(correct as of 05-28-24)
         Value: Study Short Name Text
         Version: '1'
@@ -121,7 +121,7 @@ PropDefinitions:
     Desc: <A unique identifier assigned to a clinical study.> Any external identifier
       by which the study/trial in question is known.<br>CDE ID = 5054234
     Term:
-      - Origin: caDSR - NMDP
+      - Origin: caDSR # NMDP
         Code: '5054234' #(added 05-28-24)
         Value: Clinical Study Identifier
         Version: '1'
@@ -132,7 +132,7 @@ PropDefinitions:
     Desc: <A textual description of the study, with components such as objectives
       or goals.> A narrative description of the study/trial. <br>CDE ID = 3444002
     Term:
-      - Origin: caDSR - CCDI
+      - Origin: caDSR # CCDI
         Code: '3444002' #(added 05-28-24)
         Value: Study Research Identification Descriptive Text
         Version: '2'
@@ -143,7 +143,7 @@ PropDefinitions:
     Desc: <A classification of the study based upon the primary intent of the study's
       activities.> <br>CDE ID = 11160683
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11160683' #(correct as of 05-28-24)
         Value: Study Primary Purpose Type
         Version: '1'
@@ -234,7 +234,7 @@ PropDefinitions:
       identifier assigned to a principal investigator by the Open Researcher and Contributor
       ID (ORCID) organization. <br>CDE ID = 10624734
     Term:
-      - Origin: caDSR - CRDC #caDSR - NCI Standard
+      - Origin: caDSR # CRDC #caDSR - NCI Standard
         Code: '10624734' #(updated 05-28-24)
         Value: Person ORCID Text #Principal Investigator ORCID Text
         Version: '2'
@@ -247,7 +247,7 @@ PropDefinitions:
       records.> A unique identifier of each associated link record, used to identify
       the correct associated link records during data updates. <br>CDE ID = 14822135
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14822135' #(added 05-28-24)
         Value: Data Record Link Unique Identifier
         Version: '1'
@@ -260,7 +260,7 @@ PropDefinitions:
       text to be displayed within the UI and used as an intuitive identifier of any
       given link associated with the study/trial in question. <br>CDE ID = 14822136
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14822136' #(added 05-28-24)
         Value: Data Record Link Identifier Name
         Version: '1'
@@ -272,7 +272,7 @@ PropDefinitions:
       Wide Web.> The url to which an end user will be redirected upon selection of
       the corresponding link name displayed within the UI. <br>CDE ID = 14822140
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14822140' #(added 05-28-24)
         Value: Clinical Study Record Link Identifier URL Text
         Version: '1'
@@ -285,7 +285,7 @@ PropDefinitions:
       records.> A unique identifier of each image collection record, used to identify
       the correct image collection records during data updates. <br>CDE ID = 14822135
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14822135' #(added 05-28-24)
         Value: Data Record Link Unique Identifier
         Version: '1'
@@ -298,7 +298,7 @@ PropDefinitions:
       The name of the image collection exactly as it appears at the location where
       the collection can be viewed and/or accessed. <br>CDE ID = 14826008
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14826008' #(added 05-28-24)
         Value: Image Collection Name
         Version: '1'
@@ -313,7 +313,7 @@ PropDefinitions:
       or electronic.> A list of the image types included in the image collection,
       drawn from a list of acceptable values. <br>CDE ID = 12137353
     Term:
-      - Origin: caDSR - DICOM
+      - Origin: caDSR # DICOM
         Code: '12137353' #(added 05-28-24)
         Value: DICOM Modality Type
         Version: '1'
@@ -335,7 +335,7 @@ PropDefinitions:
       system where an electronic file is located.> The external url via which the
       image collection can be viewed and/or accessed. <br>CDE ID = 11556141
     Term:
-      - Origin: caDSR - CDS
+      - Origin: caDSR # CDS
         Code: '11556141' #(added 05-28-24)
         Value: Electronic File Pathname Text
         Version: '1'
@@ -347,7 +347,7 @@ PropDefinitions:
       The name of the image repository within which the image collection can be found,
       stated in the form of the appropriate acronym. <br>CDE ID = 14826003
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14826003' #(added 05-28-24)
         Value: Image Digital Data Repository Name
         Version: '1'
@@ -359,7 +359,7 @@ PropDefinitions:
       the image collection can be accessed only via the cloud, accessed only via download,
       or accessed via both mechanisms. <br>CDE ID = 14825946
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14825946' #(added 05-28-24)
         Value: Image Collection Access Type
         Version: '1'
@@ -379,7 +379,7 @@ PropDefinitions:
       with the appropriate participant during data loading, and to identify the correct
       records during data updates.
     Term:
-      - Origin: caDSR - CDS
+      - Origin: caDSR # CDS
         Code: '12220014' #(added 05-31-24)
         Value: Subject Data Origin Identifier
         Version: '1'
@@ -392,7 +392,7 @@ PropDefinitions:
       a person.> An indicator as to whether any biomarker results relating to the
       participant in question are available. <br>CDE ID = 14735824
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14735824' #(added 07-16-24)
         Value: Person Biomarker Result Available Indicator
         Version: '1'
@@ -407,7 +407,7 @@ PropDefinitions:
       for an individual.> An indicator as to whether any radiology reports results
       relating to the participant in question are available. <br>CDE ID = 14735825                                                                                                                                                             # This property corresponds to CMB's RADIOLOGY REPORT annotation
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14735825'  #(updated 07-16-24) prior CDE ID = 6944764
         Value: Person Radiology Report Available Indicator #Report Upload 
         Version: '1'
@@ -422,7 +422,7 @@ PropDefinitions:
       for an individual.> An indicator as to whether any radiology images relating
       to the participant in question are available. <br>CDE ID = 14735826
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14735826' #(added 07-16-24)
         Value: Person Radiology Image Available Indicator
         Version: '1'
@@ -437,7 +437,7 @@ PropDefinitions:
       for an individual.> An indicator as to whether any histology images relating
       to the participant in question are available. <br>CDE ID = 14735827
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14735827' #(added 07-16-24)
         Value: Person Histology Slide Image Available Indicator
         Version: '1'
@@ -455,7 +455,7 @@ PropDefinitions:
       will generally be the same as the value of the participant_id property. <br>CDE
       ID = 14822135
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14822135' #(added 05-31-24)
         Value: Data Record Link Unique Identifier
         Version: '1'
@@ -466,7 +466,7 @@ PropDefinitions:
     Desc: <The age (in days) of the participant when the participant enrolled in the study.>
       The age of the participant as of enrollment, measured in years. <br>CDE ID = 12299548                                                                                #ANY REFERENCE TO AGE IN DAYS IS INCORRECT
     Term:
-      - Origin: caDSR - PCDC
+      - Origin: caDSR # PCDC
         Code: '12299548' #(added 05-31-24)
         Value: Subject Age of Enrollment Day Count
         Version: '1'
@@ -480,7 +480,7 @@ PropDefinitions:
     Desc: <The text for reporting information about race based on the Office of Management
       and Budget (OMB) categories.> <br>CDE ID = 2192199
     Term:
-      - Origin: caDSR - OMB/NCI Standard
+      - Origin: caDSR # OMB/NCI Standard
         Code: '2192199' #(added 05-31-24)
         Value: Subject Race
         Version: '1'
@@ -498,7 +498,7 @@ PropDefinitions:
     Desc: <The text for reporting information about ethnicity based on the Office
       of Management and Budget (OMB) categories.> <br>CDE ID = 2192217
     Term:
-      - Origin: caDSR - OMB/NCI Standard
+      - Origin: caDSR # OMB/NCI Standard
         Code: '2192217' #(added 05-31-24)
         Value: Ethnic Group Category Text
         Version: '2'
@@ -512,7 +512,7 @@ PropDefinitions:
   sex:
     Desc: <A textual description of a person's sex at birth.> CDE ID = 7572817
     Term:
-      - Origin: caDSR - NCI Standards
+      - Origin: caDSR # NCI Standards
         Code: '7572817' #(updated 05-31-24) prior CDE ID = 6343385
         Value: Person Sex at Birth Category #Sex  
         Version: '2'
@@ -531,7 +531,7 @@ PropDefinitions:
   #     behaviors, and roles vary from society to society and can change over time.
   #     <br>CDE ID = 14927178
   #   Term:
-  #     - Origin: caDSR - NCI Standards
+  #     - Origin: caDSR # NCI Standards
   #       Code: '14927178' #(updated) prior #CDE ID = 10748236
   #       Value: Person Gender Identity Type #Person Reported Gender Type  
   #       Version: '1'
@@ -570,7 +570,7 @@ PropDefinitions:
       individual as a result of gravity.> The weight of the participant as of enrollment,
       measured in kg. <br>CDE ID = 2179689
     Term:
-      - Origin: caDSR - CSAERS/NCI Standard
+      - Origin: caDSR # CSAERS/NCI Standard
         Code: '2179689' #(added 05-31-24)
         Value: Person Weight Value
         Version: '4'
@@ -586,7 +586,7 @@ PropDefinitions:
       participant as of enrollment, mathematically derived from the participant's height and
       weight, and expressed in square meters. <br>CDE ID = 653
     Term:
-      - Origin: caDSR - CTEP
+      - Origin: caDSR # CTEP
         Code: '653' #(added 05-31-24)
         Value: Person Body Surface Area Value
         Version: '6'
@@ -599,7 +599,7 @@ PropDefinitions:
   occupation:
     Desc: <The occupation/job category of a person.> <br>CDE ID = 6617540
     Term:
-      - Origin: caDSR - NCIP
+      - Origin: caDSR # NCIP
         Code: '6617540' #(added 05-31-24)
         Value: Person Occupation Category
         Version: '1'
@@ -609,7 +609,7 @@ PropDefinitions:
   income:
     Desc: <The amount of earnings made by a family in a year.> <br>CDE ID = 14834966
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14834966' #(added 05-31-24)
         Value: Person Annual Household Income Text
         Version: '1'
@@ -621,7 +621,7 @@ PropDefinitions:
       by a person.> An indication as to the highest level of education attained by
       the participant. <br>CDE ID = 2681552
     Term:
-      - Origin: caDSR - NCI Standards (NCIP)
+      - Origin: caDSR # NCI Standards (NCIP)
         Code: '2681552' #(added 05-31-24)
         Value: Person Education Level Summary Type
         Version: '1'
@@ -644,7 +644,7 @@ PropDefinitions:
       of organisms according to their suspected evolutionary relationships. <br>CDE
       ID = 10543100
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '10543100' #(correct as of 05-31-24)
         Value: Subject National Center for Biotechnology Information Taxonomy Identifier
           Integer
@@ -658,7 +658,7 @@ PropDefinitions:
       standard nomenclature and classification repository.  <br>Supposedly enumerated
       but no permissible values specified. <br>CDE ID = 10543082
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '10543082' #(correct as of 05-31-24)
         Value: Subject National Center for Biotechnology Information Taxonomy Name
           Text
@@ -674,7 +674,7 @@ PropDefinitions:
       generally be the same as the value of the participant_id property. <br>CDE ID =
       14822135
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14822135' #(added 05-31-24)
         Value: Data Record Link Unique Identifier
         Version: '1'
@@ -687,7 +687,7 @@ PropDefinitions:
       substances found in air, water, food, soil, or product that may have a harmful
       effect on a person's health.> <br>CDE ID = 11256813
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11256813' #(correct as of 05-31-24)
         Value: Environmental Exposure Type
         Version: '1'
@@ -710,7 +710,7 @@ PropDefinitions:
       An indicator as to whether the participant in question has had significant exposure
       to any known carcinogen(s) <br>CDE ID = 5205578
     Term:
-      - Origin: caDSR - BPV
+      - Origin: caDSR # BPV
         Code: '5205578' #(added 05-31-24)
         Value: Carcinogen Exposure Indicator
         Version: '1'
@@ -730,7 +730,7 @@ PropDefinitions:
       e.g. clinical reports, can be associated with the appropriate diagnosis record
       during data loading, and to identify the correct records during data updates.
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14822135' #(added 05-28-24)
         Value: Data Record Link Unique Identifier
         Version: '1'
@@ -743,7 +743,7 @@ PropDefinitions:
       in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
       Thesaurus (NCIt) hierarchy tree.> <br>CDE ID = 14905532
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '14905532' #(added 05-28-24)
         Value: Disease Primary Diagnosis NCI Thesaurus Name
         Version: '1'
@@ -767,7 +767,7 @@ PropDefinitions:
   # icd_10_disease_code:
   #   Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans. <br>CDE ID = 11479873
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '11479873'
   #       Value: Diagnosis Disease or Disorder ICD-10-CM Code
   #   Src: DSS
@@ -909,7 +909,7 @@ PropDefinitions:
   # icd_o_primary_site:
   #   Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3). <br>CDE ID = 11341616
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '11341616'
   #       Value: Diagnosis Primary Anatomic Site ICD-O-3 Code
   #   Src: DSS
@@ -919,7 +919,7 @@ PropDefinitions:
     Desc: <The location within the body from where the disease of interest originated
       as captured in the Uberon identifier.> <br>CDE ID = 14883047
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '14883047' #(added 05-28-24)
         Value: Disease Primary Site of Disease Uberon Identifier
         Version: '1'
@@ -930,7 +930,7 @@ PropDefinitions:
     Desc: <Words that describe the normal and abnormal morphologic characteristics
       in cells and tissues.> <br>CDE ID = 14842510
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14842510'
         Value: Disease or Disorder Histology Text
         Version: '1'
@@ -953,7 +953,7 @@ PropDefinitions:
     Desc: <Words that describe the classification of tumors based on their histology.>
       CDE ID = 14843594
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14843594' #(updated 05-28-24) prior CDE ID = 7344580
         Value: Disease or Disorder Histologic Subtype Text
         Version: '1'
@@ -966,7 +966,7 @@ PropDefinitions:
       cancer.> The stage of the primary disease with which the participant in question
       has been diagnosed. <br>CDE ID = 3440332
     Term:
-      - Origin: caDSR - TCGA
+      - Origin: caDSR # TCGA
         Code: '3440332' #(added 05-28-24)
         Value: Neoplasm American Joint Committee on Cancer Clinical Group Stage
         Version: '1'
@@ -985,7 +985,7 @@ PropDefinitions:
     Desc: <A text term to express the degree of abnormality of cancer cells as a measure
       of differentiation and aggressiveness.> <br>CDE ID = 11325685
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11325685' #(correct as of 05-28-24)
         Value: Diagnosis Tumor Grade
         Version: '1'
@@ -1012,7 +1012,7 @@ PropDefinitions:
   # date_of_diagnosis:
   #   Desc: <The date of the procedure or evaluation used to determine the diagnosis.> <br>CDE ID = 2178801 (added 05-28-24)
   #   Term:
-  #     - Origin: caDSR - CCR
+  #     - Origin: caDSR # CCR
   #       Code: '2178801'
   #       Value: Diagnosis Date
   #   Src: CMB
@@ -1024,7 +1024,7 @@ PropDefinitions:
   # participant_age_at_diagnosis:
   #   Desc: Age at the time of diagnosis expressed in number of days since birth. CMB data has this expressed in years not days! <br>CDE ID = 10609539
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '10609539'
   #       Value: Subject Age at Diagnosis Integer
   #   Src: DSS
@@ -1039,7 +1039,7 @@ PropDefinitions:
       records.> A unique identifier of each targeted therapy record, used to identify
       the correct targeted therapy records during data updates. <br>CDE ID = 14822135
     Term:
-      - Origin: caDSR - CCDI
+      - Origin: caDSR # CCDI
         Code: '14822135' #(added 05-29-24)
         Value: Data Record Link Unique Identifier
         Version: '1'
@@ -1062,7 +1062,7 @@ PropDefinitions:
       type of cancer per se, or the specific context of the cancer in question. <br>CDE
       ID = 14913015
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '14913015' #(updated 05-29-24) prior CDE ID = 6400634
         Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus
           Name                                                                              #Concomitant Medication Name
@@ -1075,7 +1075,7 @@ PropDefinitions:
       targeted therapeutic agent in question was administered, exclusive of dosage
       units. <br>CDE ID = 2182728
     Term:
-      - Origin: caDSR - DCP
+      - Origin: caDSR # DCP
         Code: '2182728' #(added 05-29-24)
         Value: Agent Dose
         Version: '3'
@@ -1087,7 +1087,7 @@ PropDefinitions:
       agent or measure.> The units of measure for the dose at which the targeted therapeutic
       agent in question was administered. <br>CDE ID = 2321160
     Term:
-      - Origin: caDSR - CCR
+      - Origin: caDSR # CCR
         Code: '2321160' #(added 05-29-24)
         Value: Agent Administration Dose Unit of Measure Name
         Version: '4'
@@ -1099,7 +1099,7 @@ PropDefinitions:
       at which the targeted therapeutic agent in question was administered. <br>CDE
       ID = 2003878
     Term:
-      - Origin: caDSR - CTEP
+      - Origin: caDSR # CTEP
         Code: '2003878' #(added 05-29-24)
         Value: Agent Administered Frequency
         Version: '4'
@@ -1112,7 +1112,7 @@ PropDefinitions:
       began, expressed as the number of days before or after study enrollment the
       targeted therapy administration began. <br>CDE ID = 14984532
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14984532' #(added 07-25-24)
         Value: Procedure Enrollment To Treatment Start Day Count
         Version: '1'
@@ -1137,7 +1137,7 @@ PropDefinitions:
       changes resulted from treatment.> An indication as to the best overall response
       to treatment with the targeted therapy in question. <br>CDE ID = 13383448
     Term:
-      - Origin: caDSR - PCDC
+      - Origin: caDSR # PCDC
         Code: '13383448' #(added 05-29-24)
         Value: Disease Response Assessment Outcome
         Version: '1'
@@ -1159,7 +1159,7 @@ PropDefinitions:
       records.> A unique identifier of each non-targeted therapy record, used to identify
       the correct non-targeted therapy records during data updates. <br>CDE ID = 14822135
     Term:
-      - Origin: caDSR - CCDI
+      - Origin: caDSR # CCDI
         Code: '14822135' #(added 05-29-24)
         Value: Data Record Link Unique Identifier
         Version: '1'
@@ -1182,7 +1182,7 @@ PropDefinitions:
       context of the cancer in question make the therapy more specific. <br>CDE ID
       = 14913015
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '14913015' #(updated 05-29-24) prior CDE ID = 6400634
         Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus
           Name                                                                              #Concomitant Medication Name 
@@ -1195,7 +1195,7 @@ PropDefinitions:
       non-targeted therapeutic agent in question was administered, exclusive of the
       dosage units. <br>CDE ID = 2182728
     Term:
-      - Origin: caDSR - DCP
+      - Origin: caDSR # DCP
         Code: '2182728' #(added 05-29-24)
         Value: Agent Dose
         Version: '3'
@@ -1207,7 +1207,7 @@ PropDefinitions:
       agent or measure.> The units of measure for the dose at which the non-targeted
       therapeutic agent in question was administered. <br>CDE ID = 2321160
     Term:
-      - Origin: caDSR - CCR
+      - Origin: caDSR # CCR
         Code: '2321160' #(added 05-29-24)
         Value: Agent Administration Dose Unit of Measure Name
         Version: '4'
@@ -1219,7 +1219,7 @@ PropDefinitions:
       at which the non-targeted therapeutic agent in question was administered. <br>CDE
       ID = 2003878
     Term:
-      - Origin: caDSR - CTEP
+      - Origin: caDSR # CTEP
         Code: '2003878' #(added 05-29-24)
         Value: Agent Administered Frequency
         Version: '4'
@@ -1232,7 +1232,7 @@ PropDefinitions:
       began, expressed as the number of days before or after study enrollment the
       non-targeted therapy administration began. <br>CDE ID = 14984532
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14984532' #(added 07-25-24)
         Value: Procedure Enrollment To Treatment Start Day Count
         Version: '1'
@@ -1245,7 +1245,7 @@ PropDefinitions:
       ended, expressed as the number of days before or after study enrollment the
       non-targeted therapy administration ended. <br>CDE ID = 14984563
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14984563' #(added 07-25-24)
         Value: Procedure Enrollment To Treatment End Day Count
         Version: '1'
@@ -1257,7 +1257,7 @@ PropDefinitions:
       changes resulted from treatment.> An indication as to the best overall response
       to treatment with the non-targeted therapy in question. <br>CDE ID = 13383448
     Term:
-      - Origin: caDSR - PCDC
+      - Origin: caDSR # PCDC
         Code: '13383448' #(added 05-29-24)
         Value: Disease Response Assessment Outcome
         Version: '1'
@@ -1279,7 +1279,7 @@ PropDefinitions:
       records.> A unique identifier of each surgical procedure record, used to identify
       the correct surgical procedure records during data updates. <br>CDE ID = 14822135
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14822135' #(added 05-29-24)
         Value: Data Record Link Unique Identifier
         Version: '1'
@@ -1292,7 +1292,7 @@ PropDefinitions:
       and/or a brief narrative description of the surgical procedure performed upon
       the participant. <br>CDE ID = 13383457
     Term:
-      - Origin: caDSR - PCDC
+      - Origin: caDSR # PCDC
         Code: '13383457' #(updated) prior CDE 6411539'
         Value: Therapeutic Surgical Procedure Type #Procedure Name  
         Version: '1'
@@ -1313,7 +1313,7 @@ PropDefinitions:
       was performed.> The anatomical site or sites at which the surgical procedure
       in question was performed. <br>CDE ID = 14980609
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14980609' #(added 07-16-24)
         Value: Procedure Anatomic Site Uberon Identifier
         Version: '1'
@@ -1326,7 +1326,7 @@ PropDefinitions:
       An indication as to whether the surgical procedure in question was performed
       with therapeutic intent. <br>CDE ID = 6765611
     Term:
-      - Origin: caDSR - MCL
+      - Origin: caDSR # MCL
         Code: '6765611' #(added 07-16-24)
         Value: Therapeutic Procedure Occurrence Indicator
         Version: '1'
@@ -1340,7 +1340,7 @@ PropDefinitions:
       description of any significant findings observed during the surgical procedure
       in question. <br>CDE ID = 14918773
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14918773' #(added 07-16-24)
         Value: Procedure Surgical Finding Text
         Version: '1'
@@ -1352,7 +1352,7 @@ PropDefinitions:
       treatment that is only apparent using highly sensitive techniques.> <br>CDE
       ID = 13362284
     Term:
-      - Origin: caDSR - PCDC
+      - Origin: caDSR # PCDC
         Code: '13362284' #(added 05-29-24)
         Value: Measurable Residual Disease Assessment Text
         Version: '1'
@@ -1366,7 +1366,7 @@ PropDefinitions:
       identify the correct radiological procedure record during data updates. <br>CDE
       ID = 14822135
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14822135' #(added 05-29-24)
         Value: Data Record Link Unique Identifier
         Version: '1'
@@ -1399,7 +1399,7 @@ PropDefinitions:
       dose at which the radiotherapy in question was administered, exclusive of the
       dosage units. CDE ID = 14986422
     Term:
-      - Origin: caDSR - PCDC
+      - Origin: caDSR # PCDC
         Code: '14986422' #(added 07-16-24)
         Value: Procedure Radiation Therapy Administered Dose
         Version: '1'
@@ -1411,7 +1411,7 @@ PropDefinitions:
       of therapeutic radiation received or absorbed.> The units of measure for the
       dose at which the radiotherapy in question was administered. <br>CDE ID = 13383458
     Term:
-      - Origin: caDSR - PCDC
+      - Origin: caDSR # PCDC
         Code: '13383458' #(added 05-29-24)
         Value: Radiation Therapy Dose Unit of Measure
         Version: '1'
@@ -1434,7 +1434,7 @@ PropDefinitions:
     Desc: <The extent of radiation exposure administered to the patient's body during
       radiation therapy.> CDE ID = 7063755
     Term:
-      - Origin: caDSR - NCI CRF Stds
+      - Origin: caDSR # NCI CRF Stds
         Code: '7063755' #(added 05-29-24)
         Value: Radiation Therapy Administration Extent Type
         Version: '1'
@@ -1447,7 +1447,7 @@ PropDefinitions:
       expressed as the number of days before or after study enrollment the radiotherapy
       began. <br>CDE ID = 14984532
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14984532' #(added 07-25-24)
         Value: Procedure Enrollment To Treatment Start Day Count
         Version: '1'
@@ -1460,7 +1460,7 @@ PropDefinitions:
       expressed as the number of days before or after study enrollment the radiotherapy
       ended. <br>CDE ID = 14984563
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14984563' #(added 07-25-24)
         Value: Procedure Enrollment To Treatment End Day Count
         Version: '1'
@@ -1472,7 +1472,7 @@ PropDefinitions:
       changes resulted from treatment.> An indication as to the best overall response
       to the radiotherapy in question. <br>CDE ID = 13383448
     Term:
-      - Origin: caDSR - PCDC
+      - Origin: caDSR # PCDC
         Code: '13383448' #(added 05-29-24)
         Value: Disease Response Assessment Outcome
         Version: '1'
@@ -1496,7 +1496,7 @@ PropDefinitions:
       will generally be the same as the value of the participant_id property. <br>CDE
       ID = 14822135
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14822135' #(added 05-31-24)
         Value: Data Record Link Unique Identifier
         Version: '1'
@@ -1526,7 +1526,7 @@ PropDefinitions:
     Desc: <The circumstance or condition of greatest rank or importance that results
       in the death of a living being.> <br>CDE ID = 4783274
     Term:
-      - Origin: caDSR - NCI Standard
+      - Origin: caDSR # NCI Standard
         Code: '4783274' #(updated 05-31-24) prior CDE ID = 6421593
         Value: Primary Cause of Death #Primary Cause of Death 
         Version: '1'
@@ -1538,7 +1538,7 @@ PropDefinitions:
       therapy.> Infer value from OFF_STUDY_DATE in CMB Data Submission - 5a_OffStudy?
       <br>CDE ID = 14834973
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14834973' #(added 05-31-24)
         Value: Subject Protocol Therapy Status Indicator
         Version: '1'
@@ -1553,7 +1553,7 @@ PropDefinitions:
       therapy.> <br>CDE ID = 13362265                                                                                  #<br>Enumerated via a long list of ~40 acceptable terms, but do these in fact represent the values CMB has/uses?
 #CDE ID = 6355981
     Term:
-      - Origin: caDSR - PCDC
+      - Origin: caDSR # PCDC
         Code: '13362265' #(updated 05-31-24) prior CDE ID = 6355981
         Value: Subject Protocol Therapy Status Off Protocol Reason #Disposition Event Dictionary-Derived/Standardized Term 
         Version: '1'
@@ -1608,7 +1608,7 @@ PropDefinitions:
   #     can be associated with the appropriate specimen during data loading, and to
   #     identify the correct records during data updates.                                                                                                                                                                                                                                                                                                                     #CMB's "Biospecimen ID"
   #   Term:
-  #     - Origin: caDSR - CTDC
+  #     - Origin: caDSR # CTDC
   #       Code: '14986441' #(updated 07-23-24) prior CDE ID = 6921892 (added 06-03-24)
   #       Value: Specimen Material Identifier #Biospecimen Source Laboratory Identifier <A unique sequence of alphanumeric characters used to identify the specimen at it's point of origin.>
   #       Version: '1'
@@ -1620,7 +1620,7 @@ PropDefinitions:
     Desc: <A sequence of characters used to identify the kind of material that forms
       the parent sample.> <br>CDE ID =  14986442                                                                                #CMB's "Parent Biospecimen ID"
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14986442'  #(updated 07-23-24) prior CDE ID = 5581201 (added 06-03-24) 
         Value: Specimen Material Parent Identifier #Parent Specimen Label Identifier <One or more characters used to identify the parent substance, or portion of material obtained for use in testing, examination, or study.>
         Version: '1'
@@ -1632,7 +1632,7 @@ PropDefinitions:
     Desc: <The kind of material that forms the parent sample as captured in the Ontology
       for Biobanking (OBIB).> <br>CDE ID = 14986443
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14986443' #(updated 07-23-24) prior CDE ID = 11253427 (added 06-03-24)
         Value: Specimen Material Parent OBIB Source #Specimen Material OBIB Source <The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).>
         Version: '1'
@@ -1658,7 +1658,7 @@ PropDefinitions:
   #   Desc: <The kind of material that forms the sample as captured in the Ontology
   #     for Biobanking (OBIB).> <br>CDE ID = 11253427
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '11253427' #(added 06-03-24) (correct as of 07-23-24)
   #       Value: Specimen Material OBIB Source
   #       Version: '1'
@@ -1684,7 +1684,7 @@ PropDefinitions:
   # obi_specimen_type:
   #   Desc: This doesn't match the caDSR record of "Specimen Material OBIB Source" for CDE ID = 11253427 <br>The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB), a specimen subset of the Ontology for Biomedical Investigations (OBI).
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '11253427'
   #       Value: Specimen Type Text  
   #   Src: DSS
@@ -1694,7 +1694,7 @@ PropDefinitions:
     Desc: <The biospecimen grouping that describes the kind of material that forms
       the sample.> <br>CDE ID = 12445832 (updated 06-03-24)                                                                              #CDE ID = 7069877 #This in NOT the CMB Catalog Site's "Tissue Ccategory", the indicator as to normal vs primary vs metastatic. Not used within the CMB Catalog site itself, but defined within at least one of the associated Data Dictionaries.
     Term:
-      - Origin: caDSR - CDS
+      - Origin: caDSR # CDS
         Code: '12445832' #'7069877D'
         Value: Specimen Material Biospecimen Category
         Version: '1'
@@ -1724,7 +1724,7 @@ PropDefinitions:
     Desc: <The location within the body from which a specimen was originally obtained
       as captured in the Uberon identifier.> <br>CDE ID = 12083894                                                                                 #This is CMB's version of "sample site".
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '12083894' #(added 06-03-24) 
         Value: Specimen Original Anatomic Site Uberon Identifier
         Version: '1'
@@ -1734,7 +1734,7 @@ PropDefinitions:
   # type_of_tissue:
   #   Desc: <A text term based on categorization of cytologic atypia found in cellular molecules, cells, tissues, organs, body fluids, or body excretory products.> This is caDSR's version of CMB Catalog's "Tissue Category". <br>Acceptable values taken from the caDSR's definition of the data element. <br>CDE ID = 14688604 (updated 06-03-24) #CDE ID = 7003892
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '14688604' #'7003892'
   #       Value: Specimen Neoplasm Category #Tissue Type  
   #   Src: CMB DD
@@ -1750,7 +1750,7 @@ PropDefinitions:
       molecules, cells, tissues, organs, body fluids, or body excretory products.>  <br>CDE
       ID = 14688604                                                                                                                                                                      #Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue"
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '14688604' #(added 06-03-24)
         Value: Specimen Neoplasm Category
         Version: '1'
@@ -1764,7 +1764,7 @@ PropDefinitions:
   # icd_o_3_tissue_morphology:
   #   Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology. <br>Acceptable values currently specified, none of which are sourced from actual data, are to be used only for generation of mock data. <br>CDE ID = 11326261
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '11326261'
   #       Value: Specimen Tumor Tissue ICD-O-3 Morphology Code 
   #   Src: DSS
@@ -1776,7 +1776,7 @@ PropDefinitions:
       to an event.> CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 5899851
       (updated 06-03-24)
     Term:
-      - Origin: caDSR - NCI CRF Standards
+      - Origin: caDSR # NCI CRF Standards
         Code: '5899851' #'7065963'
         Value: Timepoint Event Assessment Period Type
         Version: '1'
@@ -1810,7 +1810,7 @@ PropDefinitions:
   # days_from_diagnosis_to_specimen_collection:
   #   Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis. <br>CDE ID = 11253404 ALL OF THIS IS INCORRECT BECAUSE THE INCORRECT CDE WAS REFERENCED; PER THE CORRECT CDE ID OF 11248865 THE PROPERTY DESCRIPTION SHOULD BE The number of days from the date the diagnosis was made to the date a sample was collected.
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '11253404' THIS IS INCORRECT, AND AS A RESULT, SO IS THE DESCRIPTION THE CORRECT CDE ID IS 11248865
   #       Value: Specimen Diagnosis To Specimen Collection Day Count  
   #   Src: DSS
@@ -1822,7 +1822,7 @@ PropDefinitions:
   # days_from_first_participant_visit_to_specimen_collection:
   #   Desc: The number of days from the date the participant first visited to the date a sample was collected. <br>CDE ID = 11248874
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '11248874'
   #       Value: Specimen First Subject Visit To Specimen Collection Day Count
   #   Src: DSS
@@ -1834,7 +1834,7 @@ PropDefinitions:
   # days_from_first_treatment_to_specimen_collection:
   #   Desc: The number of days from the date the first treatment was administered to the date a sample was collected. <br>CDE ID = 11250807
   #   Term:
-  #     - Origin: caDSR -  CRDC
+  #     - Origin: caDSR #  CRDC
   #       Code: '11250807'
   #       Value: Specimen First Treatment To Specimen Collection Day Count
   #   Src: DSS
@@ -1846,7 +1846,7 @@ PropDefinitions:
   # days_from_initial_genomic_sequencing_to_specimen_collection:
   #   Desc: The number of days from the date the initial genomic sequencing was done to the date a sample was collected. <br>CDE ID = 11251130
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '11251130'
   #       Value: Specimen Initial Genomic Sequencing To Specimen Collection Day Count
   #   Src: DSS
@@ -1870,7 +1870,7 @@ PropDefinitions:
   # days_from_specimen_collection_to_initial_pathologic_diagnosis:
   #   Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis. <br>CDE ID = 11253404
   #   Term:
-  #     - Origin: caDSR - CRDC
+  #     - Origin: caDSR # CRDC
   #       Code: '11253404'
   #       Value: Specimen Collection To Initial Pathologic Diagnosis Day Count
   #   Src: DSS
@@ -1884,7 +1884,7 @@ PropDefinitions:
     Desc: <The literal label for an electronic data file.> , inclusive of file extension(s).
       <br>CDE ID = 11284037
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11284037' #(correct as of 05-30-24)
         Value: Electronic Data File Name
         Version: '1'
@@ -1895,7 +1895,7 @@ PropDefinitions:
     Desc: <The type of information contained in an electronic record.> A curated indicator
       as to the type of content represented by the data file <br>CDE ID = 14824731
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14824731' #(added 05-30-24)
         Value: Electronic Data File Content Type
         Version: '1'
@@ -1913,7 +1913,7 @@ PropDefinitions:
       file's derivation from a specimen of normal tissue versus tumor tissue.  <br>CDE
       ID = 11280338
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11280338' #(correct as of 05-30-24)
         Value: Electronic Data File Description Text
         Version: '1'
@@ -1927,7 +1927,7 @@ PropDefinitions:
       the acceptable values currently specified are in place only to support the generation
       of mock data <br>CDE ID = 11416926
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11416926' #(correct as of 05-30-24)
         Value: Electronic Data File Format Type
         Version: '1'
@@ -1943,7 +1943,7 @@ PropDefinitions:
     Desc: <The measure, expressed in bytes, as to how much space a data file takes
       up on a storage medium.> <br>CDE ID = 11479876
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11479876' #(correct as of 05-30-24)
         Value: Electronic Data File Size Integer
         Version: '1'
@@ -1955,7 +1955,7 @@ PropDefinitions:
       errors that may have been introduced during file transmission and/or storage
       and used to verify data integrity.> <br>CDE ID = 11480133
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11480133' #(correct as of 05-30-24)
         Value: Electronic Data File Checksum Value
         Version: '1'
@@ -1965,7 +1965,7 @@ PropDefinitions:
   data_file_checksum_type:
     Desc: <The method by which the file checksum was calculated.> <br>CDE ID = 11475057
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11475057' #(correct as of 05-30-24)
         Value: Electronic Data File Checksum Type
         Version: '1'
@@ -1979,7 +1979,7 @@ PropDefinitions:
     Desc: <The state of data when saved to storage space or during data transmission.>
       <br>CDE ID = 11387114
     Term:
-      - Origin: caDSR - CRDC
+      - Origin: caDSR # CRDC
         Code: '11387114' #(correct as of 05-30-24)
         Value: Electronic Data File Compression Type
         Version: '1'
@@ -1993,7 +1993,7 @@ PropDefinitions:
     Desc: <A unique sequence of characters used to identify the contents of an electronic
       record.> <br>CDE ID = 14826100
     Term:
-      - Origin: caDSR - CTDC
+      - Origin: caDSR # CTDC
         Code: '14826100' #(added 05-30-24)
         Value: Electronic Data File Content Unique Identifier
         Version: '1'
@@ -2009,7 +2009,7 @@ PropDefinitions:
       S3 storage bucket at which the file is stored, expressed in terms of a unique
       url <br>CDE ID = 11556141
     Term:
-      - Origin: caDSR - CDS
+      - Origin: caDSR # CDS
         Code: '11556141' #(added 05-30-24)
         Value: Electronic File Pathname Text
         Version: '1'
