@@ -1,12 +1,12 @@
 repo https://github.com/CBIIT/ctdc-model
-commit fc527a3
+commit 1057698
 node	property	value_or_TYPE
-associated_link	associated_link_id	STRING
 associated_link	associated_link_name	STRING
+associated_link	associated_link_record_id	STRING
 associated_link	associated_link_url	STRING
+associated_link	crdc_id	STRING
+data_file	crdc_id	STRING
 data_file	data_file_checksum_type	md5sum
-data_file	data_file_checksum_type	sha1
-data_file	data_file_checksum_type	sha256
 data_file	data_file_checksum_value	STRING
 data_file	data_file_compression_status	Compressed
 data_file	data_file_compression_status	Uncompressed
@@ -27,7 +27,8 @@ data_file	data_file_type	Variant Report
 data_file	data_file_uuid	STRING
 demographic	age_at_enrollment	NUMBER (years)
 demographic	body_surface_area	NUMBER (m2)
-demographic	demographic_id	STRING
+demographic	crdc_id	STRING
+demographic	demographic_record_id	STRING
 demographic	ethnicity	Hispanic or Latino
 demographic	ethnicity	Not Hispanic or Latino
 demographic	ethnicity	Not reported
@@ -47,22 +48,18 @@ demographic	ncbi_taxonomy_id	INTEGER
 demographic	ncbi_taxonomy_name	STRING
 demographic	occupation	STRING
 demographic	race	American Indian or Alaska Native
+demographic	race	Asian
 demographic	race	Black or African American
 demographic	race	Native Hawaiian or other Pacific Islander
 demographic	race	Not Reported
 demographic	race	Unknown
-demographic	reported_gender	Female
-demographic	reported_gender	Female-to-Male Transsexual
-demographic	reported_gender	Intersex
-demographic	reported_gender	Male
-demographic	reported_gender	Male-to-Female Transsexual
-demographic	reported_gender	Response Declined
-demographic	reported_gender	Unknown
+demographic	race	White
 demographic	sex	Female
 demographic	sex	Intersex
 demographic	sex	Male
 demographic	sex	Unknown
 demographic	weight	NUMBER (kg)
+diagnosis	crdc_id	STRING
 diagnosis	ctep_disease_term	Acute Myeloid Leukemia Not Otherwise Specified
 diagnosis	ctep_disease_term	Adenocarcinoma of the Gastroesophageal Junction
 diagnosis	ctep_disease_term	Colorectal Carcinoma
@@ -74,12 +71,13 @@ diagnosis	ctep_disease_term	Plasma Cell Myeloma
 diagnosis	ctep_disease_term	Prostate Carcinoma
 diagnosis	ctep_disease_term	Small Cell Lung Carcinoma
 diagnosis	date_of_diagnosis	NA
-diagnosis	diagnosis_id	STRING
+diagnosis	diagnosis_record_id	STRING
 diagnosis	histological_subtype	STRING
 diagnosis	histology	STRING
 diagnosis	meddra_disease_code	10000884
 diagnosis	meddra_disease_code	10006190
 diagnosis	meddra_disease_code	10010029
+diagnosis	meddra_disease_code	10017760
 diagnosis	meddra_disease_code	10028566
 diagnosis	meddra_disease_code	10029514
 diagnosis	meddra_disease_code	10033159
@@ -134,50 +132,44 @@ diagnosis	snomed_disease_code	408647009
 diagnosis	snomed_disease_code	428054006
 diagnosis	snomed_disease_code	443961001
 diagnosis	snomed_disease_code	448993007
+diagnosis	snomed_disease_code	55921005
 diagnosis	snomed_disease_code	55921005a
 diagnosis	snomed_disease_code	55921005b
 diagnosis	snomed_disease_code	70594002
 diagnosis	snomed_disease_code	72495009
 diagnosis	snomed_disease_code	74364000
 diagnosis	snomed_disease_code	93655004
-diagnosis	snomed_disease_term	Acute Myeloid Leukemia 17788007
-diagnosis	snomed_disease_term	Adenocarcinoma 35917007
-diagnosis	snomed_disease_term	Adenocarcinoma 443961001
-diagnosis	snomed_disease_term	Amelanotic Melanoma 70594002
-diagnosis	snomed_disease_term	Breast Carcinoma 254838004
-diagnosis	snomed_disease_term	Colon Adenoma 428054006
-diagnosis	snomed_disease_term	Colon Carcinoma 269533000
-diagnosis	snomed_disease_term	Colorectal Adenocarcinoma 408645001
-diagnosis	snomed_disease_term	Cutaneous Melanoma 93655004
-diagnosis	snomed_disease_term	Epithelioid Cell Melanoma 37138001
-diagnosis	snomed_disease_term	Esophageal Adenocarcinoma 276803003
-diagnosis	snomed_disease_term	Gastric Adenocarcinoma 408647009
-diagnosis	snomed_disease_term	Lung Adenocarcinoma 254626006
-diagnosis	snomed_disease_term	Lung Carcinoma 448993007
-diagnosis	snomed_disease_term	Melanoma 2092003
-diagnosis	snomed_disease_term	Melanoma 372244006
-diagnosis	snomed_disease_term	Mucinous Adenocarcinoma 72495009
-diagnosis	snomed_disease_term	Multiple myeloma 55921005
-diagnosis	snomed_disease_term	Multiple myeloma and immunoproliferative disease 188717001
-diagnosis	snomed_disease_term	Neuroendocrine Carcinoma 253000007
-diagnosis	snomed_disease_term	Nodular Melanoma 2142002
-diagnosis	snomed_disease_term	Nodular Melanoma 254731001
-diagnosis	snomed_disease_term	Non-Small Cell Lung Carcinoma 254637007
-diagnosis	snomed_disease_term	Plasma Cell Leukemia 128922003
-diagnosis	snomed_disease_term	Plasma Cell Myeloma 109989006
-diagnosis	snomed_disease_term	Plasma Cell Myeloma 55921005
-diagnosis	snomed_disease_term	Prostate Adenocarcinoma 399490008
-diagnosis	snomed_disease_term	Prostate Carcinoma 254900004
-diagnosis	snomed_disease_term	Prostate Carcinoma 399068003
-diagnosis	snomed_disease_term	Rectal Adenoma 399730005
-diagnosis	snomed_disease_term	Rectal Carcinoma 254582000
-diagnosis	snomed_disease_term	Small Cell Carcinoma 74364000
-diagnosis	snomed_disease_term	Small Cell Lung Carcinoma 254632001
-diagnosis	snomed_disease_term	Small Cell Lung Carcinoma 254633006
-diagnosis	snomed_disease_term	Squamous Cell Carcinoma 28899001
-diagnosis	snomed_disease_term	Squamous Cell Carcinoma 402815007
-diagnosis	snomed_disease_term	Squamous Cell Lung Carcinoma 254634000
-diagnosis	snomed_disease_term	Superficial Spreading Melanoma 254730000
+diagnosis	snomed_disease_term	Acute Myeloid Leukemia
+diagnosis	snomed_disease_term	Adenocarcinoma
+diagnosis	snomed_disease_term	Amelanotic Melanoma
+diagnosis	snomed_disease_term	Breast Carcinoma
+diagnosis	snomed_disease_term	Colon Adenoma
+diagnosis	snomed_disease_term	Colon Carcinoma
+diagnosis	snomed_disease_term	Colorectal Adenocarcinoma
+diagnosis	snomed_disease_term	Cutaneous Melanoma
+diagnosis	snomed_disease_term	Epithelioid Cell Melanoma
+diagnosis	snomed_disease_term	Esophageal Adenocarcinoma
+diagnosis	snomed_disease_term	Gastric Adenocarcinoma
+diagnosis	snomed_disease_term	Lung Adenocarcinoma
+diagnosis	snomed_disease_term	Lung Carcinoma
+diagnosis	snomed_disease_term	Melanoma
+diagnosis	snomed_disease_term	Mucinous Adenocarcinoma
+diagnosis	snomed_disease_term	Multiple myeloma
+diagnosis	snomed_disease_term	Multiple myeloma and immunoproliferative disease
+diagnosis	snomed_disease_term	Neuroendocrine Carcinoma
+diagnosis	snomed_disease_term	Nodular Melanoma
+diagnosis	snomed_disease_term	Non-Small Cell Lung Carcinoma
+diagnosis	snomed_disease_term	Plasma Cell Leukemia
+diagnosis	snomed_disease_term	Plasma Cell Myeloma
+diagnosis	snomed_disease_term	Prostate Adenocarcinoma
+diagnosis	snomed_disease_term	Prostate Carcinoma
+diagnosis	snomed_disease_term	Rectal Adenoma
+diagnosis	snomed_disease_term	Rectal Carcinoma
+diagnosis	snomed_disease_term	Small Cell Carcinoma
+diagnosis	snomed_disease_term	Small Cell Lung Carcinoma
+diagnosis	snomed_disease_term	Squamous Cell Carcinoma
+diagnosis	snomed_disease_term	Squamous Cell Lung Carcinoma
+diagnosis	snomed_disease_term	Superficial Spreading Melanoma
 diagnosis	stage_of_disease	Stage III
 diagnosis	stage_of_disease	Stage IIIA
 diagnosis	stage_of_disease	Stage IIIB
@@ -195,6 +187,7 @@ diagnosis	tumor_grade	Well Differentiated
 exposure	carcinogen_exposure	No
 exposure	carcinogen_exposure	Unknown
 exposure	carcinogen_exposure	Yes
+exposure	crdc_id	STRING
 exposure	environmental_exposure_type	Asbestos Exposure
 exposure	environmental_exposure_type	Chemical Exposure
 exposure	environmental_exposure_type	Marijuana Smoke Exposure
@@ -205,12 +198,13 @@ exposure	environmental_exposure_type	Smoke Exposure
 exposure	environmental_exposure_type	Smokeless Tobacco Exposure
 exposure	environmental_exposure_type	Tobacco Related Exposure
 exposure	environmental_exposure_type	Wood Dust Exposure
-exposure	exposure_id	STRING
+exposure	exposure_record_id	STRING
 image_collection	collection_access	Cloud
 image_collection	collection_access	Download
 image_collection	collection_access	Unrestricted
-image_collection	image_collection_id	STRING
+image_collection	crdc_id	STRING
 image_collection	image_collection_name	STRING
+image_collection	image_collection_record_id	STRING
 image_collection	image_collection_url	STRING
 image_collection	repository_name	STRING
 non_targeted_therapy	best_response_to_non_targeted_therapy	Complete Response
@@ -222,21 +216,90 @@ non_targeted_therapy	best_response_to_non_targeted_therapy	Progressive Disease
 non_targeted_therapy	best_response_to_non_targeted_therapy	Stable Disease
 non_targeted_therapy	best_response_to_non_targeted_therapy	Too Early
 non_targeted_therapy	best_response_to_non_targeted_therapy	Unknown
+non_targeted_therapy	crdc_id	STRING
 non_targeted_therapy	non_targeted_therapy	STRING
 non_targeted_therapy	non_targeted_therapy_dose	STRING
 non_targeted_therapy	non_targeted_therapy_dose_units	STRING
 non_targeted_therapy	non_targeted_therapy_end_date	INTEGER
 non_targeted_therapy	non_targeted_therapy_frequency	STRING
-non_targeted_therapy	non_targeted_therapy_id	STRING
+non_targeted_therapy	non_targeted_therapy_record_id	STRING
 non_targeted_therapy	non_targeted_therapy_start_date	INTEGER
+participant	biomarker_results_available	No
+participant	biomarker_results_available	Unknown
+participant	biomarker_results_available	Yes
+participant	crdc_id	STRING
+participant	histology_images_available	No
+participant	histology_images_available	Unknown
+participant	histology_images_available	Yes
+participant	participant_id	STRING
+participant	radiology_images_available	No
+participant	radiology_images_available	Unknown
+participant	radiology_images_available	Yes
+participant	radiology_report_available	No
+participant	radiology_report_available	Unknown
+participant	radiology_report_available	Yes
+participant_status	crdc_id	STRING
+participant_status	off_study	No
+participant_status	off_study	Unknown
+participant_status	off_study	Yes
+participant_status	off_study_reason	ADVERSE EVENT
+participant_status	off_study_reason	APPROVED DRUG AVAILABLE FOR INDICATION
+participant_status	off_study_reason	COMPLETED
+participant_status	off_study_reason	DEATH
+participant_status	off_study_reason	DISEASE RELAPSE
+participant_status	off_study_reason	FAILURE TO MEET CONTINUATION CRITERIA
+participant_status	off_study_reason	FAILURE TO MEET RANDOMIZATION CRITERIA
+participant_status	off_study_reason	LACK OF EFFICACY
+participant_status	off_study_reason	LOGISTICAL PROBLEM
+participant_status	off_study_reason	LOST TO FOLLOW-UP
+participant_status	off_study_reason	MET ELIGIBILITY CRITERIA BUT NOT NEEDED
+participant_status	off_study_reason	NEVER DOSED
+participant_status	off_study_reason	NO LONGER CLINICALLY BENEFITING
+participant_status	off_study_reason	NON-COMPLIANCE WITH NON-STUDY DEVICE
+participant_status	off_study_reason	NON-COMPLIANCE WITH STUDY DEVICE
+participant_status	off_study_reason	NON-COMPLIANCE WITH STUDY DRUG
+participant_status	off_study_reason	NON-COMPLIANCE WITH STUDY SCHEDULE
+participant_status	off_study_reason	OTHER
+participant_status	off_study_reason	PARTNER PREGNANCY
+participant_status	off_study_reason	PHYSICIAN DECISION
+participant_status	off_study_reason	PREGNANCY
+participant_status	off_study_reason	PROGRESSIVE DISEASE
+participant_status	off_study_reason	PROTOCOL DEVIATION
+participant_status	off_study_reason	PROTOCOL VIOLATION
+participant_status	off_study_reason	PROTOCOL-SPECIFIED WITHDRAWAL CRITERION MET
+participant_status	off_study_reason	RANDOMIZED BY MISTAKE
+participant_status	off_study_reason	RANDOMIZED BY MISTAKE WITH STUDY TREATMENT
+participant_status	off_study_reason	RANDOMIZED BY MISTAKE WITHOUT STUDY TREATMENT
+participant_status	off_study_reason	RECOVERY
+participant_status	off_study_reason	REQUIRES PROHIBITED MEDICATION
+participant_status	off_study_reason	SCREEN FAILURE
+participant_status	off_study_reason	SCREENING NOT COMPLETED
+participant_status	off_study_reason	SITE TERMINATED BY SPONSOR
+participant_status	off_study_reason	SPONSOR REQUEST
+participant_status	off_study_reason	STUDY TERMINATED BY SPONSOR
+participant_status	off_study_reason	TECHNICAL PROBLEMS
+participant_status	off_study_reason	WITHDRAWAL BY PARENT/GUARDIAN
+participant_status	off_study_reason	WITHDRAWAL BY SUBJECT
+participant_status	off_study_reason	WITHDRAWAL OF ASSENT
+participant_status	off_study_reason	WITHDRAWAL OF CONSENT
+participant_status	participant_status_record_id	STRING
+participant_status	primary_cause_of_death	STRING
+participant_status	survival_status	ALIVE
+participant_status	survival_status	Alive with Disease
+participant_status	survival_status	Alive with No Evidence of Disease
+participant_status	survival_status	Alive, Disease Status Unknown
+participant_status	survival_status	DEAD
+participant_status	survival_status	Dead
+participant_status	survival_status	UNKNOWN
+principal_investigator	crdc_id	STRING
 principal_investigator	person_first_name	STRING
 principal_investigator	person_last_name	STRING
 principal_investigator	person_middle_name	STRING
 principal_investigator	person_orcid	STRING
+principal_investigator	person_record_id	STRING
+program	crdc_id	STRING
 program	program_name	STRING
 program	program_short_name	STRING
-project	project_name	STRING
-project	project_short_name	STRING
 radiotherapy	best_response_to_radiotherapy	Complete Response
 radiotherapy	best_response_to_radiotherapy	Less than partial response
 radiotherapy	best_response_to_radiotherapy	Not Assessed
@@ -246,65 +309,67 @@ radiotherapy	best_response_to_radiotherapy	Progressive Disease
 radiotherapy	best_response_to_radiotherapy	Stable Disease
 radiotherapy	best_response_to_radiotherapy	Too Early
 radiotherapy	best_response_to_radiotherapy	Unknown
+radiotherapy	crdc_id	STRING
 radiotherapy	radiation_dose	STRING
 radiotherapy	radiation_dose_units	STRING
 radiotherapy	radiation_extent	STRING
 radiotherapy	radiation_frequency	STRING
 radiotherapy	radiological_procedure	STRING
 radiotherapy	radiological_procedure_anatomical_location	STRING
-radiotherapy	radiological_procedure_id	STRING
+radiotherapy	radiological_procedure_record_id	STRING
 radiotherapy	radiotherapy_end_date	INTEGER
 radiotherapy	radiotherapy_start_date	INTEGER
 specimen	anatomical_collection_site	STRING
 specimen	assessment_timepoint	ARCHIVAL
+specimen	assessment_timepoint	Archival
 specimen	assessment_timepoint	BASELINE
+specimen	assessment_timepoint	Baseline (Fresh)
 specimen	assessment_timepoint	ON TREATMENT
+specimen	assessment_timepoint	On Treatment (Fresh)
 specimen	assessment_timepoint	PROGRESSION
+specimen	assessment_timepoint	Post-Treatment (No progression)
+specimen	assessment_timepoint	Progression (Fresh)
 specimen	collection_date	NUMBER (days)
-specimen	parent_specimen_id	STRING
-specimen	parent_specimen_type	Bone Marrow Aspirate
-specimen	parent_specimen_type	Cell Block
-specimen	parent_specimen_type	EDTA Blood
-specimen	parent_specimen_type	FFPE Block
-specimen	parent_specimen_type	Formalin Bone Marrow Biopsy
-specimen	parent_specimen_type	Formalin Fixed Tissue
-specimen	parent_specimen_type	Snap Frozen Tissue
-specimen	parent_specimen_type	Stained Bone Marrow Aspirate Slide
-specimen	parent_specimen_type	Streck Blood
-specimen	parent_specimen_type	Unstained Bone Marrow Aspirate Slide
-specimen	parent_specimen_type	Unstained Slide
+specimen	crdc_id	STRING
 specimen	specimen_category	BLOOD
 specimen	specimen_category	BONE MARROW
 specimen	specimen_category	BUCCAL CELL SAMPLE
+specimen	specimen_category	Blood
+specimen	specimen_category	Bone Marrow
 specimen	specimen_category	CEREBROSPINAL FLUID
 specimen	specimen_category	FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
 specimen	specimen_category	FORMALIN FIXED TISSUE
 specimen	specimen_category	FRESH TISSUE
 specimen	specimen_category	FROZEN TISSUE
+specimen	specimen_category	Formalin Fixed Paraffin Embedded Tissue
+specimen	specimen_category	Formalin Fixed Tissue
+specimen	specimen_category	Fresh Tissue
+specimen	specimen_category	Frozen Tissue
 specimen	specimen_category	OTHER BODILY FLUIDs
 specimen	specimen_category	SALIVA
 specimen	specimen_category	STOOL
 specimen	specimen_category	URINE
-specimen	specimen_id	STRING
-specimen	specimen_type	BMMC
-specimen	specimen_type	Blood Pellet
-specimen	specimen_type	Cells
-specimen	specimen_type	Curl
-specimen	specimen_type	DNA
+specimen	specimen_record_id	STRING
+specimen	specimen_type	Bone Marrow Aspirate
+specimen	specimen_type	Cell Block
+specimen	specimen_type	EDTA Blood
 specimen	specimen_type	FFPE Block
-specimen	specimen_type	Glass H&E Slide
-specimen	specimen_type	Glass Slide Smear
-specimen	specimen_type	Glass Unstained Slide
-specimen	specimen_type	PBMC
-specimen	specimen_type	Plasma
-specimen	specimen_type	Plasma-cf
-specimen	specimen_type	RNA
-specimen	specimen_type	Snap Frozen Unfixed Tissue
-specimen	specimen_type	Tissue Curl
-specimen	specimen_type	cDNA
+specimen	specimen_type	FORMALIN FIXED TISSUE
+specimen	specimen_type	Formalin Bone Marrow Biopsy
+specimen	specimen_type	Formalin Fixed Tissue
+specimen	specimen_type	Fresh Tissue in Media to PDMR
+specimen	specimen_type	Snap Frozen Tissue
+specimen	specimen_type	Stained Bone Marrow Aspirate Slide
+specimen	specimen_type	Streck Blood
+specimen	specimen_type	Streck Blood to PDMR
+specimen	specimen_type	Streck Blood to VARI
+specimen	specimen_type	Unstained Bone Marrow Aspirate Slide
+specimen	specimen_type	Unstained Slide
+specimen	tissue_category	Adjacent Non-Tumor
 specimen	tissue_category	Metastatic
 specimen	tissue_category	Normal
 specimen	tissue_category	Primary
+study	crdc_id	STRING
 study	dates_of_conduct	STRING
 study	study_description	STRING
 study	study_id	STRING
@@ -333,74 +398,13 @@ study	study_type	Screening Study
 study	study_type	Supportive Care Study
 study	study_type	Transcriptomics Research
 study	study_type	Treatment Study
-subject	biomarker_results_available	No
-subject	biomarker_results_available	Unknown
-subject	biomarker_results_available	Yes
-subject	histology_images_available	No
-subject	histology_images_available	Unknown
-subject	histology_images_available	Yes
-subject	radiology_images_available	No
-subject	radiology_images_available	Unknown
-subject	radiology_images_available	Yes
-subject	radiology_report_available	No
-subject	radiology_report_available	Unknown
-subject	radiology_report_available	Yes
-subject	subject_id	STRING
-subject_status	off_study	No
-subject_status	off_study	Unknown
-subject_status	off_study	Yes
-subject_status	off_study_reason	ADVERSE EVENT
-subject_status	off_study_reason	APPROVED DRUG AVAILABLE FOR INDICATION
-subject_status	off_study_reason	COMPLETED
-subject_status	off_study_reason	DEATH
-subject_status	off_study_reason	DISEASE RELAPSE
-subject_status	off_study_reason	FAILURE TO MEET CONTINUATION CRITERIA
-subject_status	off_study_reason	FAILURE TO MEET RANDOMIZATION CRITERIA
-subject_status	off_study_reason	LACK OF EFFICACY
-subject_status	off_study_reason	LOGISTICAL PROBLEM
-subject_status	off_study_reason	LOST TO FOLLOW-UP
-subject_status	off_study_reason	MET ELIGIBILITY CRITERIA BUT NOT NEEDED
-subject_status	off_study_reason	NEVER DOSED
-subject_status	off_study_reason	NO LONGER CLINICALLY BENEFITING
-subject_status	off_study_reason	NON-COMPLIANCE WITH NON-STUDY DEVICE
-subject_status	off_study_reason	NON-COMPLIANCE WITH STUDY DEVICE
-subject_status	off_study_reason	NON-COMPLIANCE WITH STUDY DRUG
-subject_status	off_study_reason	NON-COMPLIANCE WITH STUDY SCHEDULE
-subject_status	off_study_reason	OTHER
-subject_status	off_study_reason	PARTNER PREGNANCY
-subject_status	off_study_reason	PHYSICIAN DECISION
-subject_status	off_study_reason	PREGNANCY
-subject_status	off_study_reason	PROGRESSIVE DISEASE
-subject_status	off_study_reason	PROTOCOL DEVIATION
-subject_status	off_study_reason	PROTOCOL VIOLATION
-subject_status	off_study_reason	PROTOCOL-SPECIFIED WITHDRAWAL CRITERION MET
-subject_status	off_study_reason	RANDOMIZED BY MISTAKE
-subject_status	off_study_reason	RANDOMIZED BY MISTAKE WITH STUDY TREATMENT
-subject_status	off_study_reason	RANDOMIZED BY MISTAKE WITHOUT STUDY TREATMENT
-subject_status	off_study_reason	RECOVERY
-subject_status	off_study_reason	REQUIRES PROHIBITED MEDICATION
-subject_status	off_study_reason	SCREEN FAILURE
-subject_status	off_study_reason	SCREENING NOT COMPLETED
-subject_status	off_study_reason	SITE TERMINATED BY SPONSOR
-subject_status	off_study_reason	SPONSOR REQUEST
-subject_status	off_study_reason	STUDY TERMINATED BY SPONSOR
-subject_status	off_study_reason	TECHNICAL PROBLEMS
-subject_status	off_study_reason	WITHDRAWAL BY PARENT/GUARDIAN
-subject_status	off_study_reason	WITHDRAWAL BY SUBJECT
-subject_status	off_study_reason	WITHDRAWAL OF ASSENT
-subject_status	off_study_reason	WITHDRAWAL OF CONSENT
-subject_status	primary_cause_of_death	STRING
-subject_status	subject_status_id	STRING
-subject_status	survival_status	Alive with Disease
-subject_status	survival_status	Alive with No Evidence of Disease
-subject_status	survival_status	Alive, Disease Status Unknown
-subject_status	survival_status	Dead
+surgery	crdc_id	STRING
 surgery	extent_of_residual_disease	STRING
 surgery	surgical_procedure	STRING
 surgery	surgical_procedure_anatomical_location	STRING
-surgery	surgical_procedure_date	DATE
+surgery	surgical_procedure_date	INTEGER
 surgery	surgical_procedure_findings	STRING
-surgery	surgical_procedure_id	STRING
+surgery	surgical_procedure_record_id	STRING
 surgery	surgical_procedure_therapeutic	No
 surgery	surgical_procedure_therapeutic	Yes
 targeted_therapy	best_response_to_targeted_therapy	Complete Response
@@ -412,151 +416,143 @@ targeted_therapy	best_response_to_targeted_therapy	Progressive Disease
 targeted_therapy	best_response_to_targeted_therapy	Stable Disease
 targeted_therapy	best_response_to_targeted_therapy	Too Early
 targeted_therapy	best_response_to_targeted_therapy	Unknown
+targeted_therapy	crdc_id	STRING
 targeted_therapy	targeted_therapy	STRING
 targeted_therapy	targeted_therapy_dose	STRING
 targeted_therapy	targeted_therapy_dose_units	STRING
 targeted_therapy	targeted_therapy_end_date	INTEGER
 targeted_therapy	targeted_therapy_frequency	STRING
-targeted_therapy	targeted_therapy_id	STRING
+targeted_therapy	targeted_therapy_record_id	STRING
 targeted_therapy	targeted_therapy_start_date	INTEGER
 
 relationship	source_node	destination_node	property	value_or_TYPE
 associated_with	image_collection	study	NA	NA
-associated_with	image_collection	project	NA	NA
 associated_with	associated_link	study	NA	NA
-associated_with	associated_link	project	NA	NA
-associated_with	data_file	diagnosis	NA	NA
-associated_with	data_file	project	NA	NA
-associated_with	data_file	study	NA	NA
-associated_with	data_file	subject	NA	NA
 associated_with	data_file	specimen	NA	NA
+associated_with	data_file	diagnosis	NA	NA
+associated_with	data_file	study	NA	NA
+associated_with	data_file	participant	NA	NA
+belongs_to	participant	study	NA	NA
 belongs_to	study	program	NA	NA
-belongs_to	study	project	NA	NA
-belongs_to	project	program	NA	NA
-belongs_to	subject	study	NA	NA
 directs	principal_investigator	study	NA	NA
-directs	principal_investigator	project	NA	NA
-of_subject	subject_status	subject	NA	NA
-of_subject	radiotherapy	subject	NA	NA
-of_subject	surgery	subject	NA	NA
-of_subject	diagnosis	subject	NA	NA
-of_subject	targeted_therapy	subject	NA	NA
-of_subject	demographic	subject	NA	NA
-of_subject	specimen	subject	NA	NA
-of_subject	exposure	subject	NA	NA
-of_subject	non_targeted_therapy	subject	NA	NA
+of_participant	exposure	participant	NA	NA
+of_participant	surgery	participant	NA	NA
+of_participant	radiotherapy	participant	NA	NA
+of_participant	specimen	participant	NA	NA
+of_participant	demographic	participant	NA	NA
+of_participant	data_file	participant	NA	NA
+of_participant	participant_status	participant	NA	NA
+of_participant	diagnosis	participant	NA	NA
+of_participant	targeted_therapy	participant	NA	NA
+of_participant	non_targeted_therapy	participant	NA	NA
 
 property	description
-age_at_enrollment	<The age (in days) of the subject when the subject enrolled in the study.> The age of the subject as of enrollment, measured in years. <br>CDE ID = 12299548 (added 05-31-24)
-anatomical_collection_site	<The location within the body from which a specimen was originally obtained as captured in the Uberon identifier.> This is CMB's version of "sample site". <br>CDE ID = 12083894 (added 06-03-24)
+age_at_enrollment	<The age (in days) of the participant when the participant enrolled in the study.> The age of the participant as of enrollment, measured in years. <br>CDE ID = 12299548
+anatomical_collection_site	<The location within the body from which a specimen was originally obtained as captured in the Uberon identifier.> <br>CDE ID = 12083894
 assessment_timepoint	<A specific point in the time continuum, including those established relative to an event.> CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 5899851 (updated 06-03-24)
-associated_link_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each associated link record, used to identify the correct associated link records during data updates. <br>CDE ID = 14822135 (added 05-28-24)
-associated_link_name	<The words by which the linkage between related records is known.> The exact text to be displayed within the UI and used as an intuitive identifier of any given link associated with the study/trial in question.  <br>CDE ID = 14822136 (added 05-28-24)
-associated_link_url	<The global address of the linkage between related records on the World Wide Web.> The url to which an end user will be redirected upon selection of the corresponding link name displayed within the UI. <br>CDE ID = 14822140 (added 05-28-24)
-best_response_to_non_targeted_therapy	<The result of an evaluation to determine whether pathologic and/or clinical changes resulted from treatment.> An indication as to the best overall response to treatment with the non-targeted therapy in question. <br>CDE ID = 13383448 (added 05-29-24)
-best_response_to_radiotherapy	<The result of an evaluation to determine whether pathologic and/or clinical changes resulted from treatment.> An indication as to the best overall response to the radiotherapy in question. <br>CDE ID = 13383448 (added 05-29-24)
-best_response_to_targeted_therapy	<The result of an evaluation to determine whether pathologic and/or clinical changes resulted from treatment.> An indication as to the best overall response to treatment with the targeted therapy in question. <br>CDE ID = 13383448 (added 05-29-24)
-biomarker_results_available	An indicator as to whether any biomarker results relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
-body_surface_area	<The calculated numerical quantity that represents the 2-dimensional extent of the body surface relating height to weight.> The body surface area of the subject as of enrollment, mathematically derived from the subject's height and weight, and expressed in square meters. <br>CDE ID = 653 (added 05-31-24)
-carcinogen_exposure	<An indication of whether the participant was exposed to environmental/workplace carcinogens (for example arsenic, asbestos, diesel exhaust, chromium, silica).> An indicator as to whether the subject in question has had significant exposure to any known carcinogen(s) <br>CDE ID = 5205578 (added 05-31-24)
-collection_access	<The methods by which a user can obtain an image set.> Indicator as to whether the image collection can be accessed only via the cloud, accessed only via download, or accessed via both mechanisms. <br>CDE ID = 14825946 (added 05-28-24)
+associated_link_name	<The words by which the linkage between related records is known.> The exact text to be displayed within the UI and used as an intuitive identifier of any given link associated with the study/trial in question. <br>CDE ID = 14822136
+associated_link_record_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each associated link record, used to identify the correct associated link records during data updates. <br>CDE ID = 14822135
+associated_link_url	<The global address of the linkage between related records on the World Wide Web.> The url to which an end user will be redirected upon selection of the corresponding link name displayed within the UI. <br>CDE ID = 14822140
+best_response_to_non_targeted_therapy	<The result of an evaluation to determine whether pathologic and/or clinical changes resulted from treatment.> An indication as to the best overall response to treatment with the non-targeted therapy in question. <br>CDE ID = 13383448
+best_response_to_radiotherapy	<The result of an evaluation to determine whether pathologic and/or clinical changes resulted from treatment.> An indication as to the best overall response to the radiotherapy in question. <br>CDE ID = 13383448
+best_response_to_targeted_therapy	<The result of an evaluation to determine whether pathologic and/or clinical changes resulted from treatment.> An indication as to the best overall response to treatment with the targeted therapy in question. <br>CDE ID = 13383448
+biomarker_results_available	<A response to indicate whether or not biomarker results are available for a person.> An indicator as to whether any biomarker results relating to the participant in question are available. <br>CDE ID = 14735824
+body_surface_area	<The calculated numerical quantity that represents the 2-dimensional extent of the body surface relating height to weight.> The body surface area of the participant as of enrollment, mathematically derived from the participant's height and weight, and expressed in square meters. <br>CDE ID = 653
+carcinogen_exposure	<An indication of whether the participant was exposed to environmental/workplace carcinogens (for example arsenic, asbestos, diesel exhaust, chromium, silica).> An indicator as to whether the participant in question has had significant exposure to any known carcinogen(s) <br>CDE ID = 5205578
+collection_access	<The methods by which a user can obtain an image set.> Indicator as to whether the image collection can be accessed only via the cloud, accessed only via download, or accessed via both mechanisms. <br>CDE ID = 14825946
 collection_date	<WORK NEEDED HERE> From the CMB perspective, this may be equivalent to "days_from_diagnosis_to_specimen_collection" (now block commented out) (CDE ID = 11253404), with collection date indexed to enrollment date. <br>CDE ID 6401821
-ctep_disease_term	<The coded response indicating the MedDRA code Version 10 used in the NCI Simplified Disease Classification (SDC) Terminology for diagnoses.> <br>CDE ID = 4723846 (added 05-28-24)
-data_file_checksum_type	<The method by which the file checksum was calculated.> <br>CDE ID = 11475057 (correct as of 05-30-24)
-data_file_checksum_value	<A small-sized block of data derived from a file for the purpose of detecting errors that may have been introduced during file transmission and/or storage and used to verify data integrity.> <br>CDE ID = 11480133 (correct as of 05-30-24)
-data_file_compression_status	<The state of data when saved to storage space or during data transmission.> <br>CDE ID = 11387114 (correct as of 05-30-24)
-data_file_description	<A free text field that can be used to document the content and other details about an electronic file that may not be captured elsewhere.> For example, the file's derivation from a specimen of normal tissue versus tumor tissue.  <br>CDE ID = 11280338 (correct as of 05-30-24)
-data_file_format	<A defined organization or layout representing and structuring data in a computer file.> ; the electronic format of the file, as derived during file validation <br>With the actual values of this property being loader derived, the acceptable values currently specified are in place only to support the generation of mock data <br>CDE ID = 11416926 (correct as of 05-30-24)
-data_file_location	<The specification of a node (file or directory) in a hierarchical file system where an electronic file is located.> The specific location within the S3 storage bucket at which the file is stored, expressed in terms of a unique url <br>CDE ID = 11556141 (added 05-30-24)
-data_file_name	<The literal label for an electronic data file.> , inclusive of file extension(s). <br>CDE ID = 11284037 (correct as of 05-30-24)
-data_file_size	<The measure, expressed in bytes, as to how much space a data file takes up on a storage medium.> <br>CDE ID = 11479876 (correct as of 05-30-24)
-data_file_type	<The type of information contained in an electronic record.> A curated indicator as to the type of content represented by the data file <br>CDE ID = 14824731 (added 05-30-24)
-data_file_uuid	<A unique sequence of characters used to identify the contents of an electronic record.> <br>CDE ID = 14826100 (added 05-30-24)
-dates_of_conduct	The timespan over which the study/trial was/is being conducted. <br>NOT CURRENTLY ASSIGNED ANY CDE
-demographic_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each demographic record, used to identify the correct demographic records during data updates. <br>The value of this property will generally be the same as the value of the subject_id property. <br>CDE ID = 14822135 (added 05-31-24)
-diagnosis_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each diagnosisc record, used to identify the correct diagnosis records during data updates. <br>The value of this property will generally be the same as the value of the subject_id property. <br>CDE ID = 14822135 (added 05-28-24) <br>This property is used as the key via which child records, e.g. clinical reports, can be associated with the appropriate diagnosis record during data loading, and to identify the correct records during data updates.
-environmental_exposure_type	<The category related to contact with chemical, biological, or physical substances found in air, water, food, soil, or product that may have a harmful effect on a person's health.> <br>CDE ID = 11256813 (correct as of 05-31-24)
-ethnicity	<The text for reporting information about ethnicity based on the Office of Management and Budget (OMB) categories.> <br>CDE ID = 2192217 (added 05-31-24)
-exposure_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each exposure record, used to identify the correct exposure records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br>CDE ID = 14822135 (added 05-31-24)
-extent_of_residual_disease	<A textual description of evidence for remaining tumor following primary treatment that is only apparent using highly sensitive techniques.> <br>CDE ID = 13362284 (added 05-29-24)
-height	<The number that describes the vertical distance of an individual.> The height of the subject as of enrollment, measured in cm. <br>CDE ID = 2179643 (added 05-31-24)
-highest_level_of_education	<The subdivision that summarizes the highest level of education attained by a person.> An indication as to the highest level of education attained by the subject. <br>CDE ID = 2681552 (added 05-31-24)
-histological_subtype	<Words that describe the classification of tumors based on their histology.> CDE ID = 14843594 (added 05-28-24)
-histology	<Words that describe the normal and abnormal morphologic characteristics in cells and tissues.> <br>CDE ID = 14842510 (added 05-28-24)
-histology_images_available	An indicator as to whether any histology images relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
-image_collection_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each image collection record, used to identify the correct image collection records during data updates. <br>CDE ID = 14822135 (added 05-28-24)
-image_collection_name	<The words by which a set of images that are stored together are known.> The name of the image collection exactly as it appears at the location where the collection can be viewed and/or accessed. <br>CDE ID = 14826008 (added 05-28-24)
-image_collection_url	<The specification of a node (file or directory) in a hierarchical file system where an electronic file is located.> The external url via which the image collection can be viewed and/or accessed. <br>CDE ID = 11556141 (added 05-28-24)
-image_type_included	<A system of categories for representing a specific manner, characteristic, pattern of a data acquisition device used in an imaging event whether physical or electronic.> A list of the image types included in the image collection, drawn from a list of acceptable values. <br>CDE ID = 12137353 (added 05-28-24)
-income	<The amount of earnings made by a family in a year.> <br>CDE ID = 14834966 (added 05-31-24)
-meddra_disease_code	<The MedDRA code describing a medical condition and/or anatomic location.> An eight digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>CDE ID = 2004425 (added 05-28-24)
-ncbi_taxonomy_id	A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/),  which uniquely identifies group or category, at any level, in a system for classifying plants or animals (including humans) providing ranked categories for the classification of organisms according to their suspected evolutionary relationships. <br>CDE ID = 10543100 (correct as of 05-31-24)
-ncbi_taxonomy_name	The textual label associated with a subject's organismal classification as captured in the National Center for Biotechnology Information (NCBI) Taxonomy standard nomenclature and classification repository.  <br>Supposedly enumerated but no permissible values specified. <br>CDE ID = 10543082 (correct as of 05-31-24)
-non_targeted_therapy	<A term describing a therapeutic agent as captured in the Pharmacological Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic agent administered to a subject as a non-targeted therapy, i.e. one that is considered to be appropriate for and effective against the specific type of cancer with which the subject has been diagnosed, but is not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given subject. Notably, a therapeutic agent considered to be and administered as a non-targeted therapy in one subject can, conversely, be considered and administered as a targeted therapy in another subject, where differences in his or her type of cancer per se, or the specific context of the cancer in question make the therapy more specific. <br>CDE ID = 14913015 (updated 05-29-24)
-non_targeted_therapy_dose	<The amount that represents the dose of the agent.> The dose at which the non-targeted therapeutic agent in question was administered, exclusive of the dosage units. <br>CDE ID = 2182728 (added 05-29-24)
-non_targeted_therapy_dose_units	<Text name to represent units of measure used to describe dosages of an agent or measure.> The units of measure for the dose at which the non-targeted therapeutic agent in question was administered. <br>CDE ID = 2321160 (added 05-29-24)
-non_targeted_therapy_end_date	text The date upon which administration of the non-targeted therapy in question ended, expressed as the number of days before or after study enrollment the non-targeted therapy administration ended. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
-non_targeted_therapy_frequency	<The frequency of how often a medication is being administered.> The frequency at which the non-targeted therapeutic agent in question was administered. <br>CDE ID = 2003878 (added 05-29-24)
-non_targeted_therapy_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each non-targeted therapy record, used to identify the correct non-targeted therapy records during data updates. <br>CDE ID = 14822135 (added 05-29-24)
-non_targeted_therapy_start_date	The date upon which administration of the non-targeted therapy in question began, expressed as the number of days before or after study enrollment the non-targeted therapy administration began. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
-occupation	<The occupation/job category of a person.> <br>CDE ID = 6617540 (added 05-31-24)
-parent_specimen_id	<One or more characters used to identify the parent substance, or portion of material obtained for use in testing, examination, or study.> CMB's "Parent Biospecimen ID" <br>CDE ID = 5581201 (added 06-03-24)
-parent_specimen_type	<The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).> Acceptable values taken straight from the CMB Catalog Site. <br>CDE ID = 11253427 (added 06-03-24)
-person_first_name	<A word or group of words indicating a person's first (personal or given) name; the name that precedes the surname. Synonym = Given Name.> The first or given name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179589 (updated 05-28-24)
-person_last_name	<A means of identifying an individual by using a word or group of words indicating a person's last (family) name. Synonym = Last Name, Surname.> The last or family name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179591 (updated 05-28-24)
-person_middle_name	<A means of identifying an individual by using a word or group of words indicating a person's middle name.> The middle name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179590 (updated 05-28-24)
-person_orcid	<A persistent unique digital identifier assigned to a person by the Open Researcher and Contributor ID (ORCID) organization.> A persistent unique digital identifier assigned to a principal investigator by the Open Researcher and Contributor ID (ORCID) organization. <br>CDE ID = 10624734 (updated 05-28-24)
-primary_cause_of_death	<The circumstance or condition of greatest rank or importance that results in the death of a living being.> <br>CDE ID = 4783274 (updated 05-31-24)
-primary_diagnosis_disease_group	<A term describing the main condition for evaluation and treatment as captured in the Disease or Diagnosis (C2991) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> <br>CDE ID = 14905532 (added 05-28-24)
-primary_disease_site	<The location within the body from where the disease of interest originated as captured in the Uberon identifier.> <br>CDE ID = 14883047 (added 05-28-24)
-program_name	<The narrative title used to refer to a broad framework (an administrative umbrella) of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis.> <br>CDE ID = 11444542 (correct as of 05-28-24)
-program_short_name	<An acronym or abbreviated form of the title of a broad framework of goals under which related projects or other research activities are grouped. For example, CPTAC.> <br>CDE ID = 11459801 (correct as of 05-28-24) <br>This property is used as the key via which child records, e.g. project and/or study/trial records, can be associated with the appropriate program during data loading, and to identify the correct records during data updates.
-project_name	<The narrative title used to refer to an organ-, site-, disease- or phase-specific data collection within a broad framework of goals under which related studies or other research activities are grouped.> <br>CDE ID = 11459804 (correct as of 05-28-24)
-project_short_name	<An acronym or abbreviated form of the title used to refer to an organ-, site- or disease-specific data collection within a broad framework of goals under which related studies or other research activities are grouped.> <br>CDE ID = 11459806 (correct as of 05-28-24) <br>This property is used as the key via which child records, e.g. study/trial, image collection and principal investigator records, can be associated with the appropriate project during data loading, and to identify the correct records during data updates.
-property_1	text
-property_2	text
-property_3	text
-race	<The text for reporting information about race based on the Office of Management and Budget (OMB) categories.> <br>CDE ID = 2192199 (added 05-31-24)
-radiation_dose	The dose at which the radiotherapy in question was administered, exclusive of the dosage units. <br>NOT CURRENTLY ASSIGNED ANY CDE
-radiation_dose_units	<A standard unit of measurement associated with the total quantity or strength of therapeutic radiation received or absorbed.> The units of measure for the dose at which the radiotherapy in question was administered. <br>CDE ID = 13383458 (added 05-29-24)
-radiation_extent	<The extent of radiation exposure administered to the patient's body during radiation therapy.> CDE ID = 7063755 (added 05-29-24)
-radiation_frequency	<Words which describe the number of occurrences of radiation therapy within a given time period.> The frequency at which the radiotherapy in question was administered. <br>CDE ID = 14918782 (added 05-29-24)
-radiological_procedure	The name and/or a brief narrative description of the radiological procedure performed upon the subject. <br>CDE ID = 6411539
-radiological_procedure_anatomical_location	The anatomical site or sites subject to the radiological procedure in question. <br>NOT CURRENTLY ASSIGNED ANY CDE
-radiological_procedure_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each radiological procedure record, used to identify the correct radiological procedure record during data updates. <br>CDE ID = 14822135 (added 05-29-24)
-radiology_images_available	An indicator as to whether any radiology images relating to the subject in question are available. <br>NOT CURRENTLY ASSIGNED ANY CDE
-radiology_report_available	An indicator as to whether any radiology reports results relating to the subject in question are available. <br>This is CMB's RADIOLOGY REPORT annotation <br>CDE ID = 6944764
-radiotherapy_end_date	The date upon which administration of the radiotherapy in question ended, expressed as the number of days before or after study enrollment the radiotherapy ended. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
-radiotherapy_start_date	The date upon which administration of the radiotherapy in question began, expressed as the number of days before or after study enrollment the radiotherapy began. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
-reported_gender	<A text term which describes a person's internally held sense of their gender, which may or may not correspond to the individual's genotypic or phenotypic sex.> Characteristics of people that are socially constructed, including norms, behaviors, and roles based on their sex. As a social construct, these norms, behaviors, and roles vary from society to society and can change over time. <br>CDE ID = 14927178
-repository_name	<The words by which the storage location for imaging records is known.> The name of the image repository within which the image collection can be found, stated in the form of the appropriate acronym. <br>CDE ID = 14826003 (added 05-28-24)
-sex	<A textual description of a person's sex at birth.> CDE ID = 7572817 (updated 05-31-24)
-snomed_disease_code	A 9-digit numerical code for the primary disease with which the subject in question has been diagnosed. <br>CDE ID = 6642369
-snomed_disease_term	text <WORK NEEDED HERE> <br>NOT CURRENTLY ASSIGNED ANY CDE
+crdc_id	The crdc_id is a unique identifier that is generated by the CRDC Submission Portal.
+ctep_disease_term	<The coded response indicating the MedDRA code Version 10 used in the NCI Simplified Disease Classification (SDC) Terminology for diagnoses.> <br>CDE ID = 4723846
+data_file_checksum_type	<The method by which the file checksum was calculated.> <br>CDE ID = 11475057
+data_file_checksum_value	<A small-sized block of data derived from a file for the purpose of detecting errors that may have been introduced during file transmission and/or storage and used to verify data integrity.> <br>CDE ID = 11480133
+data_file_compression_status	<The state of data when saved to storage space or during data transmission.> <br>CDE ID = 11387114
+data_file_description	<A free text field that can be used to document the content and other details about an electronic file that may not be captured elsewhere.> For example, the file's derivation from a specimen of normal tissue versus tumor tissue.  <br>CDE ID = 11280338
+data_file_format	<A defined organization or layout representing and structuring data in a computer file.> ; the electronic format of the file, as derived during file validation <br>With the actual values of this property being loader derived, the acceptable values currently specified are in place only to support the generation of mock data <br>CDE ID = 11416926
+data_file_location	<The specification of a node (file or directory) in a hierarchical file system where an electronic file is located.> The specific location within the S3 storage bucket at which the file is stored, expressed in terms of a unique url <br>CDE ID = 11556141
+data_file_name	<The literal label for an electronic data file.> , inclusive of file extension(s). <br>CDE ID = 11284037
+data_file_size	<The measure, expressed in bytes, as to how much space a data file takes up on a storage medium.> <br>CDE ID = 11479876
+data_file_type	<The type of information contained in an electronic record.> A curated indicator as to the type of content represented by the data file <br>CDE ID = 14824731
+data_file_uuid	<A unique sequence of characters used to identify the contents of an electronic record.> <br>CDE ID = 14826100
+dates_of_conduct	The timespan over which the study/trial was/is being conducted.
+demographic_record_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each demographic record, used to identify the correct demographic records during data updates. <br>The value of this property will generally be the same as the value of the participant_id property. <br>CDE ID = 14822135
+diagnosis_record_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each diagnosisc record, used to identify the correct diagnosis records during data updates. <br>The value of this property will generally be the same as the value of the participant_id property. <br>CDE ID = 14822135 <br>This property is used as the key via which child records, e.g. clinical reports, can be associated with the appropriate diagnosis record during data loading, and to identify the correct records during data updates.
+environmental_exposure_type	<The category related to contact with chemical, biological, or physical substances found in air, water, food, soil, or product that may have a harmful effect on a person's health.> <br>CDE ID = 11256813
+ethnicity	<The text for reporting information about ethnicity based on the Office of Management and Budget (OMB) categories.> <br>CDE ID = 2192217
+exposure_record_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each exposure record, used to identify the correct exposure records during data updates. The value of this property will generally be the same as the value of the participant_id property. <br>CDE ID = 14822135
+extent_of_residual_disease	<A textual description of evidence for remaining tumor following primary treatment that is only apparent using highly sensitive techniques.> <br>CDE ID = 13362284
+height	<The number that describes the vertical distance of an individual.> The height of the participant as of enrollment, measured in cm. <br>CDE ID = 2179643
+highest_level_of_education	<The subdivision that summarizes the highest level of education attained by a person.> An indication as to the highest level of education attained by the participant. <br>CDE ID = 2681552
+histological_subtype	<Words that describe the classification of tumors based on their histology.> CDE ID = 14843594
+histology	<Words that describe the normal and abnormal morphologic characteristics in cells and tissues.> <br>CDE ID = 14842510
+histology_images_available	<A response to indicate whether or not any histology slide images are available for an individual.> An indicator as to whether any histology images relating to the participant in question are available. <br>CDE ID = 14735827
+image_collection_name	<The words by which a set of images that are stored together are known.> The name of the image collection exactly as it appears at the location where the collection can be viewed and/or accessed. <br>CDE ID = 14826008
+image_collection_record_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each image collection record, used to identify the correct image collection records during data updates. <br>CDE ID = 14822135
+image_collection_url	<The specification of a node (file or directory) in a hierarchical file system where an electronic file is located.> The external url via which the image collection can be viewed and/or accessed. <br>CDE ID = 11556141
+image_type_included	<A system of categories for representing a specific manner, characteristic, pattern of a data acquisition device used in an imaging event whether physical or electronic.> A list of the image types included in the image collection, drawn from a list of acceptable values. <br>CDE ID = 12137353
+income	<The amount of earnings made by a family in a year.> <br>CDE ID = 14834966
+meddra_disease_code	<The MedDRA code describing a medical condition and/or anatomic location.> An eight digit numerical code for the primary disease with which the participant in question has been diagnosed. <br>CDE ID = 2004425
+ncbi_taxonomy_id	A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/),  which uniquely identifies group or category, at any level, in a system for classifying plants or animals (including humans) providing ranked categories for the classification of organisms according to their suspected evolutionary relationships. <br>CDE ID = 10543100
+ncbi_taxonomy_name	The textual label associated with a participant's organismal classification as captured in the National Center for Biotechnology Information (NCBI) Taxonomy standard nomenclature and classification repository.  <br>Supposedly enumerated but no permissible values specified. <br>CDE ID = 10543082
+non_targeted_therapy	<A term describing a therapeutic agent as captured in the Pharmacological Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic agent administered to a participant as a non-targeted therapy, i.e. one that is considered to be appropriate for and effective against the specific type of cancer with which the participant has been diagnosed, but is not considered to have significantly enhanced therapeutic effects upon that cancer in general or upon that cancer specifically within the context of a given participant. Notably, a therapeutic agent considered to be and administered as a non-targeted therapy in one participant can, conversely, be considered and administered as a targeted therapy in another participant, where differences in his or her type of cancer per se, or the specific context of the cancer in question make the therapy more specific. <br>CDE ID = 14913015
+non_targeted_therapy_dose	<The amount that represents the dose of the agent.> The dose at which the non-targeted therapeutic agent in question was administered, exclusive of the dosage units. <br>CDE ID = 2182728
+non_targeted_therapy_dose_units	<Text name to represent units of measure used to describe dosages of an agent or measure.> The units of measure for the dose at which the non-targeted therapeutic agent in question was administered. <br>CDE ID = 2321160
+non_targeted_therapy_end_date	<The number of days from the date of enrollment to the date of treatment end.> The date upon which administration of the non-targeted therapy in question ended, expressed as the number of days before or after study enrollment the non-targeted therapy administration ended. <br>CDE ID = 14984563
+non_targeted_therapy_frequency	<The frequency of how often a medication is being administered.> The frequency at which the non-targeted therapeutic agent in question was administered. <br>CDE ID = 2003878
+non_targeted_therapy_record_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each non-targeted therapy record, used to identify the correct non-targeted therapy records during data updates. <br>CDE ID = 14822135
+non_targeted_therapy_start_date	<The number of days from the date of enrollment to the date of treatment start.> The date upon which administration of the non-targeted therapy in question began, expressed as the number of days before or after study enrollment the non-targeted therapy administration began. <br>CDE ID = 14984532
+occupation	<The occupation/job category of a person.> <br>CDE ID = 6617540
+off_study_reason	<An explanation describing why an individual is no longer receiving protocol therapy.> <br>CDE ID = 13362265
+participant_id	<A sequence of letters, numbers, or characters that uniquely identifies the participant who has taken part in the investigation or research study.> The globally unique ID by which any given participant can be unambiguously identified and displayed across studies/trials. <br>CDE ID = 12220014 <br>This property is used as the key via which child records, e.g. specimen records, can be associated with the appropriate participant during data loading, and to identify the correct records during data updates.
+participant_status_record_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each participant_status record, used to identify the correct participant_status records during data updates. The value of this property will generally be the same as the value of the participant_id property. <br>CDE ID = 14822135
+person_first_name	<A word or group of words indicating a person's first (personal or given) name; the name that precedes the surname. Synonym = Given Name.> The first or given name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179589
+person_last_name	<A means of identifying an individual by using a word or group of words indicating a person's last (family) name. Synonym = Last Name, Surname.> The last or family name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179591
+person_middle_name	<A means of identifying an individual by using a word or group of words indicating a person's middle name.> The middle name of the person responsible for the conduct of the clinical trial or research project. <br>CDE ID = 2179590
+person_orcid	<A persistent unique digital identifier assigned to a person by the Open Researcher and Contributor ID (ORCID) organization.> A persistent unique digital identifier assigned to a principal investigator by the Open Researcher and Contributor ID (ORCID) organization. <br>CDE ID = 10624734
+person_record_id	A globally unique identifier via which principle investigator can be differentiated across studies; specifically the value of study_id concatenated with the value of pi_last_name, <br>This property is used as the key via which child records, e.g. cohort records, can be associated with the appropriate principle investigator, and to identify the correct principle investigator records during data updates.
+primary_cause_of_death	<The circumstance or condition of greatest rank or importance that results in the death of a living being.> <br>CDE ID = 4783274
+primary_diagnosis_disease_group	<A term describing the main condition for evaluation and treatment as captured in the Disease or Diagnosis (C2991) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> <br>CDE ID = 14905532
+primary_disease_site	<The location within the body from where the disease of interest originated as captured in the Uberon identifier.> <br>CDE ID = 14883047
+program_name	<The narrative title used to refer to a broad framework (an administrative umbrella) of goals under which related projects or other research activities are grouped. Example - Clinical Proteomic Tumor Analysis.> <br>CDE ID = 11444542
+program_short_name	<An acronym or abbreviated form of the title of a broad framework of goals under which related projects or other research activities are grouped. For example, CPTAC.> <br>CDE ID = 11459801 <br>This property is used as the key via which child records, e.g. project and/or study/trial records, can be associated with the appropriate program during data loading, and to identify the correct records during data updates.
+race	<The text for reporting information about race based on the Office of Management and Budget (OMB) categories.> <br>CDE ID = 2192199
+radiation_dose	<The quantity of radiation energy administered, taken, or absorbed.> The dose at which the radiotherapy in question was administered, exclusive of the dosage units. CDE ID = 14986422
+radiation_dose_units	<A standard unit of measurement associated with the total quantity or strength of therapeutic radiation received or absorbed.> The units of measure for the dose at which the radiotherapy in question was administered. <br>CDE ID = 13383458
+radiation_extent	<The extent of radiation exposure administered to the patient's body during radiation therapy.> CDE ID = 7063755
+radiation_frequency	<Words which describe the number of occurrences of radiation therapy within a given time period.> The frequency at which the radiotherapy in question was administered. <br>CDE ID = 14918782
+radiological_procedure	The name and/or a brief narrative description of the radiological procedure performed upon the participant. <br>CDE ID = 6411539
+radiological_procedure_anatomical_location	The anatomical site or sites participant to the radiological procedure in question.
+radiological_procedure_record_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each radiological procedure record, used to identify the correct radiological procedure record during data updates. <br>CDE ID = 14822135
+radiology_images_available	<A response to indicate whether or not any radiology images are available for an individual.> An indicator as to whether any radiology images relating to the participant in question are available. <br>CDE ID = 14735826
+radiology_report_available	<A response to indicate whether or not any radiology reports are available for an individual.> An indicator as to whether any radiology reports results relating to the participant in question are available. <br>CDE ID = 14735825
+radiotherapy_end_date	<The number of days from the date of enrollment to the date of treatment end.> The date upon which administration of the radiotherapy in question ended, expressed as the number of days before or after study enrollment the radiotherapy ended. <br>CDE ID = 14984563
+radiotherapy_start_date	<The number of days from the date of enrollment to the date of treatment start.> The date upon which administration of the radiotherapy in question began, expressed as the number of days before or after study enrollment the radiotherapy began. <br>CDE ID = 14984532
+repository_name	<The words by which the storage location for imaging records is known.> The name of the image repository within which the image collection can be found, stated in the form of the appropriate acronym. <br>CDE ID = 14826003
+sex	<A textual description of a person's sex at birth.> CDE ID = 7572817
+snomed_disease_code	A 9-digit numerical code for the primary disease with which the participant in question has been diagnosed. <br>CDE ID = 6642369
+snomed_disease_term	Description pending
 specimen_category	<The biospecimen grouping that describes the kind of material that forms the sample.> <br>CDE ID = 12445832 (updated 06-03-24)
-specimen_id	<A unique sequence of alphanumeric characters used to identify the specimen at it's point of origin.> CMB's "Biospecimen ID" <br>CDE ID = 6921892 (added 06-03-24) <br>This property is used as the key via which child records, e.g. data files generated via Oncomine panel analyses, can be associated with the appropriate specimen during data loading, and to identify the correct records during data updates.
-specimen_type	<The kind of material that forms the sample as captured in the Ontology for Biobanking (OBIB).> Acceptable values taken straight from the CMB Catalog Site. <br>CDE ID = 11253427 (added 06-03-24)
-stage_of_disease	<Stage group determined from clinical information on the tumor (T), regional node (N) and metastases (M) and by grouping cases with similar prognosis for cancer.> The stage of the primary disease with which the subject in question has been diagnosed. <br>CDE ID = 3440332 (added 05-28-24)
-study_description	<A textual description of the study, with components such as objectives or goals.> A narrative description of the study/trial. <br>CDE ID = 3444002 (added 05-28-24)
-study_id	<A unique identifier assigned to a clinical study.> Any external identifier by which the study/trial in question is known.<br>CDE ID = 5054234 (added 05-28-24)
-study_name	<The narrative title used as a textual label for a research data collection.> <br>CDE ID = 11459810 (correct as of 05-28-24)
-study_short_name	<The acronym or abbreviated form of the title for a research data collection.> <br>CDE ID = 11459812 (correct as of 05-28-24) <br>This property is used as the key via which child records, e.g. image collection and subject records, can be associated with the appropriate study/trial during data loading, and to identify the correct records during data updates.
-study_type	<A classification of the study based upon the primary intent of the study's activities.> <br>CDE ID = 11160683 (correct as of 05-28-24)
-subject_id	<A sequence of letters, numbers, or characters that uniquely identifies the subject who has taken part in the investigation or research study.> The globally unique ID by which any given subject can be unambiguously identified and displayed across studies/trials. <br>CDE ID = 12220014 (added 05-31-24) <br>This property is used as the key via which child records, e.g. specimen records, can be associated with the appropriate subject during data loading, and to identify the correct records during data updates.
-subject_status_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each subject_status record, used to identify the correct subject_status records during data updates. The value of this property will generally be the same as the value of the subject_id property. <br>CDE ID = 14822135 (added 05-31-24)
-surgical_procedure	<The type of surgical procedure categorized by type or purpose.> The name and/or a brief narrative description of the surgical procedure performed upon the subject. <br>CDE ID = 13383457
-surgical_procedure_anatomical_location	The anatomical site or sites at which the surgical procedure in question was performed. <br>NOT CURRENTLY ASSIGNED ANY CDE
-surgical_procedure_findings	A narrative description of any significant findings observed during the surgical procedure in question. <br>NOT CURRENTLY ASSIGNED ANY CDEtext
-surgical_procedure_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each surgical procedure record, used to identify the correct surgical procedure therapy records during data updates. <br>CDE ID = 14822135 (added 05-29-24)
-surgical_procedure_therapeutic	An indication as to whether the surgical procedure in question was performed with therapeutic intent. <br>NOT CURRENTLY ASSIGNED ANY CDE
-survival_status	<The participant's survival state as being living or deceased.> <br>CDE ID = 2847330 (correct as of 05-31-24, but CDE metadata updated)
-targeted_therapy	<A term describing a therapeutic agent as captured in the Pharmacological Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic agent administered to a subject as a targeted therapy, i.e. one that is considered to have enhanced therapeutic effects upon the specific type of cancer with which the subject has been diagnosed, and/or upon that type of cancer specifically within the context of a given subject because of factors such as tumor histology, grade, gene expression and genetic make-up. Notably, a therapeutic agent considered to be and administered as a targeted therapy in one subject based upon the specifics of such characteristics can, conversely, be considered and administered as a non-targeted therapy in another subject, because of differences in his or her type of cancer per se, or the specific context of the cancer in question. <br>CDE ID = 14913015 (updated 05-29-24)
-targeted_therapy_dose	<The amount that represents the dose of the agent.> The dose at which the targeted therapeutic agent in question was administered, exclusive of dosage units. <br>CDE ID = 2182728 (added 05-29-24)
-targeted_therapy_dose_units	<Text name to represent units of measure used to describe dosages of an agent or measure.> The units of measure for the dose at which the targeted therapeutic agent in question was administered. <br>CDE ID = 2321160 (added 05-29-24)
-targeted_therapy_end_date	The date upon which administration of the targeted therapy in question ended, expressed as the number of days before or after study enrollment the targeted therapy administration ended. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The proposed CDE references age not time relative to study enrollment
-targeted_therapy_frequency	<The frequency of how often a medication is being administered.> The frequency at which the targeted therapeutic agent in question was administered. <br>CDE ID = 2003878 (added 05-29-24)
-targeted_therapy_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each targeted therapy record, used to identify the correct targeted therapy records during data updates. <br>CDE ID = 14822135 (added 05-29-24)
-targeted_therapy_start_date	The date upon which administration of the targeted therapy in question began, expressed as the number of days before or after study enrollment the targeted therapy administration began. <br>NOT CURRENTLY ASSIGNED ANY CDE >>> The Proposed CDE references age not time relative to study enrollment
-tissue_category	<A text term based on categorization of cytologic atypia found in cellular molecules, cells, tissues, organs, body fluids, or body excretory products.> Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue". <br>Acceptable values taken straight from the CMB Catalog Site. <br>CDE ID = 14688604 (added 06-03-24)
-tumor_grade	<A text term to express the degree of abnormality of cancer cells as a measure of differentiation and aggressiveness.> <br>CDE ID = 11325685 (correct as of 05-28-24)
-weight	<The number that describes the vertical force exerted by the mass of an individual as a result of gravity.> The weight of the subject as of enrollment, measured in kg. <br>CDE ID = 2179689 (added 05-31-24)
+specimen_record_id	<A sequence of characters used to identify the kind of material that forms the parent sample.> <br>CDE ID =  14986442
+specimen_type	<The kind of material that forms the parent sample as captured in the Ontology for Biobanking (OBIB).> <br>CDE ID = 14986443
+stage_of_disease	<Stage group determined from clinical information on the tumor (T), regional node (N) and metastases (M) and by grouping cases with similar prognosis for cancer.> The stage of the primary disease with which the participant in question has been diagnosed. <br>CDE ID = 3440332
+study_description	<A textual description of the study, with components such as objectives or goals.> A narrative description of the study/trial. <br>CDE ID = 3444002
+study_id	<A unique identifier assigned to a clinical study.> Any external identifier by which the study/trial in question is known.<br>CDE ID = 5054234
+study_name	<The narrative title used as a textual label for a research data collection.> <br>CDE ID = 11459810
+study_short_name	<The acronym or abbreviated form of the title for a research data collection.> <br>CDE ID = 11459812 <br>This property is used as the key via which child records, e.g. image collection and participant records, can be associated with the appropriate study/trial during data loading, and to identify the correct records during data updates.
+study_type	<A classification of the study based upon the primary intent of the study's activities.> <br>CDE ID = 11160683
+surgical_procedure	<The type of surgical procedure categorized by type or purpose.> The name and/or a brief narrative description of the surgical procedure performed upon the participant. <br>CDE ID = 13383457
+surgical_procedure_anatomical_location	<The Uberon identifier for the location within the body where a procedure was performed.> The anatomical site or sites at which the surgical procedure in question was performed. <br>CDE ID = 14980609
+surgical_procedure_date	The date upon which the surgical procedure in question was performed.
+surgical_procedure_findings	<Words which describe observations that are made during surgery.> A narrative description of any significant findings observed during the surgical procedure in question. <br>CDE ID = 14918773
+surgical_procedure_record_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each surgical procedure record, used to identify the correct surgical procedure records during data updates. <br>CDE ID = 14822135
+surgical_procedure_therapeutic	<A response which indicates whether the administration of a therapeutic procedure that is intended to alter or stop a pathologic process occurred.> An indication as to whether the surgical procedure in question was performed with therapeutic intent. <br>CDE ID = 6765611
+survival_status	<The participant's survival state as being living or deceased.> <br>CDE ID = 2847330
+targeted_therapy	<A term describing a therapeutic agent as captured in the Pharmacological Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National Cancer Institute Thesaurus (NCIt) hierarchy tree.> The name of the therapeutic agent administered to a participant as a targeted therapy, i.e. one that is considered to have enhanced therapeutic effects upon the specific type of cancer with which the participant has been diagnosed, and/or upon that type of cancer specifically within the context of a given participant because of factors such as tumor histology, grade, gene expression and genetic make-up. Notably, a therapeutic agent considered to be and administered as a targeted therapy in one participant based upon the specifics of such characteristics can, conversely, be considered and administered as a non-targeted therapy in another participant, because of differences in his or her type of cancer per se, or the specific context of the cancer in question. <br>CDE ID = 14913015
+targeted_therapy_dose	<The amount that represents the dose of the agent.> The dose at which the targeted therapeutic agent in question was administered, exclusive of dosage units. <br>CDE ID = 2182728
+targeted_therapy_dose_units	<Text name to represent units of measure used to describe dosages of an agent or measure.> The units of measure for the dose at which the targeted therapeutic agent in question was administered. <br>CDE ID = 2321160
+targeted_therapy_end_date	<The number of days from the date of enrollment to the date of treatment end.> The date upon which administration of the targeted therapy in question ended, expressed as the number of days before or after study enrollment the targeted therapy administration ended. <br>CDE ID = 14984563
+targeted_therapy_frequency	<The frequency of how often a medication is being administered.> The frequency at which the targeted therapeutic agent in question was administered. <br>CDE ID = 2003878
+targeted_therapy_record_id	<A unique sequence of characters used to identify a linkage between related records.> A unique identifier of each targeted therapy record, used to identify the correct targeted therapy records during data updates. <br>CDE ID = 14822135
+targeted_therapy_start_date	<The number of days from the date of enrollment to the date of treatment start.> The date upon which administration of the targeted therapy in question began, expressed as the number of days before or after study enrollment the targeted therapy administration began. <br>CDE ID = 14984532
+tissue_category	<A text term based on categorization of cytologic atypia found in cellular molecules, cells, tissues, organs, body fluids, or body excretory products.>  <br>CDE ID = 14688604
+tumor_grade	<A text term to express the degree of abnormality of cancer cells as a measure of differentiation and aggressiveness.> <br>CDE ID = 11325685
+weight	<The number that describes the vertical force exerted by the mass of an individual as a result of gravity.> The weight of the participant as of enrollment, measured in kg. <br>CDE ID = 2179689
