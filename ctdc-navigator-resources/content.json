@@ -6,6 +6,7 @@
     "prop-file": "ctdc_model_properties_file.yaml",
     "readme-file": "README.md",
     "loading-file": "CTDC_Example_Files.zip",
+    "model-navigator-logo": "logo.png",
     "semantics": {
       "file-nodes": {
         "data_file": {
