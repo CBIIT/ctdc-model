@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/ctdc-model
-commit 7952271
+commit 73dcc68
 node	property	value_or_TYPE
 associated_link	associated_link_name	STRING
 associated_link	associated_link_record_id	STRING
@@ -426,25 +426,25 @@ targeted_therapy	targeted_therapy_record_id	STRING
 targeted_therapy	targeted_therapy_start_date	INTEGER
 
 relationship	source_node	destination_node	property	value_or_TYPE
+associated_with	associated_link	study	NA	NA
 associated_with	data_file	diagnosis	NA	NA
-associated_with	data_file	participant	NA	NA
 associated_with	data_file	specimen	NA	NA
 associated_with	data_file	study	NA	NA
+associated_with	data_file	participant	NA	NA
 associated_with	image_collection	study	NA	NA
-associated_with	associated_link	study	NA	NA
 belongs_to	participant	study	NA	NA
 belongs_to	study	program	NA	NA
 directs	principal_investigator	study	NA	NA
+of_participant	data_file	participant	NA	NA
+of_participant	specimen	participant	NA	NA
+of_participant	targeted_therapy	participant	NA	NA
+of_participant	demographic	participant	NA	NA
 of_participant	non_targeted_therapy	participant	NA	NA
 of_participant	surgery	participant	NA	NA
-of_participant	targeted_therapy	participant	NA	NA
-of_participant	radiotherapy	participant	NA	NA
 of_participant	diagnosis	participant	NA	NA
-of_participant	exposure	participant	NA	NA
-of_participant	specimen	participant	NA	NA
-of_participant	demographic	participant	NA	NA
-of_participant	data_file	participant	NA	NA
 of_participant	participant_status	participant	NA	NA
+of_participant	exposure	participant	NA	NA
+of_participant	radiotherapy	participant	NA	NA
 
 property	description
 age_at_enrollment	<The age (in days) of the participant when the participant enrolled in the study.> The age of the participant as of enrollment, measured in years. <br>CDE ID = 12299548
