@@ -387,8 +387,8 @@ Relationships:
       - Src: specimen
         Dst: participant
         # to accommodate a Data File being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Specimen or Diagnosis
-      - Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
-        Dst: participant
+      # - Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+      #   Dst: participant
     Props: null
   #of_specimen:
     #Mul: many_to_one
