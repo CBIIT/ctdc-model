@@ -320,13 +320,13 @@ PropDefinitions:
     Src: ICDC
     Type:
       value_type: list
-          Enum: # Reflective of the image types available for CMB participants, all acceptable terms are exactly as used by both IDC and TCIA
-          - CT
-          - DX
-          - MR
-          - NM
-          - PT
-          - US
+      Enum: # Reflective of the image types available for CMB participants, all acceptable terms are exactly as used by both IDC and TCIA
+        - CT
+        - DX
+        - MR
+        - NM
+        - PT
+        - US
     Req: 'Yes'
     Tags:
       Labeled: Image Types
@@ -485,15 +485,16 @@ PropDefinitions:
         Value: Subject Race
         Version: '1'
     Src: CMB
-    value_type: list
-    Enum: # Currently reflective only of the values used by the CMB
-      - American Indian or Alaska Native
-      - Asian
-      - Black or African American
-      - Native Hawaiian or other Pacific Islander
-      - White
-      - Not Reported
-      - Unknown
+    Type: 
+      value_type: list
+      Enum: # Currently reflective only of the values used by the CMB
+        - American Indian or Alaska Native
+        - Asian
+        - Black or African American
+        - Native Hawaiian or other Pacific Islander
+        - White
+        - Not Reported
+        - Unknown
     Req: 'Yes'
   ethnicity:
     Desc: <The text for reporting information about ethnicity based on the Office
