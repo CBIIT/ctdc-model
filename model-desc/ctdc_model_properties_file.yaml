@@ -896,7 +896,7 @@ PropDefinitions:
       - "408647009" #Gastric Adenocarcinoma
       - "254626006" #Lung Adenocarcinoma
       - "448993007" #Lung Carcinoma
-      - "254849005" #Malignant epithelial tumor of ovary
+      # - "254849005" #Malignant epithelial tumor of ovary
       - "2092003" #Melanoma
       - "372244006" #Melanoma
       - "72495009" #Mucinous Adenocarcinoma
