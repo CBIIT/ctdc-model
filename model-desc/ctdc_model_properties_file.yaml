@@ -485,14 +485,16 @@ PropDefinitions:
         Value: Subject Race
         Version: '1'
     Src: CMB
-    Enum: # Currently reflective only of the values used by the CMB
-      - American Indian or Alaska Native
-      - Asian
-      - Black or African American
-      - Native Hawaiian or other Pacific Islander
-      - White
-      - Not Reported
-      - Unknown
+    Type: 
+      value_type: list
+      Enum: # Currently reflective only of the values used by the CMB
+        - American Indian or Alaska Native
+        - Asian
+        - Black or African American
+        - Native Hawaiian or other Pacific Islander
+        - White
+        - Not Reported
+        - Unknown
     Req: 'Yes'
   ethnicity:
     Desc: <The text for reporting information about ethnicity based on the Office
@@ -598,11 +600,12 @@ PropDefinitions:
     Req: Preferred
   occupation:
     Desc: <The occupation/job category of a person.> <br>CDE ID = 6617540
-    Term:
-      - Origin: caDSR # NCIP
-        Code: '6617540' #(added 05-31-24)
-        Value: Person Occupation Category
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR # NCIP
+    #     Code: '6617540' #(added 05-31-24)
+    #     Value: Person Occupation Category
+    #     Version: '1'
+    # This CDE needs to be updated to include an expanded list of permissible values
     Src: CMB
     Type: string
     Req: Preferred
@@ -636,6 +639,7 @@ PropDefinitions:
       - Master's degree
       - Doctoral or professional degree
       - Declined to answer
+      - NA
     Req: Preferred
   ncbi_taxonomy_id:
     Desc: A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/),  which
@@ -719,7 +723,8 @@ PropDefinitions:
       - 'Yes'
       - 'No'
       - Unknown
-    Req: 'Yes'
+      - NA
+    Req: Preferred
   # diagnosis
   diagnosis_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related
@@ -781,10 +786,11 @@ PropDefinitions:
         Value: NCI CTEP Simplified Disease Classification Terminology MedDRA Version 10 Code
         Version: '1'
     Src: value
-    Enum: # Currently reflective only of values used in the v3 CMB data submission
+    Enum: # Currently reflective only of values used in the v5 CMB data submission
       - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
       - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
       - Colorectal Carcinoma                            # meddra code 10010029
+      - Gastric Carcinoma                               # meddra code 10017760
       - Invasive Breast Carcinoma                       # meddra code 10006190 NEW
       - Melanoma                                        # meddra code 10053571 
       - Non-Small Cell Lung Carcinoma                   # meddra code 10029514
@@ -792,6 +798,7 @@ PropDefinitions:
       - Plasma Cell Myeloma                             # meddra code 10028566 
       - Prostate Carcinoma                              # meddra code 10036910 
       - Small Cell Lung Carcinoma                       # meddra code 10041071
+      - Esophageal Carcinoma                            # meddra code 10030157
     Req: 'Yes'
   meddra_disease_code:
     Desc: <The MedDRA code describing a medical condition and/or anatomic location.>
@@ -815,6 +822,8 @@ PropDefinitions:
       - "10036910" # Prostate Carcinoma
       - "10041071" # Small Cell Lung Carcinoma
       - "10017760" # Gastric Cancer NOS
+      - "10030157" # Oesophageal Carcioma
+      - "10016180" #Fallopian Carcinoma
     Req: 'Yes'
   snomed_disease_term:
     Desc: Description pending #<br>NOT CURRENTLY ASSIGNED ANY CDE
@@ -837,6 +846,7 @@ PropDefinitions:
       - Gastric Adenocarcinoma #408647009
       - Lung Adenocarcinoma #254626006
       - Lung Carcinoma #448993007
+      # - Malignant neoplasm of ovary #254849005
       - Melanoma #2092003 #372244006
       - Mucinous Adenocarcinoma #72495009
       - Multiple myeloma #55921005
@@ -844,6 +854,7 @@ PropDefinitions:
       - Neuroendocrine Carcinoma #253000007
       - Nodular Melanoma #2142002 #254731001
       - Non-Small Cell Lung Carcinoma #254637007
+      - Ovarian Carcinoma #254849005
       - Plasma Cell Leukemia #128922003
       - Plasma Cell Myeloma #109989006 #55921005
       - Prostate Adenocarcinoma #399490008
@@ -855,6 +866,11 @@ PropDefinitions:
       - Squamous Cell Carcinoma #28899001 #402815007
       - Squamous Cell Lung Carcinoma #254634000
       - Superficial Spreading Melanoma #254730000
+      - Anal Carcinoma #255084004
+      - Invasive Ductal Carcinoma #408643008
+      - Fallopian Tube Carcinoma #276870001
+      - Mixed Lobular and Ductal Breast Carcinoma #444604002
+      - Female Breast Carcinoma #447782002
     Req: 'Yes'
   snomed_disease_code:
     Desc: A 9-digit numerical code for the primary disease with which the participant
@@ -880,6 +896,7 @@ PropDefinitions:
       - "408647009" #Gastric Adenocarcinoma
       - "254626006" #Lung Adenocarcinoma
       - "448993007" #Lung Carcinoma
+      # - "254849005" #Malignant epithelial tumor of ovary
       - "2092003" #Melanoma
       - "372244006" #Melanoma
       - "72495009" #Mucinous Adenocarcinoma
@@ -905,6 +922,12 @@ PropDefinitions:
       - "402815007" #Squamous Cell Carcinoma
       - "254634000" #Squamous Cell Lung Carcinoma
       - "254730000" #Superficial Spreading Melanoma
+      - "255084004" #Anal Carcinoma
+      - "408643008" #Invasive Ductal Carcinoma
+      - "254849005" #Ovarian Carcinoma
+      - "276870001" #Fallopian Tube Carcinoma
+      - "444604002" #Mixed Lobular and Ductal Breast Carcinoma
+      - "447782002" #Female Breast Carcinoma
     Req: 'Yes'
   # icd_o_primary_site:
   #   Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3). <br>CDE ID = 11341616
@@ -959,7 +982,7 @@ PropDefinitions:
         Version: '1'
     Src: CMB
     Type: string
-    Req: 'Yes'
+    Req: Preferred
   stage_of_disease:
     Desc: <Stage group determined from clinical information on the tumor (T), regional
       node (N) and metastases (M) and by grouping cases with similar prognosis for
@@ -980,6 +1003,7 @@ PropDefinitions:
       - Stage IVA
       - Stage IVB
       - Stage IVC
+      - NA 
     Req: Preferred
   tumor_grade:
     Desc: <A text term to express the degree of abnormality of cancer cells as a measure
