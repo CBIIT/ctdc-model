@@ -1,3 +1,3 @@
-### 1.2.0
+### 1.4.0
 
-Release 1.2.0 adds file uuids to CTDC Example Files.
+Release 1.4.0 updates the data model for the CMB v5 study.
