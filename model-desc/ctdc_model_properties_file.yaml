@@ -1315,11 +1315,11 @@ PropDefinitions:
     Desc: <The type of surgical procedure categorized by type or purpose.> The name
       and/or a brief narrative description of the surgical procedure performed upon
       the participant. <br>CDE ID = 13383457
-    Term:
-      - Origin: caDSR # PCDC
-        Code: '13383457' #(updated) prior CDE 6411539'
-        Value: Therapeutic Surgical Procedure Type #Procedure Name  
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR # PCDC
+    #     Code: '13383457' #(updated) prior CDE 6411539'
+    #     Value: Therapeutic Surgical Procedure Type #Procedure Name  
+    #     Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
@@ -1457,11 +1457,11 @@ PropDefinitions:
   radiation_extent:
     Desc: <The extent of radiation exposure administered to the patient's body during
       radiation therapy.> CDE ID = 7063755
-    Term:
-      - Origin: caDSR # NCI CRF Stds
-        Code: '7063755' #(added 05-29-24)
-        Value: Radiation Therapy Administration Extent Type
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR # NCI CRF Stds
+    #     Code: '7063755' #(added 05-29-24)
+    #     Value: Radiation Therapy Administration Extent Type
+    #     Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
@@ -1799,11 +1799,11 @@ PropDefinitions:
     Desc: <A specific point in the time continuum, including those established relative
       to an event.> CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 5899851
       (updated 06-03-24)
-    Term:
-      - Origin: caDSR # NCI CRF Standards
-        Code: '5899851' #'7065963'
-        Value: Timepoint Event Assessment Period Type
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR # NCI CRF Standards
+    #     Code: '5899851' #'7065963'
+    #     Value: Timepoint Event Assessment Period Type
+    #     Version: '1'
     Src: CMB
     Enum:
       - ARCHIVAL
