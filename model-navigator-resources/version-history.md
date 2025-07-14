@@ -1,3 +1,3 @@
-### 1.5.0
+### 1.6.0
 
-Release 1.5.0 updates the data model for the CMB v5 study.
+Release 1.6.0 updates the data model for the CMB v5 study.
