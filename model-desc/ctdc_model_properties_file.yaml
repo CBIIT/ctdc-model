@@ -1918,12 +1918,12 @@ PropDefinitions:
   data_file_type:
     Desc: <The type of information contained in an electronic record.> A curated indicator
       as to the type of content represented by the data file <br>CDE ID = 14824731
-    Term:
-      - Origin: caDSR # CTDC
-        Code: '14824731' #(added 05-30-24)
-        Value: Electronic Data File Content Type
-        Version: '1'
-    Src: FNL
+    # Term:
+    #   - Origin: caDSR # CTDC
+    #     Code: '14824731' #(added 05-30-24)
+    #     Value: Electronic Data File Content Type
+    #     Version: '1'
+    # Src: FNL
     Enum:
       - Clinical Report
       - File Collection
