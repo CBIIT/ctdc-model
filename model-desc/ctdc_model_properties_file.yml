@@ -1,0 +1,518 @@
+# Cancer Moonshot Biobank data model properties of properties file
+# Title case names are "reserved" (meaningful to the parser)
+# Lower case names are labels for the entities
+
+PropDefinitions:
+  # name_of_node
+  property:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: value
+    Type: integer
+    Req: 'Yes'
+  property:
+    Desc: text
+    Src: value
+    Type: datetime
+    Req: 'No'
+  property:
+    Desc: text
+    Src: value
+    Enum: 
+      - 'Yes'
+      - 'No'
+    Req: Preferred
+  #program
+  program_name:
+  #11444542:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11444542'
+        Value: Program Name Text  
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  program_short_name:
+  #11459801
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11459801'
+        Value: Project Short Name Text  
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  #project
+  project_name:
+  #11459804
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11459804'
+        Value: Project Name Text  
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  project_short_name:
+  #11459806
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11459806'
+        Value: Project Short Name Text  
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  #principal_investigator
+  principal_investigator_first_name:
+  #10624731
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '10624731'
+        Value: Principal Investigator First Name Text 
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  principal_investigator_last_name:
+  #10624733
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '10624733D'
+        Value: Principal Investigator Last Name Text  
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  principal_investigator_middle_name:
+  #10624732
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '10624732'
+        Value: Principal Investigator Middle Name Text  
+    Src: DSS
+    Type: string
+    Req: 'No'
+  principal_investigator_orcid_id:
+  #10624734
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '10624734'
+        Value: Principal Investigator ORCID Text
+    Src: DSS
+    Type: string
+    Req: Preferred
+  # study
+  study_name:
+  #11459810
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11459810'
+        Value: Study Name Text  
+    Src: DSS
+    Type: string
+    Req: 'Yes'  
+  study_short_name:
+  #11459812
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11459812'
+        Value: Study Short Name Text
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  study_type:
+  #11160683
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11160683'
+        Value: Data Element Name  
+    Src: DSS
+    Enum:
+      - value 1
+      - value 2
+    Req: 'Yes'
+  # subject
+  # demographic
+  sex:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'PID6343385'
+        Value: Data Element Name  
+    Src: CMB
+    Type: integer
+    Req: 'Yes'
+  reported_gender:
+  #10748236
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '10748236'
+        Value: Person Reported Gender Type  
+    Src: DSS
+    Type: integer
+    Req: 'Yes'
+  ncbi_taxonomy_id: # perhaps this a direct property of subject?
+  #10543100
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '10543100'
+        Value: Subject National Center for Biotechnology Information Taxonomy Identifier Integer
+    Src: DSS
+    Type: integer
+    Req: 'Yes'
+  ncbi_taxonomy_name: # perhaps this a direct property of subject?
+  #10543082
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '10543082'
+        Value: Subject National Center for Biotechnology Information Taxonomy Name Text
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  # exposure
+  environmental_exposure_type:
+  #11256813
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11256813'
+        Value: Environmental Exposure Type
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  # diagnosis
+  icd_10_disease_code:
+  #11479873
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11479873'
+        Value: Diagnosis Disease or Disorder ICD-10-CM Code
+    Src: DSS
+    Type: string
+    Req: Preferred
+  medra_disease_code: #CMB Primary Diagnosis
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  snomed_disease_code: #CMB Disease Stage
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '6642369'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  diagnosis_date:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'Yes'
+  icd_o_primary_site:
+  #11341616
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11341616'
+        Value: Diagnosis Primary Anatomic Site ICD-O-3 Code
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  primary_disease_site:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  histological_subtype:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '7344580'
+        Value: Data Element Name  
+    Src: CMB
+    Type: string
+    Req: 'Yes'
+  date_of_confirmation_of_histology:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '6409589'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'Yes'
+  tumor_grade:
+  #11325685
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11325685'
+        Value: Diagnosis Tumor Grade 
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  subject_age_at_diagnosis:
+  #10609539
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '10609539'
+        Value: Subject Age at Diagnosis Integer
+    Src: DSS
+    Type:
+      units:
+        - years
+      value_type: number
+    Req: 'Yes'              
+ # specimen 
+  Props:
+      - days_from_diagnosis_to_specimen_collection #11253404
+      - diagnosis_date #from the CMB perspective, this is supposedly equivalent to the above, but because of the way this date is indexed to enrollment date, it should not be a specimen property
+      - days_from_first_subject_visit_to_specimen_collection #11248874
+      - days_from_first_treatment_to_specimen_collection #11250807
+      - days_from_initial_genomic_sequencing_to_Specimen_collection #11250807
+      - days_from_recurrence_to_specimen_collection #11251133
+      - days_from_specimen_collection_to_initial_pathologic_diagnosis #11253404
+      - collection_date #from the CMB perspective, this is equivalent to the above, with collection date indexed to enrollment date caDSR 6401821
+      - obi_specimen_type #11253427
+      - specimen_category #is this the Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic caDSR 7069877
+      - type_of_tissue #caDSR 7003892
+      - assessment_timepoint #this appears to be the Catalog Site's "Collection Timepoint" caDSR 7065963
+  days_from_diagnosis_to_specimen_collection:
+  #11253404
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11253404'
+        Value: Specimen Diagnosis To Specimen Collection Day Count  
+    Src: DSS
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'No'
+  days_from_first_subject_visit_to_specimen_collection:
+    #11248874
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11248874'
+        Value: Data Element Name  
+    Src: DSS
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'No'
+  days_from_first_treatment_to_specimen_collection:
+    #11250807
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11250807'
+        Value: Data Element Name  
+    Src: DSS
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'No'
+  days_from_initial_genomic_sequencing_to_Specimen_collection:
+    #11250807
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: DSS
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'No'
+  days_from_recurrence_to_specimen_collection:
+    #11251133
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11251133'
+        Value: Data Element Name  
+    Src: DSS
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'No'
+  days_from_specimen_collection_to_initial_pathologic_diagnosis:
+    #11253404
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11253404'
+        Value: Data Element Name  
+    Src: DSS
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'No'
+  collection_date:
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'code/ID'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'Yes'
+  obi_specimen_type:
+    #11253427
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11253427'
+        Value: Data Element Name  
+    Src: DSS
+    Type: integer
+    Req: 'No'
+  specimen_category: #is this the Catalog Site's "Tissue Ccategory" i.e. the indicator as to normal vs primary vs metastatic?
+    #caDSR 7069877
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'caDSR 7069877D'
+        Value: Data Element Name  
+    Src: CMB
+    Type: ENUM
+    Req: 'Yes'
+  type_of_tissue:
+    #caDSR 7003892
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '#caDSR 7003892'
+        Value: Data Element Name  
+    Src: CMB
+    Type: integer
+    Req: 'Yes'
+  assessment_timepoint: #this appears to be the Catalog Site's "Collection Timepoint"
+    #caDSR 7065963
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: 'caDSR 7065963'
+        Value: Data Element Name  
+    Src: CMB
+    Type:
+      - ARCHIVAL
+      - BASELINE
+      - ON TREATMENT
+      - PROGRESSION
+    Req: 'Yes'  
+  # data_file
+  data_file_checksum_type:
+  #11475057
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11475057'
+        Value: Electronic Data File Checksum Type  
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  data_file_checksum_value:
+  #11480133
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11480133'
+        Value: Electronic Data File Checksum Value  
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  data_file_compression_status:
+  #11387114
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11387114'
+        Value: Electronic Data File Compression Type  
+    Src: DSS
+    Type: integer
+    Req: Preferred
+  data_file_description:
+  #11280338
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11280338'
+        Value: Electronic Data File Description Text  
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  data_file_format:
+  #11416926
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11416926'
+        Value: Electronic Data File Format Type  
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  data_file_name:
+  #11284037
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11284037'
+        Value: Electronic Data File Name  
+    Src: DSS
+    Type: string
+    Req: 'Yes'
+  data_file_size:
+  #11479876
+    Desc: text
+    Term:
+      - Origin: caDSR
+        Code: '11479876'
+        Value: Electronic Data File Size Integer  
+    Src: DSS
+    Type: number
+    Req: 'Yes'
