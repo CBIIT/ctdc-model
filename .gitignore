@@ -1,5 +1,32 @@
+# Ignore temporary files
 *~
 /*/*~
+
+# Ignore Python cache files
 *__pycache__*
 *.pyc
+
+# Ignore log files
+*.log
+
+
+# Ignore R script output files
+*.rout
+
+
+# Ignore macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# macOS specific files
+*.swp
+*.swo
 
