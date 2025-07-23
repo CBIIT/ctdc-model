@@ -875,7 +875,6 @@ PropDefinitions:
       - Triple-Negative Breast Carcinoma #706970001
       - Anal Carcinoma #255084004
       - Invasive Ductal Carcinoma #408643008
-      - Fallopian Tube Carcinoma #276870001
       - Mixed Lobular and Ductal Breast Carcinoma #444604002
       - Female Breast Carcinoma #447782002
     Req: 'Yes'
