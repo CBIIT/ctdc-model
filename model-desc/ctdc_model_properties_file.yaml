@@ -936,7 +936,6 @@ PropDefinitions:
       - "254730000" #Superficial Spreading Melanoma
       - "706970001" #Triple-Negative Breast Carcinoma
       - "255084004" #Anal Carcinoma
-      - "276870001" #Fallopian Tube Carcinoma
       - "444604002" #Mixed Lobular and Ductal Breast Carcinoma
       - "447782002" #Female Breast Carcinoma
     Req: 'Yes'
