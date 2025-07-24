@@ -780,11 +780,11 @@ PropDefinitions:
   #   Req: Preferred
   ctep_disease_term:
     Desc: <The coded response indicating the MedDRA code Version 10 used in the NCI Simplified Disease Classification (SDC) Terminology for diagnoses.> <br>CDE ID = 4723846                                                                                                                                                           #<WORK NEEDED HERE> In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the participant in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: caDSR #owner is Theradex
-        Code: '4723846' #(added 05-28-24)
-        Value: NCI CTEP Simplified Disease Classification Terminology MedDRA Version 10 Code
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR #owner is Theradex
+    #     Code: '4723846' #(added 05-28-24)
+    #     Value: NCI CTEP Simplified Disease Classification Terminology MedDRA Version 10 Code
+    #     Version: '1'
     Src: value
     Enum: # Currently reflective only of values used in the v5 CMB data submission
       - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
@@ -1732,7 +1732,7 @@ PropDefinitions:
     #     Code: '12445832' #'7069877D'
     #     Value: Specimen Material Biospecimen Category
     #     Version: '1'
-    # Src: CMB DD
+    Src: CMB DD
     Enum:
       - BLOOD
       - Blood
@@ -1780,15 +1780,15 @@ PropDefinitions:
   #     - PRIMARY
   #   Req: 'Yes'
   tissue_category:
-    Desc: <A text term based on categorization of cytologic atypia found in cellular
-      molecules, cells, tissues, organs, body fluids, or body excretory products.>  <br>CDE
-      ID = 14688604                                                                                                                                                                      #Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue"
-    Term:
-      - Origin: caDSR # CRDC
-        Code: '14688604' #(added 06-03-24)
-        Value: Specimen Neoplasm Category
-        Version: '1'
-    Src: CMB
+    # Desc: <A text term based on categorization of cytologic atypia found in cellular
+    #   molecules, cells, tissues, organs, body fluids, or body excretory products.>  <br>CDE
+    #   ID = 14688604                                                                                                                                                                      #Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue"
+    # Term:
+    #   - Origin: caDSR # CRDC
+    #     Code: '14688604' #(added 06-03-24)
+    #     Value: Specimen Neoplasm Category
+    #     Version: '1'
+    # Src: CMB
     Enum: #Acceptable values taken straight from the CMB Catalog Site.
       - Metastatic
       - Normal
