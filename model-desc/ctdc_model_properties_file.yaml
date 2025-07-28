@@ -479,12 +479,12 @@ PropDefinitions:
   race:
     Desc: <The text for reporting information about race based on the Office of Management
       and Budget (OMB) categories.> <br>CDE ID = 2192199
-    Term:
-      - Origin: caDSR # OMB/NCI Standard
-        Code: '2192199' #(added 05-31-24)
-        Value: Subject Race
-        Version: '1'
-    Src: CMB
+    # Term:
+    #   - Origin: caDSR # OMB/NCI Standard
+    #     Code: '2192199' #(added 05-31-24)
+    #     Value: Subject Race
+    #     Version: '1'
+    # Src: CMB
     Type: 
       value_type: list
       Enum: # Currently reflective only of the values used by the CMB
@@ -717,7 +717,7 @@ PropDefinitions:
       - Origin: caDSR # BPV
         Code: '5205578' #(added 05-31-24)
         Value: Carcinogen Exposure Indicator
-        Version: '1'
+        Version: '3'
     Src: CMB
     Enum:
       - 'Yes'
@@ -780,11 +780,11 @@ PropDefinitions:
   #   Req: Preferred
   ctep_disease_term:
     Desc: <The coded response indicating the MedDRA code Version 10 used in the NCI Simplified Disease Classification (SDC) Terminology for diagnoses.> <br>CDE ID = 4723846                                                                                                                                                           #<WORK NEEDED HERE> In at least one data submission file, i.e. 5A DS/5a_Enrollment.xlsx (in Version 2), what is identified as CTEP_DISEASE_CODE is provided in the form of a human-readable "narrative" statement of the primary disease condition with which the participant in question has been diagnosed, with the values in use essentially matching those of "CTEP TERM" or CTEP's "SHORT NAME", which are associated with an 8 digit numerical MEDDRA code. See here - https://ctep.cancer.gov/protocoldevelopment/codes_values.htm#disease <br>The CMB's Catalog Site presents these human readable CTEP disease "terms" prefixed with the corresponding meddra disease code <br>NOT CURRENTLY ASSIGNED ANY CDE
-    Term:
-      - Origin: THERADEX
-        Code: '4723846' #(added 05-28-24)
-        Value: NCI CTEP Simplified Disease Classification Terminology MedDRA Version 10 Code
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR #owner is Theradex
+    #     Code: '4723846' #(added 05-28-24)
+    #     Value: NCI CTEP Simplified Disease Classification Terminology MedDRA Version 10 Code
+    #     Version: '1'
     Src: value
     Enum: # Currently reflective only of values used in the v5 CMB data submission
       - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
@@ -799,6 +799,7 @@ PropDefinitions:
       - Prostate Carcinoma                              # meddra code 10036910 
       - Small Cell Lung Carcinoma                       # meddra code 10041071
       - Esophageal Carcinoma                            # meddra code 10030157
+      - Fallopian Tube Carcinoma                        # meddra code 10016180
     Req: 'Yes'
   meddra_disease_code:
     Desc: <The MedDRA code describing a medical condition and/or anatomic location.>
@@ -834,6 +835,7 @@ PropDefinitions:
     Src: CMB
     Enum: #Acceptable values currently specified, all of which are sourced from actual data, may be of use only during the generation of mock data, with the data type for this property potentially being changed to string.
       - Acute Myeloid Leukemia #17788007
+      - Acute Myeloid Leukemia with Myelodysplasia-Related Changes #445448008
       - Adenocarcinoma #35917007 #443961001
       - Amelanotic Melanoma #70594002
       - Breast Carcinoma #254838004
@@ -843,10 +845,14 @@ PropDefinitions:
       - Cutaneous Melanoma #93655004
       - Epithelioid Cell Melanoma #37138001
       - Esophageal Adenocarcinoma #276803003
+      - Esophageal Carcinoma #372138000
+      - Fallopian Tube Carcinoma #276870001
       - Gastric Adenocarcinoma #408647009
-      - Lung Adenocarcinoma #254626006
+      - Invasive Ductal Carcinoma, Not Otherwise Specified #408643008
+      - Invasive Lobular Breast Carcinoma #89740008
       - Lung Carcinoma #448993007
-      # - Malignant neoplasm of ovary #254849005
+      - Lung Papillary Adenoma #24482001
+      - Malignant neoplasm of ovary #254849005
       - Melanoma #2092003 #372244006
       - Mucinous Adenocarcinoma #72495009
       - Multiple myeloma #55921005
@@ -866,9 +872,9 @@ PropDefinitions:
       - Squamous Cell Carcinoma #28899001 #402815007
       - Squamous Cell Lung Carcinoma #254634000
       - Superficial Spreading Melanoma #254730000
+      - Triple-Negative Breast Carcinoma #706970001
       - Anal Carcinoma #255084004
       - Invasive Ductal Carcinoma #408643008
-      - Fallopian Tube Carcinoma #276870001
       - Mixed Lobular and Ductal Breast Carcinoma #444604002
       - Female Breast Carcinoma #447782002
     Req: 'Yes'
@@ -883,6 +889,7 @@ PropDefinitions:
     Src: CMB
     Enum:
       - "17788007" #Acute Myeloid Leukemia
+      - "445448008" #Acute Myeloid Leukemia with Myelodysplasia-Related Changes
       - "35917007" #Adenocarcinoma
       - "443961001" #Adenocarcinoma
       - "70594002" #Amelanotic Melanoma
@@ -893,10 +900,15 @@ PropDefinitions:
       - "93655004" #Cutaneous Melanoma
       - "37138001" #Epithelioid Cell Melanoma
       - "276803003" #Esophageal Adenocarcinoma
+      - "372138000" #Esophageal Carcinoma
+      - "276870001" #Fallopian Tube Carcinoma
       - "408647009" #Gastric Adenocarcinoma
+      - "408643008" #Invasive Ductal Carcinoma, Not Otherwise Specified
+      - "89740008" #Invasive Lobular Breast Carcinoma"
       - "254626006" #Lung Adenocarcinoma
       - "448993007" #Lung Carcinoma
-      # - "254849005" #Malignant epithelial tumor of ovary
+      - "24482001" #Lung Papillary Adenoma
+      - "254849005" #Malignant epithelial tumor of ovary
       - "2092003" #Melanoma
       - "372244006" #Melanoma
       - "72495009" #Mucinous Adenocarcinoma
@@ -922,10 +934,8 @@ PropDefinitions:
       - "402815007" #Squamous Cell Carcinoma
       - "254634000" #Squamous Cell Lung Carcinoma
       - "254730000" #Superficial Spreading Melanoma
+      - "706970001" #Triple-Negative Breast Carcinoma
       - "255084004" #Anal Carcinoma
-      - "408643008" #Invasive Ductal Carcinoma
-      - "254849005" #Ovarian Carcinoma
-      - "276870001" #Fallopian Tube Carcinoma
       - "444604002" #Mixed Lobular and Ductal Breast Carcinoma
       - "447782002" #Female Breast Carcinoma
     Req: 'Yes'
@@ -1315,11 +1325,11 @@ PropDefinitions:
     Desc: <The type of surgical procedure categorized by type or purpose.> The name
       and/or a brief narrative description of the surgical procedure performed upon
       the participant. <br>CDE ID = 13383457
-    Term:
-      - Origin: caDSR # PCDC
-        Code: '13383457' #(updated) prior CDE 6411539'
-        Value: Therapeutic Surgical Procedure Type #Procedure Name  
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR # PCDC
+    #     Code: '13383457' #(updated) prior CDE 6411539'
+    #     Value: Therapeutic Surgical Procedure Type #Procedure Name  
+    #     Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
@@ -1457,11 +1467,11 @@ PropDefinitions:
   radiation_extent:
     Desc: <The extent of radiation exposure administered to the patient's body during
       radiation therapy.> CDE ID = 7063755
-    Term:
-      - Origin: caDSR # NCI CRF Stds
-        Code: '7063755' #(added 05-29-24)
-        Value: Radiation Therapy Administration Extent Type
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR # NCI CRF Stds
+    #     Code: '7063755' #(added 05-29-24)
+    #     Value: Radiation Therapy Administration Extent Type
+    #     Version: '1'
     Src: CMB
     Type: string
     Req: 'Yes'
@@ -1717,11 +1727,11 @@ PropDefinitions:
   specimen_category:
     Desc: <The biospecimen grouping that describes the kind of material that forms
       the sample.> <br>CDE ID = 12445832 (updated 06-03-24)                                                                              #CDE ID = 7069877 #This in NOT the CMB Catalog Site's "Tissue Ccategory", the indicator as to normal vs primary vs metastatic. Not used within the CMB Catalog site itself, but defined within at least one of the associated Data Dictionaries.
-    Term:
-      - Origin: caDSR # CDS
-        Code: '12445832' #'7069877D'
-        Value: Specimen Material Biospecimen Category
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR # CDS
+    #     Code: '12445832' #'7069877D'
+    #     Value: Specimen Material Biospecimen Category
+    #     Version: '1'
     Src: CMB DD
     Enum:
       - BLOOD
@@ -1770,15 +1780,15 @@ PropDefinitions:
   #     - PRIMARY
   #   Req: 'Yes'
   tissue_category:
-    Desc: <A text term based on categorization of cytologic atypia found in cellular
-      molecules, cells, tissues, organs, body fluids, or body excretory products.>  <br>CDE
-      ID = 14688604                                                                                                                                                                      #Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue"
-    Term:
-      - Origin: caDSR # CRDC
-        Code: '14688604' #(added 06-03-24)
-        Value: Specimen Neoplasm Category
-        Version: '1'
-    Src: CMB
+    # Desc: <A text term based on categorization of cytologic atypia found in cellular
+    #   molecules, cells, tissues, organs, body fluids, or body excretory products.>  <br>CDE
+    #   ID = 14688604                                                                                                                                                                      #Based upon the values in use, this is CMB Catalog's version of caDSR "Tissue Type" aka CTDC "type_of_tissue"
+    # Term:
+    #   - Origin: caDSR # CRDC
+    #     Code: '14688604' #(added 06-03-24)
+    #     Value: Specimen Neoplasm Category
+    #     Version: '1'
+    # Src: CMB
     Enum: #Acceptable values taken straight from the CMB Catalog Site.
       - Metastatic
       - Normal
@@ -1799,11 +1809,11 @@ PropDefinitions:
     Desc: <A specific point in the time continuum, including those established relative
       to an event.> CMB Catalog Site's "Collection Timepoint". <br>CDE ID = 5899851
       (updated 06-03-24)
-    Term:
-      - Origin: caDSR # NCI CRF Standards
-        Code: '5899851' #'7065963'
-        Value: Timepoint Event Assessment Period Type
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR # NCI CRF Standards
+    #     Code: '5899851' #'7065963'
+    #     Value: Timepoint Event Assessment Period Type
+    #     Version: '1'
     Src: CMB
     Enum:
       - ARCHIVAL
@@ -1918,12 +1928,12 @@ PropDefinitions:
   data_file_type:
     Desc: <The type of information contained in an electronic record.> A curated indicator
       as to the type of content represented by the data file <br>CDE ID = 14824731
-    Term:
-      - Origin: caDSR # CTDC
-        Code: '14824731' #(added 05-30-24)
-        Value: Electronic Data File Content Type
-        Version: '1'
-    Src: FNL
+    # Term:
+    #   - Origin: caDSR # CTDC
+    #     Code: '14824731' #(added 05-30-24)
+    #     Value: Electronic Data File Content Type
+    #     Version: '1'
+    # Src: FNL
     Enum:
       - Clinical Report
       - File Collection

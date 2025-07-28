@@ -2,7 +2,7 @@
 # Title case names are "reserved" (meaningful to the parser)
 # Lower case names are labels for the entities
 Handle: CTDC
-Version: v1.4.0
+Version: v1.8.0
 Nodes:
   # node:
   #   Desc: text
@@ -282,10 +282,10 @@ Nodes:
       # - days_from_recurrence_to_specimen_collection #11251133
       # - days_from_specimen_collection_to_initial_pathologic_diagnosis #11253404
       - crdc_id
-  data_file:
+  file:
     Desc: Data files can be associated with CTDC project, study, participant, diagnosis and specimen records, but are not themselves stored within the application. Instead, the application stores records as to the existence and nature of such data files. The Data File node is comprised of properties which characterize these files in terms of their size, format and content, such that they can be appropriately represented within the application's UI, and in terms of their storage location, such that they can be retrieved for analysis.
     Tags:
-      Category: data_file
+      Category: file
       Assignment: core
       Class: primary
       Template: 'Yes'
@@ -319,15 +319,15 @@ Relationships:
   associated_with: # group all file relationships in here?
     Mul: many_to_one
     Ends:
-      - Src: data_file
+      - Src: file
         Dst: specimen
-      - Src: data_file
+      - Src: file
         Dst: diagnosis
-      - Src: data_file
+      - Src: file
         Dst: participant
-      - Src: data_file
+      - Src: file
         Dst: study
-      # - Src: data_file
+      # - Src: file
       #   Dst: project
       - Src: associated_link
         Dst: study
@@ -343,7 +343,7 @@ Relationships:
     #Ends:
       #- Src: principal_ivestigator # alternatively, express principal investigator relationships to both study and project elsewhere as "directs" relationships
         #Dst: study
-      #- Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+      #- Src: file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
         #Dst: study
         #Mul: many_to_one
     #Props: null    
@@ -352,7 +352,7 @@ Relationships:
     #Ends:
       #- Src: principal_investigator # alternatively, express principal investigator relationships to both study and project elsewhere as "directs" relationships
         #Dst: project
-      #- Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+      #- Src: file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
         #Dst: project
         #Mul: many_to_one
     #Props: null    
@@ -387,13 +387,13 @@ Relationships:
       - Src: specimen
         Dst: participant
         # to accommodate a Data File being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Specimen or Diagnosis
-      # - Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+      # - Src: file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
       #   Dst: participant
     Props: null
   #of_specimen:
     #Mul: many_to_one
     #Ends:
-      #- Src: data_file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
+      #- Src: file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
         #Dst: specimen
     #Props: null       
   directs: 

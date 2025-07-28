@@ -1,5 +1,5 @@
 repo https://github.com/CBIIT/ctdc-model
-commit f888c9d
+commit 7952271
 node	property	value_or_TYPE
 associated_link	associated_link_name	STRING
 associated_link	associated_link_record_id	STRING
@@ -40,7 +40,6 @@ demographic	highest_level_of_education	Doctoral or professional degree
 demographic	highest_level_of_education	Grade school
 demographic	highest_level_of_education	High school graduate (including equivalency)
 demographic	highest_level_of_education	Master's degree
-demographic	highest_level_of_education	NA
 demographic	highest_level_of_education	No formal education
 demographic	highest_level_of_education	Not high school graduate
 demographic	highest_level_of_education	Some college or Associate degree
@@ -48,6 +47,13 @@ demographic	income	STRING
 demographic	ncbi_taxonomy_id	INTEGER
 demographic	ncbi_taxonomy_name	STRING
 demographic	occupation	STRING
+demographic	race	American Indian or Alaska Native
+demographic	race	Asian
+demographic	race	Black or African American
+demographic	race	Native Hawaiian or other Pacific Islander
+demographic	race	Not Reported
+demographic	race	Unknown
+demographic	race	White
 demographic	sex	Female
 demographic	sex	Intersex
 demographic	sex	Male
@@ -57,8 +63,6 @@ diagnosis	crdc_id	STRING
 diagnosis	ctep_disease_term	Acute Myeloid Leukemia Not Otherwise Specified
 diagnosis	ctep_disease_term	Adenocarcinoma of the Gastroesophageal Junction
 diagnosis	ctep_disease_term	Colorectal Carcinoma
-diagnosis	ctep_disease_term	Esophageal Carcinoma
-diagnosis	ctep_disease_term	Gastric Carcinoma
 diagnosis	ctep_disease_term	Invasive Breast Carcinoma
 diagnosis	ctep_disease_term	Melanoma
 diagnosis	ctep_disease_term	Non-Small Cell Lung Carcinoma
@@ -73,11 +77,9 @@ diagnosis	histology	STRING
 diagnosis	meddra_disease_code	10000884
 diagnosis	meddra_disease_code	10006190
 diagnosis	meddra_disease_code	10010029
-diagnosis	meddra_disease_code	10016180
 diagnosis	meddra_disease_code	10017760
 diagnosis	meddra_disease_code	10028566
 diagnosis	meddra_disease_code	10029514
-diagnosis	meddra_disease_code	10030157
 diagnosis	meddra_disease_code	10033159
 diagnosis	meddra_disease_code	10036910
 diagnosis	meddra_disease_code	10041071
@@ -114,12 +116,9 @@ diagnosis	snomed_disease_code	254637007
 diagnosis	snomed_disease_code	254730000
 diagnosis	snomed_disease_code	254731001
 diagnosis	snomed_disease_code	254838004
-diagnosis	snomed_disease_code	254849005
 diagnosis	snomed_disease_code	254900004
-diagnosis	snomed_disease_code	255084004
 diagnosis	snomed_disease_code	269533000
 diagnosis	snomed_disease_code	276803003
-diagnosis	snomed_disease_code	276870001
 diagnosis	snomed_disease_code	28899001
 diagnosis	snomed_disease_code	35917007
 diagnosis	snomed_disease_code	37138001
@@ -128,13 +127,10 @@ diagnosis	snomed_disease_code	399068003
 diagnosis	snomed_disease_code	399490008
 diagnosis	snomed_disease_code	399730005
 diagnosis	snomed_disease_code	402815007
-diagnosis	snomed_disease_code	408643008
 diagnosis	snomed_disease_code	408645001
 diagnosis	snomed_disease_code	408647009
 diagnosis	snomed_disease_code	428054006
 diagnosis	snomed_disease_code	443961001
-diagnosis	snomed_disease_code	444604002
-diagnosis	snomed_disease_code	447782002
 diagnosis	snomed_disease_code	448993007
 diagnosis	snomed_disease_code	55921005
 diagnosis	snomed_disease_code	55921005a
@@ -146,7 +142,6 @@ diagnosis	snomed_disease_code	93655004
 diagnosis	snomed_disease_term	Acute Myeloid Leukemia
 diagnosis	snomed_disease_term	Adenocarcinoma
 diagnosis	snomed_disease_term	Amelanotic Melanoma
-diagnosis	snomed_disease_term	Anal Carcinoma
 diagnosis	snomed_disease_term	Breast Carcinoma
 diagnosis	snomed_disease_term	Colon Adenoma
 diagnosis	snomed_disease_term	Colon Carcinoma
@@ -154,21 +149,16 @@ diagnosis	snomed_disease_term	Colorectal Adenocarcinoma
 diagnosis	snomed_disease_term	Cutaneous Melanoma
 diagnosis	snomed_disease_term	Epithelioid Cell Melanoma
 diagnosis	snomed_disease_term	Esophageal Adenocarcinoma
-diagnosis	snomed_disease_term	Fallopian Tube Carcinoma
-diagnosis	snomed_disease_term	Female Breast Carcinoma
 diagnosis	snomed_disease_term	Gastric Adenocarcinoma
-diagnosis	snomed_disease_term	Invasive Ductal Carcinoma
 diagnosis	snomed_disease_term	Lung Adenocarcinoma
 diagnosis	snomed_disease_term	Lung Carcinoma
 diagnosis	snomed_disease_term	Melanoma
-diagnosis	snomed_disease_term	Mixed Lobular and Ductal Breast Carcinoma
 diagnosis	snomed_disease_term	Mucinous Adenocarcinoma
 diagnosis	snomed_disease_term	Multiple myeloma
 diagnosis	snomed_disease_term	Multiple myeloma and immunoproliferative disease
 diagnosis	snomed_disease_term	Neuroendocrine Carcinoma
 diagnosis	snomed_disease_term	Nodular Melanoma
 diagnosis	snomed_disease_term	Non-Small Cell Lung Carcinoma
-diagnosis	snomed_disease_term	Ovarian Carcinoma
 diagnosis	snomed_disease_term	Plasma Cell Leukemia
 diagnosis	snomed_disease_term	Plasma Cell Myeloma
 diagnosis	snomed_disease_term	Prostate Adenocarcinoma
@@ -180,7 +170,6 @@ diagnosis	snomed_disease_term	Small Cell Lung Carcinoma
 diagnosis	snomed_disease_term	Squamous Cell Carcinoma
 diagnosis	snomed_disease_term	Squamous Cell Lung Carcinoma
 diagnosis	snomed_disease_term	Superficial Spreading Melanoma
-diagnosis	stage_of_disease	NA
 diagnosis	stage_of_disease	Stage III
 diagnosis	stage_of_disease	Stage IIIA
 diagnosis	stage_of_disease	Stage IIIB
@@ -195,7 +184,6 @@ diagnosis	tumor_grade	Moderately Differentiated
 diagnosis	tumor_grade	Poorly Differentiated
 diagnosis	tumor_grade	Undifferentiated grade
 diagnosis	tumor_grade	Well Differentiated
-exposure	carcinogen_exposure	NA
 exposure	carcinogen_exposure	No
 exposure	carcinogen_exposure	Unknown
 exposure	carcinogen_exposure	Yes
@@ -439,23 +427,24 @@ targeted_therapy	targeted_therapy_start_date	INTEGER
 
 relationship	source_node	destination_node	property	value_or_TYPE
 associated_with	data_file	diagnosis	NA	NA
-associated_with	data_file	study	NA	NA
 associated_with	data_file	participant	NA	NA
 associated_with	data_file	specimen	NA	NA
+associated_with	data_file	study	NA	NA
 associated_with	image_collection	study	NA	NA
 associated_with	associated_link	study	NA	NA
-belongs_to	study	program	NA	NA
 belongs_to	participant	study	NA	NA
+belongs_to	study	program	NA	NA
 directs	principal_investigator	study	NA	NA
-of_participant	participant_status	participant	NA	NA
-of_participant	targeted_therapy	participant	NA	NA
 of_participant	non_targeted_therapy	participant	NA	NA
-of_participant	diagnosis	participant	NA	NA
-of_participant	specimen	participant	NA	NA
-of_participant	radiotherapy	participant	NA	NA
-of_participant	exposure	participant	NA	NA
-of_participant	demographic	participant	NA	NA
 of_participant	surgery	participant	NA	NA
+of_participant	targeted_therapy	participant	NA	NA
+of_participant	radiotherapy	participant	NA	NA
+of_participant	diagnosis	participant	NA	NA
+of_participant	exposure	participant	NA	NA
+of_participant	specimen	participant	NA	NA
+of_participant	demographic	participant	NA	NA
+of_participant	data_file	participant	NA	NA
+of_participant	participant_status	participant	NA	NA
 
 property	description
 age_at_enrollment	<The age (in days) of the participant when the participant enrolled in the study.> The age of the participant as of enrollment, measured in years. <br>CDE ID = 12299548
