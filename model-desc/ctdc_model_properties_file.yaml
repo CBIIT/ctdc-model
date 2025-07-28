@@ -836,6 +836,7 @@ PropDefinitions:
     Enum: #Acceptable values currently specified, all of which are sourced from actual data, may be of use only during the generation of mock data, with the data type for this property potentially being changed to string.
       - Acute Myeloid Leukemia #17788007
       - Acute Myeloid Leukemia with Myelodysplasia-Related Changes #445448008
+      - Acute Myeloid Leukemia Arising from Previous Myelodysplastic Syndrome # 128827005
       - Adenocarcinoma #35917007 #443961001
       - Amelanotic Melanoma #70594002
       - Breast Carcinoma #254838004
@@ -852,6 +853,7 @@ PropDefinitions:
       - Invasive Lobular Breast Carcinoma #89740008
       - Lung Carcinoma #448993007
       - Lung Papillary Adenoma #24482001
+      - Lung Adenocarcinoma 
       - Malignant neoplasm of ovary #254849005
       - Melanoma #2092003 #372244006
       - Mucinous Adenocarcinoma #72495009
@@ -890,6 +892,7 @@ PropDefinitions:
     Enum:
       - "17788007" #Acute Myeloid Leukemia
       - "445448008" #Acute Myeloid Leukemia with Myelodysplasia-Related Changes
+      - "128827005" #Acute Myeloid Leukemia Arising from Previous Myelodysplastic Syndrome
       - "35917007" #Adenocarcinoma
       - "443961001" #Adenocarcinoma
       - "70594002" #Amelanotic Melanoma
