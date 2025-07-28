@@ -1,7 +1,7 @@
 {
     "model-files": [
     "model-desc/ctdc_model_file.yaml",
-    "ctdc_model_properties_file.yaml"
+    "model-desc/ctdc_model_properties_file.yaml"
 ],
     "prop-file": "model-desc/ctdc_model_properties_file.yaml",
     "readme-file": "model-navigator-resources/README.md",
