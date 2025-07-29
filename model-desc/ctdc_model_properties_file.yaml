@@ -1916,7 +1916,7 @@ PropDefinitions:
   #       - days
   #     value_type: number
   #   Req: 'No'
-  # data_file
+  #file node
   data_file_name:
     Desc: <The literal label for an electronic data file.> , inclusive of file extension(s).
       <br>CDE ID = 11284037
