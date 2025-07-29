@@ -883,12 +883,12 @@ PropDefinitions:
   snomed_disease_code:
     Desc: A 9-digit numerical code for the primary disease with which the participant
       in question has been diagnosed. <br>CDE ID = 6642369                                                                             #<br>Within the CMB Catalog Site, Disease Stage (SNOMED) is presented in the form of a human readable narrative statement of the primary disease which includes some histoligical detail and disease stage. <br>Acceptable values currently specified, all of which are sourced from actual data, may be of use only during the generation of mock data, with the data type for this property potentially being changed to string.
-    Term:
-      - Origin: caDSR
-        Code: '6642369'
-        Value: Data Element Name
-        Version: '1'
-    Src: CMB
+    # Term:
+    #   - Origin: caDSR
+    #     Code: '6642369'
+    #     Value: Data Element Name
+    #     Version: '1'
+    # Src: CMB
     Enum:
       - "17788007" #Acute Myeloid Leukemia
       - "445448008" #Acute Myeloid Leukemia with Myelodysplasia-Related Changes
