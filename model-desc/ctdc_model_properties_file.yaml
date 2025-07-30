@@ -119,6 +119,9 @@ PropDefinitions:
     Key: true
   study_accession:
     Desc: dbGaP study accession number
+    Req: 'Yes'
+    Type: 
+      pattern: ^phs[0-9]+$
     Term:
       - Origin: caDSR
         Original Source: DSS CDE
