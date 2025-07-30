@@ -117,6 +117,14 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
     Key: true
+  study_accession:
+    Desc: dbGaP study accession number
+    Term:
+      - Origin: caDSR
+        Original Source: DSS CDE
+        Code: '11524544' #added 7-30-25
+        Value: Research Activity dbGaP Accession Number Identifier
+        Version: '1'
   study_id:
     Desc: <A unique identifier assigned to a clinical study.> Any external identifier
       by which the study/trial in question is known.<br>CDE ID = 5054234
@@ -369,6 +377,35 @@ PropDefinitions:
       - Download
       - Unrestricted
     Req: 'Yes'
+  # consent_group
+  consent_group_id:
+    Desc: A sequence of characters used to uniquely identify, name, or characterize the presence and nature of a consent group in a study.
+    Term:
+      - Origin: caDSR
+        Code: 'TBD'
+        Value: Study Consent Group Identifier
+        Version: "1.00"
+    Type: string
+    Req: true 
+    Key: true
+  consent_group_name:
+    Desc: The words or acronym which describe a set of study participants who have signed the same consent agreement and that will be included in the dbGaP repository.
+    Term:
+      - Origin: caDSR
+        Code: '14534329'
+        Value: Research Activity dbGaP Consent Group Text
+        Version: "1.00"
+    Type: string
+    Req: true 
+  consent_group_number:
+    Desc: A numeral or string of numerals used to identify the set of study participants who have signed the same consent agreement and that will be included in the dbGaP repository.
+    Term:
+      - Origin: caDSR
+        Code: '14534330'
+        Value: Research Activity dbGaP Consent Group Number 
+        Version: "1.00"
+    Type: integer
+    Req: true
   # participant
   participant_id:
     Desc: <A sequence of letters, numbers, or characters that uniquely identifies
