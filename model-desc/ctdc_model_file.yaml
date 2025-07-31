@@ -2,7 +2,9 @@
 # Title case names are "reserved" (meaningful to the parser)
 # Lower case names are labels for the entities
 Handle: CTDC
-Version: v1.11.0
+
+Version: v1.12.0
+
 Nodes:
   # node:
   #   Desc: text
@@ -62,6 +64,7 @@ Nodes:
       Class: primary
       Template: 'Yes'
     Props:
+      - study_accession #11524544
       - study_name #11459810
       - study_short_name #11459812
       - study_id #5054234
@@ -95,6 +98,19 @@ Nodes:
       - image_collection_url #11556141
       - repository_name #14826003
       - collection_access #14825946
+      - crdc_id
+  consent_group:
+    Desc: "A set of study participants who have signed the same consent agreement and that will be included in the dbGaP repository."
+    Tags:
+      nodeReq: true
+      Category: case # in lieu of "participant" being a category recognized by the DMN
+      Assignment: extended
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - consent_group_id
+      - consent_group_name
+      - consent_group_number
       - crdc_id
   participant:
     Desc: Individual who takes part in the study
@@ -356,6 +372,12 @@ Relationships:
         #Dst: project
         #Mul: many_to_one
     #Props: null    
+  of_consent_group:
+    Props: null
+    Mul: many_to_one
+    Ends:
+      - Src: consent_group
+        Dst: study
   of_participant:
     Mul: many_to_one
     Ends:
@@ -367,7 +389,7 @@ Relationships:
       - Src: diagnosis
         Dst: participant
       #- Src: treatment
-        #Dst: participant
+      #  Dst: participant
       - Src: targeted_therapy
         Dst: participant
         Mul: many_to_many  
@@ -389,6 +411,8 @@ Relationships:
         # to accommodate a Data File being directly associated with a Subject, rather than being only indirectly associated with a Subject through a Specimen or Diagnosis
       # - Src: file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
       #   Dst: participant
+      - Src: participant
+        Dst: consent_group
     Props: null
   #of_specimen:
     #Mul: many_to_one
