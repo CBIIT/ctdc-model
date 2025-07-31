@@ -2,7 +2,9 @@
 # Title case names are "reserved" (meaningful to the parser)
 # Lower case names are labels for the entities
 Handle: CTDC
+
 Version: v1.12.0
+
 Nodes:
   # node:
   #   Desc: text
