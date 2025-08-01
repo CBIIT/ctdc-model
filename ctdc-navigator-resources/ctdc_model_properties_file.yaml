@@ -252,68 +252,6 @@ PropDefinitions:
     Src: DSS
     Type: string
     Req: Preferred
-  # publication
-  digital_object_id: 
-    Desc: Where applicable, the digital object identifier for the cited work, by which it can be permanently identified, and linked to via the internet.<br>This property is used as the key via which to identify the correct records during data updates.
-    Term: 
-      - Origin: caDSR 
-        Code: '15915370'
-        Value: Study Administration Publication Identification DOI Text
-        Version: '1'
-    Src: CTDC
-    Type: string
-    Req: 'Yes'
-    Key: true
-  pubmed_id: #15915377
-    Desc: Where applicable, the unique numerical identifier assigned to the cited work by PubMed, by which it can be linked to via the internet. <br>Values of this property must contain only the numeric string of the PubMed ID itself, exclusive of any prefix such as "PMID:", such that values can be correctly interpreted and displayed as hyperlinks within the application.
-    Term:
-      - Origin: caDSR
-        Code: '15915377'
-        Value: Study Administration Publication Identification PubMed ID Text
-        Version: '1'
-    Src: CTDC
-    Type: number
-    Req: 'Preferred'
-  publication_title: 
-    Desc: The full title of the publication stated exactly as it appears on the published work.
-    Term: 
-      - Origin: caDSR
-        Code: '16078531'
-        Value: Study Administration Publication Identification Title Text
-        Version: '1'
-    Src: CTDC
-    Type: string
-    Req: 'Yes'
-  authorship:  
-    Desc: A list of authors for the cited work. More specifically, for publications with no more than three authors, authorship quoted in full; for publications with more than three authors, authorship abbreviated to first author et al.
-    Term:
-      - Origin: caDSR
-        Code: '16081468'
-        Value: Study Administration Publication Identification Citation Author List Text
-        Version: '1'
-    Src: CTDC
-    Type: string
-    Req: 'Preferred'
-  year_of_publication: 
-    Desc: The year in which the cited work was published.
-    Term:
-      - Origin: caDSR
-        Code: '16081475'
-        Value: Study Administration Publication Identification Year Date
-        Version: '1'
-    Src: CTDC
-    Type: string
-    Req: 'Preferred'
-  journal_citation: 
-    Desc: The name of the journal in which the cited work was published, inclusive of the citation itself in terms of journal volume number, part number where applicable, and page numbers.
-    Term:
-      - Origin: caDSR
-        Code: '16081476'
-        Value: Study Administration Publication Identification Journal Citation Text
-        Version: '1'
-    Src: CTDC
-    Type: string
-    Req: 'Preferred'
   # associated_link
   associated_link_record_id:
     Desc: <A unique sequence of characters used to identify a linkage between related

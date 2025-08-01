@@ -1,5 +1,5 @@
-### 1.9.0
+### 1.13.0
 
-Release 1.12.0 updates the data model for the CMB v5 study.
+Release 1.13.0 adds the publication node and the publication properties and CDEs.
 
 
