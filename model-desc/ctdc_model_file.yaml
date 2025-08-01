@@ -375,6 +375,7 @@ Relationships:
       - Src: publication
         Dst: study
         Mul: many_to_one
+    Props: null
       #- Src: principal_ivestigator # alternatively, express principal investigator relationships to both study and project elsewhere as "directs" relationships
         #Dst: study
       #- Src: file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
