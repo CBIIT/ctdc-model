@@ -1148,18 +1148,18 @@ PropDefinitions:
       - Poorly Differentiated # Value exactly as used by the CMB
       - Undifferentiated grade # Value exactly as used by the CMB
     Req: Preferred
-  # date_of_diagnosis:
-  #   Desc: <The date of the procedure or evaluation used to determine the diagnosis.> <br>CDE ID = 2178801 (added 05-28-24)
-  #   Term:
-  #     - Origin: caDSR # CCR
-  #       Code: '2178801'
-  #       Value: Diagnosis Date
-  #   Src: CMB
-  #   Type:
-  #     units:
-  #       - days
-  #     value_type: number
-  #   Req: 'Yes'
+  date_of_diagnosis:
+    Desc: <The date of the procedure or evaluation used to determine the diagnosis.> <br>CDE ID = 2178801 (added 05-28-24)
+    Term:
+      - Origin: caDSR # CCR
+        Code: '2178801'
+        Value: Diagnosis Date
+    Src: CMB
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'No'
   # participant_age_at_diagnosis:
   #   Desc: Age at the time of diagnosis expressed in number of days since birth. CMB data has this expressed in years not days! <br>CDE ID = 10609539
   #   Term:
