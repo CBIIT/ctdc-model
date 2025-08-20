@@ -1660,7 +1660,7 @@ PropDefinitions:
       - Alive with No Evidence of Disease # Value exactly as used by the CMB
       - Alive, Disease Status Unknown # Value exactly as used by the CMB
       - Dead # Value exactly as used by the CMB
-    Req: 'Yes'
+    Req: 'No'
   primary_cause_of_death:
     Desc: <The circumstance or condition of greatest rank or importance that results
       in the death of a living being.> <br>CDE ID = 4783274
@@ -2045,6 +2045,7 @@ PropDefinitions:
       # - Investigator Report
       - Variant Call File
       - Variant Report
+      - DICOM 
     Req: 'Yes'
   data_file_description:
     Desc: <A free text field that can be used to document the content and other details
