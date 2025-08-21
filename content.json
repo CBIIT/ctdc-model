@@ -1,12 +1,12 @@
 {
     "model-files": [
-    "ctdc_model_file.yaml",
-    "ctdc_model_properties_file.yaml"
+    "model-desc/ctdc_model_file.yaml",
+    "model-desc/ctdc_model_properties_file.yaml"
 ],
-    "prop-file": "ctdc_model_properties_file.yaml",
-    "readme-file": "README.md",
-    "loading-file": "CTDC_Example_Files.zip",
-    "model-navigator-logo": "logo.png",
+    "prop-file": "model-desc/ctdc_model_properties_file.yaml",
+    "readme-file": "model-navigator-resources/README.md",
+    "loading-file": "model-navigator-resources/CTDC_Example_Files.zip",
+    "model-navigator-logo": "model-navigator-resources/logo.png",
     "semantics": {
       "file-nodes": {
         "data_file": {
@@ -25,7 +25,7 @@
   "name": "CTDC",
   "assets": null,
   "configuration": {
-    "pageTitle": "Data Model Navigator",
+    "pageTitle": "CTDC Data Model",
     "pdfConfig": {
       "fileType": "pdf",
       "prefix": "CTDC_",

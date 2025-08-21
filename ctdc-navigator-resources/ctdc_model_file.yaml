@@ -3,7 +3,8 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v1.12.0
+
+Version: v1.15.0
 
 Nodes:
   # node:
@@ -112,6 +113,21 @@ Nodes:
       - consent_group_name
       - consent_group_number
       - crdc_id
+  publication:
+    Desc: The Publication node is comprised of properties which describe publications that are directly associated with any given study/trial of interest, inclusive of the location(s) at which publications can be viewed in electronic form.
+    Tags: 
+      Category: study
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+      - digital_object_id #15915370
+      - pubmed_id #15915377
+      - publication_title #16078531
+      - authorship #16081468
+      - year_of_publication #16081475
+      - journal_citation #16081476
+
   participant:
     Desc: Individual who takes part in the study
     Tags:
@@ -354,9 +370,13 @@ Relationships:
       # - Src: image_collection
       #   Dst: project
     Props: null      
-  #of_study:
-    #Mul: many_to_many
-    #Ends:
+  of_study:
+    Mul: many_to_many
+    Ends:
+      - Src: publication
+        Dst: study
+        Mul: many_to_one
+    Props: null
       #- Src: principal_ivestigator # alternatively, express principal investigator relationships to both study and project elsewhere as "directs" relationships
         #Dst: study
       #- Src: file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
