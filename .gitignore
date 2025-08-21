@@ -3,3 +3,26 @@
 *__pycache__*
 *.pyc
 
+# macOS system files / metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon file (must end with two CRs)
+Icon\r\r
+
+# Resource fork / thumbnail files
+._*
+
+# Spotlight & Trash
+.Spotlight-V100
+.Trashes
+
+# Additional macOS metadata
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.AppleDesktop
+.apdisk
+.VolumeIcon.icns
+
