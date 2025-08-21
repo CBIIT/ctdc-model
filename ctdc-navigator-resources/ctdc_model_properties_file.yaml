@@ -1691,12 +1691,12 @@ PropDefinitions:
     Desc: <An explanation describing why an individual is no longer receiving protocol
       therapy.> <br>CDE ID = 13362265                                                                                  #<br>Enumerated via a long list of ~40 acceptable terms, but do these in fact represent the values CMB has/uses?
 #CDE ID = 6355981
-    Term:
-      - Origin: caDSR # PCDC
-        Code: '13362265' #(updated 05-31-24) prior CDE ID = 6355981
-        Value: Subject Protocol Therapy Status Off Protocol Reason #Disposition Event Dictionary-Derived/Standardized Term 
-        Version: '1'
-    Src: value
+    # Term:
+    #   - Origin: caDSR # PCDC
+    #     Code: '13362265' #(updated 05-31-24) prior CDE ID = 6355981
+    #     Value: Subject Protocol Therapy Status Off Protocol Reason #Disposition Event Dictionary-Derived/Standardized Term 
+    #     Version: '1'
+    Src: CMB
     Enum:
       - ADVERSE EVENT
       - APPROVED DRUG AVAILABLE FOR INDICATION
