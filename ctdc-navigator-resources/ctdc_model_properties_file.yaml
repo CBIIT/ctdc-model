@@ -586,7 +586,7 @@ PropDefinitions:
     #     Code: '2192199' #(added 05-31-24)
     #     Value: Subject Race
     #     Version: '1'
-    # Src: CMB
+    Src: CMB
     Type: 
       value_type: list
       Enum: # Currently reflective only of the values used by the CMB
@@ -725,11 +725,11 @@ PropDefinitions:
     Desc: <The subdivision that summarizes the highest level of education attained
       by a person.> An indication as to the highest level of education attained by
       the participant. <br>CDE ID = 2681552
-    Term:
-      - Origin: caDSR # NCI Standards (NCIP)
-        Code: '2681552' #(added 05-31-24)
-        Value: Person Education Level Summary Type
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR # NCI Standards (NCIP)
+    #     Code: '2681552' #(added 05-31-24)
+    #     Value: Person Education Level Summary Type
+    #     Version: '1'
     Src: CMB
     Enum: # Reflective of the values used by the CMB
       - No formal education
@@ -990,7 +990,7 @@ PropDefinitions:
     #     Code: '6642369'
     #     Value: Data Element Name
     #     Version: '1'
-    # Src: CMB
+    Src: CMB
     Enum:
       - "17788007" #Acute Myeloid Leukemia
       - "445448008" #Acute Myeloid Leukemia with Myelodysplasia-Related Changes
@@ -1148,18 +1148,18 @@ PropDefinitions:
       - Poorly Differentiated # Value exactly as used by the CMB
       - Undifferentiated grade # Value exactly as used by the CMB
     Req: Preferred
-  # date_of_diagnosis:
-  #   Desc: <The date of the procedure or evaluation used to determine the diagnosis.> <br>CDE ID = 2178801 (added 05-28-24)
-  #   Term:
-  #     - Origin: caDSR # CCR
-  #       Code: '2178801'
-  #       Value: Diagnosis Date
-  #   Src: CMB
-  #   Type:
-  #     units:
-  #       - days
-  #     value_type: number
-  #   Req: 'Yes'
+  date_of_diagnosis:
+    Desc: <The date of the procedure or evaluation used to determine the diagnosis.> <br>CDE ID = 2178801 (added 05-28-24)
+    Term:
+      - Origin: caDSR # CCR
+        Code: '2178801'
+        Value: Diagnosis Date
+    Src: CMB
+    Type:
+      units:
+        - days
+      value_type: number
+    Req: 'No'
   # participant_age_at_diagnosis:
   #   Desc: Age at the time of diagnosis expressed in number of days since birth. CMB data has this expressed in years not days! <br>CDE ID = 10609539
   #   Term:
@@ -1237,11 +1237,11 @@ PropDefinitions:
     Desc: <The frequency of how often a medication is being administered.> The frequency
       at which the targeted therapeutic agent in question was administered. <br>CDE
       ID = 2003878
-    Term:
-      - Origin: caDSR # CTEP
-        Code: '2003878' #(added 05-29-24)
-        Value: Agent Administered Frequency
-        Version: '4'
+    # Term:
+    #   - Origin: caDSR # CTEP
+    #     Code: '2003878' #(added 05-29-24)
+    #     Value: Agent Administered Frequency
+    #     Version: '4'
     Src: CMB
     Type: string
     Req: Preferred
@@ -1357,11 +1357,11 @@ PropDefinitions:
     Desc: <The frequency of how often a medication is being administered.> The frequency
       at which the non-targeted therapeutic agent in question was administered. <br>CDE
       ID = 2003878
-    Term:
-      - Origin: caDSR # CTEP
-        Code: '2003878' #(added 05-29-24)
-        Value: Agent Administered Frequency
-        Version: '4'
+    # Term:
+    #   - Origin: caDSR # CTEP
+    #     Code: '2003878' #(added 05-29-24)
+    #     Value: Agent Administered Frequency
+    #     Version: '4'
     Src: CMB
     Type: string
     Req: Preferred
@@ -1395,11 +1395,11 @@ PropDefinitions:
     Desc: <The result of an evaluation to determine whether pathologic and/or clinical
       changes resulted from treatment.> An indication as to the best overall response
       to treatment with the non-targeted therapy in question. <br>CDE ID = 13383448
-    Term:
-      - Origin: caDSR # PCDC
-        Code: '13383448' #(added 05-29-24)
-        Value: Disease Response Assessment Outcome
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR # PCDC
+    #     Code: '13383448' #(added 05-29-24)
+    #     Value: Disease Response Assessment Outcome
+    #     Version: '1'
     Src: CMB
     Enum:
       - Complete Response
@@ -1646,11 +1646,11 @@ PropDefinitions:
   survival_status:
     Desc: <The participant's survival state as being living or deceased.> <br>CDE
       ID = 2847330
-    Term:
-      - Origin: caDSR-NCI Standard
-        Code: '2847330' #(correct as of 05-31-24, but CDE metadata updated) ORIGINAL CDE ID = 7050072
-        Value: Participant Vital Status Type #Survival Status  
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR-NCI Standard
+    #     Code: '2847330' #(correct as of 05-31-24, but CDE metadata updated) ORIGINAL CDE ID = 7050072
+    #     Value: Participant Vital Status Type #Survival Status  
+    #     Version: '1'
     Src: DSS # previously CMB
     Enum:
       - ALIVE # Value exactly as used by the CMB
@@ -1660,15 +1660,15 @@ PropDefinitions:
       - Alive with No Evidence of Disease # Value exactly as used by the CMB
       - Alive, Disease Status Unknown # Value exactly as used by the CMB
       - Dead # Value exactly as used by the CMB
-    Req: 'Yes'
+    Req: 'No'
   primary_cause_of_death:
     Desc: <The circumstance or condition of greatest rank or importance that results
       in the death of a living being.> <br>CDE ID = 4783274
-    Term:
-      - Origin: caDSR # NCI Standard
-        Code: '4783274' #(updated 05-31-24) prior CDE ID = 6421593
-        Value: Primary Cause of Death #Primary Cause of Death 
-        Version: '1'
+    # Term:
+    #   - Origin: caDSR # NCI Standard
+    #     Code: '4783274' #(updated 05-31-24) prior CDE ID = 6421593
+    #     Value: Primary Cause of Death #Primary Cause of Death 
+    #     Version: '1'
     Src: CMB
     Type: string
     Req: 'No'
@@ -1893,7 +1893,7 @@ PropDefinitions:
     #     Code: '14688604' #(added 06-03-24)
     #     Value: Specimen Neoplasm Category
     #     Version: '1'
-    # Src: CMB
+    Src: CMB
     Enum: #Acceptable values taken straight from the CMB Catalog Site.
       - Metastatic
       - Normal
@@ -2038,13 +2038,14 @@ PropDefinitions:
     #     Code: '14824731' #(added 05-30-24)
     #     Value: Electronic Data File Content Type
     #     Version: '1'
-    # Src: FNL
+    Src: FNL
     Enum:
       - Clinical Report
       - File Collection
       # - Investigator Report
       - Variant Call File
       - Variant Report
+      - DICOM 
     Req: 'Yes'
   data_file_description:
     Desc: <A free text field that can be used to document the content and other details
