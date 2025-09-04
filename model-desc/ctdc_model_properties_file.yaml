@@ -2045,7 +2045,8 @@ PropDefinitions:
       # - Investigator Report
       - Variant Call File
       - Variant Report
-      - DICOM 
+      - DICOM
+      - Radiology Images 
     Req: 'Yes'
   data_file_description:
     Desc: <A free text field that can be used to document the content and other details
