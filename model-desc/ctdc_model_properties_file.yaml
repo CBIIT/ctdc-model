@@ -2048,8 +2048,7 @@ PropDefinitions:
       # - Investigator Report
       - Variant Call File
       - Variant Report
-      - DICOM
-      - Radiology Image 
+      - Radiology Images
     Req: 'Yes'
   data_file_description:
     Desc: <A free text field that can be used to document the content and other details
@@ -2082,6 +2081,7 @@ PropDefinitions:
       - pdf
       - vcf
       - zip
+      - dcm
     Req: 'Yes'
   data_file_size:
     Desc: <The measure, expressed in bytes, as to how much space a data file takes
