@@ -139,6 +139,18 @@ PropDefinitions:
     Src: FNL
     Type: string
     Req: 'No'
+  study_version:
+    Desc: The version of study data
+    # Term:
+    #   - Origin: caDSR 
+    #     Code: 
+    #     Value: 
+    #     Version: 
+    Src: FNL
+    Type: 
+      value_type: list
+      item_type: string
+    Req: 'No'
   study_description:
     Desc: <A textual description of the study, with components such as objectives
       or goals.> A narrative description of the study/trial. <br>CDE ID = 3444002
