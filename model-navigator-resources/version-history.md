@@ -1,5 +1,5 @@
-### 1.18.0
+### 1.19.0
 
-Release 1.18.0 updates properties to support the submission of NCTN-NCORP data to the CTDC.
+Release 1.19.0 adds a property to store the study version.
 
 
