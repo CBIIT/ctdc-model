@@ -25,7 +25,7 @@
   "name": "CTDC",
   "assets": null,
   "configuration": {
-    "pageTitle": "CTDC Data Model",
+    "pageTitle": "Data Model Navigator",
     "pdfConfig": {
       "fileType": "pdf",
       "prefix": "CTDC_",
