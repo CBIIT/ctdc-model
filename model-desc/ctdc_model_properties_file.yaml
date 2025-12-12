@@ -2076,7 +2076,7 @@ PropDefinitions:
       - Unknown
     Req: Preferred
   response_system_property:
-    Desc: The type of standard from which a judgment concerning disease response to therapy can be established. <br>CDE ID = 13381490
+    Desc: The type of standard from which a judgment concerning disease response to therapy can be established <br>CDE ID = 13381490
     Term:
       - Origin: caDSR 
         Code: '13381490' 
@@ -2089,8 +2089,7 @@ PropDefinitions:
     Type: string
     Req: Preferred
   response_system_version:
-    Desc: The version of the standard from which a judgment concerning disease response
-      to therapy can be established. <br>CDE ID = 13381497
+    Desc: The version of the standard from which a judgment concerning disease response to therapy can be established. <br>CDE ID = 13381497
     Term:
       - Origin: caDSR 
         Code: '13381497' 
