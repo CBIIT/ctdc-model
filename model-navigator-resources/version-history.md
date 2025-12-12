@@ -1,4 +1,8 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
+### Data Model version 1.21.0
+Release Date: 12/12/25
+- Adds Study Arm and Cohort nodes.
+- Introduces new properties and Common Data Elements for the CIMAC-CIDC Network.
 ### Data Model version 1.20.0
 Release Date: 9/22/2025
 - Enables Common Data Elements (CDEs) for the study_type and data_file_type properties.
