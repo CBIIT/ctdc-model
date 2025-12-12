@@ -458,8 +458,7 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: 'Preferred'
-  
-  
+
   # Cohort Node
   cohort_record_id:
     Desc: A unique identifier via which cohorts can be differentiated from one another across studies/trials. <br>This property is used as the key via which cases can be associated with the appropriate cohort during data loading, and to identify the correct records during data updates.
