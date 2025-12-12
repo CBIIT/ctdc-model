@@ -2080,7 +2080,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR 
         Code: '13381490' 
-        Value: 	Disease Response System Criteria Type
+        Value: Disease Response System Criteria Type
         Version: '1'
         Tags:
           Provenance: CIDC
