@@ -69,7 +69,7 @@ Nodes:
       - study_justification
       - study_population #16087718
       - study_biobank #16490863
-      - study_justifictaion #16391076
+      - study_justification #16391076
       - study_data_sharing_plan #16391077
       - other_study_outcome
       - recist_objective_response_rate
