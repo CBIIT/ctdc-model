@@ -303,7 +303,6 @@ Nodes:
       - radiological_procedure #6411539
       - radiological_procedure_anatomical_location
       - radiation_dose
-      - radiation_dose_units #13383458
       - radiation_frequency #14918782
       - radiation_extent #7063755
       - radiotherapy_start_date #14984532

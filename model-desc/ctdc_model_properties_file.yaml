@@ -311,6 +311,23 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: 'No' 
+  # Study Arm Node
+  study_arm_record_id:
+    Desc: A unique identifier via which study arms can be differentiated from one another within a given study/trial. <br>This property is used as the key via which participants can be associated with the appropriate study arm during data loading, and to identify the correct records during data updates.
+    Src: Data Submbitter  
+    Type: string
+    Req: 'Yes'
+    Key: true
+  study_arm_name:   
+    Desc: The name and/or nature of each arm into which the study/trial has been divided.
+    Src: Data Submitter
+    Type: string
+    Req: Preferred
+  study_arm_description:
+    Desc: A short narrative description of the study arm.
+    Src: Data Submitter
+    Type: string
+    Req: Preferred
   # Prinicipal Investigator Node
   person_record_id: 
     Desc: A globally unique identifier via which principle investigator can be differentiated across studies; specifically the value of study_id concatenated with the value of pi_last_name, <br>This property is used as the key via which child records, e.g. cohort records, can be associated with the appropriate principle investigator, and to identify the correct principle investigator records during data updates.
@@ -464,6 +481,21 @@ PropDefinitions:
         Tags:
           Provenance: CIDC
           Added: 12-11-25
+    Src: Data Submitter
+    Type: string
+    Req: Preferred
+  cohort_description:
+    Desc: A short narrative description of the cohort into which the study/trial has been divided.
+    Src: Data Submitter
+    Type: string
+    Req: Preferred
+  cohort_dose:
+    Desc: The amount of a therapeutic agent administered to the cohort.
+    Src: Data Submitter
+    Type: string
+    Req: Preferred
+  cohort_dose_uom:
+    Desc: The unit of measurement associated with the amount of a therapeutic agent administered to the cohort.
     Src: Data Submitter
     Type: string
     Req: Preferred
@@ -700,7 +732,7 @@ PropDefinitions:
     Req: Preferred
   radiology_report_available:
     Desc: An indicator as to whether any radiology reports results
-      relating to the participant in question are available. <br>CDE ID = 14735825                                                                                                                       
+      relating to the participant in question are available. <br>CDE ID = 14735825                                                                                                
     Term:
       - Origin: caDSR 
         Code: '14735825' 
@@ -1112,18 +1144,18 @@ PropDefinitions:
           Added: 05-28-24
     Src: Data Submitter
     Type: string
-    icd_03_disease_code:
-      Desc: The ICD-O-3 code which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
-      Term:
-        - Origin: caDSR 
-          Code: '13606049' 
-          Value: Diagnosis Disease ICD-O-3 Morphology Code
-          Version: '2'
-          Tags: 
+  icd_03_disease_code:
+    Desc: The ICD-O-3 code which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
+    Term:
+      - Origin: caDSR 
+        Code: '13606049' 
+        Value: Diagnosis Disease ICD-O-3 Morphology Code
+        Version: '2'
+        Tags: 
             Provenance: CMB
             Added: 05-28-24
-      Src: Data Submitter
-      Type: string
+    Src: Data Submitter
+    Type: string
   primary_diagnosis_disease_group:
     Desc: A term describing the main condition for evaluation and treatment as captured
       in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
