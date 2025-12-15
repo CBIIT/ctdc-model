@@ -1122,7 +1122,7 @@ PropDefinitions:
           Tags: 
             Provenance: CMB
             Added: 05-28-24
-          Src: Data Submitter
+      Src: Data Submitter
   primary_diagnosis_disease_group:
     Desc: A term describing the main condition for evaluation and treatment as captured
       in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
