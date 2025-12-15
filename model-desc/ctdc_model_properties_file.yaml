@@ -143,6 +143,19 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: 'No'
+  nct_id:
+    Desc: OThe unique alphanumeric identifier for a trial as assigned by the Clinicaltrials.gov Protocol Registration and Results System (PRS)..
+    Term:
+      - Origin: caDSR
+        Code: '16479088'
+        Value: Study Administration Clinicaltrials.gov Unique Identifier
+        Version: '1'  
+        Tags:
+          Provenance: CIDC
+          Added: 10-14-25
+    Src: Data Submitter
+    Type: string
+    Req: 'No'
   study_version:
     Desc: The version of a particular release of study data
     Src: Data Submitter
