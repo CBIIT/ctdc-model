@@ -725,7 +725,6 @@ PropDefinitions:
         Version: '1'
         Tags:
           Provenance: CMB
-          Added:
     Src: Data Submitter
     Enum:
       - 'Yes'
@@ -1111,7 +1110,7 @@ PropDefinitions:
         Tags: 
           Provenance: CMB
           Added: 05-28-24
-        Src: Data Submitter
+    Src: Data Submitter
     icd_03_disease_code:
       Desc: The ICD-O-3 code which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
       Term:
