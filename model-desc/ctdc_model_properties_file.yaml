@@ -269,7 +269,8 @@ PropDefinitions:
           Provenance: CIDC
           Added: 12-9-25
     Src: Data Submitter
-    Type: enum
+    Enum:
+      - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'
   study_population:
     Desc: Text which describes a target study population with characteristics defined in the study protocol.
@@ -295,7 +296,8 @@ PropDefinitions:
           Provenance: CIDC
           Added: 12-9-25
     Src: Data Submitter
-    Type: enum
+    Enum:
+      - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'  
   study_justification:
     Desc: A description of how a clinical trial is scientifically sound, ethically designed, and has potential benefits that outweigh the risks.
@@ -2495,7 +2497,8 @@ PropDefinitions:
           Provenance: CIDC 
           Added: 12-11-25
     Src: Data Submitter
-    Type: enum
+    Enum:
+      - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'
   viable_tumor_area_percentage:
     Desc: The percentage of viable tumorous tissue surface area in a specimen.
@@ -2521,7 +2524,8 @@ PropDefinitions:
           Provenance: CIDC 
           Added: 12-11-25
     Src: Data Submitter
-    Type: enum
+    Enum:
+      - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'
   
   #File Node
