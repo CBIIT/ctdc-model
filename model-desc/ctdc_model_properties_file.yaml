@@ -145,13 +145,6 @@ PropDefinitions:
     Req: 'No'
   study_version:
     Desc: The version of a particular release of study data
-    Term:
-    #   - Origin: caDSR 
-    #     Code: 
-    #     Value: 
-    #     Version: 
-        Tags:
-          Provenance: CTDC
     Src: Data Submitter
     Type: string
     Req: 'No'
@@ -899,15 +892,6 @@ PropDefinitions:
     Req: Preferred
   occupation:
     Desc: The occupation/job category of a person. <br>CDE ID = 6617540
-    Term:
-    #   - Origin: caDSR # NCIP
-    #     Code: '6617540' 
-    #     Value: Person Occupation Category
-    #     Version: '1'
-    # This CDE needs to be updated to include an expanded list of permissible values
-      Tags:
-        Provenance: CMB
-        Added: 5-31-24
     Src: Data Submitter
     Type: string
     Req: Preferred
@@ -927,14 +911,6 @@ PropDefinitions:
   highest_level_of_education:
     Desc: An indication as to the highest level of education attained by
       the participant. <br>CDE ID = 2681552
-    Term:
-    #   - Origin: caDSR # NCI Standards (NCIP)
-    #     Code: '2681552' 
-    #     Value: Person Education Level Summary Type
-    #     Version: '1'
-      Tags:
-        Provenance: CMB
-        Added: 5-31-24  
     Src: Data Submitter
     Enum: # Reflective of the values used by the CMB
       - No formal education
@@ -1243,12 +1219,6 @@ PropDefinitions:
     Req: 'No'
   snomed_disease_term:
     Desc: Description pending 
-    Term:
-    #   - Origin: caDSR
-    #     Code: 'code/ID'
-    #     Value: Data Element Name
-      Tags:
-        Provenance: CMB
     Src: Data Submitter
     Enum: 
       - Acute Myeloid Leukemia #17788007
@@ -1300,13 +1270,6 @@ PropDefinitions:
   snomed_disease_code:
     Desc: A 9-digit numerical code for the primary disease with which the participant
       in question has been diagnosed. <br>CDE ID = 6642369                                                                             #
-    Term:
-    #   - Origin: caDSR
-    #     Code: '6642369'
-    #     Value: Data Element Name
-    #     Version: '1'
-      Tags:
-        Provenance: CMB
     Src: Data Submitter
     Enum:
       - "17788007" #Acute Myeloid Leukemia
@@ -1363,12 +1326,6 @@ PropDefinitions:
     Req: 'No'
   icd_o_primary_site:
     Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3). <br>CDE ID = 11341616
-    Term:
-  #     - Origin: caDSR # CRDC
-  #       Code: '11341616'
-  #       Value: Diagnosis Primary Anatomic Site ICD-O-3 Code
-      Tags:
-        Provenance: DSS
     Src: Data Submitter
     Type: string
     Req: 'No'
@@ -1584,14 +1541,6 @@ PropDefinitions:
   targeted_therapy_frequency:
     Desc: The frequency of how often a medication is being administered. <br>CDE
       ID = 2003878
-    Term:
-    #   - Origin: caDSR # CTEP
-    #     Code: '2003878' 
-    #     Value: Agent Administered Frequency
-    #     Version: '4'
-    Tags:
-      Provenance: CMB
-      Added: 05-29-24
     Src: Data Submitter
     Type: string
     Req: Preferred
@@ -1717,14 +1666,6 @@ PropDefinitions:
   non_targeted_therapy_frequency:
     Desc: The frequency of how often a medication is being administered. <br>CDE
       ID = 2003878
-    Term:
-    #   - Origin: caDSR # CTEP
-    #     Code: '2003878' 
-    #     Value: Agent Administered Frequency
-    #     Version: '4'
-    Tags:
-      Provenance: CMB
-      Added: 05-29-24 
     Src: Data Submitter
     Type: string
     Req: Preferred
@@ -1811,12 +1752,6 @@ PropDefinitions:
     Req: 'Yes'
   surgical_procedure_date:
     Desc: The date upon which the surgical procedure in question was performed, expressed as the number of days before or after enrollment. 
-    Term:
-    #   - Origin: caDSR
-    #     Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
-    #     Value: Data Element Name
-    Tags:
-      Provenance: CMB
     Src: Data Submitter
     Type: integer
     Req: 'Yes'
@@ -2009,14 +1944,6 @@ PropDefinitions:
   radiation_extent:
     Desc: The extent of radiation exposure administered to the patient's body during
       radiation therapy. <br> CDE ID = 7063755
-    Term:
-    #   - Origin: caDSR # NCI CRF Stds
-    #     Code: '7063755' 
-    #     Value: Radiation Therapy Administration Extent Type
-    #     Version: '1'
-    Tags:
-      Provenance: CMB
-      Added: 05-29-24 
     Src: Data Submitter
     Type: string
     Req: 'Yes'
@@ -2116,14 +2043,6 @@ PropDefinitions:
   survival_status:
     Desc: The participant's survival state as being living or deceased. <br>CDE
       ID = 2847330
-    Term:
-    #   - Origin: caDSR-NCI Standard
-    #     Code: '2847330' 
-    #     Value: Participant Vital Status Type #Survival Status  
-    #     Version: '1'
-      Tags:
-        Provenance: DSS
-        Added: 05-31-24 
     Src: Data Submitter
     Enum:
       - ALIVE # Value exactly as used by the CMB
@@ -2137,14 +2056,6 @@ PropDefinitions:
   primary_cause_of_death:
     Desc: The circumstance or condition of greatest rank or importance that results
       in the death of a living being. <br>CDE ID = 4783274
-    Term:
-    #   - Origin: caDSR # NCI Standard
-    #     Code: '4783274' 
-    #     Value: Primary Cause of Death #Primary Cause of Death 
-    #     Version: '1'
-      Tags:
-        Provenance: DSS
-        Added: 05-31-24
     Src: Data Submitter
     Type: string
     Req: 'No'
@@ -2169,14 +2080,6 @@ PropDefinitions:
   off_study_reason:
     Desc: An explanation describing why an individual is no longer receiving protocol
       therapy. <br>CDE ID = 13362265                                                                                  #
-    Term:
-    #   - Origin: caDSR 
-    #     Code: '13362265' 
-    #     Value: Subject Protocol Therapy Status Off Protocol Reason #Disposition Event Dictionary-Derived/Standardized Term 
-    #     Version: '1'
-      Tags:
-        Provenance: CMB
-        Added: 05-31-24
     Src: Data Submitter
     Enum:
       - ADVERSE EVENT
@@ -2357,13 +2260,6 @@ PropDefinitions:
   assessment_timepoint:
     Desc: A specific point in the time continuum, including those established relative
       to an event.  <br>CDE ID = 5899851
-    Term:
-    #   - Origin: caDSR # NCI CRF Standards
-    #     Code: '5899851' #'7065963'
-    #     Value: Timepoint Event Assessment Period Type
-    #     Version: '1'
-    Tags:
-      Provenance: CMB   
     Src: Data Submitter
     Enum:
       - ARCHIVAL
