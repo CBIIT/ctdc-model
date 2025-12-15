@@ -209,13 +209,6 @@ PropDefinitions:
     Req: 'Yes'
   dates_of_conduct:
     Desc: The timespan over which the study/trial was/is being conducted.
-    Term:
-    #   - Origin: caDSR
-    #     Code: 'code/ID' #NOT CURRENTLY ASSIGNED ANY CDE
-    #     Value: Data Element Name
-    #     Version: '1'  
-        Tags:
-          Provenance: CTDC
     Src: Data Submitter
     Type: string
     Req: 'Yes'
