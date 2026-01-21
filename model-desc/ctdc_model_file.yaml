@@ -372,6 +372,53 @@ Nodes:
       - assay_subtype
       - qc_status
       - crdc_id
+  next_generation_sequencing_assay:
+    Desc: The Next Generation Sequencing Assay node contains numerous properties which provide an in-depth characterization of the types of next generation sequencing assays which were conducted from any given biospecimen and subsequently analyzed.
+    Tags:
+      Category: biospecimen # in lieu of "specimen" being a category recognized by the DMN
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - sequencing_assay_record_id
+      - library_preparation_kit
+      - sequencing_platform
+      - sequencing_assay_read_length  
+      - paired-end_sequencing
+      - sequencing_depth 
+      - target_capture_kit
+      - enrichment_kit
+      - azimuth_reference_genome_version
+      - tabula_sapiens_reference_genome_version
+      - crdc_id
+  immune_assay:   
+    Desc: The Immune Assay node contains numerous properties which provide an in-depth characterization of the types of immune assays which were conducted from any given biospecimen and subsequently analyzed.
+    Tags:
+      Category: biospecimen # in lieu of "specimen" being a category recognized by the DMN
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'
+    Props:
+      - immune_assay_record_id
+      - antibody_used_for_immune_based_assay 
+      - clone 
+      - antigen 
+      - antigen_type 
+      - crdc_id
+  cell_based_assay:
+    Desc: The Cell Based Assay node contains numerous properties which provide an in-depth characterization of the types of cell based assays which were conducted from any given biospecimen and subsequently analyzed.
+    Tags:
+      Category: biospecimen # in lieu of "specimen" being a category recognized by the DMN
+      Assignment: core
+      Class: secondary
+      Template: 'Yes'   
+    Props:
+      - cell_based_assay_record_id
+      - fluor_wavelength
+      - antibody_used_for_cell_based_assay
+      - roi_id
+      - positive_cell_detection
+      - crdc_id
   file:
     Desc: Data files can be associated with CTDC project, study, participant, diagnosis and specimen records, but are not themselves stored within the application. Instead, the application stores records as to the existence and nature of such data files. The Data File node is comprised of properties which characterize these files in terms of their size, format and content, such that they can be appropriately represented within the application's UI, and in terms of their storage location, such that they can be retrieved for analysis.
     Tags:
