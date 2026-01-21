@@ -3,7 +3,7 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v1.21.0
+Version: v1.22.0
 
 Nodes:
   # node:
@@ -359,6 +359,19 @@ Nodes:
       - days_from_first_participant_visit_to_specimen_collection
       - days_from_initial_genomic_sequencing_to_specimen_collection
       - crdc_id
+  assay:
+    Desc: The Assay node contains numerous properties which provide an in-depth characterization of the types of assays which were conducted from any given biospecimen and subsequently analyzed.
+    Tags:
+      Category: biospecimen # in lieu of "specimen" being a category recognized by the DMN
+      Assignment: core
+      Class: primary
+      Template: 'Yes'
+    Props:
+      - assay_record_id 
+      - assay_type 
+      - assay_subtype
+      - qc_status
+      - crdc_id
   file:
     Desc: Data files can be associated with CTDC project, study, participant, diagnosis and specimen records, but are not themselves stored within the application. Instead, the application stores records as to the existence and nature of such data files. The Data File node is comprised of properties which characterize these files in terms of their size, format and content, such that they can be appropriately represented within the application's UI, and in terms of their storage location, such that they can be retrieved for analysis.
     Tags:
@@ -410,6 +423,10 @@ Relationships:
         Dst: study
       - Src: image_collection
         Dst: study
+      - Src: file
+        Dst: assay
+      - Src: assay
+        Dst: specimen
     Props: null      
   of_study:
     Mul: many_to_many
@@ -430,6 +447,16 @@ Relationships:
     Ends:
       - Src: consent_group
         Dst: study
+  of_assay:
+    Mul: one_to_one
+    Ends:
+      - Src: assay
+        Dst: next_generation_sequencing_assay
+      - Src: assay
+        Dst: immune_assay
+      - Src: assay
+        Dst: cell_based_assay
+    Props: null
   of_participant:
     Mul: many_to_one
     Ends:
