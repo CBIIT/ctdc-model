@@ -384,7 +384,7 @@ Nodes:
       - library_preparation_kit
       - sequencing_platform
       - sequencing_assay_read_length  
-      - paired-end_sequencing
+      - paired_end_sequencing
       - sequencing_depth 
       - target_capture_kit
       - enrichment_kit
