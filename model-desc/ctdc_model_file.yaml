@@ -383,7 +383,7 @@ Nodes:
       - sequencing_assay_record_id
       - library_preparation_kit
       - sequencing_platform
-      - sequencing_assay_read_length  
+      - sequencing_read_length  
       - paired_end_sequencing
       - sequencing_depth 
       - target_capture_kit
