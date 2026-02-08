@@ -53,15 +53,11 @@ remain stable.
 
 ## 3. Branching Strategy (CTDC)
 
-  ----------------------------------------------------------------
-  **Branch**   **Purpose**
-  ------------ ---------------------------------------------------
-  develop      Pre-release branch used for Dev and QA tier
-               validation.
+  **Branch** | **Purpose**
+--- | ---
+develop | Pre-release branch used for Dev and QA tier validation.
+prod | Production-ready versions for production releases.<br>The Data Hub tracks release tags.
 
-  prod         Production-ready versions for production releases.
-               The Data Hub tracks release tags.
-  ----------------------------------------------------------------
 
 All new feature and bug fix work starts from develop. After validation
 and review, changes are promoted to prod.
@@ -172,29 +168,18 @@ and review, changes are promoted to prod.
 
 ## 5. Quick Git Commands Cheat Sheet
 
-  ------------------------------------------------------------
-  **Task**          **Command**
-  ----------------- ------------------------------------------
-  Clone repo        git clone
-                    https://github.com/CBIIT/ctdc-model.git
+ | **Task** | **Command** |
+|----------|-------------|
+| Clone repo | `git clone https://github.com/CBIIT/ctdc-model.git` |
+| Checkout develop | `git checkout develop` |
+| Pull latest | `git pull origin develop` |
+| Create feature branch | `git checkout -b CTDC-####` |
+| Stage changes | `git add -A` |
+| Commit | `git commit -m "Message"` |
+| Push branch | `git push origin <branch>` |
+| Merge develop | `git merge origin/develop` |
+| Rebase (optional) | `git rebase origin/develop` |
 
-  Checkout develop  git checkout develop
-
-  Pull latest       git pull origin develop
-
-  Create feature    git checkout -b CTDC-####
-  branch            
-
-  Stage changes     git add -A
-
-  Commit            git commit -m \"Message\"
-
-  Push branch       git push origin \<branch\>
-
-  Merge develop     git merge origin/develop
-
-  Rebase (optional) git rebase origin/develop
-  ------------------------------------------------------------
 
 ## 6. Semantic Versioning (SemVer) Overview
 
