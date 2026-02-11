@@ -7,6 +7,7 @@
     "readme-file": "model-navigator-resources/README.md",
     "loading-file": "model-navigator-resources/CTDC_Example_Files.zip",
     "model-navigator-logo": "model-navigator-resources/logo.png",
+    "release-notes": "model-navigator-resources/version-history.md",
     "semantics": {
       "file-nodes": {
         "data_file": {
