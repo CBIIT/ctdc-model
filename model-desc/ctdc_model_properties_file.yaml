@@ -463,7 +463,7 @@ PropDefinitions:
         Value: Study Administration Publication Identification Year Date
         Version: '1'
     Src: Data Submitter
-    Type: string
+    Type: number
     Req: 'Preferred'
   journal_citation: 
     Desc: The name of the journal in which the cited work was published, inclusive of the citation itself in terms of journal volume number, part number where applicable, and page numbers. <br>CDE ID = 16081476
