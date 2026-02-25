@@ -144,7 +144,7 @@ PropDefinitions:
     Type: string
     Req: 'No'
   nct_id:
-    Desc: OThe unique alphanumeric identifier for a trial as assigned by the Clinicaltrials.gov Protocol Registration and Results System (PRS)..
+    Desc: The unique alphanumeric identifier for a trial as assigned by the Clinicaltrials.gov Protocol Registration and Results System (PRS)..
     Term:
       - Origin: caDSR
         Code: '16479088'
@@ -288,15 +288,14 @@ PropDefinitions:
     Desc: The name of the biobank from which a study has sourced samples from.
     Term:
       - Origin: caDSR
-        Code: '16087718'
+        Code: '16490863'
         Value: Study Administration CIDC Biobank Organization Name
         Version: '1'  
         Tags:
           Provenance: CIDC
           Added: 12-9-25
     Src: Data Submitter
-    Enum:
-      - https://cadsr.cancer.gov/onedata/Home.jsp
+    Type: string
     Req: 'No'  
   study_justification:
     Desc: A description of how a clinical trial is scientifically sound, ethically designed, and has potential benefits that outweigh the risks.
@@ -464,7 +463,7 @@ PropDefinitions:
         Value: Study Administration Publication Identification Year Date
         Version: '1'
     Src: Data Submitter
-    Type: string
+    Type: number
     Req: 'Preferred'
   journal_citation: 
     Desc: The name of the journal in which the cited work was published, inclusive of the citation itself in terms of journal volume number, part number where applicable, and page numbers. <br>CDE ID = 16081476
@@ -1173,14 +1172,14 @@ PropDefinitions:
     Desc: A term describing the main condition for evaluation and treatment as captured
       in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
       Thesaurus (NCIt) hierarchy tree.
-    Term:
-      - Origin: caDSR 
-        Code: '14905532' 
-        Value: Disease Primary Diagnosis NCI Thesaurus Name
-        Version: '1'
-        Tags: 
-          Provenance: CMB
-          Added: 05-28-24
+    # Term:
+    #   - Origin: caDSR 
+    #     Code: '14905532' 
+    #     Value: Disease Primary Diagnosis NCI Thesaurus Name
+    #     Version: '1'
+    #     Tags: 
+    #       Provenance: CMB
+    #       Added: 05-28-24
     Src: Data Submitter
     Enum: # Currently reflective only of the values used by the CMB
       - Colorectal cancer, NOS
@@ -2459,8 +2458,7 @@ PropDefinitions:
           Provenance: CIDC 
           Added: 12-11-25
     Src: Data Submitter
-    Enum:
-      - https://cadsr.cancer.gov/onedata/Home.jsp
+    Type: integer
     Req: 'No'
   
   #Assay Node
