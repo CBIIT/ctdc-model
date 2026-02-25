@@ -1,4 +1,8 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
+### Data Model version 1.22.1
+- Removes unsupported enum blocks containing URLs
+- Updates CDE for study_biobank prop
+- Disables unsupported CDE for primary_diagnosis_disease_group
 ### Data Model version 1.22.0
 Release Date: 1/20/26
 - Adds Assay nodes for the CIMAC-CIDC Network.
