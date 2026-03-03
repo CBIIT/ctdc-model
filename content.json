@@ -35,6 +35,7 @@
       "iconSrc": "https://raw.githubusercontent.com/CBIIT/ctdc-model/refs/heads/develop/model-navigator-resources/ctdc-site-header.png",
       "footnote": "https://hub.datacommons.cancer.gov/model-navigator/CTDC",
       "landscape": true,
+      "useTimestampInFilename": true
     },
     "facetFilterSearchData": [
       {
