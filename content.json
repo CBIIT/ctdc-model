@@ -27,6 +27,7 @@
   "assets": null,
   "configuration": {
     "pageTitle": "Data Model Navigator",
+    "readMeDownload": true,
     "pdfConfig": {
       "fileType": "pdf",
       "prefix": "CTDC_",
