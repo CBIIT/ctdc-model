@@ -1,4 +1,6 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
+### Data Model version 1.22.2
+- Changes relationship between the assay node and sub-assays from (one to one) to (many to one)
 ### Data Model version 1.22.1
 - Removes unsupported enum blocks containing URLs
 - Updates CDE for study_biobank prop
@@ -66,3 +68,4 @@ Release Date 7/29/2025
 ### Data Model version 1.10.0
 Release Date 7/29/2025
 - Updates comment to indicate the data_file node has been changed to file node
+
