@@ -3,21 +3,10 @@
     "model-desc/ctdc_model_file.yaml",
     "model-desc/ctdc_model_properties_file.yaml"
 ],
-    "prop-file": "model-desc/ctdc_model_properties_file.yaml",
     "readme-file": "model-navigator-resources/README.md",
     "loading-file": "model-navigator-resources/CTDC_Example_Files.zip",
     "release-notes": "model-navigator-resources/version-history.md",
     "model-navigator-logo": "model-navigator-resources/logo.png",
-    "semantics": {
-      "file-nodes": {
-        "data_file": {
-          "id-field": "data_file_uuid",
-          "name-field": "data_file_name",
-          "size-field": "data_file_size",
-          "md5-field": "data_file_checksum_value"
-        }
-      }
-    },
     "current-version": "1.0.0",
     "versions": [
       "1.0.0"
@@ -35,7 +24,8 @@
       "fileTransferManifestName": "CTDC_",
       "iconSrc": "https://raw.githubusercontent.com/CBIIT/ctdc-model/refs/heads/develop/model-navigator-resources/ctdc-site-header.png",
       "footnote": "https://hub.datacommons.cancer.gov/model-navigator/CTDC",
-      "landscape": true
+      "landscape": true,
+      "useTimestampInFilename": true
     },
     "facetFilterSearchData": [
       {
