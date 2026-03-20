@@ -4,9 +4,7 @@
 
 ### Data Model version 1.22.2
 
-* Updated Assay Node Relationships
-* Originally one to one
-* Updated to Many to One
+* Updated relationships in the Assay node from one to one to many to one.
 
 ### Data Model version 1.22.1
 
