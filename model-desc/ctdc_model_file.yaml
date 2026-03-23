@@ -3,7 +3,7 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v1.22.1
+Version: v1.22.2
 
 Nodes:
   # node:
@@ -495,7 +495,7 @@ Relationships:
       - Src: consent_group
         Dst: study
   of_assay:
-    Mul: one_to_one
+    Mul: many_to_one
     Ends:
       - Src: assay
         Dst: next_generation_sequencing_assay
