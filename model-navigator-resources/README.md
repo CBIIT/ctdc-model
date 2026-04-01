@@ -8,7 +8,7 @@ A relationship is defined between two nodes, with one node being the Source (Par
 
 ### Hierarchy: Parent nodes versus Child nodes
 
-Nodes with in the model are connected to each other through relationships in a similar way to a family tree.  A relationship is defined by a source node (Parent) and a Destination Node (Child).  This tells the model how the nodes relate to each other, and which comes first in the hierarchy.  Like a family tree a node can be both a Parent and a Child at the same time depending on where it exists in the model,  these types of nodes are typically in the center of the model.  It is possible for a node to not have any Parents and these are referred to as HeadNodes and are typically at the head or top of the model.  Similarly there are nodes that do not have Children and these are endpoints of the model.  While not all Child nodes will be populated depending on the data, if a child node does have data, then all corresponding parent nodes also need to be populated.
+Nodes within the model are connected to each other through relationships in a similar way to a family tree.  A relationship is defined by a source node (Parent) and a Destination Node (Child).  This tells the model how the nodes relate to each other, and which comes first in the hierarchy.  Like a family tree, a node can be both a Parent and a Child at the same time depending on where it exists in the model, these types of nodes are typically in the center of the model.  It is possible for a node to not have any Parents and these are referred to as HeadNodes and are typically at the head or top of the model.  Similarly there are nodes that do not have Children and these are endpoints of the model.  While not all Child nodes will be populated depending on the data, if a child node does have data, then all corresponding parent nodes also need to be populated.
 
 ### Node Categories
 
@@ -56,7 +56,7 @@ There are some properties that show up in the model as "Optional Properties" but
 
 ### Key Properties
 
-Nodes contain a single property visually identified as a Key Property by a **blue key icon** displayed next to the name of the appropriate property.  These properties serve as an index value for a template and as such entries for this property are unique.
+Nodes contain a single property visually identified as a Key Property by a **blue key icon** displayed next to the name of the appropriate property.  These properties serve as an index value for a template and as such entries for this property are unique.  Key Properties are therefore functionally equivalent to foreign keys in traditional relational databases.
 
 ### Relationship Properties
 
@@ -74,7 +74,7 @@ In support of data submission, data loading templates can be downloaded, either 
 
 The Biospecimen Node Category consists of Specimen, Assay and various specialized assay nodes.
 
-Due to the lack of aliquot nodes it is possible for a specimen to be run on multiple assays, as well as an assay to have multiple specimens.  As such when populating the assay node, the Key Property which is assay\_record\_id, serves as an count of the number of assays run.  This value has to be unique to comply with the Key Property definition.  While specimen.specimen\_record\_id needs to be populated to record which specimen was run, only populate the corresponding specialized assay node.  For example, if a specimen was run on multiple assays, then each run would be its own entry with an unique assay\_record\_id.
+Due to the lack of aliquot nodes it is possible for a specimen to be run on multiple assays, as well as an assay to have multiple specimens.  As such when populating the assay node, the Key Property which is assay\_record\_id, serves as a count of the number of assays run.  This value has to be unique to comply with the Key Property definition. The Assay Template has a column for each of the specialized assays that exist in the model.  When populating an entry into the assay template specimen.specimen\_record\_id needs to be populated to record which specimen was run, however only populate the corresponding specialized assay node that corresponds to the assay that was run.  If a specimen was run on multiple assays, then each run would be its own entry with an unique assay_record_id and corresponding specialized assay name.
 
 ### Controlled Vocabularies
 
