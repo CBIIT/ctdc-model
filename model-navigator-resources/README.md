@@ -56,7 +56,7 @@ There are some properties that show up in the model as "Optional Properties" but
 
 ### Key Properties
 
-Nodes contain a single property visually identified as a Key Property by a **blue key icon** displayed next to the name of the appropriate property.  These properties serve as an index value for a template and as such entries for this property are unique.  Key Properties are therefore functionally equivalent to foreign keys in traditional relational databases.
+Nodes contain a single property visually identified as a Key Property by a **blue key icon** displayed next to the name of the appropriate property.  These properties serve as an index value for a template and as such entries for this property are unique.  During data loading, **_child records_** are associated with their correct **_parents_** by virtue of data loading files which contain the appropriate values for the property identified as their parents’ Key Property.  Key Properties are therefore functionally equivalent to foreign keys in traditional relational databases.
 
 ### Relationship Properties
 
@@ -79,4 +79,3 @@ Due to the lack of aliquot nodes it is possible for a specimen to be run on mult
 ### Controlled Vocabularies
 
 In the interests of data quality and consistency, CRDC data models makes extensive use of Common Data Elements (CDEs), enumerated properties, and controlled vocabularies of acceptable terms. All such controlled vocabularies can be viewed via Table View mode, and value sets are included in full in the appropriate PDF exports. In addition to the acceptable terms available through teh Data Model Viewer, CDEs can be access via NCI's [caDSR website](https://cadsr.cancer.gov/onedata/Home.jsp) or [caDSR APIs](https://cadsrapi.cancer.gov/NCIAPI/1.0/index.html).  Furthermore, in support of data submitters pre-validating their templated data, all controlled vocabularies can be exported in machine readable JSON and TSV formats, either in the form of a zip file containing copies of controlled vocabularies for all enumerated properties, invoked via the upper-level “Available Downloads” option, or from within the Table View, and invoked on a property-by-property basis. As more studies are added to the CRDC, many of these controlled vocabularies will continue to evolve, and will be updated by the CRDC Data Team during study on-boarding, in order to accommodate additional terms not yet encountered.
-
