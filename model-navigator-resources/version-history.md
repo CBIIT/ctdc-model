@@ -1,6 +1,12 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+### Data Model version 1.23.0
 
+* Added new properties to multiple nodes for the CIMAC-CIDC Network.
+* Corrected property types for numeric values, setting interger to where decimals are not allowed
+* Updated property units for numeric values that were missing to align with the property defination
+* Populated missing property types
+* Updated CDEs that were previously missing or TBD
 
 ### Data Model version 1.22.2
 
