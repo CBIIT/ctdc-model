@@ -1497,7 +1497,7 @@ PropDefinitions:
       in question has been diagnosed. <br>CDE ID = 6642369   
     Term:
       - Origin: caDSR
-        Code: 3914972 #from Gap #'6642369' 
+        Code: '6642369' 
         Value: Malignant Neoplasm Systematized Nomenclature of Medicine Clinical Terms Primary Anatomic Site
         Version: '4'
         Tags:
