@@ -3,7 +3,7 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v1.22.2
+Version: v1.23.0
 
 Nodes:
   # node:
@@ -72,6 +72,9 @@ Nodes:
       - study_data_sharing_plan #16391077
       - other_study_outcome
       - recist_objective_response_rate
+      #- study_status   #this is flagged as canceled
+      - grant_or_affiliated_network  #16002760
+      - study_organization #16665662
       - crdc_id
   study_arm:
     Desc: The Study Arm node contains properties required to describe the arms into which any given study/trial was divided. Division of a study/trial into multiple arms is optional and is at the discretion of the data owners, based upon the way in which the study/trial in question was structured, and how best that structure can be represented within the ICDC. Where applicable, the appropriate study arms are defined during the study on-boarding process and then created via a specific data loading file.
@@ -192,6 +195,10 @@ Nodes:
       - highest_level_of_education #2681552
       - ncbi_taxonomy_id #10543100
       - ncbi_taxonomy_name #10543082
+      - ECOG_PS #88
+      - Karnofsky #2003853
+      - Body Mass Index #2006410
+
 
       - crdc_id
   exposure:
@@ -239,6 +246,9 @@ Nodes:
       - disease_staging_system_version
       - diagnosis_classification_system
       - date_of_confirmation_of_histology
+      - t_category #16794590
+      - n_category #16794606
+      - m_category #16794608
       - crdc_id
   targeted_therapy:
     Desc: The Targeted Therapy node contains properties which detail therapeutic interventions administered to a participant as targeted therapies, i.e. therapies that are considered to have enhanced therapeutic effects upon the specific type of cancer with which the participant has been diagnosed, and/or upon that type of cancer specifically within the context of a given participant because of factors such as tumor histology, grade, gene expression and genetic make-up.
@@ -300,7 +310,7 @@ Nodes:
     Props:
       - radiological_procedure_record_id #14822135
       - radiological_procedure #6411539
-      - radiological_procedure_anatomical_location
+      - radiological_procedure_anatomical_location #14461856
       - radiation_dose
       - radiation_frequency #14918782
       - radiation_extent #7063755
@@ -312,7 +322,7 @@ Nodes:
       - total_radiation_dose
       - total_radiation_dose_units
       - total_radiation_administered_units
-      - radiation_administered_units
+      - radiation_administered_units #16609777
       - crdc_id
   participant_status:
     Desc: Properties within the Participant Status node capture key information as to the participant's survival status and where applicable, a participant's withdrawal from the study. 
@@ -358,6 +368,11 @@ Nodes:
       - tumor_tissue_total_area_percentage
       - days_from_first_participant_visit_to_specimen_collection
       - days_from_initial_genomic_sequencing_to_specimen_collection
+      - fibrosis_area_percentage #16445024
+      - dna_integrity_number #16445023
+      - a260_a230 #16445062
+      - pbmc_viability #16443116
+      - pbmc_recovery #16445061
       - crdc_id
   assay:
     Desc: The Assay node contains numerous properties which provide an in-depth characterization of the types of assays which were conducted from any given biospecimen and subsequently analyzed.
@@ -385,11 +400,14 @@ Nodes:
       - sequencing_platform
       - sequencing_read_length  
       - paired_end_sequencing
-      - sequencing_depth 
       - target_capture_kit
       - enrichment_kit
       - azimuth_reference_genome_version
       - tabula_sapiens_reference_genome_version
+      - azimuth_reference #16967933
+      - tabula_sapiens_reference #16967934
+      - sequencing_depth #TBD
+      - total_reads #TBD
       - crdc_id
   immune_assay:   
     Desc: The Immune Assay node contains numerous properties which provide an in-depth characterization of the types of immune assays which were conducted from any given biospecimen and subsequently analyzed.
@@ -400,9 +418,9 @@ Nodes:
       Template: 'Yes'
     Props:
       - immune_assay_record_id
-      - antibody_used_for_immune_based_assay 
+      - antibody_used_for_immune_based_assay #16964035
       - clone 
-      - antigen 
+      - antigen #17003285
       - antigen_type 
       - crdc_id
   cell_based_assay:
@@ -495,7 +513,7 @@ Relationships:
       - Src: consent_group
         Dst: study
   of_assay:
-    Mul: many_to_one
+    Mul: one_to_one
     Ends:
       - Src: assay
         Dst: next_generation_sequencing_assay
