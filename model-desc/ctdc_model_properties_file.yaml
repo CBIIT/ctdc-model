@@ -516,7 +516,7 @@ PropDefinitions:
         Value: Study Administration Publication Identification PubMed ID Text
         Version: '1'
     Src: Data Submitter
-    Type: interger
+    Type: integer
     Req: 'Preferred'
   publication_title: 
     Desc: The full title of the publication stated exactly as it appears on the published work.
@@ -546,7 +546,7 @@ PropDefinitions:
         Value: Study Administration Publication Identification Year Date
         Version: '1'
     Src: Data Submitter
-    Type: interger
+    Type: integer
     Req: 'Preferred'
   journal_citation: 
     Desc: The name of the journal in which the cited work was published, inclusive of the citation itself in terms of journal volume number, part number where applicable, and page numbers. <br>CDE ID = 16081476
@@ -937,8 +937,10 @@ PropDefinitions:
           Added: 5-31-24  
     Src: Data Submitter
     Type:
-      units: years
-      value_type: interger
+      units: 
+        - years
+      value_type: 
+        - integer
     Req: 'Yes'
   race:
     Desc: The text for reporting information about race based on the Office of Management
@@ -1012,8 +1014,10 @@ PropDefinitions:
           Added: 5-31-24  
     Src: Data Submitter
     Type:
-      units: cm
-      value_type: number
+      units: 
+        - cm
+      value_type: 
+        - number
     Req: Preferred
   weight:
     Desc: The weight of the participant as of enrollment, measured in kg. <br>CDE ID = 2179689
@@ -1027,8 +1031,10 @@ PropDefinitions:
           Added: 5-31-24  
     Src: Data Submitter
     Type:
-      units: kg
-      value_type: number
+      units: 
+        - kg
+      value_type: 
+        - number
     Req: Preferred
   body_surface_area:
     Desc: The body surface area of the participant as of enrollment, mathematically derived from the participant's height and
@@ -1043,8 +1049,10 @@ PropDefinitions:
           Added: 5-31-24  
     Src: Data Submitter
     Type:
-      units: m2
-      value_type: number
+      units:
+        - m2
+      value_type: 
+        - number
     Req: Preferred
   occupation:
     Desc: The occupation/job category of a person. <br>CDE ID = 6617540
@@ -1209,8 +1217,10 @@ PropDefinitions:
           Added: 04-17-26  
     Src: Data Submitter
     Type:
-      units: kg/m2
-      value_type: number
+      units: 
+        - kg/m2
+      value_type: 
+        - number
     Req: 'No'
   ECOG_PS:
     Desc: The functional level of the patient based on the Zubrod performance scale.
@@ -1222,7 +1232,7 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 04-17-26  
     Src: Data Submitter
-    Type: interger
+    Type: integer
     Req: 'No'
   Karnofsky:
     Desc: The functional level of the patient based on the Karnofsky performance scale.
@@ -1235,8 +1245,10 @@ PropDefinitions:
           Added: 04-17-26  
     Src: Data Submitter
     Type:
-      units: percent
-      value_type: number    #percent between 0 and 100, where 0 is dead and 90% or higher is healthy
+      units: 
+        - percent
+      value_type: 
+        - number    #percent between 0 and 100, where 0 is dead and 90% or higher is healthy
     Req: 'No'
 
   # Diagnosis Node
@@ -1425,7 +1437,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 05-28-24
     Src: Data Submitter
-    Type: interger
+    Type: integer
     Enum: # Currently reflective only of the values used in the v3 CMB data submission
       - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
       - "10066354" # Adenocarcinoma of the Gastroesophageal Junction
@@ -1504,7 +1516,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 05-28-24                                                                          #
     Src: Data Submitter
-    Type: interger
+    Type: integer
     Enum:
       - "17788007" #Acute Myeloid Leukemia
       - "445448008" #Acute Myeloid Leukemia with Myelodysplasia-Related Changes
@@ -1608,8 +1620,10 @@ PropDefinitions:
           Provenance: CMB  
     Src: Data Submitter
     Type:
-      units: days
-      value_type: integer
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: 'No'
   histological_subtype:
     Desc: Words that describe the classification of tumors based on their histology. <br>CDE ID = 14843594
@@ -1693,8 +1707,10 @@ PropDefinitions:
           Provenance: CMB
     Src: Data Submitter
     Type:
-      units: days    #expecting MM/DD/YYYY ??
-      value_type: integer
+      units: 
+        - days    #expecting MM/DD/YYYY ??
+      value_type: 
+        - integer
     Req: 'No'
   participant_age_at_diagnosis:
     Desc:  The subjects age since birth at the time of diagnosis. <br>CDE ID = 10609539
@@ -1707,8 +1723,10 @@ PropDefinitions:
           Provenance: DSS
     Src: Data Submitter
     Type:
-      units: years
-      value_type: interger
+      units: 
+        - years
+      value_type:
+        - integer
     Req: 'Preferred'
 #new diagnosis nodes
   m_category:
@@ -1849,8 +1867,10 @@ PropDefinitions:
           Added: 07-25-24
     Src: Data Submitter
     Type: 
-      units: days
-      value_type: integer
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: Preferred
   targeted_therapy_end_date:
     Desc: The number of days from the date of enrollment to the date of treatment
@@ -1865,8 +1885,10 @@ PropDefinitions:
           Added: 07-25-24
     Src: Data Submitter 
     Type:
-      units: days
-      value_type: integer
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: Preferred
   best_response_to_targeted_therapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment.. <br>CDE ID = 15179918
@@ -1987,8 +2009,10 @@ PropDefinitions:
           Added: 07-25-24
     Src: Data Submitter
     Type:
-      units: days
-      value_type: integer
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: Preferred
   non_targeted_therapy_end_date:
     Desc: The number of days from the date of enrollment to the date of treatment
@@ -2003,8 +2027,10 @@ PropDefinitions:
           Added: 07-25-24
     Src: Data Submitter
     Type:
-      units: days
-      value_type: integer
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: Preferred
   best_response_to_non_targeted_therapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment. <br>CDE ID = 15179918
@@ -2062,12 +2088,12 @@ PropDefinitions:
     Req: 'Yes'
   surgical_procedure_date:
     Desc: The date upon which the surgical procedure in question was performed, expressed as the number of days before or after enrollment. 
-    
-    
     Src: Data Submitter
     Type:
-      units: days
-      value_type: integer
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: 'Yes'
   surgical_procedure_anatomical_location:
     Desc: The Uberon identifier for the location within the body where a procedure
@@ -2283,8 +2309,10 @@ PropDefinitions:
           Added: 07-25-24
     Src: Data Submitter
     Type:
-      units: days
-      value_type: integer
+      units: 
+        - days
+      value_type: 
+         - integer
     Req: Preferred
   radiotherapy_end_date:
     Desc: The number of days from the date of enrollment to the date of treatment
@@ -2299,8 +2327,10 @@ PropDefinitions:
           Added: 07-25-24 
     Src: Data Submitter
     Type:
-      units: days
-      value_type: integer
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: Preferred
   best_response_to_radiotherapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment.  <br>CDE ID = 15179918
@@ -2650,8 +2680,10 @@ PropDefinitions:
           Provenance: CMB
     Src: Data Submitter
     Type:
-      units: days
-      value_type: integer
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: Preferred
   days_from_first_participant_visit_to_specimen_collection:
     Desc: The number of days from the date the participant first visited to the date a sample was collected. <br>CDE ID = 11248874
@@ -2664,8 +2696,10 @@ PropDefinitions:
           Provenance: DSS
     Src: Data Submitter
     Type:
-      units: days
-      value_type: interger
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: 'No'
   days_from_first_treatment_to_specimen_collection:
     Desc: The number of days from the date the first treatment was administered to the date a sample was collected. <br>CDE ID = 11250807
@@ -2678,8 +2712,10 @@ PropDefinitions:
           Provenance: DSS 
     Src: Data Submitter 
     Type:
-      units: days
-      value_type: integer
+      units:
+        - days
+      value_type: 
+        - integer
     Req: 'No'
   days_from_initial_genomic_sequencing_to_specimen_collection:
     Desc: The number of days from the date the initial genomic sequencing was done to the date a sample was collected. <br>CDE ID = 11251130
@@ -2692,8 +2728,10 @@ PropDefinitions:
           Provenance: DSS 
     Src: Data Submitter
     Type:
-      units: days
-      value_type: integer
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: 'No'
   days_from_recurrence_to_specimen_collection:
     Desc: The number of days from the date the disease recurrence was identified to the date a sample was collected. <br>CDE ID = 11251133
@@ -2706,8 +2744,10 @@ PropDefinitions:
           Provenance: DSS 
     Src: Data Submitter
     Type:
-      units: days
-      value_type: interger
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: 'No'
   days_from_specimen_collection_to_initial_pathologic_diagnosis:
     Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis. <br>CDE ID = 11253404
@@ -2720,8 +2760,10 @@ PropDefinitions:
           Provenance: DSS 
     Src: Data Submitter
     Type:
-      units: days
-      value_type: interger
+      units: 
+        - days
+      value_type: 
+        - integer
     Req: 'No'
   necrosis_area_percentage:
     Desc: Numeric value to represent the percentage of necrosis in a sample or specimen.
@@ -2735,8 +2777,10 @@ PropDefinitions:
           Added: 12-9-25
     Src: Data Submitter
     Type:
-      units: percentage
-      value_type: number
+      units: 
+        - percentage
+      value_type: 
+        - number
     Req: 'No'
   quality_of_specimen:
     Desc: The final state of a sample which is based on an evaluation of its quality.
@@ -2765,9 +2809,10 @@ PropDefinitions:
           Added: 12-11-25
     Src: Data Submitter
     Type:
-      units: percentage
-      value_type: number
-
+      units: 
+        - percentage
+      value_type: 
+        - number
     Req: 'No'  
   tumor_tissue_total_area_percentage:
     Desc: The percentage of total tumorous tissue surface area within a specimen.
@@ -2781,10 +2826,11 @@ PropDefinitions:
           Added: 12-11-25
     Src: Data Submitter
     Type:
-      units: percentage
-      value_type: number
+      units: 
+        - percentage
+      value_type: 
+        - number
     Req: 'No'
-  
   #Assay Node
   assay_record_id: 
     Desc: A sequence of characters used to identify the assay conducted on the biospecimen.                                                                               
