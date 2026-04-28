@@ -1200,8 +1200,8 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Enum:
-      - Yes
-      - No
+      - 'Yes'
+      - 'No'
       - Unknown
       - NA
     Req: Preferred
@@ -2967,7 +2967,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR 
         Code: '6380354' 
-        Value:  
+        Value: Nucleotide Sequence Read Length
         Version: '1'
         Tags:
           Provenance: CIMAC-CIDC
