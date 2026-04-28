@@ -940,7 +940,7 @@ PropDefinitions:
       units: 
         - years
       value_type: 
-        - number
+        number
     Req: 'Yes'
   race:
     Desc: The text for reporting information about race based on the Office of Management
@@ -1017,7 +1017,7 @@ PropDefinitions:
       units: 
         - cm
       value_type: 
-        - number
+        number
     Req: Preferred
   weight:
     Desc: The weight of the participant as of enrollment, measured in kg. <br>CDE ID = 2179689
@@ -1034,7 +1034,7 @@ PropDefinitions:
       units: 
         - kg
       value_type: 
-        - number
+        number
     Req: Preferred
   body_surface_area:
     Desc: The body surface area of the participant as of enrollment, mathematically derived from the participant's height and
@@ -1052,7 +1052,7 @@ PropDefinitions:
       units:
         - m2
       value_type: 
-        - number
+        number
     Req: Preferred
   occupation:
     Desc: The occupation/job category of a person. <br>CDE ID = 6617540
@@ -1220,7 +1220,7 @@ PropDefinitions:
       units: 
         - kg/m2
       value_type: 
-        - number
+        number
     Req: 'No'
   ECOG_PS:
     Desc: The functional level of the patient based on the Zubrod performance scale.
@@ -1248,7 +1248,7 @@ PropDefinitions:
       units: 
         - percent
       value_type: 
-        - number    #percent between 0 and 100, where 0 is dead and 90% or higher is healthy
+        number    #percent between 0 and 100, where 0 is dead and 90% or higher is healthy
     Req: 'No'
 
   # Diagnosis Node
@@ -1623,7 +1623,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: 'No'
   histological_subtype:
     Desc: Words that describe the classification of tumors based on their histology. <br>CDE ID = 14843594
@@ -1710,7 +1710,7 @@ PropDefinitions:
       units: 
         - days    #expecting MM/DD/YYYY ??
       value_type: 
-        - number
+        number
     Req: 'No'
   participant_age_at_diagnosis:
     Desc:  The subjects age since birth at the time of diagnosis. <br>CDE ID = 10609539
@@ -1726,7 +1726,7 @@ PropDefinitions:
       units: 
         - years
       value_type:
-        - number
+        number
     Req: 'Preferred'
 #new diagnosis nodes
   m_category:
@@ -1870,7 +1870,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: Preferred
   targeted_therapy_end_date:
     Desc: The number of days from the date of enrollment to the date of treatment
@@ -1888,7 +1888,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: Preferred
   best_response_to_targeted_therapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment.. <br>CDE ID = 15179918
@@ -2012,7 +2012,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: Preferred
   non_targeted_therapy_end_date:
     Desc: The number of days from the date of enrollment to the date of treatment
@@ -2030,7 +2030,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: Preferred
   best_response_to_non_targeted_therapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment. <br>CDE ID = 15179918
@@ -2093,7 +2093,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: 'Yes'
   surgical_procedure_anatomical_location:
     Desc: The Uberon identifier for the location within the body where a procedure
@@ -2312,7 +2312,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-         - number
+         number
     Req: Preferred
   radiotherapy_end_date:
     Desc: The number of days from the date of enrollment to the date of treatment
@@ -2330,7 +2330,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: Preferred
   best_response_to_radiotherapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment.  <br>CDE ID = 15179918
@@ -2683,7 +2683,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: Preferred
   days_from_first_participant_visit_to_specimen_collection:
     Desc: The number of days from the date the participant first visited to the date a sample was collected. <br>CDE ID = 11248874
@@ -2699,7 +2699,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: 'No'
   days_from_first_treatment_to_specimen_collection:
     Desc: The number of days from the date the first treatment was administered to the date a sample was collected. <br>CDE ID = 11250807
@@ -2715,7 +2715,7 @@ PropDefinitions:
       units:
         - days
       value_type: 
-        - number
+        number
     Req: 'No'
   days_from_initial_genomic_sequencing_to_specimen_collection:
     Desc: The number of days from the date the initial genomic sequencing was done to the date a sample was collected. <br>CDE ID = 11251130
@@ -2731,7 +2731,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: 'No'
   days_from_recurrence_to_specimen_collection:
     Desc: The number of days from the date the disease recurrence was identified to the date a sample was collected. <br>CDE ID = 11251133
@@ -2747,7 +2747,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: 'No'
   days_from_specimen_collection_to_initial_pathologic_diagnosis:
     Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis. <br>CDE ID = 11253404
@@ -2763,7 +2763,7 @@ PropDefinitions:
       units: 
         - days
       value_type: 
-        - number
+        number
     Req: 'No'
   necrosis_area_percentage:
     Desc: Numeric value to represent the percentage of necrosis in a sample or specimen.
@@ -2780,7 +2780,7 @@ PropDefinitions:
       units: 
         - percentage
       value_type: 
-        - number
+        number
     Req: 'No'
   quality_of_specimen:
     Desc: The final state of a sample which is based on an evaluation of its quality.
@@ -2812,7 +2812,7 @@ PropDefinitions:
       units: 
         - percentage
       value_type: 
-        - number
+        number
     Req: 'No'  
   tumor_tissue_total_area_percentage:
     Desc: The percentage of total tumorous tissue surface area within a specimen.
@@ -2829,7 +2829,7 @@ PropDefinitions:
       units: 
         - percentage
       value_type: 
-        - number
+        number
     Req: 'No'
   #Assay Node
   assay_record_id: 
