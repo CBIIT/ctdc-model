@@ -198,8 +198,6 @@ Nodes:
       - ECOG_PS #88
       - Karnofsky #2003853
       - Body Mass Index #2006410
-
-
       - crdc_id
   exposure:
     Desc: Properties within the Exposure node capture information concerning a participant's environmental, workplace and lifestyle exposure(s) which have the potential to have increased the risk of developing cancer, and/or caused cancer, and/or exacerbated an underlying maliignancy.

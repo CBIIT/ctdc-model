@@ -3076,18 +3076,21 @@ PropDefinitions:
     Type: string
     Req: 'No'
   antigen: 
-    Desc: The specific antigen targeted in the immune assay. 
+    Desc: Words that describe the name of the antigen.
     Term:
       - Origin: caDSR 
-        Code: 'TBD' 
-        Value:  TBD
+        Code: '17003285' 
+        Value:  Assay Antigen
         Version: '1'
         Tags:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
     Type: string
-    Req: 'No' 
+    Tags:
+      Provenance: CIMAC-CIDC
+      Added: 04-17-26
+    Req: 'No'
   antigen_type: 
     Desc: The type of antigen targeted in the immune assay. 
     Term:
@@ -3105,22 +3108,6 @@ PropDefinitions:
       - Peptide
       - RNA
       - Other 
-    Req: 'No'
-  antigen: 
-    Desc: Words that describe the name of the antigen.
-    Term:
-      - Origin: caDSR 
-        Code: '17003285' 
-        Value:  Assay Antigen
-        Version: '1'
-        Tags:
-          Provenance: CIMAC-CIDC
-          Added: 01-20-26
-    Src: Data Submitter
-    Type: string
-    Tags:
-      Provenance: CIMAC-CIDC
-      Added: 04-17-26
     Req: 'No'
   #Cell Based Assay Node
   cell_based_assay_record_id:
