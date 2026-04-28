@@ -225,7 +225,7 @@ PropDefinitions:
       - Supportive Care Study
       - Transcriptomics Research
       - Treatment Study
-    Type: string
+    #Type: string
     Req: 'Yes'
   dates_of_conduct:
     Desc: The timespan over which the study/trial was/is being conducted.
@@ -290,7 +290,7 @@ PropDefinitions:
           Provenance: CIDC
           Added: 12-9-25
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'
@@ -847,7 +847,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-16-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - 'Yes'
       - 'No'
@@ -865,7 +865,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-16-24
     Src: CMB
-    Type: string
+    #Type: string
     Enum:
       - 'Yes'
       - 'No'
@@ -882,7 +882,7 @@ PropDefinitions:
         Tags:
           Provenance: CMB
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - 'Yes'
       - 'No'
@@ -900,7 +900,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-16-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - 'Yes'
       - 'No'
@@ -977,7 +977,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 5-31-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: # Currently reflective only of the values used by the CMB
       - Hispanic or Latino
       - Not Hispanic or Latino
@@ -995,7 +995,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 5-31-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - Female
       - Intersex
@@ -1092,7 +1092,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 5-31-24  
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: # Reflective of the values used by the CMB
       - No formal education
       - Grade school
@@ -1171,7 +1171,7 @@ PropDefinitions:
           Provenance: DSS
           Added: 5-31-24  
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - Asbestos Exposure
       - Chemical Exposure
@@ -1198,7 +1198,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 5-31-24  
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - 'Yes'
       - 'No'
@@ -1296,7 +1296,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 10-06-25 
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: # Currently reflective only of the values used by the CMB
       - NCI Thesaurus
       - MedDRA
@@ -1369,7 +1369,7 @@ PropDefinitions:
     #       Provenance: CMB
     #       Added: 05-28-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: # Currently reflective only of the values used by the CMB
       - Colorectal cancer, NOS
       - Acute myeloid leukemia, NOS
@@ -1408,7 +1408,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 05-28-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: # Currently reflective only of values used in the v5 CMB data submission
       - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
       - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
@@ -1437,7 +1437,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 05-28-24
     Src: Data Submitter
-    Type: integer
+    #Type: integer
     Enum: # Currently reflective only of the values used in the v3 CMB data submission
       - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
       - "10066354" # Adenocarcinoma of the Gastroesophageal Junction
@@ -1456,7 +1456,7 @@ PropDefinitions:
   snomed_disease_term:
     Desc: Description pending 
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: 
       - Acute Myeloid Leukemia #17788007
       - Acute Myeloid Leukemia with Myelodysplasia-Related Changes #445448008
@@ -1516,7 +1516,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 05-28-24                                                                          #
     Src: Data Submitter
-    Type: integer
+    #Type: integer
     Enum:
       - "17788007" #Acute Myeloid Leukemia
       - "445448008" #Acute Myeloid Leukemia with Myelodysplasia-Related Changes
@@ -1653,7 +1653,7 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 05-28-24 
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: # Currently reflective only of the values used by the CMB
       - Stage III
       - Stage IIIA
@@ -1677,7 +1677,7 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-28-24 
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       # - GB
       # - GX
@@ -1901,7 +1901,7 @@ PropDefinitions:
           Provenance: CIDC
           Added: 10-16-25 
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - Complete Response
       - Partial Response
@@ -2043,7 +2043,7 @@ PropDefinitions:
       Provenance: CIDC 
       Added: 10-16-25
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - Complete Response
       - Partial Response
@@ -2122,7 +2122,7 @@ PropDefinitions:
           Provenance: CMB 
           Added: 07-16-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - 'Yes'
       - 'No'
@@ -2343,7 +2343,7 @@ PropDefinitions:
           Provenance: CIDC
           Added: 10-16-25 
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - Complete Response
       - Partial Response
@@ -2411,7 +2411,7 @@ PropDefinitions:
           Added: 05-31-24 
 
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - ALIVE # Value exactly as used by the CMB
       - DEAD # Value exactly as used by the CMB
@@ -2448,7 +2448,7 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 05-31-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - 'Yes'
       - 'No'
@@ -2466,7 +2466,7 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 05-31-24                                                                              #
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - ADVERSE EVENT
       - APPROVED DRUG AVAILABLE FOR INDICATION
@@ -2550,7 +2550,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-23-24 
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: #Acceptable values taken straight from the CMB Catalog Site
       - Bone Marrow Aspirate
       - Cell Block
@@ -2579,7 +2579,7 @@ PropDefinitions:
     Tags:
       Provenance: CMB 
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - BLOOD
       - Blood
@@ -2627,7 +2627,7 @@ PropDefinitions:
           Provenance: CMB 
           Added: 06-03-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: #Acceptable values taken straight from the CMB Catalog Site.
       - Metastatic
       - Normal
@@ -2657,7 +2657,7 @@ PropDefinitions:
         Tags:
           Provenance: CMB
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - ARCHIVAL
       - BASELINE
@@ -2793,7 +2793,7 @@ PropDefinitions:
           Provenance: CIDC 
           Added: 12-11-25
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'
@@ -2857,7 +2857,7 @@ PropDefinitions:
     #       Provenance: CIMAC-CIDC
     #       Added: 01-20-26
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: 
       - Next Generation Sequencing
       - Immune
@@ -2874,7 +2874,7 @@ PropDefinitions:
     #       Provenance: CIMAC-CIDC
     #       Added: 01-20-26
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: 
       - atacseq
       - rnaseq
@@ -2903,7 +2903,7 @@ PropDefinitions:
     #       Provenance: CIMAC-CIDC
     #       Added: 01-20-26
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: 
       - pass
       - fail
@@ -2948,7 +2948,7 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: 
       - Illumina NovaSeq 6000
       - Illumina NextSeq 550
@@ -2987,7 +2987,7 @@ PropDefinitions:
     #       Provenance: CIMAC-CIDC
     #       Added: 01-20-26
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: 
       - 'Yes'
       - 'No'
@@ -2995,6 +2995,20 @@ PropDefinitions:
   sequencing_depth:
     Desc: The average number of times each base in the target region is sequenced,
       indicating the coverage of the sequencing assay.    
+    # Term:
+    #   - Origin: caDSR 
+    #     Code: '' 
+    #     Value:  
+    #     Version: '1'
+    #     Tags:
+    #       Provenance: CIMAC-CIDC
+    #       Added: 01-20-26
+    Src: Data Submitter
+    Type: integer
+    Req: 'Preferred' 
+  total_reads:
+    Desc: The total number of reads in the input file (such as a raw FASTQ or BAM file), 
+        including all passing-filter (PF) and non-passing-filter reads.  
     # Term:
     #   - Origin: caDSR 
     #     Code: '' 
@@ -3044,7 +3058,7 @@ PropDefinitions:
     #       Provenance: CIMAC-CIDC
     #       Added: 01-20-26
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: 
       - Human PBMC
       - Human Motor Cortex
@@ -3073,7 +3087,7 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: 
       - Tabula Sapiens v1.0
       - Tabula Sapiens v2.0 
@@ -3148,7 +3162,7 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: 
       - Protein
       - Peptide
@@ -3221,7 +3235,7 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: 
       - Proprietary 
       - Random Forest Classifier
@@ -3255,7 +3269,7 @@ PropDefinitions:
           Provenance: CTDC
           Added: 05-30-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - Clinical Report
       - File Collection
@@ -3292,7 +3306,7 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-30-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - docx
       - gz
@@ -3341,7 +3355,7 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-30-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - md5sum
       - sha1
@@ -3359,7 +3373,7 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-30-24
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum:
       - Compressed
       - Uncompressed
