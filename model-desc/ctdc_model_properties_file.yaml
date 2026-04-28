@@ -2845,8 +2845,7 @@ PropDefinitions:
     Type:
       units: 
         - percentage
-      value_type: 
-        - number
+      value_type: number
     Req: 'No'
   dna_integrity_number:
     Desc: A number which represents the assessment of the amount of fragmentation in a genomic DNA sample and generates a calculated integrity number.
@@ -2888,8 +2887,7 @@ PropDefinitions:
     Type:
       units: 
         - percentage
-      value_type: 
-        - number
+      value_type: number
     Req: 'No'
   pbmc_recovery:
     Desc: Specimen PBMC Recovery Cell Count
