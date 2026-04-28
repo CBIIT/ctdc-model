@@ -2942,7 +2942,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR 
         Code: '6347771' 
-        Value:  
+        Value: Sequencing Library Platform Name
         Version: '1'
         Tags:
           Provenance: CIMAC-CIDC
