@@ -3,7 +3,7 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v1.23.0
+Version: v1.22.3
 
 Nodes:
   # node:
@@ -195,9 +195,9 @@ Nodes:
       - highest_level_of_education #2681552
       - ncbi_taxonomy_id #10543100
       - ncbi_taxonomy_name #10543082
-      - ECOG_PS #88
-      - Karnofsky #2003853
-      - Body_Mass_Index #2006410
+      - ecog_ps #88
+      - karnofsky #2003853
+      - body_mass_index #2006410
       - crdc_id
   exposure:
     Desc: Properties within the Exposure node capture information concerning a participant's environmental, workplace and lifestyle exposure(s) which have the potential to have increased the risk of developing cancer, and/or caused cancer, and/or exacerbated an underlying maliignancy.

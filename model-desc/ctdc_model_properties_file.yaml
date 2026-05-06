@@ -292,6 +292,9 @@ PropDefinitions:
     Src: Data Submitter
     #Type: string
     Enum:
+      - Adult
+      - Pediatric
+      - Adult and Pediatric
       - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'
   study_population:
@@ -1206,7 +1209,7 @@ PropDefinitions:
       - NA
     Req: Preferred
 #new demographic nodes
-  Body_Mass_Index:
+  body_mass_index:
     Desc: Patient/Participant body weight in kilograms divided by the square of his/her height in meters [i.e., wt/(ht)2 ], to yield a derived or calculated BMI result.
     Term:
       - Origin: caDSR
@@ -1222,7 +1225,7 @@ PropDefinitions:
       value_type: 
         number
     Req: 'No'
-  ECOG_PS:
+  ecog_ps:
     Desc: The functional level of the patient based on the Zubrod performance scale.
     Term:
       - Origin: caDSR
@@ -1234,7 +1237,7 @@ PropDefinitions:
     Src: Data Submitter
     Type: integer
     Req: 'No'
-  Karnofsky:
+  karnofsky:
     Desc: The functional level of the patient based on the Karnofsky performance scale.
     Term:
       - Origin: caDSR
@@ -2795,6 +2798,11 @@ PropDefinitions:
     Src: Data Submitter
     #Type: string
     Enum:
+      - QC Pass
+      - Pass at Risk
+      - QC Failed
+      - QC Lost
+      - Not Shipped
       - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'
   viable_tumor_area_percentage:
@@ -2890,17 +2898,22 @@ PropDefinitions:
       value_type: number
     Req: 'No'
   pbmc_recovery:
-    Desc: Specimen PBMC Recovery Cell Count
+    Desc: An indication as to whether or not a resting period was used after peripheral blood mononuclear cells were recovered.
     Term:
       - Origin: caDSR 
         Code: '16445061'
-        Value: Specimen PBMC Recovery Cell Count
+        Value: Specimen Peripheral Blood Mononuclear Cell Recovery
         Version: '1'
         Tags:
           Provenance: CIMAC-CIDC 
           Added: 04-28-26
     Src: Data Submitter
-    Type: number
+#    Type: string
+    Enum:
+      - Yes
+      - No
+      - Not Reported
+      - Other
     Req: 'No'
   azimuth_reference:
     Desc: Molecular Analysis Cell Annotation Azimuth Reference Type
@@ -2963,15 +2976,15 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   assay_type: 
-    Desc: The type of assay performed on the biospecimen. 
-    # Term:
-    #   - Origin: caDSR 
-    #     Code: '' 
-    #     Value:  
-    #     Version: '1'
-    #     Tags:
-    #       Provenance: CIMAC-CIDC
-    #       Added: 01-20-26
+    Desc: The grouping assigned to a type of assay that was utilized for qualitative or quantitative analysis.
+    Term:
+      - Origin: caDSR 
+        Code: '17137242' 
+        Value: Assay Type
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 01-20-26
     Src: Data Submitter
     #Type: string
     Enum: 
@@ -2981,14 +2994,14 @@ PropDefinitions:
     Req: 'Yes'
   assay_subtype: 
     Desc: The subtype of assay performed on the biospecimen. 
-    # Term:
-    #   - Origin: caDSR 
-    #     Code: '' 
-    #     Value:  
-    #     Version: '1'
-    #     Tags:
-    #       Provenance: CIMAC-CIDC
-    #       Added: 01-20-26
+    Term:
+      - Origin: caDSR 
+        Code: '7789196' 
+        Value: Imaging Technique Assay Technology Type
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 01-20-26
     Src: Data Submitter
     #Type: string
     Enum: 
