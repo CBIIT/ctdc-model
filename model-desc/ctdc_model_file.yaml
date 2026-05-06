@@ -511,7 +511,7 @@ Relationships:
       - Src: consent_group
         Dst: study
   of_assay:
-    Mul: one_to_one
+    Mul: many_to_one
     Ends:
       - Src: assay
         Dst: next_generation_sequencing_assay
