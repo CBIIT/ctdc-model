@@ -2910,8 +2910,8 @@ PropDefinitions:
     Src: Data Submitter
 #    Type: string
     Enum:
-      - Yes
-      - No
+      - 'Yes'
+      - 'No'
       - Not Reported
       - Other
     Req: 'No'
