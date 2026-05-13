@@ -1,6 +1,18 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+### Data Model version 2.0.0
 
+Release Date: 5/13/26
+
+* Renames the `Radiology Images` enumerated value on the data\_file\_type property to `Radiology Imaging`. **Breaking change** — records previously submitted with `Radiology Images` will no longer validate against this version.
+* Disables the CDE binding for the data\_file\_type property (caDSR Code 14824731, Electronic Data File Content Type) pending re-binding. The property and its enumerations remain in place; only the term mapping is suspended.
+
+### Data Model version 1.23.0
+
+* Added new properties to multiple nodes for the CIMAC-CIDC Network.
+* Corrected property types for numeric values, setting integer to where decimals are not allowed
+* Updated property units for numeric values that were missing to align with the property definition
+* Populated missing property types
 
 ### Data Model version 1.22.2
 
@@ -104,3 +116,4 @@ Release Date 7/29/2025
 Release Date 7/29/2025
 
 * Updates comment to indicate the data\_file node has been changed to file node
+
