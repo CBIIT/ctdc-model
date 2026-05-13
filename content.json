@@ -49,7 +49,7 @@
           { "name": "Case", "isChecked": false, "group": "category" },
           { "name": "Analysis", "isChecked": false, "group": "category" },
           { "name": "Clinical_Trial", "isChecked": false, "group": "category" },
-          { "name": "Biospecimen", "isChecked": false, "group": "category" },
+          { "name": "Biosaaaecimen", "isChecked": false, "group": "category" },
           { "name": "Data_File", "isChecked": false, "group": "category" }
         ]
       },
