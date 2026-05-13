@@ -3389,14 +3389,14 @@ PropDefinitions:
   data_file_type:
     Desc: The type of information contained in an electronic record. A curated indicator
       as to the type of content represented by the data file <br>CDE ID = 14824731
-    Term:
-      - Origin: caDSR 
-        Code: '14824731' 
-        Value: Electronic Data File Content Type
-        Version: '1'
-        Tags:
-          Provenance: CTDC
-          Added: 05-30-24
+    # Term:
+    #   - Origin: caDSR 
+    #     Code: '14824731' 
+    #     Value: Electronic Data File Content Type
+    #     Version: '1'
+    #     Tags:
+    #       Provenance: CTDC
+    #       Added: 05-30-24
     Src: Data Submitter
     #Type: string
     Enum:
@@ -3405,7 +3405,7 @@ PropDefinitions:
       - Investigator Report
       - Variant Call File
       - Variant Report
-      - Radiology Images
+      - Radiology Imaging
     Req: 'Yes'
   data_file_description:
     Desc: A free text field that can be used to document the content and other details
