@@ -3,7 +3,7 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v2.0.0
+Version: v2.1.0
 
 Nodes:
   # node:
@@ -30,6 +30,10 @@ Nodes:
     Props:
       - program_name #11444542
       - program_short_name #11459801
+      - program_short_description
+      - program_full_description
+      - program_sort_order
+      - program_external_url
       - crdc_id
 
   principal_investigator:

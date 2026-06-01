@@ -74,6 +74,60 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
     Key: true
+
+  program_short_description:
+    Desc: high overview description of the program ( Short curated paragraph )
+    Term:
+      - Origin: caDSR 
+        Code: 'TBD'  #need to find 
+        Value: TBD #need to find
+        Version: '1'
+        Tags:
+          Provenance: CTDC
+          Added: 5-29-26
+    Src: Data Submitter
+    Type: string
+    Req: 'No'
+  program_full_description:
+    Desc: an indepth description of the program (Longer curated paragraph)
+    Term:
+      - Origin: caDSR 
+        Code: 'TBD'  #need to find 
+        Value: TBD #need to find
+        Version: '1'
+        Tags:
+          Provenance: CTDC
+          Added: 5-29-26
+    Src: Data Submitter
+    Type: string
+    Req: 'No'
+  program_sort_order:
+    Desc: A ranking of Program Names, such that they can be sorted in numerical order
+    Term:
+      - Origin: caDSR 
+        Code: 'TBD'  #need to find 
+        Value: TBD #need to find
+        Version: '1'
+        Tags:
+          Provenance: CTDC
+          Added: 5-29-26
+    Src: Data Submitter
+    Type: string
+    Req: 'No'
+  program_external_url:
+    Desc: website pointing to more information about the program
+    Term:
+      - Origin: caDSR 
+        Code: 'TBD'  #need to find 
+        Value: TBD #need to find
+        Version: '1'
+        Tags:
+          Provenance: CTDC
+          Added: 5-29-26
+    Src: Data Submitter
+    Type: string
+    Req: 'No'
+
  # Study Node
   study_name:
     Desc: The narrative title used as a textual label for a research data collection.
@@ -3305,7 +3359,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR 
         Code: 'TBD'  
-        Value:   TBD  
+        Value: TBD  
         Version: '1'
         Tags:
           Provenance: CIMAC-CIDC
