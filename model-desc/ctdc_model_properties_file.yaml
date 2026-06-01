@@ -76,11 +76,11 @@ PropDefinitions:
     Key: true
 
   program_short_description:
-    Desc: high overview description of the program ( Short curated paragraph )
+    Desc: An abbreviated description of a research program or study.
     Term:
       - Origin: caDSR 
-        Code: 'TBD'  #need to find 
-        Value: TBD #need to find
+        Code: '17087559'
+        Value: Study Administration Program Short Description
         Version: '1'
         Tags:
           Provenance: CTDC
@@ -89,11 +89,11 @@ PropDefinitions:
     Type: string
     Req: 'No'
   program_full_description:
-    Desc: an indepth description of the program (Longer curated paragraph)
+    Desc: An unabridged description of a research program or study.
     Term:
       - Origin: caDSR 
-        Code: 'TBD'  #need to find 
-        Value: TBD #need to find
+        Code: '17087562'
+        Value: Study Administration Program Full Description
         Version: '1'
         Tags:
           Provenance: CTDC
@@ -115,11 +115,11 @@ PropDefinitions:
     Type: string
     Req: 'No'
   program_external_url:
-    Desc: website pointing to more information about the program
+    Desc: The URL address for a research program or study that is accessible by those outside the host institution.
     Term:
       - Origin: caDSR 
-        Code: 'TBD'  #need to find 
-        Value: TBD #need to find
+        Code: '17087631'
+        Value: Study Administration Program External URL
         Version: '1'
         Tags:
           Provenance: CTDC
