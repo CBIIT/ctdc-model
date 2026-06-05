@@ -46,7 +46,7 @@ PropDefinitions:
       are grouped. Example - Clinical Proteomic Tumor Analysis. <br>CDE ID = 11444542
     Term:
       - Origin: caDSR 
-        Code: '11444542' 
+        Code: '15846335' #'11444542'
         Value: Program Name Text
         Version: '1'
         Tags:
@@ -64,7 +64,7 @@ PropDefinitions:
       during data updates. <br>CDE ID = 11459801
     Term:
       - Origin: caDSR 
-        Code: '11459801' 
+        Code: '15846845' #'11459801' 
         Value: Program Short Name Text
         Version: '1'
         Tags:
@@ -74,6 +74,59 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
     Key: true
+    program_short_description:
+    Desc: An abbreviated description of a research program or study.
+    Term:
+      - Origin: caDSR 
+        Code: '17087559'
+        Value: Study Administration Program Short Description
+        Version: '1'
+        Tags:
+          Provenance: CTDC
+          Added: 5-29-26
+    Src: Data Submitter
+    Type: string
+    Req: 'No'
+  program_full_description:
+    Desc: An unabridged description of a research program or study.
+    Term:
+      - Origin: caDSR 
+        Code: '17087562'
+        Value: Study Administration Program Full Description
+        Version: '1'
+        Tags:
+          Provenance: CTDC
+          Added: 5-29-26
+    Src: Data Submitter
+    Type: string
+    Req: 'No'
+  program_sort_order:
+    Desc: A ranking of Program Names, such that they can be sorted in numerical order
+    Term:
+      - Origin: caDSR 
+        Code: '17313767' 
+        Value: TBD
+        Version: '1'
+        Tags:
+          Provenance: CTDC
+          Added: 5-29-26
+    Src: Data Submitter
+    Type: string
+    Req: 'No'
+  program_external_url:
+    Desc: The URL address for a research program or study that is accessible by those outside the host institution.
+    Term:
+      - Origin: caDSR 
+        Code: '17087631'
+        Value: Study Administration Program External URL
+        Version: '1'
+        Tags:
+          Provenance: CTDC
+          Added: 5-29-26
+    Src: Data Submitter
+    Type: string
+    Req: 'No'
+
  # Study Node
   study_name:
     Desc: The narrative title used as a textual label for a research data collection.
