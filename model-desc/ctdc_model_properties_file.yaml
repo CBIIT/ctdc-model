@@ -74,7 +74,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
     Key: true
-    program_short_description:
+  program_short_description:
     Desc: An abbreviated description of a research program or study.
     Term:
       - Origin: caDSR 
