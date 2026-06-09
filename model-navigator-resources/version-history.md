@@ -1,5 +1,9 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+### Data Model version 2.1.0
+
+* Adds 4 new properties to the program node: program_short_description, program_full_description, program_sort_order, and program_external_url.  These properties were added to support a new Program and Program Details page within the CTDC application. 
+
 ### Data Model version 2.0.0
 
 Release Date: 5/13/26
