@@ -64,7 +64,7 @@ PropDefinitions:
       during data updates.
     Term:
       - Origin: caDSR
-        Code: '15846845' #'11459801' 
+        Code: '15846845' #'11459801'
         Value: Program Short Name Text
         Version: '1'
         Tags:
