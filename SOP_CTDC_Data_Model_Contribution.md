@@ -2,7 +2,7 @@
 
 **Repository:** CBIIT/ctdc-model\
 **Primary Branches:** develop (pre-release/testing) and prod (release)\
-**Model files:** YAML definitions and version-history.md
+**Model files:** YAML definitions in `model-desc/` and `model-navigator-resources/version-history.md`
 
 Downstream the CRDC Data Hub syncs via GitHub Actions + tags/releases
 
@@ -247,9 +247,7 @@ Before submitting a PR, verify that:
 
 1.  Verify the changes in the DEV/QA environments
 
-2.  Update any relevant documentation or release notes
-
-3.  Open a pull request from develop → prod when ready
+2.  Open a pull request from develop → prod when ready
 
 ## 🚀 9. Promoting Changes to prod
 
@@ -262,15 +260,12 @@ Before submitting a PR, verify that:
 
 ## 🔍 10. Downstream Validation
 
-- Once the release is cut and published, GitHub Actions will sync the
-  updated version downstream (for example, in the crdc-datahub-models
-  repository)
+- Confirm downstream propagation per Section 4, Step 15: verify the
+  updated CTDC entry in `cache/content.json` on the prod branch of
+  `CBIIT/crdc-datahub-models`.
 
-- Confirm that the change is reflected in the prod branch of
-  crdc-datahub-models
-
-- Validate that relevant environments have picked up the new model
-  version
+- Validate that the relevant CTDC environments (Dev, QA, Stage, Prod)
+  have picked up the new model version end-to-end.
 
 ## 💬 11. Support & Questions
 
