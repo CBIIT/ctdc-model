@@ -1275,32 +1275,30 @@ PropDefinitions:
         number
     Req: 'No'
   ecog_ps:
-    Desc: The functional level of the patient based on the Zubrod performance scale.
+    Desc: The functional level of the patient based on the Zubrod performance scale.  It describes a patient’s level of functioning in terms of their ability to care for themself, daily activity, and physical ability (walking, working, etc.).  With a value of 0 meaning no restrictions.
     Term:
       - Origin: caDSR
         Code: '88'
         Value: PERFORMANCE STATUS
+        Version: '5.3'
         Tags:
           Provenance: CIMAC-CIDC
-          Added: 04-17-26  
+          Added: 04-17-26
     Src: Data Submitter
     Type: integer
     Req: 'No'
   karnofsky:
-    Desc: The functional level of the patient based on the Karnofsky performance scale.
+    Desc: A standard way of measuring the ability of cancer patients to perform ordinary tasks. The Karnofsky Performance Status scores range from 0 to 100. A higher score means the patient is better able to carry out daily activities. Karnofsky Performance Status may be used to determine a patient's prognosis, to measure changes in a patient’s ability to function, or to decide if a patient could be included in a clinical trial.
     Term:
       - Origin: caDSR
         Code: '2003853'
         Value: PERFORMANCE STATUS
+        Version: '4.2'
         Tags:
-          Provenance: CIMAC-CIDC 
-          Added: 04-17-26  
+          Provenance: CIMAC-CIDC
+          Added: 04-17-26
     Src: Data Submitter
-    Type:
-      units: 
-        - percent
-      value_type: 
-        number    #percent between 0 and 100, where 0 is dead and 90% or higher is healthy
+    Type: integer
     Req: 'No'
 
   # Diagnosis Node
