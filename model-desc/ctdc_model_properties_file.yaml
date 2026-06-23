@@ -1818,8 +1818,8 @@ PropDefinitions:
     Type: string
     Req: 'Preferred'
 
-  # Targeted Therapy Node
-  targeted_therapy_record_id:
+  # Therapy Node
+  therapy_record_id:
     Desc: A unique sequence of characters used to identify a linkage between related records.
     Term:
       - Origin: caDSR
@@ -1833,11 +1833,12 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
     Key: true
-  targeted_therapy:
+    Key: true
+  therapy_name:
     Desc: A term describing a therapeutic agent as captured in the Pharmacological
       Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National
       Cancer Institute Thesaurus (NCIt) hierarchy tree. The name of the therapeutic
-      agent administered to a participant as a targeted therapy, i.e. one that is considered
+      agent administered to a participant as a therapy, i.e. one that is considered
       to have enhanced therapeutic effects upon the specific type of cancer with which
       the participant has been diagnosed, and/or upon that type of cancer specifically
       within the context of a given participant because of factors such as tumor histology,
@@ -1857,7 +1858,7 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: 'Yes'
-  targeted_therapy_dose:
+  therapy_dose:
     Desc: The amount that represents the dose of the agent. The dose at which the
       targeted therapeutic agent in question was administered, exclusive of dosage
       units.
@@ -1872,7 +1873,7 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: Preferred
-  targeted_therapy_dose_units:
+  therapy_dose_units:
     Desc: Text name to represent units of measure used to describe dosages of an
       agent or measure.
     Term:
@@ -1886,7 +1887,7 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: Preferred
-  targeted_therapy_frequency:
+  therapy_frequency:
     Desc: The frequency of how often a medication is being administered.
     Term:
       - Origin: caDSR
@@ -1899,7 +1900,7 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: Preferred
-  targeted_therapy_start_date:
+  therapy_start_date:
     Desc: The number of days from the date of enrollment to the date of treatment
       start.
     Term:
@@ -1917,7 +1918,7 @@ PropDefinitions:
       value_type: 
         number
     Req: Preferred
-  targeted_therapy_end_date:
+  therapy_end_date:
     Desc: The number of days from the date of enrollment to the date of treatment
       end.
     Term:
@@ -1935,7 +1936,7 @@ PropDefinitions:
       value_type: 
         number
     Req: Preferred
-  best_response_to_targeted_therapy:
+  best_response_to_therapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment.
     Term:
       - Origin: caDSR
@@ -1958,145 +1959,47 @@ PropDefinitions:
       - Not Evaluable
       - Unknown
     Req: Preferred
-  # Non-Targeted Therapy Node
-  non_targeted_therapy_record_id:
-    Desc: A unique sequence of characters used to identify a linkage between related
-      records.
+  therapy_category:
+    Desc: The term that describes the kind of treatment administered.
     Term:
       - Origin: caDSR
-        Code: '14822135'
-        Value: Data Record Link Unique Identifier
+        Code: '14737565'
+        Value: Therapeutic Procedure Performed
         Version: '1'
         Tags:
-          Provenance: CMB
-          Added: 05-29-24
-    Src: Data Submitter
-    Type: string
-    Req: 'Yes'
-    Key: true
-  non_targeted_therapy:
-    Desc: A term describing a therapeutic agent as captured in the Pharmacological
-      Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National
-      Cancer Institute Thesaurus (NCIt) hierarchy tree. The name of the therapeutic
-      agent administered to a participant as a non-targeted therapy, i.e. one that is
-      considered to be appropriate for and effective against the specific type of
-      cancer with which the participant has been diagnosed, but is not considered to have
-      significantly enhanced therapeutic effects upon that cancer in general or upon
-      that cancer specifically within the context of a given participant. Notably, a therapeutic
-      agent considered to be and administered as a non-targeted therapy in one participant
-      can, conversely, be considered and administered as a targeted therapy in another
-      participant, where differences in his or her type of cancer per se, or the specific
-      context of the cancer in question make the therapy more specific.
-    Term:
-      - Origin: caDSR
-        Code: '14913015'
-        Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus Name
-        Version: '1'
-        Tags:
-          Provenance: CMB
-          Added: 05-29-24
-    Src: Data Submitter
-    Type: string
-    Req: 'Yes'
-  non_targeted_therapy_dose:
-    Desc: The amount that represents the dose of the agent.
-    Term:
-      - Origin: caDSR
-        Code: '2182728'
-        Value: Agent Dose
-        Version: '3'
-        Tags:
-          Provenance: CMB 
-          Added: 05-29-24
-    Src: Data Submitter
-    Type: string
-    Req: Preferred
-  non_targeted_therapy_dose_units:
-    Desc: Text name to represent units of measure used to describe dosages of an
-      agent or measure.
-    Term:
-      - Origin: caDSR
-        Code: '2321160'
-        Value: Agent Administration Dose Unit of Measure Name
-        Version: '4'
-        Tags:
-          Provenance: CMB 
-          Added: 05-29-24
-    Src: Data Submitter
-    Type: string
-    Req: Preferred
-  non_targeted_therapy_frequency:
-    Desc: The frequency of how often a medication is being administered.
-    Term:
-      - Origin: caDSR
-        Code: '2003878'
-        Value: Frequency
-        Version: '1'
-        Tags:
-          Provenance: CMB 
-          Added: 05-29-24
-    Src: Data Submitter
-    Type: string
-    Req: Preferred
-  non_targeted_therapy_start_date:
-    Desc: The number of days from the date of enrollment to the date of treatment
-      start.
-    Term:
-      - Origin: caDSR
-        Code: '14984532'
-        Value: Procedure Enrollment To Treatment Start Day Count
-        Version: '1'
-        Tags:
-          Provenance: CMB 
-          Added: 07-25-24
-    Src: Data Submitter
-    Type:
-      units: 
-        - days
-      value_type:
-        number
-    Req: Preferred
-  non_targeted_therapy_end_date:
-    Desc: The number of days from the date of enrollment to the date of treatment
-      end.
-    Term:
-      - Origin: caDSR
-        Code: '14984563'
-        Value: Procedure Enrollment To Treatment End Day Count
-        Version: '1'
-        Tags:
-          Provenance: CMB
-          Added: 07-25-24
-    Src: Data Submitter
-    Type:
-      units: 
-        - days
-      value_type:
-        number
-    Req: Preferred
-  best_response_to_non_targeted_therapy:
-    Desc: The result of an evaluation to determine the most clinically favorable response to treatment.
-    Term:
-      - Origin: caDSR
-        Code: '15179918'
-        Value: Disease Best Overall Response Assessment Outcome
-        Version: '1'
-    Tags:
-      Provenance: CIDC
-      Added: 10-16-25
+          Provenance: CIDC
+          Added: 06-23-2026
     Src: Data Submitter
     #Type: string
     Enum:
-      - Complete Response
-      - Partial Response
-      - Less than partial response
-      - Stable Disease
-      - Progressive Disease
-      - Not Assessed
-      - Too Early
-      - Not Evaluable
+      - Surgery
+      - Radiation
+      - Chem
+      - Hormone
+      - Immuno
+      - Stem Cell
+      - Precision Medicine
+      - Ablative
+      - Palliative
+    Req: Preferred
+  therapy_type:
+    Desc: An indication if the therapy is targeted, non-targeted, or unknown
+    #Term:
+    #  - Origin: caDSR
+    #    Code: ''
+    #    Value: 
+    #    Version: ''
+    #    Tags:
+    #      Provenance: CIDC
+    #      Added: 06-23-2026
+    Src: Data Submitter
+    #Type: string
+    Enum:
+      - Targeted
+      - Non-Targeted
       - Unknown
     Req: Preferred
+
   # Surgery Node
   surgical_procedure_record_id:
     Desc: A unique sequence of characters used to identify a linkage between related
