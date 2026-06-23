@@ -1828,7 +1828,7 @@ PropDefinitions:
         Version: '1'
         Tags:
           Provenance: CTDC
-          Added: 05-29-24
+          Added: 06-23-26
     Src: Data Submitter
     Type: string
     Req: 'Yes'
@@ -1852,8 +1852,8 @@ PropDefinitions:
         Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus Name
         Version: '1'
         Tags:
-          Provenance: CMB
-          Added: 05-29-24 
+          Provenance: CTDC
+          Added: 06-23-26
     Src: Data Submitter
     Type: string
     Req: 'Yes'
@@ -1867,8 +1867,8 @@ PropDefinitions:
         Value: Agent Dose
         Version: '3'
         Tags:
-          Provenance: CMB
-          Added: 05-29-24
+          Provenance: CTDC
+          Added: 06-23-26
     Src: Data Submitter
     Type: string
     Req: Preferred
@@ -1881,8 +1881,8 @@ PropDefinitions:
         Value: Agent Administration Dose Unit of Measure Name
         Version: '4'
         Tags:
-          Provenance: CMB
-          Added: 05-29-24 
+          Provenance: CTDC
+          Added: 06-23-26
     Src: Data Submitter
     Type: string
     Req: Preferred
@@ -1894,8 +1894,8 @@ PropDefinitions:
         Value: Frequecny
         Version: '1'
         Tags:
-          Provenance: CMB
-          Added: 05-29-24 
+          Provenance: CTDC
+          Added: 06-23-26
     Src: Data Submitter
     Type: string
     Req: Preferred
@@ -1908,8 +1908,8 @@ PropDefinitions:
         Value: Procedure Enrollment To Treatment Start Day Count
         Version: '1'
         Tags:
-          Provenance: CMB
-          Added: 07-25-24
+          Provenance: CTDC
+          Added: 06-23-26
     Src: Data Submitter
     Type: 
       units: 
@@ -1926,8 +1926,8 @@ PropDefinitions:
         Value: Procedure Enrollment To Treatment End Day Count
         Version: '1'
         Tags:
-          Provenance: CMB
-          Added: 07-25-24
+          Provenance: CTDC
+          Added: 06-23-26
     Src: Data Submitter 
     Type:
       units: 
@@ -1943,8 +1943,8 @@ PropDefinitions:
         Value: Disease Best Overall Response Assessment Outcome
         Version: '1'
         Tags:
-          Provenance: CIDC
-          Added: 10-16-25 
+          Provenance: CTDC
+          Added: 06-23-26
     Src: Data Submitter
     #Type: string
     Enum:
@@ -1966,7 +1966,7 @@ PropDefinitions:
         Value: Therapeutic Procedure Performed
         Version: '1'
         Tags:
-          Provenance: CIDC
+          Provenance: CTDC
           Added: 06-23-2026
     Src: Data Submitter
     #Type: string
@@ -1989,7 +1989,7 @@ PropDefinitions:
     #    Value: 
     #    Version: ''
     #    Tags:
-    #      Provenance: CIDC
+    #      Provenance: CTDC
     #      Added: 06-23-2026
     Src: Data Submitter
     #Type: string

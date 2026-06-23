@@ -253,7 +253,7 @@ Nodes:
       - m_category
       - crdc_id
   therapy:
-    Desc: The Therapy node contains properties which detail therapeutic interventions administered to a participant as standard and/or targeted therapies, i.e. therapies considered to be appropriate for and effective against the specific type of cancer with which the participant has been diagnosed
+    Desc: The Therapy node contains properties which detail therapeutic interventions administered to a participant as standard and/or targeted therapies, i.e. therapies considered to be appropriate for and effective against the specific type of cancer with which the participant has been diagnosed.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core

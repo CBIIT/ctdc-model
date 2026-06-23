@@ -2,7 +2,7 @@
 
 ### Data Model version 3.0.0
 
-* Removed the targeted_therapy and non_targeted_therapy nodes and replaced with a generic therapy node.  This new node contains a flag to indicate which type of therapy it coresponds to
+* Removed the targeted_therapy and non_targeted_therapy nodes and replaced with a generic therapy node.  This new node contains a flag to indicate which type of therapy it coresponds to.
 **Breaking change** — records previously submitted as `Targeted_Therapy` or `Non_Targed_Therapy` will no longer validate against this version.
 
 ### Data Model version 2.1.1
