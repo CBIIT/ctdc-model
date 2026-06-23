@@ -1833,7 +1833,6 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
     Key: true
-    Key: true
   therapy_name:
     Desc: A term describing a therapeutic agent as captured in the Pharmacological
       Substance (C1909) or Drug or Chemical by Structure (C1913) branch of the National
