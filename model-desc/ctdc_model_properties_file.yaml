@@ -1857,7 +1857,7 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: 'Yes'
-  therapy_dose:
+ therapy_d ose:
     Desc: The amount that represents the dose of the agent. The dose at which the
       targeted therapeutic agent in question was administered, exclusive of dosage
       units.

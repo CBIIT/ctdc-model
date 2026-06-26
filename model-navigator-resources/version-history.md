@@ -1,9 +1,5 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
-### Data Model version 3.0.1
-
-* Therapy_Type and Therapy_Category switched definations and Enums to remain consistent with other DCs.  Therapy_Category now is a flag to indicate if the therapy is Targeted, Non-Targeted or Unknown.
-
 ### Data Model version 3.0.0
 
 * Removed the targeted_therapy and non_targeted_therapy nodes and replaced with a generic therapy node.  This new node contains a flag to indicate which type of therapy it coresponds to.
