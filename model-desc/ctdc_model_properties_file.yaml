@@ -1857,7 +1857,7 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: 'Yes'
-  therapy_dose:
+ therapy_d ose:
     Desc: The amount that represents the dose of the agent. The dose at which the
       targeted therapeutic agent in question was administered, exclusive of dosage
       units.
@@ -1958,7 +1958,7 @@ PropDefinitions:
       - Not Evaluable
       - Unknown
     Req: Preferred
-  therapy_category:
+  therapy_type:
     Desc: The term that describes the kind of treatment administered.
     Term:
       - Origin: caDSR
@@ -1977,11 +1977,10 @@ PropDefinitions:
       - Hormone
       - Immuno
       - Stem Cell
-      - Precision Medicine
       - Ablative
       - Palliative
     Req: Preferred
-  therapy_type:
+  therapy_category:
     Desc: An indication if the therapy is targeted, non-targeted, or unknown
     #Term:
     #  - Origin: caDSR
