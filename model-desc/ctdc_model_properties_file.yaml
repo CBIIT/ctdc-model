@@ -1958,7 +1958,7 @@ PropDefinitions:
       - Not Evaluable
       - Unknown
     Req: Preferred
-  therapy_category:
+  therapy_type:
     Desc: The term that describes the kind of treatment administered.
     Term:
       - Origin: caDSR
@@ -1977,20 +1977,19 @@ PropDefinitions:
       - Hormone
       - Immuno
       - Stem Cell
-      - Precision Medicine
       - Ablative
       - Palliative
     Req: Preferred
-  therapy_type:
+  therapy_category:
     Desc: An indication if the therapy is targeted, non-targeted, or unknown
-    #Term:
-    #  - Origin: caDSR
-    #    Code: ''
-    #    Value: 
-    #    Version: ''
-    #    Tags:
-    #      Provenance: CTDC
-    #      Added: 06-23-2026
+    Term:
+      - Origin: caDSR
+        Code: '17384454'
+        Value: Treatment Targeting Therapy
+        Version: '1'
+        Tags:
+          Provenance: CTDC
+          Added: 06-23-2026
     Src: Data Submitter
     #Type: string
     Enum:
