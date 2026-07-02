@@ -988,7 +988,8 @@ PropDefinitions:
         Version: '1'
         Tags: 
           Provenance: CMB
-          Added: 5-31-24  
+          Added: 5-31-24 
+        useNullCDE: Yes
     Src: Data Submitter
     Type:
       units: 
@@ -1770,6 +1771,7 @@ PropDefinitions:
         Value: Subject Age at Diagnosis Integer
         Tags:
           Provenance: DSS
+        useNullCDE: Yes
     Src: Data Submitter
     Type:
       units: 
@@ -2481,7 +2483,8 @@ PropDefinitions:
         Version: '1'
         Tags:
           Provenance: CMB
-          Added: 07-23-24 
+          Added: 07-23-24
+        useNullCDE: Yes
     Src: Data Submitter
     #Type: string
     Enum: #Acceptable values taken straight from the CMB Catalog Site
@@ -2509,8 +2512,9 @@ PropDefinitions:
         Code: '12445832'
         Value: Specimen Material Biospecimen Category
         Version: '1'
-    Tags:
-      Provenance: CMB 
+        Tags:
+          Provenance: CMB
+        useNullCDE: Yes
     Src: Data Submitter
     #Type: string
     Enum:
@@ -2558,6 +2562,7 @@ PropDefinitions:
         Tags:
           Provenance: CMB 
           Added: 06-03-24
+        useNullCDE: Yes
     Src: Data Submitter
     #Type: string
     Enum: #Acceptable values taken straight from the CMB Catalog Site.
