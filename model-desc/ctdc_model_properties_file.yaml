@@ -989,7 +989,6 @@ PropDefinitions:
         Tags: 
           Provenance: CMB
           Added: 5-31-24 
-        useNullCDE: Yes
     Src: Data Submitter
     Type:
       units: 
@@ -1771,7 +1770,6 @@ PropDefinitions:
         Value: Subject Age at Diagnosis Integer
         Tags:
           Provenance: DSS
-        useNullCDE: Yes
     Src: Data Submitter
     Type:
       units: 

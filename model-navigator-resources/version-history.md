@@ -4,7 +4,7 @@
 
 * Removed the targeted_therapy and non_targeted_therapy nodes and replaced with a generic therapy node.  This new node contains a flag to indicate which type of therapy it coresponds to.
 **Breaking change** — records previously submitted as `Targeted_Therapy` or `Non_Targed_Therapy` will no longer validate against this version.
-* Added NullCDE flags to age_at_enrollment,  participant_age_at_diagnosis, specimen_type, specimen_category and tissue_category
+* Added NullCDE flags to specimen_type, specimen_category and tissue_category.
 
 ### Data Model version 2.1.1
 
