@@ -5,6 +5,7 @@
 * Removed the targeted_therapy and non_targeted_therapy nodes and replaced with a generic therapy node.  This new node contains a flag to indicate which type of therapy it coresponds to.
 **Breaking change** — records previously submitted as `Targeted_Therapy` or `Non_Targed_Therapy` will no longer validate against this version.
 * Added NullCDE flags to specimen_type, specimen_category and tissue_category.
+* Added 3 new terms to the new Therapy Node: current_response_to_therapy, date_of_current_response_to_therapy and date_of_best_response_to_therapy.
 
 ### Data Model version 2.1.1
 

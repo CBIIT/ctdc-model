@@ -270,6 +270,9 @@ Nodes:
       - best_response_to_therapy
       - therapy_category
       - therapy_type
+      - current_response_to_therapy
+      - date_of_current_response_to_therapy
+      - date_of_best_response_to_therapy
       - crdc_id
   surgery:
     Desc: The Surgery node contains properties which detail surgical procedures performed upon the participant in question, including the type of procedure performed, the anatomical locations impacted, notable findings, and whether or not the procedure was conducted as part of the overall treatment of the cancer in question.
