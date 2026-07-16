@@ -3,7 +3,7 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v3.0.0
+Version: v3.1.0
 
 Nodes:
   # node:
@@ -262,14 +262,23 @@ Nodes:
     Props:
       - therapy_record_id
       - therapy_name
+      - therapy_description
+      - therapy_category
+      - therapy_type
+      - therapy_start_date
+      - therapy_end_date
+      - off_treatment
+      - off_treatment_reason
+      - course_number
+      - number_of_doses
+      - planned_dose
+      - planned_dose_units
       - therapy_dose
       - therapy_dose_units
       - therapy_frequency
-      - therapy_start_date
-      - therapy_end_date
       - best_response_to_therapy
-      - therapy_category
-      - therapy_type
+      - dose_changes_delays
+      - dose_changes_delays_description
       - crdc_id
   surgery:
     Desc: The Surgery node contains properties which detail surgical procedures performed upon the participant in question, including the type of procedure performed, the anatomical locations impacted, notable findings, and whether or not the procedure was conducted as part of the overall treatment of the cancer in question.
@@ -523,7 +532,7 @@ Relationships:
       #  Dst: participant
       - Src: therapy
         Dst: participant
-        Mul: many_to_many
+        Mul: one_to_many
       - Src: surgery
         Dst: participant
         Mul: many_to_many

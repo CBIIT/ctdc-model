@@ -1777,7 +1777,6 @@ PropDefinitions:
       value_type:
         number
     Req: 'Preferred'
-#new diagnosis nodes
   m_category:
     Desc: The presence of metastasis, M, from TNM staging criteria, performed with access to clinical information only.
     Term:
@@ -1996,6 +1995,127 @@ PropDefinitions:
       - Targeted
       - Non-Targeted
       - Unknown
+    Req: Preferred
+  off_treatment:
+    Desc: A response to indicate whether an individual has stopped or is not receiving therapy for a period of time.
+    Term:
+      - Origin: caDSR
+        Code: '16391087'
+        Value: Subject Off Treatment
+        Version: '1'
+        Tags:
+          Provenance: CIDC-CIMAC
+          Added: 07-15-2026
+    Src: Data Submitter
+    #Type: string
+    Enum:
+      - Yes
+      - No
+      - Unknown
+    Req: Preferred
+  off_treatment_reason:
+    Desc: An explanation describing why an individual is no longer receiving protocol therapy.
+    Term:
+      - Origin: caDSR
+        Code: '13362265'
+        Value: Subject Off Protocol Therapy
+        Version: '1'
+        Tags:
+          Provenance: CIDC-CIMAC
+          Added: 07-15-2026
+    Src: Data Submitter
+    Type: string
+    Req: Preferred
+  course_number:
+    Desc: A numeric identifier used to indicate a specific course or cycle of treatment.
+    Term:
+      - Origin: caDSR
+        Code: '16391085'
+        Value: Treatment Course Number
+        Version: '1'
+        Tags:
+          Provenance: CIDC-CIMAC
+          Added: 07-15-2026
+    Src: Data Submitter
+    Type: number
+    Req: Preferred
+  number_of_doses:
+    Desc: Count number assigned to an individual dose or administration of an agent given to a person.
+    Term:
+      - Origin: caDSR
+        Code: '2222493'
+        Value: Agent Dose Count Number
+        Version: '1'
+        Tags:
+          Provenance: CIDC-CIMAC
+          Added: 07-15-2026
+    Src: Data Submitter
+    Type: number
+    Req: Preferred
+  planned_dose:
+    Desc: The total amount of the drug agent intended to be administered per the protocol.
+    Term:
+      - Origin: caDSR
+        Code: '13482826'
+        Value: Treatment Protocol Agent Total Dose Intended
+        Version: '1'
+        Tags:
+          Provenance: CIDC-CIMAC
+          Added: 07-15-2026
+    Src: Data Submitter
+    Type: number
+    Req: Preferred
+  planned_dose_units:
+    Desc: Text name to represent units of measure used to describe dosages of an agent or measure.
+    Term:
+      - Origin: caDSR
+        Code: '2321160'
+        Value: Agent Dose Unit of Measure Name
+        Version: '4'
+        Tags:
+          Provenance: CIDC-CIMAC
+          Added: 07-15-2026
+    Src: Data Submitter
+    Type: string
+    Req: Preferred
+  dose_changes_delays:
+    Desc: A indication as to whether or not a change, alteration, or adjustment of a dose specified in a treatment plan was administered to a patient.
+    Term:
+      - Origin: caDSR
+        Code: '17221516'
+        Value: Treatment Dose Modification
+        Version: '1'
+        Tags:
+          Provenance: CIDC-CIMAC
+          Added: 07-15-2026
+    Src: Data Submitter
+    Type: string
+    Req: Preferred
+  dose_changes_delays_description:
+    Desc: Words which describe the change, alteration, or adjustment of a dose specified in a treatment plan that was administered to a patient.
+    Term:
+      - Origin: caDSR
+        Code: '17221520'
+        Value: Treatment Dose Modification Description
+        Version: '1'
+        Tags:
+          Provenance: CIDC-CIMAC
+          Added: 07-15-2026
+    Src: Data Submitter
+    Type: string
+    Req: Preferred
+  therapy_description:
+    Desc: Words which describe the change, alteration, or adjustment of a dose specified in a treatment plan that was administered to a patient.
+    Term:
+      - Origin: caDSR
+        Code: '17221520'
+        Value: Treatment Dose Modification Description
+        Version: '1'
+        Tags:
+          Provenance: CIDC-CIMAC
+          Added: 07-15-2026
+    Src: Data Submitter
+    Type: string
     Req: Preferred
 
   # Surgery Node
