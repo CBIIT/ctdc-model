@@ -1,25 +1,24 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
 ### Data Model version 3.1.0
-* Adds 9 new properties to the therapy node, to include planned dosage, number of doses and does change
+* Adds 9 new properties to the therapy node: `off_treatment`, `off_treatment_reason`, `course_number`, `number_of_doses`, `planned_dose`, `planned_dose_units`, `dose_changes_delays`, `dose_changes_delays_description`, `therapy_description`
 * Updates the relationship between Paricipant and Therapy to a 1:many
-
 
 ### Data Model version 3.0.0
 
 * Removes the targeted_therapy and non_targeted_therapy nodes and replaced with a generic therapy node.  This new node contains a flag to indicate which type of therapy it coresponds to.
-**Breaking change** — records previously submitted as `Targeted_Therapy` or `Non_Targed_Therapy` will no longer validate against this version.
-* Adds NullCDE flags to specimen_type, specimen_category and tissue_category.
+**Breaking change** — records previously submitted as Targeted_Therapy or Non_Targed_Therapy will no longer validate against this version.
+* Adds NullCDE flags to `specimen_type`, `specimen_category` and `tissue_category`.
 
 ### Data Model version 2.1.1
 
-* Updates to the definations to ecog_ps and karnofsky
-* Adds CDE versions to ecog_ps and karnofsky that were previosly missing
-* Fixes property type for karnofsky, changed from percent to integer
+* Updates to the definations to `ecog_ps` and `karnofsky`
+* Adds CDE versions to `ecog_ps` and `karnofsky` that were previosly missing
+* Fixes property type for `karnofsky`, changed from percent to integer
 
 ### Data Model version 2.1.0
 
-* Adds 4 new properties to the program node: program_short_description, program_full_description, program_sort_order, and program_external_url.  These properties were added to support a new Program and Program Details page within the CTDC application. 
+* Adds 4 new properties to the program node: `program_short_description`, `program_full_description`, `program_sort_order`, and `program_external_url`.  These properties were added to support a new Program and Program Details page within the CTDC application. 
 
 ### Data Model version 2.0.0
 

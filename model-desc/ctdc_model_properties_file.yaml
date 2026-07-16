@@ -524,7 +524,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR
         Code: '2179590'
-        Value: Person Middle Name t
+        Value: Person Middle Name
         Version: '2'
         Tags:
           Provenance: DSS 
@@ -665,7 +665,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR
         Code: '2093'
-        Value: AGENT_DOSE_UNITS
+        Value: Agent Dose Units
         Version: '1'
         Tags:
           Provenance: CIDC
@@ -1167,8 +1167,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR
         Code: '10543100'
-        Value: Subject National Center for Biotechnology Information Taxonomy Identifier
-          Integer
+        Value: Subject National Center for Biotechnology Information Taxonomy Identifier Integer
         Version: '2'
         Tags:
           Provenance: DSS
@@ -1279,7 +1278,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR
         Code: '88'
-        Value: PERFORMANCE STATUS
+        Value: Performance Status
         Version: '5.3'
         Tags:
           Provenance: CIMAC-CIDC
@@ -1292,7 +1291,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR
         Code: '2003853'
-        Value: PERFORMANCE STATUS
+        Value: Performance Status
         Version: '4.2'
         Tags:
           Provenance: CIMAC-CIDC
