@@ -2006,11 +2006,11 @@ PropDefinitions:
           Provenance: CIDC-CIMAC
           Added: 07-15-2026
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Yes
-      - No
-      - Unknown
+    Type: string
+#    Enum:
+#      - Yes
+#      - No
+#      - Unknown
     Req: Preferred
   off_treatment_reason:
     Desc: An explanation describing why an individual is no longer receiving protocol therapy.
