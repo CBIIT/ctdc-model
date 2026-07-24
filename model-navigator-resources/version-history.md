@@ -1,8 +1,12 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+### Data Model version 3.2.0
+* Updates the relationship of_participant for participant-sugery, participant-therapy, and participant-radiotherapy.
+* Adds 3 new properties to the therapy node: `current_response_to_therapy`, `date_of_current_response_to_therapy`, `date_of_best_response_to_therapy`
+
 ### Data Model version 3.1.0
 * Adds 9 new properties to the therapy node: `off_treatment`, `off_treatment_reason`, `course_number`, `number_of_doses`, `planned_dose`, `planned_dose_units`, `dose_changes_delays`, `dose_changes_delays_description`, `therapy_description`
-* Updates the relationship between Paricipant and Therapy to a 1:many
+* Updates the relationship between Participant and Therapy to a 1:many
 
 ### Data Model version 3.0.0
 
