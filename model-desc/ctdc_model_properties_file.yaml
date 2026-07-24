@@ -1990,7 +1990,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-24-26
     Src: Data Submitter
-    Type: date
+    Type: number
     Req: Preferred
   date_of_best_response_to_therapy: 
     Desc: The number of days from day of enrollment until the best response to therapy
@@ -2003,7 +2003,7 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-24-26
     Src: Data Submitter
-    Type: date
+    Type: number
     Req: Preferred
   therapy_type:
     Desc: The term that describes the kind of treatment administered.
