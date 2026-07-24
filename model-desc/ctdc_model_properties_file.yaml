@@ -1933,6 +1933,29 @@ PropDefinitions:
       value_type: 
         number
     Req: Preferred
+  current_response_to_therapy:
+    Desc: The result of an evaluation to determine whether pathologic and/or clinical changes resulted from treatment.
+    Term:
+      - Origin: caDSR
+        Code: '13383448'
+        Value: Disease Response Assessment
+        Version: '1'
+        Tags:
+          Provenance: CMB
+          Added: 07-23-26
+    Src: Data Submitter
+    #Type: string
+    Enum:
+      - Complete Response
+      - Partial Response
+      - Less than partial response
+      - Stable Disease
+      - Progressive Disease
+      - Not Assessed
+      - Too Early
+      - Not Evaluable
+      - Unknown
+    Req: Preferred
   best_response_to_therapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment.
     Term:
@@ -1955,6 +1978,32 @@ PropDefinitions:
       - Too Early
       - Not Evaluable
       - Unknown
+    Req: Preferred
+  date_of_current_response_to_therapy: 
+    Desc: The number of days from enrollment to treatment response.
+    Term:
+      - Origin: caDSR
+        Code: '17482964'
+        Value: Subject Enrollment To Response
+        Version: '1'
+        Tags:
+          Provenance: CMB
+          Added: 07-24-26
+    Src: Data Submitter
+    Type: number
+    Req: Preferred
+  date_of_best_response_to_therapy: 
+    Desc: The number of days from day of enrollment until the best response to therapy
+    Term:
+      - Origin: caDSR
+        Code: '17031493'
+        Value: Subject Enrollment To Date of Best Response
+        Version: '1'
+        Tags:
+          Provenance: CMB
+          Added: 07-24-26
+    Src: Data Submitter
+    Type: number
     Req: Preferred
   therapy_type:
     Desc: The term that describes the kind of treatment administered.

@@ -3,7 +3,7 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v3.1.0
+Version: v3.2.0
 
 Nodes:
   # node:
@@ -276,7 +276,10 @@ Nodes:
       - therapy_dose
       - therapy_dose_units
       - therapy_frequency
+      - current_response_to_therapy
       - best_response_to_therapy
+      - date_of_current_response_to_therapy
+      - date_of_best_response_to_therapy
       - dose_changes_delays
       - dose_changes_delays_description
       - crdc_id
@@ -532,13 +535,13 @@ Relationships:
       #  Dst: participant
       - Src: therapy
         Dst: participant
-        Mul: one_to_many
+        #Mul: one_to_many
       - Src: surgery
         Dst: participant
-        Mul: many_to_many
+        #Mul: many_to_many
       - Src: radiotherapy
         Dst: participant
-        Mul: many_to_many
+        #Mul: many_to_many
       - Src: participant_status
         Dst: participant
         Mul: one_to_one  
