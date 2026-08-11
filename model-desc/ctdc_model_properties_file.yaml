@@ -3075,7 +3075,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
     Key: true
-  assay_type: 
+  assay_category: 
     Desc: The grouping assigned to a type of assay that was utilized for qualitative or quantitative analysis.
     Term:
       - Origin: caDSR
@@ -3086,19 +3086,19 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - Next Generation Sequencing
-      - Immune
-      - Cell Based
+    Type: string
+    #Enum: 
+    #  - Next Generation Sequencing
+    #  - Immune
+    #  - Cell Based
     Req: 'Yes'
-  assay_subtype: 
+  assay_type: 
     Desc: The subtype of assay performed on the biospecimen. 
     Term:
       - Origin: caDSR
         Code: '7789196'
         Value: Imaging Technique Assay Technology Type
-        Version: '1'
+        Version: '2'
         Tags:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
@@ -3207,58 +3207,58 @@ PropDefinitions:
   paired_end_sequencing:
     Desc: Indicates whether the sequencing was performed using paired-end reads,
       where both ends of DNA fragments are sequenced. 
-    # Term:
-    #   - Origin: caDSR
-    #     Code: ''
-    #     Value:  
-    #     Version: '1'
-    #     Tags:
-    #       Provenance: CIMAC-CIDC
-    #       Added: 01-20-26
+    Term:
+      - Origin: caDSR
+        Code: '11527735'
+        Value: Sequencing Library Read Layout
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 01-20-26
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - 'Yes'
-      - 'No'
+    Type: string
+    #Enum: 
+    #  - 'Yes'
+    #  - 'No'
     Req: 'Preferred'
   sequencing_depth:
     Desc: The average number of times each base in the target region is sequenced,
       indicating the coverage of the sequencing assay.    
-    # Term:
-    #   - Origin: caDSR
-    #     Code: ''
-    #     Value:  
-    #     Version: '1'
-    #     Tags:
-    #       Provenance: CIMAC-CIDC
-    #       Added: 01-20-26
+    Term:
+      - Origin: caDSR
+        Code: '17388224'
+        Value: Molecular Analysis Sequencing Depth
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 01-20-26
     Src: Data Submitter
     Type: integer
     Req: 'Preferred'
   total_reads:
     Desc: The total number of reads in the input file (such as a raw FASTQ or BAM file), 
         including all passing-filter (PF) and non-passing-filter reads.  
-    # Term:
-    #   - Origin: caDSR
-    #     Code: ''
-    #     Value:  
-    #     Version: '1'
-    #     Tags:
-    #       Provenance: CIMAC-CIDC
-    #       Added: 01-20-26
+    Term:
+      - Origin: caDSR
+        Code: '17388226'
+        Value: Molecular Analysis Total Reads
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 01-20-26
     Src: Data Submitter
     Type: integer
     Req: 'Preferred'
   target_capture_kit:
     Desc: The commercial kit used for target enrichment in targeted sequencing assays. 
-    # Term:
-    #   - Origin: caDSR
-    #     Code: 'Placeholder'
-    #     Value:  
-    #     Version: '1'
-    #     Tags:
-    #       Provenance: CIMAC-CIDC
-    #       Added: 01-20-26
+    Term:
+      - Origin: caDSR
+        Code: '17388349'
+        Value: Molecular Analysis Target Capture Kit   
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 01-20-26
     Src: Data Submitter
     Type: string
     Req: 'No'
