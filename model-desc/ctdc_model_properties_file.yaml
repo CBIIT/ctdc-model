@@ -3123,7 +3123,7 @@ PropDefinitions:
     #  - Cell Based
     Req: 'Yes'
   assay_type: 
-    Desc: The subtype of assay performed on the biospecimen. 
+    Desc: The type of assay performed on the biospecimen. 
     Term:
       - Origin: caDSR
         Code: '7789196'
