@@ -1,5 +1,13 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+### Data Model version 3.3.0
+* Changes property `assay_type` to `assay_category` and property `assay_subtype` to `assay_type`
+* Updates CDE information for `paired_end_sequencing`, `sequencing_depth`, `total_reads`, and `target_capture_kit`
+* Updates CDE information for `qc_status`, `primary_diagnosis_disease_group`, `snomed_disease_term`, `data_file_type` and `surgical_procedure_date`
+* Updates CDE version number for multiple properties
+* Adds a relationship between Study_Arm and Participant Nodes
+* Adds NULL CDE values to `program_name`,  `program_short_name` and `radiation_extent`
+
 ### Data Model version 3.2.0
 * Updates the relationship of_participant for participant-sugery, participant-therapy, and participant-radiotherapy.
 * Adds 3 new properties to the therapy node: `current_response_to_therapy`, `date_of_current_response_to_therapy`, `date_of_best_response_to_therapy`
