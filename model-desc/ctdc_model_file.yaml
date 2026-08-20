@@ -462,7 +462,7 @@ Relationships:
       - Src: participant
         Dst: study
       - Src: study # so can a lowest-level study belong directly to a highest-level program?
-        Dst: programf
+        Dst: program
       - Src: participant
         Dst: study_arm
       - Src: participant

@@ -54,6 +54,7 @@ PropDefinitions:
         Tags:
           Provenance: DSS
           Added: 5-28-24
+        useNullCDE: Yes
     Src: Data Submitter
     Type: string
     Req: 'Yes'
@@ -72,6 +73,7 @@ PropDefinitions:
         Tags:
           Provenance: DSS 
           Added: 5-28-24
+        useNullCDE: Yes
     Src: Data Submitter
     Type: string
     Req: 'Yes'
@@ -1411,14 +1413,14 @@ PropDefinitions:
     Desc: A term describing the main condition for evaluation and treatment as captured
       in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
       Thesaurus (NCIt) hierarchy tree.
-    # Term:
-    #   - Origin: caDSR
-    #     Code: '14905532'
-    #     Value: Disease Primary Diagnosis NCI Thesaurus Name
-    #     Version: '1'
-    #     Tags: 
-    #       Provenance: CMB
-    #       Added: 05-28-24
+    Term:
+      - Origin: caDSR
+        Code: '16284367'
+        Value: Disease Primary Diagnosis NCI Thesaurus Name
+        Version: '1'
+        Tags: 
+          Provenance: CMB
+          Added: 05-28-24
     Src: Data Submitter
     #Type: string
     Enum: # Currently reflective only of the values used by the CMB
@@ -1506,7 +1508,15 @@ PropDefinitions:
       - "10016180" #Fallopian Carcinoma
     Req: 'No'
   snomed_disease_term:
-    Desc: Description pending 
+    Desc: The term describing disease in humans based on the Systematized Nomenclature of Medicine Clinical Terms.
+    Term:
+      - Origin: caDSR
+        Code: '16459567'
+        Value: Diagnosis Disease SNOMED CT Term
+        Version: '1'
+        Tags:
+          Provenance: CMB
+          Added: 05-28-24
     Src: Data Submitter
     #Type: string
     Enum: 
@@ -2205,6 +2215,15 @@ PropDefinitions:
     Req: 'Yes'
   surgical_procedure_date:
     Desc: The date upon which the surgical procedure in question was performed, expressed as the number of days before or after enrollment.
+    Term:
+      - Origin: caDSR
+        Code: '17086284'
+        Value: Subject Enrollment To Surgical Procedure
+        Version: '1'
+        Tags:
+          Provenance: CTDC
+          Added: 05-29-24
+
     Src: Data Submitter
     Type:
       units: 
@@ -3133,14 +3152,14 @@ PropDefinitions:
     Req: 'Yes'
   qc_status: 
     Desc: Overall quality control flag based on predefined thresholds. 
-    # Term:
-    #   - Origin: caDSR
-    #     Code: ''
-    #     Value:  
-    #     Version: '1'
-    #     Tags:
-    #       Provenance: CIMAC-CIDC
-    #       Added: 01-20-26
+    Term:
+      - Origin: caDSR
+        Code: '16967966'
+        Value: Assay Quality Control Status
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 01-20-26
     Src: Data Submitter
     #Type: string
     Enum: 
@@ -3501,14 +3520,14 @@ PropDefinitions:
   data_file_type:
     Desc: The type of information contained in an electronic record. A curated indicator
       as to the type of content represented by the data file
-    # Term:
-    #   - Origin: caDSR
-    #     Code: '14824731'
-    #     Value: Electronic Data File Content Type
-    #     Version: '1'
-    #     Tags:
-    #       Provenance: CTDC
-    #       Added: 05-30-24
+    Term:
+      - Origin: caDSR
+        Code: '14824731'
+        Value: Electronic Data File Content Type
+        Version: '2'
+        Tags:
+          Provenance: CTDC
+          Added: 05-30-24
     Src: Data Submitter
     #Type: string
     Enum:
@@ -3590,7 +3609,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '11475057'
         Value: Electronic Data File Checksum Type
-        Version: '1'
+        Version: '2'
         Tags:
           Provenance: DSS
           Added: 05-30-24
@@ -3607,7 +3626,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '11387114'
         Value: Electronic Data File Compression Type
-        Version: '1'
+        Version: '2'
         Tags:
           Provenance: DSS
           Added: 05-30-24
