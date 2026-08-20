@@ -2425,6 +2425,7 @@ PropDefinitions:
         Tags:
           Provenance: CMB
           Added: 05-29-24
+        useNullCDE: Yes
     Src: Data Submitter
     Type: string
     Req: 'Yes'

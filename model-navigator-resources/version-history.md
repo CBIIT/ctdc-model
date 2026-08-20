@@ -6,7 +6,7 @@
 * Updates CDE information for `qc_status`, `primary_diagnosis_disease_group`, `snomed_disease_term`, `data_file_type` and `surgical_procedure_date`
 * Updates CDE version number for multiple properties
 * Adds a relationship between Study_Arm and Participant Nodes
-* Adds NULL CDE values to `program_name` and `program_short_name`
+* Adds NULL CDE values to `program_name`,  `program_short_name` and `radiation_extent`
 
 ### Data Model version 3.2.0
 * Updates the relationship of_participant for participant-sugery, participant-therapy, and participant-radiotherapy.
