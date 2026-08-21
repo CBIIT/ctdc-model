@@ -3,7 +3,7 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v3.2.0
+Version: v3.3.0
 
 Nodes:
   # node:
@@ -382,8 +382,8 @@ Nodes:
       Template: 'Yes'
     Props:
       - assay_record_id 
-      - assay_type 
-      - assay_subtype
+      - assay_category 
+      - assay_type
       - qc_status
       - crdc_id
   next_generation_sequencing_assay:
@@ -463,6 +463,8 @@ Relationships:
         Dst: study
       - Src: study # so can a lowest-level study belong directly to a highest-level program?
         Dst: program
+      - Src: participant
+        Dst: study_arm
       - Src: participant
         Dst: cohort
       - Src: cohort
