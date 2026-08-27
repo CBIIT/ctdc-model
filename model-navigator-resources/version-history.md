@@ -1,5 +1,10 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+### Data Model version 3.4.0
+* Corrects CDE codes for `meddra_disease_code` and `ctep_disease_term`
+* Disables CDE for `snomed_disease_code` to use model ENUMS instead
+* Adds NullCDE for `primary_diagnosis_disease_group`, `radiological_procedure` and `anatomical_collection_site`
+
 ### Data Model version 3.3.0
 * Changes property `assay_type` to `assay_category` and property `assay_subtype` to `assay_type`
 * Updates CDE information for `paired_end_sequencing`, `sequencing_depth`, `total_reads`, and `target_capture_kit`
