@@ -1421,6 +1421,7 @@ PropDefinitions:
         Tags: 
           Provenance: CMB
           Added: 05-28-24
+        useNullCDE: Yes
     Src: Data Submitter
     #Type: string
     Enum: # Currently reflective only of the values used by the CMB
@@ -1452,11 +1453,11 @@ PropDefinitions:
     Type: string
     Req: Preferred
   ctep_disease_term:
-    Desc: The coded response indicating the MedDRA code Version 10 used in the NCI Simplified Disease Classification (SDC) Terminology for diagnoses.
+    Desc: Diagnosis Disease NCI CTEP Simplified Disease Classification Terminology Name
     Term:
       - Origin: caDSR
-        Code: '4723846'
-        Value: NCI CTEP Simplified Disease Classification Terminology MedDRA Version 10 Code
+        Code: '16464896' #'4723846'
+        Value: Diagnosis Disease
         Version: '1'
         Tags:
           Provenance: CMB
@@ -1477,6 +1478,7 @@ PropDefinitions:
       - Small Cell Lung Carcinoma                       # meddra code 10041071
       - Esophageal Carcinoma                            # meddra code 10030157
       - Fallopian Tube Carcinoma                        # meddra code 10016180
+      - Primary Peritoneal Carcinoma                    # meddra code 10026669
     Req: 'No'
   meddra_disease_code:
     Desc: The MedDRA code describing a medical condition and/or anatomic location.
@@ -1484,9 +1486,9 @@ PropDefinitions:
       in question has been diagnosed.
     Term:
       - Origin: caDSR
-        Code: '2004425'
+        Code: '4723846' #'2004425'
         Value: MedDRA Code
-        Version: '4'
+        Version: '1' #'4'
         Tags:
           Provenance: CMB
           Added: 05-28-24
@@ -1505,7 +1507,8 @@ PropDefinitions:
       - "10041071" # Small Cell Lung Carcinoma
       - "10017760" # Gastric Cancer NOS
       - "10030157" # Oesophageal Carcioma
-      - "10016180" #Fallopian Carcinoma
+      - "10016180" # Fallopian Carcinoma
+      - "10026669" # Primary Peritoneal Carcinoma 
     Req: 'No'
   snomed_disease_term:
     Desc: The term describing disease in humans based on the Systematized Nomenclature of Medicine Clinical Terms.
@@ -1565,18 +1568,36 @@ PropDefinitions:
       - Invasive Ductal Carcinoma #408643008
       - Mixed Lobular and Ductal Breast Carcinoma #444604002
       - Female Breast Carcinoma #447782002
+      - Rectal Adenocarcinoma
+      - Inflammatory Breast Carcinoma
+      - Ovarian Serous Cystadenoma
+      - Prostate Adenoma
+      - Acinar Cell Carcinoma
+      - Acute Myeloid Leukemia with Maturation
+      - Esophageal Squamous Cell Carcinoma
+      - Ductal Breast Carcinoma In Situ
+      - Primary Peritoneal Serous Papillary Adenocarcinoma
+      - Acute Promyelocytic Leukemia with PML-RARA
+      - Malignant Ovarian Germ Cell Tumor
+      - Neuroendocrine Neoplasm
+      - Adenocarcinoma In Situ
+      - Colon Tubular Adenoma
+      - Ovarian Cystadenocarcinoma
+      - Cecum Adenocarcinoma
+      - Acute Myeloid Leukemia with Multilineage Dysplasia
+      - Malignant Mixed Mesodermal (Mullerian) Tumor
     Req: 'No'
   snomed_disease_code:
     Desc: A 9-digit numerical code for the primary disease with which the participant
       in question has been diagnosed.
-    Term:
-      - Origin: caDSR
-        Code: '6642369'
-        Value: Malignant Neoplasm Systematized Nomenclature of Medicine Clinical Terms Primary Anatomic Site
-        Version: '1'
-        Tags:
-          Provenance: CMB
-          Added: 05-28-24
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '6642369'  #this will need to be an EDP in the future
+    #    Value: Malignant Neoplasm Systematized Nomenclature of Medicine Clinical Terms Primary Anatomic Site
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: CMB
+    #      Added: 05-28-24
     Src: Data Submitter
     #Type: integer
     Enum:
@@ -1631,6 +1652,25 @@ PropDefinitions:
       - "255084004" #Anal Carcinoma
       - "444604002" #Mixed Lobular and Ductal Breast Carcinoma
       - "447782002" #Female Breast Carcinoma
+      - "58477004"
+      - "51642000"
+      - "119421006"
+      - "45410002"
+      - "91861009"
+      - "21173002"
+      - "15674004"
+      - "109889007"
+      - "128928004"
+      - "314191009"
+      - "254840009"
+      - "110004001"
+      - "413443009"
+      - "103691009"
+      - "112684005"
+      - "413446001"
+      - "254869000"
+      - "276804009"
+      - "444898006"
     Req: 'No'
   icd_o_primary_site:
     Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3).
@@ -1742,17 +1782,17 @@ PropDefinitions:
     Src: Data Submitter
     #Type: string
     Enum:
-      # - GB
-      # - GX
-      # - G1
-      # - G2
-      # - G3
-      # - G4
-      # - High Grade
-      # - Intermediate Grade
-      # - Low Grade
-      # - Not Applicable
-      # - Not Reported 
+      - GB
+      - GX
+      - G1
+      - G2
+      - G3
+      - G4
+      - High Grade
+      - Intermediate Grade
+      - Low Grade
+      - Not Applicable
+      - Not Reported 
       - Grade cannot be assessed # Value exactly as used by the CMB
       - Borderline malignancy # Value exactly as used by the CMB
       - Well Differentiated # Value exactly as used by the CMB
@@ -2071,11 +2111,11 @@ PropDefinitions:
           Provenance: CIDC-CIMAC
           Added: 07-15-2026
     Src: Data Submitter
-    Type: string
-    #Enum:
-    #   - Yes
-    #   - No
-    #   - Unknown
+    #Type: string
+    Enum:
+       - Yes
+       - No
+       - Unknown
     Req: Preferred
   off_treatment_reason:
     Desc: An explanation describing why an individual is no longer receiving protocol therapy.
@@ -2318,6 +2358,7 @@ PropDefinitions:
         Tags:
           Provenance: CIDC
           Added: 10-14-25
+        useNullCDE: Yes
     Src: Data Submitter
     Type: string
     Req: 'Yes'
@@ -2743,6 +2784,7 @@ PropDefinitions:
         Tags:
           Provenance: CMB
           Added: 06-03-24
+        useNullCDE: Yes
     Src: Data Submitter
     Type: string
     Req: 'Yes'
@@ -3116,11 +3158,11 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    Type: string
-    #Enum: 
-    #  - Next Generation Sequencing
-    #  - Immune
-    #  - Cell Based
+    #Type: string
+    Enum: 
+      - Next Generation Sequencing
+      - Immune
+      - Cell Based
     Req: 'Yes'
   assay_type: 
     Desc: The type of assay performed on the biospecimen. 
@@ -3247,10 +3289,10 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    Type: string
-    #Enum: 
-    #  - 'Yes'
-    #  - 'No'
+    #Type: string
+    Enum: 
+      - 'Yes'
+      - 'No'
     Req: 'Preferred'
   sequencing_depth:
     Desc: The average number of times each base in the target region is sequenced,
