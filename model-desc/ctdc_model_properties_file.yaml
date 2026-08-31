@@ -1017,14 +1017,15 @@ PropDefinitions:
     Src: Data Submitter 
     Type: 
       value_type: list
-      Enum: # Currently reflective only of the values used by the CMB
-        - American Indian or Alaska Native
-        - Asian
-        - Black or African American
-        - Native Hawaiian or other Pacific Islander
-        - White
-        - Not Reported
-        - Unknown
+      item_type: string
+      #Enum: # Currently reflective only of the values used by the CMB
+      #  - American Indian or Alaska Native
+      #  - Asian
+      #  - Black or African American
+      #  - Native Hawaiian or other Pacific Islander
+      #  - White
+      #  - Not Reported
+      #  - Unknown
     Req: 'Yes'
   ethnicity:
     Desc: The text for reporting information about ethnicity based on the Office
@@ -1038,12 +1039,12 @@ PropDefinitions:
           Provenance: CMB
           Added: 5-31-24
     Src: Data Submitter
-    #Type: string
-    Enum: # Currently reflective only of the values used by the CMB
-      - Hispanic or Latino
-      - Not Hispanic or Latino
-      - Not reported
-      - Unknown
+    Type: string
+    #Enum: # Currently reflective only of the values used by the CMB
+    #  - Hispanic or Latino
+    #  - Not Hispanic or Latino
+    #  - Not reported
+    #  - Unknown
     Req: 'Yes'
   sex:
     Desc: A textual description of a person's sex at birth.
@@ -1056,12 +1057,12 @@ PropDefinitions:
           Provenance: CMB
           Added: 5-31-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Female
-      - Intersex
-      - Male
-      - Unknown
+    Type: string
+    #Enum:
+    #  - Female
+    #  - Intersex
+    #  - Male
+    #  - Unknown
     Req: 'Yes'
   height:
     Desc: The height of the participant as of enrollment, measured in cm.
@@ -1153,18 +1154,18 @@ PropDefinitions:
           Provenance: CMB
           Added: 5-31-24  
     Src: Data Submitter
-    #Type: string
-    Enum: # Reflective of the values used by the CMB
-      - No formal education
-      - Grade school
-      - Not high school graduate
-      - High school graduate (including equivalency)
-      - Some college or Associate degree
-      - Bachelor's degree
-      - Master's degree
-      - Doctoral or professional degree
-      - Declined to answer
-      - NA
+    Type: string
+    #Enum: # Reflective of the values used by the CMB
+    #  - No formal education
+    #  - Grade school
+    #  - Not high school graduate
+    #  - High school graduate (including equivalency)
+    #  - Some college or Associate degree
+    #  - Bachelor's degree
+    #  - Master's degree
+    #  - Doctoral or professional degree
+    #  - Declined to answer
+    #  - NA
     Req: Preferred
   ncbi_taxonomy_id:
     Desc: A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/), which
