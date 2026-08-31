@@ -2519,17 +2519,17 @@ PropDefinitions:
           Provenance: CIDC
           Added: 10-16-25 
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Complete Response
-      - Partial Response
-      - Less than partial response
-      - Stable Disease
-      - Progressive Disease
-      - Not Assessed
-      - Too Early
-      - Not Evaluable
-      - Unknown
+    Type: string
+    #Enum:
+    #  - Complete Response
+    #  - Partial Response
+    #  - Less than partial response
+    #  - Stable Disease
+    #  - Progressive Disease
+    #  - Not Assessed
+    #  - Too Early
+    #  - Not Evaluable
+    #  - Unknown
     Req: Preferred
   response_system_property:
     Desc: The type of standard from which a judgment concerning disease response to therapy can be established
