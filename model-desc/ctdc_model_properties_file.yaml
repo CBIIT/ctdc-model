@@ -1352,12 +1352,12 @@ PropDefinitions:
           Provenance: CMB
           Added: 10-06-25 
     Src: Data Submitter
-    #Type: string
-    Enum: # Currently reflective only of the values used by the CMB
-      - NCI Thesaurus
-      - MedDRA
-      - ICD-O-3
-      - ICD-10-CM
+    Type: string
+    #Enum: # Currently reflective only of the values used by the CMB
+    #  - NCI Thesaurus
+    #  - MedDRA
+    #  - ICD-O-3
+    #  - ICD-10-CM
     Req: 'No'
     Key: false
   disease_staging_system:
@@ -1426,22 +1426,22 @@ PropDefinitions:
           Added: 05-28-24
         useNullCDE: Yes
     Src: Data Submitter
-    #Type: string
-    Enum: # Currently reflective only of the values used by the CMB
-      - Colorectal cancer, NOS
-      - Acute myeloid leukemia, NOS
-      - Adenocarcinoma of the gastroesophageal junction
-      - Melanoma
-      - Myeloma, NOS
-      - Non-small cell lung cancer, NOS
-      - Prostate cancer, NOS
-      - Small cell lung cancer
-      - Invasive breast carcinoma
-      - Fallopian tube carcinoma
-      - Gastric cancer, NOS
-      - Primary peritoneal carcinoma
-      - Esophageal cancer, NOS
-      - Ovarian epithelial cancer
+    Type: string
+    #Enum: # Currently reflective only of the values used by the CMB
+    #  - Colorectal cancer, NOS
+    #  - Acute myeloid leukemia, NOS
+    #  - Adenocarcinoma of the gastroesophageal junction
+    #  - Melanoma
+    #  - Myeloma, NOS
+    #  - Non-small cell lung cancer, NOS
+    #  - Prostate cancer, NOS
+    #  - Small cell lung cancer
+    #  - Invasive breast carcinoma
+    #  - Fallopian tube carcinoma
+    #  - Gastric cancer, NOS
+    #  - Primary peritoneal carcinoma
+    #  - Esophageal cancer, NOS
+    #  - Ovarian epithelial cancer
     Req: 'No'
   icd_10_disease_code:
     Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans.
@@ -1466,22 +1466,22 @@ PropDefinitions:
           Provenance: CMB
           Added: 05-28-24
     Src: Data Submitter
-    #Type: string
-    Enum: # Currently reflective only of values used in the v5 CMB data submission
-      - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
-      - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
-      - Colorectal Carcinoma                            # meddra code 10010029
-      - Gastric Carcinoma                               # meddra code 10017760
-      - Invasive Breast Carcinoma                       # meddra code 10006190 NEW
-      - Melanoma                                        # meddra code 10053571 
-      - Non-Small Cell Lung Carcinoma                   # meddra code 10029514
-      - Ovarian Carcinoma                               # meddra code 10033159 NEW
-      - Plasma Cell Myeloma                             # meddra code 10028566 
-      - Prostate Carcinoma                              # meddra code 10036910 
-      - Small Cell Lung Carcinoma                       # meddra code 10041071
-      - Esophageal Carcinoma                            # meddra code 10030157
-      - Fallopian Tube Carcinoma                        # meddra code 10016180
-      - Primary Peritoneal Carcinoma                    # meddra code 10026669
+    Type: string
+    #Enum: # Currently reflective only of values used in the v5 CMB data submission
+    #  - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
+    #  - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
+    #  - Colorectal Carcinoma                            # meddra code 10010029
+    #  - Gastric Carcinoma                               # meddra code 10017760
+    #  - Invasive Breast Carcinoma                       # meddra code 10006190 NEW
+    #  - Melanoma                                        # meddra code 10053571 
+    #  - Non-Small Cell Lung Carcinoma                   # meddra code 10029514
+    #  - Ovarian Carcinoma                               # meddra code 10033159 NEW
+    #  - Plasma Cell Myeloma                             # meddra code 10028566 
+    #  - Prostate Carcinoma                              # meddra code 10036910 
+    #  - Small Cell Lung Carcinoma                       # meddra code 10041071
+    #  - Esophageal Carcinoma                            # meddra code 10030157
+    #  - Fallopian Tube Carcinoma                        # meddra code 10016180
+    #  - Primary Peritoneal Carcinoma                    # meddra code 10026669
     Req: 'No'
   meddra_disease_code:
     Desc: The MedDRA code describing a medical condition and/or anatomic location.
@@ -1496,22 +1496,22 @@ PropDefinitions:
           Provenance: CMB
           Added: 05-28-24
     Src: Data Submitter
-    #Type: integer
-    Enum: # Currently reflective only of the values used in the v3 CMB data submission
-      - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
-      - "10066354" # Adenocarcinoma of the Gastroesophageal Junction
-      - "10010029" # Colorectal Carcinoma
-      - "10006190" # Invasive Breast Carcinoma NEW
-      - "10053571" # Melanoma
-      - "10029514" # Non-Small Cell Lung Carcinoma
-      - "10033159" # Ovarian Carcinoma NEW
-      - "10028566" # Plasma Cell Myeloma
-      - "10036910" # Prostate Carcinoma
-      - "10041071" # Small Cell Lung Carcinoma
-      - "10017760" # Gastric Cancer NOS
-      - "10030157" # Oesophageal Carcioma
-      - "10016180" # Fallopian Carcinoma
-      - "10026669" # Primary Peritoneal Carcinoma 
+    Type: integer
+    #Enum: # Currently reflective only of the values used in the v3 CMB data submission
+    #  - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
+    #  - "10066354" # Adenocarcinoma of the Gastroesophageal Junction
+    #  - "10010029" # Colorectal Carcinoma
+    #  - "10006190" # Invasive Breast Carcinoma NEW
+    #  - "10053571" # Melanoma
+    #  - "10029514" # Non-Small Cell Lung Carcinoma
+    #  - "10033159" # Ovarian Carcinoma NEW
+    #  - "10028566" # Plasma Cell Myeloma
+    #  - "10036910" # Prostate Carcinoma
+    #  - "10041071" # Small Cell Lung Carcinoma
+    #  - "10017760" # Gastric Cancer NOS
+    #  - "10030157" # Oesophageal Carcioma
+    #  - "10016180" # Fallopian Carcinoma
+    #  - "10026669" # Primary Peritoneal Carcinoma 
     Req: 'No'
   snomed_disease_term:
     Desc: The term describing disease in humans based on the Systematized Nomenclature of Medicine Clinical Terms.
@@ -1524,71 +1524,71 @@ PropDefinitions:
           Provenance: CMB
           Added: 05-28-24
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - Acute Myeloid Leukemia #17788007
-      - Acute Myeloid Leukemia with Myelodysplasia-Related Changes #445448008
-      - Acute Myeloid Leukemia Arising from Previous Myelodysplastic Syndrome # 128827005
-      - Adenocarcinoma #35917007 #443961001
-      - Amelanotic Melanoma #70594002
-      - Breast Carcinoma #254838004
-      - Colon Adenoma #428054006
-      - Colon Carcinoma #269533000
-      - Colorectal Adenocarcinoma #408645001
-      - Cutaneous Melanoma #93655004
-      - Epithelioid Cell Melanoma #37138001
-      - Esophageal Adenocarcinoma #276803003
-      - Esophageal Carcinoma #372138000
-      - Fallopian Tube Carcinoma #276870001
-      - Gastric Adenocarcinoma #408647009
-      - Invasive Ductal Carcinoma, Not Otherwise Specified #408643008
-      - Invasive Lobular Breast Carcinoma #89740008
-      - Lung Carcinoma #448993007
-      - Lung Papillary Adenoma #24482001
-      - Lung Adenocarcinoma 
-      - Malignant neoplasm of ovary #254849005
-      - Melanoma #2092003 #372244006
-      - Mucinous Adenocarcinoma #72495009
-      - Multiple myeloma #55921005
-      - Multiple myeloma and immunoproliferative disease #188717001
-      - Neuroendocrine Carcinoma #253000007
-      - Nodular Melanoma #2142002 #254731001
-      - Non-Small Cell Lung Carcinoma #254637007
-      - Ovarian Carcinoma #254849005
-      - Plasma Cell Leukemia #128922003
-      - Plasma Cell Myeloma #109989006 #55921005
-      - Prostate Adenocarcinoma #399490008
-      - Prostate Carcinoma #254900004 #399068003
-      - Rectal Adenoma #399730005
-      - Rectal Carcinoma #254582000
-      - Small Cell Carcinoma #74364000
-      - Small Cell Lung Carcinoma #254632001 #254633006
-      - Squamous Cell Carcinoma #28899001 #402815007
-      - Squamous Cell Lung Carcinoma #254634000
-      - Superficial Spreading Melanoma #254730000
-      - Triple-Negative Breast Carcinoma #706970001
-      - Anal Carcinoma #255084004
-      - Invasive Ductal Carcinoma #408643008
-      - Mixed Lobular and Ductal Breast Carcinoma #444604002
-      - Female Breast Carcinoma #447782002
-      - Rectal Adenocarcinoma
-      - Inflammatory Breast Carcinoma
-      - Ovarian Serous Cystadenoma
-      - Prostate Adenoma
-      - Acinar Cell Carcinoma
-      - Acute Myeloid Leukemia with Maturation
-      - Esophageal Squamous Cell Carcinoma
-      - Ductal Breast Carcinoma In Situ
-      - Primary Peritoneal Serous Papillary Adenocarcinoma
-      - Acute Promyelocytic Leukemia with PML-RARA
-      - Malignant Ovarian Germ Cell Tumor
-      - Neuroendocrine Neoplasm
-      - Adenocarcinoma In Situ
-      - Colon Tubular Adenoma
-      - Ovarian Cystadenocarcinoma
-      - Cecum Adenocarcinoma
-      - Acute Myeloid Leukemia with Multilineage Dysplasia
-      - Malignant Mixed Mesodermal (Mullerian) Tumor
+    Type: string
+    #Enum: 
+    #  - Acute Myeloid Leukemia #17788007
+    #  - Acute Myeloid Leukemia with Myelodysplasia-Related Changes #445448008
+    #  - Acute Myeloid Leukemia Arising from Previous Myelodysplastic Syndrome # 128827005
+    #  - Adenocarcinoma #35917007 #443961001
+    #  - Amelanotic Melanoma #70594002
+    #  - Breast Carcinoma #254838004
+    #  - Colon Adenoma #428054006
+    #  - Colon Carcinoma #269533000
+    #  - Colorectal Adenocarcinoma #408645001
+    #  - Cutaneous Melanoma #93655004
+    #  - Epithelioid Cell Melanoma #37138001
+    #  - Esophageal Adenocarcinoma #276803003
+    #  - Esophageal Carcinoma #372138000
+    #  - Fallopian Tube Carcinoma #276870001
+    #  - Gastric Adenocarcinoma #408647009
+    #  - Invasive Ductal Carcinoma, Not Otherwise Specified #408643008
+    #  - Invasive Lobular Breast Carcinoma #89740008
+    #  - Lung Carcinoma #448993007
+    #  - Lung Papillary Adenoma #24482001
+    #  - Lung Adenocarcinoma 
+    #  - Malignant neoplasm of ovary #254849005
+    #  - Melanoma #2092003 #372244006
+    #  - Mucinous Adenocarcinoma #72495009
+    #  - Multiple myeloma #55921005
+    #  - Multiple myeloma and immunoproliferative disease #188717001
+    #  - Neuroendocrine Carcinoma #253000007
+    #  - Nodular Melanoma #2142002 #254731001
+    #  - Non-Small Cell Lung Carcinoma #254637007
+    #  - Ovarian Carcinoma #254849005
+    #  - Plasma Cell Leukemia #128922003
+    #  - Plasma Cell Myeloma #109989006 #55921005
+    #  - Prostate Adenocarcinoma #399490008
+    #  - Prostate Carcinoma #254900004 #399068003
+    #  - Rectal Adenoma #399730005
+    #  - Rectal Carcinoma #254582000
+    #  - Small Cell Carcinoma #74364000
+    #  - Small Cell Lung Carcinoma #254632001 #254633006
+    #  - Squamous Cell Carcinoma #28899001 #402815007
+    #  - Squamous Cell Lung Carcinoma #254634000
+    #  - Superficial Spreading Melanoma #254730000
+    #  - Triple-Negative Breast Carcinoma #706970001
+    #  - Anal Carcinoma #255084004
+    #  - Invasive Ductal Carcinoma #408643008
+    #  - Mixed Lobular and Ductal Breast Carcinoma #444604002
+    #  - Female Breast Carcinoma #447782002
+    #  - Rectal Adenocarcinoma
+    #  - Inflammatory Breast Carcinoma
+    #  - Ovarian Serous Cystadenoma
+    #  - Prostate Adenoma
+    #  - Acinar Cell Carcinoma
+    #  - Acute Myeloid Leukemia with Maturation
+    #  - Esophageal Squamous Cell Carcinoma
+    #  - Ductal Breast Carcinoma In Situ
+    #  - Primary Peritoneal Serous Papillary Adenocarcinoma
+    #  - Acute Promyelocytic Leukemia with PML-RARA
+    #  - Malignant Ovarian Germ Cell Tumor
+    #  - Neuroendocrine Neoplasm
+    #  - Adenocarcinoma In Situ
+    #   - Colon Tubular Adenoma
+    #  - Ovarian Cystadenocarcinoma
+    #  - Cecum Adenocarcinoma
+    #  - Acute Myeloid Leukemia with Multilineage Dysplasia
+    #  - Malignant Mixed Mesodermal (Mullerian) Tumor
     Req: 'No'
   snomed_disease_code:
     Desc: A 9-digit numerical code for the primary disease with which the participant
@@ -1759,17 +1759,17 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 05-28-24 
     Src: Data Submitter
-    #Type: string
-    Enum: # Currently reflective only of the values used by the CMB
-      - Stage III
-      - Stage IIIA
-      - Stage IIIB
-      - Stage IIIC
-      - Stage IV
-      - Stage IVA
-      - Stage IVB
-      - Stage IVC
-      - NA 
+    Type: string
+    #Enum: # Currently reflective only of the values used by the CMB
+    #  - Stage III
+    #  - Stage IIIA
+    #  - Stage IIIB
+    #  - Stage IIIC
+    #  - Stage IV
+    #  - Stage IVA
+    #  - Stage IVB
+    #  - Stage IVC
+    #  - NA 
     Req: Preferred
   tumor_grade:
     Desc: A text term to express the degree of abnormality of cancer cells as a measure
@@ -1783,25 +1783,25 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-28-24 
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - GB
-      - GX
-      - G1
-      - G2
-      - G3
-      - G4
-      - High Grade
-      - Intermediate Grade
-      - Low Grade
-      - Not Applicable
-      - Not Reported 
-      - Grade cannot be assessed # Value exactly as used by the CMB
-      - Borderline malignancy # Value exactly as used by the CMB
-      - Well Differentiated # Value exactly as used by the CMB
-      - Moderately Differentiated # Value exactly as used by the CMB
-      - Poorly Differentiated # Value exactly as used by the CMB
-      - Undifferentiated grade # Value exactly as used by the CMB
+    Type: string
+    #Enum:
+    #  - GB
+    #  - GX
+    #  - G1
+    #  - G2
+    #  - G3
+    #  - G4
+    #  - High Grade
+    #  - Intermediate Grade
+    #  - Low Grade
+    #  - Not Applicable
+    #  - Not Reported 
+    #  - Grade cannot be assessed # Value exactly as used by the CMB
+    #  - Borderline malignancy # Value exactly as used by the CMB
+    #  - Well Differentiated # Value exactly as used by the CMB
+    #  - Moderately Differentiated # Value exactly as used by the CMB
+    #  - Poorly Differentiated # Value exactly as used by the CMB
+    #  - Undifferentiated grade # Value exactly as used by the CMB
     Req: Preferred
   date_of_diagnosis:
     Desc: The date of the procedure or evaluation used to determine the diagnosis.
