@@ -2003,17 +2003,17 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-23-26
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Complete Response
-      - Partial Response
-      - Less than partial response
-      - Stable Disease
-      - Progressive Disease
-      - Not Assessed
-      - Too Early
-      - Not Evaluable
-      - Unknown
+    Type: string
+    #Enum:
+    #  - Complete Response
+    #  - Partial Response
+    #  - Less than partial response
+    #  - Stable Disease
+    #  - Progressive Disease
+    #  - Not Assessed
+    #  - Too Early
+    #  - Not Evaluable
+    #  - Unknown
     Req: Preferred
   best_response_to_therapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment.
@@ -2026,17 +2026,17 @@ PropDefinitions:
           Provenance: CTDC
           Added: 06-23-26
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Complete Response
-      - Partial Response
-      - Less than partial response
-      - Stable Disease
-      - Progressive Disease
-      - Not Assessed
-      - Too Early
-      - Not Evaluable
-      - Unknown
+    Type: string
+    #Enum:
+    #  - Complete Response
+    #  - Partial Response
+    #  - Less than partial response
+    #  - Stable Disease
+    #  - Progressive Disease
+    #  - Not Assessed
+    #  - Too Early
+    #  - Not Evaluable
+    #  - Unknown
     Req: Preferred
   date_of_current_response_to_therapy: 
     Desc: The number of days from enrollment to treatment response.
@@ -2075,16 +2075,16 @@ PropDefinitions:
           Provenance: CTDC
           Added: 06-23-2026
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Surgery
-      - Radiation
-      - Chem
-      - Hormone
-      - Immuno
-      - Stem Cell
-      - Ablative
-      - Palliative
+    Type: string
+    #Enum:
+    #  - Surgery
+    #  - Radiation
+    #  - Chem
+    #  - Hormone
+    #  - Immuno
+    #  - Stem Cell
+    #  - Ablative
+    #  - Palliative
     Req: Preferred
   therapy_category:
     Desc: An indication if the therapy is targeted, non-targeted, or unknown
@@ -2098,10 +2098,10 @@ PropDefinitions:
           Added: 06-23-2026
     Src: Data Submitter
     #Type: string
-    Enum:
-      - Targeted
-      - Non-Targeted
-      - Unknown
+    #Enum:
+    #  - Targeted
+    #  - Non-Targeted
+    #  - Unknown
     Req: Preferred
   off_treatment:
     Desc: A response to indicate whether an individual has stopped or is not receiving therapy for a period of time.
