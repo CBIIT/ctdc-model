@@ -3131,23 +3131,23 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - atacseq
-      - rnaseq
-      - scrnaseq
-      - visium
-      - wes 
-      - tcr 
-      - cytof
-      - elisa 
-      - nulisa 
-      - cdtdna
-      - olink
-      - ihc 
-      - mibi 
-      - hande 
-      - microbiome 
+    Type: string
+    #Enum: 
+    #  - atacseq
+    #  - rnaseq
+    #  - scrnaseq
+    #  - visium
+    #  - wes 
+    #  - tcr 
+    #  - cytof
+    #  - elisa 
+    #  - nulisa 
+    #  - cdtdna
+    #  - olink
+    #  - ihc 
+    #  - mibi 
+    #  - hande 
+    #  - microbiome 
     Req: 'Yes'
   qc_status: 
     Desc: Overall quality control flag based on predefined thresholds. 
@@ -3160,10 +3160,10 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - pass
-      - fail
+    Type: string
+    #Enum: 
+    #  - pass
+    #  - fail
     Req: 'Preferred'
   
 # Next Generation Sequencing Assay Node
