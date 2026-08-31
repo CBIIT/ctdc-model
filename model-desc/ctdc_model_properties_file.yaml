@@ -3609,14 +3609,14 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-30-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - docx
-      - gz
-      - pdf
-      - vcf
-      - zip
-      - dcm
+    Type: string
+    #Enum:
+    #  - docx
+    #  - gz
+    #  - pdf
+    #  - vcf
+    #  - zip
+    #  - dcm
     Req: 'Yes'
   data_file_size:
     Desc: The measure, expressed in bytes, as to how much space a data file takes
@@ -3658,11 +3658,11 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-30-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - md5sum
-      - sha1
-      - sha256
+    Type: string
+    #Enum:
+    #  - md5sum
+    #  - sha1
+    #  - sha256
     Req: 'Yes'
   data_file_compression_status:
     Desc: The state of data when saved to storage space or during data transmission.
@@ -3675,11 +3675,11 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-30-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Compressed
-      - Uncompressed
-      - Unknown
+    Type: string
+    #Enum:
+    #  - Compressed
+    #  - Uncompressed
+    #  - Unknown
     Req: Preferred
   data_file_uuid:
     Desc: A unique sequence of characters used to identify the contents of an electronic record.
