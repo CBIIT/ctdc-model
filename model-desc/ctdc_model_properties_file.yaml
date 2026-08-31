@@ -3400,7 +3400,7 @@ PropDefinitions:
 # Immune Assay Node
   immune_assay_record_id:
     Desc: A sequence of characters used to identify the immune assay conducted on
-      the biospecimen.                                                                               
+      the biospecimen.
     Term:
       - Origin: caDSR
         Code: 'TBD'
@@ -3466,12 +3466,12 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - Protein
-      - Peptide
-      - RNA
-      - Other 
+    Type: string
+    #Enum: 
+    #  - Protein
+    #  - Peptide
+    #  - RNA
+    #  - Other 
     Req: 'No'
  
 # Cell Based Assay Node
@@ -3540,11 +3540,11 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - Proprietary 
-      - Random Forest Classifier
-      - Other
+    Type: string
+    #Enum: 
+    #  - Proprietary 
+    #  - Random Forest Classifier
+    #  - Other
     Req: 'No'
 
 # File Node
