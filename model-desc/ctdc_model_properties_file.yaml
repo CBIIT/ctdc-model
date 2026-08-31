@@ -2266,7 +2266,6 @@ PropDefinitions:
         Tags:
           Provenance: CTDC
           Added: 05-29-24
-
     Src: Data Submitter
     Type:
       units: 
@@ -2300,10 +2299,10 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-16-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
     Req: 'Preferred'
   surgical_procedure_findings:
     Desc: Words which describe observations that are made during surgery. A narrative
