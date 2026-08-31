@@ -3087,51 +3087,6 @@ PropDefinitions:
     #  - Not Reported
     #  - Other
     Req: 'No'
-  azimuth_reference:
-    Desc: Molecular Analysis Cell Annotation Azimuth Reference Type
-    Term:
-      - Origin: caDSR
-        Code: '16967933'
-        Value: Molecular Analysis Cell Annotation
-        Version: '1'
-        Tags:
-          Provenance: CIMAC-CIDC 
-          Added: 04-28-26
-    Src: Data Submitter
-    Type: string
-    Enum:
-      - Human PBMC
-      - Human Motor Cortex
-      - Mouse Motor Cortex
-      - Human Pancreas
-      - Human Fetal Development
-      - Human Kidney
-      - Human Bone Marrow
-      - Human Lung v2 (HLCA)
-      - Human Adipose
-      - Human Heart
-      - Human Liver
-      - Human Tonsil v2
-      - Mouse Pansci
-      - None
-    Req: 'No'
-  tabula_sapiens_reference:
-    Desc: Molecular Analysis Cell Annotation Tabula Sapiens Reference Type
-    Term:
-      - Origin: caDSR
-        Code: '16967934'
-        Value: Molecular Analysis Cell Annotation
-        Version: '1'
-        Tags:
-          Provenance: CIMAC-CIDC 
-          Added: 04-28-26
-    Src: Data Submitter
-    #Type: string
-    Enum: 
-      - Tabula Sapiens v1.0
-      - Tabula Sapiens v2.0 
-      - None 
-    Req: 'No'
   
 # Assay Node
   assay_record_id: 
@@ -3348,6 +3303,51 @@ PropDefinitions:
           Added: 01-20-26
     Src: Data Submitter
     Type: string
+    Req: 'No'
+    azimuth_reference:
+    Desc: Molecular Analysis Cell Annotation Azimuth Reference Type
+    Term:
+      - Origin: caDSR
+        Code: '16967933'
+        Value: Molecular Analysis Cell Annotation
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC 
+          Added: 04-28-26
+    Src: Data Submitter
+    Type: string
+    Enum:
+      - Human PBMC
+      - Human Motor Cortex
+      - Mouse Motor Cortex
+      - Human Pancreas
+      - Human Fetal Development
+      - Human Kidney
+      - Human Bone Marrow
+      - Human Lung v2 (HLCA)
+      - Human Adipose
+      - Human Heart
+      - Human Liver
+      - Human Tonsil v2
+      - Mouse Pansci
+      - None
+    Req: 'No'
+  tabula_sapiens_reference:
+    Desc: Molecular Analysis Cell Annotation Tabula Sapiens Reference Type
+    Term:
+      - Origin: caDSR
+        Code: '16967934'
+        Value: Molecular Analysis Cell Annotation
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC 
+          Added: 04-28-26
+    Src: Data Submitter
+    #Type: string
+    Enum: 
+      - Tabula Sapiens v1.0
+      - Tabula Sapiens v2.0 
+      - None 
     Req: 'No'
   azimuth_reference_genome_version:
     Desc: The version of the reference genome used for aligning sequencing reads
