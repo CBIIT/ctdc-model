@@ -1230,18 +1230,18 @@ PropDefinitions:
           Provenance: DSS
           Added: 5-31-24  
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Asbestos Exposure
-      - Chemical Exposure
-      - Marijuana Smoke Exposure
-      - Radiation Exposure
-      - Radon Exposure
-      - Respirable Crystalline Silica Exposure
-      - Smoke Exposure
-      - Smokeless Tobacco Exposure
-      - Tobacco Related Exposure
-      - Wood Dust Exposure
+    Type: string
+    #Enum:
+    #  - Asbestos Exposure
+    #  - Chemical Exposure
+    #  - Marijuana Smoke Exposure
+    #  - Radiation Exposure
+    #  - Radon Exposure
+    #  - Respirable Crystalline Silica Exposure
+    #  - Smoke Exposure
+    #  - Smokeless Tobacco Exposure
+    #  - Tobacco Related Exposure
+    #  - Wood Dust Exposure
     Req: Preferred
   carcinogen_exposure:
     Desc: An indication of whether the participant was exposed to environmental/workplace
@@ -1257,12 +1257,12 @@ PropDefinitions:
           Provenance: CMB
           Added: 5-31-24  
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Unknown
-      - NA
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
+    #  - Unknown
+    #  - NA
     Req: Preferred
   body_mass_index:
     Desc: Patient/Participant body weight in kilograms divided by the square of his/her height in meters [i.e., wt/(ht)2 ], to yield a derived or calculated BMI result.
