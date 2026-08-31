@@ -2584,17 +2584,16 @@ PropDefinitions:
         Tags:
           Provenance: DSS
           Added: 05-31-24 
-
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - ALIVE # Value exactly as used by the CMB
-      - DEAD # Value exactly as used by the CMB
-      - UNKNOWN # Value exactly as used by the CMB
-      - Alive with Disease # Value exactly as used by the CMB
-      - Alive with No Evidence of Disease # Value exactly as used by the CMB
-      - Alive, Disease Status Unknown # Value exactly as used by the CMB
-      - Dead # Value exactly as used by the CMB
+    Type: string
+    #Enum:
+    #  - ALIVE # Value exactly as used by the CMB
+    #  - DEAD # Value exactly as used by the CMB
+    #  - UNKNOWN # Value exactly as used by the CMB
+    #  - Alive with Disease # Value exactly as used by the CMB
+    #  - Alive with No Evidence of Disease # Value exactly as used by the CMB
+    #  - Alive, Disease Status Unknown # Value exactly as used by the CMB
+    #  - Dead # Value exactly as used by the CMB
     Req: 'No'
   primary_cause_of_death:
     Desc: The circumstance or condition of greatest rank or importance that results
@@ -2621,11 +2620,11 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 05-31-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Unknown
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
+    #  - Unknown
     Req: 'Yes'
   off_study_reason:
     Desc: An explanation describing why an individual is no longer receiving protocol therapy.
@@ -2636,50 +2635,50 @@ PropDefinitions:
         Version: '1'
         Tags:
           Provenance: CIMAC-CIDC
-          Added: 05-31-24                                                                              #
+          Added: 05-31-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - ADVERSE EVENT
-      - APPROVED DRUG AVAILABLE FOR INDICATION
-      - COMPLETED
-      - DEATH
-      - DISEASE RELAPSE
-      - FAILURE TO MEET CONTINUATION CRITERIA
-      - FAILURE TO MEET RANDOMIZATION CRITERIA
-      - LACK OF EFFICACY
-      - LOGISTICAL PROBLEM
-      - LOST TO FOLLOW-UP
-      - MET ELIGIBILITY CRITERIA BUT NOT NEEDED
-      - NEVER DOSED
-      - NO LONGER CLINICALLY BENEFITING
-      - NON-COMPLIANCE WITH NON-STUDY DEVICE
-      - NON-COMPLIANCE WITH STUDY DEVICE
-      - NON-COMPLIANCE WITH STUDY DRUG
-      - NON-COMPLIANCE WITH STUDY SCHEDULE
-      - OTHER
-      - PARTNER PREGNANCY
-      - PHYSICIAN DECISION
-      - PREGNANCY
-      - PROGRESSIVE DISEASE
-      - PROTOCOL DEVIATION
-      - PROTOCOL VIOLATION
-      - PROTOCOL-SPECIFIED WITHDRAWAL CRITERION MET
-      - RANDOMIZED BY MISTAKE
-      - RANDOMIZED BY MISTAKE WITH STUDY TREATMENT
-      - RANDOMIZED BY MISTAKE WITHOUT STUDY TREATMENT
-      - RECOVERY
-      - REQUIRES PROHIBITED MEDICATION
-      - SCREEN FAILURE
-      - SCREENING NOT COMPLETED
-      - SITE TERMINATED BY SPONSOR
-      - SPONSOR REQUEST
-      - STUDY TERMINATED BY SPONSOR
-      - TECHNICAL PROBLEMS
-      - WITHDRAWAL BY PARENT/GUARDIAN
-      - WITHDRAWAL BY SUBJECT
-      - WITHDRAWAL OF ASSENT
-      - WITHDRAWAL OF CONSENT
+    Type: string
+    #Enum:
+    #  - ADVERSE EVENT
+    #  - APPROVED DRUG AVAILABLE FOR INDICATION
+    #  - COMPLETED
+    #  - DEATH
+    #  - DISEASE RELAPSE
+    #  - FAILURE TO MEET CONTINUATION CRITERIA
+    #  - FAILURE TO MEET RANDOMIZATION CRITERIA
+    #  - LACK OF EFFICACY
+    #  - LOGISTICAL PROBLEM
+    #  - LOST TO FOLLOW-UP
+    #  - MET ELIGIBILITY CRITERIA BUT NOT NEEDED
+    #  - NEVER DOSED
+    #  - NO LONGER CLINICALLY BENEFITING
+    #  - NON-COMPLIANCE WITH NON-STUDY DEVICE
+    #  - NON-COMPLIANCE WITH STUDY DEVICE
+    #  - NON-COMPLIANCE WITH STUDY DRUG
+    #  - NON-COMPLIANCE WITH STUDY SCHEDULE
+    #  - OTHER
+    #  - PARTNER PREGNANCY
+    #  - PHYSICIAN DECISION
+    #  - PREGNANCY
+    #  - PROGRESSIVE DISEASE
+    #  - PROTOCOL DEVIATION
+    #  - PROTOCOL VIOLATION
+    #  - PROTOCOL-SPECIFIED WITHDRAWAL CRITERION MET
+    #  - RANDOMIZED BY MISTAKE
+    #  - RANDOMIZED BY MISTAKE WITH STUDY TREATMENT
+    #  - RANDOMIZED BY MISTAKE WITHOUT STUDY TREATMENT
+    #  - RECOVERY
+    #  - REQUIRES PROHIBITED MEDICATION
+    #  - SCREEN FAILURE
+    #  - SCREENING NOT COMPLETED
+    #  - SITE TERMINATED BY SPONSOR
+    #  - SPONSOR REQUEST
+    #  - STUDY TERMINATED BY SPONSOR
+    #  - TECHNICAL PROBLEMS
+    #  - WITHDRAWAL BY PARENT/GUARDIAN
+    #  - WITHDRAWAL BY SUBJECT
+    #  - WITHDRAWAL OF ASSENT
+    #  - WITHDRAWAL OF CONSENT
     Req: 'No'
   off_study_reason_other:
     Desc: A reason different than the one(s) previously specified describing why an individual is no longer receiving protocol therapy. 
