@@ -776,13 +776,14 @@ PropDefinitions:
     Src: Data Submitter
     Type:
       value_type: list
-      Enum: # Reflective of the image types available for CMB participants, all acceptable terms are exactly as used by both IDC and TCIA
-        - CT
-        - DX
-        - MR
-        - NM
-        - PT
-        - US
+      item_type: string
+      #Enum: # Reflective of the image types available for CMB participants, all acceptable terms are exactly as used by both IDC and TCIA
+      #  - CT
+      #  - DX
+      #  - MR
+      #  - NM
+      #  - PT
+      #  - US
     Req: 'Yes'
   image_collection_url:
     Desc: The specification of a node (file or directory) in a hierarchical file
@@ -829,10 +830,11 @@ PropDefinitions:
     Src: Data Submitter
     Type: 
       value_type: list
-      Enum: # Currently reflective only of the values used by the CMB
-        - Cloud
-        - Download
-        - Unrestricted
+      item_type: string
+      #: # Currently reflective only of the values used by the CMB
+      #  - Cloud
+      #  - Download
+      #  - Unrestricted
     Req: 'Yes'
   
 # Consent Group Node
