@@ -2723,23 +2723,23 @@ PropDefinitions:
           Added: 07-23-24
         useNullCDE: Yes
     Src: Data Submitter
-    #Type: string
-    Enum: #Acceptable values taken straight from the CMB Catalog Site
-      - Bone Marrow Aspirate
-      - Cell Block
-      - EDTA Blood
-      - FFPE Block
-      - Formalin Bone Marrow Biopsy
-      - Formalin Fixed Tissue
-      - FORMALIN FIXED TISSUE
-      - Snap Frozen Tissue
-      - Stained Bone Marrow Aspirate Slide
-      - Streck Blood
-      - Streck Blood to VARI
-      - Unstained Bone Marrow Aspirate Slide
-      - Unstained Slide
-      - Fresh Tissue in Media to PDMR
-      - Streck Blood to PDMR
+    Type: string
+    #Enum: #Acceptable values taken straight from the CMB Catalog Site
+    #  - Bone Marrow Aspirate
+    #  - Cell Block
+    #  - EDTA Blood
+    #  - FFPE Block
+    #  - Formalin Bone Marrow Biopsy
+    #  - Formalin Fixed Tissue
+    #  - FORMALIN FIXED TISSUE
+    #  - Snap Frozen Tissue
+    #  - Stained Bone Marrow Aspirate Slide
+    #  - Streck Blood
+    #  - Streck Blood to VARI
+    #  - Unstained Bone Marrow Aspirate Slide
+    #  - Unstained Slide
+    #  - Fresh Tissue in Media to PDMR
+    #  - Streck Blood to PDMR
     Req: 'Yes'
   specimen_category:
     Desc: The biospecimen grouping that describes the kind of material that forms
@@ -2753,26 +2753,26 @@ PropDefinitions:
           Provenance: CMB
         useNullCDE: Yes
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - BLOOD
-      - Blood
-      - BONE MARROW
-      - Bone Marrow
-      - BUCCAL CELL SAMPLE
-      - CEREBROSPINAL FLUID
-      - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
-      - Formalin Fixed Paraffin Embedded Tissue
-      - FORMALIN FIXED TISSUE
-      - Formalin Fixed Tissue
-      - FRESH TISSUE
-      - Fresh Tissue
-      - FROZEN TISSUE
-      - Frozen Tissue
-      - OTHER BODILY FLUIDs
-      - SALIVA
-      - STOOL
-      - URINE  
+    Type: string
+    #Enum:
+    #  - BLOOD
+    #  - Blood
+    #  - BONE MARROW
+    #  - Bone Marrow
+    #  - BUCCAL CELL SAMPLE
+    #  - CEREBROSPINAL FLUID
+    #  - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
+    #  - Formalin Fixed Paraffin Embedded Tissue
+    #  - FORMALIN FIXED TISSUE
+    #  - Formalin Fixed Tissue
+    #  - FRESH TISSUE
+    #  - Fresh Tissue
+    #  - FROZEN TISSUE
+    #  - Frozen Tissue
+    #  - OTHER BODILY FLUIDs
+    #  - SALIVA
+    #  - STOOL
+    #  - URINE  
     Req: 'Preferred'
   anatomical_collection_site:
     Desc: The location within the body from which a specimen was originally obtained
@@ -2802,12 +2802,12 @@ PropDefinitions:
           Added: 06-03-24
         useNullCDE: Yes
     Src: Data Submitter
-    #Type: string
-    Enum: #Acceptable values taken straight from the CMB Catalog Site.
-      - Metastatic
-      - Normal
-      - Primary
-      - Adjacent Non-Tumor
+    Type: string
+    #Enum: #Acceptable values taken straight from the CMB Catalog Site.
+    #  - Metastatic
+    #  - Normal
+    #  - Primary
+    #  - Adjacent Non-Tumor
     Req: Preferred
   icd_o_3_tissue_morphology:
     Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology.
@@ -2832,17 +2832,17 @@ PropDefinitions:
         Tags:
           Provenance: CMB
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - ARCHIVAL
-      - BASELINE
-      - ON TREATMENT
-      - PROGRESSION
-      - Baseline (Fresh)
-      - On Treatment (Fresh)
-      - Archival
-      - Progression (Fresh)
-      - Post-Treatment (No progression)
+    Type: string
+    #Enum:
+    #  - ARCHIVAL
+    #  - BASELINE
+    #  - ON TREATMENT
+    #  - PROGRESSION
+    #  - Baseline (Fresh)
+    #  - On Treatment (Fresh)
+    #  - Archival
+    #  - Progression (Fresh)
+    #  - Post-Treatment (No progression)
     Req: 'Yes'
   collection_date:
     Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis.
@@ -2968,14 +2968,14 @@ PropDefinitions:
           Provenance: CIDC 
           Added: 12-11-25
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - QC Pass
-      - Pass at Risk
-      - QC Failed
-      - QC Lost
-      - Not Shipped
-      - https://cadsr.cancer.gov/onedata/Home.jsp
+    Type: string
+    #Enum:
+    #  - QC Pass
+    #  - Pass at Risk
+    #  - QC Failed
+    #  - QC Lost
+    #  - Not Shipped
+    #  - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'
   viable_tumor_area_percentage:
     Desc: The percentage of viable tumorous tissue surface area in a specimen.
@@ -3080,12 +3080,12 @@ PropDefinitions:
           Provenance: CIMAC-CIDC 
           Added: 04-28-26
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Not Reported
-      - Other
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
+    #  - Not Reported
+    #  - Other
     Req: 'No'
   azimuth_reference:
     Desc: Molecular Analysis Cell Annotation Azimuth Reference Type
@@ -3098,7 +3098,7 @@ PropDefinitions:
           Provenance: CIMAC-CIDC 
           Added: 04-28-26
     Src: Data Submitter
-    #Type: string
+    Type: string
     Enum:
       - Human PBMC
       - Human Motor Cortex
