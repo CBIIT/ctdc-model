@@ -2097,7 +2097,7 @@ PropDefinitions:
           Provenance: CTDC
           Added: 06-23-2026
     Src: Data Submitter
-    #Type: string
+    Type: string
     #Enum:
     #  - Targeted
     #  - Non-Targeted
