@@ -256,32 +256,32 @@ PropDefinitions:
           Provenance: DSS
           Added: 5-28-24
     Src: Data Submitter
-    Enum:
-      - Adverse Effect Mitigation Study
-      - Ancillary Study
-      - Basic Science Research
-      - Correlative Study
-      - Cure Study
-      - Device Feasibility Study
-      - Diagnosis Study
-      - Disease Modifying Treatment Study
-      - Early Detection Study
-      - Education Training Clinical Study
-      - Epidemiology Research
-      - Genomics Research
-      - Health Services Research
-      - Imaging Research
-      - Interventional
-      - Observational Study
-      - Outcomes Research
-      - Prevention Study
-      - Proteomic Research
-      - Rehabilitation Clinical Study
-      - Screening Study
-      - Supportive Care Study
-      - Transcriptomics Research
-      - Treatment Study
-    #Type: string
+    #Enum:
+    #  - Adverse Effect Mitigation Study
+    #  - Ancillary Study
+    #  - Basic Science Research
+    #  - Correlative Study
+    #  - Cure Study
+    #  - Device Feasibility Study
+    #  - Diagnosis Study
+    #  - Disease Modifying Treatment Study
+    #  - Early Detection Study
+    #  - Education Training Clinical Study
+    #  - Epidemiology Research
+    #  - Genomics Research
+    #  - Health Services Research
+    #  - Imaging Research
+    #  - Interventional
+    #  - Observational Study
+    #  - Outcomes Research
+    #  - Prevention Study
+    #  - Proteomic Research
+    #  - Rehabilitation Clinical Study
+    #  - Screening Study
+    #  - Supportive Care Study
+    #  - Transcriptomics Research
+    #  - Treatment Study
+    Type: string
     Req: 'Yes'
   dates_of_conduct:
     Desc: The timespan over which the study/trial was/is being conducted.
@@ -346,12 +346,12 @@ PropDefinitions:
           Provenance: CIDC
           Added: 12-9-25
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Adult
-      - Pediatric
-      - Adult and Pediatric
-      - https://cadsr.cancer.gov/onedata/Home.jsp
+    Type: string
+    #Enum:
+    #  - Adult
+    #  - Pediatric
+    # - Adult and Pediatric
+    #  - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'
   study_population:
     Desc: Text which describes a target study population with characteristics defined in the study protocol.
