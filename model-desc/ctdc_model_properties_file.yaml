@@ -1200,7 +1200,50 @@ PropDefinitions:
     Src: Data Submitter
     Type: string 
     Req: 'Yes'
-  
+  body_mass_index:
+    Desc: Patient/Participant body weight in kilograms divided by the square of his/her height in meters [i.e., wt/(ht)2 ], to yield a derived or calculated BMI result.
+    Term:
+      - Origin: caDSR
+        Code: '2006410'
+        Value: Person Body Mass Index
+        Version: '3'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 04-17-26  
+    Src: Data Submitter
+    Type:
+      units: 
+        - kg/m2
+      value_type: 
+        number
+    Req: 'No'
+  ecog_ps:
+    Desc: The functional level of the patient based on the Zubrod performance scale.  It describes a patient’s level of functioning in terms of their ability to care for themself, daily activity, and physical ability (walking, working, etc.).  With a value of 0 meaning no restrictions.
+    Term:
+      - Origin: caDSR
+        Code: '88'
+        Value: Performance Status
+        Version: '5.1'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 04-17-26
+    Src: Data Submitter
+    Type: integer
+    Req: 'No'
+  karnofsky:
+    Desc: A standard way of measuring the ability of cancer patients to perform ordinary tasks. The Karnofsky Performance Status scores range from 0 to 100. A higher score means the patient is better able to carry out daily activities. Karnofsky Performance Status may be used to determine a patient's prognosis, to measure changes in a patient’s ability to function, or to decide if a patient could be included in a clinical trial.
+    Term:
+      - Origin: caDSR
+        Code: '2003853'
+        Value: Performance Status
+        Version: '4.2'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 04-17-26
+    Src: Data Submitter
+    Type: integer
+    Req: 'No'
+    
 # Exposure Node
   exposure_record_id:
     Desc: A unique sequence of characters used to identify a linkage between related
@@ -1264,49 +1307,6 @@ PropDefinitions:
     #  - Unknown
     #  - NA
     Req: Preferred
-  body_mass_index:
-    Desc: Patient/Participant body weight in kilograms divided by the square of his/her height in meters [i.e., wt/(ht)2 ], to yield a derived or calculated BMI result.
-    Term:
-      - Origin: caDSR
-        Code: '2006410'
-        Value: Person Body Mass Index
-        Version: '3'
-        Tags:
-          Provenance: CIMAC-CIDC
-          Added: 04-17-26  
-    Src: Data Submitter
-    Type:
-      units: 
-        - kg/m2
-      value_type: 
-        number
-    Req: 'No'
-  ecog_ps:
-    Desc: The functional level of the patient based on the Zubrod performance scale.  It describes a patient’s level of functioning in terms of their ability to care for themself, daily activity, and physical ability (walking, working, etc.).  With a value of 0 meaning no restrictions.
-    Term:
-      - Origin: caDSR
-        Code: '88'
-        Value: Performance Status
-        Version: '5.1'
-        Tags:
-          Provenance: CIMAC-CIDC
-          Added: 04-17-26
-    Src: Data Submitter
-    Type: integer
-    Req: 'No'
-  karnofsky:
-    Desc: A standard way of measuring the ability of cancer patients to perform ordinary tasks. The Karnofsky Performance Status scores range from 0 to 100. A higher score means the patient is better able to carry out daily activities. Karnofsky Performance Status may be used to determine a patient's prognosis, to measure changes in a patient’s ability to function, or to decide if a patient could be included in a clinical trial.
-    Term:
-      - Origin: caDSR
-        Code: '2003853'
-        Value: Performance Status
-        Version: '4.2'
-        Tags:
-          Provenance: CIMAC-CIDC
-          Added: 04-17-26
-    Src: Data Submitter
-    Type: integer
-    Req: 'No'
 
 # Diagnosis Node
   diagnosis_record_id:
