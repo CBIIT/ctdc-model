@@ -1,5 +1,8 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+### Data Model version 3.4.1
+* Comments out model Enum blocks on 47 properties validated by a bound CDE, so the Data Model Navigator displays the authoritative permissible values from MDB. Restores the explicit Type declaration on each. No validation change.
+
 ### Data Model version 3.4.0
 * Corrects CDE codes for `meddra_disease_code` and `ctep_disease_term`
 * Disables CDE for `snomed_disease_code` to use model ENUMS instead
