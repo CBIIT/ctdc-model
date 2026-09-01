@@ -256,32 +256,32 @@ PropDefinitions:
           Provenance: DSS
           Added: 5-28-24
     Src: Data Submitter
-    Enum:
-      - Adverse Effect Mitigation Study
-      - Ancillary Study
-      - Basic Science Research
-      - Correlative Study
-      - Cure Study
-      - Device Feasibility Study
-      - Diagnosis Study
-      - Disease Modifying Treatment Study
-      - Early Detection Study
-      - Education Training Clinical Study
-      - Epidemiology Research
-      - Genomics Research
-      - Health Services Research
-      - Imaging Research
-      - Interventional
-      - Observational Study
-      - Outcomes Research
-      - Prevention Study
-      - Proteomic Research
-      - Rehabilitation Clinical Study
-      - Screening Study
-      - Supportive Care Study
-      - Transcriptomics Research
-      - Treatment Study
-    #Type: string
+    #Enum:
+    #  - Adverse Effect Mitigation Study
+    #  - Ancillary Study
+    #  - Basic Science Research
+    #  - Correlative Study
+    #  - Cure Study
+    #  - Device Feasibility Study
+    #  - Diagnosis Study
+    #  - Disease Modifying Treatment Study
+    #  - Early Detection Study
+    #  - Education Training Clinical Study
+    #  - Epidemiology Research
+    #  - Genomics Research
+    #  - Health Services Research
+    #  - Imaging Research
+    #  - Interventional
+    #  - Observational Study
+    #  - Outcomes Research
+    #  - Prevention Study
+    #  - Proteomic Research
+    #  - Rehabilitation Clinical Study
+    #  - Screening Study
+    #  - Supportive Care Study
+    #  - Transcriptomics Research
+    #  - Treatment Study
+    Type: string
     Req: 'Yes'
   dates_of_conduct:
     Desc: The timespan over which the study/trial was/is being conducted.
@@ -346,12 +346,12 @@ PropDefinitions:
           Provenance: CIDC
           Added: 12-9-25
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Adult
-      - Pediatric
-      - Adult and Pediatric
-      - https://cadsr.cancer.gov/onedata/Home.jsp
+    Type: string
+    #Enum:
+    #  - Adult
+    #  - Pediatric
+    # - Adult and Pediatric
+    #  - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'
   study_population:
     Desc: Text which describes a target study population with characteristics defined in the study protocol.
@@ -776,13 +776,14 @@ PropDefinitions:
     Src: Data Submitter
     Type:
       value_type: list
-      Enum: # Reflective of the image types available for CMB participants, all acceptable terms are exactly as used by both IDC and TCIA
-        - CT
-        - DX
-        - MR
-        - NM
-        - PT
-        - US
+      item_type: string
+      #Enum: # Reflective of the image types available for CMB participants, all acceptable terms are exactly as used by both IDC and TCIA
+      #  - CT
+      #  - DX
+      #  - MR
+      #  - NM
+      #  - PT
+      #  - US
     Req: 'Yes'
   image_collection_url:
     Desc: The specification of a node (file or directory) in a hierarchical file
@@ -829,10 +830,11 @@ PropDefinitions:
     Src: Data Submitter
     Type: 
       value_type: list
-      Enum: # Currently reflective only of the values used by the CMB
-        - Cloud
-        - Download
-        - Unrestricted
+      item_type: string
+      #: # Currently reflective only of the values used by the CMB
+      #  - Cloud
+      #  - Download
+      #  - Unrestricted
     Req: 'Yes'
   
 # Consent Group Node
@@ -907,11 +909,11 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-16-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Unknown
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
+    #  - Unknown
     Req: Preferred
   radiology_report_available:
     Desc: An indicator as to whether any radiology reports results
@@ -925,11 +927,11 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-16-24
     Src: CMB
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Unknown
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
+    #  - Unknown
     Req: Preferred
   radiology_images_available:
     Desc: An indicator as to whether any radiology images relating
@@ -942,11 +944,11 @@ PropDefinitions:
         Tags:
           Provenance: CMB
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Unknown
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
+    #  - Unknown
     Req: Preferred
   histology_images_available:
     Desc: An indicator as to whether any histology images relating
@@ -960,11 +962,11 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-16-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Unknown
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
+    #  - Unknown
     Req: Preferred
   
 # Demographic Node
@@ -1015,14 +1017,15 @@ PropDefinitions:
     Src: Data Submitter 
     Type: 
       value_type: list
-      Enum: # Currently reflective only of the values used by the CMB
-        - American Indian or Alaska Native
-        - Asian
-        - Black or African American
-        - Native Hawaiian or other Pacific Islander
-        - White
-        - Not Reported
-        - Unknown
+      item_type: string
+      #Enum: # Currently reflective only of the values used by the CMB
+      #  - American Indian or Alaska Native
+      #  - Asian
+      #  - Black or African American
+      #  - Native Hawaiian or other Pacific Islander
+      #  - White
+      #  - Not Reported
+      #  - Unknown
     Req: 'Yes'
   ethnicity:
     Desc: The text for reporting information about ethnicity based on the Office
@@ -1036,12 +1039,12 @@ PropDefinitions:
           Provenance: CMB
           Added: 5-31-24
     Src: Data Submitter
-    #Type: string
-    Enum: # Currently reflective only of the values used by the CMB
-      - Hispanic or Latino
-      - Not Hispanic or Latino
-      - Not reported
-      - Unknown
+    Type: string
+    #Enum: # Currently reflective only of the values used by the CMB
+    #  - Hispanic or Latino
+    #  - Not Hispanic or Latino
+    #  - Not reported
+    #  - Unknown
     Req: 'Yes'
   sex:
     Desc: A textual description of a person's sex at birth.
@@ -1054,12 +1057,12 @@ PropDefinitions:
           Provenance: CMB
           Added: 5-31-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Female
-      - Intersex
-      - Male
-      - Unknown
+    Type: string
+    #Enum:
+    #  - Female
+    #  - Intersex
+    #  - Male
+    #  - Unknown
     Req: 'Yes'
   height:
     Desc: The height of the participant as of enrollment, measured in cm.
@@ -1151,18 +1154,18 @@ PropDefinitions:
           Provenance: CMB
           Added: 5-31-24  
     Src: Data Submitter
-    #Type: string
-    Enum: # Reflective of the values used by the CMB
-      - No formal education
-      - Grade school
-      - Not high school graduate
-      - High school graduate (including equivalency)
-      - Some college or Associate degree
-      - Bachelor's degree
-      - Master's degree
-      - Doctoral or professional degree
-      - Declined to answer
-      - NA
+    Type: string
+    #Enum: # Reflective of the values used by the CMB
+    #  - No formal education
+    #  - Grade school
+    #  - Not high school graduate
+    #  - High school graduate (including equivalency)
+    #  - Some college or Associate degree
+    #  - Bachelor's degree
+    #  - Master's degree
+    #  - Doctoral or professional degree
+    #  - Declined to answer
+    #  - NA
     Req: Preferred
   ncbi_taxonomy_id:
     Desc: A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/), which
@@ -1197,70 +1200,6 @@ PropDefinitions:
     Src: Data Submitter
     Type: string 
     Req: 'Yes'
-  
-# Exposure Node
-  exposure_record_id:
-    Desc: A unique sequence of characters used to identify a linkage between related
-      records. The value of this property will generally be the same as the value of the participant_id property.
-    Term:
-      - Origin: caDSR
-        Code: '14822135'
-        Value: Data Record Link Unique Identifier
-        Version: '1'
-        Tags:
-          Provenance: CTDC
-          Added: 5-31-24
-    Src: Data Submitter
-    Type: string
-    Req: 'Yes'
-    Key: true
-  environmental_exposure_type:
-    Desc: The category related to contact with chemical, biological, or physical
-      substances found in air, water, food, soil, or product that may have a harmful
-      effect on a person's health.
-    Term:
-      - Origin: caDSR
-        Code: '11256813'
-        Value: Environmental Exposure Type
-        Version: '1'
-        Tags:
-          Provenance: DSS
-          Added: 5-31-24  
-    Src: Data Submitter
-    #Type: string
-    Enum:
-      - Asbestos Exposure
-      - Chemical Exposure
-      - Marijuana Smoke Exposure
-      - Radiation Exposure
-      - Radon Exposure
-      - Respirable Crystalline Silica Exposure
-      - Smoke Exposure
-      - Smokeless Tobacco Exposure
-      - Tobacco Related Exposure
-      - Wood Dust Exposure
-    Req: Preferred
-  carcinogen_exposure:
-    Desc: An indication of whether the participant was exposed to environmental/workplace
-      carcinogens (for example arsenic, asbestos, diesel exhaust, chromium, silica).
-      An indicator as to whether the participant in question has had significant exposure
-      to any known carcinogen(s)
-    Term:
-      - Origin: caDSR
-        Code: '5205578'
-        Value: Carcinogen Exposure Indicator
-        Version: '3'
-        Tags:
-          Provenance: CMB
-          Added: 5-31-24  
-    Src: Data Submitter
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Unknown
-      - NA
-    Req: Preferred
   body_mass_index:
     Desc: Patient/Participant body weight in kilograms divided by the square of his/her height in meters [i.e., wt/(ht)2 ], to yield a derived or calculated BMI result.
     Term:
@@ -1304,6 +1243,70 @@ PropDefinitions:
     Src: Data Submitter
     Type: integer
     Req: 'No'
+    
+# Exposure Node
+  exposure_record_id:
+    Desc: A unique sequence of characters used to identify a linkage between related
+      records. The value of this property will generally be the same as the value of the participant_id property.
+    Term:
+      - Origin: caDSR
+        Code: '14822135'
+        Value: Data Record Link Unique Identifier
+        Version: '1'
+        Tags:
+          Provenance: CTDC
+          Added: 5-31-24
+    Src: Data Submitter
+    Type: string
+    Req: 'Yes'
+    Key: true
+  environmental_exposure_type:
+    Desc: The category related to contact with chemical, biological, or physical
+      substances found in air, water, food, soil, or product that may have a harmful
+      effect on a person's health.
+    Term:
+      - Origin: caDSR
+        Code: '11256813'
+        Value: Environmental Exposure Type
+        Version: '1'
+        Tags:
+          Provenance: DSS
+          Added: 5-31-24  
+    Src: Data Submitter
+    Type: string
+    #Enum:
+    #  - Asbestos Exposure
+    #  - Chemical Exposure
+    #  - Marijuana Smoke Exposure
+    #  - Radiation Exposure
+    #  - Radon Exposure
+    #  - Respirable Crystalline Silica Exposure
+    #  - Smoke Exposure
+    #  - Smokeless Tobacco Exposure
+    #  - Tobacco Related Exposure
+    #  - Wood Dust Exposure
+    Req: Preferred
+  carcinogen_exposure:
+    Desc: An indication of whether the participant was exposed to environmental/workplace
+      carcinogens (for example arsenic, asbestos, diesel exhaust, chromium, silica).
+      An indicator as to whether the participant in question has had significant exposure
+      to any known carcinogen(s)
+    Term:
+      - Origin: caDSR
+        Code: '5205578'
+        Value: Carcinogen Exposure Indicator
+        Version: '3'
+        Tags:
+          Provenance: CMB
+          Added: 5-31-24  
+    Src: Data Submitter
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
+    #  - Unknown
+    #  - NA
+    Req: Preferred
 
 # Diagnosis Node
   diagnosis_record_id:
@@ -1349,12 +1352,12 @@ PropDefinitions:
           Provenance: CMB
           Added: 10-06-25 
     Src: Data Submitter
-    #Type: string
-    Enum: # Currently reflective only of the values used by the CMB
-      - NCI Thesaurus
-      - MedDRA
-      - ICD-O-3
-      - ICD-10-CM
+    Type: string
+    #Enum: # Currently reflective only of the values used by the CMB
+    #  - NCI Thesaurus
+    #  - MedDRA
+    #  - ICD-O-3
+    #  - ICD-10-CM
     Req: 'No'
     Key: false
   disease_staging_system:
@@ -1423,22 +1426,22 @@ PropDefinitions:
           Added: 05-28-24
         useNullCDE: Yes
     Src: Data Submitter
-    #Type: string
-    Enum: # Currently reflective only of the values used by the CMB
-      - Colorectal cancer, NOS
-      - Acute myeloid leukemia, NOS
-      - Adenocarcinoma of the gastroesophageal junction
-      - Melanoma
-      - Myeloma, NOS
-      - Non-small cell lung cancer, NOS
-      - Prostate cancer, NOS
-      - Small cell lung cancer
-      - Invasive breast carcinoma
-      - Fallopian tube carcinoma
-      - Gastric cancer, NOS
-      - Primary peritoneal carcinoma
-      - Esophageal cancer, NOS
-      - Ovarian epithelial cancer
+    Type: string
+    #Enum: # Currently reflective only of the values used by the CMB
+    #  - Colorectal cancer, NOS
+    #  - Acute myeloid leukemia, NOS
+    #  - Adenocarcinoma of the gastroesophageal junction
+    #  - Melanoma
+    #  - Myeloma, NOS
+    #  - Non-small cell lung cancer, NOS
+    #  - Prostate cancer, NOS
+    #  - Small cell lung cancer
+    #  - Invasive breast carcinoma
+    #  - Fallopian tube carcinoma
+    #  - Gastric cancer, NOS
+    #  - Primary peritoneal carcinoma
+    #  - Esophageal cancer, NOS
+    #  - Ovarian epithelial cancer
     Req: 'No'
   icd_10_disease_code:
     Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans.
@@ -1463,22 +1466,22 @@ PropDefinitions:
           Provenance: CMB
           Added: 05-28-24
     Src: Data Submitter
-    #Type: string
-    Enum: # Currently reflective only of values used in the v5 CMB data submission
-      - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
-      - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
-      - Colorectal Carcinoma                            # meddra code 10010029
-      - Gastric Carcinoma                               # meddra code 10017760
-      - Invasive Breast Carcinoma                       # meddra code 10006190 NEW
-      - Melanoma                                        # meddra code 10053571 
-      - Non-Small Cell Lung Carcinoma                   # meddra code 10029514
-      - Ovarian Carcinoma                               # meddra code 10033159 NEW
-      - Plasma Cell Myeloma                             # meddra code 10028566 
-      - Prostate Carcinoma                              # meddra code 10036910 
-      - Small Cell Lung Carcinoma                       # meddra code 10041071
-      - Esophageal Carcinoma                            # meddra code 10030157
-      - Fallopian Tube Carcinoma                        # meddra code 10016180
-      - Primary Peritoneal Carcinoma                    # meddra code 10026669
+    Type: string
+    #Enum: # Currently reflective only of values used in the v5 CMB data submission
+    #  - Acute Myeloid Leukemia Not Otherwise Specified  # meddra code 10000884
+    #  - Adenocarcinoma of the Gastroesophageal Junction # meddra code 10066354
+    #  - Colorectal Carcinoma                            # meddra code 10010029
+    #  - Gastric Carcinoma                               # meddra code 10017760
+    #  - Invasive Breast Carcinoma                       # meddra code 10006190 NEW
+    #  - Melanoma                                        # meddra code 10053571 
+    #  - Non-Small Cell Lung Carcinoma                   # meddra code 10029514
+    #  - Ovarian Carcinoma                               # meddra code 10033159 NEW
+    #  - Plasma Cell Myeloma                             # meddra code 10028566 
+    #  - Prostate Carcinoma                              # meddra code 10036910 
+    #  - Small Cell Lung Carcinoma                       # meddra code 10041071
+    #  - Esophageal Carcinoma                            # meddra code 10030157
+    #  - Fallopian Tube Carcinoma                        # meddra code 10016180
+    #  - Primary Peritoneal Carcinoma                    # meddra code 10026669
     Req: 'No'
   meddra_disease_code:
     Desc: The MedDRA code describing a medical condition and/or anatomic location.
@@ -1493,22 +1496,22 @@ PropDefinitions:
           Provenance: CMB
           Added: 05-28-24
     Src: Data Submitter
-    #Type: integer
-    Enum: # Currently reflective only of the values used in the v3 CMB data submission
-      - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
-      - "10066354" # Adenocarcinoma of the Gastroesophageal Junction
-      - "10010029" # Colorectal Carcinoma
-      - "10006190" # Invasive Breast Carcinoma NEW
-      - "10053571" # Melanoma
-      - "10029514" # Non-Small Cell Lung Carcinoma
-      - "10033159" # Ovarian Carcinoma NEW
-      - "10028566" # Plasma Cell Myeloma
-      - "10036910" # Prostate Carcinoma
-      - "10041071" # Small Cell Lung Carcinoma
-      - "10017760" # Gastric Cancer NOS
-      - "10030157" # Oesophageal Carcioma
-      - "10016180" # Fallopian Carcinoma
-      - "10026669" # Primary Peritoneal Carcinoma 
+    Type: integer
+    #Enum: # Currently reflective only of the values used in the v3 CMB data submission
+    #  - "10000884" # Acute Myeloid Leukemia Not Otherwise Specified
+    #  - "10066354" # Adenocarcinoma of the Gastroesophageal Junction
+    #  - "10010029" # Colorectal Carcinoma
+    #  - "10006190" # Invasive Breast Carcinoma NEW
+    #  - "10053571" # Melanoma
+    #  - "10029514" # Non-Small Cell Lung Carcinoma
+    #  - "10033159" # Ovarian Carcinoma NEW
+    #  - "10028566" # Plasma Cell Myeloma
+    #  - "10036910" # Prostate Carcinoma
+    #  - "10041071" # Small Cell Lung Carcinoma
+    #  - "10017760" # Gastric Cancer NOS
+    #  - "10030157" # Oesophageal Carcioma
+    #  - "10016180" # Fallopian Carcinoma
+    #  - "10026669" # Primary Peritoneal Carcinoma 
     Req: 'No'
   snomed_disease_term:
     Desc: The term describing disease in humans based on the Systematized Nomenclature of Medicine Clinical Terms.
@@ -1521,71 +1524,71 @@ PropDefinitions:
           Provenance: CMB
           Added: 05-28-24
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - Acute Myeloid Leukemia #17788007
-      - Acute Myeloid Leukemia with Myelodysplasia-Related Changes #445448008
-      - Acute Myeloid Leukemia Arising from Previous Myelodysplastic Syndrome # 128827005
-      - Adenocarcinoma #35917007 #443961001
-      - Amelanotic Melanoma #70594002
-      - Breast Carcinoma #254838004
-      - Colon Adenoma #428054006
-      - Colon Carcinoma #269533000
-      - Colorectal Adenocarcinoma #408645001
-      - Cutaneous Melanoma #93655004
-      - Epithelioid Cell Melanoma #37138001
-      - Esophageal Adenocarcinoma #276803003
-      - Esophageal Carcinoma #372138000
-      - Fallopian Tube Carcinoma #276870001
-      - Gastric Adenocarcinoma #408647009
-      - Invasive Ductal Carcinoma, Not Otherwise Specified #408643008
-      - Invasive Lobular Breast Carcinoma #89740008
-      - Lung Carcinoma #448993007
-      - Lung Papillary Adenoma #24482001
-      - Lung Adenocarcinoma 
-      - Malignant neoplasm of ovary #254849005
-      - Melanoma #2092003 #372244006
-      - Mucinous Adenocarcinoma #72495009
-      - Multiple myeloma #55921005
-      - Multiple myeloma and immunoproliferative disease #188717001
-      - Neuroendocrine Carcinoma #253000007
-      - Nodular Melanoma #2142002 #254731001
-      - Non-Small Cell Lung Carcinoma #254637007
-      - Ovarian Carcinoma #254849005
-      - Plasma Cell Leukemia #128922003
-      - Plasma Cell Myeloma #109989006 #55921005
-      - Prostate Adenocarcinoma #399490008
-      - Prostate Carcinoma #254900004 #399068003
-      - Rectal Adenoma #399730005
-      - Rectal Carcinoma #254582000
-      - Small Cell Carcinoma #74364000
-      - Small Cell Lung Carcinoma #254632001 #254633006
-      - Squamous Cell Carcinoma #28899001 #402815007
-      - Squamous Cell Lung Carcinoma #254634000
-      - Superficial Spreading Melanoma #254730000
-      - Triple-Negative Breast Carcinoma #706970001
-      - Anal Carcinoma #255084004
-      - Invasive Ductal Carcinoma #408643008
-      - Mixed Lobular and Ductal Breast Carcinoma #444604002
-      - Female Breast Carcinoma #447782002
-      - Rectal Adenocarcinoma
-      - Inflammatory Breast Carcinoma
-      - Ovarian Serous Cystadenoma
-      - Prostate Adenoma
-      - Acinar Cell Carcinoma
-      - Acute Myeloid Leukemia with Maturation
-      - Esophageal Squamous Cell Carcinoma
-      - Ductal Breast Carcinoma In Situ
-      - Primary Peritoneal Serous Papillary Adenocarcinoma
-      - Acute Promyelocytic Leukemia with PML-RARA
-      - Malignant Ovarian Germ Cell Tumor
-      - Neuroendocrine Neoplasm
-      - Adenocarcinoma In Situ
-      - Colon Tubular Adenoma
-      - Ovarian Cystadenocarcinoma
-      - Cecum Adenocarcinoma
-      - Acute Myeloid Leukemia with Multilineage Dysplasia
-      - Malignant Mixed Mesodermal (Mullerian) Tumor
+    Type: string
+    #Enum: 
+    #  - Acute Myeloid Leukemia #17788007
+    #  - Acute Myeloid Leukemia with Myelodysplasia-Related Changes #445448008
+    #  - Acute Myeloid Leukemia Arising from Previous Myelodysplastic Syndrome # 128827005
+    #  - Adenocarcinoma #35917007 #443961001
+    #  - Amelanotic Melanoma #70594002
+    #  - Breast Carcinoma #254838004
+    #  - Colon Adenoma #428054006
+    #  - Colon Carcinoma #269533000
+    #  - Colorectal Adenocarcinoma #408645001
+    #  - Cutaneous Melanoma #93655004
+    #  - Epithelioid Cell Melanoma #37138001
+    #  - Esophageal Adenocarcinoma #276803003
+    #  - Esophageal Carcinoma #372138000
+    #  - Fallopian Tube Carcinoma #276870001
+    #  - Gastric Adenocarcinoma #408647009
+    #  - Invasive Ductal Carcinoma, Not Otherwise Specified #408643008
+    #  - Invasive Lobular Breast Carcinoma #89740008
+    #  - Lung Carcinoma #448993007
+    #  - Lung Papillary Adenoma #24482001
+    #  - Lung Adenocarcinoma 
+    #  - Malignant neoplasm of ovary #254849005
+    #  - Melanoma #2092003 #372244006
+    #  - Mucinous Adenocarcinoma #72495009
+    #  - Multiple myeloma #55921005
+    #  - Multiple myeloma and immunoproliferative disease #188717001
+    #  - Neuroendocrine Carcinoma #253000007
+    #  - Nodular Melanoma #2142002 #254731001
+    #  - Non-Small Cell Lung Carcinoma #254637007
+    #  - Ovarian Carcinoma #254849005
+    #  - Plasma Cell Leukemia #128922003
+    #  - Plasma Cell Myeloma #109989006 #55921005
+    #  - Prostate Adenocarcinoma #399490008
+    #  - Prostate Carcinoma #254900004 #399068003
+    #  - Rectal Adenoma #399730005
+    #  - Rectal Carcinoma #254582000
+    #  - Small Cell Carcinoma #74364000
+    #  - Small Cell Lung Carcinoma #254632001 #254633006
+    #  - Squamous Cell Carcinoma #28899001 #402815007
+    #  - Squamous Cell Lung Carcinoma #254634000
+    #  - Superficial Spreading Melanoma #254730000
+    #  - Triple-Negative Breast Carcinoma #706970001
+    #  - Anal Carcinoma #255084004
+    #  - Invasive Ductal Carcinoma #408643008
+    #  - Mixed Lobular and Ductal Breast Carcinoma #444604002
+    #  - Female Breast Carcinoma #447782002
+    #  - Rectal Adenocarcinoma
+    #  - Inflammatory Breast Carcinoma
+    #  - Ovarian Serous Cystadenoma
+    #  - Prostate Adenoma
+    #  - Acinar Cell Carcinoma
+    #  - Acute Myeloid Leukemia with Maturation
+    #  - Esophageal Squamous Cell Carcinoma
+    #  - Ductal Breast Carcinoma In Situ
+    #  - Primary Peritoneal Serous Papillary Adenocarcinoma
+    #  - Acute Promyelocytic Leukemia with PML-RARA
+    #  - Malignant Ovarian Germ Cell Tumor
+    #  - Neuroendocrine Neoplasm
+    #  - Adenocarcinoma In Situ
+    #   - Colon Tubular Adenoma
+    #  - Ovarian Cystadenocarcinoma
+    #  - Cecum Adenocarcinoma
+    #  - Acute Myeloid Leukemia with Multilineage Dysplasia
+    #  - Malignant Mixed Mesodermal (Mullerian) Tumor
     Req: 'No'
   snomed_disease_code:
     Desc: A 9-digit numerical code for the primary disease with which the participant
@@ -1756,17 +1759,17 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 05-28-24 
     Src: Data Submitter
-    #Type: string
-    Enum: # Currently reflective only of the values used by the CMB
-      - Stage III
-      - Stage IIIA
-      - Stage IIIB
-      - Stage IIIC
-      - Stage IV
-      - Stage IVA
-      - Stage IVB
-      - Stage IVC
-      - NA 
+    Type: string
+    #Enum: # Currently reflective only of the values used by the CMB
+    #  - Stage III
+    #  - Stage IIIA
+    #  - Stage IIIB
+    #  - Stage IIIC
+    #  - Stage IV
+    #  - Stage IVA
+    #  - Stage IVB
+    #  - Stage IVC
+    #  - NA 
     Req: Preferred
   tumor_grade:
     Desc: A text term to express the degree of abnormality of cancer cells as a measure
@@ -1780,25 +1783,25 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-28-24 
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - GB
-      - GX
-      - G1
-      - G2
-      - G3
-      - G4
-      - High Grade
-      - Intermediate Grade
-      - Low Grade
-      - Not Applicable
-      - Not Reported 
-      - Grade cannot be assessed # Value exactly as used by the CMB
-      - Borderline malignancy # Value exactly as used by the CMB
-      - Well Differentiated # Value exactly as used by the CMB
-      - Moderately Differentiated # Value exactly as used by the CMB
-      - Poorly Differentiated # Value exactly as used by the CMB
-      - Undifferentiated grade # Value exactly as used by the CMB
+    Type: string
+    #Enum:
+    #  - GB
+    #  - GX
+    #  - G1
+    #  - G2
+    #  - G3
+    #  - G4
+    #  - High Grade
+    #  - Intermediate Grade
+    #  - Low Grade
+    #  - Not Applicable
+    #  - Not Reported 
+    #  - Grade cannot be assessed # Value exactly as used by the CMB
+    #  - Borderline malignancy # Value exactly as used by the CMB
+    #  - Well Differentiated # Value exactly as used by the CMB
+    #  - Moderately Differentiated # Value exactly as used by the CMB
+    #  - Poorly Differentiated # Value exactly as used by the CMB
+    #  - Undifferentiated grade # Value exactly as used by the CMB
     Req: Preferred
   date_of_diagnosis:
     Desc: The date of the procedure or evaluation used to determine the diagnosis.
@@ -2000,17 +2003,17 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-23-26
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Complete Response
-      - Partial Response
-      - Less than partial response
-      - Stable Disease
-      - Progressive Disease
-      - Not Assessed
-      - Too Early
-      - Not Evaluable
-      - Unknown
+    Type: string
+    #Enum:
+    #  - Complete Response
+    #  - Partial Response
+    #  - Less than partial response
+    #  - Stable Disease
+    #  - Progressive Disease
+    #  - Not Assessed
+    #  - Too Early
+    #  - Not Evaluable
+    #  - Unknown
     Req: Preferred
   best_response_to_therapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment.
@@ -2023,17 +2026,17 @@ PropDefinitions:
           Provenance: CTDC
           Added: 06-23-26
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Complete Response
-      - Partial Response
-      - Less than partial response
-      - Stable Disease
-      - Progressive Disease
-      - Not Assessed
-      - Too Early
-      - Not Evaluable
-      - Unknown
+    Type: string
+    #Enum:
+    #  - Complete Response
+    #  - Partial Response
+    #  - Less than partial response
+    #  - Stable Disease
+    #  - Progressive Disease
+    #  - Not Assessed
+    #  - Too Early
+    #  - Not Evaluable
+    #  - Unknown
     Req: Preferred
   date_of_current_response_to_therapy: 
     Desc: The number of days from enrollment to treatment response.
@@ -2072,16 +2075,16 @@ PropDefinitions:
           Provenance: CTDC
           Added: 06-23-2026
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Surgery
-      - Radiation
-      - Chem
-      - Hormone
-      - Immuno
-      - Stem Cell
-      - Ablative
-      - Palliative
+    Type: string
+    #Enum:
+    #  - Surgery
+    #  - Radiation
+    #  - Chem
+    #  - Hormone
+    #  - Immuno
+    #  - Stem Cell
+    #  - Ablative
+    #  - Palliative
     Req: Preferred
   therapy_category:
     Desc: An indication if the therapy is targeted, non-targeted, or unknown
@@ -2094,11 +2097,11 @@ PropDefinitions:
           Provenance: CTDC
           Added: 06-23-2026
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Targeted
-      - Non-Targeted
-      - Unknown
+    Type: string
+    #Enum:
+    #  - Targeted
+    #  - Non-Targeted
+    #  - Unknown
     Req: Preferred
   off_treatment:
     Desc: A response to indicate whether an individual has stopped or is not receiving therapy for a period of time.
@@ -2263,7 +2266,6 @@ PropDefinitions:
         Tags:
           Provenance: CTDC
           Added: 05-29-24
-
     Src: Data Submitter
     Type:
       units: 
@@ -2297,10 +2299,10 @@ PropDefinitions:
           Provenance: CMB
           Added: 07-16-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
     Req: 'Preferred'
   surgical_procedure_findings:
     Desc: Words which describe observations that are made during surgery. A narrative
@@ -2517,17 +2519,17 @@ PropDefinitions:
           Provenance: CIDC
           Added: 10-16-25 
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Complete Response
-      - Partial Response
-      - Less than partial response
-      - Stable Disease
-      - Progressive Disease
-      - Not Assessed
-      - Too Early
-      - Not Evaluable
-      - Unknown
+    Type: string
+    #Enum:
+    #  - Complete Response
+    #  - Partial Response
+    #  - Less than partial response
+    #  - Stable Disease
+    #  - Progressive Disease
+    #  - Not Assessed
+    #  - Too Early
+    #  - Not Evaluable
+    #  - Unknown
     Req: Preferred
   response_system_property:
     Desc: The type of standard from which a judgment concerning disease response to therapy can be established
@@ -2582,17 +2584,16 @@ PropDefinitions:
         Tags:
           Provenance: DSS
           Added: 05-31-24 
-
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - ALIVE # Value exactly as used by the CMB
-      - DEAD # Value exactly as used by the CMB
-      - UNKNOWN # Value exactly as used by the CMB
-      - Alive with Disease # Value exactly as used by the CMB
-      - Alive with No Evidence of Disease # Value exactly as used by the CMB
-      - Alive, Disease Status Unknown # Value exactly as used by the CMB
-      - Dead # Value exactly as used by the CMB
+    Type: string
+    #Enum:
+    #  - ALIVE # Value exactly as used by the CMB
+    #  - DEAD # Value exactly as used by the CMB
+    #  - UNKNOWN # Value exactly as used by the CMB
+    #  - Alive with Disease # Value exactly as used by the CMB
+    #  - Alive with No Evidence of Disease # Value exactly as used by the CMB
+    #  - Alive, Disease Status Unknown # Value exactly as used by the CMB
+    #  - Dead # Value exactly as used by the CMB
     Req: 'No'
   primary_cause_of_death:
     Desc: The circumstance or condition of greatest rank or importance that results
@@ -2619,11 +2620,11 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 05-31-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Unknown
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
+    #  - Unknown
     Req: 'Yes'
   off_study_reason:
     Desc: An explanation describing why an individual is no longer receiving protocol therapy.
@@ -2634,50 +2635,50 @@ PropDefinitions:
         Version: '1'
         Tags:
           Provenance: CIMAC-CIDC
-          Added: 05-31-24                                                                              #
+          Added: 05-31-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - ADVERSE EVENT
-      - APPROVED DRUG AVAILABLE FOR INDICATION
-      - COMPLETED
-      - DEATH
-      - DISEASE RELAPSE
-      - FAILURE TO MEET CONTINUATION CRITERIA
-      - FAILURE TO MEET RANDOMIZATION CRITERIA
-      - LACK OF EFFICACY
-      - LOGISTICAL PROBLEM
-      - LOST TO FOLLOW-UP
-      - MET ELIGIBILITY CRITERIA BUT NOT NEEDED
-      - NEVER DOSED
-      - NO LONGER CLINICALLY BENEFITING
-      - NON-COMPLIANCE WITH NON-STUDY DEVICE
-      - NON-COMPLIANCE WITH STUDY DEVICE
-      - NON-COMPLIANCE WITH STUDY DRUG
-      - NON-COMPLIANCE WITH STUDY SCHEDULE
-      - OTHER
-      - PARTNER PREGNANCY
-      - PHYSICIAN DECISION
-      - PREGNANCY
-      - PROGRESSIVE DISEASE
-      - PROTOCOL DEVIATION
-      - PROTOCOL VIOLATION
-      - PROTOCOL-SPECIFIED WITHDRAWAL CRITERION MET
-      - RANDOMIZED BY MISTAKE
-      - RANDOMIZED BY MISTAKE WITH STUDY TREATMENT
-      - RANDOMIZED BY MISTAKE WITHOUT STUDY TREATMENT
-      - RECOVERY
-      - REQUIRES PROHIBITED MEDICATION
-      - SCREEN FAILURE
-      - SCREENING NOT COMPLETED
-      - SITE TERMINATED BY SPONSOR
-      - SPONSOR REQUEST
-      - STUDY TERMINATED BY SPONSOR
-      - TECHNICAL PROBLEMS
-      - WITHDRAWAL BY PARENT/GUARDIAN
-      - WITHDRAWAL BY SUBJECT
-      - WITHDRAWAL OF ASSENT
-      - WITHDRAWAL OF CONSENT
+    Type: string
+    #Enum:
+    #  - ADVERSE EVENT
+    #  - APPROVED DRUG AVAILABLE FOR INDICATION
+    #  - COMPLETED
+    #  - DEATH
+    #  - DISEASE RELAPSE
+    #  - FAILURE TO MEET CONTINUATION CRITERIA
+    #  - FAILURE TO MEET RANDOMIZATION CRITERIA
+    #  - LACK OF EFFICACY
+    #  - LOGISTICAL PROBLEM
+    #  - LOST TO FOLLOW-UP
+    #  - MET ELIGIBILITY CRITERIA BUT NOT NEEDED
+    #  - NEVER DOSED
+    #  - NO LONGER CLINICALLY BENEFITING
+    #  - NON-COMPLIANCE WITH NON-STUDY DEVICE
+    #  - NON-COMPLIANCE WITH STUDY DEVICE
+    #  - NON-COMPLIANCE WITH STUDY DRUG
+    #  - NON-COMPLIANCE WITH STUDY SCHEDULE
+    #  - OTHER
+    #  - PARTNER PREGNANCY
+    #  - PHYSICIAN DECISION
+    #  - PREGNANCY
+    #  - PROGRESSIVE DISEASE
+    #  - PROTOCOL DEVIATION
+    #  - PROTOCOL VIOLATION
+    #  - PROTOCOL-SPECIFIED WITHDRAWAL CRITERION MET
+    #  - RANDOMIZED BY MISTAKE
+    #  - RANDOMIZED BY MISTAKE WITH STUDY TREATMENT
+    #  - RANDOMIZED BY MISTAKE WITHOUT STUDY TREATMENT
+    #  - RECOVERY
+    #  - REQUIRES PROHIBITED MEDICATION
+    #  - SCREEN FAILURE
+    #  - SCREENING NOT COMPLETED
+    #  - SITE TERMINATED BY SPONSOR
+    #  - SPONSOR REQUEST
+    #  - STUDY TERMINATED BY SPONSOR
+    #  - TECHNICAL PROBLEMS
+    #  - WITHDRAWAL BY PARENT/GUARDIAN
+    #  - WITHDRAWAL BY SUBJECT
+    #  - WITHDRAWAL OF ASSENT
+    #  - WITHDRAWAL OF CONSENT
     Req: 'No'
   off_study_reason_other:
     Desc: A reason different than the one(s) previously specified describing why an individual is no longer receiving protocol therapy. 
@@ -2722,23 +2723,23 @@ PropDefinitions:
           Added: 07-23-24
         useNullCDE: Yes
     Src: Data Submitter
-    #Type: string
-    Enum: #Acceptable values taken straight from the CMB Catalog Site
-      - Bone Marrow Aspirate
-      - Cell Block
-      - EDTA Blood
-      - FFPE Block
-      - Formalin Bone Marrow Biopsy
-      - Formalin Fixed Tissue
-      - FORMALIN FIXED TISSUE
-      - Snap Frozen Tissue
-      - Stained Bone Marrow Aspirate Slide
-      - Streck Blood
-      - Streck Blood to VARI
-      - Unstained Bone Marrow Aspirate Slide
-      - Unstained Slide
-      - Fresh Tissue in Media to PDMR
-      - Streck Blood to PDMR
+    Type: string
+    #Enum: #Acceptable values taken straight from the CMB Catalog Site
+    #  - Bone Marrow Aspirate
+    #  - Cell Block
+    #  - EDTA Blood
+    #  - FFPE Block
+    #  - Formalin Bone Marrow Biopsy
+    #  - Formalin Fixed Tissue
+    #  - FORMALIN FIXED TISSUE
+    #  - Snap Frozen Tissue
+    #  - Stained Bone Marrow Aspirate Slide
+    #  - Streck Blood
+    #  - Streck Blood to VARI
+    #  - Unstained Bone Marrow Aspirate Slide
+    #  - Unstained Slide
+    #  - Fresh Tissue in Media to PDMR
+    #  - Streck Blood to PDMR
     Req: 'Yes'
   specimen_category:
     Desc: The biospecimen grouping that describes the kind of material that forms
@@ -2752,26 +2753,26 @@ PropDefinitions:
           Provenance: CMB
         useNullCDE: Yes
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - BLOOD
-      - Blood
-      - BONE MARROW
-      - Bone Marrow
-      - BUCCAL CELL SAMPLE
-      - CEREBROSPINAL FLUID
-      - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
-      - Formalin Fixed Paraffin Embedded Tissue
-      - FORMALIN FIXED TISSUE
-      - Formalin Fixed Tissue
-      - FRESH TISSUE
-      - Fresh Tissue
-      - FROZEN TISSUE
-      - Frozen Tissue
-      - OTHER BODILY FLUIDs
-      - SALIVA
-      - STOOL
-      - URINE  
+    Type: string
+    #Enum:
+    #  - BLOOD
+    #  - Blood
+    #  - BONE MARROW
+    #  - Bone Marrow
+    #  - BUCCAL CELL SAMPLE
+    #  - CEREBROSPINAL FLUID
+    #  - FORMALIN FIXED PARAFFIN EMBEDDED TISSUE
+    #  - Formalin Fixed Paraffin Embedded Tissue
+    #  - FORMALIN FIXED TISSUE
+    #  - Formalin Fixed Tissue
+    #  - FRESH TISSUE
+    #  - Fresh Tissue
+    #  - FROZEN TISSUE
+    #  - Frozen Tissue
+    #  - OTHER BODILY FLUIDs
+    #  - SALIVA
+    #  - STOOL
+    #  - URINE  
     Req: 'Preferred'
   anatomical_collection_site:
     Desc: The location within the body from which a specimen was originally obtained
@@ -2801,12 +2802,12 @@ PropDefinitions:
           Added: 06-03-24
         useNullCDE: Yes
     Src: Data Submitter
-    #Type: string
-    Enum: #Acceptable values taken straight from the CMB Catalog Site.
-      - Metastatic
-      - Normal
-      - Primary
-      - Adjacent Non-Tumor
+    Type: string
+    #Enum: #Acceptable values taken straight from the CMB Catalog Site.
+    #  - Metastatic
+    #  - Normal
+    #  - Primary
+    #  - Adjacent Non-Tumor
     Req: Preferred
   icd_o_3_tissue_morphology:
     Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology.
@@ -2831,17 +2832,17 @@ PropDefinitions:
         Tags:
           Provenance: CMB
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - ARCHIVAL
-      - BASELINE
-      - ON TREATMENT
-      - PROGRESSION
-      - Baseline (Fresh)
-      - On Treatment (Fresh)
-      - Archival
-      - Progression (Fresh)
-      - Post-Treatment (No progression)
+    Type: string
+    #Enum:
+    #  - ARCHIVAL
+    #  - BASELINE
+    #  - ON TREATMENT
+    #  - PROGRESSION
+    #  - Baseline (Fresh)
+    #  - On Treatment (Fresh)
+    #  - Archival
+    #  - Progression (Fresh)
+    #  - Post-Treatment (No progression)
     Req: 'Yes'
   collection_date:
     Desc: The number of days from the date a sample was collected to the date of the initial pathologic diagnosis.
@@ -2967,14 +2968,14 @@ PropDefinitions:
           Provenance: CIDC 
           Added: 12-11-25
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - QC Pass
-      - Pass at Risk
-      - QC Failed
-      - QC Lost
-      - Not Shipped
-      - https://cadsr.cancer.gov/onedata/Home.jsp
+    Type: string
+    #Enum:
+    #  - QC Pass
+    #  - Pass at Risk
+    #  - QC Failed
+    #  - QC Lost
+    #  - Not Shipped
+    #  - https://cadsr.cancer.gov/onedata/Home.jsp
     Req: 'No'
   viable_tumor_area_percentage:
     Desc: The percentage of viable tumorous tissue surface area in a specimen.
@@ -3079,57 +3080,12 @@ PropDefinitions:
           Provenance: CIMAC-CIDC 
           Added: 04-28-26
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - 'Yes'
-      - 'No'
-      - Not Reported
-      - Other
-    Req: 'No'
-  azimuth_reference:
-    Desc: Molecular Analysis Cell Annotation Azimuth Reference Type
-    Term:
-      - Origin: caDSR
-        Code: '16967933'
-        Value: Molecular Analysis Cell Annotation
-        Version: '1'
-        Tags:
-          Provenance: CIMAC-CIDC 
-          Added: 04-28-26
-    Src: Data Submitter
-    #Type: string
-    Enum:
-      - Human PBMC
-      - Human Motor Cortex
-      - Mouse Motor Cortex
-      - Human Pancreas
-      - Human Fetal Development
-      - Human Kidney
-      - Human Bone Marrow
-      - Human Lung v2 (HLCA)
-      - Human Adipose
-      - Human Heart
-      - Human Liver
-      - Human Tonsil v2
-      - Mouse Pansci
-      - None
-    Req: 'No'
-  tabula_sapiens_reference:
-    Desc: Molecular Analysis Cell Annotation Tabula Sapiens Reference Type
-    Term:
-      - Origin: caDSR
-        Code: '16967934'
-        Value: Molecular Analysis Cell Annotation
-        Version: '1'
-        Tags:
-          Provenance: CIMAC-CIDC 
-          Added: 04-28-26
-    Src: Data Submitter
-    #Type: string
-    Enum: 
-      - Tabula Sapiens v1.0
-      - Tabula Sapiens v2.0 
-      - None 
+    Type: string
+    #Enum:
+    #  - 'Yes'
+    #  - 'No'
+    #  - Not Reported
+    #  - Other
     Req: 'No'
   
 # Assay Node
@@ -3175,23 +3131,23 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - atacseq
-      - rnaseq
-      - scrnaseq
-      - visium
-      - wes 
-      - tcr 
-      - cytof
-      - elisa 
-      - nulisa 
-      - cdtdna
-      - olink
-      - ihc 
-      - mibi 
-      - hande 
-      - microbiome 
+    Type: string
+    #Enum: 
+    #  - atacseq
+    #  - rnaseq
+    #  - scrnaseq
+    #  - visium
+    #  - wes 
+    #  - tcr 
+    #  - cytof
+    #  - elisa 
+    #  - nulisa 
+    #  - cdtdna
+    #  - olink
+    #  - ihc 
+    #  - mibi 
+    #  - hande 
+    #  - microbiome 
     Req: 'Yes'
   qc_status: 
     Desc: Overall quality control flag based on predefined thresholds. 
@@ -3204,10 +3160,10 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - pass
-      - fail
+    Type: string
+    #Enum: 
+    #  - pass
+    #  - fail
     Req: 'Preferred'
   
 # Next Generation Sequencing Assay Node
@@ -3250,18 +3206,18 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - Illumina NovaSeq 6000
-      - Illumina NextSeq 550
-      - Illumina HiSeq 4000
-      - Illumina HiSeq 2500
-      - Illumina HiSeq X Ten
-      - Illumina NextSeq 2000
-      - Illumina NovaSeq 500
-      - Illumina MiSeq
-      - PacBio Sequel II
-      - Oxford Nanopore PromethION
+    Type: string
+    #Enum: 
+    #  - Illumina NovaSeq 6000
+    #  - Illumina NextSeq 550
+    #  - Illumina HiSeq 4000
+    #  - Illumina HiSeq 2500
+    #  - Illumina HiSeq X Ten
+    #  - Illumina NextSeq 2000
+    #  - Illumina NovaSeq 500
+    #  - Illumina MiSeq
+    #  - PacBio Sequel II
+    #  - Oxford Nanopore PromethION
     Req: 'Preferred'
   sequencing_read_length:
     Desc: The length of the sequencing reads generated by the sequencing platform,
@@ -3348,6 +3304,51 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: 'No'
+  azimuth_reference:
+    Desc: Molecular Analysis Cell Annotation Azimuth Reference Type
+    Term:
+      - Origin: caDSR
+        Code: '16967933'
+        Value: Molecular Analysis Cell Annotation
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC 
+          Added: 04-28-26
+    Src: Data Submitter
+    Type: string
+    #Enum:
+    #  - Human PBMC
+    #  - Human Motor Cortex
+    #  - Mouse Motor Cortex
+    #  - Human Pancreas
+    #  - Human Fetal Development
+    #  - Human Kidney
+    #  - Human Bone Marrow
+    #  - Human Lung v2 (HLCA)
+    #  - Human Adipose
+    #  - Human Heart
+    #  - Human Liver
+    #  - Human Tonsil v2
+    #  - Mouse Pansci
+    #  - None
+    Req: 'No'
+  tabula_sapiens_reference:
+    Desc: Molecular Analysis Cell Annotation Tabula Sapiens Reference Type
+    Term:
+      - Origin: caDSR
+        Code: '16967934'
+        Value: Molecular Analysis Cell Annotation
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC 
+          Added: 04-28-26
+    Src: Data Submitter
+    Type: string
+    #Enum: 
+    #  - Tabula Sapiens v1.0
+    #  - Tabula Sapiens v2.0 
+    #  - None 
+    Req: 'No'
   azimuth_reference_genome_version:
     Desc: The version of the reference genome used for aligning sequencing reads
       and variant calling. 
@@ -3399,7 +3400,7 @@ PropDefinitions:
 # Immune Assay Node
   immune_assay_record_id:
     Desc: A sequence of characters used to identify the immune assay conducted on
-      the biospecimen.                                                                               
+      the biospecimen.
     Term:
       - Origin: caDSR
         Code: 'TBD'
@@ -3465,12 +3466,12 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - Protein
-      - Peptide
-      - RNA
-      - Other 
+    Type: string
+    #Enum: 
+    #  - Protein
+    #  - Peptide
+    #  - RNA
+    #  - Other 
     Req: 'No'
  
 # Cell Based Assay Node
@@ -3539,11 +3540,11 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 01-20-26
     Src: Data Submitter
-    #Type: string
-    Enum: 
-      - Proprietary 
-      - Random Forest Classifier
-      - Other
+    Type: string
+    #Enum: 
+    #  - Proprietary 
+    #  - Random Forest Classifier
+    #  - Other
     Req: 'No'
 
 # File Node
@@ -3608,14 +3609,14 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-30-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - docx
-      - gz
-      - pdf
-      - vcf
-      - zip
-      - dcm
+    Type: string
+    #Enum:
+    #  - docx
+    #  - gz
+    #  - pdf
+    #  - vcf
+    #  - zip
+    #  - dcm
     Req: 'Yes'
   data_file_size:
     Desc: The measure, expressed in bytes, as to how much space a data file takes
@@ -3657,11 +3658,11 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-30-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - md5sum
-      - sha1
-      - sha256
+    Type: string
+    #Enum:
+    #  - md5sum
+    #  - sha1
+    #  - sha256
     Req: 'Yes'
   data_file_compression_status:
     Desc: The state of data when saved to storage space or during data transmission.
@@ -3674,11 +3675,11 @@ PropDefinitions:
           Provenance: DSS
           Added: 05-30-24
     Src: Data Submitter
-    #Type: string
-    Enum:
-      - Compressed
-      - Uncompressed
-      - Unknown
+    Type: string
+    #Enum:
+    #  - Compressed
+    #  - Uncompressed
+    #  - Unknown
     Req: Preferred
   data_file_uuid:
     Desc: A unique sequence of characters used to identify the contents of an electronic record.
