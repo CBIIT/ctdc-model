@@ -59,7 +59,7 @@ PropDefinitions:
     #Type: string
     Enum:
       - NCI Molecular Analysis for Therapy Choice Trial
-      - NCI National Clinical Trial Network
+      - NCI National Clinical Trials Network
       - Cancer Immune Monitoring and Analysis Centers, Cancer Immunologic Data Center Network
       - Not Applicable
     Req: 'Yes'
