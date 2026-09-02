@@ -57,7 +57,7 @@ PropDefinitions:
     #    useNullCDE: Yes
     Src: Data Submitter
     #Type: string
-    ENUM:
+    Enum:
       - NCI Molecular Analysis for Therapy Choice Trial
       - NCI National Clinical Trial Network
       - Cancer Immune Monitoring and Analysis Centers, Cancer Immunologic Data Center Network
@@ -81,7 +81,7 @@ PropDefinitions:
     #    useNullCDE: Yes
     Src: Data Submitter
     #Type: string
-    ENUM:
+    Enum:
       - NCI-MATCH
       - NCTN
       - CIMAC-CIDC Network
