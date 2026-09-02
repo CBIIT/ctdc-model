@@ -46,17 +46,22 @@ PropDefinitions:
     Desc: The narrative title used to refer to a broad framework (an administrative
       umbrella) of goals under which related projects or other research activities
       are grouped. Example - Clinical Proteomic Tumor Analysis.
-    Term:
-      - Origin: caDSR
-        Code: '15846335' #'11444542'
-        Value: Program Name Text
-        Version: '1'
-        Tags:
-          Provenance: DSS
-          Added: 5-28-24
-        useNullCDE: Yes
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '15846335' #'11444542'
+    #    Value: Program Name Text
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: DSS
+    #      Added: 5-28-24
+    #    useNullCDE: Yes
     Src: Data Submitter
-    Type: string
+    #Type: string
+    Enum:
+      - NCI Molecular Analysis for Therapy Choice Trial
+      - NCI National Clinical Trial Network
+      - Cancer Immune Monitoring and Analysis Centers, Cancer Immunologic Data Center Network
+      - Not Applicable
     Req: 'Yes'
   program_short_name:
     Desc: An acronym or abbreviated form of the title of a broad framework of goals
@@ -65,17 +70,22 @@ PropDefinitions:
       child records, e.g. project and/or study/trial records, can be associated with
       the appropriate program during data loading, and to identify the correct records
       during data updates.
-    Term:
-      - Origin: caDSR
-        Code: '15846845' #'11459801'
-        Value: Program Short Name Text
-        Version: '1'
-        Tags:
-          Provenance: DSS 
-          Added: 5-28-24
-        useNullCDE: Yes
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '15846845' #'11459801'
+    #    Value: Program Short Name Text
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: DSS 
+    #      Added: 5-28-24
+    #    useNullCDE: Yes
     Src: Data Submitter
-    Type: string
+    #Type: string
+    Enum:
+      - NCI-MATCH
+      - NCTN
+      - CIMAC-CIDC Network
+      - Not Applicable
     Req: 'Yes'
     Key: true
   program_short_description:
