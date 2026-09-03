@@ -1,5 +1,9 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+### Data Model version 3.5.0
+* Disables CDEs for `program_name` and `program_short_name` and adds Enum blocks for these properties
+* Removes NullCDE from `program_name` and `program_short_name` as this is not compatible with Enum blocks
+
 ### Data Model version 3.4.1
 * Comments out model Enum blocks on 47 properties validated by a bound CDE, so the Data Model Navigator displays the authoritative permissible values from MDB. Restores the explicit Type declaration on each. No validation change.
 
