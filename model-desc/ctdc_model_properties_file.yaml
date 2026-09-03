@@ -1459,15 +1459,15 @@ PropDefinitions:
     Req: 'No'
   icd_10_disease_code:
     Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans.
-    Term:
-      - Origin: caDSR
-        Code: '11479873'
-        Value: Diagnosis Disease or Disorder ICD-10-CM Code
-        Version: '1'
-        Tags:
-          Provenance: DSS
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '11479873'  #	https://www.cdc.gov/nchs/icd/icd-10-cm/files.html?CDC_AAref_Val=https://www.cdc.gov/nchs/icd/Comprehensive-Listing-of-ICD-10-CM-Files.htm
+    #    Value: Diagnosis Disease or Disorder ICD-10-CM Code
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: DSS
     Src: CMB
-    Type: string
+    Type: string  #value must be a valid ICD-10-CM code
     Req: Preferred
   ctep_disease_term:
     Desc: Diagnosis Disease NCI CTEP Simplified Disease Classification Terminology Name
@@ -1691,16 +1691,16 @@ PropDefinitions:
     Req: 'No'
   icd_o_primary_site:
     Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3).
-    Term:
-      - Origin: caDSR
-        Code: '11341616'
-        Value: Disease Primary Anatomic Site
-        Version: '1'
-        Tags:
-          Provenance: CMB
-          Added: 05-28-24
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '11341616' #ICD-O-3 (By Reference)
+    #    Value: Disease Primary Anatomic Site
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: CMB
+    #      Added: 05-28-24
     Src: Data Submitter
-    Type: string
+    Type: string  #value should be an ICD-O-3 topography code
     Req: 'No'
   primary_disease_site:
     Desc: The location within the body from where the disease of interest originated
@@ -2825,15 +2825,15 @@ PropDefinitions:
     Req: Preferred
   icd_o_3_tissue_morphology:
     Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology.
-    Term:
-      - Origin: caDSR
-        Code: '11326261'
-        Value: Specimen Tumor Tissue ICD-O-3 Morphology Code 
-        Version: '1'
-        Tags:
-          Provenance: DSS
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '11326261'  #http://www.iacr.com.fr/index.php?option=com_content&view=category&layout=blog&id=100&Itemid=577
+    #    Value: Specimen Tumor Tissue ICD-O-3 Morphology Code 
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: DSS
     Src: Data Submitter
-    Type: string
+    Type: string  #value should be an ICD-O-3 Morphology Code
     Req: 'No'
   assessment_timepoint:
     Desc: A specific point in the time continuum, including those established relative
