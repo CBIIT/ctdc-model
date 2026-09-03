@@ -1193,7 +1193,7 @@ PropDefinitions:
     Src: Data Submitter
     #Type: integer 
     Enum:
-      - 9606
+      - '9606'
     Req: 'Yes'
   ncbi_taxonomy_name:
     Desc: The textual label associated with a participant's organismal classification
