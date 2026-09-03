@@ -1705,16 +1705,16 @@ PropDefinitions:
   primary_disease_site:
     Desc: The location within the body from where the disease of interest originated
       as captured in the Uberon identifier.
-    Term:
-      - Origin: caDSR
-        Code: '14883047'
-        Value: Disease Primary Site of Disease Uberon Identifier
-        Version: '1'
-        Tags:
-          Provenance: CMB
-          Added: 05-28-24
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '14883047'   #https://www.ebi.ac.uk/ols4/ontologies/uberon
+    #    Value: Disease Primary Site of Disease Uberon Identifier
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: CMB
+    #      Added: 05-28-24
     Src: Data Submitter
-    Type: string
+    Type: string # Should be an Uberon Code
     Req: 'Yes'
   histology:
     Desc: Words that describe the normal and abnormal morphologic characteristics
@@ -1917,14 +1917,14 @@ PropDefinitions:
       of such characteristics can, conversely, be considered and administered as a
       non-targeted therapy in another participant, because of differences in his or her
       type of cancer per se, or the specific context of the cancer in question.
-    Term:
-      - Origin: caDSR
-        Code: '14913015'
-        Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus Name
-        Version: '1'
-        Tags:
-          Provenance: CTDC
-          Added: 06-23-26
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '14913015'  #https://evsexplore.semantics.cancer.gov/evsexplore/hierarchy/ncit/C1913
+    #    Value: Therapeutic Procedure Pharmacologic Substance or Chemical NCI Thesaurus Name
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: CTDC
+    #      Added: 06-23-26
     Src: Data Submitter
     Type: string
     Req: 'Yes'
