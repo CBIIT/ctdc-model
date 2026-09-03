@@ -1182,33 +1182,37 @@ PropDefinitions:
       uniquely identifies group or category, at any level, in a system for classifying
       plants or animals (including humans) providing ranked categories for the classification
       of organisms according to their suspected evolutionary relationships.
-    Term:
-      - Origin: caDSR
-        Code: '10543100'
-        Value: Subject National Center for Biotechnology Information Taxonomy Identifier Integer
-        Version: '2'
-        Tags:
-          Provenance: DSS
-          Added: 5-31-24  
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '10543100'   #https://www.ncbi.nlm.nih.gov/taxonomy
+    #    Value: Subject National Center for Biotechnology Information Taxonomy Identifier Integer
+    #    Version: '2'
+    #    Tags:
+    #      Provenance: DSS
+    #      Added: 5-31-24  
     Src: Data Submitter
-    Type: integer 
+    #Type: integer 
+    Enum:
+      - 9606
     Req: 'Yes'
   ncbi_taxonomy_name:
     Desc: The textual label associated with a participant's organismal classification
       as captured in the National Center for Biotechnology Information (NCBI) Taxonomy
       standard nomenclature and classification repository.  <br>Supposedly enumerated
       but no permissible values specified.
-    Term:
-      - Origin: caDSR
-        Code: '10543082'
-        Value: Subject National Center for Biotechnology Information Taxonomy Name
-          Text
-        Version: '2'
-        Tags:
-          Provenance: DSS
-          Added: 5-31-24
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '10543082'   #https://www.ncbi.nlm.nih.gov/taxonomy
+    #    Value: Subject National Center for Biotechnology Information Taxonomy Name
+    #      Text
+    #    Version: '2'
+    #    Tags:
+    #      Provenance: DSS
+    #      Added: 5-31-24
     Src: Data Submitter
-    Type: string 
+    #Type: string 
+    Enum:
+      - Homo sapiens
     Req: 'Yes'
   body_mass_index:
     Desc: Patient/Participant body weight in kilograms divided by the square of his/her height in meters [i.e., wt/(ht)2 ], to yield a derived or calculated BMI result.
