@@ -2290,16 +2290,16 @@ PropDefinitions:
   surgical_procedure_anatomical_location:
     Desc: The Uberon identifier for the location within the body where a procedure
       was performed.
-    Term:
-      - Origin: caDSR
-        Code: '14980609'
-        Value: Procedure Anatomic Site Uberon Identifier
-        Version: '1'
-        Tags:
-          Provenance: CMB 
-          Added: 07-16-24
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '14980609'   #https://www.ebi.ac.uk/ols4/ontologies/uberon
+    #    Value: Procedure Anatomic Site Uberon Identifier
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: CMB 
+    #      Added: 07-16-24
     Src: Data Submitter
-    Type: string
+    Type: string  #value should be an Uberon Code
     Req: 'Preferred'
   surgical_procedure_therapeutic:
     Desc: A response which indicates whether the administration of a therapeutic
@@ -2380,16 +2380,16 @@ PropDefinitions:
     Req: 'Yes'
   radiological_procedure_anatomical_location:
     Desc: The anatomical site or sites of the radiological procedure in question.
-    Term:
-      - Origin: caDSR
-        Code: '14461856'
-        Value: Therapeutic Procedure Anatomic Site Uberon Identifier
-        Version: '1'
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '14461856'   #https://www.ebi.ac.uk/ols4/ontologies/uberon
+    #    Value: Therapeutic Procedure Anatomic Site Uberon Identifier
+    #    Version: '1'
     Tags:
       Provenance: CIDC
       Added: 10-14-25
     Src: Data Submitter
-    Type: string
+    Type: string  #value should be an Uberon Code
     Req: Preferred
   radiation_dose:
     Desc: The quantity of radiation energy administered, taken, or absorbed.
