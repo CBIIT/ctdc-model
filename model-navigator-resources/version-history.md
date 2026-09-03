@@ -1,5 +1,9 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+### Data Model version 3.6.0
+* Disables CDEs for `ncbi_taxonomy_id` and `ncbi_taxonomy_name` and adds Enum blocks for these properties
+* Disables CDEs for `anatomical_collection_site`, `primary_disease_site`, `radiological_procedure_anatomical_location`, `surgical_procedure_anatomical_location`, `specimen_type`, `therapy_name`, `icd_o_primary_site`, `icd_o_3_tissue_morphology`, `icd_10_disease_code` as these CDEs are Reference only and do not contain any permissible values
+
 ### Data Model version 3.5.0
 * Disables CDEs for `program_name` and `program_short_name` and adds Enum blocks for these properties
 * Removes NullCDE from `program_name` and `program_short_name` as this is not compatible with Enum blocks
