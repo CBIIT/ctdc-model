@@ -2727,15 +2727,15 @@ PropDefinitions:
   specimen_type: 
     Desc: The kind of material that forms the parent sample as captured in the Ontology
       for Biobanking (OBIB).
-    Term:
-      - Origin: caDSR
-        Code: '14986443'
-        Value: Specimen Material Parent OBIB Source 
-        Version: '1'
-        Tags:
-          Provenance: CMB
-          Added: 07-23-24
-        useNullCDE: Yes
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '14986443'   #https://bioportal.bioontology.org/ontologies/OBIB/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FOBI_0100051
+    #    Value: Specimen Material Parent OBIB Source 
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: CMB
+    #      Added: 07-23-24
+    #    useNullCDE: Yes
     Src: Data Submitter
     Type: string
     #Enum: #Acceptable values taken straight from the CMB Catalog Site
@@ -2791,17 +2791,17 @@ PropDefinitions:
   anatomical_collection_site:
     Desc: The location within the body from which a specimen was originally obtained
       as captured in the Uberon identifier.
-    Term:
-      - Origin: caDSR
-        Code: '12083894'
-        Value: Specimen Original Anatomic Site Uberon Identifier
-        Version: '1'
-        Tags:
-          Provenance: CMB
-          Added: 06-03-24
-        useNullCDE: Yes
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '12083894'   #https://www.ebi.ac.uk/ols4/ontologies/uberon
+    #    Value: Specimen Original Anatomic Site Uberon Identifier
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: CMB
+    #      Added: 06-03-24
+    #    useNullCDE: Yes
     Src: Data Submitter
-    Type: string
+    Type: string  #Should be an Uberon Code
     Req: 'Yes'
   tissue_category:
     Desc: A text term based on categorization of cytologic atypia found in cellular
