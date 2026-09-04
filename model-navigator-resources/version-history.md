@@ -2,7 +2,7 @@
 
 ### Data Model version 3.6.0
 * Disables CDEs for `ncbi_taxonomy_id` and `ncbi_taxonomy_name` and adds Enum blocks for these properties
-* Disables CDEs for `anatomical_collection_site`, `primary_disease_site`, `radiological_procedure_anatomical_location`, `surgical_procedure_anatomical_location`, `specimen_type`, `therapy_name`, `icd_o_primary_site`, `icd_o_3_tissue_morphology`, `icd_10_disease_code`.  These CDEs do not specify permissible values within the caDSR and instead reference a URL or external source that administer controlled vocabularies and this is not directly resolvable within the current CRDC framework.
+* Disables CDEs for `anatomical_collection_site`, `primary_disease_site`, `radiological_procedure_anatomical_location`, `surgical_procedure_anatomical_location`, `specimen_type`, `therapy_name`, `icd_o_primary_site`, `icd_o_3_tissue_morphology`, `icd_10_disease_code`.  These CDEs do not specify permissible values within the caDSR and instead reference a URL or external source that administers controlled vocabularies and this is not directly resolvable within the current CRDC framework.
 
 ### Data Model version 3.5.0
 * Disables CDEs for `program_name` and `program_short_name` and adds Enum blocks for these properties
