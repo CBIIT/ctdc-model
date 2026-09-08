@@ -2366,14 +2366,14 @@ PropDefinitions:
   radiological_procedure:
     Desc: The name and/or a brief narrative description of the radiological procedure
       performed upon the participant.
-    #Term:
-    #  - Origin: caDSR
-    #    Code: '16457118'
-    #    Value: Procedure Radiological Procedure Text
-    #    Version: '1'
-    #    Tags:
-    #      Provenance: CIDC
-    #      Added: 10-14-25
+    Term:
+      - Origin: caDSR
+        Code: '16457118'
+        Value: Procedure Radiological Procedure Text
+        Version: '1'
+        Tags:
+          Provenance: CIDC
+          Added: 10-14-25
     #    useNullCDE: Yes
     Src: Data Submitter
     Type: string
