@@ -1128,14 +1128,14 @@ PropDefinitions:
     Req: Preferred
   occupation:
     Desc: The occupation/job category of a person.
-    Term:
-      - Origin: caDSR
-        Code: '6617540'
-        Value: Person Occupation
-        Version: '1'
-        Tags:
-          Provenance: CMB
-          Added: 5-31-24  
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '6617540'
+    #    Value: Person Occupation
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: CMB
+    #      Added: 5-31-24  
     Src: Data Submitter
     Type: string
     Req: Preferred
@@ -2374,7 +2374,7 @@ PropDefinitions:
         Tags:
           Provenance: CIDC
           Added: 10-14-25
-        useNullCDE: Yes
+    #    useNullCDE: Yes
     Src: Data Submitter
     Type: string
     Req: 'Yes'
