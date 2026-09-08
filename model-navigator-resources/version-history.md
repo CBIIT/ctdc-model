@@ -1,7 +1,7 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
 ## Data Model version 3.7.0
-* Disables CDEs for `occupation`, this property now accept free text string values instead of a list of permissible values from the caDSR.
+* Disables CDEs for `occupation`, this property now accepts free text string values instead of a list of permissible values from the caDSR.
 * Removes NullCDE from `radiological_procedure`
 
 ### Data Model version 3.6.0
