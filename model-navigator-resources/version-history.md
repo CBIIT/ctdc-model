@@ -1,5 +1,9 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+## Data Model version 3.8.0
+* Updates the permissible values for `program_short_name` 
+* Adds the property `specimen_preservation_method` to the specimen Node
+
 ## Data Model version 3.7.0
 * Disables CDEs for `occupation`, this property now accepts free text string values instead of a list of permissible values from the caDSR.
 * Removes NullCDE from `radiological_procedure`
