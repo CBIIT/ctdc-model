@@ -85,7 +85,7 @@ PropDefinitions:
       - NCI-MATCH
       - NCTN
       - CIMAC-CIDC Network
-      - Not Applicable
+      - NA
     Req: 'Yes'
     Key: true
   program_short_description:
@@ -2788,6 +2788,18 @@ PropDefinitions:
     #  - STOOL
     #  - URINE  
     Req: 'Preferred'
+  specimen_preservation_method:
+    Desc: The kind of substance holding another substance in solution or suspension to maintain a specimen in a viable state.
+    Term:
+      - Origin: caDSR
+        Code: '16323957'
+        Value: Specimen Preservation Procedure Medium
+        Version: '1'
+        Tags:
+          Provenance: CMB
+        useNullCDE: Yes
+    Src: Data Submitter
+    Type: string
   anatomical_collection_site:
     Desc: The location within the body from which a specimen was originally obtained
       as captured in the Uberon identifier.
