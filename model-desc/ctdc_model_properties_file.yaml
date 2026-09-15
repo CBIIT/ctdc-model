@@ -351,7 +351,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '11524549'
         Value: Subject Legal Adult Or Pediatric Study Participant Type
-        Version: '1'
+        Version: '3'
         Tags:
           Provenance: CIDC
           Added: 12-9-25
@@ -779,7 +779,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '12137353'
         Value: DICOM Modality Type
-        Version: '1'
+        Version: '2'
         Tags: 
           Provenance: ICDC
           Added: 5-28-24
@@ -1062,7 +1062,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '7572817'
         Value: Person Sex at Birth Category   
-        Version: '2'
+        Version: '3'
         Tags:
           Provenance: CMB
           Added: 5-31-24
@@ -1792,7 +1792,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '11325685'
         Value: Diagnosis Tumor Grade
-        Version: '1'
+        Version: '2'
         Tags:
           Provenance: DSS
           Added: 05-28-24 
@@ -2822,7 +2822,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '14688604'
         Value: Specimen Neoplasm Category
-        Version: '1'
+        Version: '2'
         Tags:
           Provenance: CMB 
           Added: 06-03-24
@@ -3630,7 +3630,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '11416926'
         Value: Electronic Data File Format Type
-        Version: '1'
+        Version: '2'
         Tags:
           Provenance: DSS
           Added: 05-30-24

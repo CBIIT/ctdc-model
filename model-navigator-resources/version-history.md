@@ -1,5 +1,8 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+## Data Model version 3.9.0
+* Updates CDE versions for properties `tumor_grade`, `tissue_category`, `sex`, `image_type_included`, `data_file_format` and `study_age_group`
+
 ## Data Model version 3.8.0
 * Updates the permissible values for `program_short_name` 
 * Adds the property `specimen_preservation_method` to the specimen Node
