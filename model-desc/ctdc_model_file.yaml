@@ -3,7 +3,7 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v3.8.0
+Version: v3.9.0
 
 Nodes:
   # node:
@@ -237,6 +237,8 @@ Nodes:
       #- date_of_confirmation_of_histology
       - histological_subtype
       - stage_of_disease
+      - tumor_FIGO_stage
+      - tumor_R_ISS_stage
       - tumor_grade
       - date_of_diagnosis # quantified in days indexed to date of trial enrollment
       #- subject_age_at_diagnosis
@@ -402,8 +404,8 @@ Nodes:
       - paired_end_sequencing
       - target_capture_kit
       - enrichment_kit
-      - azimuth_reference_genome_version
-      - tabula_sapiens_reference_genome_version
+      #- azimuth_reference_genome_version
+      #- tabula_sapiens_reference_genome_version
       - azimuth_reference
       - tabula_sapiens_reference
       - sequencing_depth
