@@ -2,7 +2,7 @@
 
 ## Data Model version 3.9.0
 * Removes properties `azimuth_reference_genome_version` and `tabula_sapiens_reference_genome_version` are removed from the next_generation_sequencing_assay node
-* Adds properties `tumor_FIGO_stage` and `tumor_R-ISS_stage` to the diagnosis node
+* Adds properties `tumor_FIGO_stage` and `tumor_R_ISS_stage` to the diagnosis node
 
 ## Data Model version 3.8.0
 * Updates the permissible values for `program_short_name` 

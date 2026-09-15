@@ -1798,7 +1798,7 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: Preferred
-  tumor_R-ISS_stage:
+  tumor_R_ISS_stage:
     Desc:  The extent of plasma cell myeloma in the body according to the Revised International Staging System (R-ISS) criteria. Partially adapted from AJCC 8th edition.
     Term:
       - Origin: caDSR
