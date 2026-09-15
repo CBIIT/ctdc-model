@@ -238,7 +238,7 @@ Nodes:
       - histological_subtype
       - stage_of_disease
       - tumor_FIGO_stage
-      - tumor_R-ISS_stage
+      - tumor_R_ISS_stage
       - tumor_grade
       - date_of_diagnosis # quantified in days indexed to date of trial enrollment
       #- subject_age_at_diagnosis
