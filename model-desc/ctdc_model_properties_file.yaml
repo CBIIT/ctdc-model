@@ -1785,7 +1785,7 @@ PropDefinitions:
     #  - Stage IVC
     #  - NA 
     Req: Preferred
-  tumor_FIGO_stage:
+  tumor_figo_stage:
     Desc:  The extent of gynecologic cancer in the body developed by the International Federation of Gynecology and Obstetrics (FIGO).
     Term:
       - Origin: caDSR
@@ -1798,7 +1798,7 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: Preferred
-  tumor_R_ISS_stage:
+  tumor_r_iss_stage:
     Desc:  The extent of plasma cell myeloma in the body according to the Revised International Staging System (R-ISS) criteria. Partially adapted from AJCC 8th edition.
     Term:
       - Origin: caDSR
