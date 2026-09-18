@@ -351,7 +351,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '11524549'
         Value: Subject Legal Adult Or Pediatric Study Participant Type
-        Version: '1'
+        Version: '3'
         Tags:
           Provenance: CIDC
           Added: 12-9-25
@@ -779,7 +779,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '12137353'
         Value: DICOM Modality Type
-        Version: '1'
+        Version: '2'
         Tags: 
           Provenance: ICDC
           Added: 5-28-24
@@ -1062,7 +1062,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '7572817'
         Value: Person Sex at Birth Category   
-        Version: '2'
+        Version: '3'
         Tags:
           Provenance: CMB
           Added: 5-31-24
@@ -1785,6 +1785,32 @@ PropDefinitions:
     #  - Stage IVC
     #  - NA 
     Req: Preferred
+  tumor_figo_stage:
+    Desc:  The extent of gynecologic cancer in the body developed by the International Federation of Gynecology and Obstetrics (FIGO).
+    Term:
+      - Origin: caDSR
+        Code: '17115045'
+        Value: Tumor FIGO Stage
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 09-15-26 
+    Src: Data Submitter
+    Type: string
+    Req: Preferred
+  tumor_r_iss_stage:
+    Desc:  The extent of plasma cell myeloma in the body according to the Revised International Staging System (R-ISS) criteria. Partially adapted from AJCC 8th edition.
+    Term:
+      - Origin: caDSR
+        Code: '17229534'
+        Value: Tumor R-ISS Stage
+        Version: '1'
+        Tags:
+          Provenance: CIMAC-CIDC
+          Added: 09-15-26 
+    Src: Data Submitter
+    Type: string
+    Req: Preferred
   tumor_grade:
     Desc: A text term to express the degree of abnormality of cancer cells as a measure
       of differentiation and aggressiveness.
@@ -1792,7 +1818,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '11325685'
         Value: Diagnosis Tumor Grade
-        Version: '1'
+        Version: '2'
         Tags:
           Provenance: DSS
           Added: 05-28-24 
@@ -2822,7 +2848,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '14688604'
         Value: Specimen Neoplasm Category
-        Version: '1'
+        Version: '2'
         Tags:
           Provenance: CMB 
           Added: 06-03-24
@@ -3375,9 +3401,9 @@ PropDefinitions:
     #  - Tabula Sapiens v2.0 
     #  - None 
     Req: 'No'
-  azimuth_reference_genome_version:
-    Desc: The version of the reference genome used for aligning sequencing reads
-      and variant calling. 
+  #azimuth_reference_genome_version:
+  #  Desc: The version of the reference genome used for aligning sequencing reads
+  #    and variant calling. 
     # Term:
     #   - Origin: caDSR
     #     Code: ''
@@ -3386,42 +3412,42 @@ PropDefinitions:
     #     Tags:
     #       Provenance: CIMAC-CIDC
     #       Added: 01-20-26
-    Src: Data Submitter
+    #Src: Data Submitter
     #Type: string
-    Enum: 
-      - Human PBMC
-      - Human Motor Cortex
-      - Mouse Motor Cortex
-      - Human Pancreas
-      - Human Fetal Development
-      - Human Kidney
-      - Human Bone Marrow
-      - Human Lung v2 (HLCA)
-      - Human Adipose
-      - Human Heart 
-      - Human Liver 
-      - Human Tonsil v2 
-      - Mouse Pansci
-      - None 
-    Req: 'No'
-  tabula_sapiens_reference_genome_version:
-    Desc: The version of the Tabula Sapiens reference genome used for aligning
-      sequencing reads and variant calling. 
-    Term:
-      - Origin: caDSR
-        Code: 'TBD'
-        Value: TBD
-        Version: '1'
-        Tags:
-          Provenance: CIMAC-CIDC
-          Added: 01-20-26
-    Src: Data Submitter
+    #Enum: 
+    #  - Human PBMC
+    #  - Human Motor Cortex
+    #  - Mouse Motor Cortex
+    #  - Human Pancreas
+    #  - Human Fetal Development
+    #  - Human Kidney
+    #  - Human Bone Marrow
+    #  - Human Lung v2 (HLCA)
+    #  - Human Adipose
+    #  - Human Heart 
+    #  - Human Liver 
+    #  - Human Tonsil v2 
+    #  - Mouse Pansci
+    #  - None 
+    #Req: 'No'
+  #tabula_sapiens_reference_genome_version:
+  #  Desc: The version of the Tabula Sapiens reference genome used for aligning
+  #    sequencing reads and variant calling. 
+  #  Term:
+  #    - Origin: caDSR
+  #      Code: 'TBD'
+  #      Value: TBD
+  #      Version: '1'
+  #      Tags:
+  #        Provenance: CIMAC-CIDC
+  #        Added: 01-20-26
+  #  Src: Data Submitter
     #Type: string
-    Enum: 
-      - Tabula Sapiens v1.0
-      - Tabula Sapiens v2.0 
-      - None 
-    Req: 'No'
+  #  Enum: 
+  #    - Tabula Sapiens v1.0
+  #    - Tabula Sapiens v2.0 
+  #    - None 
+  #  Req: 'No'
   
 # Immune Assay Node
   immune_assay_record_id:
@@ -3630,7 +3656,7 @@ PropDefinitions:
       - Origin: caDSR
         Code: '11416926'
         Value: Electronic Data File Format Type
-        Version: '1'
+        Version: '2'
         Tags:
           Provenance: DSS
           Added: 05-30-24

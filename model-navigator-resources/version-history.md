@@ -1,20 +1,25 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+## Data Model version 3.9.0
+* Removes properties `azimuth_reference_genome_version` and `tabula_sapiens_reference_genome_version` from the next_generation_sequencing_assay node.
+* Adds properties `tumor_figo_stage` and `tumor_r_iss_stage` to the diagnosis node.
+* Updates CDE versions for the following properties: `study_age_group`, `image_type_included`, `sex`, `tumor_grade`, `tissue_category`, `data_file_format`.  These properties have their permissible values changed.
+
 ## Data Model version 3.8.0
-* Updates the permissible values for `program_short_name` 
-* Adds the property `specimen_preservation_method` to the specimen Node
+* Updates the permissible values for `program_short_name`.
+* Adds the property `specimen_preservation_method` to the specimen Node.
 
 ## Data Model version 3.7.0
 * Disables CDEs for `occupation`, this property now accepts free text string values instead of a list of permissible values from the caDSR.
-* Removes NullCDE from `radiological_procedure`
+* Removes NullCDE from `radiological_procedure`.
 
 ### Data Model version 3.6.0
-* Disables CDEs for `ncbi_taxonomy_id` and `ncbi_taxonomy_name` and adds Enum blocks for these properties
+* Disables CDEs for `ncbi_taxonomy_id` and `ncbi_taxonomy_name` and adds Enum blocks for these properties.
 * Disables CDEs for `anatomical_collection_site`, `primary_disease_site`, `radiological_procedure_anatomical_location`, `surgical_procedure_anatomical_location`, `specimen_type`, `therapy_name`, `icd_o_primary_site`, `icd_o_3_tissue_morphology`, `icd_10_disease_code`.  These CDEs do not specify permissible values within the caDSR and instead reference a URL or external source that administers controlled vocabularies and this is not directly resolvable within the current CRDC framework.
 
 ### Data Model version 3.5.0
-* Disables CDEs for `program_name` and `program_short_name` and adds Enum blocks for these properties
-* Removes NullCDE from `program_name` and `program_short_name` as this is not compatible with Enum blocks
+* Disables CDEs for `program_name` and `program_short_name` and adds Enum blocks for these properties.
+* Removes NullCDE from `program_name` and `program_short_name` as this is not compatible with Enum blocks.
 
 ### Data Model version 3.4.1
 * Comments out model Enum blocks on 47 properties validated by a bound CDE, so the Data Model Navigator displays the authoritative permissible values from MDB. Restores the explicit Type declaration on each. No validation change.
