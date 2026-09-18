@@ -46,14 +46,14 @@ PropDefinitions:
     Desc: The narrative title used to refer to a broad framework (an administrative
       umbrella) of goals under which related projects or other research activities
       are grouped. Example - Clinical Proteomic Tumor Analysis.
-    #Term:
-    #  - Origin: caDSR
-    #    Code: '15846335' #'11444542'
-    #    Value: Program Name Text
-    #    Version: '1'
-    #    Tags:
-    #      Provenance: DSS
-    #      Added: 5-28-24
+    Term:
+      - Origin: caDSR
+        Code: '15846335'
+        Value: Program Name Text
+        Version: '1'
+        Tags:
+          Provenance: DSS
+          Added: 5-28-24
     #    useNullCDE: Yes
     Src: Data Submitter
     #Type: string
@@ -70,14 +70,14 @@ PropDefinitions:
       child records, e.g. project and/or study/trial records, can be associated with
       the appropriate program during data loading, and to identify the correct records
       during data updates.
-    #Term:
-    #  - Origin: caDSR
-    #    Code: '15846845' #'11459801'
-    #    Value: Program Short Name Text
-    #    Version: '1'
-    #    Tags:
-    #      Provenance: DSS 
-    #      Added: 5-28-24
+    Term:
+      - Origin: caDSR
+        Code: '15846845'
+        Value: Program Short Name Text
+        Version: '1'
+        Tags:
+          Provenance: DSS 
+          Added: 5-28-24
     #    useNullCDE: Yes
     Src: Data Submitter
     #Type: string
@@ -119,13 +119,13 @@ PropDefinitions:
     Term:
       - Origin: caDSR
         Code: '17313767'
-        Value: TBD
+        Value: Study Administration Program Sort Order
         Version: '1'
         Tags:
           Provenance: CTDC
           Added: 5-29-26
     Src: Data Submitter
-    Type: string
+    Type: integer
     Req: 'No'
   program_external_url:
     Desc: The URL address for a research program or study that is accessible by those outside the host institution.
