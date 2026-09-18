@@ -3,6 +3,7 @@
 ## Data Model version 3.9.0
 * Removes properties `azimuth_reference_genome_version` and `tabula_sapiens_reference_genome_version` from the next_generation_sequencing_assay node.
 * Adds properties `tumor_figo_stage` and `tumor_r_iss_stage` to the diagnosis node.
+* Updates CDE versions for the following properties: `study_age_group`, `image_type_included`, `sex`, `tumor_grade`, `tissue_category`, `data_file_format`.  These properties have their permissible values changed.
 
 ## Data Model version 3.8.0
 * Updates the permissible values for `program_short_name`.
