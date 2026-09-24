@@ -1,5 +1,8 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+## Data Model version 3.9.1
+* Replaces syntax Req: Preferred with Req: 'No'
+
 ## Data Model version 3.9.0
 * Removes properties `azimuth_reference_genome_version` and `tabula_sapiens_reference_genome_version` from the next_generation_sequencing_assay node.
 * Adds properties `tumor_figo_stage` and `tumor_r_iss_stage` to the diagnosis node.

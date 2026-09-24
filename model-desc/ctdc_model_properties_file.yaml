@@ -25,7 +25,7 @@ PropDefinitions:
   #   Enum: 
   #     - 'Yes'
   #     - 'No'
-  #   Req: Preferred
+  #   Req: 'No'
 
 # crdc_id
   crdc_id:
@@ -469,7 +469,7 @@ PropDefinitions:
           Added: 04-17-26
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   study_arm_description:
     Desc: Text which describes a treatment arm of the clinical trial.
     Term:
@@ -482,7 +482,7 @@ PropDefinitions:
           Added: 04-17-26
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   
 # Prinicipal Investigator Node
   person_record_id: 
@@ -561,7 +561,7 @@ PropDefinitions:
           Added: 5-28-24
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   
 # Publication Node
   digital_object_id: 
@@ -586,7 +586,7 @@ PropDefinitions:
         Version: '1'
     Src: Data Submitter
     Type: integer
-    Req: 'Preferred'
+    Req: 'No'
   publication_title: 
     Desc: The full title of the publication stated exactly as it appears on the published work.
     Term: 
@@ -606,7 +606,7 @@ PropDefinitions:
         Version: '1'
     Src: Data Submitter
     Type: string
-    Req: 'Preferred'
+    Req: 'No'
   year_of_publication: 
     Desc: The year in which the cited work was published.
     Term:
@@ -616,7 +616,7 @@ PropDefinitions:
         Version: '1'
     Src: Data Submitter
     Type: integer
-    Req: 'Preferred'
+    Req: 'No'
   journal_citation: 
     Desc: The name of the journal in which the cited work was published, inclusive of the citation itself in terms of journal volume number, part number where applicable, and page numbers.
     Term:
@@ -626,7 +626,7 @@ PropDefinitions:
         Version: '1'
     Src: Data Submitter
     Type: string
-    Req: 'Preferred'
+    Req: 'No'
 
 # Cohort Node
   cohort_record_id:
@@ -647,7 +647,7 @@ PropDefinitions:
           Added: 12-11-25
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   cohort_description:
     Desc: A textual description of the characteristics that define a treatment cohort.
     Term:
@@ -660,7 +660,7 @@ PropDefinitions:
           Added: 12-11-25
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   cohort_dose:
     Desc: The numeric quantity of the medication dose administered to a particular cohort.
     Term:
@@ -673,7 +673,7 @@ PropDefinitions:
           Added: 12-11-25
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   cohort_dose_uom:
     Desc: Measurement units for each treatment agent (i.e., drug, antibody, etc.)
     Term:
@@ -686,7 +686,7 @@ PropDefinitions:
           Added: 12-11-25
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
 
 # Associated Link Node
   associated_link_record_id:
@@ -924,7 +924,7 @@ PropDefinitions:
     #  - 'Yes'
     #  - 'No'
     #  - Unknown
-    Req: Preferred
+    Req: 'No'
   radiology_report_available:
     Desc: An indicator as to whether any radiology reports results
       relating to the participant in question are available.
@@ -942,7 +942,7 @@ PropDefinitions:
     #  - 'Yes'
     #  - 'No'
     #  - Unknown
-    Req: Preferred
+    Req: 'No'
   radiology_images_available:
     Desc: An indicator as to whether any radiology images relating
       to the participant in question are available.
@@ -959,7 +959,7 @@ PropDefinitions:
     #  - 'Yes'
     #  - 'No'
     #  - Unknown
-    Req: Preferred
+    Req: 'No'
   histology_images_available:
     Desc: An indicator as to whether any histology images relating
       to the participant in question are available.
@@ -977,7 +977,7 @@ PropDefinitions:
     #  - 'Yes'
     #  - 'No'
     #  - Unknown
-    Req: Preferred
+    Req: 'No'
   
 # Demographic Node
   demographic_record_id:
@@ -1090,7 +1090,7 @@ PropDefinitions:
         - cm
       value_type: 
         number
-    Req: Preferred
+    Req: 'No'
   weight:
     Desc: The weight of the participant as of enrollment, measured in kg.
     Term:
@@ -1107,7 +1107,7 @@ PropDefinitions:
         - kg
       value_type: 
         number
-    Req: Preferred
+    Req: 'No'
   body_surface_area:
     Desc: The body surface area of the participant as of enrollment, mathematically derived from the participant's height and
       weight, and expressed in square meters.
@@ -1125,7 +1125,7 @@ PropDefinitions:
         - m2
       value_type: 
         number
-    Req: Preferred
+    Req: 'No'
   occupation:
     Desc: The occupation/job category of a person.
     #Term:
@@ -1138,7 +1138,7 @@ PropDefinitions:
     #      Added: 5-31-24  
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   income:
     Desc: The amount of earnings made by a family in a year.
     Term:
@@ -1151,7 +1151,7 @@ PropDefinitions:
           Added: 5-31-24  
     Src: CMB
     Type: string
-    Req: Preferred
+    Req: 'No'
   highest_level_of_education:
     Desc: An indication as to the highest level of education attained by
       the participant.
@@ -1176,7 +1176,7 @@ PropDefinitions:
     #  - Doctoral or professional degree
     #  - Declined to answer
     #  - NA
-    Req: Preferred
+    Req: 'No'
   ncbi_taxonomy_id:
     Desc: A label provided by NCBI Taxonomy Database (https://www.ncbi.nlm.nih.gov/taxonomy/), which
       uniquely identifies group or category, at any level, in a system for classifying
@@ -1299,7 +1299,7 @@ PropDefinitions:
     #  - Smokeless Tobacco Exposure
     #  - Tobacco Related Exposure
     #  - Wood Dust Exposure
-    Req: Preferred
+    Req: 'No'
   carcinogen_exposure:
     Desc: An indication of whether the participant was exposed to environmental/workplace
       carcinogens (for example arsenic, asbestos, diesel exhaust, chromium, silica).
@@ -1320,7 +1320,7 @@ PropDefinitions:
     #  - 'No'
     #  - Unknown
     #  - NA
-    Req: Preferred
+    Req: 'No'
 
 # Diagnosis Node
   diagnosis_record_id:
@@ -1412,7 +1412,7 @@ PropDefinitions:
           Added: 05-28-24
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   icd_03_disease_code:
     Desc: The ICD-O-3 code which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
     Term:
@@ -1425,7 +1425,7 @@ PropDefinitions:
             Added: 05-28-24
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   primary_diagnosis_disease_group:
     Desc: A term describing the main condition for evaluation and treatment as captured
       in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
@@ -1468,7 +1468,7 @@ PropDefinitions:
     #      Provenance: DSS
     Src: CMB
     Type: string  #value must be a valid ICD-10-CM code
-    Req: Preferred
+    Req: 'No'
   ctep_disease_term:
     Desc: Diagnosis Disease NCI CTEP Simplified Disease Classification Terminology Name
     Term:
@@ -1728,7 +1728,7 @@ PropDefinitions:
           Provenance: CMB
     Src: Data Submitter
     Type: string
-    Req: 'Preferred'
+    Req: 'No'
   date_of_confirmation_of_histology:
     Desc: The start date of medical history event or condition represented in an unambiguous date format (e.g., DD-MON-YYYY).
     Term:
@@ -1757,7 +1757,7 @@ PropDefinitions:
           Added: 05-28-24 
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   stage_of_disease:
     Desc:  The extent of cancer in the body based on the combination of T, N, and M clinical finding categories and relevant prognostic factors.
      #Stage group determined from clinical information on the tumor (T), regional
@@ -1784,7 +1784,7 @@ PropDefinitions:
     #  - Stage IVB
     #  - Stage IVC
     #  - NA 
-    Req: Preferred
+    Req: 'No'
   tumor_figo_stage:
     Desc:  The extent of gynecologic cancer in the body developed by the International Federation of Gynecology and Obstetrics (FIGO).
     Term:
@@ -1797,7 +1797,7 @@ PropDefinitions:
           Added: 09-15-26 
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   tumor_r_iss_stage:
     Desc:  The extent of plasma cell myeloma in the body according to the Revised International Staging System (R-ISS) criteria. Partially adapted from AJCC 8th edition.
     Term:
@@ -1810,7 +1810,7 @@ PropDefinitions:
           Added: 09-15-26 
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   tumor_grade:
     Desc: A text term to express the degree of abnormality of cancer cells as a measure
       of differentiation and aggressiveness.
@@ -1842,7 +1842,7 @@ PropDefinitions:
     #  - Moderately Differentiated # Value exactly as used by the CMB
     #  - Poorly Differentiated # Value exactly as used by the CMB
     #  - Undifferentiated grade # Value exactly as used by the CMB
-    Req: Preferred
+    Req: 'No'
   date_of_diagnosis:
     Desc: The date of the procedure or evaluation used to determine the diagnosis.
     Term:
@@ -1874,7 +1874,7 @@ PropDefinitions:
         - years
       value_type:
         number
-    Req: 'Preferred'
+    Req: 'No'
   m_category:
     Desc: The presence of metastasis, M, from TNM staging criteria, performed with access to clinical information only.
     Term:
@@ -1887,7 +1887,7 @@ PropDefinitions:
           Added: 04-17-26 
     Src: Data Submitter
     Type: string
-    Req: 'Preferred'
+    Req: 'No'
   n_category:
     Desc: The extent of lymph node involvement, N, from TNM staging criteria, performed with access to clinical information only.
     Term:
@@ -1900,7 +1900,7 @@ PropDefinitions:
           Added: 04-17-26 
     Src: Data Submitter
     Type: string
-    Req: 'Preferred'
+    Req: 'No'
   t_category:
     Desc: The extent of tumor involvement at the primary site, T, from TNM staging criteria, performed with access to clinical information only.
     Term:
@@ -1913,7 +1913,7 @@ PropDefinitions:
           Added: 04-17-26 
     Src: Data Submitter
     Type: string
-    Req: 'Preferred'
+    Req: 'No'
 
 # Therapy Node
   therapy_record_id:
@@ -1968,7 +1968,7 @@ PropDefinitions:
           Added: 06-23-26
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   therapy_dose_units:
     Desc: Text name to represent units of measure used to describe dosages of an
       agent or measure.
@@ -1982,7 +1982,7 @@ PropDefinitions:
           Added: 06-23-26
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   therapy_frequency:
     Desc: The frequency of how often a medication is being administered.
     Term:
@@ -1995,7 +1995,7 @@ PropDefinitions:
           Added: 06-23-26
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   therapy_start_date:
     Desc: The number of days from the date of enrollment to the date of treatment
       start.
@@ -2013,7 +2013,7 @@ PropDefinitions:
         - days
       value_type: 
         number
-    Req: Preferred
+    Req: 'No'
   therapy_end_date:
     Desc: The number of days from the date of enrollment to the date of treatment
       end.
@@ -2031,7 +2031,7 @@ PropDefinitions:
         - days
       value_type: 
         number
-    Req: Preferred
+    Req: 'No'
   current_response_to_therapy:
     Desc: The result of an evaluation to determine whether pathologic and/or clinical changes resulted from treatment.
     Term:
@@ -2054,7 +2054,7 @@ PropDefinitions:
     #  - Too Early
     #  - Not Evaluable
     #  - Unknown
-    Req: Preferred
+    Req: 'No'
   best_response_to_therapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment.
     Term:
@@ -2077,7 +2077,7 @@ PropDefinitions:
     #  - Too Early
     #  - Not Evaluable
     #  - Unknown
-    Req: Preferred
+    Req: 'No'
   date_of_current_response_to_therapy: 
     Desc: The number of days from enrollment to treatment response.
     Term:
@@ -2090,7 +2090,7 @@ PropDefinitions:
           Added: 07-24-26
     Src: Data Submitter
     Type: number
-    Req: Preferred
+    Req: 'No'
   date_of_best_response_to_therapy: 
     Desc: The number of days from day of enrollment until the best response to therapy
     Term:
@@ -2103,7 +2103,7 @@ PropDefinitions:
           Added: 07-24-26
     Src: Data Submitter
     Type: number
-    Req: Preferred
+    Req: 'No'
   therapy_type:
     Desc: The term that describes the kind of treatment administered.
     Term:
@@ -2125,7 +2125,7 @@ PropDefinitions:
     #  - Stem Cell
     #  - Ablative
     #  - Palliative
-    Req: Preferred
+    Req: 'No'
   therapy_category:
     Desc: An indication if the therapy is targeted, non-targeted, or unknown
     Term:
@@ -2142,7 +2142,7 @@ PropDefinitions:
     #  - Targeted
     #  - Non-Targeted
     #  - Unknown
-    Req: Preferred
+    Req: 'No'
   off_treatment:
     Desc: A response to indicate whether an individual has stopped or is not receiving therapy for a period of time.
     Term:
@@ -2159,7 +2159,7 @@ PropDefinitions:
     #   - Yes
     #   - No
     #   - Unknown
-    Req: Preferred
+    Req: 'No'
   off_treatment_reason:
     Desc: An explanation describing why an individual is no longer receiving protocol therapy.
     Term:
@@ -2172,7 +2172,7 @@ PropDefinitions:
           Added: 07-15-2026
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   course_number:
     Desc: A numeric identifier used to indicate a specific course or cycle of treatment.
     Term:
@@ -2185,7 +2185,7 @@ PropDefinitions:
           Added: 07-15-2026
     Src: Data Submitter
     Type: number
-    Req: Preferred
+    Req: 'No'
   number_of_doses:
     Desc: Count number assigned to an individual dose or administration of an agent given to a person.
     Term:
@@ -2198,7 +2198,7 @@ PropDefinitions:
           Added: 07-15-2026
     Src: Data Submitter
     Type: number
-    Req: Preferred
+    Req: 'No'
   planned_dose:
     Desc: The total amount of the drug agent intended to be administered per the protocol.
     Term:
@@ -2211,7 +2211,7 @@ PropDefinitions:
           Added: 07-15-2026
     Src: Data Submitter
     Type: number
-    Req: Preferred
+    Req: 'No'
   planned_dose_units:
     Desc: Text name to represent units of measure used to describe dosages of an agent or measure.
     Term:
@@ -2224,7 +2224,7 @@ PropDefinitions:
           Added: 07-15-2026
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   dose_changes_delays:
     Desc: A indication as to whether or not a change, alteration, or adjustment of a dose specified in a treatment plan was administered to a patient.
     Term:
@@ -2237,7 +2237,7 @@ PropDefinitions:
           Added: 07-15-2026
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   dose_changes_delays_description:
     Desc: Words which describe the change, alteration, or adjustment of a dose specified in a treatment plan that was administered to a patient.
     Term:
@@ -2250,7 +2250,7 @@ PropDefinitions:
           Added: 07-15-2026
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   therapy_description:
     Desc: Words which describe the change, alteration, or adjustment of a dose specified in a treatment plan that was administered to a patient.
     Term:
@@ -2263,7 +2263,7 @@ PropDefinitions:
           Added: 07-15-2026
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
 
 # Surgery Node
   surgical_procedure_record_id:
@@ -2326,7 +2326,7 @@ PropDefinitions:
     #      Added: 07-16-24
     Src: Data Submitter
     Type: string  #value should be an Uberon Code
-    Req: 'Preferred'
+    Req: 'No'
   surgical_procedure_therapeutic:
     Desc: A response which indicates whether the administration of a therapeutic
       procedure that is intended to alter or stop a pathologic process occurred.
@@ -2343,7 +2343,7 @@ PropDefinitions:
     #Enum:
     #  - 'Yes'
     #  - 'No'
-    Req: 'Preferred'
+    Req: 'No'
   surgical_procedure_findings:
     Desc: Words which describe observations that are made during surgery. A narrative
       description of any significant findings observed during the surgical procedure
@@ -2358,7 +2358,7 @@ PropDefinitions:
           Added: 07-16-24
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   extent_of_residual_disease:
     Desc: A textual description of evidence for remaining tumor following primary
       treatment that is only apparent using highly sensitive techniques.
@@ -2372,7 +2372,7 @@ PropDefinitions:
           Added: 05-29-24
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   
 # Radiotherapy Node
   radiological_procedure_record_id:
@@ -2416,7 +2416,7 @@ PropDefinitions:
       Added: 10-14-25
     Src: Data Submitter
     Type: string  #value should be an Uberon Code
-    Req: Preferred
+    Req: 'No'
   radiation_dose:
     Desc: The quantity of radiation energy administered, taken, or absorbed.
     Term:
@@ -2429,7 +2429,7 @@ PropDefinitions:
           Added: 07-16-24
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   radiation_administered_units:
     Desc: A standard unit of measurement associated with the quantity or strength of therapeutic radiation received or absorbed.
     Term:
@@ -2442,7 +2442,7 @@ PropDefinitions:
           Added: 12-11-25
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   total_radiation_dose:
     Desc: The total quantity or strength of therapeutic radiation received or absorbed.
     Term:
@@ -2455,7 +2455,7 @@ PropDefinitions:
           Added: 10-14-25
     Src: Data Submitter
     Type: string
-    Req: Preferred  
+    Req: 'No'  
   total_radiation_dose_units:
     Desc: A standard unit of measurement associated with the total quantity or strength
       of therapeutic radiation received or absorbed.
@@ -2469,7 +2469,7 @@ PropDefinitions:
           Added: 05-29-24
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   total_radiation_administered_units:
     Desc: A standard unit of measurement associated with the total quantity or strength of therapeutic radiation received or absorbed.
     Term:
@@ -2482,7 +2482,7 @@ PropDefinitions:
           Added: 12-11-25
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   radiation_frequency:
     Desc: Words which describe the number of occurrences of radiation therapy within
       a given time period.
@@ -2496,7 +2496,7 @@ PropDefinitions:
           Added: 05-29-24
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   radiation_extent:
     Desc: The extent of radiation exposure administered to the patient's body during
       radiation therapy.
@@ -2529,7 +2529,7 @@ PropDefinitions:
         - days
       value_type: 
          number
-    Req: Preferred
+    Req: 'No'
   radiotherapy_end_date:
     Desc: The number of days from the date of enrollment to the date of treatment
       end.
@@ -2547,7 +2547,7 @@ PropDefinitions:
         - days
       value_type: 
         number
-    Req: Preferred
+    Req: 'No'
   best_response_to_radiotherapy:
     Desc: The result of an evaluation to determine the most clinically favorable response to treatment.
     Term:
@@ -2570,7 +2570,7 @@ PropDefinitions:
     #  - Too Early
     #  - Not Evaluable
     #  - Unknown
-    Req: Preferred
+    Req: 'No'
   response_system_property:
     Desc: The type of standard from which a judgment concerning disease response to therapy can be established
     Term:
@@ -2583,7 +2583,7 @@ PropDefinitions:
           Added: 10-14-25
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
   response_system_version:
     Desc: The version of the standard from which a judgment concerning disease response to therapy can be established.
     Term:
@@ -2596,7 +2596,7 @@ PropDefinitions:
           Added: 10-14-25
     Src: Data Submitter
     Type: string
-    Req: Preferred
+    Req: 'No'
 
 # Participant Status Node
   participant_status_record_id:
@@ -2813,7 +2813,7 @@ PropDefinitions:
     #  - SALIVA
     #  - STOOL
     #  - URINE  
-    Req: 'Preferred'
+    Req: 'No'
   specimen_preservation_method:
     Desc: The kind of substance holding another substance in solution or suspension to maintain a specimen in a viable state.
     Term:
@@ -2860,7 +2860,7 @@ PropDefinitions:
     #  - Normal
     #  - Primary
     #  - Adjacent Non-Tumor
-    Req: Preferred
+    Req: 'No'
   icd_o_3_tissue_morphology:
     Desc: The coded result of analyzing the microscopic anatomy of normal and abnormal cells and tissues of the specimen by examining a thin slice (section) under a light (optical) or electron microscope. The code represents the histology of the disease using the third edition of the International Classification of Diseases for Oncology.
     #Term:
@@ -2911,7 +2911,7 @@ PropDefinitions:
         - days
       value_type: 
         number
-    Req: Preferred
+    Req: 'No'
   days_from_first_participant_visit_to_specimen_collection:
     Desc: The number of days from the date the participant first visited to the date a sample was collected.
     Term:
@@ -3216,7 +3216,7 @@ PropDefinitions:
     #Enum: 
     #  - pass
     #  - fail
-    Req: 'Preferred'
+    Req: 'No'
   
 # Next Generation Sequencing Assay Node
   sequencing_assay_record_id:
@@ -3246,7 +3246,7 @@ PropDefinitions:
           Added: 01-20-26
     Src: Data Submitter
     Type: string
-    Req: 'Preferred'
+    Req: 'No'
   sequencing_platform:
     Desc: The sequencing technology platform used to generate the sequencing data.  
     Term:
@@ -3270,7 +3270,7 @@ PropDefinitions:
     #  - Illumina MiSeq
     #  - PacBio Sequel II
     #  - Oxford Nanopore PromethION
-    Req: 'Preferred'
+    Req: 'No'
   sequencing_read_length:
     Desc: The length of the sequencing reads generated by the sequencing platform,
       measured in base pairs (bp).
@@ -3284,7 +3284,7 @@ PropDefinitions:
           Added: 01-20-26
     Src: Data Submitter
     Type: integer
-    Req: 'Preferred'
+    Req: 'No'
   paired_end_sequencing:
     Desc: Indicates whether the sequencing was performed using paired-end reads,
       where both ends of DNA fragments are sequenced. 
@@ -3301,7 +3301,7 @@ PropDefinitions:
     #Enum: 
     #  - 'Yes'
     #  - 'No'
-    Req: 'Preferred'
+    Req: 'No'
   sequencing_depth:
     Desc: The average number of times each base in the target region is sequenced,
       indicating the coverage of the sequencing assay.    
@@ -3315,7 +3315,7 @@ PropDefinitions:
           Added: 01-20-26
     Src: Data Submitter
     Type: integer
-    Req: 'Preferred'
+    Req: 'No'
   total_reads:
     Desc: The total number of reads in the input file (such as a raw FASTQ or BAM file), 
         including all passing-filter (PF) and non-passing-filter reads.  
@@ -3329,7 +3329,7 @@ PropDefinitions:
           Added: 01-20-26
     Src: Data Submitter
     Type: integer
-    Req: 'Preferred'
+    Req: 'No'
   target_capture_kit:
     Desc: The commercial kit used for target enrichment in targeted sequencing assays. 
     Term:
@@ -3732,7 +3732,7 @@ PropDefinitions:
     #  - Compressed
     #  - Uncompressed
     #  - Unknown
-    Req: Preferred
+    Req: 'No'
   data_file_uuid:
     Desc: A unique sequence of characters used to identify the contents of an electronic record.
     Term:
