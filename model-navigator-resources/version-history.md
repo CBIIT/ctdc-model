@@ -1,5 +1,8 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+## Data Model version 3.10.0
+* Disables the CDE for `data_file_type`
+
 ## Data Model version 3.9.1
 * Replaces syntax Req: Preferred with Req: 'No'
 
