@@ -2781,7 +2781,7 @@ PropDefinitions:
     #  - Unstained Slide
     #  - Fresh Tissue in Media to PDMR
     #  - Streck Blood to PDMR
-    Req: 'Yes'
+    Req: 'No'
   specimen_category:
     Desc: The biospecimen grouping that describes the kind of material that forms
       the sample.
@@ -2814,7 +2814,7 @@ PropDefinitions:
     #  - SALIVA
     #  - STOOL
     #  - URINE  
-    Req: 'No'
+    Req: 'Yes'
   specimen_preservation_method:
     Desc: The kind of substance holding another substance in solution or suspension to maintain a specimen in a viable state.
     Term:
