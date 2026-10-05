@@ -1427,9 +1427,10 @@ PropDefinitions:
     Type: string
     Req: 'No'
   primary_diagnosis_disease_group:
-    Desc: A term describing the main condition for evaluation and treatment as captured
-      in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
-      Thesaurus (NCIt) hierarchy tree.
+    Desc: The primary disease grouping assigned to an abnormal condition for evaluation and treatment.
+    #A term describing the main condition for evaluation and treatment as captured
+    #  in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
+    #  Thesaurus (NCIt) hierarchy tree.
     Term:
       - Origin: caDSR
         Code: '16284367'

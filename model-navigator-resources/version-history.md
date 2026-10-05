@@ -1,5 +1,9 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+## Data Model version 4.0.0
+* Moves `specimen_category` above `specimen_type` in the data model
+* Updates defination for property `primary_diagnosis_disease_group`
+
 ## Data Model version 3.9.1
 * Replaces syntax Req: Preferred with Req: 'No'
 
