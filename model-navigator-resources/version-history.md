@@ -1,10 +1,15 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+## Data Model version 3.11.0
+* Adds permissible values for `study_name` and `study_short_name`.
+* Moves `specimen_category` before `specimen_type` in the specimen node.
+* Updates defination for `primary_diagnosis_disease_group`
+
 ## Data Model version 3.10.0
-* Disables the CDE for `data_file_type`
+* Disables the CDE for `data_file_type`.
 
 ## Data Model version 3.9.1
-* Replaces syntax Req: Preferred with Req: 'No'
+* Replaces syntax Req: Preferred with Req: 'No'.
 
 ## Data Model version 3.9.0
 * Removes properties `azimuth_reference_genome_version` and `tabula_sapiens_reference_genome_version` from the next_generation_sequencing_assay node.

@@ -153,7 +153,26 @@ PropDefinitions:
           Provenance: DSS
           Added: 5-28-24
     Src: Data Submitter
-    Type: string
+    Enum:
+    - 'A multi-adjuvant personal neoantigen vaccine generates potent immunity in melanoma'
+    - 'A Phase III, Double Blind, Randomized, Placebo-Controlled Trial of Sorafenib in Desmoid Tumors or Aggressive Fibromatosis (DT/DF)'
+    - 'Efficacy of Carboplatin Administered Concomitantly With Radiation and Isotretinoin as a Pro-Apoptotic Agent in Other Than Average Risk Medulloblastoma/PNET Patients'
+    - 'Treatment of Children With All Stages of Hepatoblastoma With Temsirolimus (NSC#683864) Added to High Risk Stratum Treatment'
+    - 'A Non-Randomized Phase III Study of Response Adapted Therapy for the Treatment of Children With Newly Diagnosed High Risk Hodgkin Lymphoma'
+    - 'Treatment of Childhood Nasopharyngeal Carcinoma With Neoadjuvant Chemotherapy and Concomitant Chemoradiotherapy: A Groupwide Phase III Study'
+    - 'Treatment for Very Low and Standard Risk Favorable Histology Wilms Tumor'
+    - 'Treatment of Newly Diagnosed Higher Risk Favorable Histology Wilms Tumors'
+    - 'Treatment for Patients With Bilateral, Multicentric, or Bilaterally-Predisposed Unilateral Wilms Tumor'
+    - 'Phase III Randomized Study of R-CHOP V. Dose-Adjusted EPOCH-R With Molecular Profiling in Untreated De Novo Diffuse Large B-Cell Lymphomas'
+    - 'CM Biobank'
+    - 'Age association of genomic alterations detected by NCI-MATCH targeted panel'
+    - 'Gemcitabine and cisplatin plus nivolumab as organ-sparing treatment for muscle-invasive bladder cancer: a phase 2 trial'
+    - 'Genomic Characterization CS-MATCH0007 Arm Z1D IHC'
+    - 'NCI MATCH screening data'
+    - 'A Randomized Phase III Comparison of Standard-Dose (60 Gy) Versus High-Dose (74 Gy) Conformal Radiotherapy With Concurrent and Consolidation Carboplatin/Paclitaxel +/- Cetuximab (IND #103444) in Patients With Stage IIIA/IIIB Non-Small Cell Lung Cancer'
+    - 'A Randomized Phase II Trial of Weekly Nanoparticle Albumin Bound Paclitaxel (Nab-Paclitaxel) (NSC-736631) With or Without Bevacizumab, Either Preceded by or Followed by Q 2 Week Doxorubicin (A)and Cyclophosphamide (C) Plus Pegfilgrastim (PEG-G) as Neoadjuvant Therapy For Inflammatory and Locally Advanced HER-2/NEU Negative Breast Cancer'
+    - 'A Randomized, Phase III Study Comparing Carboplatin/Paclitaxel or Carboplatin/Paclitaxel/Bevacizumab With or Without Concurrent Cetuximab in Patients With Advanced Non-small Cell Lung Cancer (NSCLC)'
+    #Type: string
     Req: 'Yes'
   study_short_name:
     Desc: The acronym or abbreviated form of the title for a research data collection.
@@ -169,7 +188,26 @@ PropDefinitions:
         Tags:
           Provenance: DSS
     Src: Data Submitter
-    Type: string
+    Enum:
+      - 18-279
+      - A091105
+      - ACNS0332
+      - AHEP0731
+      - AHOD0831
+      - ARAR0331
+      - AREN0532
+      - AREN0533
+      - AREN0534
+      - CALGB-50303
+      - CMB
+      - DR-MATCH-0011-AYA
+      - GU16-257
+      - MATCH-Z1D IHC
+      - NCI MATCH screening data
+      - RTOG-0617
+      - S0800
+      - S0819
+    #Type: string
     Req: 'Yes'
     Key: true
   study_accession:
@@ -1427,9 +1465,10 @@ PropDefinitions:
     Type: string
     Req: 'No'
   primary_diagnosis_disease_group:
-    Desc: A term describing the main condition for evaluation and treatment as captured
-      in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
-      Thesaurus (NCIt) hierarchy tree.
+    Desc: The primary disease grouping assigned to an abnormal condition for evaluation and treatment.
+    #A term describing the main condition for evaluation and treatment as captured
+    #  in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
+    #  Thesaurus (NCIt) hierarchy tree.
     Term:
       - Origin: caDSR
         Code: '16284367'
