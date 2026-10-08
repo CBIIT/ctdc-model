@@ -2,7 +2,7 @@
 
 ## Data Model version 3.11.0
 * Changes requirements for property `primary_disease_site` to not required
-* Creates a new property ``primary_disease_site_code`
+* Creates a new property `primary_disease_site_code`
 
 ## Data Model version 3.10.0
 * Disables the CDE for `data_file_type`

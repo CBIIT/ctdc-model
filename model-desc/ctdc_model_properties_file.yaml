@@ -1717,7 +1717,7 @@ PropDefinitions:
     Type: string # Should be an Uberon Term
     Req: 'No'
   primary_disease_site_code:
-    Desc: The code for the primary disease site as captured in the Uberon identifier.
+    Desc: The Uberon code for the primary disease site as captured in the Uberon identifier.
     #Term:
     #  - Origin: caDSR
     #    Code: '14883047'   #https://www.ebi.ac.uk/ols4/ontologies/uberon
