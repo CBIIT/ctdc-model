@@ -3,7 +3,7 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v3.10.0
+Version: v3.11.0
 
 Nodes:
   # node:
@@ -233,6 +233,7 @@ Nodes:
       - snomed_disease_code # this is disease plus stage as presented within the CMB Catalog
       #- icd_o_primary_site
       - primary_disease_site
+      - primary_disease_site_code
       - histology
       #- date_of_confirmation_of_histology
       - histological_subtype
