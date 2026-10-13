@@ -1438,8 +1438,9 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: 'No'
-  icd_03_disease_term:
-    Desc: The ICD-O-3.2 textual label which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
+  icd_o_3_disease_term:
+    Desc: A term describing the histology (morphology) of neoplasms as captured in the third edition of the International Classification of Diseases for Oncology. 
+    #The ICD-O-3.2 textual label which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
     Term:
       - Origin: caDSR
         Code: '17176096'
@@ -1451,11 +1452,12 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: 'No'
-  icd_03_disease_code:
-    Desc: The ICD-O-3 code which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
+  icd_o_3_disease_code:
+    Desc: A code describing the histology (morphology) of neoplasms as captured in the third edition of the International Classification of Diseases for Oncology.
+    #The ICD-O-3 code which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
     Term:
       - Origin: caDSR
-        Code: '13606049'
+        Code: '17176097'
         Value: Diagnosis Disease ICD-O-3 Morphology Code
         Version: '1'
         Tags: 
@@ -1478,7 +1480,7 @@ PropDefinitions:
      #     Added: 05-28-24
      #   useNullCDE: Yes
     Src: Data Submitter
-    Type: string
+    #Type: string
     Enum: # Currently reflective only of the values used by the CMB
       - Colorectal cancer, NOS
       - Acute myeloid leukemia, NOS

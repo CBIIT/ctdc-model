@@ -243,8 +243,8 @@ Nodes:
       - tumor_grade
       - date_of_diagnosis # quantified in days indexed to date of trial enrollment
       #- subject_age_at_diagnosis
-      - icd_03_disease_term
-      - icd_03_disease_code
+      - icd_o_3_disease_term
+      - icd_o_3_disease_code
       - icd_o_primary_site
       - icd_10_disease_code
       - disease_staging_system

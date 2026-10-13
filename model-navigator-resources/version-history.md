@@ -3,11 +3,13 @@
 ## Data Model version 4.0.0
 * Changes requirements for property `primary_disease_site` to not required.
 * Creates a new property `primary_disease_site_code`.
-* Updates requirement for property `primary_diagnosis_disease_group` to be required.
-* Disables the CDE for property `primary_diagnosis_disease_group` and adds Enum blocks for this property.
+**Breaking change** - Updates requirement for property `primary_diagnosis_disease_group` to be required.
+**Breaking change** - Disables the CDE for property `primary_diagnosis_disease_group` and adds Enum blocks for this property.
 * Moves `specimen_category` before `specimen_type` in the data model.
 * Changes requirements for property `specimen_type` to not required.
-* Adds permissible values for properties `study_name` and `study_short_name`
+**Breaking change** - Adds permissible values for properties `study_name` and `study_short_name`.
+**Breaking change** - Updates CDE and renames property `icd_03_disease_term` to `icd_o_3_disease_term`.
+**Breaking change** - Updates CDE and renames property `icd_03_disease_code` to `icd_o_3_disease_code`.
 
 ## Data Model version 3.10.0
 * Disables the CDE for `data_file_type`.
