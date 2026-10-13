@@ -1729,7 +1729,7 @@ PropDefinitions:
       - "276804009"
       - "444898006"
     Req: 'No'
-  icd_o_primary_site:
+  icd_o_3_primary_site:
     Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3).
     #Term:
     #  - Origin: caDSR

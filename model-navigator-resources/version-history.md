@@ -10,6 +10,7 @@
 **Breaking change** - Adds permissible values for properties `study_name` and `study_short_name`.
 **Breaking change** - Updates CDE and renames property `icd_03_disease_term` to `icd_o_3_disease_term`.
 **Breaking change** - Updates CDE and renames property `icd_03_disease_code` to `icd_o_3_disease_code`.
+**Breaking change** - Updates CDE and renames property `icd_o_primary_site` to `icd_o_3_primary_site`.
 
 ## Data Model version 3.10.0
 * Disables the CDE for `data_file_type`.
