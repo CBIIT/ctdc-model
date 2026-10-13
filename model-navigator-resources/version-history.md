@@ -1,14 +1,19 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
-## Data Model version 3.11.0
-* Changes requirements for property `primary_disease_site` to not required
-* Creates a new property `primary_disease_site_code`
+## Data Model version 4.0.0
+* Changes requirements for property `primary_disease_site` to not required.
+* Creates a new property `primary_disease_site_code`.
+* Updates requirement for property `primary_diagnosis_disease_group` to be required.
+* Disables the CDE for property `primary_diagnosis_disease_group` and adds Enum blocks for this property.
+* Moves `specimen_category` before `specimen_type` in the data model.
+* Changes requirements for property `specimen_type` to not required.
+* Adds permissible values for properties `study_name` and `study_short_name`
 
 ## Data Model version 3.10.0
-* Disables the CDE for `data_file_type`
+* Disables the CDE for `data_file_type`.
 
 ## Data Model version 3.9.1
-* Replaces syntax Req: Preferred with Req: 'No'
+* Replaces syntax Req: Preferred with Req: 'No'.
 
 ## Data Model version 3.9.0
 * Removes properties `azimuth_reference_genome_version` and `tabula_sapiens_reference_genome_version` from the next_generation_sequencing_assay node.
