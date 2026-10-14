@@ -897,7 +897,7 @@ PropDefinitions:
           Provenance: DCF
     Src: Data Submitter
     Type: string
-    Req: true 
+    Req: 'Yes'
     Key: true
   consent_group_name:
     Desc: The words or acronym which describe a set of study participants who have signed the same consent agreement and that will be included in the dbGaP repository.
@@ -910,7 +910,7 @@ PropDefinitions:
           Provenance: DCF
     Src: Data Submitter
     Type: string
-    Req: true 
+    Req: 'Yes' 
   consent_group_number:
     Desc: A numeral or string of numerals used to identify the set of study participants who have signed the same consent agreement and that will be included in the dbGaP repository.
     Term:
@@ -922,7 +922,7 @@ PropDefinitions:
           Provenance: DCF 
     Src: Data Submitter
     Type: integer
-    Req: true
+    Req: 'Yes'
  
 # Participant Node
   participant_id:
@@ -1032,7 +1032,7 @@ PropDefinitions:
           Added: 5-31-24
     Src: Data Submitter
     Type: string
-    Req: Yes
+    Req: 'Yes'
     Key: true
   age_at_enrollment:
     Desc: The age of the participant as of enrollment, measured in years.
