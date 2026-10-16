@@ -12,9 +12,6 @@
 **Breaking change** - Updates CDE and renames property `icd_o_primary_site` to `icd_o_3_primary_site`.
 **Breaking change** - Disables the CDE for property `primary_diagnosis_disease_group` and adds Enum blocks for this property.
 
-**Breaking change** - Adds permissible values for properties `study_name` and `study_short_name`.
-
-
 ## Data Model version 3.10.0
 * Disables the CDE for `data_file_type`.
 
