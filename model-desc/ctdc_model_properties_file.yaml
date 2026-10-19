@@ -859,7 +859,7 @@ PropDefinitions:
           Provenance: DCF
     Src: Data Submitter
     Type: string
-    Req: true 
+    Req: 'Yes'
     Key: true
   consent_group_name:
     Desc: The words or acronym which describe a set of study participants who have signed the same consent agreement and that will be included in the dbGaP repository.
@@ -872,7 +872,7 @@ PropDefinitions:
           Provenance: DCF
     Src: Data Submitter
     Type: string
-    Req: true 
+    Req: 'Yes' 
   consent_group_number:
     Desc: A numeral or string of numerals used to identify the set of study participants who have signed the same consent agreement and that will be included in the dbGaP repository.
     Term:
@@ -884,7 +884,7 @@ PropDefinitions:
           Provenance: DCF 
     Src: Data Submitter
     Type: integer
-    Req: true
+    Req: 'Yes'
  
 # Participant Node
   participant_id:
@@ -994,7 +994,7 @@ PropDefinitions:
           Added: 5-31-24
     Src: Data Submitter
     Type: string
-    Req: Yes
+    Req: 'Yes'
     Key: true
   age_at_enrollment:
     Desc: The age of the participant as of enrollment, measured in years.
@@ -1400,29 +1400,31 @@ PropDefinitions:
     Src: Data Submitter
     Type: string
     Req: 'No'
-  icd_03_disease_term:
-    Desc: The ICD-O-3.2 textual label which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
-    Term:
-      - Origin: caDSR
-        Code: '13606067'
-        Value: Diagnosis Disease ICD-O-3 Morphology Label Text
-        Version: '1'
-        Tags: 
-          Provenance: CMB
-          Added: 05-28-24
+  icd_o_3_disease_term:
+    Desc: A term describing the histology (morphology) of neoplasms as captured in the third edition of the International Classification of Diseases for Oncology. 
+    #The ICD-O-3.2 textual label which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '17176096'
+    #    Value: Diagnosis Disease ICD-O-3 Morphology Label Text
+    #    Version: '1'
+    #    Tags: 
+    #      Provenance: CMB
+    #      Added: 05-28-24
     Src: Data Submitter
     Type: string
     Req: 'No'
-  icd_03_disease_code:
-    Desc: The ICD-O-3 code which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
-    Term:
-      - Origin: caDSR
-        Code: '13606049'
-        Value: Diagnosis Disease ICD-O-3 Morphology Code
-        Version: '1'
-        Tags: 
-            Provenance: CMB
-            Added: 05-28-24
+  icd_o_3_disease_code:
+    Desc: A code describing the histology (morphology) of neoplasms as captured in the third edition of the International Classification of Diseases for Oncology.
+    #The ICD-O-3 code which identifies the specific appearance of cells and tissues (normal and abnormal) used to define the presence and nature of disease.
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '17176097'
+    #    Value: Diagnosis Disease ICD-O-3 Morphology Code
+    #    Version: '1'
+    #    Tags: 
+    #        Provenance: CMB
+    #        Added: 05-28-24
     Src: Data Submitter
     Type: string
     Req: 'No'
@@ -1432,31 +1434,31 @@ PropDefinitions:
       Thesaurus (NCIt) hierarchy tree.
     Term:
       - Origin: caDSR
-        Code: '16284367'
+        #Code: '14905532'  # https://evsexplore.semantics.cancer.gov/evsexplore/hierarchy/ncit/C2991
         Value: Disease Primary Diagnosis NCI Thesaurus Name
-        Version: '1'
+        #Version: '1'
         Tags: 
           Provenance: CMB
           Added: 05-28-24
         useNullCDE: Yes
     Src: Data Submitter
-    Type: string
-    #Enum: # Currently reflective only of the values used by the CMB
-    #  - Colorectal cancer, NOS
-    #  - Acute myeloid leukemia, NOS
-    #  - Adenocarcinoma of the gastroesophageal junction
-    #  - Melanoma
-    #  - Myeloma, NOS
-    #  - Non-small cell lung cancer, NOS
-    #  - Prostate cancer, NOS
-    #  - Small cell lung cancer
-    #  - Invasive breast carcinoma
-    #  - Fallopian tube carcinoma
-    #  - Gastric cancer, NOS
-    #  - Primary peritoneal carcinoma
-    #  - Esophageal cancer, NOS
-    #  - Ovarian epithelial cancer
-    Req: 'No'
+    #Type: string
+    Enum: # Currently reflective only of the values used by the CMB
+      - Colorectal cancer, NOS
+      - Acute myeloid leukemia, NOS
+      - Adenocarcinoma of the gastroesophageal junction
+      - Melanoma
+      - Myeloma, NOS
+      - Non-small cell lung cancer, NOS
+      - Prostate cancer, NOS
+      - Small cell lung cancer
+      - Invasive breast carcinoma
+      - Fallopian tube carcinoma
+      - Gastric cancer, NOS
+      - Primary peritoneal carcinoma
+      - Esophageal cancer, NOS
+      - Ovarian epithelial cancer
+    Req: 'Yes'
   icd_10_disease_code:
     Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans.
     #Term:
@@ -1689,7 +1691,7 @@ PropDefinitions:
       - "276804009"
       - "444898006"
     Req: 'No'
-  icd_o_primary_site:
+  icd_o_3_primary_site:
     Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3).
     #Term:
     #  - Origin: caDSR
@@ -1714,8 +1716,21 @@ PropDefinitions:
     #      Provenance: CMB
     #      Added: 05-28-24
     Src: Data Submitter
+    Type: string # Should be an Uberon Term
+    Req: 'No'
+  primary_disease_site_code:
+    Desc: The Uberon code for the primary disease site as captured in the Uberon identifier.
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '14883047'   #https://www.ebi.ac.uk/ols4/ontologies/uberon
+    #    Value: Disease Primary Site of Disease Uberon Identifier
+    #    Version: '1'
+    #    Tags:
+    #      Provenance: CMB
+    #      Added: 05-28-24
+    Src: Data Submitter
     Type: string # Should be an Uberon Code
-    Req: 'Yes'
+    Req: 'No'
   histology:
     Desc: Words that describe the normal and abnormal morphologic characteristics
       in cells and tissues.
@@ -2780,7 +2795,7 @@ PropDefinitions:
     #  - Unstained Slide
     #  - Fresh Tissue in Media to PDMR
     #  - Streck Blood to PDMR
-    Req: 'Yes'
+    Req: 'No'
   specimen_category:
     Desc: The biospecimen grouping that describes the kind of material that forms
       the sample.
@@ -2813,7 +2828,7 @@ PropDefinitions:
     #  - SALIVA
     #  - STOOL
     #  - URINE  
-    Req: 'No'
+    Req: 'Yes'
   specimen_preservation_method:
     Desc: The kind of substance holding another substance in solution or suspension to maintain a specimen in a viable state.
     Term:
