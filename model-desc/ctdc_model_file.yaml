@@ -3,7 +3,7 @@
 # Lower case names are labels for the entities
 Handle: CTDC
 
-Version: v3.10.0
+Version: v4.0.0
 
 Nodes:
   # node:
@@ -233,6 +233,7 @@ Nodes:
       - snomed_disease_code # this is disease plus stage as presented within the CMB Catalog
       #- icd_o_primary_site
       - primary_disease_site
+      - primary_disease_site_code
       - histology
       #- date_of_confirmation_of_histology
       - histological_subtype
@@ -242,9 +243,9 @@ Nodes:
       - tumor_grade
       - date_of_diagnosis # quantified in days indexed to date of trial enrollment
       #- subject_age_at_diagnosis
-      - icd_03_disease_term
-      - icd_03_disease_code
-      - icd_o_primary_site
+      - icd_o_3_disease_term
+      - icd_o_3_disease_code
+      - icd_o_3_primary_site
       - icd_10_disease_code
       - disease_staging_system
       - disease_staging_system_version
@@ -350,9 +351,9 @@ Nodes:
     Props:
       # - specimen_id
       - specimen_record_id
+      - specimen_category # confusingly close to the CMB Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, but acceptable terms for caDSR 7069877, quoted as a reference for "specimen category" uses terms that do not relate to "tissue category"
       - specimen_type # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
       # - specimen_type # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
-      - specimen_category # confusingly close to the CMB Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, but acceptable terms for caDSR 7069877, quoted as a reference for "specimen category" uses terms that do not relate to "tissue category"
       - specimen_preservation_method
       - anatomical_collection_site
       - tissue_category # this would be the Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, which appears within at least two of the DDs as Tissue Type
