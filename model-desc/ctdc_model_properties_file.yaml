@@ -1068,7 +1068,6 @@ PropDefinitions:
           Added: 5-31-24
     Src: Data Submitter
     Type: string
-    Req: 'Yes'
     #Enum:
     #  - Female
     #  - Intersex
