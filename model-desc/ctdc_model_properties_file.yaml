@@ -1432,15 +1432,15 @@ PropDefinitions:
     Desc: A term describing the main condition for evaluation and treatment as captured
       in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
       Thesaurus (NCIt) hierarchy tree.
-    Term:
-      - Origin: caDSR
-        #Code: '14905532'  # https://evsexplore.semantics.cancer.gov/evsexplore/hierarchy/ncit/C2991
-        Value: Disease Primary Diagnosis NCI Thesaurus Name
-        #Version: '1'
-        Tags: 
-          Provenance: CMB
-          Added: 05-28-24
-        useNullCDE: Yes
+    #Term:
+    #  - Origin: caDSR
+    #    Code: '14905532'  # https://evsexplore.semantics.cancer.gov/evsexplore/hierarchy/ncit/C2991
+    #    Value: Disease Primary Diagnosis NCI Thesaurus Name
+    #    Version: '1'
+    #    Tags: 
+    #      Provenance: CMB
+    #      Added: 05-28-24
+    #    useNullCDE: Yes
     Src: Data Submitter
     #Type: string
     Enum: # Currently reflective only of the values used by the CMB
@@ -1458,6 +1458,20 @@ PropDefinitions:
       - Primary peritoneal carcinoma
       - Esophageal cancer, NOS
       - Ovarian epithelial cancer
+      - Unknown
+      - Not Reported 
+      - Not Otherwise Specified
+      - Technical Problem
+      - Response Declined
+      - Insufficient Quantity
+      - Not Evaluable
+      - Not Asked
+      - Not Specified
+      - Not Allowed To Collect
+      - Not Applicable
+      - Not Assessed
+      - Temporarily Unavailable
+      - Censored
     Req: 'Yes'
   icd_10_disease_code:
     Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans.

@@ -1,5 +1,8 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+## Data Model version 4.0.1
+* Updates the Enum block for `primary_diagnosis_disease_group` to include terms from the nullCDE
+
 ## Data Model version 4.0.0
 * Changes requirements for property `primary_disease_site` to not required.
 * Creates a new property `primary_disease_site_code`.
