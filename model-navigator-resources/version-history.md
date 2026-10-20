@@ -1,14 +1,14 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
 ## Data Model version 4.0.1
-* Updates the Enum block for `primary_diagnosis_disease_group` to include terms from the nullCDE
+* Updates the Enum block for `primary_diagnosis_disease_group` to include terms from the nullCDE.
 
 ## Data Model version 4.0.0
 * Changes requirements for property `primary_disease_site` to not required.
 * Creates a new property `primary_disease_site_code`.
 * **Breaking change** - Updates `primary_diagnosis_disease_group` from an optional to required property.
 * **Breaking change** - Updates `specimen_category` from an optional to required property.
-* Places `specimen_category` above `specimen_type` in the hierarchy of the data model 
+* Places `specimen_category` above `specimen_type` in the hierarchy of the data model.
 * Updates `specimen_type` from a required to an optional property. 
 * **Breaking change** - Updates CDE and renames property `icd_03_disease_term` to `icd_o_3_disease_term`.
 * **Breaking change** - Updates CDE and renames property `icd_03_disease_code` to `icd_o_3_disease_code`.
