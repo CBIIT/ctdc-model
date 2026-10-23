@@ -1,5 +1,9 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+## Data Model version 4.1.0
+* Adds new permissible values to the Enum block for `specimen_type`.
+* Updates defination for `assay_type`.
+
 ## Data Model version 4.0.0
 * Changes requirements for property `primary_disease_site` to not required.
 * Creates a new property `primary_disease_site_code`.
