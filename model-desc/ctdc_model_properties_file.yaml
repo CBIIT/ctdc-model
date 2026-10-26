@@ -2843,6 +2843,11 @@ PropDefinitions:
       - white blood cells
       - whole blood film
 
+      #terms from CMB that were not harmonized
+      - formalin bone marrow biopsy
+      - EDTA blood
+      - formalin fixed tissue
+
     #Enum: #Acceptable values taken straight from the CMB Catalog Site
     #  - Bone Marrow Aspirate
     #  - Cell Block
