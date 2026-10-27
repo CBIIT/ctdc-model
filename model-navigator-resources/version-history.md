@@ -1,5 +1,9 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+## Data Model version 4.1.0
+* Adds new permissible values to the Enum block for `specimen_type`.
+* Updates definition for `assay_type`.
+
 ## Data Model version 4.0.0
 * Changes requirements for property `primary_disease_site` to not required.
 * Creates a new property `primary_disease_site_code`.
@@ -56,7 +60,7 @@
 * Adds NULL CDE values to `program_name`,  `program_short_name` and `radiation_extent`
 
 ### Data Model version 3.2.0
-* Updates the relationship of_participant for participant-sugery, participant-therapy, and participant-radiotherapy.
+* Updates the relationship of_participant for participant-surgery, participant-therapy, and participant-radiotherapy.
 * Adds 3 new properties to the therapy node: `current_response_to_therapy`, `date_of_current_response_to_therapy`, `date_of_best_response_to_therapy`
 
 ### Data Model version 3.1.0
@@ -65,14 +69,14 @@
 
 ### Data Model version 3.0.0
 
-* Removes the targeted_therapy and non_targeted_therapy nodes and replaced with a generic therapy node.  This new node contains a flag to indicate which type of therapy it coresponds to.
-**Breaking change** — records previously submitted as Targeted_Therapy or Non_Targed_Therapy will no longer validate against this version.
+* Removes the targeted_therapy and non_targeted_therapy nodes and replaced with a generic therapy node.  This new node contains a flag to indicate which type of therapy it corresponds to.
+**Breaking change** — records previously submitted as Targeted_Therapy or Non_Targeted_Therapy will no longer validate against this version.
 * Adds NullCDE flags to `specimen_type`, `specimen_category` and `tissue_category`.
 
 ### Data Model version 2.1.1
 
-* Updates to the definations to `ecog_ps` and `karnofsky`
-* Adds CDE versions to `ecog_ps` and `karnofsky` that were previosly missing
+* Updates to the definitions to `ecog_ps` and `karnofsky`
+* Adds CDE versions to `ecog_ps` and `karnofsky` that were previously missing
 * Fixes property type for `karnofsky`, changed from percent to integer
 
 ### Data Model version 2.1.0
