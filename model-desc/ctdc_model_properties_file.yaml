@@ -294,7 +294,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   dates_of_conduct:
-    Desc: The timespan over which the study/trial was/is being conducted.
+    Desc: The time span over which the study/trial was/is being conducted.
     Term:
       - Origin: caDSR
         Code: 'TBD'
@@ -453,7 +453,7 @@ PropDefinitions:
         Tags:
           Provenance: CIMAC-CIDC
           Added: 04-17-26
-    Src: Data Submbitter  
+    Src: Data Submitter  
     Type: string
     Req: 'Yes'
     Key: true
@@ -484,7 +484,7 @@ PropDefinitions:
     Type: string
     Req: 'No'
   
-# Prinicipal Investigator Node
+# Principal Investigator Node
   person_record_id: 
     Desc: A globally unique identifier via which principle investigator can be differentiated across studies; specifically the value of study_id concatenated with the value of pi_last_name, <br>This property is used as the key via which child records, e.g. cohort records, can be associated with the appropriate principle investigator, and to identify the correct principle investigator records during data updates.
     Term:
@@ -1525,7 +1525,7 @@ PropDefinitions:
     #  - "10036910" # Prostate Carcinoma
     #  - "10041071" # Small Cell Lung Carcinoma
     #  - "10017760" # Gastric Cancer NOS
-    #  - "10030157" # Oesophageal Carcioma
+    #  - "10030157" # Oesophagus Carcinoma
     #  - "10016180" # Fallopian Carcinoma
     #  - "10026669" # Primary Peritoneal Carcinoma 
     Req: 'No'
@@ -2003,7 +2003,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR
         Code: '2003878'
-        Value: Frequecny
+        Value: Frequency
         Version: '4'
         Tags:
           Provenance: CTDC

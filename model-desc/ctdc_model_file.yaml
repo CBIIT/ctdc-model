@@ -108,7 +108,7 @@ Nodes:
       - cohort_description # description of the cohort generally inclusive of some detail as to agent and dose
       - crdc_id
   associated_link:
-    Desc: The Associated Link node contains the properties required to associate multiple links to additional information about any given study/trial to the appropriate study/trial, and define an inuitive label via which each link will be diplayed within the UI. 
+    Desc: The Associated Link node contains the properties required to associate multiple links to additional information about any given study/trial to the appropriate study/trial, and define an intuitive label via which each link will be displayed within the UI. 
     Tags:
       Category: study
       Assignment: core
@@ -177,7 +177,7 @@ Nodes:
       - histology_images_available
       - crdc_id
   demographic:
-    Desc: The Demographic node is comprised of properties which describe the key characteristics of each study/trial participant, such as sex, race and etnnicity, etc.
+    Desc: The Demographic node is comprised of properties which describe the key characteristics of each study/trial participant, such as sex, race and ethnicity, etc.
     Tags:
       Category: case # in lieu of "participant" being a category recognized by the DMN
       Assignment: core
@@ -204,7 +204,7 @@ Nodes:
       - body_mass_index
       - crdc_id
   exposure:
-    Desc: Properties within the Exposure node capture information concerning a participant's environmental, workplace and lifestyle exposure(s) which have the potential to have increased the risk of developing cancer, and/or caused cancer, and/or exacerbated an underlying maliignancy.
+    Desc: Properties within the Exposure node capture information concerning a participant's environmental, workplace and lifestyle exposure(s) which have the potential to have increased the risk of developing cancer, and/or caused cancer, and/or exacerbated an underlying malignancy.
     Tags:
       Category: case # in lieu of "participant" being a category recognized by the DMN
       Assignment: core
@@ -303,7 +303,7 @@ Nodes:
       - extent_of_residual_disease
       - crdc_id
   radiotherapy:
-    Desc: The Radiotherapy node contains properties which detail radiological procedures performed on the participant in question as part of their overall treatent, including the type of each radiological procedure performed, the anatomical location(s) impacted, and the response to such radiotherapy.
+    Desc: The Radiotherapy node contains properties which detail radiological procedures performed on the participant in question as part of their overall treatment, including the type of each radiological procedure performed, the anatomical location(s) impacted, and the response to such radiotherapy.
     Tags:
       Category: clinical_trial # in lieu of "treatment" being a category recognized by the DMN
       Assignment: core
@@ -352,7 +352,7 @@ Nodes:
       # - specimen_id
       - specimen_record_id
       - specimen_category # confusingly close to the CMB Catalog Site's "Tissue Category" i.e. the indicator as to normal vs primary vs metastatic, but acceptable terms for caDSR 7069877, quoted as a reference for "specimen category" uses terms that do not relate to "tissue category"
-      - specimen_type # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subseuqently isolated
+      - specimen_type # this refers to the nature of the specimen originally isolated from the participant, and from which various aliquots and/or derivative biospecimens were subsequently isolated
       # - specimen_type # this refers to the nature of the sub-specimen that was actually subject to downstream analysis
       - specimen_preservation_method
       - anatomical_collection_site
@@ -505,7 +505,7 @@ Relationships:
         Dst: study
         Mul: many_to_one
     Props: null
-      #- Src: principal_ivestigator # alternatively, express principal investigator relationships to both study and project elsewhere as "directs" relationships
+      #- Src: principal_investigator # alternatively, express principal investigator relationships to both study and project elsewhere as "directs" relationships
         #Dst: study
       #- Src: file # alternatively, group all file relationships elsewhere as "associated_with" relationships?
         #Dst: study
