@@ -294,7 +294,7 @@ PropDefinitions:
     Type: string
     Req: 'Yes'
   dates_of_conduct:
-    Desc: The timespan over which the study/trial was/is being conducted.
+    Desc: The time span over which the study/trial was/is being conducted.
     Term:
       - Origin: caDSR
         Code: 'TBD'
@@ -453,7 +453,7 @@ PropDefinitions:
         Tags:
           Provenance: CIMAC-CIDC
           Added: 04-17-26
-    Src: Data Submbitter  
+    Src: Data Submitter  
     Type: string
     Req: 'Yes'
     Key: true
@@ -484,7 +484,7 @@ PropDefinitions:
     Type: string
     Req: 'No'
   
-# Prinicipal Investigator Node
+# Principal Investigator Node
   person_record_id: 
     Desc: A globally unique identifier via which principle investigator can be differentiated across studies; specifically the value of study_id concatenated with the value of pi_last_name, <br>This property is used as the key via which child records, e.g. cohort records, can be associated with the appropriate principle investigator, and to identify the correct principle investigator records during data updates.
     Term:
@@ -1525,7 +1525,7 @@ PropDefinitions:
     #  - "10036910" # Prostate Carcinoma
     #  - "10041071" # Small Cell Lung Carcinoma
     #  - "10017760" # Gastric Cancer NOS
-    #  - "10030157" # Oesophageal Carcioma
+    #  - "10030157" # Oesophagus Carcinoma
     #  - "10016180" # Fallopian Carcinoma
     #  - "10026669" # Primary Peritoneal Carcinoma 
     Req: 'No'
@@ -2003,7 +2003,7 @@ PropDefinitions:
     Term:
       - Origin: caDSR
         Code: '2003878'
-        Value: Frequecny
+        Value: Frequency
         Version: '4'
         Tags:
           Provenance: CTDC
@@ -2768,17 +2768,84 @@ PropDefinitions:
   specimen_type: 
     Desc: The kind of material that forms the parent sample as captured in the Ontology
       for Biobanking (OBIB).
-    #Term:
-    #  - Origin: caDSR
+    Term:
+      - Origin: caDSR
     #    Code: '14986443'   #https://bioportal.bioontology.org/ontologies/OBIB/?p=classes&conceptid=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FOBI_0100051
-    #    Value: Specimen Material Parent OBIB Source 
+        Value: Specimen Material Parent OBIB Source 
     #    Version: '1'
-    #    Tags:
-    #      Provenance: CMB
-    #      Added: 07-23-24
-    #    useNullCDE: Yes
+        Tags:
+          Provenance: CTDC
+          Added: 07-23-24
+        useNullCDE: Yes
     Src: Data Submitter
-    Type: string
+    #Type: string
+    Enum:
+      - blood
+      - blood plasma specimen
+      - blood serum specimen
+      - bone marrow aspirate
+      - bone marrow film
+      - bone marrow mononuclear cell supernatant
+      - bone marrow mononuclear cells
+      - bone marrow specimen
+      - bronchial alveolar lavage cells
+      - bronchial alveolar lavage supernatant
+      - buccal cells
+      - buffy coat specimen
+      - cell block
+      - cell free DNA
+      - cerebrospinal fluid cells
+      - cerebrospinal fluid cells supernatant
+      - cheek swab specimen
+      - circulating tumor cells
+      - circulating tumor cells supernatant
+      - circulating tumor DNA
+      - curl specimen
+      - cytospin film
+      - DNA
+      - DNA extract
+      - FFPE block
+      - FFPE block punch
+      - FFPE bone marrow biopsy
+      - FFPE section
+      - FFPE specimen
+      - FFPE tissue
+      - FFPE tissue core
+      - FFPE tissue curl
+      - FFPE tissue scroll
+      - fixed tissue block specimen
+      - fixed tissue slide specimen
+      - fresh tissue specimen
+      - frozen specimen
+      - germline DNA
+      - germline RNA
+      - leukocyte cells
+      - leukocyte specimen
+      - peptides
+      - peripheral blood mononuclear cells
+      - peripheral blood mononuclear cells supernatant
+      - peripheral blood stem cells
+      - peripheral blood stem cells supernatant
+      - peritoneal cells
+      - peritoneal cells supernatant
+      - peritoneal fluid specimen
+      - pleural cells
+      - pleural cells supernatant
+      - pleural fluid specimen
+      - protein lysate
+      - RNA
+      - stained bone marrow aspirate slide
+      - stained peripheral blood smear slide
+      - stained slide
+      - streck blood
+      - unstained bone marrow aspirate slide
+      - unstained slide
+      - white blood cells
+      - whole blood film
+      #terms from CMB that were not harmonized
+      - formalin bone marrow biopsy
+      - EDTA blood
+      - formalin fixed tissue
     #Enum: #Acceptable values taken straight from the CMB Catalog Site
     #  - Bone Marrow Aspirate
     #  - Cell Block
@@ -3188,7 +3255,7 @@ PropDefinitions:
     #  - Cell Based
     Req: 'Yes'
   assay_type: 
-    Desc: The type of assay performed on the biospecimen. 
+    Desc: The type of assay method or technology utilized to determine the amount of a particular constituent in a sample or the biological properties or activity of the sample.
     Term:
       - Origin: caDSR
         Code: '7789196'
