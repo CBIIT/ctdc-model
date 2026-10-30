@@ -356,7 +356,9 @@ PropDefinitions:
           Provenance: CIDC
           Added: 12-9-25
     Src: Data Submitter
-    Type: string
+    Type:
+      value_type: list
+      item_type: string
     #Enum:
     #  - Adult
     #  - Pediatric
@@ -426,7 +428,9 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 04-17-26
     Src: Data Submitter
-    Type: string
+    Type:
+      value_type: list
+      item_type: string
     Req: 'No'
   study_organization:
     Desc: The name of the organization which is responsible for the overall scientific and administrative coordination, study monitoring, and data management activities of a particular clinical trial.
