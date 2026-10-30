@@ -3,6 +3,7 @@
 ## Data Model version 4.1.1
 * Updates `study_age_group` to enable multiple values that may be provided as a pipe-separated list.
 * Updates `grant_or_affiliated_network` to enable multiple values that may be provided as a pipe-separated list.
+* Updates CDE for `age_at_enrollment` to make reported value in days. 
 
 ## Data Model version 4.1.0
 * Adds new permissible values to the Enum block for `specimen_type`.
