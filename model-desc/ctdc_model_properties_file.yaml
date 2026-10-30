@@ -356,7 +356,9 @@ PropDefinitions:
           Provenance: CIDC
           Added: 12-9-25
     Src: Data Submitter
-    Type: string
+    Type:
+      value_type: list
+      item_type: string
     #Enum:
     #  - Adult
     #  - Pediatric
@@ -426,7 +428,9 @@ PropDefinitions:
           Provenance: CIMAC-CIDC
           Added: 04-17-26
     Src: Data Submitter
-    Type: string
+    Type:
+      value_type: list
+      item_type: string
     Req: 'No'
   study_organization:
     Desc: The name of the organization which is responsible for the overall scientific and administrative coordination, study monitoring, and data management activities of a particular clinical trial.
@@ -997,11 +1001,11 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   age_at_enrollment:
-    Desc: The age of the participant as of enrollment, measured in years.
+    Desc: The age in days of the subject when the subject enrolled in the study.
     Term:
       - Origin: caDSR
-        Code: '12299548'
-        Value: Subject Age of Enrollment Day Count
+        Code: '15742605'
+        Value: Study Subject Age in Days at Enrollment
         Version: '1'
         Tags: 
           Provenance: CMB
@@ -1009,7 +1013,7 @@ PropDefinitions:
     Src: Data Submitter
     Type:
       units: 
-        - years
+        - days
       value_type: 
         number
     Req: 'Yes'
