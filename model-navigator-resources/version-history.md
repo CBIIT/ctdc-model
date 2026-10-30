@@ -1,8 +1,8 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
 ## Data Model version 4.1.1
-* Updated `study_age_group` to allow multiple values that are `|` separated 
-* Updated `grant_or_affiliated_network` to allow multiple values that are piked `|` separated 
+* Updated `study_age_group` to allow multiple values that are `|` separated.
+* Updated `grant_or_affiliated_network` to allow multiple values that are piked `|` separated.
 
 ## Data Model version 4.1.0
 * Adds new permissible values to the Enum block for `specimen_type`.
