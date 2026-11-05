@@ -1,280 +1,198 @@
-# SOP: Contributing to a CRDC Data Commons Model
+# SOP: Contributing to the CTDC Data Model
 
-**Repository:** CBIIT/ctdc-model\
-**Primary Branches:** develop (pre-release/testing) and prod (release)\
-**Model files:** YAML definitions in `model-desc/` and `model-navigator-resources/version-history.md`
+**Repository:** `CBIIT/ctdc-model`
+**Branches:** `develop` (pre-release; feeds Dev and QA) and `prod` (release; tags here feed Stage and Prod)
+**Model files:** `model-desc/ctdc_model_file.yaml`, `model-desc/ctdc_model_properties_file.yaml`
+**Release notes:** `model-navigator-resources/version-history.md`
+**Companion documents:** [Owner's Guide](./owner-guide.md) (how the Submission Portal consumes this repo) and [Versioning Rulebook](./versioning-rulebook.md) (how to choose the version number)
 
-Downstream the CRDC Data Hub syncs via GitHub Actions + tags/releases
+## 1. Purpose and scope
 
-## 🎯 1. Purpose and Scope
+This SOP defines how engineers change, review, and release the CTDC data model. It covers feature branches, pull requests, version updates, tagging, and verifying that the release reached every Submission Portal environment. It does not restate how the Portal sync works (see the Owner's Guide) or how to classify a change (see the Rulebook).
 
-This Standard Operating Procedure (SOP) defines the approved
-contribution process for data engineers making changes to the data model
-of a CRDC Data Commons. It covers:
+The goal is traceable, reproducible model changes that several engineers can make in parallel without destabilizing `develop` or `prod`.
 
-- Local branch workflows
+## 2. Branches and environments
 
-- GitHub pull request practices
+| Branch or ref | Purpose | Submission Portal environments it feeds |
+|---|---|---|
+| `CTDC-####` feature branch | One Jira ticket's work | None |
+| `develop` | Integrated, ready-for-testing changes | Dev, Dev2, QA, QA2 (within about an hour of each merge) |
+| `prod` | Released model | None directly |
+| Release tag on `prod` (for example `4.2.0`) | The release | Stage and Prod (within about an hour of the tag) |
 
-- Version updates
+Two things follow from this table:
 
-- Semantic versioning
+- **Only put ready-for-testing work on `develop`.** Every merge is live in the lower tiers within the hour.
+- **Merging to `prod` does not release anything.** The tag does.
 
-- Git tagging and releases
+## 3. Files a model change touches
 
-- Downstream verification
+Most changes touch more than one file. Update them together in the same pull request:
 
-The goal is to maintain high quality, traceable, and reproducible
-contributions while enabling parallel development by multiple engineers.
+| File | Update when |
+|---|---|
+| `model-desc/ctdc_model_properties_file.yaml` | Adding or changing a property: description, type, `Enum:`, caDSR `Term:` binding, `Req` |
+| `model-desc/ctdc_model_file.yaml` | Adding a property to a node's `Props:` list, adding a node or relationship, and the `Version:` line at release time |
+| `model-navigator-resources/version-history.md` | Every release: what changed and why, with a **Breaking change** line for anything MAJOR |
+| Other `model-navigator-resources/` files | Only when the change affects how the model is displayed or how submitters prepare files |
 
-## 🌿 2. Parallel Development
+A property defined in the properties file but missing from a node's `Props:` list passes validation and **does not appear** in the Navigator or the submission template.
 
-GitHub branching and pull request workflows allow **multiple engineers
-to work in parallel** even when modifying the same repository without
-blocking each other:
+**Do not add any other files under `model-desc/` or `model-navigator-resources/`.** Everything in those folders is published to the Submission Portal, and published files are never removed (Owner's Guide, Section 5).
 
-- Changes happen on an isolated **feature branch**
+## 4. Making a change
 
-- Each **feature branch** corresponds to the assigned Jira ticket
+1. **Confirm there is a Jira ticket** for the work.
 
-- Work is isolated until reviewed
+2. **Start from an up-to-date `develop`:**
 
-- Pull requests provide review and discussion
+   ```bash
+   git clone https://github.com/CBIIT/ctdc-model.git   # first time only
+   cd ctdc-model
+   git checkout develop
+   git pull origin develop
+   ```
 
-- Automated tests validate changes
+3. **Create a feature branch named for the ticket:**
 
-- Reviews ensure consistency before merge
+   ```bash
+   git checkout -b CTDC-1725
+   ```
 
-- Conflicts are resolved during integration (merge), not during
-  day-to-day work
+4. **Make the change** in the files from Section 3. Comment out rather than delete when the Rulebook says to preserve history (for example, retired `Enum:` blocks), and remember that commented-out lines are removed as far as the parser is concerned.
 
-Using feature branches and PRs ensures the develop and prod branches
-remain stable.
+5. **Validate locally** (Section 8).
 
-## 🌳 3. Branching Strategy (CTDC)
+6. **Stage only the files you meant to change, then commit** using imperative mood and the ticket number:
 
-  **Branch** | **Purpose**
---- | ---
-develop | Pre-release branch used for Dev and QA tier validation.
-prod | Production-ready versions for production releases.<br>The Data Hub tracks release tags.
+   ```bash
+   git status
+   git add model-desc/ctdc_model_properties_file.yaml model-desc/ctdc_model_file.yaml
+   git commit -m "CTDC-1725: Add consent_group node"
+   ```
 
+   Avoid `git add -A`: a stray file under `model-desc/` would be published.
 
-All new feature and bug fix work starts from develop. After validation
-and review, changes are promoted to prod.
+7. **Push the branch:**
 
-## 🛠️ 4. End-to-End Contribution Workflow
+   ```bash
+   git push origin CTDC-1725
+   ```
 
-1.  Ensure there is a Jira ticket for the data modeling work.
+8. **Open a pull request into `develop`.** Title format: `CTDC-####: <brief description>`. The description states:
+   * *What changed and why*
+   * *Version impact*: the Rulebook row that applies to each change, and any query evidence the Rulebook requires
+   * *Validation performed*
+   * *Migration notes*: for anything MAJOR, what a submitter must change
 
-2.  **Clone the repository locally** and switch to develop:
+   Assign a reviewer, then copy the PR link into the Jira ticket and assign the ticket to the reviewer.
 
-> git clone https://github.com/CBIIT/ctdc-model.git
->
-> cd ctdc-model
->
-> git checkout develop
->
-> git pull origin develop
+9. **Wait for the CI check to pass** (it runs on pull requests into `develop`), address review comments, and merge.
 
-3.  **Create a feature branch** named with the Jira ticket:
+10. **Verify in Dev and QA** after the next sync (Owner's Guide, Section 9): the change is visible in the Data Model Navigator and a known-good submission file still validates.
 
-> git checkout -b CTDC-1725
+### Version bumps during development
 
-4.  **Make your changes locally.**\
-    \
-    Most model changes touch more than one file. Use the checklist below
-    to make sure each artifact is updated together — adding a property
-    to the properties YAML without referencing it in the node's `Props:`
-    list will pass validation but the property will not appear in the
-    Data Model Navigator.
+After a release, `develop` still says the released number (for example `4.1.1`). If the next feature merges without a bump, the lower tiers overwrite their copy of `4.1.1` in place, and Dev/QA "4.1.1" no longer matches Prod "4.1.1" (Owner's Guide, Section 4).
 
-    - **`model-desc/ctdc_model_properties_file.yaml`** — add or update
-      the property definition (description, type, enum values, caDSR
-      Common Data Element binding, required vs preferred vs optional).
+So the version moves **once per release cycle, at the start**:
 
-    - **`model-desc/ctdc_model_file.yaml`** — add the new property name
-      to the `Props:` list of the relevant node, or add the new node
-      and its relationships if the change introduces one.
+* *First merge of a new cycle*: that PR also sets `Version:` to the expected next release (usually the next MINOR, for example `4.2.0`). The lower tiers then build a new folder instead of rewriting the released one.
+* *Later merges in the same cycle*: no version change.
+* *At release*: confirm the number against the Rulebook (Section 5, step 1). If the cycle turned out to contain a MAJOR change, raise it (for example to `5.0.0`) before tagging. The unused number then remains in the Dev/QA version list only; note it in the release notes.
 
-    - **`model-navigator-resources/version-history.md`** — add a new
-      release notes entry describing what changed and why. This is what
-      end users see in the Data Model Navigator's Version tab.
+Feature branches never carry their own version bumps.
 
-    - **Navigator resources** (icons, example files, README) — update
-      only if the change affects how the model is displayed or how
-      submitters prepare data.
+## 5. Releasing
 
-5.  **Always update the CTDC model version** in the YAML:\
-    \
-    To trigger downstream integration and ensure the UI displays the
-    correct version, update the `Version:` field at the top of:
+1. **Decide the version number.** Diff `develop` against the last release tag and classify the net change with the [Versioning Rulebook](./versioning-rulebook.md):
 
-    - `model-desc/ctdc_model_file.yaml` (this change drives downstream
-      Data Hub detection)
+   ```bash
+   git fetch --tags
+   git diff "$(git tag -l '[0-9]*.[0-9]*.[0-9]*' | sort -V | tail -n 1)"..origin/develop -- model-desc/
+   ```
 
-6.  **Update the display version** by adding a new entry in:
+2. **In a pull request into `develop`, confirm the version and write the release notes:**
+   * *`model-desc/ctdc_model_file.yaml`*: confirm `Version:` is the number from step 1, or correct it
+   * *`model-navigator-resources/version-history.md`*: add the entry for that number
 
-    - `model-navigator-resources/version-history.md` (displayed in the
-      Data Model Navigator's "Version" tab)
+   The `Version:` line is what the Portal displays. The release-notes entry is what users read in the Navigator's version history. They must name the same number.
 
-7.  **Stage and commit changes**:\
-    \
-    Best practice is imperative mood + ticket reference.
+3. **Open a pull request from `develop` into `prod`**, using the release checklist in the Rulebook as the description. Review it like any other PR.
 
-> git add -A
->
-> git commit -m \"CTDC-1725: Add \<feature/change summary\>\"
+   **The CI workflow does not currently run on pull requests into `prod`.** Its triggers list `develop`, `main`, and `master`, and this repository has no `main` or `master`. Until `prod` is added to the workflow triggers, the reviewer must run the local validation in Section 8 against `develop` and say so in the PR.
 
-8.  **Push your branch**:
+4. **Merge into `prod`.**
 
-> git push origin CTDC-1725
+5. **Tag the merge commit on `prod`** with exactly the YAML version, without a `v` and without any suffix:
 
-9.  **Ensure integration tests succeed**. Resolve any errors before
-    moving on.
+   ```bash
+   git checkout prod && git pull origin prod
+   grep -m1 '^Version:' model-desc/ctdc_model_file.yaml   # confirm, for example: Version: v4.2.0
+   git tag 4.2.0
+   git push origin 4.2.0
+   ```
 
-10. **Open a Pull Request** into develop, assign reviewers, and link the
-    Jira ticket.\
-    \
-    PR best practices:
+   Never move, delete, or reuse a tag. If a release is wrong, fix it in a new version.
 
-    - **PR title format:** `CTDC-####: <brief description>`
-      (e.g., `CTDC-1725: Add consent_group node`)
+6. **Create a GitHub Release** for the tag and paste the release notes. The Portal does not read GitHub Releases; they are for people.
 
-    - Description includes:
+7. **Verify Stage and Prod** after the next sync (Owner's Guide, Section 9). Do not announce the release until `cache/content.json` on both the `stage` and `prod` branches of `CBIIT/crdc-datahub-models` shows the new version.
 
-      - What changed + why
+8. **Bring `develop` level with `prod`** so the merge commit exists on both branches:
 
-      - SemVer impact (major/minor/patch)
+   ```bash
+   git checkout develop && git pull origin develop
+   git merge origin/prod
+   git push origin develop
+   ```
 
-      - Testing/validation performed
+## 6. Pull request checklist
 
-      - Any migration notes (if breaking)
+- [ ] Jira ticket linked; changes limited to that ticket's scope
+- [ ] PR title follows `CTDC-####: <brief description>`; commit messages carry the ticket number
+- [ ] New properties appear in both the properties file and a node's `Props:` list
+- [ ] No new files under `model-desc/` or `model-navigator-resources/` other than model and Navigator files
+- [ ] No `Code: 'TBD'`
+- [ ] Version impact stated using the Rulebook, with required query evidence
+- [ ] Validation passing (CI on PRs into `develop`; local run on PRs into `prod`)
+- [ ] No secrets or credentials committed
 
-    - Assign reviewer in GitHub
+## 7. Git commands cheat sheet
 
-    - Assign the Jira ticket to the reviewer and copy the PR into the
-      comments of the Jira ticket
-
-11. Merge **into develop** after approval and validate on dev/QA
-    environments.
-
-12. Promote to **prod** via a PR
-
-    - Open **a new PR from** **develop → prod**.
-
-    - Repeat review + CI validation
-
-    - After PR is merged, validate in Stage and Prod environments.
-
-13. ⚠️ **Verify YAML version matches the planned tag.**\
-    \
-    Before tagging, confirm that the `Version:` field in
-    `model-desc/ctdc_model_file.yaml` exactly matches the SemVer tag
-    you are about to create. The CRDC Data Hub reads the version from
-    the YAML, **not** from the tag name — a mismatch will silently fail
-    to advance the displayed version downstream.
-
-14. Tag + release (required for production propagation)
-
-    - Create a git tag matching the SemVer version (e.g., 1.21.0)
-
-    - Create/Update GitHub release notes for that version
-
-15. Downstream verification in **crdc-datahub-models**
-
-    - Once the release is cut, GitHub Actions will run and update the
-      CTDC model pointer in the downstream repository
-      (\`CBIIT/crdc-datahub-models\`).
-
-    - **Verify downstream detection** by inspecting
-      \`cache/content.json\` on the prod branch of
-      \`CBIIT/crdc-datahub-models\` — the CTDC entry should reflect the
-      new version number.
-
-## ⚡ 5. Quick Git Commands Cheat Sheet
-
- | **Task** | **Command** |
-|----------|-------------|
-| Clone repo | `git clone https://github.com/CBIIT/ctdc-model.git` |
-| Checkout develop | `git checkout develop` |
-| Pull latest | `git pull origin develop` |
+| Task | Command |
+|---|---|
+| Update `develop` | `git checkout develop && git pull origin develop` |
 | Create feature branch | `git checkout -b CTDC-####` |
-| Stage changes | `git add -A` |
-| Commit | `git commit -m "Message"` |
-| Push branch | `git push origin <branch>` |
-| Merge develop | `git merge origin/develop` |
-| Rebase (optional) | `git rebase origin/develop` |
+| Stage specific files | `git add <path> <path>` |
+| Commit | `git commit -m "CTDC-####: <summary>"` |
+| Push branch | `git push origin CTDC-####` |
+| Bring in latest `develop` | `git merge origin/develop` (or `git rebase origin/develop` before review) |
+| Find the last release tag | `git tag -l '[0-9]*.[0-9]*.[0-9]*' \| sort -V \| tail -n 1` |
+| See what is unreleased | `git diff <last-tag>..origin/develop -- model-desc/` |
+| Tag a release | `git tag X.Y.Z && git push origin X.Y.Z` |
 
+## 8. Validating locally
 
-## 🔢 6. Semantic Versioning (SemVer) Overview
+The repository's existing test uses the `bento-mdf` submodule:
 
-CTDC model versions follow **X.Y.Z**: **MAJOR.MINOR.PATCH**:
+```bash
+git submodule update --init bento-mdf
+pip install bento-mdf pytest
+cd model-desc && python -m pytest test_val.py
+```
 
-- **MAJOR:** Breaking changes to the model schema (removing required
-  property, changing type, removing nodes, removing enum values,
-  tightening constraints)
+Alternatively, run the validator directly from the repository root:
 
-- **MINOR:** Backward-compatible additions (new option properties/nodes,
-  adding enum values, new optional relationships)
+```bash
+test_mdf --schema bento-mdf/schema/mdf-schema.yaml \
+  model-desc/ctdc_model_file.yaml model-desc/ctdc_model_properties_file.yaml
+```
 
-- **PATCH:** Backward-compatible bug fixes or documentation-only changes
-  (descriptions fixes, examples, metadata text)
+Both need network access to GitHub, because the schema references remote definitions. Validation confirms the YAML is well formed and matches the MDF schema; it does not check version classification or permissible-value coverage. Those are reviewer responsibilities under the Rulebook.
 
-Semantic versioning consistency is important for downstream tooling and
-UI displays.
+## 9. Support
 
-## ✅ 7. Pull Request Quality Checklist
-
-Before submitting a PR, verify that:
-
-- The Jira ticket is linked in the PR
-
-- Changes are scoped to Jira ticket
-
-- Version fields are updated correctly
-
-- The PR title follows the format `CTDC-####: <brief description>`
-
-- The commit message follows the Jira/branch naming convention
-
-- The PR description is clear and comprehensive
-
-- All CI tests are passing
-
-- No secrets/credentials committed
-
-## 🔄 8. After Merging to develop
-
-1.  Verify the changes in the DEV/QA environments
-
-2.  Open a pull request from develop → prod when ready
-
-## 🚀 9. Promoting Changes to prod
-
-1.  Create a PR from develop → prod
-
-2.  Follow the same review and CI process
-
-3.  After merge, create a GitHub Release with the version and release
-    notes
-
-## 🔍 10. Downstream Validation
-
-- Confirm downstream propagation per Section 4, Step 15: verify the
-  updated CTDC entry in `cache/content.json` on the prod branch of
-  `CBIIT/crdc-datahub-models`.
-
-- Validate that the relevant CTDC environments (Dev, QA, Stage, Prod)
-  have picked up the new model version end-to-end.
-
-## 💬 11. Support & Questions
-
-If you have questions or need help:
-
-- Ask in the relevant team Slack communication channel
-
-- Refer to the Data Model Owner's Guide
-
-- Check with your project lead
-
-Thank you for contributing to the CTDC data model!
+- Ask in the team's CTDC Slack channel, or ask the CTDC data model owner.
+- Pipeline behavior, Navigator settings, or published-file cleanup: the CRDC Data Hub team (see the Owner's Guide).
