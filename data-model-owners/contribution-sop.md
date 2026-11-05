@@ -60,7 +60,7 @@ A property defined in the properties file but missing from a node's `Props:` lis
    git checkout -b CTDC-1725
    ```
 
-4. **Make the change** in the files from Section 3. Comment out rather than delete when the Rulebook says to preserve history (for example, retired `Enum:` blocks), and remember that commented-out lines are removed as far as the parser is concerned.
+4. **Make the change** in the files from Section 3, following the [MDF Property Playbook](./mdf-property-playbook.md) for property syntax. Comment out rather than delete when the Rulebook says to preserve history (for example, retired `Enum:` blocks), and remember that commented-out lines are removed as far as the parser is concerned.
 
 5. **Validate locally** (Section 8).
 
@@ -138,7 +138,7 @@ Feature branches never carry their own version bumps.
 
 6. **Create a GitHub Release** for the tag and paste the release notes. The Portal does not read GitHub Releases; they are for people.
 
-7. **Verify Stage and Prod** after the next sync (Owner's Guide, Section 9). Do not announce the release until `cache/content.json` on both the `stage` and `prod` branches of `CBIIT/crdc-datahub-models` shows the new version.
+7. **Verify Stage and Prod** (Owner's Guide, Section 9). The model reaches the Navigator within the hour; its permissible values arrive only after MDB loads the tag (a daily job) and promotes it (nightly), so a tag pushed late in the day may not have values until the next morning. Do not announce the release until `cache/content.json` on both the `stage` and `prod` branches of `CBIIT/crdc-datahub-models` shows the new version **and** STS returns values for the changed properties. If a submission is waiting on the release, tell the submitter that their submission must be switched to the new model version, which resets its validation status (Owner's Guide, Section 6.3).
 
 8. **Bring `develop` level with `prod`** so the merge commit exists on both branches:
 
@@ -155,6 +155,7 @@ Feature branches never carry their own version bumps.
 - [ ] New properties appear in both the properties file and a node's `Props:` list
 - [ ] No new files under `model-desc/` or `model-navigator-resources/` other than model and Navigator files
 - [ ] No `Code: 'TBD'`
+- [ ] Properties meant to use a CDE's values reference it in `Enum:`, not only in `Term:` ([MDF Property Playbook](./mdf-property-playbook.md), Section 6.2)
 - [ ] Version impact stated using the Rulebook, with required query evidence
 - [ ] Validation passing (CI on PRs into `develop`; local run on PRs into `prod`)
 - [ ] No secrets or credentials committed
@@ -175,22 +176,18 @@ Feature branches never carry their own version bumps.
 
 ## 8. Validating locally
 
-The repository's existing test uses the `bento-mdf` submodule:
+Run the MDF validator from the repository root:
 
 ```bash
 git submodule update --init bento-mdf
-pip install bento-mdf pytest
-cd model-desc && python -m pytest test_val.py
-```
-
-Alternatively, run the validator directly from the repository root:
-
-```bash
+pip install bento-mdf
 test_mdf --schema bento-mdf/schema/mdf-schema.yaml \
   model-desc/ctdc_model_file.yaml model-desc/ctdc_model_properties_file.yaml
 ```
 
-Both need network access to GitHub, because the schema references remote definitions. Validation confirms the YAML is well formed and matches the MDF schema; it does not check version classification or permissible-value coverage. Those are reviewer responsibilities under the Rulebook.
+Do not rely on `model-desc/test_val.py`: it imports a validator path (`bento-mdf/validators/mdf-validate`) that no longer exists in `bento-mdf`, so it cannot run.
+
+This needs network access to GitHub, because the schema references remote definitions. Validation confirms the YAML is well formed and matches the MDF schema; it does not check version classification or permissible-value coverage. Those are reviewer responsibilities under the Rulebook.
 
 ## 9. Support
 

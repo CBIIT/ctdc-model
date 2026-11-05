@@ -3,7 +3,7 @@
 **Applies to:** `CBIIT/ctdc-model`: `model-desc/ctdc_model_file.yaml`, `model-desc/ctdc_model_properties_file.yaml`, and `model-navigator-resources/version-history.md`
 **Scheme:** Semantic Versioning 2.0.0 (`MAJOR.MINOR.PATCH`)
 **Status:** Proposed. Published for team review; the conventions in Appendix C need explicit ratification.
-**Companion documents:** [Owner's Guide](./owner-guide.md) (how the Submission Portal consumes the model) and [Contribution SOP](./contribution-sop.md) (the steps). This Rulebook is the single authority on how to classify a change; the other two documents point here rather than restating it.
+**Companion documents:** [Owner's Guide](./owner-guide.md) (how the Submission Portal consumes the model), [Contribution SOP](./contribution-sop.md) (the steps), and [MDF Property Playbook](./mdf-property-playbook.md) (property syntax). This Rulebook is the single authority on how to classify a change; the other two documents point here rather than restating it.
 
 ---
 
@@ -20,17 +20,14 @@
 | Loosen `Req` (`'Yes'` to `'No'` or `Preferred`) | **MINOR** | Loosening a constraint |
 | Tighten `Req` (`'No'` or `Preferred` to `'Yes'`) | **MAJOR** | Tightening a constraint |
 | Change `Type`: any change, including `string` to a list, adding or changing `units`, or "fixing" it | **MAJOR** | Values cast, store, and query differently |
-| `Enum:` edited or commented out on a property **with** a live enumerated `Code:` | **PATCH** | The `Enum:` is inert; the CDE validates. Display only |
-| `Enum:` value added, property has **no** live `Code:` | **MINOR** | Vocabulary expands; old values still valid |
-| `Enum:` value removed, commented out, or respelled, property has **no** live `Code:` | **MAJOR** | Previously valid data now fails validation |
-| `Code:` added or uncommented (an enumerated CDE takes over) | **MAJOR** | The authority changed and you cannot prove the CDE's list covers your data |
-| `Code:` added for a CDE with **no enumerated values** | **MINOR** | Validation is unchanged; see §4.4 |
-| `Code:` removed or commented out, property **has** an `Enum:` (it takes over) | **MINOR** with the coverage check; **MAJOR** without | See §4.4 |
-| `Code:` removed or commented out, property has **no** `Enum:` | **MINOR**, no evidence needed | Can only relax |
-| `Code:` swapped for a different `Code:` | **MAJOR** | Different authority |
-| `Term.Version` bumped, same `Code:` | **MINOR** | Same authority |
-| Add `useNullCDE: Yes` | **MINOR** | Adds null-flavor permissible values |
-| Remove or comment out `useNullCDE:` | **MAJOR** | Removes accepted values |
+| `Enum:` value added | **MINOR** | Vocabulary expands; old values still valid |
+| `Enum:` value removed, commented out, or respelled | **MAJOR** | Previously valid data now fails validation |
+| `Type:` replaced by an `Enum:` (literal or reference) | **MAJOR**, or **MINOR** with the coverage check | Narrows from free text to a list; see §4.4 |
+| `Enum:` replaced by `Type: string` | **MINOR** | Relaxes to free text |
+| `Enum:` reference swapped, or moved to a later caDSR CDE version | **MAJOR**, or **MINOR** with the coverage check | A different value set, or one that may have lost values |
+| Add `useNullCDE: Yes` to a property with a value list | **MINOR** | Adds null values |
+| Remove `useNullCDE` from a property with a value list | **MAJOR** | Removes accepted values |
+| `Term:` added, removed, or re-coded | **MINOR** | Meaning metadata; no validation effect. **MAJOR** if it redefines the property |
 | Loosen a relationship multiplicity | **MINOR** | Loosening |
 | Tighten a relationship multiplicity | **MAJOR** | Tightening |
 | Remove a `Mul:` declaration | **MINOR** | Falls back to the `many_to_many` default, always a loosening |
@@ -58,21 +55,21 @@ That is why "we only fixed a mistake" is never, by itself, a reason to call some
 
 ### 1.1 Which list actually validates: read this before classifying anything
 
-The Submission Portal does not read permissible values out of our YAML. It asks **MDB** (through STS) for them by **model, model version, and property**, and MDB resolves the list:
+The Submission Portal asks **MDB** (through STS) for each property's permissible values by **model, model version, and property**. Since EDPs went live in early September 2026, MDB answers from `Type:` and `Enum:` only:
 
-| Property state | What validates | The model `Enum:` is |
-|---|---|---|
-| Live `Code:` for a caDSR CDE with an **enumerated** value domain | The **CDE's permissible values** | **Ignored** for validation (still displayed in the Navigator) |
-| Live `Code:` for a CDE whose values are URL placeholders or that has **no enumerated** values | The model `Enum:` if present, otherwise only `Type:` | **Authoritative** if present |
-| No live `Code:` (absent or commented out) | The model `Enum:` if present, otherwise only `Type:` | **Authoritative** if present |
-| `Code: 'TBD'` | Nothing: MDB cannot resolve it and the lookup fails | Irrelevant; the property is broken |
+| Property state | What validates |
+|---|---|
+| `Enum:` with literal values | That list |
+| `Enum:` with one reference to a caDSR CDE or a CRDC EDP | That value set, at the referenced version |
+| `useNullCDE: Yes` in the property's caDSR `Term:` entry | Adds the standard null values to either list above |
+| `Type:` (`string`, `integer`, `number`, a pattern) | No list: any value of that type |
+
+**`Term:` is never examined for values.** It records meaning. Before September 2026 the Portal did use a `Term:` CDE's values, so properties written then with a CDE in `Term:` and `Type: string` silently became free text when EDPs launched. That was a platform change, not a model release, and it is the largest open risk in models of that era (Appendix B).
 
 Two consequences shape the rest of this document:
 
-- **On a property bound to an enumerated CDE, editing the `Enum:` block changes nothing about validation.** It is documentation.
-- **MDB resolves by model version, so a released version's permissible values should be fixed once MDB has ingested it.** *(Open item: confirm with the MDB team whether MDB snapshots PVs at ingest or resolves the CDE live at lookup. If it resolves live, caDSR drift can change a released version's behavior.)*
-
-The current count of properties in each state is in Appendix B.
+- **Every `Enum:` validates.** There is no longer an "inert" display-only `Enum:`, so every value removal is a MAJOR-class change.
+- **A released version's values are fixed by its references.** MDB resolves by model version and by the referenced CDE or EDP version. caDSR can still add values to a CDE without a new version; those reach submitters only after the next model release (Owner's Guide, Section 6.2).
 
 ### 1.2 The most common mistake
 
@@ -149,7 +146,6 @@ Three procedural rules:
 | `Req` between `Preferred` and `'No'` | MINOR | Neither fails validation, but submitter guidance changes |
 | `Req` tightened (`'No'` or `Preferred` to `'Yes'`) | MAJOR | |
 | `Type` changed: **any** change | **MAJOR** | Includes `string` to `number` or `integer`, `number` to `integer`, `string` to a list (`value_type: list`), and adding, removing, or changing `units`. "The values were always numeric" and "a single value is still a valid list" are not exemptions: the loader, the GraphQL schema, and the application all change behavior |
-| Uncomment a `Type:` line **as part of** commenting out that property's inert `Enum:` | PATCH | The MDF schema allows exactly one of `Type:` or `Enum:`, so this is one operation. Validation is unchanged because the CDE governs |
 | Change `Src` (for example `Data Submitter` to `Data Hub`) | MINOR | Changes who populates the field |
 | Fix a `Desc` typo, clarify wording, add an example | PATCH | Unless the new description changes what the property means; then it is a semantic redefinition: MAJOR |
 | Add a definition no node references | PATCH | Inert until wired into `Props:`, but flag it in review: usually an oversight |
@@ -173,52 +169,51 @@ Always declare `Req:` explicitly, and quote it (`'Yes'`, `'No'`, `Preferred`). U
 
 The multiplicity ladder, most to least permissive: `many_to_many`, then `one_to_many` or `many_to_one`, then `one_to_one`. Moving **down** is MAJOR, **up** is MINOR, staying put is PATCH.
 
-### 4.4 CDE bindings: the authority rule
+### 4.4 Value sources: `Enum:` references, CDEs, and null values
 
-> **Changing *who decides* what is valid is breaking. Changing the *version* of the same decider is not.**
+> **Changing *which list* a property validates against is breaking. Moving to a later version of the same list is not, unless that version removes values.**
+
+Since early September 2026 only `Type:` and `Enum:` decide what validates (§1.1). A property's `Term:` is meaning, not values.
 
 | What the diff shows | Bump | Notes |
 |---|---|---|
-| `Enum:` edited or commented out, property has a live **enumerated** `Code:` | **PATCH** | Inert for validation (§1.1) |
-| `Code:` **added or uncommented**, the CDE has an enumerated value domain | **MAJOR** | You would have to prove the CDE's list covers every value already submitted, and you do not control that list |
-| `Code:` **added or uncommented**, the CDE has **no** enumerated values (free text, dates, numbers, or URL-placeholder values) | **MINOR** | Validation does not change (§1.1). Link the CDE in the PR as evidence |
-| `Code:` **removed or commented out**, property **has** an `Enum:` that takes over | **MINOR** with the coverage check below; **MAJOR** without it | |
-| `Code:` **removed or commented out**, property has **no** `Enum:` | **MINOR**, no evidence required | Can only relax. See below |
-| `Code:` **swapped** for a different `Code:` | **MAJOR** | A different authority |
-| `Term.Version` bumped, same `Code:` | **MINOR** | Same authority |
-| Add `useNullCDE: Yes` | **MINOR** | Adds standard null values ("Unknown", "Not Reported") |
-| Remove or comment out `useNullCDE:` | **MAJOR** | Removes accepted values. Disabling a CDE also drops its null values unless the new `Enum:` includes them; include them in the coverage check |
-| Add or edit `Term.Tags` (`Provenance`, `Added`) | **PATCH** | Human-read metadata |
-| `Code: 'TBD'` | **Never release this** | MDB cannot resolve it; the property fails validation |
+| `Type:` (free text or number) replaced by an `Enum:` reference or a literal `Enum:` | **MAJOR**, or **MINOR** with the coverage check | The property narrows from "anything" to a list. This is the change CTDC makes when it converts `Term`-only CDE properties to `Enum:` references |
+| `Enum:` reference or literal `Enum:` replaced by `Type: string` | **MINOR** | Relaxes to free text. Escalate under §5.5's consumer conditions |
+| Literal `Enum:` replaced by an `Enum:` reference | **MAJOR**, or **MINOR** with the coverage check | A different authority: the referenced set must contain every value in the data |
+| `Enum:` reference replaced by a literal `Enum:` | **MAJOR**, or **MINOR** with the coverage check | Same check, in the other direction |
+| `Enum:` reference swapped to a different `Code:` or `Origin:` | **MAJOR**, or **MINOR** with the coverage check | A different value set |
+| `Enum:` reference moved to a later `Version:` of the same caDSR CDE | **MAJOR**, or **MINOR** with the coverage check | caDSR versions a CDE when it **removes** values or changes meaning. Additions arrive without a version change |
+| `Enum:` reference moved to a later `Version:` of the same CRDC EDP | **MINOR**, unless the EDP's change notes show removed values | Ask the MDB team, or diff the two versions in `bento-edps` |
+| Add `useNullCDE: Yes` to a property with a value list | **MINOR** | Adds null values |
+| Remove `useNullCDE` from a property with a value list | **MAJOR**, or **MINOR** with escape hatch 1 | Removes accepted values |
+| Add or remove `useNullCDE` on a `Type:` property | **PATCH** | Free text already accepts null values |
+| `Term:` entry added, removed, or its `Code:`/`Version:` changed | **MINOR** | Changes what the property means in MDB and the Navigator, which harmonization and partners rely on. Does not change validation |
+| `Term:` change that **redefines** the property (a different concept, unit, or scale) | **MAJOR** | Old data now means something else. Example: CTDC 4.1.1 moved `age_at_enrollment` from a years CDE to a days CDE |
+| `Term.Tags` (`Provenance`, `Added`) | **PATCH** | Human-read metadata |
+| `Code: 'TBD'` | **Never release this** | In an `Enum:` reference MDB cannot resolve it and validation fails |
 
-#### The coverage check: how disabling a CDE earns MINOR
+#### The coverage check: how a narrowing change earns MINOR
 
-When you disable a CDE, validation switches from the caDSR list to our `Enum:`. Those are separately maintained, and model enums are often a subset, so the default assumption is that the accepted set narrowed: a MAJOR.
-
-**Policy:** when we disable a CDE, the `Enum:` must contain every value present in the current data for that property, including any null values previously supplied by `useNullCDE`. Both sides are in reach (the values in our graph and the list in our PR), so this is verifiable without touching caDSR. Paste the result in the PR:
+When a property moves to a different list, or from free text to any list, previously accepted values may now fail. The policy is to prove they do not: every value present in the current data must be in the new list. Run this against the graph, compare with the new list (for a reference, the values STS returns for it), and paste both in the PR:
 
 ```cypher
 MATCH (n:<node>) WHERE n.<property> IS NOT NULL
 RETURN DISTINCT n.<property> AS value, count(*) AS records ORDER BY value
 ```
 
-Every value returned must appear in the new `Enum:`. **With the result in the PR, MINOR. Without it, MAJOR.** Re-run it at release time if data landed in between.
+**With the result in the PR showing full coverage, MINOR. Without it, or with gaps, MAJOR.** Re-run it at release time if data landed in between. Include any null values previously supplied by `useNullCDE`.
 
-This works only in the disabling direction. You can guarantee coverage for a list you author, not for one caDSR authors, so enabling or swapping an enumerated CDE stays MAJOR.
+**Residual case, accepted deliberately:** the check protects values *in the data*. A value that was accepted before, is absent from the new list, and was never submitted will now be rejected. This is accepted as MINOR on the condition that **the release notes name the property and state its new value source**.
 
-#### No `Enum:` behind the `Code:`
+#### Converting `Term`-only CDE properties to `Enum:` references
 
-If the property has no `Enum:`, removing the `Code:` leaves it constrained only by its `Type:`. Nothing can narrow, so it is **MINOR with no evidence**. Escalate to MAJOR only under the §5.5 consumer conditions.
+Models written before September 2026 (CTDC especially) have many properties with an enumerated CDE in `Term:` and `Type: string`. Today they accept free text. Converting them restores the intended validation and narrows each property, so:
 
-**The cost is deferred, which is the trap.** Free text accumulates: typos, case variants, prose. Re-binding later is a MAJOR, and accumulated values may not fit the CDE. Three things keep it recoverable:
+1. Run the coverage check per property against the referenced CDE's values. Properties with full coverage convert as MINOR.
+2. Properties with gaps are either corrected in the data first, or released together as a MAJOR with a breaking-change line naming them.
+3. Free text accumulated since September 2026 is the most likely source of gaps; check those values first.
 
-1. **Snapshot the distinct values** with the query above and leave them commented in the property block.
-2. **Record the intent** in `Desc` and in the release notes, with a ticket.
-3. **Say it in the release notes**, so submitters know the field is now unvalidated.
-
-**Residual case, accepted deliberately:** the coverage check protects values *in the data*. Values legal under the CDE, absent from our `Enum:`, and never yet submitted will now be rejected. This is accepted as MINOR on the condition that **the release notes name the property and state that its accepted values are now the model's list.**
-
-**Reviewer's obligation:** any PR touching a `Code:` must say which row of this table applies, with the evidence the row requires. Without it, the PR should not be approved.
+**Reviewer's obligation:** any PR that changes an `Enum:`, a `Type:`, or `useNullCDE` must say which row of this table applies, with the evidence the row requires. Without it, the PR should not be approved.
 
 ### 4.5 Cosmetic and structural-only changes
 
@@ -234,7 +229,7 @@ If the property has no `Enum:`, removing the `Code:` leaves it constrained only 
 
 ## 5. Enums: the detailed rules
 
-**First check whether the property has a live enumerated `Code:`.** If it does, the `Enum:` is inert (§1.1) and everything in this section collapses to **PATCH**. The rules below apply to properties whose `Enum:` validates; Appendix B lists how many there are.
+Every `Enum:` validates (§1.1), so these rules apply to every property with a literal `Enum:`. Changes to `Enum:` references are covered in §4.4.
 
 ### 5.1 Adding a value: **MINOR**
 
@@ -254,7 +249,7 @@ A commented-out value is not in the parsed model. The parser skips the line, so 
 
 ### 5.5 Removing the whole `Enum:` block: **MINOR**
 
-On an unbound property this makes it free text: a relaxation. Escalate to **MAJOR** if the property backs a filter, facet, dropdown, chart series, or table column in the application, or is a mapping or join key in ingestion. The frontend lead and the ingestion lead sign off, and the PR records their answer. On a property bound to an enumerated CDE, this is display cleanup: **PATCH**.
+On an unbound property this makes it free text: a relaxation. Escalate to **MAJOR** if the property backs a filter, facet, dropdown, chart series, or table column in the application, or is a mapping or join key in ingestion. The frontend lead and the ingestion lead sign off, and the PR records their answer.
 
 ### 5.6 Adding an `Enum:` to a free-text property: **MAJOR**
 
@@ -284,7 +279,7 @@ No effect on validation. Check whether the Navigator or application renders valu
 Both replace a guess with a query, and both require the result in the PR.
 
 1. **No submitted data.** Any MAJOR in §4 or §5 drops to MINOR if the property holds nothing: `MATCH (n) WHERE n.<property> IS NOT NULL RETURN count(*)` returns 0.
-2. **Coverage on a disabled CDE** (§4.4).
+2. **Coverage on a change of value source** (§4.4): the new list contains every value in the data.
 
 ### When there is genuine disagreement
 
@@ -319,12 +314,11 @@ Copy into the description of the `develop` to `prod` pull request.
 **Classification**
 - [ ] Diffed against the last release tag, not the previous commit
 - [ ] Every change classified per §4 and §5; the maximum sets the bump
-- [ ] Every `Enum:` hunk: checked whether the property has a live enumerated `Code:` first
 - [ ] Any `Type` change, `Req` tightening, removal, or rename flagged, and the release is MAJOR
-- [ ] Any enumerated `Code:` added, uncommented, or swapped: MAJOR
-- [ ] Any `Code:` removed where the property has an `Enum:`: coverage query in the PR, or MAJOR
-- [ ] Any `Code:` removed where the property has no `Enum:`: values snapshotted, intent in `Desc`, release note says the field is now unvalidated
-- [ ] Any `useNullCDE` removed: MAJOR, or its null values are in the new `Enum:` and the coverage check
+- [ ] Any `Type:` to `Enum:` change, `Enum:` reference swap, or caDSR version bump in a reference: coverage query in the PR, or MAJOR
+- [ ] Any `Enum:` to `Type: string` change: release note says the field is now unvalidated
+- [ ] Any `useNullCDE` removed from a property with a value list: MAJOR, or escape hatch 1
+- [ ] Any `Term:` change that redefines a property (concept, unit, scale): MAJOR
 - [ ] Escape hatches, if claimed, backed by query results in the PR
 
 **Files**
@@ -347,11 +341,12 @@ Each is a finding about the repository as of November 2026, not a rule.
 
 | # | Finding | Evidence | Suggested action |
 |---|---|---|---|
-| 1 | **CI does not run on `develop` to `prod` pull requests** | `.github/workflows/model-test-and-deploy.yml` triggers on pull requests to `main`, `master`, `develop` and pushes to `main`, `master`; this repository has none of `main`, `master` | Add `prod` to both trigger lists. Until then, the reviewer validates locally (SOP, Section 8) |
+| 0 | **Up to 147 CDE-annotated properties accept free text** | 190 properties carry a caDSR `Code:` in `Term:`; none has an `Enum:` reference. 142 are `Type: string` and 5 are lists of strings. Since EDPs launched in early September 2026, the Portal does not read `Term:` for values (§1.1); the MDB team confirmed this in #data-modeling for `assessment_timepoint` | Identify which of those CDEs are enumerated in caDSR, then convert them to `Enum:` references under §4.4, starting with properties used by active submissions |
+| 1 | **CI does not run on `develop` to `prod` pull requests, and `test_val.py` cannot run** | `.github/workflows/model-test-and-deploy.yml` triggers on pull requests to `main`, `master`, `develop` and pushes to `main`, `master`; this repository has none of `main`, `master`. `model-desc/test_val.py` imports `MDFValidate` from `bento-mdf/validators/mdf-validate`, which does not exist in the pinned submodule | Add `prod` to both trigger lists, and replace `test_val.py` with the `test_mdf` command. Until then, reviewers validate locally with `test_mdf` (SOP, Section 8) |
 | 2 | **Three versions exist only in the lower tiers** | `1.23.0`, `2.1.1`, and `3.9.1` have release notes and appear in the Dev/QA version lists, but have no tag and never reached Stage or Prod. The `3.9.1` change (`Req: Preferred` to `'No'`) shipped inside `3.10.0` | Annotate those release-notes entries with the version that actually carried their content |
-| 3 | **Four properties carry `Code: 'TBD'`** | `dates_of_conduct`, `consent_group_id`, `immune_assay_record_id`, `cell_based_assay_record_id` | Bind a real CDE or comment out the `Term:` block. Escape hatch 1 likely applies, since these never validated |
+| 3 | **Four properties carry `Code: 'TBD'`** | `dates_of_conduct`, `consent_group_id`, `immune_assay_record_id`, `cell_based_assay_record_id` | Bind a real CDE or remove the `Term:` entry. Validation is unaffected today (`Term:` is not read for values), so this is a MINOR metadata fix |
 | 4 | **One property declares no `Req:`** | `specimen_preservation_method` (added in 3.8.0) | Declare it explicitly |
-| 5 | **Suffixed tags exist** | `1.8.0-mdf-fix`, `1.8.0-mdf-fix_v2`, `1.9.0-mdf-fix`, `1.10.0-mdf-fix`, `1.12.0-mdf-fix`, `1.13.0-mdf-fix` (October 2026) | Harmless only because their numbers are low (Owner's Guide, Section 2). Do not create suffixed tags at or above the current release |
+| 5 | **Suffixed tags exist, by design** | `1.8.0-mdf-fix` (and `_v2`), `1.9.0-mdf-fix`, `1.10.0-mdf-fix`, `1.12.0-mdf-fix`, `1.13.0-mdf-fix`: made in October 2026 at the MDB team's request so MDB could load those versions (`date_of_diagnosis` was listed on a node but its definition was commented out) | Keep them. Safe for the Portal only because their numbers are below the current release (Owner's Guide, Section 2) |
 | 6 | **The MDF schema allows exactly one of `Type:` or `Enum:` per property** | `mdf-schema.yaml` uses `oneOf` | Any `Enum:` removal must restore `Type:` in the same edit, or validation fails |
 
 ---
@@ -360,20 +355,22 @@ Each is a finding about the repository as of November 2026, not a rule.
 
 Derived from the tag-to-tag YAML diffs and the release notes. **No renumbering of past releases is proposed:** published version numbers are immutable in practice. The audit exists so the team can agree on the rules by seeing them applied to familiar cases.
 
+Each release is classified under the rules in force when it shipped. EDPs went live between 3.4.1 (September 1) and 3.8.0 (September 14); before that, a `Term:` CDE supplied a property's values, and changes to `Term:` codes were validation changes.
+
 ### Releases since the September 2026 audit (3.4.1 to 4.1.1)
 
 | Version | What shipped (net diff) | Bump used | Bump under this Rulebook | Verdict |
 |---|---|---|---|---|
 | 4.1.1 | `study_age_group` and `grant_or_affiliated_network`: `Type` changed from `string` to a list. `age_at_enrollment`: CDE swapped (`12299548` to `15742605`) and units changed from years to days | PATCH | **MAJOR** | :x: Three MAJOR-class changes. The units change is the most consequential: an `age_at_enrollment` of `45` was years and is now days |
-| 4.1.0 | 65 values added to the `specimen_type` `Enum:` (authoritative since 3.6.0); `assay_type` definition updated | MINOR | MINOR | :white_check_mark: |
+| 4.1.0 | 65 values added to the `specimen_type` `Enum:`; `assay_type` definition updated | MINOR | MINOR | :white_check_mark: |
 | 4.0.0 | Three renames (`icd_03_*` to `icd_o_3_*`, `icd_o_primary_site` to `icd_o_3_primary_site`); `specimen_category` and `primary_diagnosis_disease_group` tightened to required; CDE disabled on `primary_diagnosis_disease_group` with an `Enum:`; new `primary_disease_site_code` | MAJOR | MAJOR | :white_check_mark: Breaking changes called out line by line. **The model to copy** |
-| 3.10.0 | CDE disabled on `data_file_type` (has an `Enum:`); `Req: Preferred` changed to `'No'` on 83 properties (the untagged 3.9.1 content) | MINOR | MINOR, **conditional** | :warning: Correct if the coverage check passes for `data_file_type` |
+| 3.10.0 | `Term:` code removed from `data_file_type`, which already had a literal `Enum:`; `Req: Preferred` changed to `'No'` on 83 properties (the untagged 3.9.1 content) | MINOR | MINOR | :white_check_mark: After the EDP launch the `Term:` change did not affect validation |
 | 3.9.0 | **Removed** `azimuth_reference_genome_version` and `tabula_sapiens_reference_genome_version`; added `tumor_figo_stage`, `tumor_r_iss_stage`; CDE versions bumped on six properties | MINOR | **MAJOR**, or MINOR with escape hatch 1 | :warning: Property removal is MAJOR unless neither property held data |
-| 3.8.0 | **Removed `Not Applicable`** from `program_short_name` (authoritative `Enum:` since 3.5.0) and added a value; added `specimen_preservation_method` | MINOR | **MAJOR**, or MINOR with escape hatch 1 | :warning: Removing a value from an authoritative `Enum:` is MAJOR unless no record used it |
-| 3.7.0 | CDE disabled on `occupation` (no `Enum:`, now free text); `useNullCDE` removed from `radiological_procedure` | MINOR | **MAJOR**, or MINOR with escape hatch 1 | :warning: Removing `useNullCDE` removes accepted values |
-| 3.6.0 | CDEs disabled on 11 properties. Two (`ncbi_taxonomy_id`, `ncbi_taxonomy_name`) gained an `Enum:`; the rest referenced external vocabularies by URL, so MDB was already falling back | MINOR | MINOR, **conditional** | :warning: Correct if the coverage check passes for the two NCBI properties. The URL-placeholder CDEs never constrained validation |
-| 3.5.0 | CDEs disabled on `program_name`, `program_short_name`, with `Enum:` blocks; `useNullCDE` removed from both | MINOR | MINOR, **conditional** | :warning: Correct only if the coverage check covered the null values too |
-| 3.4.1 | `Enum:` blocks commented out on 47 CDE-bound properties, `Type:` restored | PATCH | PATCH | :white_check_mark: Inert enums; display only |
+| 3.8.0 | **Removed `Not Applicable`** from `program_short_name` (a literal `Enum:` since 3.5.0) and added a value; added `specimen_preservation_method` | MINOR | **MAJOR**, or MINOR with escape hatch 1 | :warning: Removing a value from a literal `Enum:` is MAJOR unless no record used it |
+| 3.7.0 | `Term:` code removed from `occupation`; `useNullCDE` removed from `radiological_procedure` | MINOR | MINOR | :white_check_mark: Both properties are `Type: string`, so after the EDP launch neither change affected validation |
+| 3.6.0 | `ncbi_taxonomy_id` and `ncbi_taxonomy_name` moved from `Type:` to a literal `Enum:`; `Term:` codes removed from nine more | MINOR | MINOR, **conditional** | :warning: Narrowing to a list: correct only if the coverage check passes for the two NCBI properties |
+| 3.5.0 | `program_name` and `program_short_name` moved from `Type: string` to literal `Enum:` lists; `useNullCDE` removed from both | MINOR | MINOR, **conditional** | :warning: Narrowing to a list: correct only if the coverage check passed |
+| 3.4.1 | `Enum:` blocks commented out on 47 CDE-annotated properties, `Type:` restored | PATCH | PATCH at the time | :warning: Correct under the pre-EDP behavior, when the `Term:` CDE validated. When EDPs launched days later, these 47 properties became free text along with every other `Term`-only property (finding 0) |
 
 ### Earlier releases (from the September 2026 audit)
 
@@ -389,7 +386,7 @@ Derived from the tag-to-tag YAML diffs and the release notes. **No renumbering o
 | 2.0.0 | `Radiology Images` renamed `Radiology Imaging`; CDE disabled on `data_file_type` | MAJOR | MAJOR | :white_check_mark: |
 | 1.23.0 | Types corrected to integer, units added (never tagged) | MINOR | **MAJOR** | :x: Type change |
 | 1.22.2 | Assay relationships loosened `one_to_one` to `many_to_one` | PATCH | **MINOR** | :warning: Loosening is a schema change |
-| 1.22.1 | `year_of_publication` string to number; inert enums removed | PATCH | **MAJOR** | :x: Type change |
+| 1.22.1 | `year_of_publication` string to number; enums removed from CDE-validated properties | PATCH | **MAJOR** | :x: Type change |
 
 **Pattern:** the misclassifications cluster in two places. **Type and unit changes framed as fixes** (1.22.1, 1.23.0, 2.1.1, 4.1.1), and **removals that skipped the no-data evidence** (3.7.0, 3.8.0, 3.9.0). If the team internalizes one rule, make it: *changing a `Type`, a unit, or a name is always MAJOR, however obviously wrong the old one was.* The second: *a removal can be MINOR only with a zero-count query in the PR.*
 
@@ -404,16 +401,15 @@ Measured from `prod` at `Version: v4.1.1` (November 2026):
 | Nodes | 23 |
 | Relationships (labels) | 7, with 30 ends |
 | Property definitions | 218 |
-| Properties with a `Term:` block | 197 |
-| with a live numeric caDSR `Code:` | 190 |
-| with `Code: 'TBD'` | 4 |
-| with a `Term:` but no code | 3 (`crdc_id`, `primary_diagnosis_disease_group`, `specimen_type`) |
-| Properties with an `Enum:` block | 8, **all authoritative** (`program_name`, `program_short_name`, `ncbi_taxonomy_id`, `ncbi_taxonomy_name`, `primary_diagnosis_disease_group`, `snomed_disease_code`, `specimen_type`, `data_file_type`) |
+| Properties with a literal `Enum:` (validated against the model's list) | 8: `program_name`, `program_short_name`, `ncbi_taxonomy_id`, `ncbi_taxonomy_name`, `primary_diagnosis_disease_group`, `snomed_disease_code`, `specimen_type`, `data_file_type` |
+| Properties with an `Enum:` reference to a CDE or EDP | 0 |
+| Properties with a live numeric caDSR `Code:` in `Term:` and no `Enum:` | 190: 142 `Type: string`, 5 lists of strings, 10 `integer`, 8 `number`, 25 other types |
+| Properties with `Code: 'TBD'` | 4 |
 | Properties with a live `useNullCDE` | 6 |
 | `Req: 'No'` / `'Yes'` / undeclared | 151 / 66 / 1 |
-| Relationship ends covered by a `Mul:` | 30 of 30 (27 from relationship-level `Mul:`, 3 from end-level); none fall to the default |
+| Relationship ends covered by a `Mul:` | 30 of 30 (27 from relationship-level `Mul:`, 3 from end-level) |
 
-Since 3.4.1, **no `Enum:` block is inert.** Every `Enum:` left in the model validates, so every `Enum:` value removal, comment-out, or respelling in this repository is MAJOR-class under §5. The CDE-governed side is the other 190 properties, where changes classify under §4.4.
+The practical consequence: **only 8 CTDC properties validate against a value list today.** The 147 text and list properties annotated with a CDE accept any value, which is finding 0. Converting the enumerated ones to `Enum:` references is the main versioning work ahead, governed by §4.4.
 
 ---
 
@@ -421,10 +417,10 @@ Since 3.4.1, **no `Enum:` block is inert.** Every `Enum:` left in the model vali
 
 These are conventions, not deductions. Agree to them explicitly rather than inheriting them from a document.
 
-1. **The authority rule** (§4.4): changing which list validates is MAJOR; changing the version of the same list is MINOR.
-2. **Disabling a CDE is MINOR with the coverage check in the PR**, MAJOR without it, and the residual tightening is accepted with a release-note line.
-3. **Removing a CDE from a property with no `Enum:` is MINOR with no evidence**, knowing the re-binding cost is deferred.
-4. **Enabling or swapping an enumerated CDE stays MAJOR.** Binding a non-enumerated CDE is MINOR.
+1. **The value-source rule** (§4.4): changing which list validates is MAJOR unless the coverage check proves no data is lost; that applies to `Term`-only properties converted to `Enum:` references.
+2. **A later caDSR CDE version in an `Enum:` reference is treated like a new list**, because caDSR versions CDEs when values are removed.
+3. **`Term:` changes are MINOR** (meaning metadata), **MAJOR when they redefine the property.**
+4. **The residual tightening is accepted with a release-note line** when the coverage check passes.
 5. **Every `Type` change is MAJOR**, including string to list, with no "obvious fix" exemption.
 6. **Adding a `Req: 'Yes'` property is MAJOR**; the sanctioned path is `Preferred` first.
 7. **Round up when in doubt.**
