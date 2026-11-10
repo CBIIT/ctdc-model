@@ -59,6 +59,7 @@ PropDefinitions:
     #Type: string
     Enum:
       - NCI Molecular Analysis for Therapy Choice Trial
+      - NCI Community Oncology Research Program
       - NCI National Clinical Trials Network
       - Cancer Immune Monitoring and Analysis Centers, Cancer Immunologic Data Center Network
       - Not Applicable
@@ -82,7 +83,8 @@ PropDefinitions:
     Src: Data Submitter
     #Type: string
     Enum:
-      - NCI-MATCH
+      - MATCH #NCI-MATCH
+      - NCORP
       - NCTN
       - CIMAC-CIDC Network
       - NA
@@ -3719,6 +3721,7 @@ PropDefinitions:
       - Variant Call File
       - Variant Report
       - Radiology Imaging
+      - Pathology Imaging
     Req: 'Yes'
   data_file_description:
     Desc: A free text field that can be used to document the content and other details
