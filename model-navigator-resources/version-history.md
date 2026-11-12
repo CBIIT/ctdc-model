@@ -1,5 +1,12 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
+# Data Model version 4.2.0
+* Changes the permissible value 'NCI-MATCH' to 'MATCH' for `program_short_name`.
+* Adds 'Comorbidity' as a new permissible value for `off_study_reason`.
+* Adds 'Medical Aid in Dying' as a new permissible value for `primary_cause_of_death`.
+* Adds 'Pathology Imaging' as a new permissible value for `data_file_type`.
+* Adds five new permissible values for `ctep_disease_term`.
+
 ## Data Model version 4.1.1
 * Updates `study_age_group` to enable multiple values that may be provided as a pipe-separated list.
 * Updates `grant_or_affiliated_network` to enable multiple values that may be provided as a pipe-separated list.
