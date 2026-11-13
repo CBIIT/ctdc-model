@@ -1003,21 +1003,113 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   age_at_enrollment:
-    Desc: The age in days of the subject when the subject enrolled in the study.
+    #Desc: The age in days of the subject when the subject enrolled in the study.
+    Desc: The age in years of the subject when they were enrolled into the study.  Due to HIPAA any age over 89 years old should be reported as 90 years old.
     Term:
       - Origin: caDSR
-        Code: '15742605'
-        Value: Study Subject Age in Days at Enrollment
-        Version: '1'
+        #Code: '15742605'
+        Value: Study Subject Age in Years at time of Enrollment
+        #Version: '1'
         Tags: 
           Provenance: CMB
           Added: 5-31-24 
     Src: Data Submitter
-    Type:
-      units: 
-        - days
-      value_type: 
-        number
+    Enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+      - 34
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+      - 45
+      - 46
+      - 47
+      - 48
+      - 49
+      - 50
+      - 51
+      - 52
+      - 53
+      - 54
+      - 55
+      - 56
+      - 57
+      - 58
+      - 59
+      - 60
+      - 61
+      - 62
+      - 63
+      - 64
+      - 65
+      - 66
+      - 67
+      - 68
+      - 69
+      - 70
+      - 71
+      - 72
+      - 73
+      - 74
+      - 75
+      - 76
+      - 77
+      - 78
+      - 79
+      - 80
+      - 81
+      - 82
+      - 83
+      - 84
+      - 85
+      - 86
+      - 87
+      - 88
+      - 89
+      - 90
+    #Type:
+    #  units: 
+    #    - years
+    #  value_type: 
+    #    number
     Req: 'Yes'
   race:
     Desc: The text for reporting information about race based on the Office of Management
@@ -1464,6 +1556,22 @@ PropDefinitions:
       - Primary peritoneal carcinoma
       - Esophageal cancer, NOS
       - Ovarian epithelial cancer
+      - Adenocarcinoma of the colon
+      # - Adenocarcinoma of the rectum (same as Rectal Adenocarcinoma)
+      - Ovarian cancer, NOS
+      - Ovarian stromal cancer
+      - Ovarian tumors of low malignant potential
+      - Colorectal Carcinoma
+      - Ovarian Carcinoma
+      - Colon Adenocarcinoma
+      #- Invasive Breast Carcinoma    (from Yuri but already in list)
+      - Malignant Ovarian Neoplasm
+      - Rectal Adenocarcinoma
+      #- Primary Peritoneal Carcinoma (from Yuri but already in list)
+      #- Fallopian Tube Carcinoma     (from Yuri but already in list)
+      - Borderline Ovarian Epithelial Tumor
+      - Malignant Ovarian Epithelial Tumor
+      - Breast Inflammatory Carcinoma
     Req: 'Yes'
   icd_10_disease_code:
     Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans.
