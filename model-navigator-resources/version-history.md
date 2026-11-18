@@ -2,7 +2,7 @@
 
 # Data Model version 4.3.0
 * Disables CDE for `age_at_enrollment` and changes the definition to reflect this property is reported in years.
-* Updates `age_at_enrollment` to only allowing integer values between 1 and 90.
+* Updates `age_at_enrollment` to only allow whole number values between 1 and 90.
 * Adds new permissible values to property `primary_diagnosis_disease_group`.
 * Updates the definition for property `primary_diagnosis_disease_group`.
 
