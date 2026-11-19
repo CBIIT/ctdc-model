@@ -1003,21 +1003,26 @@ PropDefinitions:
     Req: 'Yes'
     Key: true
   age_at_enrollment:
-    Desc: The age in days of the subject when the subject enrolled in the study.
+    #Desc: The age in days of the subject when the subject enrolled in the study.
+    Desc: The age in years of the subject when they were enrolled into the study.
+      Due to HIPAA any age over 89 years old should be reported as 90 years old.
     Term:
       - Origin: caDSR
-        Code: '15742605'
-        Value: Study Subject Age in Days at Enrollment
-        Version: '1'
+        #Code: '15742605'
+        Value: Study Subject Age in Years at time of enrollment
+        #Version: '1'
         Tags: 
           Provenance: CMB
           Added: 5-31-24 
     Src: Data Submitter
     Type:
       units: 
-        - days
-      value_type: 
-        number
+        - years
+      value_type:
+        integer
+    Range:
+      Min: 1
+      Max: 90
     Req: 'Yes'
   race:
     Desc: The text for reporting information about race based on the Office of Management
@@ -1435,9 +1440,11 @@ PropDefinitions:
     Type: string
     Req: 'No'
   primary_diagnosis_disease_group:
-    Desc: A term describing the main condition for evaluation and treatment as captured
-      in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
-      Thesaurus (NCIt) hierarchy tree.
+    Desc: A term describing the main condition for evaluation and treatment, 
+      identifying a malignant or borderline neoplasm by its anatomical site or histology.
+    #A term describing the main condition for evaluation and treatment as captured
+    #  in the Disease or Diagnosis (C2991) branch of the National Cancer Institute
+    #  Thesaurus (NCIt) hierarchy tree.
     Term:
       - Origin: caDSR
         #Code: '14905532'  # https://evsexplore.semantics.cancer.gov/evsexplore/hierarchy/ncit/C2991
@@ -1464,6 +1471,22 @@ PropDefinitions:
       - Primary peritoneal carcinoma
       - Esophageal cancer, NOS
       - Ovarian epithelial cancer
+      - Adenocarcinoma of the colon
+      # - Adenocarcinoma of the rectum (same as Rectal Adenocarcinoma)
+      - Ovarian cancer, NOS
+      - Ovarian stromal cancer
+      - Ovarian tumors of low malignant potential
+      - Colorectal Carcinoma
+      - Ovarian Carcinoma
+      - Colon Adenocarcinoma
+      #- Invasive Breast Carcinoma    (from Yuri but already in list)
+      - Malignant Ovarian Neoplasm
+      - Rectal Adenocarcinoma
+      #- Primary Peritoneal Carcinoma (from Yuri but already in list)
+      #- Fallopian Tube Carcinoma     (from Yuri but already in list)
+      - Borderline Ovarian Epithelial Tumor
+      - Malignant Ovarian Epithelial Tumor
+      - Breast Inflammatory Carcinoma
     Req: 'Yes'
   icd_10_disease_code:
     Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans.
