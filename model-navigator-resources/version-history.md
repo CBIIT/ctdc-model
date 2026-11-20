@@ -1,10 +1,10 @@
 ## Release Notes - Clinical and Translational Data Commons (CTDC)
 
 # Data Model version 4.4.0
-* Adds 'Alternative Treatment Decision' as a new permissible value for `off_treatment_reason`
-* Adds 'Alternative Treatment Decision' as a new permissible value for `off_study_reason`
-* Adds 'Ion AmpliSeq' as a new permissible value for `library_preparation_kit`
-* Adds NullCDE values to properties `primary_diagnosis_disease_group`, `snomed_disease_code` and `specimen_type`
+* Adds 'Alternative Treatment Decision' as a new permissible value for `off_treatment_reason`.
+* Adds 'Alternative Treatment Decision' as a new permissible value for `off_study_reason`.
+* Adds 'Ion AmpliSeq' as a new permissible value for `library_preparation_kit`.
+* Adds NullCDE values to properties `primary_diagnosis_disease_group`, `snomed_disease_code` and `specimen_type`.
 
 # Data Model version 4.3.0
 * Disables CDE for `age_at_enrollment` and changes the definition to reflect this property is reported in years.
