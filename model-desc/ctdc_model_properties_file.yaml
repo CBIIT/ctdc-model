@@ -1487,6 +1487,21 @@ PropDefinitions:
       - Borderline Ovarian Epithelial Tumor
       - Malignant Ovarian Epithelial Tumor
       - Breast Inflammatory Carcinoma
+      #list of Null CDEs values
+      - Censored
+      - Insufficient Quantity
+      - Not Allowed To Collect  
+      - Not Applicable
+      - Not Asked
+      - Not Assessed
+      - Not Available
+      - Not Evaluable
+      - Not Otherwise Specified
+      - Not Reported
+      - Response Declined
+      - Technical Problem 
+      - Temporarily Unavailable
+      - Unknown
     Req: 'Yes'
   icd_10_disease_code:
     Desc: An alphanumeric value from the tenth version of the International Classification of Disease (ICD-10-CM, the disease code subset of ICD-10) used to identify the diagnosis in humans.
@@ -1719,6 +1734,21 @@ PropDefinitions:
       - "254869000"
       - "276804009"
       - "444898006"
+      # null CDEs values
+      - Censored
+      - Insufficient Quantity
+      - Not Allowed To Collect  
+      - Not Applicable
+      - Not Asked
+      - Not Assessed
+      - Not Available
+      - Not Evaluable
+      - Not Otherwise Specified
+      - Not Reported
+      - Response Declined
+      - Technical Problem 
+      - Temporarily Unavailable
+      - Unknown
     Req: 'No'
   icd_o_3_primary_site:
     Desc: The organ or part of the body where cancer begins as captured by the topography codes of the International Classification of Diseases for Oncology, 3rd Edition (ICD-O-3).
@@ -2875,6 +2905,21 @@ PropDefinitions:
       - formalin bone marrow biopsy
       - EDTA blood
       - formalin fixed tissue
+      # null CDEs values
+      - Censored
+      - Insufficient Quantity
+      - Not Allowed To Collect  
+      - Not Applicable
+      - Not Asked
+      - Not Assessed
+      - Not Available
+      - Not Evaluable
+      - Not Otherwise Specified
+      - Not Reported
+      - Response Declined
+      - Technical Problem 
+      - Temporarily Unavailable
+      - Unknown
     #Enum: #Acceptable values taken straight from the CMB Catalog Site
     #  - Bone Marrow Aspirate
     #  - Cell Block
